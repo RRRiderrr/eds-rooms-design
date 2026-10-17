@@ -42,3 +42,36 @@ jobs:
       - name: Deploy the static dist artifact
         id: deployment
         uses: actions/deploy-pages@v5
+      - name: Verify published entrypoints and scene manifests
+        env:
+          DEPLOYMENT_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          node --input-type=module <<'NODE'
+          import assert from 'node:assert/strict';
+          const base = new URL(process.env.DEPLOYMENT_URL);
+          let lastError;
+          for (let attempt = 0; attempt < 12; attempt++) {
+            try {
+              const response = await fetch(base, {headers: {'Cache-Control': 'no-cache'}});
+              assert(response.ok, `Entry document HTTP ${response.status}`);
+              const html = await response.text();
+              assert(!html.includes('/src/main.ts'), 'Pages is serving source HTML instead of the built artifact');
+              const urls = [...html.matchAll(/(?:src|href)=["']([^"']+)["']/g)].map(match => match[1]);
+              assert(urls.some(url => url.endsWith('.js')) && urls.some(url => url.endsWith('.css')), 'Compiled JS/CSS missing');
+              urls.push('assets/architecture/scene-space.json', 'assets/models/manifest.json', 'assets/materials/manifest.json');
+              for (const relative of new Set(urls)) {
+                const url = new URL(relative, base);
+                assert(url.origin === base.origin && url.pathname.startsWith(base.pathname), `Asset escapes project path: ${url}`);
+                const asset = await fetch(url, {method: 'HEAD'});
+                assert(asset.ok, `Published asset HTTP ${asset.status}: ${url}`);
+              }
+              console.log(`Published static site verified: ${base.href}`);
+              process.exit(0);
+            } catch (error) {
+              lastError = error;
+              console.warn(`Waiting for Pages propagation (${attempt + 1}/12): ${error.message}`);
+              await new Promise(resolve => setTimeout(resolve, 2000));
+            }
+          }
+          throw lastError;
+          NODE
