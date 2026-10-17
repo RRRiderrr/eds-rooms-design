@@ -1,0 +1,69 @@
+{
+  "source": "Cycles renders of actual room and shipped production GLBs",
+  "items": [
+    {
+      "presetId": "builtin-0",
+      "image": "assets/preset-thumbnails/preset-0.jpg"
+    },
+    {
+      "presetId": "builtin-1",
+      "image": "assets/preset-thumbnails/preset-1.jpg"
+    },
+    {
+      "presetId": "builtin-2",
+      "image": "assets/preset-thumbnails/preset-2.jpg"
+    },
+    {
+      "presetId": "builtin-3",
+      "image": "assets/preset-thumbnails/preset-3.jpg"
+    },
+    {
+      "presetId": "builtin-4",
+      "image": "assets/preset-thumbnails/preset-4.jpg"
+    },
+    {
+      "presetId": "builtin-5",
+      "image": "assets/preset-thumbnails/preset-5.jpg"
+    },
+    {
+      "presetId": "builtin-6",
+      "image": "assets/preset-thumbnails/preset-6.jpg"
+    },
+    {
+      "presetId": "builtin-7",
+      "image": "assets/preset-thumbnails/preset-7.jpg"
+    },
+    {
+      "presetId": "builtin-8",
+      "image": "assets/preset-thumbnails/preset-8.jpg"
+    },
+    {
+      "presetId": "builtin-9",
+      "image": "assets/preset-thumbnails/preset-9.jpg"
+    },
+    {
+      "presetId": "builtin-10",
+      "image": "assets/preset-thumbnails/preset-10.jpg"
+    },
+    {
+      "presetId": "builtin-11",
+      "image": "assets/preset-thumbnails/preset-11.jpg"
+    },
+    {
+      "presetId": "builtin-12",
+      "image": "assets/preset-thumbnails/preset-12.jpg"
+    },
+    {
+      "presetId": "builtin-13",
+      "image": "assets/preset-thumbnails/preset-13.jpg"
+    },
+    {
+      "presetId": "builtin-14",
+      "image": "assets/preset-thumbnails/preset-14.jpg"
+    },
+    {
+      "presetId": "builtin-15",
+      "image": "assets/preset-thumbnails/preset-15.jpg"
+    }
+  ]
+}

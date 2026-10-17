@@ -1,0 +1,471 @@
+{
+  "passed": true,
+  "materials": 5,
+  "textures": [
+    {
+      "material": "wall-painted",
+      "quality": "low",
+      "role": "baseColor",
+      "width": 512,
+      "height": 512,
+      "levels": 10,
+      "transfer": 2,
+      "bytes": 104795
+    },
+    {
+      "material": "wall-painted",
+      "quality": "low",
+      "role": "normal",
+      "width": 512,
+      "height": 512,
+      "levels": 10,
+      "transfer": 1,
+      "bytes": 268018
+    },
+    {
+      "material": "wall-painted",
+      "quality": "low",
+      "role": "orm",
+      "width": 512,
+      "height": 512,
+      "levels": 10,
+      "transfer": 1,
+      "bytes": 106758
+    },
+    {
+      "material": "wall-painted",
+      "quality": "medium",
+      "role": "baseColor",
+      "width": 1024,
+      "height": 1024,
+      "levels": 11,
+      "transfer": 2,
+      "bytes": 413813
+    },
+    {
+      "material": "wall-painted",
+      "quality": "medium",
+      "role": "normal",
+      "width": 1024,
+      "height": 1024,
+      "levels": 11,
+      "transfer": 1,
+      "bytes": 1094151
+    },
+    {
+      "material": "wall-painted",
+      "quality": "medium",
+      "role": "orm",
+      "width": 1024,
+      "height": 1024,
+      "levels": 11,
+      "transfer": 1,
+      "bytes": 517385
+    },
+    {
+      "material": "wall-painted",
+      "quality": "high",
+      "role": "baseColor",
+      "width": 2048,
+      "height": 2048,
+      "levels": 12,
+      "transfer": 2,
+      "bytes": 1662445
+    },
+    {
+      "material": "wall-painted",
+      "quality": "high",
+      "role": "normal",
+      "width": 2048,
+      "height": 2048,
+      "levels": 12,
+      "transfer": 1,
+      "bytes": 4525951
+    },
+    {
+      "material": "wall-painted",
+      "quality": "high",
+      "role": "orm",
+      "width": 2048,
+      "height": 2048,
+      "levels": 12,
+      "transfer": 1,
+      "bytes": 2443445
+    },
+    {
+      "material": "floor-commercial-grey",
+      "quality": "low",
+      "role": "baseColor",
+      "width": 512,
+      "height": 512,
+      "levels": 10,
+      "transfer": 2,
+      "bytes": 27429
+    },
+    {
+      "material": "floor-commercial-grey",
+      "quality": "low",
+      "role": "normal",
+      "width": 512,
+      "height": 512,
+      "levels": 10,
+      "transfer": 1,
+      "bytes": 204466
+    },
+    {
+      "material": "floor-commercial-grey",
+      "quality": "low",
+      "role": "orm",
+      "width": 512,
+      "height": 512,
+      "levels": 10,
+      "transfer": 1,
+      "bytes": 1118
+    },
+    {
+      "material": "floor-commercial-grey",
+      "quality": "medium",
+      "role": "baseColor",
+      "width": 1024,
+      "height": 1024,
+      "levels": 11,
+      "transfer": 2,
+      "bytes": 126170
+    },
+    {
+      "material": "floor-commercial-grey",
+      "quality": "medium",
+      "role": "normal",
+      "width": 1024,
+      "height": 1024,
+      "levels": 11,
+      "transfer": 1,
+      "bytes": 951538
+    },
+    {
+      "material": "floor-commercial-grey",
+      "quality": "medium",
+      "role": "orm",
+      "width": 1024,
+      "height": 1024,
+      "levels": 11,
+      "transfer": 1,
+      "bytes": 1422
+    },
+    {
+      "material": "floor-commercial-grey",
+      "quality": "high",
+      "role": "baseColor",
+      "width": 2048,
+      "height": 2048,
+      "levels": 12,
+      "transfer": 2,
+      "bytes": 451837
+    },
+    {
+      "material": "floor-commercial-grey",
+      "quality": "high",
+      "role": "normal",
+      "width": 2048,
+      "height": 2048,
+      "levels": 12,
+      "transfer": 1,
+      "bytes": 4067639
+    },
+    {
+      "material": "floor-commercial-grey",
+      "quality": "high",
+      "role": "orm",
+      "width": 2048,
+      "height": 2048,
+      "levels": 12,
+      "transfer": 1,
+      "bytes": 2006
+    },
+    {
+      "material": "metal-painted",
+      "quality": "low",
+      "role": "baseColor",
+      "width": 512,
+      "height": 512,
+      "levels": 10,
+      "transfer": 2,
+      "bytes": 33366
+    },
+    {
+      "material": "metal-painted",
+      "quality": "low",
+      "role": "normal",
+      "width": 512,
+      "height": 512,
+      "levels": 10,
+      "transfer": 1,
+      "bytes": 222165
+    },
+    {
+      "material": "metal-painted",
+      "quality": "low",
+      "role": "orm",
+      "width": 512,
+      "height": 512,
+      "levels": 10,
+      "transfer": 1,
+      "bytes": 5032
+    },
+    {
+      "material": "metal-painted",
+      "quality": "medium",
+      "role": "baseColor",
+      "width": 1024,
+      "height": 1024,
+      "levels": 11,
+      "transfer": 2,
+      "bytes": 145277
+    },
+    {
+      "material": "metal-painted",
+      "quality": "medium",
+      "role": "normal",
+      "width": 1024,
+      "height": 1024,
+      "levels": 11,
+      "transfer": 1,
+      "bytes": 990828
+    },
+    {
+      "material": "metal-painted",
+      "quality": "medium",
+      "role": "orm",
+      "width": 1024,
+      "height": 1024,
+      "levels": 11,
+      "transfer": 1,
+      "bytes": 25596
+    },
+    {
+      "material": "metal-painted",
+      "quality": "high",
+      "role": "baseColor",
+      "width": 2048,
+      "height": 2048,
+      "levels": 12,
+      "transfer": 2,
+      "bytes": 453474
+    },
+    {
+      "material": "metal-painted",
+      "quality": "high",
+      "role": "normal",
+      "width": 2048,
+      "height": 2048,
+      "levels": 12,
+      "transfer": 1,
+      "bytes": 4095831
+    },
+    {
+      "material": "metal-painted",
+      "quality": "high",
+      "role": "orm",
+      "width": 2048,
+      "height": 2048,
+      "levels": 12,
+      "transfer": 1,
+      "bytes": 79027
+    },
+    {
+      "material": "wood-oak",
+      "quality": "low",
+      "role": "baseColor",
+      "width": 512,
+      "height": 512,
+      "levels": 10,
+      "transfer": 2,
+      "bytes": 66202
+    },
+    {
+      "material": "wood-oak",
+      "quality": "low",
+      "role": "normal",
+      "width": 512,
+      "height": 512,
+      "levels": 10,
+      "transfer": 1,
+      "bytes": 112620
+    },
+    {
+      "material": "wood-oak",
+      "quality": "low",
+      "role": "orm",
+      "width": 512,
+      "height": 512,
+      "levels": 10,
+      "transfer": 1,
+      "bytes": 41194
+    },
+    {
+      "material": "wood-oak",
+      "quality": "medium",
+      "role": "baseColor",
+      "width": 1024,
+      "height": 1024,
+      "levels": 11,
+      "transfer": 2,
+      "bytes": 193613
+    },
+    {
+      "material": "wood-oak",
+      "quality": "medium",
+      "role": "normal",
+      "width": 1024,
+      "height": 1024,
+      "levels": 11,
+      "transfer": 1,
+      "bytes": 607606
+    },
+    {
+      "material": "wood-oak",
+      "quality": "medium",
+      "role": "orm",
+      "width": 1024,
+      "height": 1024,
+      "levels": 11,
+      "transfer": 1,
+      "bytes": 148458
+    },
+    {
+      "material": "wood-oak",
+      "quality": "high",
+      "role": "baseColor",
+      "width": 2048,
+      "height": 2048,
+      "levels": 12,
+      "transfer": 2,
+      "bytes": 710158
+    },
+    {
+      "material": "wood-oak",
+      "quality": "high",
+      "role": "normal",
+      "width": 2048,
+      "height": 2048,
+      "levels": 12,
+      "transfer": 1,
+      "bytes": 2557673
+    },
+    {
+      "material": "wood-oak",
+      "quality": "high",
+      "role": "orm",
+      "width": 2048,
+      "height": 2048,
+      "levels": 12,
+      "transfer": 1,
+      "bytes": 436333
+    },
+    {
+      "material": "fabric-woven",
+      "quality": "low",
+      "role": "baseColor",
+      "width": 512,
+      "height": 512,
+      "levels": 10,
+      "transfer": 2,
+      "bytes": 82852
+    },
+    {
+      "material": "fabric-woven",
+      "quality": "low",
+      "role": "normal",
+      "width": 512,
+      "height": 512,
+      "levels": 10,
+      "transfer": 1,
+      "bytes": 266971
+    },
+    {
+      "material": "fabric-woven",
+      "quality": "low",
+      "role": "orm",
+      "width": 512,
+      "height": 512,
+      "levels": 10,
+      "transfer": 1,
+      "bytes": 40050
+    },
+    {
+      "material": "fabric-woven",
+      "quality": "medium",
+      "role": "baseColor",
+      "width": 1024,
+      "height": 1024,
+      "levels": 11,
+      "transfer": 2,
+      "bytes": 227870
+    },
+    {
+      "material": "fabric-woven",
+      "quality": "medium",
+      "role": "normal",
+      "width": 1024,
+      "height": 1024,
+      "levels": 11,
+      "transfer": 1,
+      "bytes": 1225262
+    },
+    {
+      "material": "fabric-woven",
+      "quality": "medium",
+      "role": "orm",
+      "width": 1024,
+      "height": 1024,
+      "levels": 11,
+      "transfer": 1,
+      "bytes": 163481
+    },
+    {
+      "material": "fabric-woven",
+      "quality": "high",
+      "role": "baseColor",
+      "width": 2048,
+      "height": 2048,
+      "levels": 12,
+      "transfer": 2,
+      "bytes": 828749
+    },
+    {
+      "material": "fabric-woven",
+      "quality": "high",
+      "role": "normal",
+      "width": 2048,
+      "height": 2048,
+      "levels": 12,
+      "transfer": 1,
+      "bytes": 4967737
+    },
+    {
+      "material": "fabric-woven",
+      "quality": "high",
+      "role": "orm",
+      "width": 2048,
+      "height": 2048,
+      "levels": 12,
+      "transfer": 1,
+      "bytes": 684383
+    }
+  ],
+  "geometry": [
+    {
+      "filename": "room.meshopt.glb",
+      "bytes": 1159652,
+      "nodes": 73,
+      "hasDoor": true
+    },
+    {
+      "filename": "room-editor.meshopt.glb",
+      "bytes": 119488,
+      "nodes": 73,
+      "hasDoor": true
+    }
+  ],
+  "failures": []
+}

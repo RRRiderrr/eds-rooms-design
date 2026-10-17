@@ -1,0 +1,45 @@
+{
+  "reviewedPresetIds": [
+    "builtin-0",
+    "builtin-1",
+    "builtin-2",
+    "builtin-3",
+    "builtin-4",
+    "builtin-5",
+    "builtin-6",
+    "builtin-7",
+    "builtin-8",
+    "builtin-9",
+    "builtin-10",
+    "builtin-11",
+    "builtin-12",
+    "builtin-13",
+    "builtin-14",
+    "builtin-15"
+  ],
+  "renders": 32,
+  "views": [
+    "window",
+    "door"
+  ],
+  "reviewMethod": "Cycles renders of actual Blender room plus production GLBs; both contact sheets visually inspected",
+  "geometryFindings": {
+    "floatingFurniture": false,
+    "visibleWallIntersections": false,
+    "doorApproachBlocked": false,
+    "missingMajorFurniture": false
+  },
+  "materialReview": "Curated finishes applied to original asset material role; fixed cloth, wood, ceramic-to-metal role changes; restrained painted-wall and commercial-floor PBR",
+  "notes": [
+    "All immutable architecture kept in the original room geometry.",
+    "Preset0 contains no added furniture or decor.",
+    "Window work surfaces have structural supports and appropriate high seats.",
+    "Floor tone in web renderer can be calibrated independently through curated neutral tint."
+  ],
+  "sourcePreservationAudit": "assets-src/analysis/full_scene_preservation_audit.json",
+  "conceptFile": "assets-src/lounge_concepts.blend",
+  "contactSheets": [
+    "assets-src/previews/concepts/contact-00-07.jpg",
+    "assets-src/previews/concepts/contact-08-15.jpg"
+  ]
+}

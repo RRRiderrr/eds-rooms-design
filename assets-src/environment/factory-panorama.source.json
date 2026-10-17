@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "id": "factory-panorama-generated-v1",
+  "projection": "equirectangular",
+  "coverageDegrees": [
+    360,
+    180
+  ],
+  "nativeDimensions": [
+    1774,
+    887
+  ],
+  "provenance": {
+    "type": "synthetic generated architectural reconstruction",
+    "tool": "OpenAI built-in image_gen",
+    "createdAt": "2026-10-17",
+    "sourceImage": "E:/ArchViz_Resources/RoomAtelier/environment/factory-panorama-generated-v1.png",
+    "sourceSha256": "362017243c4fd36f767a6c8522d45a004c83bfc8df3b9996d5a0e214e666ba80",
+    "reference": "Office photograph codex-clipboard-150ced87-85c5-42c2-9bfe-69830e75ea65.png; only factory characteristics seen through its window were used as guidance.",
+    "license": "Project-generated image; not a third-party stock capture or a Quixel asset."
+  },
+  "radiometry": {
+    "source": "8-bit sRGB LDR",
+    "encoding": "sRGB EOTF to linear RGB, Radiance RGBE",
+    "range": [
+      0,
+      1
+    ],
+    "measuredHDR": false,
+    "lightRecovery": false,
+    "note": "HDR is the runtime file container only. No physically measured scene luminance or highlight recovery is claimed. The room continues to use its independent Cycles-baked GI."
+  },
+  "background": {
+    "rotationY": -1.5707963267948966,
+    "intensity": 0.85,
+    "blur": 0
+  },
+  "qualities": {
+    "low": {
+      "hdr": "assets/environment/factory-panorama-low.hdr",
+      "fallback": "assets/environment/factory-panorama-low.webp"
+    },
+    "medium": {
+      "hdr": "assets/environment/factory-panorama-medium.hdr",
+      "fallback": "assets/environment/factory-panorama-medium.webp"
+    },
+    "high": {
+      "hdr": "assets/environment/factory-panorama-high.hdr",
+      "fallback": "assets/environment/factory-panorama-high.webp"
+    }
+  },
+  "qualityMetadata": {
+    "low": {
+      "width": 512,
+      "height": 256,
+      "hdrBytes": 439103,
+      "imageBytes": 38938
+    },
+    "medium": {
+      "width": 1024,
+      "height": 512,
+      "hdrBytes": 1717062,
+      "imageBytes": 131350
+    },
+    "high": {
+      "width": 1774,
+      "height": 887,
+      "hdrBytes": 5040079,
+      "imageBytes": 307346
+    }
+  }
+}

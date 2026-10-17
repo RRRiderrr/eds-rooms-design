@@ -1,0 +1,1038 @@
+[
+  {
+    "assetId": "sofa",
+    "variant": 1,
+    "role": "production",
+    "bytesBefore": 857832,
+    "bytesAfter": 353732
+  },
+  {
+    "assetId": "sofa",
+    "variant": 1,
+    "role": "proxy",
+    "bytesBefore": 22996,
+    "bytesAfter": 11376
+  },
+  {
+    "assetId": "sofa",
+    "variant": 2,
+    "role": "production",
+    "bytesBefore": 1227936,
+    "bytesAfter": 495568
+  },
+  {
+    "assetId": "sofa",
+    "variant": 2,
+    "role": "proxy",
+    "bytesBefore": 26368,
+    "bytesAfter": 13760
+  },
+  {
+    "assetId": "sofa",
+    "variant": 3,
+    "role": "production",
+    "bytesBefore": 857832,
+    "bytesAfter": 349632
+  },
+  {
+    "assetId": "sofa",
+    "variant": 3,
+    "role": "proxy",
+    "bytesBefore": 22992,
+    "bytesAfter": 11236
+  },
+  {
+    "assetId": "sofa",
+    "variant": 4,
+    "role": "production",
+    "bytesBefore": 857832,
+    "bytesAfter": 354896
+  },
+  {
+    "assetId": "sofa",
+    "variant": 4,
+    "role": "proxy",
+    "bytesBefore": 22992,
+    "bytesAfter": 11284
+  },
+  {
+    "assetId": "armchair",
+    "variant": 1,
+    "role": "production",
+    "bytesBefore": 133340,
+    "bytesAfter": 68500
+  },
+  {
+    "assetId": "armchair",
+    "variant": 1,
+    "role": "proxy",
+    "bytesBefore": 15052,
+    "bytesAfter": 9380
+  },
+  {
+    "assetId": "armchair",
+    "variant": 2,
+    "role": "production",
+    "bytesBefore": 2260988,
+    "bytesAfter": 2261108
+  },
+  {
+    "assetId": "armchair",
+    "variant": 2,
+    "role": "proxy",
+    "bytesBefore": 17264,
+    "bytesAfter": 10116
+  },
+  {
+    "assetId": "armchair",
+    "variant": 3,
+    "role": "production",
+    "bytesBefore": 133328,
+    "bytesAfter": 68036
+  },
+  {
+    "assetId": "armchair",
+    "variant": 3,
+    "role": "proxy",
+    "bytesBefore": 15028,
+    "bytesAfter": 9420
+  },
+  {
+    "assetId": "pouf",
+    "variant": 1,
+    "role": "production",
+    "bytesBefore": 18004,
+    "bytesAfter": 9356
+  },
+  {
+    "assetId": "pouf",
+    "variant": 1,
+    "role": "proxy",
+    "bytesBefore": 8772,
+    "bytesAfter": 5908
+  },
+  {
+    "assetId": "pouf",
+    "variant": 2,
+    "role": "production",
+    "bytesBefore": 30364,
+    "bytesAfter": 17148
+  },
+  {
+    "assetId": "pouf",
+    "variant": 2,
+    "role": "proxy",
+    "bytesBefore": 2700,
+    "bytesAfter": 2604
+  },
+  {
+    "assetId": "bench",
+    "variant": 1,
+    "role": "production",
+    "bytesBefore": 76796,
+    "bytesAfter": 34648
+  },
+  {
+    "assetId": "bench",
+    "variant": 1,
+    "role": "proxy",
+    "bytesBefore": 13788,
+    "bytesAfter": 9448
+  },
+  {
+    "assetId": "bench",
+    "variant": 2,
+    "role": "production",
+    "bytesBefore": 46876,
+    "bytesAfter": 24540
+  },
+  {
+    "assetId": "bench",
+    "variant": 2,
+    "role": "proxy",
+    "bytesBefore": 11524,
+    "bytesAfter": 7888
+  },
+  {
+    "assetId": "coffeeTable",
+    "variant": 1,
+    "role": "production",
+    "bytesBefore": 25720,
+    "bytesAfter": 13284
+  },
+  {
+    "assetId": "coffeeTable",
+    "variant": 1,
+    "role": "proxy",
+    "bytesBefore": 11884,
+    "bytesAfter": 7796
+  },
+  {
+    "assetId": "coffeeTable",
+    "variant": 2,
+    "role": "production",
+    "bytesBefore": 219648,
+    "bytesAfter": 103000
+  },
+  {
+    "assetId": "coffeeTable",
+    "variant": 2,
+    "role": "proxy",
+    "bytesBefore": 16884,
+    "bytesAfter": 9316
+  },
+  {
+    "assetId": "coffeeTable",
+    "variant": 3,
+    "role": "production",
+    "bytesBefore": 233100,
+    "bytesAfter": 111096
+  },
+  {
+    "assetId": "coffeeTable",
+    "variant": 3,
+    "role": "proxy",
+    "bytesBefore": 11892,
+    "bytesAfter": 7284
+  },
+  {
+    "assetId": "sideTable",
+    "variant": 1,
+    "role": "production",
+    "bytesBefore": 25720,
+    "bytesAfter": 13104
+  },
+  {
+    "assetId": "sideTable",
+    "variant": 1,
+    "role": "proxy",
+    "bytesBefore": 11888,
+    "bytesAfter": 7688
+  },
+  {
+    "assetId": "sideTable",
+    "variant": 2,
+    "role": "production",
+    "bytesBefore": 117888,
+    "bytesAfter": 57884
+  },
+  {
+    "assetId": "sideTable",
+    "variant": 2,
+    "role": "proxy",
+    "bytesBefore": 7268,
+    "bytesAfter": 5500
+  },
+  {
+    "assetId": "sideTable",
+    "variant": 3,
+    "role": "production",
+    "bytesBefore": 30352,
+    "bytesAfter": 16472
+  },
+  {
+    "assetId": "sideTable",
+    "variant": 3,
+    "role": "proxy",
+    "bytesBefore": 2676,
+    "bytesAfter": 2532
+  },
+  {
+    "assetId": "meetingTable",
+    "variant": 1,
+    "role": "production",
+    "bytesBefore": 25732,
+    "bytesAfter": 12996
+  },
+  {
+    "assetId": "meetingTable",
+    "variant": 1,
+    "role": "proxy",
+    "bytesBefore": 11896,
+    "bytesAfter": 7708
+  },
+  {
+    "assetId": "meetingTable",
+    "variant": 2,
+    "role": "production",
+    "bytesBefore": 219652,
+    "bytesAfter": 101716
+  },
+  {
+    "assetId": "meetingTable",
+    "variant": 2,
+    "role": "proxy",
+    "bytesBefore": 16884,
+    "bytesAfter": 9244
+  },
+  {
+    "assetId": "meetingTable",
+    "variant": 3,
+    "role": "production",
+    "bytesBefore": 233096,
+    "bytesAfter": 109252
+  },
+  {
+    "assetId": "meetingTable",
+    "variant": 3,
+    "role": "proxy",
+    "bytesBefore": 11880,
+    "bytesAfter": 7180
+  },
+  {
+    "assetId": "chair",
+    "variant": 1,
+    "role": "production",
+    "bytesBefore": 104420,
+    "bytesAfter": 52676
+  },
+  {
+    "assetId": "chair",
+    "variant": 1,
+    "role": "proxy",
+    "bytesBefore": 13776,
+    "bytesAfter": 8828
+  },
+  {
+    "assetId": "chair",
+    "variant": 2,
+    "role": "production",
+    "bytesBefore": 1500076,
+    "bytesAfter": 1500004
+  },
+  {
+    "assetId": "chair",
+    "variant": 2,
+    "role": "proxy",
+    "bytesBefore": 12760,
+    "bytesAfter": 8620
+  },
+  {
+    "assetId": "chair",
+    "variant": 3,
+    "role": "production",
+    "bytesBefore": 340600,
+    "bytesAfter": 171668
+  },
+  {
+    "assetId": "chair",
+    "variant": 3,
+    "role": "proxy",
+    "bytesBefore": 52960,
+    "bytesAfter": 29528
+  },
+  {
+    "assetId": "barStool",
+    "variant": 1,
+    "role": "production",
+    "bytesBefore": 46092,
+    "bytesAfter": 46092
+  },
+  {
+    "assetId": "barStool",
+    "variant": 1,
+    "role": "proxy",
+    "bytesBefore": 16908,
+    "bytesAfter": 16908
+  },
+  {
+    "assetId": "barStool",
+    "variant": 2,
+    "role": "production",
+    "bytesBefore": 91060,
+    "bytesAfter": 91060
+  },
+  {
+    "assetId": "barStool",
+    "variant": 2,
+    "role": "proxy",
+    "bytesBefore": 13704,
+    "bytesAfter": 13704
+  },
+  {
+    "assetId": "barStool",
+    "variant": 3,
+    "role": "production",
+    "bytesBefore": 67744,
+    "bytesAfter": 67744
+  },
+  {
+    "assetId": "barStool",
+    "variant": 3,
+    "role": "proxy",
+    "bytesBefore": 13952,
+    "bytesAfter": 13952
+  },
+  {
+    "assetId": "workDesk",
+    "variant": 1,
+    "role": "production",
+    "bytesBefore": 290676,
+    "bytesAfter": 135756
+  },
+  {
+    "assetId": "workDesk",
+    "variant": 1,
+    "role": "proxy",
+    "bytesBefore": 11864,
+    "bytesAfter": 7140
+  },
+  {
+    "assetId": "workDesk",
+    "variant": 2,
+    "role": "production",
+    "bytesBefore": 290676,
+    "bytesAfter": 134852
+  },
+  {
+    "assetId": "workDesk",
+    "variant": 2,
+    "role": "proxy",
+    "bytesBefore": 11860,
+    "bytesAfter": 7128
+  },
+  {
+    "assetId": "workDesk",
+    "variant": 3,
+    "role": "production",
+    "bytesBefore": 290648,
+    "bytesAfter": 136868
+  },
+  {
+    "assetId": "workDesk",
+    "variant": 3,
+    "role": "proxy",
+    "bytesBefore": 11800,
+    "bytesAfter": 7188
+  },
+  {
+    "assetId": "windowBar",
+    "variant": 1,
+    "role": "production",
+    "bytesBefore": 233052,
+    "bytesAfter": 107524
+  },
+  {
+    "assetId": "windowBar",
+    "variant": 1,
+    "role": "proxy",
+    "bytesBefore": 11824,
+    "bytesAfter": 7132
+  },
+  {
+    "assetId": "windowBar",
+    "variant": 2,
+    "role": "production",
+    "bytesBefore": 129392,
+    "bytesAfter": 60204
+  },
+  {
+    "assetId": "windowBar",
+    "variant": 2,
+    "role": "proxy",
+    "bytesBefore": 13012,
+    "bytesAfter": 8076
+  },
+  {
+    "assetId": "windowBar",
+    "variant": 3,
+    "role": "production",
+    "bytesBefore": 116784,
+    "bytesAfter": 53996
+  },
+  {
+    "assetId": "windowBar",
+    "variant": 3,
+    "role": "proxy",
+    "bytesBefore": 6180,
+    "bytesAfter": 3760
+  },
+  {
+    "assetId": "storage",
+    "variant": 1,
+    "role": "production",
+    "bytesBefore": 434684,
+    "bytesAfter": 201632
+  },
+  {
+    "assetId": "storage",
+    "variant": 1,
+    "role": "proxy",
+    "bytesBefore": 19936,
+    "bytesAfter": 10192
+  },
+  {
+    "assetId": "storage",
+    "variant": 2,
+    "role": "production",
+    "bytesBefore": 609688,
+    "bytesAfter": 286124
+  },
+  {
+    "assetId": "storage",
+    "variant": 2,
+    "role": "proxy",
+    "bytesBefore": 16480,
+    "bytesAfter": 8788
+  },
+  {
+    "assetId": "storage",
+    "variant": 3,
+    "role": "production",
+    "bytesBefore": 377084,
+    "bytesAfter": 180276
+  },
+  {
+    "assetId": "storage",
+    "variant": 3,
+    "role": "proxy",
+    "bytesBefore": 17632,
+    "bytesAfter": 9452
+  },
+  {
+    "assetId": "floorLamp",
+    "variant": 1,
+    "role": "production",
+    "bytesBefore": 58400,
+    "bytesAfter": 32100
+  },
+  {
+    "assetId": "floorLamp",
+    "variant": 1,
+    "role": "proxy",
+    "bytesBefore": 20748,
+    "bytesAfter": 13672
+  },
+  {
+    "assetId": "floorLamp",
+    "variant": 2,
+    "role": "production",
+    "bytesBefore": 58372,
+    "bytesAfter": 32044
+  },
+  {
+    "assetId": "floorLamp",
+    "variant": 2,
+    "role": "proxy",
+    "bytesBefore": 20724,
+    "bytesAfter": 13684
+  },
+  {
+    "assetId": "plant",
+    "variant": 1,
+    "role": "production",
+    "bytesBefore": 3476844,
+    "bytesAfter": 3476980
+  },
+  {
+    "assetId": "plant",
+    "variant": 1,
+    "role": "proxy",
+    "bytesBefore": 67700,
+    "bytesAfter": 41824
+  },
+  {
+    "assetId": "plant",
+    "variant": 2,
+    "role": "production",
+    "bytesBefore": 2809384,
+    "bytesAfter": 2809448
+  },
+  {
+    "assetId": "plant",
+    "variant": 2,
+    "role": "proxy",
+    "bytesBefore": 67700,
+    "bytesAfter": 42156
+  },
+  {
+    "assetId": "plant",
+    "variant": 3,
+    "role": "production",
+    "bytesBefore": 3476848,
+    "bytesAfter": 3476984
+  },
+  {
+    "assetId": "plant",
+    "variant": 3,
+    "role": "proxy",
+    "bytesBefore": 67660,
+    "bytesAfter": 40852
+  },
+  {
+    "assetId": "acousticPanel",
+    "variant": 1,
+    "role": "production",
+    "bytesBefore": 116812,
+    "bytesAfter": 52540
+  },
+  {
+    "assetId": "acousticPanel",
+    "variant": 1,
+    "role": "proxy",
+    "bytesBefore": 2748,
+    "bytesAfter": 2584
+  },
+  {
+    "assetId": "acousticPanel",
+    "variant": 2,
+    "role": "production",
+    "bytesBefore": 435788,
+    "bytesAfter": 192256
+  },
+  {
+    "assetId": "acousticPanel",
+    "variant": 2,
+    "role": "proxy",
+    "bytesBefore": 14076,
+    "bytesAfter": 8304
+  },
+  {
+    "assetId": "acousticPanel",
+    "variant": 3,
+    "role": "production",
+    "bytesBefore": 116812,
+    "bytesAfter": 53112
+  },
+  {
+    "assetId": "acousticPanel",
+    "variant": 3,
+    "role": "proxy",
+    "bytesBefore": 2744,
+    "bytesAfter": 2564
+  },
+  {
+    "assetId": "art",
+    "variant": 1,
+    "role": "production",
+    "bytesBefore": 147696,
+    "bytesAfter": 68476
+  },
+  {
+    "assetId": "art",
+    "variant": 1,
+    "role": "proxy",
+    "bytesBefore": 15616,
+    "bytesAfter": 11604
+  },
+  {
+    "assetId": "art",
+    "variant": 2,
+    "role": "production",
+    "bytesBefore": 175340,
+    "bytesAfter": 82400
+  },
+  {
+    "assetId": "art",
+    "variant": 2,
+    "role": "proxy",
+    "bytesBefore": 21744,
+    "bytesAfter": 14512
+  },
+  {
+    "assetId": "art",
+    "variant": 3,
+    "role": "production",
+    "bytesBefore": 147692,
+    "bytesAfter": 68140
+  },
+  {
+    "assetId": "art",
+    "variant": 3,
+    "role": "proxy",
+    "bytesBefore": 15612,
+    "bytesAfter": 11056
+  },
+  {
+    "assetId": "sign",
+    "variant": 1,
+    "role": "production",
+    "bytesBefore": 577584,
+    "bytesAfter": 264536
+  },
+  {
+    "assetId": "sign",
+    "variant": 1,
+    "role": "proxy",
+    "bytesBefore": 24604,
+    "bytesAfter": 9980
+  },
+  {
+    "assetId": "sign",
+    "variant": 2,
+    "role": "production",
+    "bytesBefore": 578740,
+    "bytesAfter": 266004
+  },
+  {
+    "assetId": "sign",
+    "variant": 2,
+    "role": "proxy",
+    "bytesBefore": 25760,
+    "bytesAfter": 10560
+  },
+  {
+    "assetId": "clock",
+    "variant": 1,
+    "role": "production",
+    "bytesBefore": 78256,
+    "bytesAfter": 35704
+  },
+  {
+    "assetId": "clock",
+    "variant": 1,
+    "role": "proxy",
+    "bytesBefore": 32164,
+    "bytesAfter": 16176
+  },
+  {
+    "assetId": "clock",
+    "variant": 2,
+    "role": "production",
+    "bytesBefore": 78264,
+    "bytesAfter": 35620
+  },
+  {
+    "assetId": "clock",
+    "variant": 2,
+    "role": "proxy",
+    "bytesBefore": 32172,
+    "bytesAfter": 15960
+  },
+  {
+    "assetId": "board",
+    "variant": 1,
+    "role": "production",
+    "bytesBefore": 205364,
+    "bytesAfter": 95812
+  },
+  {
+    "assetId": "board",
+    "variant": 1,
+    "role": "proxy",
+    "bytesBefore": 11784,
+    "bytesAfter": 8220
+  },
+  {
+    "assetId": "board",
+    "variant": 2,
+    "role": "production",
+    "bytesBefore": 118968,
+    "bytesAfter": 51676
+  },
+  {
+    "assetId": "board",
+    "variant": 2,
+    "role": "proxy",
+    "bytesBefore": 8332,
+    "bytesAfter": 6512
+  },
+  {
+    "assetId": "board",
+    "variant": 3,
+    "role": "production",
+    "bytesBefore": 205336,
+    "bytesAfter": 95684
+  },
+  {
+    "assetId": "board",
+    "variant": 3,
+    "role": "proxy",
+    "bytesBefore": 11728,
+    "bytesAfter": 8216
+  },
+  {
+    "assetId": "accessory",
+    "variant": 1,
+    "role": "production",
+    "bytesBefore": 50108,
+    "bytesAfter": 50108
+  },
+  {
+    "assetId": "accessory",
+    "variant": 1,
+    "role": "proxy",
+    "bytesBefore": 8164,
+    "bytesAfter": 8164
+  },
+  {
+    "assetId": "accessory",
+    "variant": 2,
+    "role": "production",
+    "bytesBefore": 97888,
+    "bytesAfter": 49184
+  },
+  {
+    "assetId": "accessory",
+    "variant": 2,
+    "role": "proxy",
+    "bytesBefore": 10300,
+    "bytesAfter": 8172
+  },
+  {
+    "assetId": "accessory",
+    "variant": 3,
+    "role": "production",
+    "bytesBefore": 43080,
+    "bytesAfter": 26584
+  },
+  {
+    "assetId": "accessory",
+    "variant": 3,
+    "role": "proxy",
+    "bytesBefore": 15116,
+    "bytesAfter": 11476
+  },
+  {
+    "assetId": "rug",
+    "variant": 1,
+    "role": "production",
+    "bytesBefore": 145524,
+    "bytesAfter": 62600
+  },
+  {
+    "assetId": "rug",
+    "variant": 1,
+    "role": "proxy",
+    "bytesBefore": 2620,
+    "bytesAfter": 2552
+  },
+  {
+    "assetId": "rug",
+    "variant": 2,
+    "role": "production",
+    "bytesBefore": 145564,
+    "bytesAfter": 61616
+  },
+  {
+    "assetId": "rug",
+    "variant": 2,
+    "role": "proxy",
+    "bytesBefore": 2696,
+    "bytesAfter": 2608
+  },
+  {
+    "assetId": "rug",
+    "variant": 3,
+    "role": "production",
+    "bytesBefore": 9232,
+    "bytesAfter": 5444
+  },
+  {
+    "assetId": "rug",
+    "variant": 3,
+    "role": "proxy",
+    "bytesBefore": 4620,
+    "bytesAfter": 3576
+  },
+  {
+    "assetId": "separator",
+    "variant": 1,
+    "role": "production",
+    "bytesBefore": 464600,
+    "bytesAfter": 221168
+  },
+  {
+    "assetId": "separator",
+    "variant": 1,
+    "role": "proxy",
+    "bytesBefore": 22196,
+    "bytesAfter": 12016
+  },
+  {
+    "assetId": "separator",
+    "variant": 2,
+    "role": "production",
+    "bytesBefore": 146660,
+    "bytesAfter": 71644
+  },
+  {
+    "assetId": "separator",
+    "variant": 2,
+    "role": "proxy",
+    "bytesBefore": 8376,
+    "bytesAfter": 5864
+  },
+  {
+    "assetId": "separator",
+    "variant": 3,
+    "role": "production",
+    "bytesBefore": 426508,
+    "bytesAfter": 219976
+  },
+  {
+    "assetId": "separator",
+    "variant": 3,
+    "role": "proxy",
+    "bytesBefore": 67112,
+    "bytesAfter": 41212
+  },
+  {
+    "assetId": "coffeeTable",
+    "variant": 4,
+    "role": "production",
+    "bytesBefore": 100364,
+    "bytesAfter": 100364
+  },
+  {
+    "assetId": "coffeeTable",
+    "variant": 4,
+    "role": "proxy",
+    "bytesBefore": 17248,
+    "bytesAfter": 17248
+  },
+  {
+    "assetId": "coffeeTable",
+    "variant": 5,
+    "role": "production",
+    "bytesBefore": 44860,
+    "bytesAfter": 44860
+  },
+  {
+    "assetId": "coffeeTable",
+    "variant": 5,
+    "role": "proxy",
+    "bytesBefore": 9232,
+    "bytesAfter": 9232
+  },
+  {
+    "assetId": "television",
+    "variant": 1,
+    "role": "production",
+    "bytesBefore": 230132,
+    "bytesAfter": 230132
+  },
+  {
+    "assetId": "television",
+    "variant": 1,
+    "role": "proxy",
+    "bytesBefore": 6904,
+    "bytesAfter": 6904
+  },
+  {
+    "assetId": "television",
+    "variant": 2,
+    "role": "production",
+    "bytesBefore": 229476,
+    "bytesAfter": 229476
+  },
+  {
+    "assetId": "television",
+    "variant": 2,
+    "role": "proxy",
+    "bytesBefore": 6900,
+    "bytesAfter": 6900
+  },
+  {
+    "assetId": "coffeeMachine",
+    "variant": 1,
+    "role": "production",
+    "bytesBefore": 248156,
+    "bytesAfter": 248156
+  },
+  {
+    "assetId": "coffeeMachine",
+    "variant": 1,
+    "role": "proxy",
+    "bytesBefore": 31988,
+    "bytesAfter": 31988
+  },
+  {
+    "assetId": "coffeeMachine",
+    "variant": 2,
+    "role": "production",
+    "bytesBefore": 525820,
+    "bytesAfter": 525820
+  },
+  {
+    "assetId": "coffeeMachine",
+    "variant": 2,
+    "role": "proxy",
+    "bytesBefore": 28952,
+    "bytesAfter": 28952
+  },
+  {
+    "assetId": "edsSignage",
+    "variant": 1,
+    "role": "production",
+    "bytesBefore": 535132,
+    "bytesAfter": 512512
+  },
+  {
+    "assetId": "edsSignage",
+    "variant": 1,
+    "role": "proxy",
+    "bytesBefore": 27028,
+    "bytesAfter": 9236
+  },
+  {
+    "assetId": "edsSignage",
+    "variant": 2,
+    "role": "production",
+    "bytesBefore": 5697604,
+    "bytesAfter": 1641572
+  },
+  {
+    "assetId": "edsSignage",
+    "variant": 2,
+    "role": "proxy",
+    "bytesBefore": 327496,
+    "bytesAfter": 114852
+  },
+  {
+    "assetId": "edsSignage",
+    "variant": 3,
+    "role": "production",
+    "bytesBefore": 5719952,
+    "bytesAfter": 1711204
+  },
+  {
+    "assetId": "edsSignage",
+    "variant": 3,
+    "role": "proxy",
+    "bytesBefore": 457688,
+    "bytesAfter": 109324
+  },
+  {
+    "assetId": "edsSignage",
+    "variant": 4,
+    "role": "production",
+    "bytesBefore": 2127500,
+    "bytesAfter": 656076
+  },
+  {
+    "assetId": "edsSignage",
+    "variant": 4,
+    "role": "proxy",
+    "bytesBefore": 32832,
+    "bytesAfter": 12016
+  },
+  {
+    "assetId": "edsSignage",
+    "variant": 5,
+    "role": "production",
+    "bytesBefore": 3587564,
+    "bytesAfter": 1228752
+  },
+  {
+    "assetId": "edsSignage",
+    "variant": 5,
+    "role": "proxy",
+    "bytesBefore": 67676,
+    "bytesAfter": 20988
+  },
+  {
+    "assetId": "edsSignage",
+    "variant": 6,
+    "role": "production",
+    "bytesBefore": 433884,
+    "bytesAfter": 148332
+  },
+  {
+    "assetId": "edsSignage",
+    "variant": 6,
+    "role": "proxy",
+    "bytesBefore": 64700,
+    "bytesAfter": 25336
+  }
+]

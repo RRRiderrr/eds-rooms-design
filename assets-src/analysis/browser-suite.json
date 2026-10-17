@@ -1,0 +1,2464 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\kakuc\\Downloads\\blender-mcp\\ThreeJS_ArchViz\\node_modules\\@playwright\\test\\cli.js",
+      "test"
+    ],
+    "configFile": "C:\\Users\\kakuc\\Downloads\\blender-mcp\\ThreeJS_ArchViz\\playwright.config.ts",
+    "rootDir": "C:/Users/kakuc/Downloads/blender-mcp/ThreeJS_ArchViz/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/kakuc/Downloads/blender-mcp/ThreeJS_ArchViz/test-results/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium-desktop",
+        "name": "chromium-desktop",
+        "testDir": "C:/Users/kakuc/Downloads/blender-mcp/ThreeJS_ArchViz/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "C:/Users/kakuc/Downloads/blender-mcp/ThreeJS_ArchViz/test-results/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium-phone",
+        "name": "chromium-phone",
+        "testDir": "C:/Users/kakuc/Downloads/blender-mcp/ThreeJS_ArchViz/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "C:/Users/kakuc/Downloads/blender-mcp/ThreeJS_ArchViz/test-results/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium-landscape",
+        "name": "chromium-landscape",
+        "testDir": "C:/Users/kakuc/Downloads/blender-mcp/ThreeJS_ArchViz/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "C:/Users/kakuc/Downloads/blender-mcp/ThreeJS_ArchViz/test-results/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit-tablet",
+        "name": "webkit-tablet",
+        "testDir": "C:/Users/kakuc/Downloads/blender-mcp/ThreeJS_ArchViz/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "C:/Users/kakuc/Downloads/blender-mcp/ThreeJS_ArchViz/test-results/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox-desktop",
+        "name": "firefox-desktop",
+        "testDir": "C:/Users/kakuc/Downloads/blender-mcp/ThreeJS_ArchViz/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\kakuc\\Downloads\\blender-mcp\\ThreeJS_ArchViz\\test-results\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "chromium-desktop",
+        "testDir": "C:\\Users\\kakuc\\Downloads\\blender-mcp\\ThreeJS_ArchViz\\tests\\e2e",
+        "snapshotDir": "C:\\Users\\kakuc\\Downloads\\blender-mcp\\ThreeJS_ArchViz\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 90000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4173",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "video": "off",
+          "browserName": "chromium",
+          "launchOptions": {
+            "args": [
+              "--use-angle=d3d11"
+            ]
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "deviceScaleFactor": 1
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium-desktop"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\kakuc\\Downloads\\blender-mcp\\ThreeJS_ArchViz\\test-results\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "chromium-phone",
+        "testDir": "C:\\Users\\kakuc\\Downloads\\blender-mcp\\ThreeJS_ArchViz\\tests\\e2e",
+        "snapshotDir": "C:\\Users\\kakuc\\Downloads\\blender-mcp\\ThreeJS_ArchViz\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 90000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4173",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "video": "off",
+          "browserName": "chromium",
+          "launchOptions": {
+            "args": [
+              "--use-angle=d3d11"
+            ]
+          },
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "deviceScaleFactor": 2,
+          "isMobile": true,
+          "hasTouch": true
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium-phone"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\kakuc\\Downloads\\blender-mcp\\ThreeJS_ArchViz\\test-results\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "chromium-landscape",
+        "testDir": "C:\\Users\\kakuc\\Downloads\\blender-mcp\\ThreeJS_ArchViz\\tests\\e2e",
+        "snapshotDir": "C:\\Users\\kakuc\\Downloads\\blender-mcp\\ThreeJS_ArchViz\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 90000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4173",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "video": "off",
+          "browserName": "chromium",
+          "launchOptions": {
+            "args": [
+              "--use-angle=d3d11"
+            ]
+          },
+          "viewport": {
+            "width": 844,
+            "height": 390
+          },
+          "deviceScaleFactor": 2,
+          "isMobile": true,
+          "hasTouch": true
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium-landscape"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\kakuc\\Downloads\\blender-mcp\\ThreeJS_ArchViz\\test-results\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "webkit-tablet",
+        "testDir": "C:\\Users\\kakuc\\Downloads\\blender-mcp\\ThreeJS_ArchViz\\tests\\e2e",
+        "snapshotDir": "C:\\Users\\kakuc\\Downloads\\blender-mcp\\ThreeJS_ArchViz\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 90000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4173",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "video": "off",
+          "browserName": "webkit",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          },
+          "deviceScaleFactor": 2,
+          "isMobile": true,
+          "hasTouch": true
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "webkit-tablet"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\kakuc\\Downloads\\blender-mcp\\ThreeJS_ArchViz\\test-results\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "firefox-desktop",
+        "testDir": "C:\\Users\\kakuc\\Downloads\\blender-mcp\\ThreeJS_ArchViz\\tests\\e2e",
+        "snapshotDir": "C:\\Users\\kakuc\\Downloads\\blender-mcp\\ThreeJS_ArchViz\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 90000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4173",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "video": "off",
+          "browserName": "firefox",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "deviceScaleFactor": 1
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "firefox-desktop"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "open": "never",
+          "outputFolder": "test-results/report"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/latest.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4173 --strictPort",
+      "url": "http://127.0.0.1:4173",
+      "reuseExistingServer": true,
+      "timeout": 60000
+    }
+  },
+  "suites": [
+    {
+      "title": "editor.spec.ts",
+      "file": "editor.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "WebGL2 unavailable shows usable limited view instead of a blank screen",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-desktop",
+              "projectName": "chromium-desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 298,
+                  "errors": [],
+                  "retry": 0,
+                  "startTime": "2026-10-17T08:59:11.956Z",
+                  "annotations": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d2f56d7d370f0ba02e91-b6e3940f4b889e54ee2b",
+          "file": "editor.spec.ts",
+          "line": 151,
+          "column": 1
+        },
+        {
+          "title": "WebGL2 unavailable shows usable limited view instead of a blank screen",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-phone",
+              "projectName": "chromium-phone",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 394,
+                  "errors": [],
+                  "retry": 0,
+                  "startTime": "2026-10-17T08:59:53.161Z",
+                  "annotations": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d2f56d7d370f0ba02e91-1f290fe0dede5a2d2210",
+          "file": "editor.spec.ts",
+          "line": 151,
+          "column": 1
+        },
+        {
+          "title": "WebGL2 unavailable shows usable limited view instead of a blank screen",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium-landscape",
+              "projectName": "chromium-landscape",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 267,
+                  "errors": [],
+                  "retry": 0,
+                  "startTime": "2026-10-17T09:00:34.280Z",
+                  "annotations": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d2f56d7d370f0ba02e91-80ee5f7557484905b328",
+          "file": "editor.spec.ts",
+          "line": 151,
+          "column": 1
+        },
+        {
+          "title": "WebGL2 unavailable shows usable limited view instead of a blank screen",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit-tablet",
+              "projectName": "webkit-tablet",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 559,
+                  "errors": [],
+                  "retry": 0,
+                  "startTime": "2026-10-17T09:02:14.989Z",
+                  "annotations": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d2f56d7d370f0ba02e91-1aa87cd66d13175f16bf",
+          "file": "editor.spec.ts",
+          "line": 151,
+          "column": 1
+        },
+        {
+          "title": "WebGL2 unavailable shows usable limited view instead of a blank screen",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox-desktop",
+              "projectName": "firefox-desktop",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 792,
+                  "errors": [],
+                  "retry": 0,
+                  "startTime": "2026-10-17T09:03:20.817Z",
+                  "annotations": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d2f56d7d370f0ba02e91-b65abf490589bfeb7e18",
+          "file": "editor.spec.ts",
+          "line": 151,
+          "column": 1
+        }
+      ],
+      "suites": [
+        {
+          "title": "Measured lounge / production editor",
+          "file": "editor.spec.ts",
+          "line": 21,
+          "column": 6,
+          "specs": [
+            {
+              "title": "all16 presets, empty0, both modes and actual room remain coherent",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 20523,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T08:58:30.162Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-d9410a7ce7c69626bea4",
+              "file": "editor.spec.ts",
+              "line": 30,
+              "column": 2
+            },
+            {
+              "title": "independent absent/model/material variants and history work through UI",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1372,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T08:58:50.817Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-7b6f3b9705def290fe4d",
+              "file": "editor.spec.ts",
+              "line": 42,
+              "column": 2
+            },
+            {
+              "title": "placement protections, free override, duplicate and delete are functional",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1655,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T08:58:52.203Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-5f3d9e63cef34957f569",
+              "file": "editor.spec.ts",
+              "line": 51,
+              "column": 2
+            },
+            {
+              "title": "grid, snapping, layers and interactive door state survive mode changes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1847,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T08:58:53.873Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-2f0d3d6929795e630b44",
+              "file": "editor.spec.ts",
+              "line": 59,
+              "column": 2
+            },
+            {
+              "title": "wall assets stay attached and floor furniture stays grounded",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1186,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T08:58:55.731Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-cda954649deab6c45006",
+              "file": "editor.spec.ts",
+              "line": 66,
+              "column": 2
+            },
+            {
+              "title": "the actual door mesh opens on pointer or touch interaction",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1891,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T08:58:56.929Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-bbffba04c09dcf014cc2",
+              "file": "editor.spec.ts",
+              "line": 72,
+              "column": 2
+            },
+            {
+              "title": "mouse or native touch drag applies grid snap and supports smooth movement",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1696,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T08:58:58.835Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-0740512a5e476ad76ec5",
+              "file": "editor.spec.ts",
+              "line": 84,
+              "column": 2
+            },
+            {
+              "title": "IndexedDB save/reload and portable export/import preserve design",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2174,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T08:59:00.544Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-1a98b6fb8c157213dd16",
+              "file": "editor.spec.ts",
+              "line": 103,
+              "column": 2
+            },
+            {
+              "title": "tabletop accessories follow their support and never remain floating after deletion",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1294,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T08:59:02.727Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-da25d378f2c2fed72ec5",
+              "file": "editor.spec.ts",
+              "line": 111,
+              "column": 2
+            },
+            {
+              "title": "the Ukrainian EDS interface uses real thumbnails and protected full-space placement",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1636,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T08:59:04.034Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-b1f1cde0c1f37e79a7cf",
+              "file": "editor.spec.ts",
+              "line": 120,
+              "column": 2
+            },
+            {
+              "title": "desktop FPS supports pointer look, WASD, height changes and ignores furniture",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5464,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T08:59:05.681Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-a73f19dd805fdb8110c5",
+              "file": "editor.spec.ts",
+              "line": 130,
+              "column": 2
+            },
+            {
+              "title": "touch FPS exposes a native joystick and separates it from editor controls",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "Touch controls are tested on touch projects",
+                      "location": {
+                        "file": "C:\\Users\\kakuc\\Downloads\\blender-mcp\\ThreeJS_ArchViz\\tests\\e2e\\editor.spec.ts",
+                        "line": 142,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "chromium-desktop",
+                  "projectName": "chromium-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 787,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T08:59:11.157Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "Touch controls are tested on touch projects",
+                          "location": {
+                            "file": "C:\\Users\\kakuc\\Downloads\\blender-mcp\\ThreeJS_ArchViz\\tests\\e2e\\editor.spec.ts",
+                            "line": 142,
+                            "column": 8
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-20aa169cc67d2cee5a38",
+              "file": "editor.spec.ts",
+              "line": 141,
+              "column": 2
+            },
+            {
+              "title": "all16 presets, empty0, both modes and actual room remain coherent",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-phone",
+                  "projectName": "chromium-phone",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 20046,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T08:59:13.242Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-c6dda576fd9b5995f6f0",
+              "file": "editor.spec.ts",
+              "line": 30,
+              "column": 2
+            },
+            {
+              "title": "independent absent/model/material variants and history work through UI",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-phone",
+                  "projectName": "chromium-phone",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1368,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T08:59:33.414Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-6ad0f69ae337c4e72fdf",
+              "file": "editor.spec.ts",
+              "line": 42,
+              "column": 2
+            },
+            {
+              "title": "placement protections, free override, duplicate and delete are functional",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-phone",
+                  "projectName": "chromium-phone",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1833,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T08:59:34.795Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-47714eb6487a99fa5680",
+              "file": "editor.spec.ts",
+              "line": 51,
+              "column": 2
+            },
+            {
+              "title": "grid, snapping, layers and interactive door state survive mode changes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-phone",
+                  "projectName": "chromium-phone",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1844,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T08:59:36.639Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-736b2cf847860d0723dd",
+              "file": "editor.spec.ts",
+              "line": 59,
+              "column": 2
+            },
+            {
+              "title": "wall assets stay attached and floor furniture stays grounded",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-phone",
+                  "projectName": "chromium-phone",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1334,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T08:59:38.493Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-70ea3e760f3a3df2b5c3",
+              "file": "editor.spec.ts",
+              "line": 66,
+              "column": 2
+            },
+            {
+              "title": "the actual door mesh opens on pointer or touch interaction",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-phone",
+                  "projectName": "chromium-phone",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1743,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T08:59:39.841Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-5152ed9f713078644d1c",
+              "file": "editor.spec.ts",
+              "line": 72,
+              "column": 2
+            },
+            {
+              "title": "mouse or native touch drag applies grid snap and supports smooth movement",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-phone",
+                  "projectName": "chromium-phone",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2619,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T08:59:41.595Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-02fba9f3ab0fa5d3b2ec",
+              "file": "editor.spec.ts",
+              "line": 84,
+              "column": 2
+            },
+            {
+              "title": "IndexedDB save/reload and portable export/import preserve design",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-phone",
+                  "projectName": "chromium-phone",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2256,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T08:59:44.229Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-72fbaec3bd4216dfb584",
+              "file": "editor.spec.ts",
+              "line": 103,
+              "column": 2
+            },
+            {
+              "title": "tabletop accessories follow their support and never remain floating after deletion",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-phone",
+                  "projectName": "chromium-phone",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1284,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T08:59:46.498Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-8bf5a5d3e12d717354c0",
+              "file": "editor.spec.ts",
+              "line": 111,
+              "column": 2
+            },
+            {
+              "title": "the Ukrainian EDS interface uses real thumbnails and protected full-space placement",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-phone",
+                  "projectName": "chromium-phone",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1789,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T08:59:47.792Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-2a23db0c693aa03414d1",
+              "file": "editor.spec.ts",
+              "line": 120,
+              "column": 2
+            },
+            {
+              "title": "desktop FPS supports pointer look, WASD, height changes and ignores furniture",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "Desktop keyboard navigation is tested on mouse projects",
+                      "location": {
+                        "file": "C:\\Users\\kakuc\\Downloads\\blender-mcp\\ThreeJS_ArchViz\\tests\\e2e\\editor.spec.ts",
+                        "line": 131,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "chromium-phone",
+                  "projectName": "chromium-phone",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 741,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T08:59:49.592Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "Desktop keyboard navigation is tested on mouse projects",
+                          "location": {
+                            "file": "C:\\Users\\kakuc\\Downloads\\blender-mcp\\ThreeJS_ArchViz\\tests\\e2e\\editor.spec.ts",
+                            "line": 131,
+                            "column": 8
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-f6b58c93037780e2674a",
+              "file": "editor.spec.ts",
+              "line": 130,
+              "column": 2
+            },
+            {
+              "title": "touch FPS exposes a native joystick and separates it from editor controls",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-phone",
+                  "projectName": "chromium-phone",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2805,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T08:59:50.344Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-51ab74a201217104870a",
+              "file": "editor.spec.ts",
+              "line": 141,
+              "column": 2
+            },
+            {
+              "title": "all16 presets, empty0, both modes and actual room remain coherent",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-landscape",
+                  "projectName": "chromium-landscape",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 19953,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T08:59:54.492Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-51d7009bf0d4aace7932",
+              "file": "editor.spec.ts",
+              "line": 30,
+              "column": 2
+            },
+            {
+              "title": "independent absent/model/material variants and history work through UI",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-landscape",
+                  "projectName": "chromium-landscape",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1552,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T09:00:14.570Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-a0317b3cc0b6b0846d34",
+              "file": "editor.spec.ts",
+              "line": 42,
+              "column": 2
+            },
+            {
+              "title": "placement protections, free override, duplicate and delete are functional",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-landscape",
+                  "projectName": "chromium-landscape",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1596,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T09:00:16.142Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-d250635af9f1818970ea",
+              "file": "editor.spec.ts",
+              "line": 51,
+              "column": 2
+            },
+            {
+              "title": "grid, snapping, layers and interactive door state survive mode changes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-landscape",
+                  "projectName": "chromium-landscape",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1892,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T09:00:17.747Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-adb403bff3a431e0431c",
+              "file": "editor.spec.ts",
+              "line": 59,
+              "column": 2
+            },
+            {
+              "title": "wall assets stay attached and floor furniture stays grounded",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-landscape",
+                  "projectName": "chromium-landscape",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1623,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T09:00:19.651Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-0073a72f3296f938cff1",
+              "file": "editor.spec.ts",
+              "line": 66,
+              "column": 2
+            },
+            {
+              "title": "the actual door mesh opens on pointer or touch interaction",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-landscape",
+                  "projectName": "chromium-landscape",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1767,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T09:00:21.287Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-42a1ebc7fe4e41b36201",
+              "file": "editor.spec.ts",
+              "line": 72,
+              "column": 2
+            },
+            {
+              "title": "mouse or native touch drag applies grid snap and supports smooth movement",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-landscape",
+                  "projectName": "chromium-landscape",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2623,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T09:00:23.066Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-16b2e23c4fa719a25afd",
+              "file": "editor.spec.ts",
+              "line": 84,
+              "column": 2
+            },
+            {
+              "title": "IndexedDB save/reload and portable export/import preserve design",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-landscape",
+                  "projectName": "chromium-landscape",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2001,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T09:00:25.700Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-be9e927f1f489c0ea341",
+              "file": "editor.spec.ts",
+              "line": 103,
+              "column": 2
+            },
+            {
+              "title": "tabletop accessories follow their support and never remain floating after deletion",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-landscape",
+                  "projectName": "chromium-landscape",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1258,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T09:00:27.710Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-b735cba6e142023ca128",
+              "file": "editor.spec.ts",
+              "line": 111,
+              "column": 2
+            },
+            {
+              "title": "the Ukrainian EDS interface uses real thumbnails and protected full-space placement",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-landscape",
+                  "projectName": "chromium-landscape",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1794,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T09:00:28.977Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-3734f54d4e07e9141312",
+              "file": "editor.spec.ts",
+              "line": 120,
+              "column": 2
+            },
+            {
+              "title": "desktop FPS supports pointer look, WASD, height changes and ignores furniture",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "Desktop keyboard navigation is tested on mouse projects",
+                      "location": {
+                        "file": "C:\\Users\\kakuc\\Downloads\\blender-mcp\\ThreeJS_ArchViz\\tests\\e2e\\editor.spec.ts",
+                        "line": 131,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "chromium-landscape",
+                  "projectName": "chromium-landscape",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 653,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T09:00:30.780Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "Desktop keyboard navigation is tested on mouse projects",
+                          "location": {
+                            "file": "C:\\Users\\kakuc\\Downloads\\blender-mcp\\ThreeJS_ArchViz\\tests\\e2e\\editor.spec.ts",
+                            "line": 131,
+                            "column": 8
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-eea763c151b776607dfa",
+              "file": "editor.spec.ts",
+              "line": 130,
+              "column": 2
+            },
+            {
+              "title": "touch FPS exposes a native joystick and separates it from editor controls",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium-landscape",
+                  "projectName": "chromium-landscape",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2828,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T09:00:31.443Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-4d030b2e9ff46c5ebef1",
+              "file": "editor.spec.ts",
+              "line": 141,
+              "column": 2
+            },
+            {
+              "title": "all16 presets, empty0, both modes and actual room remain coherent",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit-tablet",
+                  "projectName": "webkit-tablet",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 46489,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T09:00:35.405Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-7a80e9b8ea4314119c89",
+              "file": "editor.spec.ts",
+              "line": 30,
+              "column": 2
+            },
+            {
+              "title": "independent absent/model/material variants and history work through UI",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit-tablet",
+                  "projectName": "webkit-tablet",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4241,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T09:01:21.966Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-43e3827e015400584ed2",
+              "file": "editor.spec.ts",
+              "line": 42,
+              "column": 2
+            },
+            {
+              "title": "placement protections, free override, duplicate and delete are functional",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit-tablet",
+                  "projectName": "webkit-tablet",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5162,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T09:01:26.218Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-084cc615db6c584120f0",
+              "file": "editor.spec.ts",
+              "line": 51,
+              "column": 2
+            },
+            {
+              "title": "grid, snapping, layers and interactive door state survive mode changes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit-tablet",
+                  "projectName": "webkit-tablet",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 8579,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T09:01:31.390Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-06158b0b6b2cea81a18b",
+              "file": "editor.spec.ts",
+              "line": 59,
+              "column": 2
+            },
+            {
+              "title": "wall assets stay attached and floor furniture stays grounded",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit-tablet",
+                  "projectName": "webkit-tablet",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3649,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T09:01:39.978Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-f71b541f476b64e3daf3",
+              "file": "editor.spec.ts",
+              "line": 66,
+              "column": 2
+            },
+            {
+              "title": "the actual door mesh opens on pointer or touch interaction",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit-tablet",
+                  "projectName": "webkit-tablet",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5431,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T09:01:43.639Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-d194eb9a25d120313898",
+              "file": "editor.spec.ts",
+              "line": 72,
+              "column": 2
+            },
+            {
+              "title": "mouse or native touch drag applies grid snap and supports smooth movement",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit-tablet",
+                  "projectName": "webkit-tablet",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4420,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T09:01:49.080Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-a6c8a4388c9550b49912",
+              "file": "editor.spec.ts",
+              "line": 84,
+              "column": 2
+            },
+            {
+              "title": "IndexedDB save/reload and portable export/import preserve design",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit-tablet",
+                  "projectName": "webkit-tablet",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5086,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T09:01:53.512Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-eb78c65910f759cd9ed1",
+              "file": "editor.spec.ts",
+              "line": 103,
+              "column": 2
+            },
+            {
+              "title": "tabletop accessories follow their support and never remain floating after deletion",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit-tablet",
+                  "projectName": "webkit-tablet",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3387,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T09:01:58.608Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-8773b5b923bb0ec169cd",
+              "file": "editor.spec.ts",
+              "line": 111,
+              "column": 2
+            },
+            {
+              "title": "the Ukrainian EDS interface uses real thumbnails and protected full-space placement",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit-tablet",
+                  "projectName": "webkit-tablet",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5364,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T09:02:02.004Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-dd94a019592e4d55e0a7",
+              "file": "editor.spec.ts",
+              "line": 120,
+              "column": 2
+            },
+            {
+              "title": "desktop FPS supports pointer look, WASD, height changes and ignores furniture",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "Desktop keyboard navigation is tested on mouse projects",
+                      "location": {
+                        "file": "C:\\Users\\kakuc\\Downloads\\blender-mcp\\ThreeJS_ArchViz\\tests\\e2e\\editor.spec.ts",
+                        "line": 131,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "webkit-tablet",
+                  "projectName": "webkit-tablet",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 1007,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T09:02:07.377Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "Desktop keyboard navigation is tested on mouse projects",
+                          "location": {
+                            "file": "C:\\Users\\kakuc\\Downloads\\blender-mcp\\ThreeJS_ArchViz\\tests\\e2e\\editor.spec.ts",
+                            "line": 131,
+                            "column": 8
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-2de3b23023db89624d3a",
+              "file": "editor.spec.ts",
+              "line": 130,
+              "column": 2
+            },
+            {
+              "title": "touch FPS exposes a native joystick and separates it from editor controls",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit-tablet",
+                  "projectName": "webkit-tablet",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6587,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T09:02:08.393Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-4f81456fc4bd0050b185",
+              "file": "editor.spec.ts",
+              "line": 141,
+              "column": 2
+            },
+            {
+              "title": "all16 presets, empty0, both modes and actual room remain coherent",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox-desktop",
+                  "projectName": "firefox-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 25194,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T09:02:16.429Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-235fc134869f4bef9fa6",
+              "file": "editor.spec.ts",
+              "line": 30,
+              "column": 2
+            },
+            {
+              "title": "independent absent/model/material variants and history work through UI",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox-desktop",
+                  "projectName": "firefox-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1837,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T09:02:42.058Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-746f378ae01b9252c3de",
+              "file": "editor.spec.ts",
+              "line": 42,
+              "column": 2
+            },
+            {
+              "title": "placement protections, free override, duplicate and delete are functional",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox-desktop",
+                  "projectName": "firefox-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1944,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T09:02:43.909Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-0d8cf7d1a68d035098ec",
+              "file": "editor.spec.ts",
+              "line": 51,
+              "column": 2
+            },
+            {
+              "title": "grid, snapping, layers and interactive door state survive mode changes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox-desktop",
+                  "projectName": "firefox-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2651,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T09:02:45.864Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-3ac690cf3a6fe104e474",
+              "file": "editor.spec.ts",
+              "line": 59,
+              "column": 2
+            },
+            {
+              "title": "wall assets stay attached and floor furniture stays grounded",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox-desktop",
+                  "projectName": "firefox-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1581,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T09:02:48.526Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-66d4a712d3b85b8e940c",
+              "file": "editor.spec.ts",
+              "line": 66,
+              "column": 2
+            },
+            {
+              "title": "the actual door mesh opens on pointer or touch interaction",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox-desktop",
+                  "projectName": "firefox-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3182,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T09:02:50.120Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-f68dbd155c8f8b2348cd",
+              "file": "editor.spec.ts",
+              "line": 72,
+              "column": 2
+            },
+            {
+              "title": "mouse or native touch drag applies grid snap and supports smooth movement",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox-desktop",
+                  "projectName": "firefox-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2538,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T09:02:53.313Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-8b24b7fc29a2395dc63a",
+              "file": "editor.spec.ts",
+              "line": 84,
+              "column": 2
+            },
+            {
+              "title": "IndexedDB save/reload and portable export/import preserve design",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox-desktop",
+                  "projectName": "firefox-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2485,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T09:02:55.861Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-4255cf86525e55335f45",
+              "file": "editor.spec.ts",
+              "line": 103,
+              "column": 2
+            },
+            {
+              "title": "tabletop accessories follow their support and never remain floating after deletion",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox-desktop",
+                  "projectName": "firefox-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1603,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T09:02:58.356Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-b8b4ae3bc6881a5bd12e",
+              "file": "editor.spec.ts",
+              "line": 111,
+              "column": 2
+            },
+            {
+              "title": "the Ukrainian EDS interface uses real thumbnails and protected full-space placement",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox-desktop",
+                  "projectName": "firefox-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2865,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T09:02:59.971Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-6fb8e915e5d283fdcbd5",
+              "file": "editor.spec.ts",
+              "line": 120,
+              "column": 2
+            },
+            {
+              "title": "desktop FPS supports pointer look, WASD, height changes and ignores furniture",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox-desktop",
+                  "projectName": "firefox-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6558,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T09:03:02.846Z",
+                      "annotations": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-5f005f422a99ecf1227e",
+              "file": "editor.spec.ts",
+              "line": 130,
+              "column": 2
+            },
+            {
+              "title": "touch FPS exposes a native joystick and separates it from editor controls",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "Touch controls are tested on touch projects",
+                      "location": {
+                        "file": "C:\\Users\\kakuc\\Downloads\\blender-mcp\\ThreeJS_ArchViz\\tests\\e2e\\editor.spec.ts",
+                        "line": 142,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "firefox-desktop",
+                  "projectName": "firefox-desktop",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 11390,
+                      "errors": [],
+                      "retry": 0,
+                      "startTime": "2026-10-17T09:03:09.417Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "Touch controls are tested on touch projects",
+                          "location": {
+                            "file": "C:\\Users\\kakuc\\Downloads\\blender-mcp\\ThreeJS_ArchViz\\tests\\e2e\\editor.spec.ts",
+                            "line": 142,
+                            "column": 8
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "d2f56d7d370f0ba02e91-d113fc8841cc9719766d",
+              "file": "editor.spec.ts",
+              "line": 141,
+              "column": 2
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-17T08:58:29.434Z",
+    "duration": 292855.586,
+    "expected": 60,
+    "skipped": 5,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

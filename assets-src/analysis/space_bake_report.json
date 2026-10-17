@@ -1,0 +1,9 @@
+{
+  "seconds": 365.1062114238739,
+  "nodes": 39,
+  "resolution": 4096,
+  "samples": 64,
+  "pass": "INDIRECT only; no COLOR/DIRECT",
+  "sourceFurnitureHiddenDuringBake": true,
+  "centralArchitectureAddedAsTemporaryOccluder": true
+}

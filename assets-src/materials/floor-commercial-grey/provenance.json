@@ -1,0 +1,13 @@
+{
+  "files": {
+    "baseColor": "E:/ArchViz_Resources/RoomAtelier/materials/floor-commercial-grey/original/45d53bb67abb/baseColor.jpg",
+    "normal": "E:/ArchViz_Resources/RoomAtelier/materials/floor-commercial-grey/original/45d53bb67abb/normal.jpg",
+    "roughness": "E:/ArchViz_Resources/RoomAtelier/materials/floor-commercial-grey/original/45d53bb67abb/roughness.jpg",
+    "ao": "E:/ArchViz_Resources/RoomAtelier/materials/floor-commercial-grey/original/45d53bb67abb/ao.jpg"
+  },
+  "source": "Quixel Megascans Smooth Concrete tezmdjno - owned Fab library download",
+  "license": "Fab Standard",
+  "licenseEvidence": "Epic Games Launcher / Fab UI showed Saved in library before Download Only, then On disk 15.31 MB; medium texture set downloaded 2026-10-17 without a purchase, login or new agreement. Local cache Smooth_Concrete-6c270df9.",
+  "tileMeters": 2,
+  "note": "Owned Quixel smooth scan calibrated to the photographed matte grey commercial floor. Roughness .88 with restrained scan variation, dielectric finish, no polished clearcoat. Exact flooring product is unknown."
+}

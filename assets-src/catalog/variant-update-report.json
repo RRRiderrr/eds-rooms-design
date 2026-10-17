@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-17T19:43:15.600Z",
+  "assets": [
+    {
+      "assetId": "pouf",
+      "variant": 1,
+      "bytes": {
+        "production": 134204,
+        "proxy": 7180
+      }
+    },
+    {
+      "assetId": "coffeeTable",
+      "variant": 1,
+      "bytes": {
+        "production": 161052,
+        "proxy": 11688
+      }
+    },
+    {
+      "assetId": "coffeeTable",
+      "variant": 2,
+      "bytes": {
+        "production": 524344,
+        "proxy": 10024
+      }
+    },
+    {
+      "assetId": "sideTable",
+      "variant": 1,
+      "bytes": {
+        "production": 159960,
+        "proxy": 11600
+      }
+    },
+    {
+      "assetId": "meetingTable",
+      "variant": 1,
+      "bytes": {
+        "production": 158344,
+        "proxy": 11496
+      }
+    },
+    {
+      "assetId": "meetingTable",
+      "variant": 2,
+      "bytes": {
+        "production": 520256,
+        "proxy": 9996
+      }
+    },
+    {
+      "assetId": "barStool",
+      "variant": 2,
+      "bytes": {
+        "production": 691660,
+        "proxy": 38040
+      }
+    }
+  ]
+}

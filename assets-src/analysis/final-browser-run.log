@@ -1,0 +1,185 @@
+[WebServer] (node:11800) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 100 tests using 1 worker
+
+(node:26484) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:26484) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok   1 [chromium-desktop] › tests\e2e\editor.spec.ts:30:2 › Measured lounge / production editor › all16 presets, empty0, both modes and actual room remain coherent (35.3s)
+  ok   2 [chromium-desktop] › tests\e2e\editor.spec.ts:44:2 › Measured lounge / production editor › independent absent/model/material variants and history work through UI (1.6s)
+  ok   3 [chromium-desktop] › tests\e2e\editor.spec.ts:53:2 › Measured lounge / production editor › placement protections, free override, duplicate and delete are functional (1.8s)
+  ok   4 [chromium-desktop] › tests\e2e\editor.spec.ts:61:2 › Measured lounge / production editor › grid, snapping, layers and interactive door state survive mode changes (2.6s)
+  ok   5 [chromium-desktop] › tests\e2e\editor.spec.ts:68:2 › Measured lounge / production editor › wall assets stay attached and floor furniture stays grounded (1.3s)
+  ok   6 [chromium-desktop] › tests\e2e\editor.spec.ts:74:2 › Measured lounge / production editor › the actual door mesh opens on pointer or touch interaction (3.3s)
+  ok   7 [chromium-desktop] › tests\e2e\editor.spec.ts:86:2 › Measured lounge / production editor › mouse or native touch drag applies grid snap and supports smooth movement (2.0s)
+  ok   8 [chromium-desktop] › tests\e2e\editor.spec.ts:105:2 › Measured lounge / production editor › IndexedDB save/reload and portable export/import preserve design (3.0s)
+  ok   9 [chromium-desktop] › tests\e2e\editor.spec.ts:113:2 › Measured lounge / production editor › tabletop accessories follow their support and never remain floating after deletion (1.4s)
+  ok  10 [chromium-desktop] › tests\e2e\editor.spec.ts:123:2 › Measured lounge / production editor › the Ukrainian EDS interface uses real thumbnails and protected full-space placement (1.7s)
+  ok  11 [chromium-desktop] › tests\e2e\editor.spec.ts:133:2 › Measured lounge / production editor › desktop FPS supports pointer look, WASD, height changes and ignores furniture (3.3s)
+  -   12 [chromium-desktop] › tests\e2e\editor.spec.ts:144:2 › Measured lounge / production editor › touch FPS exposes a native joystick and separates it from editor controls
+  ok  13 [chromium-desktop] › tests\e2e\editor.spec.ts:154:1 › WebGL2 unavailable shows usable limited view instead of a blank screen (506ms)
+  ok  14 [chromium-desktop] › tests\e2e\enhancements.spec.ts:77:3 › EDS furniture, navigation, signage and identity regression › right-clicking actual floor outside the lounge launches ArchViz at that point (4.4s)
+  ok  15 [chromium-desktop] › tests\e2e\enhancements.spec.ts:98:3 › EDS furniture, navigation, signage and identity regression › all fixed direct fixtures retain position, intensity and target while walking (7.1s)
+  ok  16 [chromium-desktop] › tests\e2e\enhancements.spec.ts:120:3 › EDS furniture, navigation, signage and identity regression › header actions never overlap and the help action remains reachable (1.1s)
+  ok  17 [chromium-desktop] › tests\e2e\enhancements.spec.ts:138:3 › EDS furniture, navigation, signage and identity regression › the favicon, touch icon and install icons use the real EDS PNG identity (890ms)
+  ok  18 [chromium-desktop] › tests\e2e\enhancements.spec.ts:147:3 › EDS furniture, navigation, signage and identity regression › new furniture variants swap actual optimized models and coffee machines stay on their support (10.6s)
+  ok  19 [chromium-desktop] › tests\e2e\enhancements.spec.ts:174:3 › EDS furniture, navigation, signage and identity regression › imported source PBR foliage keeps its maps and cutout while only the pot finish changes (4.9s)
+  ok  20 [chromium-desktop] › tests\e2e\enhancements.spec.ts:186:3 › EDS furniture, navigation, signage and identity regression › every builtin preserves five unique corridor signs and offers the sixth library option (1.7s)
+(node:54160) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:54160) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  21 [chromium-phone] › tests\e2e\editor.spec.ts:30:2 › Measured lounge / production editor › all16 presets, empty0, both modes and actual room remain coherent (33.3s)
+  ok  22 [chromium-phone] › tests\e2e\editor.spec.ts:44:2 › Measured lounge / production editor › independent absent/model/material variants and history work through UI (1.4s)
+  ok  23 [chromium-phone] › tests\e2e\editor.spec.ts:53:2 › Measured lounge / production editor › placement protections, free override, duplicate and delete are functional (1.8s)
+  ok  24 [chromium-phone] › tests\e2e\editor.spec.ts:61:2 › Measured lounge / production editor › grid, snapping, layers and interactive door state survive mode changes (2.4s)
+  ok  25 [chromium-phone] › tests\e2e\editor.spec.ts:68:2 › Measured lounge / production editor › wall assets stay attached and floor furniture stays grounded (1.3s)
+  ok  26 [chromium-phone] › tests\e2e\editor.spec.ts:74:2 › Measured lounge / production editor › the actual door mesh opens on pointer or touch interaction (6.7s)
+  ok  27 [chromium-phone] › tests\e2e\editor.spec.ts:86:2 › Measured lounge / production editor › mouse or native touch drag applies grid snap and supports smooth movement (3.2s)
+  ok  28 [chromium-phone] › tests\e2e\editor.spec.ts:105:2 › Measured lounge / production editor › IndexedDB save/reload and portable export/import preserve design (2.4s)
+  ok  29 [chromium-phone] › tests\e2e\editor.spec.ts:113:2 › Measured lounge / production editor › tabletop accessories follow their support and never remain floating after deletion (1.5s)
+  ok  30 [chromium-phone] › tests\e2e\editor.spec.ts:123:2 › Measured lounge / production editor › the Ukrainian EDS interface uses real thumbnails and protected full-space placement (2.0s)
+  -   31 [chromium-phone] › tests\e2e\editor.spec.ts:133:2 › Measured lounge / production editor › desktop FPS supports pointer look, WASD, height changes and ignores furniture
+  ok  32 [chromium-phone] › tests\e2e\editor.spec.ts:144:2 › Measured lounge / production editor › touch FPS exposes a native joystick and separates it from editor controls (2.4s)
+  ok  33 [chromium-phone] › tests\e2e\editor.spec.ts:154:1 › WebGL2 unavailable shows usable limited view instead of a blank screen (412ms)
+  -   34 [chromium-phone] › tests\e2e\enhancements.spec.ts:77:3 › EDS furniture, navigation, signage and identity regression › right-clicking actual floor outside the lounge launches ArchViz at that point
+  -   35 [chromium-phone] › tests\e2e\enhancements.spec.ts:98:3 › EDS furniture, navigation, signage and identity regression › all fixed direct fixtures retain position, intensity and target while walking
+  ok  36 [chromium-phone] › tests\e2e\enhancements.spec.ts:120:3 › EDS furniture, navigation, signage and identity regression › header actions never overlap and the help action remains reachable (918ms)
+  ok  37 [chromium-phone] › tests\e2e\enhancements.spec.ts:138:3 › EDS furniture, navigation, signage and identity regression › the favicon, touch icon and install icons use the real EDS PNG identity (856ms)
+  ok  38 [chromium-phone] › tests\e2e\enhancements.spec.ts:147:3 › EDS furniture, navigation, signage and identity regression › new furniture variants swap actual optimized models and coffee machines stay on their support (13.1s)
+  ok  39 [chromium-phone] › tests\e2e\enhancements.spec.ts:174:3 › EDS furniture, navigation, signage and identity regression › imported source PBR foliage keeps its maps and cutout while only the pot finish changes (5.3s)
+  ok  40 [chromium-phone] › tests\e2e\enhancements.spec.ts:186:3 › EDS furniture, navigation, signage and identity regression › every builtin preserves five unique corridor signs and offers the sixth library option (1.9s)
+(node:14720) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:14720) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  41 [chromium-landscape] › tests\e2e\editor.spec.ts:30:2 › Measured lounge / production editor › all16 presets, empty0, both modes and actual room remain coherent (53.1s)
+  ok  42 [chromium-landscape] › tests\e2e\editor.spec.ts:44:2 › Measured lounge / production editor › independent absent/model/material variants and history work through UI (1.4s)
+  ok  43 [chromium-landscape] › tests\e2e\editor.spec.ts:53:2 › Measured lounge / production editor › placement protections, free override, duplicate and delete are functional (2.0s)
+  ok  44 [chromium-landscape] › tests\e2e\editor.spec.ts:61:2 › Measured lounge / production editor › grid, snapping, layers and interactive door state survive mode changes (2.9s)
+  ok  45 [chromium-landscape] › tests\e2e\editor.spec.ts:68:2 › Measured lounge / production editor › wall assets stay attached and floor furniture stays grounded (1.4s)
+  ok  46 [chromium-landscape] › tests\e2e\editor.spec.ts:74:2 › Measured lounge / production editor › the actual door mesh opens on pointer or touch interaction (1.9s)
+  ok  47 [chromium-landscape] › tests\e2e\editor.spec.ts:86:2 › Measured lounge / production editor › mouse or native touch drag applies grid snap and supports smooth movement (3.3s)
+  ok  48 [chromium-landscape] › tests\e2e\editor.spec.ts:105:2 › Measured lounge / production editor › IndexedDB save/reload and portable export/import preserve design (2.4s)
+  ok  49 [chromium-landscape] › tests\e2e\editor.spec.ts:113:2 › Measured lounge / production editor › tabletop accessories follow their support and never remain floating after deletion (1.3s)
+  ok  50 [chromium-landscape] › tests\e2e\editor.spec.ts:123:2 › Measured lounge / production editor › the Ukrainian EDS interface uses real thumbnails and protected full-space placement (2.1s)
+  -   51 [chromium-landscape] › tests\e2e\editor.spec.ts:133:2 › Measured lounge / production editor › desktop FPS supports pointer look, WASD, height changes and ignores furniture
+  ok  52 [chromium-landscape] › tests\e2e\editor.spec.ts:144:2 › Measured lounge / production editor › touch FPS exposes a native joystick and separates it from editor controls (2.4s)
+  ok  53 [chromium-landscape] › tests\e2e\editor.spec.ts:154:1 › WebGL2 unavailable shows usable limited view instead of a blank screen (376ms)
+  -   54 [chromium-landscape] › tests\e2e\enhancements.spec.ts:77:3 › EDS furniture, navigation, signage and identity regression › right-clicking actual floor outside the lounge launches ArchViz at that point
+  -   55 [chromium-landscape] › tests\e2e\enhancements.spec.ts:98:3 › EDS furniture, navigation, signage and identity regression › all fixed direct fixtures retain position, intensity and target while walking
+  ok  56 [chromium-landscape] › tests\e2e\enhancements.spec.ts:120:3 › EDS furniture, navigation, signage and identity regression › header actions never overlap and the help action remains reachable (952ms)
+  ok  57 [chromium-landscape] › tests\e2e\enhancements.spec.ts:138:3 › EDS furniture, navigation, signage and identity regression › the favicon, touch icon and install icons use the real EDS PNG identity (919ms)
+  ok  58 [chromium-landscape] › tests\e2e\enhancements.spec.ts:147:3 › EDS furniture, navigation, signage and identity regression › new furniture variants swap actual optimized models and coffee machines stay on their support (12.5s)
+  ok  59 [chromium-landscape] › tests\e2e\enhancements.spec.ts:174:3 › EDS furniture, navigation, signage and identity regression › imported source PBR foliage keeps its maps and cutout while only the pot finish changes (5.6s)
+  ok  60 [chromium-landscape] › tests\e2e\enhancements.spec.ts:186:3 › EDS furniture, navigation, signage and identity regression › every builtin preserves five unique corridor signs and offers the sixth library option (1.8s)
+(node:55908) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:55908) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x   61 [webkit-tablet] › tests\e2e\editor.spec.ts:30:2 › Measured lounge / production editor › all16 presets, empty0, both modes and actual room remain coherent (2.1m)
+(node:51680) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:51680) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  62 [webkit-tablet] › tests\e2e\editor.spec.ts:44:2 › Measured lounge / production editor › independent absent/model/material variants and history work through UI (5.3s)
+  ok  63 [webkit-tablet] › tests\e2e\editor.spec.ts:53:2 › Measured lounge / production editor › placement protections, free override, duplicate and delete are functional (7.1s)
+  ok  64 [webkit-tablet] › tests\e2e\editor.spec.ts:61:2 › Measured lounge / production editor › grid, snapping, layers and interactive door state survive mode changes (18.9s)
+  ok  65 [webkit-tablet] › tests\e2e\editor.spec.ts:68:2 › Measured lounge / production editor › wall assets stay attached and floor furniture stays grounded (4.5s)
+  ok  66 [webkit-tablet] › tests\e2e\editor.spec.ts:74:2 › Measured lounge / production editor › the actual door mesh opens on pointer or touch interaction (20.1s)
+  ok  67 [webkit-tablet] › tests\e2e\editor.spec.ts:86:2 › Measured lounge / production editor › mouse or native touch drag applies grid snap and supports smooth movement (7.0s)
+  ok  68 [webkit-tablet] › tests\e2e\editor.spec.ts:105:2 › Measured lounge / production editor › IndexedDB save/reload and portable export/import preserve design (10.7s)
+  ok  69 [webkit-tablet] › tests\e2e\editor.spec.ts:113:2 › Measured lounge / production editor › tabletop accessories follow their support and never remain floating after deletion (4.9s)
+  ok  70 [webkit-tablet] › tests\e2e\editor.spec.ts:123:2 › Measured lounge / production editor › the Ukrainian EDS interface uses real thumbnails and protected full-space placement (7.3s)
+  -   71 [webkit-tablet] › tests\e2e\editor.spec.ts:133:2 › Measured lounge / production editor › desktop FPS supports pointer look, WASD, height changes and ignores furniture
+  ok  72 [webkit-tablet] › tests\e2e\editor.spec.ts:144:2 › Measured lounge / production editor › touch FPS exposes a native joystick and separates it from editor controls (15.3s)
+  ok  73 [webkit-tablet] › tests\e2e\editor.spec.ts:154:1 › WebGL2 unavailable shows usable limited view instead of a blank screen (641ms)
+  -   74 [webkit-tablet] › tests\e2e\enhancements.spec.ts:77:3 › EDS furniture, navigation, signage and identity regression › right-clicking actual floor outside the lounge launches ArchViz at that point
+  -   75 [webkit-tablet] › tests\e2e\enhancements.spec.ts:98:3 › EDS furniture, navigation, signage and identity regression › all fixed direct fixtures retain position, intensity and target while walking
+  ok  76 [webkit-tablet] › tests\e2e\enhancements.spec.ts:120:3 › EDS furniture, navigation, signage and identity regression › header actions never overlap and the help action remains reachable (1.6s)
+  ok  77 [webkit-tablet] › tests\e2e\enhancements.spec.ts:138:3 › EDS furniture, navigation, signage and identity regression › the favicon, touch icon and install icons use the real EDS PNG identity (1.5s)
+  ok  78 [webkit-tablet] › tests\e2e\enhancements.spec.ts:147:3 › EDS furniture, navigation, signage and identity regression › new furniture variants swap actual optimized models and coffee machines stay on their support (58.5s)
+  ok  79 [webkit-tablet] › tests\e2e\enhancements.spec.ts:174:3 › EDS furniture, navigation, signage and identity regression › imported source PBR foliage keeps its maps and cutout while only the pot finish changes (20.9s)
+  ok  80 [webkit-tablet] › tests\e2e\enhancements.spec.ts:186:3 › EDS furniture, navigation, signage and identity regression › every builtin preserves five unique corridor signs and offers the sixth library option (5.7s)
+(node:66552) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:66552) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  81 [firefox-desktop] › tests\e2e\editor.spec.ts:30:2 › Measured lounge / production editor › all16 presets, empty0, both modes and actual room remain coherent (1.7m)
+  ok  82 [firefox-desktop] › tests\e2e\editor.spec.ts:44:2 › Measured lounge / production editor › independent absent/model/material variants and history work through UI (2.1s)
+  ok  83 [firefox-desktop] › tests\e2e\editor.spec.ts:53:2 › Measured lounge / production editor › placement protections, free override, duplicate and delete are functional (2.3s)
+  ok  84 [firefox-desktop] › tests\e2e\editor.spec.ts:61:2 › Measured lounge / production editor › grid, snapping, layers and interactive door state survive mode changes (7.1s)
+  ok  85 [firefox-desktop] › tests\e2e\editor.spec.ts:68:2 › Measured lounge / production editor › wall assets stay attached and floor furniture stays grounded (1.9s)
+  ok  86 [firefox-desktop] › tests\e2e\editor.spec.ts:74:2 › Measured lounge / production editor › the actual door mesh opens on pointer or touch interaction (7.7s)
+  ok  87 [firefox-desktop] › tests\e2e\editor.spec.ts:86:2 › Measured lounge / production editor › mouse or native touch drag applies grid snap and supports smooth movement (2.6s)
+  ok  88 [firefox-desktop] › tests\e2e\editor.spec.ts:105:2 › Measured lounge / production editor › IndexedDB save/reload and portable export/import preserve design (3.0s)
+  ok  89 [firefox-desktop] › tests\e2e\editor.spec.ts:113:2 › Measured lounge / production editor › tabletop accessories follow their support and never remain floating after deletion (2.0s)
+  ok  90 [firefox-desktop] › tests\e2e\editor.spec.ts:123:2 › Measured lounge / production editor › the Ukrainian EDS interface uses real thumbnails and protected full-space placement (3.1s)
+  ok  91 [firefox-desktop] › tests\e2e\editor.spec.ts:133:2 › Measured lounge / production editor › desktop FPS supports pointer look, WASD, height changes and ignores furniture (14.4s)
+  -   92 [firefox-desktop] › tests\e2e\editor.spec.ts:144:2 › Measured lounge / production editor › touch FPS exposes a native joystick and separates it from editor controls
+  ok  93 [firefox-desktop] › tests\e2e\editor.spec.ts:154:1 › WebGL2 unavailable shows usable limited view instead of a blank screen (592ms)
+  ok  94 [firefox-desktop] › tests\e2e\enhancements.spec.ts:77:3 › EDS furniture, navigation, signage and identity regression › right-clicking actual floor outside the lounge launches ArchViz at that point (14.3s)
+  ok  95 [firefox-desktop] › tests\e2e\enhancements.spec.ts:98:3 › EDS furniture, navigation, signage and identity regression › all fixed direct fixtures retain position, intensity and target while walking (18.4s)
+  ok  96 [firefox-desktop] › tests\e2e\enhancements.spec.ts:120:3 › EDS furniture, navigation, signage and identity regression › header actions never overlap and the help action remains reachable (1.7s)
+  ok  97 [firefox-desktop] › tests\e2e\enhancements.spec.ts:138:3 › EDS furniture, navigation, signage and identity regression › the favicon, touch icon and install icons use the real EDS PNG identity (1.5s)
+  ok  98 [firefox-desktop] › tests\e2e\enhancements.spec.ts:147:3 › EDS furniture, navigation, signage and identity regression › new furniture variants swap actual optimized models and coffee machines stay on their support (45.6s)
+  ok  99 [firefox-desktop] › tests\e2e\enhancements.spec.ts:174:3 › EDS furniture, navigation, signage and identity regression › imported source PBR foliage keeps its maps and cutout while only the pot finish changes (19.0s)
+  ok 100 [firefox-desktop] › tests\e2e\enhancements.spec.ts:186:3 › EDS furniture, navigation, signage and identity regression › every builtin preserves five unique corridor signs and offers the sixth library option (3.7s)
+
+
+  1) [webkit-tablet] › tests\e2e\editor.spec.ts:30:2 › Measured lounge / production editor › all16 presets, empty0, both modes and actual room remain coherent 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  1
+    + Received  + 18
+
+    - Array []
+    + Array [
+    +   "WebGL: INVALID_OPERATION: glDrawElements: Mismatch between texture format and sampler type (signed/unsigned/float/shadow).",
+    +   "WebGL: INVALID_OPERATION: glDrawElements: Mismatch between texture format and sampler type (signed/unsigned/float/shadow).",
+    +   "WebGL: INVALID_OPERATION: glDrawElements: Mismatch between texture format and sampler type (signed/unsigned/float/shadow).",
+    +   "WebGL: INVALID_OPERATION: glDrawElements: Mismatch between texture format and sampler type (signed/unsigned/float/shadow).",
+    +   "WebGL: INVALID_OPERATION: glDrawElements: Mismatch between texture format and sampler type (signed/unsigned/float/shadow).",
+    +   "WebGL: INVALID_OPERATION: glDrawElements: Mismatch between texture format and sampler type (signed/unsigned/float/shadow).",
+    +   "WebGL: INVALID_OPERATION: glDrawElements: Mismatch between texture format and sampler type (signed/unsigned/float/shadow).",
+    +   "WebGL: INVALID_OPERATION: glDrawElements: Mismatch between texture format and sampler type (signed/unsigned/float/shadow).",
+    +   "WebGL: INVALID_OPERATION: glDrawElements: Mismatch between texture format and sampler type (signed/unsigned/float/shadow).",
+    +   "WebGL: INVALID_OPERATION: glDrawElements: Mismatch between texture format and sampler type (signed/unsigned/float/shadow).",
+    +   "WebGL: INVALID_OPERATION: glDrawElements: Mismatch between texture format and sampler type (signed/unsigned/float/shadow).",
+    +   "WebGL: INVALID_OPERATION: glDrawElements: Mismatch between texture format and sampler type (signed/unsigned/float/shadow).",
+    +   "WebGL: INVALID_OPERATION: glDrawElements: Mismatch between texture format and sampler type (signed/unsigned/float/shadow).",
+    +   "WebGL: INVALID_OPERATION: glDrawElements: Mismatch between texture format and sampler type (signed/unsigned/float/shadow).",
+    +   "WebGL: INVALID_OPERATION: glDrawElements: Mismatch between texture format and sampler type (signed/unsigned/float/shadow).",
+    +   "WebGL: INVALID_OPERATION: glDrawElements: Mismatch between texture format and sampler type (signed/unsigned/float/shadow). (No more validation messages will be reported)",
+    + ]
+
+      25 |   await info.attach('browser-errors',{body:JSON.stringify(errors),contentType:'application/json'});
+      26 |   const budget=await page.evaluate(()=>{const canvas=document.querySelector('canvas');const view=window.__ROOM_ATELIER__?.view as {renderer?:{info?:unknown};stats?:unknown}|undefined;return {viewport:[innerWidth,innerHeight],canvas:canvas?[canvas.width,canvas.height]:null,renderer:view?.renderer?.info??view?.stats??null};});
+    > 27 |   await info.attach('render-budget',{body:JSON.stringify(budget),contentType:'application/json'});expect(errors).toEqual([]);if(info.status!==info.expectedStatus)await attachState(page,info,'failed-state').catch(()=>{});
+         |                                                                                                                  ^
+      28 |  });
+      29 |
+      30 |  test('all16 presets, empty0, both modes and actual room remain coherent',async({page},info)=>{
+        at C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\tests\e2e\editor.spec.ts:27:114
+
+    attachment #36: screenshot (image/png) ─────────────────────────────────────────────────────────
+    test-results\artifacts\editor-Measured-lounge-pro-40653-actual-room-remain-coherent-webkit-tablet\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\artifacts\editor-Measured-lounge-pro-40653-actual-room-remain-coherent-webkit-tablet\error-context.md
+
+    attachment #38: trace (application/zip) ────────────────────────────────────────────────────────
+    test-results\artifacts\editor-Measured-lounge-pro-40653-actual-room-remain-coherent-webkit-tablet\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\artifacts\editor-Measured-lounge-pro-40653-actual-room-remain-coherent-webkit-tablet\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [webkit-tablet] › tests\e2e\editor.spec.ts:30:2 › Measured lounge / production editor › all16 presets, empty0, both modes and actual room remain coherent 
+  11 skipped
+  88 passed (14.3m)

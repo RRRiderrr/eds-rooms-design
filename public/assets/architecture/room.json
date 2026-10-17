@@ -1,0 +1,898 @@
+{
+  "schemaVersion": 1,
+  "id": "lounge-room-01",
+  "architectureId": "polycam-current-room-v1",
+  "sourceFile": "reconstructed_room.blend",
+  "units": "meter",
+  "coordinateSystem": "right-handed Y-up, source Blender (x-cx,z,-(y-cy))",
+  "sourceCenter": [
+    0.9477145,
+    -1.0209095,
+    0
+  ],
+  "dimensions": {
+    "width": 5.203635,
+    "depth": 6.0977809999999995,
+    "height": 4.32
+  },
+  "bounds": {
+    "min": [
+      -2.6018175,
+      0,
+      -3.0488904999999997
+    ],
+    "max": [
+      2.6018175,
+      4.32,
+      3.0488904999999997
+    ]
+  },
+  "floorY": 0,
+  "walls": [
+    {
+      "id": "wall-17",
+      "axis": "x",
+      "coordinate": -2.6018175,
+      "min": -3.0488904999999997,
+      "max": 3.0488904999999997,
+      "height": 3.6,
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "openings": []
+    },
+    {
+      "id": "wall-26",
+      "axis": "x",
+      "coordinate": 2.6018175,
+      "min": -3.0488904999999997,
+      "max": 3.0488904999999997,
+      "height": 3.6,
+      "normal": [
+        -1,
+        0,
+        0
+      ],
+      "openings": []
+    },
+    {
+      "id": "wall-21",
+      "axis": "z",
+      "coordinate": -3.0488904999999997,
+      "min": -2.6018175,
+      "max": 2.6018175,
+      "height": 3.6,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "openings": [
+        {
+          "type": "door",
+          "min": 1.4513775,
+          "max": 2.4513785,
+          "bottom": 0,
+          "top": 2.1
+        }
+      ]
+    },
+    {
+      "id": "wall-16",
+      "axis": "z",
+      "coordinate": 3.0488904999999997,
+      "min": -2.6018175,
+      "max": 2.6018175,
+      "height": 3.6,
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "openings": [
+        {
+          "type": "window",
+          "min": -1.8767585,
+          "max": 1.8973565,
+          "bottom": 1.425007,
+          "top": 2.588214
+        }
+      ]
+    }
+  ],
+  "window": {
+    "id": "window-06",
+    "wallId": "wall-16",
+    "center": [
+      0.010299,
+      2.00661,
+      3.0488905
+    ],
+    "width": 3.774115,
+    "height": 1.163207,
+    "sillY": 1.367507,
+    "minX": -1.9017585000000001,
+    "maxX": 1.9223564999999998,
+    "planeZ": 3.0488904999999997,
+    "nodePrefix": "Window_06_"
+  },
+  "door": {
+    "id": "door-03",
+    "node": "Interactive_Door_03",
+    "wallId": "wall-21",
+    "hinge": [
+      1.5013769,
+      0,
+      -3.0988903
+    ],
+    "closedAngle": 0,
+    "openAngle": -1.6580627893946132,
+    "width": 0.9000015,
+    "height": 2.045,
+    "openingMin": 1.4513775,
+    "openingMax": 2.4513785,
+    "openingHeight": 2.1,
+    "leafNames": [
+      "Door_03_CLOSED_Hardware_Back_Handle_Rosette",
+      "Door_03_CLOSED_Hardware_Back_Key_Cylinder_Body",
+      "Door_03_CLOSED_Hardware_Back_Key_Cylinder_Head",
+      "Door_03_CLOSED_Hardware_Back_Key_Rosette",
+      "Door_03_CLOSED_Hardware_Back_Key_Slot",
+      "Door_03_CLOSED_Hardware_Back_Lever",
+      "Door_03_CLOSED_Hardware_Back_Lever_Return",
+      "Door_03_CLOSED_Hardware_Back_Spindle",
+      "Door_03_CLOSED_Hardware_Hall_Handle_Rosette",
+      "Door_03_CLOSED_Hardware_Hall_Key_Cylinder_Body",
+      "Door_03_CLOSED_Hardware_Hall_Key_Cylinder_Head",
+      "Door_03_CLOSED_Hardware_Hall_Key_Rosette",
+      "Door_03_CLOSED_Hardware_Hall_Key_Slot",
+      "Door_03_CLOSED_Hardware_Hall_Lever",
+      "Door_03_CLOSED_Hardware_Hall_Lever_Return",
+      "Door_03_CLOSED_Hardware_Hall_Spindle",
+      "Door_03_CLOSED_Leaf"
+    ],
+    "frameNames": [
+      "Door_03_CLOSED_Frame_Head",
+      "Door_03_CLOSED_Jamb_L",
+      "Door_03_CLOSED_Jamb_R",
+      "Door_03_CLOSED_Threshold"
+    ],
+    "swing": {
+      "center": [
+        1.5013769,
+        0,
+        -3.0988903
+      ],
+      "radius": 1.05,
+      "angleMin": -1.6580627893946132,
+      "angleMax": 0
+    },
+    "hingeEvidence": "Handle x=3.244, opposite hinge x=2.449; inward swing avoids both adjacent walls."
+  },
+  "columns": [
+    {
+      "id": "column-sw",
+      "center": [
+        -2.4877145,
+        1.8,
+        2.9290905
+      ],
+      "size": [
+        0.19,
+        3.6,
+        0.22
+      ]
+    }
+  ],
+  "outlets": [
+    {
+      "id": "Central_Room_Outlet_00",
+      "position": [
+        -1.6277145147323608,
+        0.2799999937415123,
+        3.030390501022339
+      ],
+      "size": [
+        0.2980000972747803,
+        0.08499999344348907,
+        0.034999847412109375
+      ]
+    },
+    {
+      "id": "Central_Room_Outlet_01",
+      "position": [
+        -0.19771450757980347,
+        0.2799999937415123,
+        3.03009033203125
+      ],
+      "size": [
+        0.08500003814697266,
+        0.08499999344348907,
+        0.03560018539428711
+      ]
+    },
+    {
+      "id": "Central_Room_Outlet_02",
+      "position": [
+        1.1022853553295135,
+        0.2799999937415123,
+        3.030390501022339
+      ],
+      "size": [
+        0.29799991846084595,
+        0.08499999344348907,
+        0.034999847412109375
+      ]
+    },
+    {
+      "id": "Central_Room_Outlet_03",
+      "position": [
+        -2.5935174226760864,
+        0.25999998301267624,
+        2.4290904998779297
+      ],
+      "size": [
+        0.014600038528442383,
+        0.08499999344348907,
+        0.29799985885620117
+      ]
+    },
+    {
+      "id": "Central_Room_Outlet_04",
+      "position": [
+        2.5935174226760864,
+        0.25999998301267624,
+        2.4290904998779297
+      ],
+      "size": [
+        0.014600038528442383,
+        0.08499999344348907,
+        0.29799985885620117
+      ]
+    },
+    {
+      "id": "Central_Room_Outlet_05",
+      "position": [
+        -1.5977144837379456,
+        0.25999998301267624,
+        -3.0405906438827515
+      ],
+      "size": [
+        0.2979999780654907,
+        0.08499999344348907,
+        0.014600038528442383
+      ]
+    },
+    {
+      "id": "Central_Room_Outlet_06",
+      "position": [
+        0.3522854447364807,
+        0.25999998301267624,
+        -3.0405906438827515
+      ],
+      "size": [
+        0.2980000972747803,
+        0.08499999344348907,
+        0.014600038528442383
+      ]
+    }
+  ],
+  "protectedGroups": [
+    "ceiling",
+    "walls",
+    "floor",
+    "windows",
+    "doors",
+    "structure",
+    "outlets",
+    "fixtures"
+  ],
+  "nodes": [
+    {
+      "name": "Ceiling_Cable_Trays",
+      "category": "ceiling",
+      "wallId": null,
+      "lightmapped": true,
+      "vertices": 48,
+      "polygons": 30
+    },
+    {
+      "name": "Ceiling_Corrugated_Deck",
+      "category": "ceiling",
+      "wallId": null,
+      "lightmapped": true,
+      "vertices": 1112,
+      "polygons": 278
+    },
+    {
+      "name": "Ceiling_Exposed_Steel_Trusses",
+      "category": "ceiling",
+      "wallId": null,
+      "lightmapped": true,
+      "vertices": 136,
+      "polygons": 96
+    },
+    {
+      "name": "Central_Room_Door_Switch",
+      "category": "fixtures",
+      "wallId": null,
+      "lightmapped": true,
+      "vertices": 100,
+      "polygons": 70
+    },
+    {
+      "name": "Central_Room_Outlet_00",
+      "category": "outlets",
+      "wallId": null,
+      "lightmapped": true,
+      "vertices": 4369,
+      "polygons": 4529
+    },
+    {
+      "name": "Central_Room_Outlet_00_Conduit",
+      "category": "outlets",
+      "wallId": null,
+      "lightmapped": true,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Central_Room_Outlet_01",
+      "category": "outlets",
+      "wallId": null,
+      "lightmapped": true,
+      "vertices": 1324,
+      "polygons": 1170
+    },
+    {
+      "name": "Central_Room_Outlet_01_Conduit",
+      "category": "outlets",
+      "wallId": null,
+      "lightmapped": true,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Central_Room_Outlet_02",
+      "category": "outlets",
+      "wallId": null,
+      "lightmapped": true,
+      "vertices": 4369,
+      "polygons": 4529
+    },
+    {
+      "name": "Central_Room_Outlet_02_Conduit",
+      "category": "outlets",
+      "wallId": null,
+      "lightmapped": true,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Central_Room_Outlet_03",
+      "category": "outlets",
+      "wallId": null,
+      "lightmapped": true,
+      "vertices": 4348,
+      "polygons": 4350
+    },
+    {
+      "name": "Central_Room_Outlet_04",
+      "category": "outlets",
+      "wallId": null,
+      "lightmapped": true,
+      "vertices": 4348,
+      "polygons": 4350
+    },
+    {
+      "name": "Central_Room_Outlet_05",
+      "category": "outlets",
+      "wallId": null,
+      "lightmapped": true,
+      "vertices": 4348,
+      "polygons": 4350
+    },
+    {
+      "name": "Central_Room_Outlet_06",
+      "category": "outlets",
+      "wallId": null,
+      "lightmapped": true,
+      "vertices": 4348,
+      "polygons": 4350
+    },
+    {
+      "name": "Central_Room_SW_Steel_Column",
+      "category": "structure",
+      "wallId": null,
+      "lightmapped": true,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Central_Room_Vent",
+      "category": "fixtures",
+      "wallId": null,
+      "lightmapped": true,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Door_03_CLOSED_Frame_Head",
+      "category": "doors",
+      "wallId": null,
+      "lightmapped": true,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Door_03_CLOSED_Hardware_Back_Handle_Rosette",
+      "category": "doors",
+      "wallId": null,
+      "lightmapped": false,
+      "vertices": 48,
+      "polygons": 26
+    },
+    {
+      "name": "Door_03_CLOSED_Hardware_Back_Key_Cylinder_Body",
+      "category": "doors",
+      "wallId": null,
+      "lightmapped": false,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Door_03_CLOSED_Hardware_Back_Key_Cylinder_Head",
+      "category": "doors",
+      "wallId": null,
+      "lightmapped": false,
+      "vertices": 32,
+      "polygons": 18
+    },
+    {
+      "name": "Door_03_CLOSED_Hardware_Back_Key_Rosette",
+      "category": "doors",
+      "wallId": null,
+      "lightmapped": false,
+      "vertices": 48,
+      "polygons": 26
+    },
+    {
+      "name": "Door_03_CLOSED_Hardware_Back_Key_Slot",
+      "category": "doors",
+      "wallId": null,
+      "lightmapped": false,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Door_03_CLOSED_Hardware_Back_Lever",
+      "category": "doors",
+      "wallId": null,
+      "lightmapped": false,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Door_03_CLOSED_Hardware_Back_Lever_Return",
+      "category": "doors",
+      "wallId": null,
+      "lightmapped": false,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Door_03_CLOSED_Hardware_Back_Spindle",
+      "category": "doors",
+      "wallId": null,
+      "lightmapped": false,
+      "vertices": 32,
+      "polygons": 18
+    },
+    {
+      "name": "Door_03_CLOSED_Hardware_Hall_Handle_Rosette",
+      "category": "doors",
+      "wallId": null,
+      "lightmapped": false,
+      "vertices": 48,
+      "polygons": 26
+    },
+    {
+      "name": "Door_03_CLOSED_Hardware_Hall_Key_Cylinder_Body",
+      "category": "doors",
+      "wallId": null,
+      "lightmapped": false,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Door_03_CLOSED_Hardware_Hall_Key_Cylinder_Head",
+      "category": "doors",
+      "wallId": null,
+      "lightmapped": false,
+      "vertices": 32,
+      "polygons": 18
+    },
+    {
+      "name": "Door_03_CLOSED_Hardware_Hall_Key_Rosette",
+      "category": "doors",
+      "wallId": null,
+      "lightmapped": false,
+      "vertices": 48,
+      "polygons": 26
+    },
+    {
+      "name": "Door_03_CLOSED_Hardware_Hall_Key_Slot",
+      "category": "doors",
+      "wallId": null,
+      "lightmapped": false,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Door_03_CLOSED_Hardware_Hall_Lever",
+      "category": "doors",
+      "wallId": null,
+      "lightmapped": false,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Door_03_CLOSED_Hardware_Hall_Lever_Return",
+      "category": "doors",
+      "wallId": null,
+      "lightmapped": false,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Door_03_CLOSED_Hardware_Hall_Spindle",
+      "category": "doors",
+      "wallId": null,
+      "lightmapped": false,
+      "vertices": 32,
+      "polygons": 18
+    },
+    {
+      "name": "Door_03_CLOSED_Jamb_L",
+      "category": "doors",
+      "wallId": null,
+      "lightmapped": true,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Door_03_CLOSED_Jamb_R",
+      "category": "doors",
+      "wallId": null,
+      "lightmapped": true,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Door_03_CLOSED_Leaf",
+      "category": "doors",
+      "wallId": null,
+      "lightmapped": false,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Door_03_CLOSED_Threshold",
+      "category": "doors",
+      "wallId": null,
+      "lightmapped": true,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Floor_Continuous_00",
+      "category": "floor",
+      "wallId": null,
+      "lightmapped": true,
+      "vertices": 20,
+      "polygons": 13
+    },
+    {
+      "name": "Lamp_Suspension_Cables",
+      "category": "ceiling",
+      "wallId": null,
+      "lightmapped": true,
+      "vertices": 96,
+      "polygons": 72
+    },
+    {
+      "name": "Room_HVAC_Cassette",
+      "category": "ceiling",
+      "wallId": null,
+      "lightmapped": true,
+      "vertices": 224,
+      "polygons": 168
+    },
+    {
+      "name": "Room_Lamp_Inner_East_North",
+      "category": "ceiling",
+      "wallId": null,
+      "lightmapped": true,
+      "vertices": 16,
+      "polygons": 12
+    },
+    {
+      "name": "Room_Lamp_Inner_East_South",
+      "category": "ceiling",
+      "wallId": null,
+      "lightmapped": true,
+      "vertices": 16,
+      "polygons": 12
+    },
+    {
+      "name": "Room_Lamp_Inner_West_North",
+      "category": "ceiling",
+      "wallId": null,
+      "lightmapped": true,
+      "vertices": 16,
+      "polygons": 12
+    },
+    {
+      "name": "Room_Lamp_Inner_West_South",
+      "category": "ceiling",
+      "wallId": null,
+      "lightmapped": true,
+      "vertices": 16,
+      "polygons": 12
+    },
+    {
+      "name": "Room_Lamp_Outer_East",
+      "category": "ceiling",
+      "wallId": null,
+      "lightmapped": true,
+      "vertices": 16,
+      "polygons": 12
+    },
+    {
+      "name": "Room_Lamp_Outer_West",
+      "category": "ceiling",
+      "wallId": null,
+      "lightmapped": true,
+      "vertices": 16,
+      "polygons": 12
+    },
+    {
+      "name": "Wall_16_Clean",
+      "category": "walls",
+      "wallId": "wall-16",
+      "lightmapped": true,
+      "vertices": 48,
+      "polygons": 48
+    },
+    {
+      "name": "Wall_16_Skirting_0",
+      "category": "fixtures",
+      "wallId": "wall-16",
+      "lightmapped": true,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Wall_16_Top_Steel_Beam",
+      "category": "ceiling",
+      "wallId": "wall-16",
+      "lightmapped": true,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Wall_17_Clean",
+      "category": "walls",
+      "wallId": "wall-17",
+      "lightmapped": true,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Wall_17_Skirting_0",
+      "category": "fixtures",
+      "wallId": "wall-17",
+      "lightmapped": true,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Wall_17_Top_Steel_Beam",
+      "category": "ceiling",
+      "wallId": "wall-17",
+      "lightmapped": true,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Wall_21_Clean",
+      "category": "walls",
+      "wallId": "wall-21",
+      "lightmapped": true,
+      "vertices": 36,
+      "polygons": 34
+    },
+    {
+      "name": "Wall_21_Skirting_0",
+      "category": "fixtures",
+      "wallId": "wall-21",
+      "lightmapped": true,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Wall_21_Skirting_1",
+      "category": "fixtures",
+      "wallId": "wall-21",
+      "lightmapped": true,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Wall_21_Top_Steel_Beam",
+      "category": "ceiling",
+      "wallId": "wall-21",
+      "lightmapped": true,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Wall_26_Clean",
+      "category": "walls",
+      "wallId": "wall-26",
+      "lightmapped": true,
+      "vertices": 12,
+      "polygons": 10
+    },
+    {
+      "name": "Wall_26_Skirting_0",
+      "category": "fixtures",
+      "wallId": "wall-26",
+      "lightmapped": true,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Wall_26_Top_Steel_Beam",
+      "category": "ceiling",
+      "wallId": "wall-26",
+      "lightmapped": true,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Wall_29_Clean",
+      "category": "walls",
+      "wallId": "wall-29",
+      "lightmapped": true,
+      "vertices": 16,
+      "polygons": 14
+    },
+    {
+      "name": "Wall_29_Skirting_0",
+      "category": "fixtures",
+      "wallId": "wall-29",
+      "lightmapped": true,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Wall_29_Top_Steel_Beam",
+      "category": "ceiling",
+      "wallId": "wall-29",
+      "lightmapped": true,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Window_06_Frame_Horizontal_-1",
+      "category": "windows",
+      "wallId": null,
+      "lightmapped": true,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Window_06_Frame_Horizontal_1",
+      "category": "windows",
+      "wallId": null,
+      "lightmapped": true,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Window_06_Frame_Vertical_-1",
+      "category": "windows",
+      "wallId": null,
+      "lightmapped": true,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Window_06_Frame_Vertical_1",
+      "category": "windows",
+      "wallId": null,
+      "lightmapped": true,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Window_06_Mullion_1",
+      "category": "windows",
+      "wallId": null,
+      "lightmapped": true,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Window_06_Mullion_2",
+      "category": "windows",
+      "wallId": null,
+      "lightmapped": true,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Window_06_Pane_1",
+      "category": "windows",
+      "wallId": null,
+      "lightmapped": false,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Window_06_Pane_2",
+      "category": "windows",
+      "wallId": null,
+      "lightmapped": false,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Window_06_Pane_3",
+      "category": "windows",
+      "wallId": null,
+      "lightmapped": false,
+      "vertices": 8,
+      "polygons": 6
+    },
+    {
+      "name": "Window_06_Sill",
+      "category": "windows",
+      "wallId": null,
+      "lightmapped": true,
+      "vertices": 8,
+      "polygons": 6
+    }
+  ],
+  "lighting": {
+    "type": "cycles-baked-indirect-diffuse-irradiance",
+    "lightmap": "assets/architecture/lightmap.hdr",
+    "uvChannel": 1,
+    "intensity": 1,
+    "probes": "assets/architecture/probes.json",
+    "environment": "assets/architecture/environment.hdr",
+    "directIncluded": false,
+    "indirectIncluded": true,
+    "albedoIncluded": false,
+    "runtimeDirectLighting": true,
+    "bakeLights": {
+      "areaFixtures": 6,
+      "sourceEnergyEachWatts": 80,
+      "worldStrength": 0.22,
+      "worldColor": [
+        0.72,
+        0.79,
+        0.86
+      ]
+    },
+    "note": "Static indirect GI only. Runtime direct light and shadows must be applied at every quality tier; probes retain total irradiance with calibrated runtime scale."
+  },
+  "assets": {
+    "production": "assets/architecture/room.meshopt.glb",
+    "editor": "assets/architecture/room-editor.meshopt.glb",
+    "fallback": "assets/architecture/fallback.jpg"
+  }
+}

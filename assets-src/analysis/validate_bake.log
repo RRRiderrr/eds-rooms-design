@@ -1,0 +1,370 @@
+00:01.375  blend            | Read blend: "C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\assets-src\room_archviz.blend"
+[
+  {
+    "name": "Ceiling_Cable_Trays",
+    "lightmapMean": 0.09593777126736111,
+    "max": 1.0078125,
+    "zeroSamples": 54,
+    "samples": 90
+  },
+  {
+    "name": "Ceiling_Corrugated_Deck",
+    "lightmapMean": 0.17447506838279375,
+    "max": 0.76171875,
+    "zeroSamples": 9,
+    "samples": 834
+  },
+  {
+    "name": "Ceiling_Exposed_Steel_Trusses",
+    "lightmapMean": 0.18710536028568944,
+    "max": 1.1484375,
+    "zeroSamples": 153,
+    "samples": 288
+  },
+  {
+    "name": "Central_Room_Door_Switch",
+    "lightmapMean": 0.5260063287757691,
+    "max": 1.8359375,
+    "zeroSamples": 93,
+    "samples": 210
+  },
+  {
+    "name": "Central_Room_Outlet_00",
+    "lightmapMean": 0.8878968718159477,
+    "max": 2.671875,
+    "zeroSamples": 3459,
+    "samples": 13587
+  },
+  {
+    "name": "Central_Room_Outlet_00_Conduit",
+    "lightmapMean": 0.4181315104166667,
+    "max": 1.6328125,
+    "zeroSamples": 9,
+    "samples": 18
+  },
+  {
+    "name": "Central_Room_Outlet_01",
+    "lightmapMean": 1.1646854759281517,
+    "max": 3.03125,
+    "zeroSamples": 375,
+    "samples": 3510
+  },
+  {
+    "name": "Central_Room_Outlet_01_Conduit",
+    "lightmapMean": 0.5531141493055556,
+    "max": 1.8125,
+    "zeroSamples": 9,
+    "samples": 18
+  },
+  {
+    "name": "Central_Room_Outlet_02",
+    "lightmapMean": 0.9269815317059735,
+    "max": 2.75,
+    "zeroSamples": 3588,
+    "samples": 13587
+  },
+  {
+    "name": "Central_Room_Outlet_02_Conduit",
+    "lightmapMean": 0.3018120659722222,
+    "max": 1.7265625,
+    "zeroSamples": 12,
+    "samples": 18
+  },
+  {
+    "name": "Central_Room_Outlet_03",
+    "lightmapMean": 0.8573203695596863,
+    "max": 3.9375,
+    "zeroSamples": 3693,
+    "samples": 13050
+  },
+  {
+    "name": "Central_Room_Outlet_04",
+    "lightmapMean": 0.8312000727744852,
+    "max": 3.5625,
+    "zeroSamples": 4155,
+    "samples": 13050
+  },
+  {
+    "name": "Central_Room_Outlet_05",
+    "lightmapMean": 0.7705222118860003,
+    "max": 3.3125,
+    "zeroSamples": 4290,
+    "samples": 13050
+  },
+  {
+    "name": "Central_Room_Outlet_06",
+    "lightmapMean": 0.9108682309439355,
+    "max": 3.5,
+    "zeroSamples": 4341,
+    "samples": 13050
+  },
+  {
+    "name": "Central_Room_SW_Steel_Column",
+    "lightmapMean": 0.6248270670572916,
+    "max": 2.09375,
+    "zeroSamples": 6,
+    "samples": 18
+  },
+  {
+    "name": "Central_Room_Vent",
+    "lightmapMean": 1.0256618923611112,
+    "max": 2.859375,
+    "zeroSamples": 3,
+    "samples": 18
+  },
+  {
+    "name": "Door_03_CLOSED_Frame_Head",
+    "lightmapMean": 0.4552408854166667,
+    "max": 2.03125,
+    "zeroSamples": 9,
+    "samples": 18
+  },
+  {
+    "name": "Door_03_CLOSED_Jamb_L",
+    "lightmapMean": 0.4781901041666667,
+    "max": 1.8046875,
+    "zeroSamples": 9,
+    "samples": 18
+  },
+  {
+    "name": "Door_03_CLOSED_Jamb_R",
+    "lightmapMean": 0.5323350694444444,
+    "max": 2.359375,
+    "zeroSamples": 9,
+    "samples": 18
+  },
+  {
+    "name": "Door_03_CLOSED_Threshold",
+    "lightmapMean": 0.5349934895833334,
+    "max": 1.7578125,
+    "zeroSamples": 9,
+    "samples": 18
+  },
+  {
+    "name": "Floor_Continuous_00",
+    "lightmapMean": 0.8993170322516025,
+    "max": 3.375,
+    "zeroSamples": 0,
+    "samples": 39
+  },
+  {
+    "name": "Lamp_Suspension_Cables",
+    "lightmapMean": 0.16875197269298411,
+    "max": 0.92578125,
+    "zeroSamples": 126,
+    "samples": 216
+  },
+  {
+    "name": "Room_HVAC_Cassette",
+    "lightmapMean": 0.3366914779420883,
+    "max": 1.6640625,
+    "zeroSamples": 246,
+    "samples": 504
+  },
+  {
+    "name": "Room_Lamp_Inner_East_North",
+    "lightmapMean": 0.711456298828125,
+    "max": 5.25,
+    "zeroSamples": 12,
+    "samples": 36
+  },
+  {
+    "name": "Room_Lamp_Inner_East_South",
+    "lightmapMean": 0.90423583984375,
+    "max": 5.40625,
+    "zeroSamples": 6,
+    "samples": 36
+  },
+  {
+    "name": "Room_Lamp_Inner_West_North",
+    "lightmapMean": 0.7921820746527778,
+    "max": 5.0,
+    "zeroSamples": 9,
+    "samples": 36
+  },
+  {
+    "name": "Room_Lamp_Inner_West_South",
+    "lightmapMean": 0.9490288628472222,
+    "max": 4.84375,
+    "zeroSamples": 0,
+    "samples": 36
+  },
+  {
+    "name": "Room_Lamp_Outer_East",
+    "lightmapMean": 0.7720743815104166,
+    "max": 4.8125,
+    "zeroSamples": 12,
+    "samples": 36
+  },
+  {
+    "name": "Room_Lamp_Outer_West",
+    "lightmapMean": 0.9518025716145834,
+    "max": 5.03125,
+    "zeroSamples": 6,
+    "samples": 36
+  },
+  {
+    "name": "Wall_16_Clean",
+    "lightmapMean": 0.3199055989583333,
+    "max": 2.5,
+    "zeroSamples": 78,
+    "samples": 144
+  },
+  {
+    "name": "Wall_16_Skirting_0",
+    "lightmapMean": 0.3376193576388889,
+    "max": 1.8125,
+    "zeroSamples": 9,
+    "samples": 18
+  },
+  {
+    "name": "Wall_16_Top_Steel_Beam",
+    "lightmapMean": 0.04196506076388889,
+    "max": 0.1884765625,
+    "zeroSamples": 12,
+    "samples": 18
+  },
+  {
+    "name": "Wall_17_Clean",
+    "lightmapMean": 0.4848090277777778,
+    "max": 2.609375,
+    "zeroSamples": 6,
+    "samples": 18
+  },
+  {
+    "name": "Wall_17_Skirting_0",
+    "lightmapMean": 0.3362392849392361,
+    "max": 1.90625,
+    "zeroSamples": 6,
+    "samples": 18
+  },
+  {
+    "name": "Wall_17_Top_Steel_Beam",
+    "lightmapMean": 0.1199001736111111,
+    "max": 0.453125,
+    "zeroSamples": 6,
+    "samples": 18
+  },
+  {
+    "name": "Wall_21_Clean",
+    "lightmapMean": 0.29653990502450983,
+    "max": 2.90625,
+    "zeroSamples": 51,
+    "samples": 102
+  },
+  {
+    "name": "Wall_21_Skirting_0",
+    "lightmapMean": 0.3193359375,
+    "max": 1.7578125,
+    "zeroSamples": 9,
+    "samples": 18
+  },
+  {
+    "name": "Wall_21_Skirting_1",
+    "lightmapMean": 0.2500271267361111,
+    "max": 1.2890625,
+    "zeroSamples": 9,
+    "samples": 18
+  },
+  {
+    "name": "Wall_21_Top_Steel_Beam",
+    "lightmapMean": 0.07709418402777778,
+    "max": 0.1884765625,
+    "zeroSamples": 9,
+    "samples": 18
+  },
+  {
+    "name": "Wall_26_Clean",
+    "lightmapMean": 0.49192708333333335,
+    "max": 2.921875,
+    "zeroSamples": 18,
+    "samples": 30
+  },
+  {
+    "name": "Wall_26_Skirting_0",
+    "lightmapMean": 0.2939181857638889,
+    "max": 1.6484375,
+    "zeroSamples": 9,
+    "samples": 18
+  },
+  {
+    "name": "Wall_26_Top_Steel_Beam",
+    "lightmapMean": 0.08713934156629774,
+    "max": 0.361328125,
+    "zeroSamples": 6,
+    "samples": 18
+  },
+  {
+    "name": "Wall_29_Clean",
+    "lightmapMean": 0.3307291666666667,
+    "max": 2.109375,
+    "zeroSamples": 24,
+    "samples": 42
+  },
+  {
+    "name": "Wall_29_Skirting_0",
+    "lightmapMean": 0.2406684027777778,
+    "max": 1.3125,
+    "zeroSamples": 12,
+    "samples": 18
+  },
+  {
+    "name": "Wall_29_Top_Steel_Beam",
+    "lightmapMean": 0.12376615736219618,
+    "max": 0.65234375,
+    "zeroSamples": 9,
+    "samples": 18
+  },
+  {
+    "name": "Window_06_Frame_Horizontal_-1",
+    "lightmapMean": 0.6478949652777778,
+    "max": 2.875,
+    "zeroSamples": 9,
+    "samples": 18
+  },
+  {
+    "name": "Window_06_Frame_Horizontal_1",
+    "lightmapMean": 0.5518663194444444,
+    "max": 2.953125,
+    "zeroSamples": 9,
+    "samples": 18
+  },
+  {
+    "name": "Window_06_Frame_Vertical_-1",
+    "lightmapMean": 0.4654947916666667,
+    "max": 2.3125,
+    "zeroSamples": 9,
+    "samples": 18
+  },
+  {
+    "name": "Window_06_Frame_Vertical_1",
+    "lightmapMean": 0.5852864583333334,
+    "max": 2.390625,
+    "zeroSamples": 9,
+    "samples": 18
+  },
+  {
+    "name": "Window_06_Mullion_1",
+    "lightmapMean": 0.7026909722222222,
+    "max": 2.75,
+    "zeroSamples": 6,
+    "samples": 18
+  },
+  {
+    "name": "Window_06_Mullion_2",
+    "lightmapMean": 0.6227213541666666,
+    "max": 2.8125,
+    "zeroSamples": 6,
+    "samples": 18
+  },
+  {
+    "name": "Window_06_Sill",
+    "lightmapMean": 0.4194878472222222,
+    "max": 2.515625,
+    "zeroSamples": 12,
+    "samples": 18
+  }
+]
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

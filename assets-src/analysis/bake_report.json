@@ -1,0 +1,13 @@
+{
+  "engine": "Cycles",
+  "samples": 64,
+  "bounces": 8,
+  "diffuseBounces": 6,
+  "resolution": 2048,
+  "pass": "DIFFUSE direct+indirect; color disabled",
+  "mutableFurnitureIncluded": false,
+  "uniqueUvSet": "Lightmap/TEXCOORD_1",
+  "probeCount": 18,
+  "atlasPixels": 4194304,
+  "bakeSeconds": 110.88
+}

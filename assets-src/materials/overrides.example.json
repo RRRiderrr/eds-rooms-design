@@ -1,0 +1,16 @@
+{
+  "materials": [
+    {
+      "id": "fabric-woven",
+      "sourceLabel": "Megascans Furniture Fabric sjfvce3c",
+      "license": "Fab Standard",
+      "licenseEvidence": "Replace this example with the actual acquisition/entitlement reference before using this override",
+      "tileMeters": 1,
+      "files": {
+        "baseColor": "E:/Megascans Library/Downloaded/surface/fabric_furniture fabric_sjfvce3c/sjfvce3c_2K_Albedo.jpg",
+        "normal": "E:/Megascans Library/Downloaded/surface/fabric_furniture fabric_sjfvce3c/sjfvce3c_2K_Normal.jpg",
+        "roughness": "E:/Megascans Library/Downloaded/surface/fabric_furniture fabric_sjfvce3c/sjfvce3c_2K_Roughness.jpg"
+      }
+    }
+  ]
+}

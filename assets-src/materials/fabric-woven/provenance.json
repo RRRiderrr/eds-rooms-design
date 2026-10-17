@@ -1,0 +1,12 @@
+{
+  "files": {
+    "baseColor": "E:/ArchViz_Resources/RoomAtelier/materials/fabric-woven/original/12c51b98af57/baseColor.jpg",
+    "normal": "E:/ArchViz_Resources/RoomAtelier/materials/fabric-woven/original/12c51b98af57/normal.jpg",
+    "roughness": "E:/ArchViz_Resources/RoomAtelier/materials/fabric-woven/original/12c51b98af57/roughness.jpg"
+  },
+  "source": "Local user-provided Quixel Megascans Furniture Fabric sjfvce3c",
+  "license": "User-authorized local Megascans resource; acquisition license is not encoded in downloaded metadata",
+  "licenseEvidence": "User explicitly authorized use of the existing local library for this project. No claim of Fab Standard entitlement is made.",
+  "tileMeters": 1,
+  "note": "Original 2K source is kept on the E resource drive; assets-src holds provenance only. Metadata does not state UE-only. Check acquisition entitlement before publicly distributing this material; offline CC0 fabric fallback can be enabled by removing the local override."
+}

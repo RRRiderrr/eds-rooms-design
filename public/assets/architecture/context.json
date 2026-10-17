@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "roomId": "actual-north-corridor",
+  "source": "Actual full Blender reconstruction, unmodified strip north of Door03",
+  "units": "meter",
+  "editable": false,
+  "sourceBounds": {
+    "x": [
+      -1.8,
+      5.5
+    ],
+    "y": [
+      2.2002,
+      4.25
+    ]
+  },
+  "bounds": {
+    "min": [
+      -2.7477145,
+      0,
+      -5.2709095
+    ],
+    "max": [
+      4.5522855,
+      4.355,
+      -3.2211095
+    ]
+  },
+  "production": "assets/architecture/context.meshopt.glb",
+  "fallback": "assets/architecture/context.glb",
+  "nodes": [
+    "Context_Ceiling_Cable_Trays",
+    "Context_Ceiling_Corrugated_Deck",
+    "Context_Ceiling_Exposed_Steel_Trusses",
+    "Context_Door_06_CLOSED_Frame_Head",
+    "Context_Door_06_CLOSED_Hardware_Back_Handle_Rosette",
+    "Context_Door_06_CLOSED_Hardware_Back_Key_Cylinder_Body",
+    "Context_Door_06_CLOSED_Hardware_Back_Key_Cylinder_Head",
+    "Context_Door_06_CLOSED_Hardware_Back_Key_Rosette",
+    "Context_Door_06_CLOSED_Hardware_Back_Key_Slot",
+    "Context_Door_06_CLOSED_Hardware_Back_Lever",
+    "Context_Door_06_CLOSED_Hardware_Back_Lever_Return",
+    "Context_Door_06_CLOSED_Hardware_Back_Spindle",
+    "Context_Door_06_CLOSED_Hardware_Hall_Handle_Rosette",
+    "Context_Door_06_CLOSED_Hardware_Hall_Key_Cylinder_Body",
+    "Context_Door_06_CLOSED_Hardware_Hall_Key_Cylinder_Head",
+    "Context_Door_06_CLOSED_Hardware_Hall_Key_Rosette",
+    "Context_Door_06_CLOSED_Hardware_Hall_Key_Slot",
+    "Context_Door_06_CLOSED_Hardware_Hall_Lever",
+    "Context_Door_06_CLOSED_Hardware_Hall_Lever_Return",
+    "Context_Door_06_CLOSED_Hardware_Hall_Spindle",
+    "Context_Door_06_CLOSED_Jamb_L",
+    "Context_Door_06_CLOSED_Jamb_R",
+    "Context_Door_06_CLOSED_Leaf",
+    "Context_Door_06_CLOSED_Threshold",
+    "Context_Floor_Continuous_00",
+    "Context_Hall_Lamp_North_04",
+    "Context_Hall_Lamp_North_05",
+    "Context_Lamp_Suspension_Cables",
+    "Context_Wall_38_Clean",
+    "Context_Wall_38_Skirting_2",
+    "Context_Wall_38_Skirting_3",
+    "Context_Wall_38_Top_Steel_Beam"
+  ]
+}

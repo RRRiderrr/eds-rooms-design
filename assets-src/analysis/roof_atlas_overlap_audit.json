@@ -1,0 +1,9 @@
+{
+  "resolution": 1024,
+  "faceCount": 28701,
+  "coveredPixels": 342003,
+  "overlappingPixelSamples": 0,
+  "overlapFraction": 0.0,
+  "missingUV": [],
+  "method": "Triangle interior pixel-centre raster; shared triangle edges excluded. Distinct original polygon owners."
+}

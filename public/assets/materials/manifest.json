@@ -1,0 +1,332 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-17T19:46:35.873Z",
+  "architectureMapping": [
+    {
+      "match": "^01_WALLS_",
+      "materialId": "wall-painted"
+    },
+    {
+      "match": "^02_FLOOR_",
+      "materialId": "floor-commercial-grey"
+    },
+    {
+      "match": "^(?:05_WINDOW_FRAMES_|15_WALLS_Window_Panels_)",
+      "materialId": "metal-painted-white"
+    },
+    {
+      "match": "^(?:07_CEILING_DECK|08_CEILING_STEEL|03_DOOR_LEAVES|04_DOOR_FRAMES|09_LIGHT_BODIES|13_SKIRTING)_",
+      "materialId": "metal-painted"
+    }
+  ],
+  "colorSpaces": {
+    "baseColor": "sRGB",
+    "normal": "linear",
+    "orm": "linear"
+  },
+  "ormPacking": {
+    "r": "ambient occlusion",
+    "g": "roughness",
+    "b": "metalness"
+  },
+  "materials": [
+    {
+      "id": "wall-painted",
+      "label": "Тёплая окрашенная штукатурка",
+      "tileMeters": 1,
+      "fallbackColor": "#e8e5d8",
+      "roughness": 0.84,
+      "metalness": 0,
+      "normalStrength": 0.08,
+      "finish": {
+        "target": [
+          232,
+          229,
+          219
+        ],
+        "variation": 0.1
+      },
+      "note": "Owned Quixel/Fab fine painted-plaster scan, repainted to the photographed warm light finish. No stains or strong roughness are introduced.",
+      "sourceId": "pjBoU0",
+      "sourceLabel": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "license": "Fab Standard",
+      "licenseEvidence": "Epic Games Launcher / Fab UI showed Saved in library before Download Only, then On disk 19.39 MB; medium texture set downloaded 2026-10-17 without a purchase, login or new agreement. Local cache Painted_Plaster-c698e997.",
+      "normalConvention": "opengl",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "qualities": {
+        "low": {
+          "size": 512,
+          "estimatedGpuBytes": 1048576,
+          "fallback": {
+            "baseColor": "assets/materials/wall-painted/low/baseColor.webp",
+            "normal": "assets/materials/wall-painted/low/normal.webp",
+            "orm": "assets/materials/wall-painted/low/orm.webp"
+          },
+          "baseColor": "assets/materials/wall-painted/low/baseColor.ktx2",
+          "normal": "assets/materials/wall-painted/low/normal.ktx2",
+          "orm": "assets/materials/wall-painted/low/orm.ktx2"
+        },
+        "medium": {
+          "size": 1024,
+          "estimatedGpuBytes": 4194304,
+          "fallback": {
+            "baseColor": "assets/materials/wall-painted/medium/baseColor.webp",
+            "normal": "assets/materials/wall-painted/medium/normal.webp",
+            "orm": "assets/materials/wall-painted/medium/orm.webp"
+          },
+          "baseColor": "assets/materials/wall-painted/medium/baseColor.ktx2",
+          "normal": "assets/materials/wall-painted/medium/normal.ktx2",
+          "orm": "assets/materials/wall-painted/medium/orm.ktx2"
+        },
+        "high": {
+          "size": 2048,
+          "estimatedGpuBytes": 16777216,
+          "fallback": {
+            "baseColor": "assets/materials/wall-painted/high/baseColor.webp",
+            "normal": "assets/materials/wall-painted/high/normal.webp",
+            "orm": "assets/materials/wall-painted/high/orm.webp"
+          },
+          "baseColor": "assets/materials/wall-painted/high/baseColor.ktx2",
+          "normal": "assets/materials/wall-painted/high/normal.ktx2",
+          "orm": "assets/materials/wall-painted/high/orm.ktx2"
+        }
+      },
+      "uvUnits": "meters"
+    },
+    {
+      "id": "floor-commercial-grey",
+      "label": "Серое коммерческое покрытие — матовая поверхность",
+      "tileMeters": 2,
+      "fallbackColor": "#777b7b",
+      "roughness": 0.88,
+      "metalness": 0,
+      "normalStrength": 0.1,
+      "neutralize": true,
+      "note": "Owned Quixel smooth scan calibrated to the photographed matte grey commercial floor. Roughness .88 with restrained scan variation, dielectric finish, no polished clearcoat. Exact flooring product is unknown.",
+      "finish": {
+        "target": [
+          150,
+          153,
+          154
+        ],
+        "variation": 0.6
+      },
+      "sourceId": "tezmdjno",
+      "sourceLabel": "Quixel Megascans Smooth Concrete tezmdjno - owned Fab library download",
+      "license": "Fab Standard",
+      "licenseEvidence": "Epic Games Launcher / Fab UI showed Saved in library before Download Only, then On disk 15.31 MB; medium texture set downloaded 2026-10-17 without a purchase, login or new agreement. Local cache Smooth_Concrete-6c270df9.",
+      "normalConvention": "opengl",
+      "source": "Quixel Megascans Smooth Concrete tezmdjno - owned Fab library download",
+      "qualities": {
+        "low": {
+          "size": 512,
+          "estimatedGpuBytes": 1048576,
+          "fallback": {
+            "baseColor": "assets/materials/floor-commercial-grey/low/baseColor.webp",
+            "normal": "assets/materials/floor-commercial-grey/low/normal.webp",
+            "orm": "assets/materials/floor-commercial-grey/low/orm.webp"
+          },
+          "baseColor": "assets/materials/floor-commercial-grey/low/baseColor.ktx2",
+          "normal": "assets/materials/floor-commercial-grey/low/normal.ktx2",
+          "orm": "assets/materials/floor-commercial-grey/low/orm.ktx2"
+        },
+        "medium": {
+          "size": 1024,
+          "estimatedGpuBytes": 4194304,
+          "fallback": {
+            "baseColor": "assets/materials/floor-commercial-grey/medium/baseColor.webp",
+            "normal": "assets/materials/floor-commercial-grey/medium/normal.webp",
+            "orm": "assets/materials/floor-commercial-grey/medium/orm.webp"
+          },
+          "baseColor": "assets/materials/floor-commercial-grey/medium/baseColor.ktx2",
+          "normal": "assets/materials/floor-commercial-grey/medium/normal.ktx2",
+          "orm": "assets/materials/floor-commercial-grey/medium/orm.ktx2"
+        },
+        "high": {
+          "size": 2048,
+          "estimatedGpuBytes": 16777216,
+          "fallback": {
+            "baseColor": "assets/materials/floor-commercial-grey/high/baseColor.webp",
+            "normal": "assets/materials/floor-commercial-grey/high/normal.webp",
+            "orm": "assets/materials/floor-commercial-grey/high/orm.webp"
+          },
+          "baseColor": "assets/materials/floor-commercial-grey/high/baseColor.ktx2",
+          "normal": "assets/materials/floor-commercial-grey/high/normal.ktx2",
+          "orm": "assets/materials/floor-commercial-grey/high/orm.ktx2"
+        }
+      },
+      "uvUnits": "meters"
+    },
+    {
+      "id": "metal-painted",
+      "label": "Тёмный окрашенный металл",
+      "tileMeters": [
+        2,
+        1
+      ],
+      "fallbackColor": "#272d32",
+      "roughness": 0.54,
+      "metalness": 0.08,
+      "normalStrength": 0.045,
+      "baseColorMode": "tint",
+      "note": "Owned Quixel/Fab intact painted metal. The runtime preserves authored paint colours and uses normal/roughness data only, so ceilings stay dark and frames stay white. This scan is painted metal; a specific powder-coating manufacture is not asserted.",
+      "sourceId": "ugzobcglw",
+      "sourceLabel": "Quixel Megascans Painted Metal Door ugzobcglw - owned Fab library download",
+      "license": "Fab Standard",
+      "licenseEvidence": "Epic Games Launcher / Fab UI showed Saved in library before Download Only, then On disk 8.03 MB; medium texture set downloaded 2026-10-17 without a purchase, login or new agreement. Local cache Painted_Metal_Door-c9661075.",
+      "normalConvention": "opengl",
+      "source": "Quixel Megascans Painted Metal Door ugzobcglw - owned Fab library download",
+      "qualities": {
+        "low": {
+          "size": 512,
+          "estimatedGpuBytes": 1048576,
+          "fallback": {
+            "baseColor": "assets/materials/metal-painted/low/baseColor.webp",
+            "normal": "assets/materials/metal-painted/low/normal.webp",
+            "orm": "assets/materials/metal-painted/low/orm.webp"
+          },
+          "baseColor": "assets/materials/metal-painted/low/baseColor.ktx2",
+          "normal": "assets/materials/metal-painted/low/normal.ktx2",
+          "orm": "assets/materials/metal-painted/low/orm.ktx2"
+        },
+        "medium": {
+          "size": 1024,
+          "estimatedGpuBytes": 4194304,
+          "fallback": {
+            "baseColor": "assets/materials/metal-painted/medium/baseColor.webp",
+            "normal": "assets/materials/metal-painted/medium/normal.webp",
+            "orm": "assets/materials/metal-painted/medium/orm.webp"
+          },
+          "baseColor": "assets/materials/metal-painted/medium/baseColor.ktx2",
+          "normal": "assets/materials/metal-painted/medium/normal.ktx2",
+          "orm": "assets/materials/metal-painted/medium/orm.ktx2"
+        },
+        "high": {
+          "size": 2048,
+          "estimatedGpuBytes": 16777216,
+          "fallback": {
+            "baseColor": "assets/materials/metal-painted/high/baseColor.webp",
+            "normal": "assets/materials/metal-painted/high/normal.webp",
+            "orm": "assets/materials/metal-painted/high/orm.webp"
+          },
+          "baseColor": "assets/materials/metal-painted/high/baseColor.ktx2",
+          "normal": "assets/materials/metal-painted/high/normal.ktx2",
+          "orm": "assets/materials/metal-painted/high/orm.ktx2"
+        }
+      },
+      "uvUnits": "meters"
+    },
+    {
+      "id": "wood-oak",
+      "label": "Натуральный светлый дубовый шпон",
+      "tileMeters": [
+        2,
+        4
+      ],
+      "fallbackColor": "#bda17d",
+      "roughness": 0.55,
+      "metalness": 0,
+      "normalStrength": 0.1,
+      "sourceId": "tfjcffgc",
+      "sourceLabel": "Quixel Megascans Oak Veneer tfjcffgc - owned Fab library download",
+      "license": "Fab Standard",
+      "licenseEvidence": "Epic Games Launcher / Fab UI showed Saved in library before Download Only, then On disk 5.25 MB; medium texture set downloaded 2026-10-17 without a purchase, login or new agreement. Local cache Oak_Veneer-b93dc40c.",
+      "normalConvention": "opengl",
+      "note": "Owned Quixel/Fab furniture veneer with a restrained straight grain. Fab description scan area is 2x4 metres; runtime UV repeats preserve both dimensions.",
+      "source": "Quixel Megascans Oak Veneer tfjcffgc - owned Fab library download",
+      "qualities": {
+        "low": {
+          "size": 512,
+          "estimatedGpuBytes": 1048576,
+          "fallback": {
+            "baseColor": "assets/materials/wood-oak/low/baseColor.webp",
+            "normal": "assets/materials/wood-oak/low/normal.webp",
+            "orm": "assets/materials/wood-oak/low/orm.webp"
+          },
+          "baseColor": "assets/materials/wood-oak/low/baseColor.ktx2",
+          "normal": "assets/materials/wood-oak/low/normal.ktx2",
+          "orm": "assets/materials/wood-oak/low/orm.ktx2"
+        },
+        "medium": {
+          "size": 1024,
+          "estimatedGpuBytes": 4194304,
+          "fallback": {
+            "baseColor": "assets/materials/wood-oak/medium/baseColor.webp",
+            "normal": "assets/materials/wood-oak/medium/normal.webp",
+            "orm": "assets/materials/wood-oak/medium/orm.webp"
+          },
+          "baseColor": "assets/materials/wood-oak/medium/baseColor.ktx2",
+          "normal": "assets/materials/wood-oak/medium/normal.ktx2",
+          "orm": "assets/materials/wood-oak/medium/orm.ktx2"
+        },
+        "high": {
+          "size": 2048,
+          "estimatedGpuBytes": 16777216,
+          "fallback": {
+            "baseColor": "assets/materials/wood-oak/high/baseColor.webp",
+            "normal": "assets/materials/wood-oak/high/normal.webp",
+            "orm": "assets/materials/wood-oak/high/orm.webp"
+          },
+          "baseColor": "assets/materials/wood-oak/high/baseColor.ktx2",
+          "normal": "assets/materials/wood-oak/high/normal.ktx2",
+          "orm": "assets/materials/wood-oak/high/orm.ktx2"
+        }
+      },
+      "uvUnits": "meters"
+    },
+    {
+      "id": "fabric-woven",
+      "label": "Тканая мебельная обивка",
+      "tileMeters": 1,
+      "fallbackColor": "#9daba8",
+      "roughness": 0.95,
+      "metalness": 0,
+      "normalStrength": 0.14,
+      "neutralize": true,
+      "note": "Original 2K source is kept on the E resource drive; assets-src holds provenance only. Metadata does not state UE-only. Check acquisition entitlement before publicly distributing this material; offline CC0 fabric fallback can be enabled by removing the local override.",
+      "sourceLabel": "Local user-provided Quixel Megascans Furniture Fabric sjfvce3c",
+      "license": "User-authorized local Megascans resource; acquisition license is not encoded in downloaded metadata",
+      "licenseEvidence": "User explicitly authorized use of the existing local library for this project. No claim of Fab Standard entitlement is made.",
+      "source": "Local user-provided Quixel Megascans Furniture Fabric sjfvce3c",
+      "qualities": {
+        "low": {
+          "size": 512,
+          "estimatedGpuBytes": 1048576,
+          "fallback": {
+            "baseColor": "assets/materials/fabric-woven/low/baseColor.webp",
+            "normal": "assets/materials/fabric-woven/low/normal.webp",
+            "orm": "assets/materials/fabric-woven/low/orm.webp"
+          },
+          "baseColor": "assets/materials/fabric-woven/low/baseColor.ktx2",
+          "normal": "assets/materials/fabric-woven/low/normal.ktx2",
+          "orm": "assets/materials/fabric-woven/low/orm.ktx2"
+        },
+        "medium": {
+          "size": 1024,
+          "estimatedGpuBytes": 4194304,
+          "fallback": {
+            "baseColor": "assets/materials/fabric-woven/medium/baseColor.webp",
+            "normal": "assets/materials/fabric-woven/medium/normal.webp",
+            "orm": "assets/materials/fabric-woven/medium/orm.webp"
+          },
+          "baseColor": "assets/materials/fabric-woven/medium/baseColor.ktx2",
+          "normal": "assets/materials/fabric-woven/medium/normal.ktx2",
+          "orm": "assets/materials/fabric-woven/medium/orm.ktx2"
+        },
+        "high": {
+          "size": 2048,
+          "estimatedGpuBytes": 16777216,
+          "fallback": {
+            "baseColor": "assets/materials/fabric-woven/high/baseColor.webp",
+            "normal": "assets/materials/fabric-woven/high/normal.webp",
+            "orm": "assets/materials/fabric-woven/high/orm.webp"
+          },
+          "baseColor": "assets/materials/fabric-woven/high/baseColor.ktx2",
+          "normal": "assets/materials/fabric-woven/high/normal.ktx2",
+          "orm": "assets/materials/fabric-woven/high/orm.ktx2"
+        }
+      },
+      "uvUnits": "meters"
+    }
+  ]
+}

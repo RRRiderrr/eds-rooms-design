@@ -1,0 +1,6 @@
+import json
+from pathlib import Path
+root=Path('ThreeJS_ArchViz')
+presets=json.loads((root/'assets-src/concepts/presets.json').read_text(encoding='utf8'))
+report={'reviewedPresetIds':[p['presetId'] for p in presets],'renders':32,'views':['window','door'],'reviewMethod':'Cycles renders of actual Blender room plus production GLBs; both contact sheets visually inspected','geometryFindings':{'floatingFurniture':False,'visibleWallIntersections':False,'doorApproachBlocked':False,'missingMajorFurniture':False},'materialReview':'Curated finishes applied to original asset material role; fixed cloth, wood, ceramic-to-metal role changes; restrained painted-wall and commercial-floor PBR','notes':['All immutable architecture kept in the original room geometry.','Preset0 contains no added furniture or decor.','Window work surfaces have structural supports and appropriate high seats.','Floor tone in web renderer can be calibrated independently through curated neutral tint.'],'sourcePreservationAudit':'assets-src/analysis/full_scene_preservation_audit.json','conceptFile':'assets-src/lounge_concepts.blend','contactSheets':['assets-src/previews/concepts/contact-00-07.jpg','assets-src/previews/concepts/contact-08-15.jpg']}
+(root/'assets-src/concepts/visual-review-notes.json').write_text(json.dumps(report,indent=2),encoding='utf8')

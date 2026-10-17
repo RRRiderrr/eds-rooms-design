@@ -1,0 +1,756 @@
+{
+  "removedWebOnly": [],
+  "sourceLiveUntouched": true,
+  "samples": 96,
+  "bounces": 8,
+  "pass": "DIFFUSE INDIRECT only, no color, no direct",
+  "seconds": 67.16354894638062,
+  "roofMeshes": [
+    {
+      "name": "Ceiling_Cable_Trays",
+      "materials": [
+        "12_FIXTURES_Plain_Dark_Grey"
+      ],
+      "uv2Valid": true
+    },
+    {
+      "name": "Ceiling_Corrugated_Deck",
+      "materials": [
+        "07_CEILING_DECK_Plain_Charcoal"
+      ],
+      "uv2Valid": true
+    },
+    {
+      "name": "Ceiling_Exposed_Steel_Trusses",
+      "materials": [
+        "08_CEILING_STEEL_Plain_Dark_Grey"
+      ],
+      "uv2Valid": true
+    },
+    {
+      "name": "Lamp_Suspension_Cables",
+      "materials": [
+        "12_FIXTURES_Plain_Dark_Grey"
+      ],
+      "uv2Valid": true
+    },
+    {
+      "name": "Room_HVAC_Cassette",
+      "materials": [
+        "08_CEILING_STEEL_Plain_Dark_Grey",
+        "11_HVAC_Cassettes_Plain_Light_Grey"
+      ],
+      "uv2Valid": true
+    },
+    {
+      "name": "Room_Lamp_Inner_East_North",
+      "materials": [
+        "09_LIGHT_BODIES_Plain_Graphite",
+        "10_LIGHT_DIFFUSERS_Plain_White"
+      ],
+      "uv2Valid": true
+    },
+    {
+      "name": "Room_Lamp_Inner_East_South",
+      "materials": [
+        "09_LIGHT_BODIES_Plain_Graphite",
+        "10_LIGHT_DIFFUSERS_Plain_White"
+      ],
+      "uv2Valid": true
+    },
+    {
+      "name": "Room_Lamp_Inner_West_North",
+      "materials": [
+        "09_LIGHT_BODIES_Plain_Graphite",
+        "10_LIGHT_DIFFUSERS_Plain_White"
+      ],
+      "uv2Valid": true
+    },
+    {
+      "name": "Room_Lamp_Inner_West_South",
+      "materials": [
+        "09_LIGHT_BODIES_Plain_Graphite",
+        "10_LIGHT_DIFFUSERS_Plain_White"
+      ],
+      "uv2Valid": true
+    },
+    {
+      "name": "Room_Lamp_Outer_East",
+      "materials": [
+        "09_LIGHT_BODIES_Plain_Graphite",
+        "10_LIGHT_DIFFUSERS_Plain_White"
+      ],
+      "uv2Valid": true
+    },
+    {
+      "name": "Room_Lamp_Outer_West",
+      "materials": [
+        "09_LIGHT_BODIES_Plain_Graphite",
+        "10_LIGHT_DIFFUSERS_Plain_White"
+      ],
+      "uv2Valid": true
+    },
+    {
+      "name": "Wall_16_Top_Steel_Beam",
+      "materials": [
+        "08_CEILING_STEEL_Plain_Dark_Grey"
+      ],
+      "uv2Valid": true
+    },
+    {
+      "name": "Wall_17_Top_Steel_Beam",
+      "materials": [
+        "08_CEILING_STEEL_Plain_Dark_Grey"
+      ],
+      "uv2Valid": true
+    },
+    {
+      "name": "Wall_21_Top_Steel_Beam",
+      "materials": [
+        "08_CEILING_STEEL_Plain_Dark_Grey"
+      ],
+      "uv2Valid": true
+    },
+    {
+      "name": "Wall_26_Top_Steel_Beam",
+      "materials": [
+        "08_CEILING_STEEL_Plain_Dark_Grey"
+      ],
+      "uv2Valid": true
+    },
+    {
+      "name": "Wall_29_Top_Steel_Beam",
+      "materials": [
+        "08_CEILING_STEEL_Plain_Dark_Grey"
+      ],
+      "uv2Valid": true
+    }
+  ],
+  "lightmapUvRanges": [
+    {
+      "name": "Ceiling_Cable_Trays",
+      "min": [
+        0.10270857065916061,
+        2.813372868004649e-09
+      ],
+      "max": [
+        0.9499202370643616,
+        0.9753257632255554
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Ceiling_Corrugated_Deck",
+      "min": [
+        2.7434976956897117e-08,
+        2.57892507349311e-09
+      ],
+      "max": [
+        0.9456192851066589,
+        0.9495227336883545
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Ceiling_Exposed_Steel_Trusses",
+      "min": [
+        0.14490637183189392,
+        5.861193308476231e-09
+      ],
+      "max": [
+        0.9570095539093018,
+        0.9738115072250366
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Central_Room_Door_Switch",
+      "min": [
+        0.13780546188354492,
+        0.09657345712184906
+      ],
+      "max": [
+        0.9739537835121155,
+        0.9732893705368042
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Central_Room_Outlet_00",
+      "min": [
+        0.0,
+        0.11674682796001434
+      ],
+      "max": [
+        0.9999452829360962,
+        0.9928925633430481
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Central_Room_Outlet_00_Conduit",
+      "min": [
+        0.21979647874832153,
+        0.48753297328948975
+      ],
+      "max": [
+        0.9785465002059937,
+        0.9666115641593933
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Central_Room_Outlet_01",
+      "min": [
+        0.13780544698238373,
+        0.08756428956985474
+      ],
+      "max": [
+        0.9857894778251648,
+        0.9999188780784607
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Central_Room_Outlet_01_Conduit",
+      "min": [
+        0.6281077265739441,
+        0.16545118391513824
+      ],
+      "max": [
+        0.9785465002059937,
+        0.9671506881713867
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Central_Room_Outlet_02",
+      "min": [
+        0.014002635143697262,
+        0.12412230670452118
+      ],
+      "max": [
+        0.9999452829360962,
+        0.9928925633430481
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Central_Room_Outlet_02_Conduit",
+      "min": [
+        0.19234122335910797,
+        0.9608468413352966
+      ],
+      "max": [
+        0.9270687103271484,
+        0.9783975481987
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Central_Room_Outlet_03",
+      "min": [
+        4.009727305742672e-08,
+        0.007318002171814442
+      ],
+      "max": [
+        0.9999998211860657,
+        1.0
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Central_Room_Outlet_04",
+      "min": [
+        0.014042179100215435,
+        0.01463598944246769
+      ],
+      "max": [
+        0.9999998211860657,
+        1.0
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Central_Room_Outlet_05",
+      "min": [
+        0.04952612519264221,
+        8.909013970992419e-09
+      ],
+      "max": [
+        1.0,
+        0.9999996423721313
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Central_Room_Outlet_06",
+      "min": [
+        0.07021085172891617,
+        0.014234717935323715
+      ],
+      "max": [
+        1.0,
+        0.9999996423721313
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Central_Room_SW_Steel_Column",
+      "min": [
+        3.329715170252712e-08,
+        0.17009271681308746
+      ],
+      "max": [
+        0.37358999252319336,
+        0.6319695115089417
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Central_Room_Vent",
+      "min": [
+        0.3292425274848938,
+        0.17009271681308746
+      ],
+      "max": [
+        0.8810699582099915,
+        0.5259165167808533
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Door_03_CLOSED_Frame_Head",
+      "min": [
+        0.2494569718837738,
+        0.8972628712654114
+      ],
+      "max": [
+        0.8244354724884033,
+        0.9628249406814575
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Door_03_CLOSED_Jamb_L",
+      "min": [
+        0.5226638913154602,
+        0.8636609315872192
+      ],
+      "max": [
+        0.962866485118866,
+        0.9622517228126526
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Door_03_CLOSED_Jamb_R",
+      "min": [
+        0.3756299912929535,
+        0.8642339706420898
+      ],
+      "max": [
+        0.9197781682014465,
+        0.961428701877594
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Door_03_CLOSED_Threshold",
+      "min": [
+        0.3958849310874939,
+        0.17727480828762054
+      ],
+      "max": [
+        0.9436565637588501,
+        0.9680907726287842
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Floor_Continuous_00",
+      "min": [
+        4.900778094452107e-08,
+        3.282268234983121e-09
+      ],
+      "max": [
+        0.9278432726860046,
+        0.525221586227417
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Lamp_Suspension_Cables",
+      "min": [
+        0.19234123826026917,
+        8.440118826058551e-09
+      ],
+      "max": [
+        0.9929787516593933,
+        0.9855149388313293
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Room_HVAC_Cassette",
+      "min": [
+        2.837292534252356e-08,
+        7.502327648012397e-09
+      ],
+      "max": [
+        0.9858372211456299,
+        0.9738491177558899
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Room_Lamp_Inner_East_North",
+      "min": [
+        0.10299600660800934,
+        0.29822278022766113
+      ],
+      "max": [
+        0.9591100215911865,
+        0.9755268692970276
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Room_Lamp_Inner_East_South",
+      "min": [
+        0.10299602150917053,
+        0.6248693466186523
+      ],
+      "max": [
+        0.9279286861419678,
+        0.9756502509117126
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Room_Lamp_Inner_West_North",
+      "min": [
+        0.17343129217624664,
+        0.1101333498954773
+      ],
+      "max": [
+        0.9701849222183228,
+        0.9758126139640808
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Room_Lamp_Inner_West_South",
+      "min": [
+        0.012393511831760406,
+        0.4633896052837372
+      ],
+      "max": [
+        0.9569326639175415,
+        0.9758126139640808
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Room_Lamp_Outer_East",
+      "min": [
+        0.0208307895809412,
+        0.5287818312644958
+      ],
+      "max": [
+        0.9761279821395874,
+        0.9703701734542847
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Room_Lamp_Outer_West",
+      "min": [
+        0.057733383029699326,
+        0.28684157133102417
+      ],
+      "max": [
+        0.9761279821395874,
+        0.9710090756416321
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Wall_16_Clean",
+      "min": [
+        0.19986121356487274,
+        8.440118826058551e-09
+      ],
+      "max": [
+        0.9594870209693909,
+        0.9606502652168274
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Wall_16_Skirting_0",
+      "min": [
+        0.3012799918651581,
+        2.250698294403719e-08
+      ],
+      "max": [
+        0.9547033309936523,
+        0.9603773355484009
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Wall_16_Top_Steel_Beam",
+      "min": [
+        0.11015180498361588,
+        1.031570029397244e-08
+      ],
+      "max": [
+        0.6213818788528442,
+        0.9526359438896179
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Wall_17_Clean",
+      "min": [
+        3.3062665494298926e-08,
+        2.344477390003874e-10
+      ],
+      "max": [
+        0.9595988988876343,
+        0.45644426345825195
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Wall_17_Skirting_0",
+      "min": [
+        0.49507638812065125,
+        0.17741811275482178
+      ],
+      "max": [
+        0.9392461776733398,
+        0.6547307968139648
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Wall_17_Top_Steel_Beam",
+      "min": [
+        0.3012799918651581,
+        0.0
+      ],
+      "max": [
+        0.6210952997207642,
+        0.9489781260490417
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Wall_21_Clean",
+      "min": [
+        3.470407250460994e-08,
+        1.8755820008209412e-08
+      ],
+      "max": [
+        0.9546289443969727,
+        0.9548650979995728
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Wall_21_Skirting_0",
+      "min": [
+        0.2494569718837738,
+        0.17741811275482178
+      ],
+      "max": [
+        0.9481995105743408,
+        0.9604436755180359
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Wall_21_Skirting_1",
+      "min": [
+        0.38492488861083984,
+        0.16652606427669525
+      ],
+      "max": [
+        0.9496346116065979,
+        0.9604692459106445
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Wall_21_Top_Steel_Beam",
+      "min": [
+        0.11015183478593826,
+        7.73677566456854e-09
+      ],
+      "max": [
+        0.4772361218929291,
+        0.9069318175315857
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Wall_26_Clean",
+      "min": [
+        0.15471969544887543,
+        6.095641325032375e-09
+      ],
+      "max": [
+        0.6110612154006958,
+        0.9440239071846008
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Wall_26_Skirting_0",
+      "min": [
+        0.556117594242096,
+        0.16652604937553406
+      ],
+      "max": [
+        0.9406813383102417,
+        0.5336004495620728
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Wall_26_Top_Steel_Beam",
+      "min": [
+        0.1646212637424469,
+        2.250698294403719e-08
+      ],
+      "max": [
+        0.5897918939590454,
+        0.9489781260490417
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Wall_29_Clean",
+      "min": [
+        0.14490637183189392,
+        0.1668904423713684
+      ],
+      "max": [
+        0.9543430805206299,
+        0.9440239667892456
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Wall_29_Skirting_0",
+      "min": [
+        0.6559712290763855,
+        0.1645936518907547
+      ],
+      "max": [
+        0.9457499384880066,
+        0.5233368277549744
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Wall_29_Top_Steel_Beam",
+      "min": [
+        0.32205337285995483,
+        0.16039839386940002
+      ],
+      "max": [
+        0.8856849074363708,
+        0.9489781856536865
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Window_06_Frame_Horizontal_-1",
+      "min": [
+        3.376612767169718e-08,
+        0.16652606427669525
+      ],
+      "max": [
+        0.9135347008705139,
+        0.9615616798400879
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Window_06_Frame_Horizontal_1",
+      "min": [
+        0.021633494645357132,
+        0.1771976351737976
+      ],
+      "max": [
+        0.9180300235748291,
+        0.9615616798400879
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Window_06_Frame_Vertical_-1",
+      "min": [
+        0.1646212786436081,
+        0.3126463294029236
+      ],
+      "max": [
+        0.9537696838378906,
+        0.9575368762016296
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Window_06_Frame_Vertical_1",
+      "min": [
+        0.17386126518249512,
+        0.16652606427669525
+      ],
+      "max": [
+        0.9227747321128845,
+        0.9575368762016296
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Window_06_Mullion_1",
+      "min": [
+        4.009727305742672e-08,
+        0.519610583782196
+      ],
+      "max": [
+        0.9632266163825989,
+        0.9626814126968384
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Window_06_Mullion_2",
+      "min": [
+        0.23849689960479736,
+        0.9140461683273315
+      ],
+      "max": [
+        0.7341712713241577,
+        0.9635941386222839
+      ],
+      "inRange": true
+    },
+    {
+      "name": "Window_06_Sill",
+      "min": [
+        0.11015182733535767,
+        0.5074535608291626
+      ],
+      "max": [
+        0.9628663659095764,
+        0.9258095026016235
+      ],
+      "inRange": true
+    }
+  ],
+  "probableFormerWhiteRoofCause": "Broad WALL material classification also matched Wall_*_Top_Steel_Beam, plus source material replacement; exact material-semantics.json prevents this."
+}

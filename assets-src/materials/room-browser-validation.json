@@ -1,0 +1,575 @@
+{
+  "mode": "archviz",
+  "preset": "builtin-0",
+  "materials": [
+    {
+      "name": "02_FLOOR_Plain_Cool_Grey",
+      "source": "Quixel Megascans Smooth Concrete tezmdjno - owned Fab library download",
+      "color": "aeb3b3",
+      "texture": true,
+      "normalStrength": [
+        0.12,
+        0.12
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "01_WALLS_Plain_Warm_White",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "color": "ffffff",
+      "texture": true,
+      "normalStrength": [
+        0.06,
+        0.06
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "01_WALLS_Plain_Warm_White",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "color": "ffffff",
+      "texture": true,
+      "normalStrength": [
+        0.06,
+        0.06
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "01_WALLS_Plain_Warm_White",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "color": "ffffff",
+      "texture": true,
+      "normalStrength": [
+        0.06,
+        0.06
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "01_WALLS_Plain_Warm_White",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "color": "ffffff",
+      "texture": true,
+      "normalStrength": [
+        0.06,
+        0.06
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "05_WINDOW_FRAMES_Plain_Ivory",
+      "source": null,
+      "color": "eeeee6",
+      "texture": false,
+      "normalStrength": [
+        1,
+        1
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "05_WINDOW_FRAMES_Plain_Ivory",
+      "source": null,
+      "color": "eeeee6",
+      "texture": false,
+      "normalStrength": [
+        1,
+        1
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "05_WINDOW_FRAMES_Plain_Ivory",
+      "source": null,
+      "color": "eeeee6",
+      "texture": false,
+      "normalStrength": [
+        1,
+        1
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "05_WINDOW_FRAMES_Plain_Ivory",
+      "source": null,
+      "color": "eeeee6",
+      "texture": false,
+      "normalStrength": [
+        1,
+        1
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "05_WINDOW_FRAMES_Plain_Ivory",
+      "source": null,
+      "color": "eeeee6",
+      "texture": false,
+      "normalStrength": [
+        1,
+        1
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "05_WINDOW_FRAMES_Plain_Ivory",
+      "source": null,
+      "color": "eeeee6",
+      "texture": false,
+      "normalStrength": [
+        1,
+        1
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "06_WINDOW_PANES_Plain_Blue",
+      "source": null,
+      "color": "e3ece9",
+      "texture": false,
+      "normalStrength": [
+        1,
+        1
+      ],
+      "glassEnvironment": true
+    },
+    {
+      "name": "06_WINDOW_PANES_Plain_Blue",
+      "source": null,
+      "color": "e3ece9",
+      "texture": false,
+      "normalStrength": [
+        1,
+        1
+      ],
+      "glassEnvironment": true
+    },
+    {
+      "name": "06_WINDOW_PANES_Plain_Blue",
+      "source": null,
+      "color": "e3ece9",
+      "texture": false,
+      "normalStrength": [
+        1,
+        1
+      ],
+      "glassEnvironment": true
+    },
+    {
+      "name": "05_WINDOW_FRAMES_Plain_Ivory",
+      "source": null,
+      "color": "eeeee6",
+      "texture": false,
+      "normalStrength": [
+        1,
+        1
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "02_FLOOR_Plain_Cool_Grey",
+      "source": "Quixel Megascans Smooth Concrete tezmdjno - owned Fab library download",
+      "color": "aeb3b3",
+      "texture": true,
+      "normalStrength": [
+        0.12,
+        0.12
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "05_WINDOW_FRAMES_Plain_Ivory",
+      "source": null,
+      "color": "eeeee6",
+      "texture": false,
+      "normalStrength": [
+        1,
+        1
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "06_WINDOW_PANES_Plain_Blue",
+      "source": null,
+      "color": "e3ece9",
+      "texture": false,
+      "normalStrength": [
+        1,
+        1
+      ],
+      "glassEnvironment": true
+    },
+    {
+      "name": "01_WALLS_Plain_Warm_White",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "color": "ffffff",
+      "texture": true,
+      "normalStrength": [
+        0.06,
+        0.06
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "01_WALLS_Plain_Warm_White",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "color": "ffffff",
+      "texture": true,
+      "normalStrength": [
+        0.06,
+        0.06
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "01_WALLS_Plain_Warm_White",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "color": "ffffff",
+      "texture": true,
+      "normalStrength": [
+        0.06,
+        0.06
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "01_WALLS_Plain_Warm_White",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "color": "ffffff",
+      "texture": true,
+      "normalStrength": [
+        0.06,
+        0.06
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "01_WALLS_Plain_Warm_White",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "color": "ffffff",
+      "texture": true,
+      "normalStrength": [
+        0.06,
+        0.06
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "01_WALLS_Plain_Warm_White",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "color": "ffffff",
+      "texture": true,
+      "normalStrength": [
+        0.06,
+        0.06
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "01_WALLS_Plain_Warm_White",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "color": "ffffff",
+      "texture": true,
+      "normalStrength": [
+        0.06,
+        0.06
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "01_WALLS_Plain_Warm_White",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "color": "ffffff",
+      "texture": true,
+      "normalStrength": [
+        0.06,
+        0.06
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "01_WALLS_Plain_Warm_White",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "color": "ffffff",
+      "texture": true,
+      "normalStrength": [
+        0.06,
+        0.06
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "01_WALLS_Plain_Warm_White",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "color": "ffffff",
+      "texture": true,
+      "normalStrength": [
+        0.06,
+        0.06
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "01_WALLS_Plain_Warm_White",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "color": "ffffff",
+      "texture": true,
+      "normalStrength": [
+        0.06,
+        0.06
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "01_WALLS_Plain_Warm_White",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "color": "ffffff",
+      "texture": true,
+      "normalStrength": [
+        0.06,
+        0.06
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "01_WALLS_Plain_Warm_White",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "color": "ffffff",
+      "texture": true,
+      "normalStrength": [
+        0.06,
+        0.06
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "01_WALLS_Plain_Warm_White",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "color": "ffffff",
+      "texture": true,
+      "normalStrength": [
+        0.06,
+        0.06
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "01_WALLS_Plain_Warm_White",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "color": "ffffff",
+      "texture": true,
+      "normalStrength": [
+        0.06,
+        0.06
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "01_WALLS_Plain_Warm_White",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "color": "ffffff",
+      "texture": true,
+      "normalStrength": [
+        0.06,
+        0.06
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "01_WALLS_Plain_Warm_White",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "color": "ffffff",
+      "texture": true,
+      "normalStrength": [
+        0.06,
+        0.06
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "01_WALLS_Plain_Warm_White",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "color": "ffffff",
+      "texture": true,
+      "normalStrength": [
+        0.06,
+        0.06
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "01_WALLS_Plain_Warm_White",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "color": "ffffff",
+      "texture": true,
+      "normalStrength": [
+        0.06,
+        0.06
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "01_WALLS_Plain_Warm_White",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "color": "ffffff",
+      "texture": true,
+      "normalStrength": [
+        0.06,
+        0.06
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "01_WALLS_Plain_Warm_White",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "color": "ffffff",
+      "texture": true,
+      "normalStrength": [
+        0.06,
+        0.06
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "01_WALLS_Plain_Warm_White",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "color": "ffffff",
+      "texture": true,
+      "normalStrength": [
+        0.06,
+        0.06
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "01_WALLS_Plain_Warm_White",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "color": "ffffff",
+      "texture": true,
+      "normalStrength": [
+        0.06,
+        0.06
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "01_WALLS_Plain_Warm_White",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "color": "ffffff",
+      "texture": true,
+      "normalStrength": [
+        0.06,
+        0.06
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "01_WALLS_Plain_Warm_White",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "color": "ffffff",
+      "texture": true,
+      "normalStrength": [
+        0.06,
+        0.06
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "01_WALLS_Plain_Warm_White",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "color": "ffffff",
+      "texture": true,
+      "normalStrength": [
+        0.06,
+        0.06
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "01_WALLS_Plain_Warm_White",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "color": "ffffff",
+      "texture": true,
+      "normalStrength": [
+        0.06,
+        0.06
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "01_WALLS_Plain_Warm_White",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "color": "ffffff",
+      "texture": true,
+      "normalStrength": [
+        0.06,
+        0.06
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "01_WALLS_Plain_Warm_White",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "color": "ffffff",
+      "texture": true,
+      "normalStrength": [
+        0.06,
+        0.06
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "01_WALLS_Plain_Warm_White",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "color": "ffffff",
+      "texture": true,
+      "normalStrength": [
+        0.06,
+        0.06
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "01_WALLS_Plain_Warm_White",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "color": "ffffff",
+      "texture": true,
+      "normalStrength": [
+        0.06,
+        0.06
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "01_WALLS_Plain_Warm_White",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "color": "ffffff",
+      "texture": true,
+      "normalStrength": [
+        0.06,
+        0.06
+      ],
+      "glassEnvironment": false
+    },
+    {
+      "name": "01_WALLS_Plain_Warm_White",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "color": "ffffff",
+      "texture": true,
+      "normalStrength": [
+        0.06,
+        0.06
+      ],
+      "glassEnvironment": false
+    }
+  ],
+  "background": {
+    "environmentId": "factory-panorama-generated-v1",
+    "projection": "equirectangular",
+    "sourceRadiometry": "generated LDR, not measured HDR"
+  },
+  "panoramaPMREM": true,
+  "errors": [],
+  "failedResponses": []
+}

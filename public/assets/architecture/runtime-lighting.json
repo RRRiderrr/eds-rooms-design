@@ -1,0 +1,1334 @@
+{
+  "schemaVersion": 1,
+  "coordinateSystem": "same centered Y-up metres as room/space",
+  "lights": [
+    {
+      "id": "Hall_Lamp_Central_01_Area",
+      "type": "AREA",
+      "position": [
+        -20.9477145,
+        3.375,
+        -1.0209095
+      ],
+      "direction": [
+        0.0,
+        -1.0,
+        -0.0
+      ],
+      "tangentU": [
+        -4.371138828673793e-08,
+        0.0,
+        -1.0
+      ],
+      "tangentV": [
+        -1.0,
+        0.0,
+        4.371138828673793e-08
+      ],
+      "lengthDirection": [
+        -1.0,
+        0.0,
+        4.371138828673793e-08
+      ],
+      "size": [
+        0.07500000298023224,
+        1.649999976158142
+      ],
+      "length": 1.649999976158142,
+      "width": 0.07500000298023224,
+      "colorLinear": [
+        1.0,
+        0.9399999976158142,
+        0.8600000143051147
+      ],
+      "sourceEnergyWatts": 80.0,
+      "sourceShape": "RECTANGLE",
+      "group": "hall",
+      "castsSourceShadows": true,
+      "estimatedLumensAt80lmPerW": 6400.0,
+      "conversionNote": "Source value is Blender radiometric area-light power. Browser candela/photometric intensity needs one shared exposure calibration, not a literal 80cd."
+    },
+    {
+      "id": "Hall_Lamp_Central_02_Area",
+      "type": "AREA",
+      "position": [
+        -14.9477145,
+        3.375,
+        -1.0209095
+      ],
+      "direction": [
+        0.0,
+        -1.0,
+        -0.0
+      ],
+      "tangentU": [
+        -4.371138828673793e-08,
+        0.0,
+        -1.0
+      ],
+      "tangentV": [
+        -1.0,
+        0.0,
+        4.371138828673793e-08
+      ],
+      "lengthDirection": [
+        -1.0,
+        0.0,
+        4.371138828673793e-08
+      ],
+      "size": [
+        0.07500000298023224,
+        1.649999976158142
+      ],
+      "length": 1.649999976158142,
+      "width": 0.07500000298023224,
+      "colorLinear": [
+        1.0,
+        0.9399999976158142,
+        0.8600000143051147
+      ],
+      "sourceEnergyWatts": 80.0,
+      "sourceShape": "RECTANGLE",
+      "group": "hall",
+      "castsSourceShadows": true,
+      "estimatedLumensAt80lmPerW": 6400.0,
+      "conversionNote": "Source value is Blender radiometric area-light power. Browser candela/photometric intensity needs one shared exposure calibration, not a literal 80cd."
+    },
+    {
+      "id": "Hall_Lamp_Central_03_Area",
+      "type": "AREA",
+      "position": [
+        -8.9477145,
+        3.375,
+        -1.0209095
+      ],
+      "direction": [
+        0.0,
+        -1.0,
+        -0.0
+      ],
+      "tangentU": [
+        -4.371138828673793e-08,
+        0.0,
+        -1.0
+      ],
+      "tangentV": [
+        -1.0,
+        0.0,
+        4.371138828673793e-08
+      ],
+      "lengthDirection": [
+        -1.0,
+        0.0,
+        4.371138828673793e-08
+      ],
+      "size": [
+        0.07500000298023224,
+        1.649999976158142
+      ],
+      "length": 1.649999976158142,
+      "width": 0.07500000298023224,
+      "colorLinear": [
+        1.0,
+        0.9399999976158142,
+        0.8600000143051147
+      ],
+      "sourceEnergyWatts": 80.0,
+      "sourceShape": "RECTANGLE",
+      "group": "hall",
+      "castsSourceShadows": true,
+      "estimatedLumensAt80lmPerW": 6400.0,
+      "conversionNote": "Source value is Blender radiometric area-light power. Browser candela/photometric intensity needs one shared exposure calibration, not a literal 80cd."
+    },
+    {
+      "id": "Hall_Lamp_Central_06_Area",
+      "type": "AREA",
+      "position": [
+        9.0522855,
+        3.375,
+        -1.0209095
+      ],
+      "direction": [
+        0.0,
+        -1.0,
+        -0.0
+      ],
+      "tangentU": [
+        -4.371138828673793e-08,
+        0.0,
+        -1.0
+      ],
+      "tangentV": [
+        -1.0,
+        0.0,
+        4.371138828673793e-08
+      ],
+      "lengthDirection": [
+        -1.0,
+        0.0,
+        4.371138828673793e-08
+      ],
+      "size": [
+        0.07500000298023224,
+        1.649999976158142
+      ],
+      "length": 1.649999976158142,
+      "width": 0.07500000298023224,
+      "colorLinear": [
+        1.0,
+        0.9399999976158142,
+        0.8600000143051147
+      ],
+      "sourceEnergyWatts": 80.0,
+      "sourceShape": "RECTANGLE",
+      "group": "hall",
+      "castsSourceShadows": true,
+      "estimatedLumensAt80lmPerW": 6400.0,
+      "conversionNote": "Source value is Blender radiometric area-light power. Browser candela/photometric intensity needs one shared exposure calibration, not a literal 80cd."
+    },
+    {
+      "id": "Hall_Lamp_Central_07_Area",
+      "type": "AREA",
+      "position": [
+        15.0522855,
+        3.375,
+        -1.0209095
+      ],
+      "direction": [
+        0.0,
+        -1.0,
+        -0.0
+      ],
+      "tangentU": [
+        -4.371138828673793e-08,
+        0.0,
+        -1.0
+      ],
+      "tangentV": [
+        -1.0,
+        0.0,
+        4.371138828673793e-08
+      ],
+      "lengthDirection": [
+        -1.0,
+        0.0,
+        4.371138828673793e-08
+      ],
+      "size": [
+        0.07500000298023224,
+        1.649999976158142
+      ],
+      "length": 1.649999976158142,
+      "width": 0.07500000298023224,
+      "colorLinear": [
+        1.0,
+        0.9399999976158142,
+        0.8600000143051147
+      ],
+      "sourceEnergyWatts": 80.0,
+      "sourceShape": "RECTANGLE",
+      "group": "hall",
+      "castsSourceShadows": true,
+      "estimatedLumensAt80lmPerW": 6400.0,
+      "conversionNote": "Source value is Blender radiometric area-light power. Browser candela/photometric intensity needs one shared exposure calibration, not a literal 80cd."
+    },
+    {
+      "id": "Hall_Lamp_Central_08_Area",
+      "type": "AREA",
+      "position": [
+        21.0522855,
+        3.375,
+        -1.0209095
+      ],
+      "direction": [
+        0.0,
+        -1.0,
+        -0.0
+      ],
+      "tangentU": [
+        -4.371138828673793e-08,
+        0.0,
+        -1.0
+      ],
+      "tangentV": [
+        -1.0,
+        0.0,
+        4.371138828673793e-08
+      ],
+      "lengthDirection": [
+        -1.0,
+        0.0,
+        4.371138828673793e-08
+      ],
+      "size": [
+        0.07500000298023224,
+        1.649999976158142
+      ],
+      "length": 1.649999976158142,
+      "width": 0.07500000298023224,
+      "colorLinear": [
+        1.0,
+        0.9399999976158142,
+        0.8600000143051147
+      ],
+      "sourceEnergyWatts": 80.0,
+      "sourceShape": "RECTANGLE",
+      "group": "hall",
+      "castsSourceShadows": true,
+      "estimatedLumensAt80lmPerW": 6400.0,
+      "conversionNote": "Source value is Blender radiometric area-light power. Browser candela/photometric intensity needs one shared exposure calibration, not a literal 80cd."
+    },
+    {
+      "id": "Hall_Lamp_North_01_Area",
+      "type": "AREA",
+      "position": [
+        -20.9477145,
+        3.305000066757202,
+        -4.5209095
+      ],
+      "direction": [
+        0.0,
+        -1.0,
+        -0.0
+      ],
+      "tangentU": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "tangentV": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "lengthDirection": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "size": [
+        2.8499999046325684,
+        0.07500000298023224
+      ],
+      "length": 2.8499999046325684,
+      "width": 0.07500000298023224,
+      "colorLinear": [
+        1.0,
+        0.9399999976158142,
+        0.8600000143051147
+      ],
+      "sourceEnergyWatts": 80.0,
+      "sourceShape": "RECTANGLE",
+      "group": "hall",
+      "castsSourceShadows": true,
+      "estimatedLumensAt80lmPerW": 6400.0,
+      "conversionNote": "Source value is Blender radiometric area-light power. Browser candela/photometric intensity needs one shared exposure calibration, not a literal 80cd."
+    },
+    {
+      "id": "Hall_Lamp_North_02_Area",
+      "type": "AREA",
+      "position": [
+        -14.9477145,
+        3.305000066757202,
+        -4.5209095
+      ],
+      "direction": [
+        0.0,
+        -1.0,
+        -0.0
+      ],
+      "tangentU": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "tangentV": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "lengthDirection": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "size": [
+        2.8499999046325684,
+        0.07500000298023224
+      ],
+      "length": 2.8499999046325684,
+      "width": 0.07500000298023224,
+      "colorLinear": [
+        1.0,
+        0.9399999976158142,
+        0.8600000143051147
+      ],
+      "sourceEnergyWatts": 80.0,
+      "sourceShape": "RECTANGLE",
+      "group": "hall",
+      "castsSourceShadows": true,
+      "estimatedLumensAt80lmPerW": 6400.0,
+      "conversionNote": "Source value is Blender radiometric area-light power. Browser candela/photometric intensity needs one shared exposure calibration, not a literal 80cd."
+    },
+    {
+      "id": "Hall_Lamp_North_03_Area",
+      "type": "AREA",
+      "position": [
+        -8.9477145,
+        3.305000066757202,
+        -4.5209095
+      ],
+      "direction": [
+        0.0,
+        -1.0,
+        -0.0
+      ],
+      "tangentU": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "tangentV": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "lengthDirection": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "size": [
+        2.8499999046325684,
+        0.07500000298023224
+      ],
+      "length": 2.8499999046325684,
+      "width": 0.07500000298023224,
+      "colorLinear": [
+        1.0,
+        0.9399999976158142,
+        0.8600000143051147
+      ],
+      "sourceEnergyWatts": 80.0,
+      "sourceShape": "RECTANGLE",
+      "group": "hall",
+      "castsSourceShadows": true,
+      "estimatedLumensAt80lmPerW": 6400.0,
+      "conversionNote": "Source value is Blender radiometric area-light power. Browser candela/photometric intensity needs one shared exposure calibration, not a literal 80cd."
+    },
+    {
+      "id": "Hall_Lamp_North_04_Area",
+      "type": "AREA",
+      "position": [
+        -2.9477145,
+        3.305000066757202,
+        -4.5209095
+      ],
+      "direction": [
+        0.0,
+        -1.0,
+        -0.0
+      ],
+      "tangentU": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "tangentV": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "lengthDirection": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "size": [
+        2.8499999046325684,
+        0.07500000298023224
+      ],
+      "length": 2.8499999046325684,
+      "width": 0.07500000298023224,
+      "colorLinear": [
+        1.0,
+        0.9399999976158142,
+        0.8600000143051147
+      ],
+      "sourceEnergyWatts": 80.0,
+      "sourceShape": "RECTANGLE",
+      "group": "hall",
+      "castsSourceShadows": true,
+      "estimatedLumensAt80lmPerW": 6400.0,
+      "conversionNote": "Source value is Blender radiometric area-light power. Browser candela/photometric intensity needs one shared exposure calibration, not a literal 80cd."
+    },
+    {
+      "id": "Hall_Lamp_North_05_Area",
+      "type": "AREA",
+      "position": [
+        3.0522855,
+        3.305000066757202,
+        -4.5209095
+      ],
+      "direction": [
+        0.0,
+        -1.0,
+        -0.0
+      ],
+      "tangentU": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "tangentV": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "lengthDirection": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "size": [
+        2.8499999046325684,
+        0.07500000298023224
+      ],
+      "length": 2.8499999046325684,
+      "width": 0.07500000298023224,
+      "colorLinear": [
+        1.0,
+        0.9399999976158142,
+        0.8600000143051147
+      ],
+      "sourceEnergyWatts": 80.0,
+      "sourceShape": "RECTANGLE",
+      "group": "hall",
+      "castsSourceShadows": true,
+      "estimatedLumensAt80lmPerW": 6400.0,
+      "conversionNote": "Source value is Blender radiometric area-light power. Browser candela/photometric intensity needs one shared exposure calibration, not a literal 80cd."
+    },
+    {
+      "id": "Hall_Lamp_North_06_Area",
+      "type": "AREA",
+      "position": [
+        9.0522855,
+        3.305000066757202,
+        -4.5209095
+      ],
+      "direction": [
+        0.0,
+        -1.0,
+        -0.0
+      ],
+      "tangentU": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "tangentV": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "lengthDirection": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "size": [
+        2.8499999046325684,
+        0.07500000298023224
+      ],
+      "length": 2.8499999046325684,
+      "width": 0.07500000298023224,
+      "colorLinear": [
+        1.0,
+        0.9399999976158142,
+        0.8600000143051147
+      ],
+      "sourceEnergyWatts": 80.0,
+      "sourceShape": "RECTANGLE",
+      "group": "hall",
+      "castsSourceShadows": true,
+      "estimatedLumensAt80lmPerW": 6400.0,
+      "conversionNote": "Source value is Blender radiometric area-light power. Browser candela/photometric intensity needs one shared exposure calibration, not a literal 80cd."
+    },
+    {
+      "id": "Hall_Lamp_North_07_Area",
+      "type": "AREA",
+      "position": [
+        15.0522855,
+        3.305000066757202,
+        -4.5209095
+      ],
+      "direction": [
+        0.0,
+        -1.0,
+        -0.0
+      ],
+      "tangentU": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "tangentV": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "lengthDirection": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "size": [
+        2.8499999046325684,
+        0.07500000298023224
+      ],
+      "length": 2.8499999046325684,
+      "width": 0.07500000298023224,
+      "colorLinear": [
+        1.0,
+        0.9399999976158142,
+        0.8600000143051147
+      ],
+      "sourceEnergyWatts": 80.0,
+      "sourceShape": "RECTANGLE",
+      "group": "hall",
+      "castsSourceShadows": true,
+      "estimatedLumensAt80lmPerW": 6400.0,
+      "conversionNote": "Source value is Blender radiometric area-light power. Browser candela/photometric intensity needs one shared exposure calibration, not a literal 80cd."
+    },
+    {
+      "id": "Hall_Lamp_North_08_Area",
+      "type": "AREA",
+      "position": [
+        21.0522855,
+        3.305000066757202,
+        -4.5209095
+      ],
+      "direction": [
+        0.0,
+        -1.0,
+        -0.0
+      ],
+      "tangentU": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "tangentV": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "lengthDirection": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "size": [
+        2.8499999046325684,
+        0.07500000298023224
+      ],
+      "length": 2.8499999046325684,
+      "width": 0.07500000298023224,
+      "colorLinear": [
+        1.0,
+        0.9399999976158142,
+        0.8600000143051147
+      ],
+      "sourceEnergyWatts": 80.0,
+      "sourceShape": "RECTANGLE",
+      "group": "hall",
+      "castsSourceShadows": true,
+      "estimatedLumensAt80lmPerW": 6400.0,
+      "conversionNote": "Source value is Blender radiometric area-light power. Browser candela/photometric intensity needs one shared exposure calibration, not a literal 80cd."
+    },
+    {
+      "id": "Hall_Lamp_South_01_Area",
+      "type": "AREA",
+      "position": [
+        -20.9477145,
+        3.305000066757202,
+        2.3290904046325682
+      ],
+      "direction": [
+        0.0,
+        -1.0,
+        -0.0
+      ],
+      "tangentU": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "tangentV": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "lengthDirection": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "size": [
+        2.8499999046325684,
+        0.07500000298023224
+      ],
+      "length": 2.8499999046325684,
+      "width": 0.07500000298023224,
+      "colorLinear": [
+        1.0,
+        0.9399999976158142,
+        0.8600000143051147
+      ],
+      "sourceEnergyWatts": 80.0,
+      "sourceShape": "RECTANGLE",
+      "group": "hall",
+      "castsSourceShadows": true,
+      "estimatedLumensAt80lmPerW": 6400.0,
+      "conversionNote": "Source value is Blender radiometric area-light power. Browser candela/photometric intensity needs one shared exposure calibration, not a literal 80cd."
+    },
+    {
+      "id": "Hall_Lamp_South_02_Area",
+      "type": "AREA",
+      "position": [
+        -14.9477145,
+        3.305000066757202,
+        2.3290904046325682
+      ],
+      "direction": [
+        0.0,
+        -1.0,
+        -0.0
+      ],
+      "tangentU": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "tangentV": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "lengthDirection": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "size": [
+        2.8499999046325684,
+        0.07500000298023224
+      ],
+      "length": 2.8499999046325684,
+      "width": 0.07500000298023224,
+      "colorLinear": [
+        1.0,
+        0.9399999976158142,
+        0.8600000143051147
+      ],
+      "sourceEnergyWatts": 80.0,
+      "sourceShape": "RECTANGLE",
+      "group": "hall",
+      "castsSourceShadows": true,
+      "estimatedLumensAt80lmPerW": 6400.0,
+      "conversionNote": "Source value is Blender radiometric area-light power. Browser candela/photometric intensity needs one shared exposure calibration, not a literal 80cd."
+    },
+    {
+      "id": "Hall_Lamp_South_06_Area",
+      "type": "AREA",
+      "position": [
+        9.0522855,
+        3.305000066757202,
+        2.3290904046325682
+      ],
+      "direction": [
+        0.0,
+        -1.0,
+        -0.0
+      ],
+      "tangentU": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "tangentV": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "lengthDirection": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "size": [
+        2.8499999046325684,
+        0.07500000298023224
+      ],
+      "length": 2.8499999046325684,
+      "width": 0.07500000298023224,
+      "colorLinear": [
+        1.0,
+        0.9399999976158142,
+        0.8600000143051147
+      ],
+      "sourceEnergyWatts": 80.0,
+      "sourceShape": "RECTANGLE",
+      "group": "hall",
+      "castsSourceShadows": true,
+      "estimatedLumensAt80lmPerW": 6400.0,
+      "conversionNote": "Source value is Blender radiometric area-light power. Browser candela/photometric intensity needs one shared exposure calibration, not a literal 80cd."
+    },
+    {
+      "id": "Hall_Lamp_South_07_Area",
+      "type": "AREA",
+      "position": [
+        15.0522855,
+        3.305000066757202,
+        2.3290904046325682
+      ],
+      "direction": [
+        0.0,
+        -1.0,
+        -0.0
+      ],
+      "tangentU": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "tangentV": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "lengthDirection": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "size": [
+        2.8499999046325684,
+        0.07500000298023224
+      ],
+      "length": 2.8499999046325684,
+      "width": 0.07500000298023224,
+      "colorLinear": [
+        1.0,
+        0.9399999976158142,
+        0.8600000143051147
+      ],
+      "sourceEnergyWatts": 80.0,
+      "sourceShape": "RECTANGLE",
+      "group": "hall",
+      "castsSourceShadows": true,
+      "estimatedLumensAt80lmPerW": 6400.0,
+      "conversionNote": "Source value is Blender radiometric area-light power. Browser candela/photometric intensity needs one shared exposure calibration, not a literal 80cd."
+    },
+    {
+      "id": "Hall_Lamp_South_08_Area",
+      "type": "AREA",
+      "position": [
+        21.0522855,
+        3.305000066757202,
+        2.3290904046325682
+      ],
+      "direction": [
+        0.0,
+        -1.0,
+        -0.0
+      ],
+      "tangentU": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "tangentV": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "lengthDirection": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "size": [
+        2.8499999046325684,
+        0.07500000298023224
+      ],
+      "length": 2.8499999046325684,
+      "width": 0.07500000298023224,
+      "colorLinear": [
+        1.0,
+        0.9399999976158142,
+        0.8600000143051147
+      ],
+      "sourceEnergyWatts": 80.0,
+      "sourceShape": "RECTANGLE",
+      "group": "hall",
+      "castsSourceShadows": true,
+      "estimatedLumensAt80lmPerW": 6400.0,
+      "conversionNote": "Source value is Blender radiometric area-light power. Browser candela/photometric intensity needs one shared exposure calibration, not a literal 80cd."
+    },
+    {
+      "id": "Room_Lamp_Inner_East_North_Area",
+      "type": "AREA",
+      "position": [
+        0.7822855190734863,
+        3.434999942779541,
+        -1.560909521457672
+      ],
+      "direction": [
+        0.0,
+        -1.0,
+        -0.0
+      ],
+      "tangentU": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "tangentV": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "lengthDirection": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        0.07500000298023224,
+        1.6299999952316284
+      ],
+      "length": 1.6299999952316284,
+      "width": 0.07500000298023224,
+      "colorLinear": [
+        1.0,
+        0.9399999976158142,
+        0.8600000143051147
+      ],
+      "sourceEnergyWatts": 80.0,
+      "sourceShape": "RECTANGLE",
+      "group": "central-room",
+      "castsSourceShadows": true,
+      "estimatedLumensAt80lmPerW": 6400.0,
+      "conversionNote": "Source value is Blender radiometric area-light power. Browser candela/photometric intensity needs one shared exposure calibration, not a literal 80cd."
+    },
+    {
+      "id": "Room_Lamp_Inner_East_South_Area",
+      "type": "AREA",
+      "position": [
+        0.7822855190734863,
+        3.434999942779541,
+        1.5590904237060548
+      ],
+      "direction": [
+        0.0,
+        -1.0,
+        -0.0
+      ],
+      "tangentU": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "tangentV": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "lengthDirection": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        0.07500000298023224,
+        1.6299999952316284
+      ],
+      "length": 1.6299999952316284,
+      "width": 0.07500000298023224,
+      "colorLinear": [
+        1.0,
+        0.9399999976158142,
+        0.8600000143051147
+      ],
+      "sourceEnergyWatts": 80.0,
+      "sourceShape": "RECTANGLE",
+      "group": "central-room",
+      "castsSourceShadows": true,
+      "estimatedLumensAt80lmPerW": 6400.0,
+      "conversionNote": "Source value is Blender radiometric area-light power. Browser candela/photometric intensity needs one shared exposure calibration, not a literal 80cd."
+    },
+    {
+      "id": "Room_Lamp_Inner_West_North_Area",
+      "type": "AREA",
+      "position": [
+        -0.7777144982118607,
+        3.434999942779541,
+        -1.560909521457672
+      ],
+      "direction": [
+        0.0,
+        -1.0,
+        -0.0
+      ],
+      "tangentU": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "tangentV": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "lengthDirection": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        0.07500000298023224,
+        1.6299999952316284
+      ],
+      "length": 1.6299999952316284,
+      "width": 0.07500000298023224,
+      "colorLinear": [
+        1.0,
+        0.9399999976158142,
+        0.8600000143051147
+      ],
+      "sourceEnergyWatts": 80.0,
+      "sourceShape": "RECTANGLE",
+      "group": "central-room",
+      "castsSourceShadows": true,
+      "estimatedLumensAt80lmPerW": 6400.0,
+      "conversionNote": "Source value is Blender radiometric area-light power. Browser candela/photometric intensity needs one shared exposure calibration, not a literal 80cd."
+    },
+    {
+      "id": "Room_Lamp_Inner_West_South_Area",
+      "type": "AREA",
+      "position": [
+        -0.7777144982118607,
+        3.434999942779541,
+        1.5590904237060548
+      ],
+      "direction": [
+        0.0,
+        -1.0,
+        -0.0
+      ],
+      "tangentU": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "tangentV": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "lengthDirection": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        0.07500000298023224,
+        1.6299999952316284
+      ],
+      "length": 1.6299999952316284,
+      "width": 0.07500000298023224,
+      "colorLinear": [
+        1.0,
+        0.9399999976158142,
+        0.8600000143051147
+      ],
+      "sourceEnergyWatts": 80.0,
+      "sourceShape": "RECTANGLE",
+      "group": "central-room",
+      "castsSourceShadows": true,
+      "estimatedLumensAt80lmPerW": 6400.0,
+      "conversionNote": "Source value is Blender radiometric area-light power. Browser candela/photometric intensity needs one shared exposure calibration, not a literal 80cd."
+    },
+    {
+      "id": "Room_Lamp_Outer_East_Area",
+      "type": "AREA",
+      "position": [
+        2.0522855,
+        3.325000047683716,
+        9.052765655526152e-05
+      ],
+      "direction": [
+        0.0,
+        -1.0,
+        -0.0
+      ],
+      "tangentU": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "tangentV": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "lengthDirection": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        0.07500000298023224,
+        3.0999999046325684
+      ],
+      "length": 3.0999999046325684,
+      "width": 0.07500000298023224,
+      "colorLinear": [
+        1.0,
+        0.9399999976158142,
+        0.8600000143051147
+      ],
+      "sourceEnergyWatts": 80.0,
+      "sourceShape": "RECTANGLE",
+      "group": "central-room",
+      "castsSourceShadows": true,
+      "estimatedLumensAt80lmPerW": 6400.0,
+      "conversionNote": "Source value is Blender radiometric area-light power. Browser candela/photometric intensity needs one shared exposure calibration, not a literal 80cd."
+    },
+    {
+      "id": "Room_Lamp_Outer_West_Area",
+      "type": "AREA",
+      "position": [
+        -2.0277145429153443,
+        3.325000047683716,
+        9.052765655526152e-05
+      ],
+      "direction": [
+        0.0,
+        -1.0,
+        -0.0
+      ],
+      "tangentU": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "tangentV": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "lengthDirection": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "size": [
+        0.07500000298023224,
+        3.0999999046325684
+      ],
+      "length": 3.0999999046325684,
+      "width": 0.07500000298023224,
+      "colorLinear": [
+        1.0,
+        0.9399999976158142,
+        0.8600000143051147
+      ],
+      "sourceEnergyWatts": 80.0,
+      "sourceShape": "RECTANGLE",
+      "group": "central-room",
+      "castsSourceShadows": true,
+      "estimatedLumensAt80lmPerW": 6400.0,
+      "conversionNote": "Source value is Blender radiometric area-light power. Browser candela/photometric intensity needs one shared exposure calibration, not a literal 80cd."
+    }
+  ],
+  "bakeIndirectOnly": true,
+  "windowBackdrops": [
+    {
+      "id": "Window_02",
+      "center": [
+        -5.543237380554199,
+        1.9886854887008667,
+        2.6638875485687254
+      ],
+      "planePosition": [
+        -5.543237380554199,
+        1.9886854887008667,
+        2.9038875485687257
+      ],
+      "planeSize": [
+        5.055683517456055,
+        1.54218487739563
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "rotationY": 3.141592653589793,
+      "hdr": "assets/environment/factory-window.hdr",
+      "rendering": "Linear HDR front projection on an unlit toneMapped plane, positioned outside real wall, glass remains reflective in front. Architecture occludes the extra margin."
+    },
+    {
+      "id": "Window_03",
+      "center": [
+        6.255625076721191,
+        1.9535114765167236,
+        3.1631296159057616
+      ],
+      "planePosition": [
+        6.255625076721191,
+        1.9535114765167236,
+        3.403129615905762
+      ],
+      "planeSize": [
+        4.967437648773194,
+        1.7521889686584473
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "rotationY": 3.141592653589793,
+      "hdr": "assets/environment/factory-window.hdr",
+      "rendering": "Linear HDR front projection on an unlit toneMapped plane, positioned outside real wall, glass remains reflective in front. Architecture occludes the extra margin."
+    },
+    {
+      "id": "Window_04",
+      "center": [
+        12.167714424560547,
+        1.8550070524215698,
+        3.1631296159057616
+      ],
+      "planePosition": [
+        12.167714424560547,
+        1.8550070524215698,
+        3.403129615905762
+      ],
+      "planeSize": [
+        4.562961006164551,
+        1.7393980503082276
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "rotationY": 3.141592653589793,
+      "hdr": "assets/environment/factory-window.hdr",
+      "rendering": "Linear HDR front projection on an unlit toneMapped plane, positioned outside real wall, glass remains reflective in front. Architecture occludes the extra margin."
+    },
+    {
+      "id": "Window_05",
+      "center": [
+        18.149258919189453,
+        1.803076982498169,
+        3.1631296159057616
+      ],
+      "planePosition": [
+        18.149258919189453,
+        1.803076982498169,
+        3.403129615905762
+      ],
+      "planeSize": [
+        4.621874237060547,
+        1.5673201560974122
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "rotationY": 3.141592653589793,
+      "hdr": "assets/environment/factory-window.hdr",
+      "rendering": "Linear HDR front projection on an unlit toneMapped plane, positioned outside real wall, glass remains reflective in front. Architecture occludes the extra margin."
+    },
+    {
+      "id": "Window_06",
+      "center": [
+        0.010298974941253647,
+        2.00661039352417,
+        3.0945957185058592
+      ],
+      "planePosition": [
+        0.010298974941253647,
+        2.00661039352417,
+        3.3345957185058595
+      ],
+      "planeSize": [
+        4.624115014076233,
+        1.633207130432129
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "rotationY": 3.141592653589793,
+      "hdr": "assets/environment/factory-window.hdr",
+      "rendering": "Linear HDR front projection on an unlit toneMapped plane, positioned outside real wall, glass remains reflective in front. Architecture occludes the extra margin."
+    },
+    {
+      "id": "Window_07",
+      "center": [
+        -17.98055904345703,
+        2.001765489578247,
+        2.6638875485687254
+      ],
+      "planePosition": [
+        -17.98055904345703,
+        2.001765489578247,
+        2.9038875485687257
+      ],
+      "planeSize": [
+        5.019241714477539,
+        1.5160248756408692
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "rotationY": 3.141592653589793,
+      "hdr": "assets/environment/factory-window.hdr",
+      "rendering": "Linear HDR front projection on an unlit toneMapped plane, positioned outside real wall, glass remains reflective in front. Architecture occludes the extra margin."
+    },
+    {
+      "id": "Window_08",
+      "center": [
+        -12.052115134765625,
+        1.9886854887008667,
+        2.6638875485687254
+      ],
+      "planePosition": [
+        -12.052115134765625,
+        1.9886854887008667,
+        2.9038875485687257
+      ],
+      "planeSize": [
+        4.993004226684571,
+        1.54218487739563
+      ],
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "rotationY": 3.141592653589793,
+      "hdr": "assets/environment/factory-window.hdr",
+      "rendering": "Linear HDR front projection on an unlit toneMapped plane, positioned outside real wall, glass remains reflective in front. Architecture occludes the extra margin."
+    }
+  ]
+}

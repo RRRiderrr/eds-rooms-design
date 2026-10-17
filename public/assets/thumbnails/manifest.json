@@ -1,0 +1,832 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-17T19:43:25.194Z",
+  "source": "Actual optimized production GLBs, Three.js WebGL2 + shared PBR material pipeline",
+  "images": [
+    {
+      "assetId": "armchair",
+      "variant": 2,
+      "file": "assets/thumbnails/armchair-2.webp",
+      "size": [
+        0.7382908499200603,
+        0.9205668510723627,
+        0.8878650530851124
+      ],
+      "triangles": 17834
+    },
+    {
+      "assetId": "chair",
+      "variant": 2,
+      "file": "assets/thumbnails/chair-2.webp",
+      "size": [
+        0.40622153969745345,
+        0.9118764945719297,
+        0.5400517366149744
+      ],
+      "triangles": 44028
+    },
+    {
+      "assetId": "plant",
+      "variant": 1,
+      "file": "assets/thumbnails/plant-1.webp",
+      "size": [
+        0.5377387198046589,
+        1.2360142446356281,
+        0.5799918737615266
+      ],
+      "triangles": 352454
+    },
+    {
+      "assetId": "plant",
+      "variant": 2,
+      "file": "assets/thumbnails/plant-2.webp",
+      "size": [
+        0.65,
+        0.7798176328371577,
+        0.6094171445814496
+      ],
+      "triangles": 139614
+    },
+    {
+      "assetId": "plant",
+      "variant": 3,
+      "file": "assets/thumbnails/plant-3.webp",
+      "size": [
+        0.3335844394663233,
+        0.7590467344675442,
+        0.36000490142992486
+      ],
+      "triangles": 42948
+    },
+    {
+      "assetId": "edsSignage",
+      "variant": 1,
+      "file": "assets/thumbnails/edsSignage-1.webp",
+      "size": [
+        1.68002995655746,
+        1.8360000252723694,
+        0.03742936542502953
+      ],
+      "triangles": 1162
+    },
+    {
+      "assetId": "edsSignage",
+      "variant": 2,
+      "file": "assets/thumbnails/edsSignage-2.webp",
+      "size": [
+        3.1289972066879272,
+        1.707459121706954,
+        0.019566552081167886
+      ],
+      "triangles": 118628
+    },
+    {
+      "assetId": "edsSignage",
+      "variant": 3,
+      "file": "assets/thumbnails/edsSignage-3.webp",
+      "size": [
+        3.0951828956604004,
+        1.8398990582498636,
+        0.0207812810768544
+      ],
+      "triangles": 92258
+    },
+    {
+      "assetId": "edsSignage",
+      "variant": 4,
+      "file": "assets/thumbnails/edsSignage-4.webp",
+      "size": [
+        2.9650190519852537,
+        1.1945780049203993,
+        0.037468916867713364
+      ],
+      "triangles": 66454
+    },
+    {
+      "assetId": "edsSignage",
+      "variant": 5,
+      "file": "assets/thumbnails/edsSignage-5.webp",
+      "size": [
+        3.165021779765164,
+        1.1559406518936157,
+        0.03153392192947565
+      ],
+      "triangles": 92950
+    },
+    {
+      "assetId": "edsSignage",
+      "variant": 6,
+      "file": "assets/thumbnails/edsSignage-6.webp",
+      "size": [
+        1.4489052891731262,
+        0.45496342418598884,
+        0.07499445693647945
+      ],
+      "triangles": 9010
+    },
+    {
+      "assetId": "sofa",
+      "variant": 1,
+      "file": "assets/thumbnails/sofa-1.webp",
+      "size": [
+        1.7999999523162842,
+        0.770011187727503,
+        0.8150456035803311
+      ],
+      "triangles": 32450
+    },
+    {
+      "assetId": "sofa",
+      "variant": 2,
+      "file": "assets/thumbnails/sofa-2.webp",
+      "size": [
+        2.180000066757202,
+        0.7499959524432339,
+        0.8348893959696075
+      ],
+      "triangles": 43250
+    },
+    {
+      "assetId": "sofa",
+      "variant": 3,
+      "file": "assets/thumbnails/sofa-3.webp",
+      "size": [
+        2.119999885559082,
+        0.6699896480799176,
+        0.875057174968309
+      ],
+      "triangles": 32450
+    },
+    {
+      "assetId": "sofa",
+      "variant": 4,
+      "file": "assets/thumbnails/sofa-4.webp",
+      "size": [
+        1.5499999523162842,
+        0.7800382780564572,
+        0.7550141678798856
+      ],
+      "triangles": 32450
+    },
+    {
+      "assetId": "armchair",
+      "variant": 1,
+      "file": "assets/thumbnails/armchair-1.webp",
+      "size": [
+        0.7599999904632568,
+        0.8025025691035221,
+        0.7340226355232609
+      ],
+      "triangles": 8546
+    },
+    {
+      "assetId": "armchair",
+      "variant": 3,
+      "file": "assets/thumbnails/armchair-3.webp",
+      "size": [
+        0.8299999833106995,
+        0.7526509249037919,
+        0.754616824940002
+      ],
+      "triangles": 8546
+    },
+    {
+      "assetId": "pouf",
+      "variant": 2,
+      "file": "assets/thumbnails/pouf-2.webp",
+      "size": [
+        0.6000000238418579,
+        0.40500505164751766,
+        0.6000000238418579
+      ],
+      "triangles": 1946
+    },
+    {
+      "assetId": "bench",
+      "variant": 1,
+      "file": "assets/thumbnails/bench-1.webp",
+      "size": [
+        1.399999976158142,
+        0.49329477241820874,
+        0.4500320367709498
+      ],
+      "triangles": 4658
+    },
+    {
+      "assetId": "bench",
+      "variant": 2,
+      "file": "assets/thumbnails/bench-2.webp",
+      "size": [
+        1.649999976158142,
+        0.4639502185693994,
+        0.4999801557443218
+      ],
+      "triangles": 2714
+    },
+    {
+      "assetId": "coffeeTable",
+      "variant": 3,
+      "file": "assets/thumbnails/coffeeTable-3.webp",
+      "size": [
+        0.8999999761581421,
+        0.4200161849457369,
+        0.5500472891184104
+      ],
+      "triangles": 21386
+    },
+    {
+      "assetId": "sideTable",
+      "variant": 2,
+      "file": "assets/thumbnails/sideTable-2.webp",
+      "size": [
+        0.44999998807907104,
+        0.6299973362283946,
+        0.3800149440026849
+      ],
+      "triangles": 7778
+    },
+    {
+      "assetId": "sideTable",
+      "variant": 3,
+      "file": "assets/thumbnails/sideTable-3.webp",
+      "size": [
+        0.36002685628833886,
+        0.5,
+        0.36002685628833886
+      ],
+      "triangles": 1946
+    },
+    {
+      "assetId": "meetingTable",
+      "variant": 3,
+      "file": "assets/thumbnails/meetingTable-3.webp",
+      "size": [
+        1.100000023841858,
+        0.7399673779768661,
+        0.6999420300028302
+      ],
+      "triangles": 21386
+    },
+    {
+      "assetId": "chair",
+      "variant": 1,
+      "file": "assets/thumbnails/chair-1.webp",
+      "size": [
+        0.44500107552796264,
+        0.7961859911447391,
+        0.5100236199263916
+      ],
+      "triangles": 10490
+    },
+    {
+      "assetId": "chair",
+      "variant": 3,
+      "file": "assets/thumbnails/chair-3.webp",
+      "size": [
+        0.5355021696450759,
+        0.8950098361455151,
+        0.5799999833106995
+      ],
+      "triangles": 27498
+    },
+    {
+      "assetId": "barStool",
+      "variant": 1,
+      "file": "assets/thumbnails/barStool-1.webp",
+      "size": [
+        0.4320328583608056,
+        0.7507305366633427,
+        0.4320328583608056
+      ],
+      "triangles": 6146
+    },
+    {
+      "assetId": "barStool",
+      "variant": 3,
+      "file": "assets/thumbnails/barStool-3.webp",
+      "size": [
+        0.4041978207043811,
+        1.1499999765902758,
+        0.4195892035012049
+      ],
+      "triangles": 7410
+    },
+    {
+      "assetId": "workDesk",
+      "variant": 1,
+      "file": "assets/thumbnails/workDesk-1.webp",
+      "size": [
+        1.2000000476837158,
+        0.7455504207981878,
+        0.600091579373924
+      ],
+      "triangles": 25274
+    },
+    {
+      "assetId": "workDesk",
+      "variant": 2,
+      "file": "assets/thumbnails/workDesk-2.webp",
+      "size": [
+        1.399999976158142,
+        0.7454539381246612,
+        0.6499893074524313
+      ],
+      "triangles": 25274
+    },
+    {
+      "assetId": "workDesk",
+      "variant": 3,
+      "file": "assets/thumbnails/workDesk-3.webp",
+      "size": [
+        1,
+        0.7455374150636063,
+        0.5500045777764214
+      ],
+      "triangles": 25274
+    },
+    {
+      "assetId": "windowBar",
+      "variant": 1,
+      "file": "assets/thumbnails/windowBar-1.webp",
+      "size": [
+        2.9000000953674316,
+        1.049965429461091,
+        0.5497848625880455
+      ],
+      "triangles": 15554
+    },
+    {
+      "assetId": "windowBar",
+      "variant": 2,
+      "file": "assets/thumbnails/windowBar-2.webp",
+      "size": [
+        2.799999952316284,
+        0.30235240796201923,
+        0.5499679461991517
+      ],
+      "triangles": 8354
+    },
+    {
+      "assetId": "windowBar",
+      "variant": 3,
+      "file": "assets/thumbnails/windowBar-3.webp",
+      "size": [
+        3.200000047683716,
+        1.050129719313425,
+        0.6000183200466551
+      ],
+      "triangles": 7778
+    },
+    {
+      "assetId": "storage",
+      "variant": 1,
+      "file": "assets/thumbnails/storage-1.webp",
+      "size": [
+        1.2000000476837158,
+        0.720006168579818,
+        0.4159998302855159
+      ],
+      "triangles": 29162
+    },
+    {
+      "assetId": "storage",
+      "variant": 2,
+      "file": "assets/thumbnails/storage-2.webp",
+      "size": [
+        0.800027022992791,
+        1.34999361581985,
+        0.31997925305776165
+      ],
+      "triangles": 40826
+    },
+    {
+      "assetId": "storage",
+      "variant": 3,
+      "file": "assets/thumbnails/storage-3.webp",
+      "size": [
+        0.699999988079071,
+        0.6999894494409233,
+        0.4159856923628261
+      ],
+      "triangles": 25274
+    },
+    {
+      "assetId": "floorLamp",
+      "variant": 1,
+      "file": "assets/thumbnails/floorLamp-1.webp",
+      "size": [
+        0.4000000059604645,
+        1.5999946336968882,
+        0.4000000059604645
+      ],
+      "triangles": 6274
+    },
+    {
+      "assetId": "floorLamp",
+      "variant": 2,
+      "file": "assets/thumbnails/floorLamp-2.webp",
+      "size": [
+        0.3799999952316284,
+        1.4999945266202337,
+        0.3799999952316284
+      ],
+      "triangles": 6274
+    },
+    {
+      "assetId": "acousticPanel",
+      "variant": 1,
+      "file": "assets/thumbnails/acousticPanel-1.webp",
+      "size": [
+        0.650044277669178,
+        1.2000000476837158,
+        0.061964784102323894
+      ],
+      "triangles": 7778
+    },
+    {
+      "assetId": "acousticPanel",
+      "variant": 2,
+      "file": "assets/thumbnails/acousticPanel-2.webp",
+      "size": [
+        0.7500869909990192,
+        1.350000023841858,
+        0.08095512438296501
+      ],
+      "triangles": 29162
+    },
+    {
+      "assetId": "acousticPanel",
+      "variant": 3,
+      "file": "assets/thumbnails/acousticPanel-3.webp",
+      "size": [
+        0.800000011920929,
+        0.800000011920929,
+        0.06699423300000089
+      ],
+      "triangles": 7778
+    },
+    {
+      "assetId": "art",
+      "variant": 1,
+      "file": "assets/thumbnails/art-1.webp",
+      "size": [
+        0.8999999761581421,
+        0.6500259235132478,
+        0.06496990965815433
+      ],
+      "triangles": 10210
+    },
+    {
+      "assetId": "art",
+      "variant": 2,
+      "file": "assets/thumbnails/art-2.webp",
+      "size": [
+        1.100000023841858,
+        0.6499893326098224,
+        0.07399626270700106
+      ],
+      "triangles": 12642
+    },
+    {
+      "assetId": "art",
+      "variant": 3,
+      "file": "assets/thumbnails/art-3.webp",
+      "size": [
+        1.0499999523162842,
+        0.6000640616191515,
+        0.06754966580653485
+      ],
+      "triangles": 10210
+    },
+    {
+      "assetId": "sign",
+      "variant": 1,
+      "file": "assets/thumbnails/sign-1.webp",
+      "size": [
+        0.7739999890327454,
+        0.17999450411784781,
+        0.03495956247958199
+      ],
+      "triangles": 38882
+    },
+    {
+      "assetId": "sign",
+      "variant": 2,
+      "file": "assets/thumbnails/sign-2.webp",
+      "size": [
+        0.812250018119812,
+        0.1799656706915444,
+        0.03500158774331414
+      ],
+      "triangles": 38906
+    },
+    {
+      "assetId": "clock",
+      "variant": 1,
+      "file": "assets/thumbnails/clock-1.webp",
+      "size": [
+        0.3199999928474426,
+        0.3199999928474426,
+        0.06599772519205736
+      ],
+      "triangles": 5330
+    },
+    {
+      "assetId": "clock",
+      "variant": 2,
+      "file": "assets/thumbnails/clock-2.webp",
+      "size": [
+        0.4000000059604645,
+        0.4000000059604645,
+        0.0659790489978723
+      ],
+      "triangles": 5330
+    },
+    {
+      "assetId": "board",
+      "variant": 1,
+      "file": "assets/thumbnails/board-1.webp",
+      "size": [
+        1.2000000476837158,
+        0.8209996529355649,
+        0.07745141562373542
+      ],
+      "triangles": 13610
+    },
+    {
+      "assetId": "board",
+      "variant": 2,
+      "file": "assets/thumbnails/board-2.webp",
+      "size": [
+        1.2300000190734863,
+        0.7200494511510854,
+        0.07702749837149553
+      ],
+      "triangles": 7778
+    },
+    {
+      "assetId": "board",
+      "variant": 3,
+      "file": "assets/thumbnails/board-3.webp",
+      "size": [
+        1.100000023841858,
+        0.7500290088404429,
+        0.07147647817450457
+      ],
+      "triangles": 13610
+    },
+    {
+      "assetId": "accessory",
+      "variant": 1,
+      "file": "assets/thumbnails/accessory-1.webp",
+      "size": [
+        0.3799999952316284,
+        0.14999234147568277,
+        0.259982296002156
+      ],
+      "triangles": 6602
+    },
+    {
+      "assetId": "accessory",
+      "variant": 2,
+      "file": "assets/thumbnails/accessory-2.webp",
+      "size": [
+        0.39799998700618744,
+        0.22044732726903662,
+        0.23711020149051587
+      ],
+      "triangles": 88698
+    },
+    {
+      "assetId": "accessory",
+      "variant": 3,
+      "file": "assets/thumbnails/accessory-3.webp",
+      "size": [
+        0.13399692958708515,
+        0.3004931783676148,
+        0.10799386275044899
+      ],
+      "triangles": 3394
+    },
+    {
+      "assetId": "rug",
+      "variant": 1,
+      "file": "assets/thumbnails/rug-1.webp",
+      "size": [
+        2,
+        0.01391644032105472,
+        1.4000671407208471
+      ],
+      "triangles": 9722
+    },
+    {
+      "assetId": "rug",
+      "variant": 2,
+      "file": "assets/thumbnails/rug-2.webp",
+      "size": [
+        2.4000000953674316,
+        0.014062929725350105,
+        1.7000031194029994
+      ],
+      "triangles": 9722
+    },
+    {
+      "assetId": "rug",
+      "variant": 3,
+      "file": "assets/thumbnails/rug-3.webp",
+      "size": [
+        1.7999999523162842,
+        0.012085329432342983,
+        1.7999999523162842
+      ],
+      "triangles": 770
+    },
+    {
+      "assetId": "separator",
+      "variant": 1,
+      "file": "assets/thumbnails/separator-1.webp",
+      "size": [
+        1.0500457451098109,
+        1.149999964237213,
+        0.2399638656163109
+      ],
+      "triangles": 31106
+    },
+    {
+      "assetId": "separator",
+      "variant": 2,
+      "file": "assets/thumbnails/separator-2.webp",
+      "size": [
+        1.100000023841858,
+        1.2000139363811262,
+        0.24991804162157966
+      ],
+      "triangles": 9722
+    },
+    {
+      "assetId": "separator",
+      "variant": 3,
+      "file": "assets/thumbnails/separator-3.webp",
+      "size": [
+        1.1035594940185547,
+        0.8729754595947239,
+        0.3170231052535907
+      ],
+      "triangles": 33554
+    },
+    {
+      "assetId": "coffeeTable",
+      "variant": 4,
+      "file": "assets/thumbnails/coffeeTable-4.webp",
+      "size": [
+        0.8999999761581421,
+        0.39998600520558525,
+        0.6500259235132478
+      ],
+      "triangles": 9474
+    },
+    {
+      "assetId": "coffeeTable",
+      "variant": 5,
+      "file": "assets/thumbnails/coffeeTable-5.webp",
+      "size": [
+        1.1200158596038818,
+        0.3899734776519268,
+        0.7200614672815753
+      ],
+      "triangles": 6330
+    },
+    {
+      "assetId": "television",
+      "variant": 1,
+      "file": "assets/thumbnails/television-1.webp",
+      "size": [
+        1.2300000190734863,
+        0.7099893295314164,
+        0.05492079579123152
+      ],
+      "triangles": 40890
+    },
+    {
+      "assetId": "television",
+      "variant": 2,
+      "file": "assets/thumbnails/television-2.webp",
+      "size": [
+        1.4500000476837158,
+        0.8399884305896875,
+        0.05486430071642655
+      ],
+      "triangles": 40890
+    },
+    {
+      "assetId": "coffeeMachine",
+      "variant": 1,
+      "file": "assets/thumbnails/coffeeMachine-1.webp",
+      "size": [
+        0.270002132907583,
+        0.3400046579922842,
+        0.3799999952316284
+      ],
+      "triangles": 32506
+    },
+    {
+      "assetId": "coffeeMachine",
+      "variant": 2,
+      "file": "assets/thumbnails/coffeeMachine-2.webp",
+      "size": [
+        0.35000244738755026,
+        0.4300000072568655,
+        0.4300000072568655
+      ],
+      "triangles": 83250
+    },
+    {
+      "assetId": "television",
+      "variant": 3,
+      "file": "assets/thumbnails/television-3.webp",
+      "size": [
+        1.899999976158142,
+        1.099978623240454,
+        0.06471855735915213
+      ],
+      "triangles": 40890
+    },
+    {
+      "assetId": "pouf",
+      "variant": 1,
+      "file": "assets/thumbnails/pouf-1.webp",
+      "size": [
+        0.550000011920929,
+        0.4300215222404901,
+        0.550000011920929
+      ],
+      "triangles": 5762
+    },
+    {
+      "assetId": "coffeeTable",
+      "variant": 1,
+      "file": "assets/thumbnails/coffeeTable-1.webp",
+      "size": [
+        0.699999988079071,
+        0.4000247965243309,
+        0.699999988079071
+      ],
+      "triangles": 7298
+    },
+    {
+      "assetId": "coffeeTable",
+      "variant": 2,
+      "file": "assets/thumbnails/coffeeTable-2.webp",
+      "size": [
+        1.100000023841858,
+        0.3899667040200423,
+        0.550083937823807
+      ],
+      "triangles": 24434
+    },
+    {
+      "assetId": "sideTable",
+      "variant": 1,
+      "file": "assets/thumbnails/sideTable-1.webp",
+      "size": [
+        0.4000000059604645,
+        0.5599896994957934,
+        0.4000000059604645
+      ],
+      "triangles": 7298
+    },
+    {
+      "assetId": "meetingTable",
+      "variant": 1,
+      "file": "assets/thumbnails/meetingTable-1.webp",
+      "size": [
+        0.949999988079071,
+        0.7399744505860723,
+        0.949999988079071
+      ],
+      "triangles": 7298
+    },
+    {
+      "assetId": "meetingTable",
+      "variant": 2,
+      "file": "assets/thumbnails/meetingTable-2.webp",
+      "size": [
+        1.399999976158142,
+        0.7400115524694526,
+        0.7800897111330106
+      ],
+      "triangles": 24434
+    },
+    {
+      "assetId": "barStool",
+      "variant": 2,
+      "file": "assets/thumbnails/barStool-2.webp",
+      "size": [
+        0.4570000022649765,
+        1.0311407969504838,
+        0.4519790970611009
+      ],
+      "triangles": 33618
+    }
+  ]
+}

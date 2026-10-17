@@ -1,0 +1,35 @@
+import './browser-path.mjs';
+import { readFile, mkdir, writeFile } from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { createServer } from 'vite';
+import { chromium } from 'playwright';
+import sharp from 'sharp';
+
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const output=path.join(root,'public','assets','thumbnails');await mkdir(output,{recursive:true});
+const manifest=JSON.parse(await readFile(path.join(root,'public','assets','models','manifest.json'),'utf8'));
+const variantsArg=process.argv.find(arg=>arg.startsWith('--variants='));const variants=variantsArg?new Set(variantsArg.slice(11).split(',').filter(Boolean)):null;
+const html=`<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;width:400px;height:300px;overflow:hidden;background:#e9ede6}canvas{display:block}</style></head><body><script type="module">
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { MeshoptDecoder } from 'three/addons/libs/meshopt_decoder.module.js';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+import { MaterialLibrary } from '/src/assets/materials.ts';
+const renderer=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});renderer.setSize(400,300);renderer.setPixelRatio(1);renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1;renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFShadowMap;document.body.append(renderer.domElement);
+const scene=new THREE.Scene();scene.background=new THREE.Color('#e9ede6');const camera=new THREE.PerspectiveCamera(36,4/3,.01,100);
+const pmrem=new THREE.PMREMGenerator(renderer);scene.environment=pmrem.fromScene(new RoomEnvironment(),.04).texture;scene.environmentIntensity=.55;
+scene.add(new THREE.HemisphereLight('#ffffff','#a7b1a3',2));const key=new THREE.DirectionalLight('#fff8eb',3);key.position.set(-3,5,4);key.castShadow=true;key.shadow.mapSize.set(1024,1024);key.shadow.camera.left=-4;key.shadow.camera.right=4;key.shadow.camera.top=4;key.shadow.camera.bottom=-4;key.shadow.normalBias=.015;scene.add(key);const fill=new THREE.DirectionalLight('#e5efff',1.2);fill.position.set(3,2,-2);scene.add(fill);
+const floor=new THREE.Mesh(new THREE.PlaneGeometry(200,200),new THREE.MeshStandardMaterial({color:'#e9ede6',roughness:.9}));floor.rotation.x=-Math.PI/2;floor.receiveShadow=true;scene.add(floor);
+const loader=new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);const materials=new MaterialLibrary(renderer);let active,leases=[];
+window.renderCatalogAsset=async(entry)=>{if(active){scene.remove(active);active.traverse(o=>{if(o.isMesh){o.geometry.dispose();for(const m of Array.isArray(o.material)?o.material:[o.material])if(!m.userData.shared)m.dispose();}});leases.forEach(l=>l.release());leases=[];}
+active=(await loader.loadAsync('/'+(entry.sourcePbr&&entry.fallback?entry.fallback:entry.production))).scene;scene.add(active);const jobs=[];active.traverse(o=>{if(!o.isMesh)return;o.castShadow=true;o.receiveShadow=true;if(entry.sourcePbr){for(const material of Array.isArray(o.material)?o.material:[o.material])if(material.userData.tintable&&material.userData.surface===entry.materials[0].surface&&material.userData.colorVariant===entry.materials[0].id)material.color.set(entry.materials[0].color);return;}jobs.push((async()=>{const old=Array.isArray(o.material)?o.material:[o.material],updated=[];for(const original of old){const surface=original.userData.surface,role=surface==='fabric'||surface==='rug'?'fabric-woven':surface==='wood'?'wood-oak':surface==='metal'?'metal-painted':undefined;if(role){const lease=await materials.acquire(role,'medium',{color:'#'+original.color.getHexString(),metersPerUv:1,normalStrength:surface==='fabric'?.14:surface==='wood'?.1:.2,anisotropy:4});leases.push(lease);lease.material.userData.shared=true;updated.push(lease.material);}else updated.push(original);}o.material=Array.isArray(o.material)?updated:updated[0];})());});await Promise.all(jobs);
+const bounds=new THREE.Box3().setFromObject(active),size=bounds.getSize(new THREE.Vector3()),center=bounds.getCenter(new THREE.Vector3());floor.position.y=bounds.min.y-.012;const radius=Math.max(size.y,size.x*.8,size.z*.9,.25);camera.position.copy(center).add(new THREE.Vector3(1.2,.85,1.5).normalize().multiplyScalar(radius*2.5));camera.lookAt(center);camera.updateProjectionMatrix();for(let attempt=0;attempt<3;attempt++){camera.updateMatrixWorld();let extent=0;for(const x of [bounds.min.x,bounds.max.x])for(const y of [bounds.min.y,bounds.max.y])for(const z of [bounds.min.z,bounds.max.z]){const p=new THREE.Vector3(x,y,z).project(camera);extent=Math.max(extent,Math.abs(p.x),Math.abs(p.y));}if(extent<=.86)break;const offset=camera.position.clone().sub(center).multiplyScalar(extent/.84);camera.position.copy(center).add(offset);camera.lookAt(center);}renderer.render(scene,camera);await new Promise(r=>requestAnimationFrame(r));renderer.render(scene,camera);return {size:size.toArray(),triangles:renderer.info.render.triangles};};window.thumbnailReady=true;
+</script></body></html>`;
+const server=await createServer({root,server:{host:'127.0.0.1',port:0},appType:'custom',plugins:[{name:'catalog-thumbnail-page',configureServer(vite){vite.middlewares.use('/__catalog_thumbnails',async(_req,res)=>{res.statusCode=200;res.setHeader('Content-Type','text/html');res.end(await vite.transformIndexHtml('/__catalog_thumbnails',html));});}}]});
+let browser;
+try {await server.listen();const address=server.httpServer.address();browser=await chromium.launch({headless:true});const page=await browser.newPage({viewport:{width:400,height:300},deviceScaleFactor:1});page.on('pageerror',e=>{throw e;});await page.goto(`http://127.0.0.1:${address.port}/__catalog_thumbnails`);await page.waitForFunction(()=>window.thumbnailReady===true);const report=[];
+for(const entry of manifest.assets.filter(e=>!variants||variants.has(`${e.assetId}:${e.variant}`))){const stats=await page.evaluate(entry=>window.renderCatalogAsset(entry),entry);const screenshot=await page.locator('canvas').screenshot();const target=path.join(output,`${entry.assetId}-${entry.variant}.webp`);await sharp(screenshot).webp({quality:86}).toFile(target);report.push({assetId:entry.assetId,variant:entry.variant,file:`assets/thumbnails/${entry.assetId}-${entry.variant}.webp`,...stats});}
+let images=report;if(variants){let old;try{old=JSON.parse(await readFile(path.join(output,'manifest.json'),'utf8')).images;}catch{old=[];}images=[...old.filter(e=>!variants.has(`${e.assetId}:${e.variant}`)),...report];}
+await writeFile(path.join(output,'manifest.json'),JSON.stringify({schemaVersion:1,generatedAt:new Date().toISOString(),source:'Actual optimized production GLBs, Three.js WebGL2 + shared PBR material pipeline',images},null,2));console.log(`Rendered ${report.length} actual 3D asset thumbnails.`);
+}finally{await browser?.close();await server.close();}

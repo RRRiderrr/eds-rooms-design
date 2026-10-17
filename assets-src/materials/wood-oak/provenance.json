@@ -1,0 +1,15 @@
+{
+  "files": {
+    "baseColor": "E:/ArchViz_Resources/RoomAtelier/materials/wood-oak/original/06e5f13568f6/baseColor.jpg",
+    "normal": "E:/ArchViz_Resources/RoomAtelier/materials/wood-oak/original/06e5f13568f6/normal.jpg",
+    "roughness": "E:/ArchViz_Resources/RoomAtelier/materials/wood-oak/original/06e5f13568f6/roughness.jpg"
+  },
+  "source": "Quixel Megascans Oak Veneer tfjcffgc - owned Fab library download",
+  "license": "Fab Standard",
+  "licenseEvidence": "Epic Games Launcher / Fab UI showed Saved in library before Download Only, then On disk 5.25 MB; medium texture set downloaded 2026-10-17 without a purchase, login or new agreement. Local cache Oak_Veneer-b93dc40c.",
+  "tileMeters": [
+    2,
+    4
+  ],
+  "note": "Owned Quixel/Fab furniture veneer with a restrained straight grain. Fab description scan area is 2x4 metres; runtime UV repeats preserve both dimensions."
+}

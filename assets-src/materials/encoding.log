@@ -1,0 +1,816 @@
+Material wall-painted: preparing source
+Total slices: 10
+Slice: 0, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 16384, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 20480, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 21504, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 21760, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 21824, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 21840, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 21844, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 21845, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 21846, image_index: 0, mip_level: 9, iframe: 0
+Mode: ETC1S Quality (0-255): 220, Comp Level (Effort, 0-6): 1
+basis_compressor::process: Success
+Total slices: 10
+Slice: 0, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 16384, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 20480, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 21504, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 21760, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 21824, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 21840, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 21844, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 21845, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 21846, image_index: 0, mip_level: 9, iframe: 0
+Mode: UASTC LDR 4x4 Effort Level (0-4): 1
+Encoding slice 0
+Encoding slice 1
+Encoding slice 2
+Encoding slice 3
+Encoding slice 4
+Encoding slice 5
+Encoding slice 6
+Encoding slice 7
+Encoding slice 8
+Encoding slice 9
+basis_compressor::process: Success
+Total slices: 10
+Slice: 0, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 16384, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 20480, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 21504, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 21760, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 21824, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 21840, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 21844, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 21845, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 21846, image_index: 0, mip_level: 9, iframe: 0
+Mode: ETC1S Quality (0-255): 220, Comp Level (Effort, 0-6): 1
+basis_compressor::process: Success
+  low 512px ✓
+Total slices: 11
+Slice: 0, alpha: 0, orig width/height: 1024x1024, width/height: 1024x1024, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 65536, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 81920, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 86016, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 87040, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 87296, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 87360, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 87376, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 87380, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 87381, image_index: 0, mip_level: 9, iframe: 0
+Slice: 10, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 87382, image_index: 0, mip_level: 10, iframe: 0
+Mode: ETC1S Quality (0-255): 220, Comp Level (Effort, 0-6): 1
+basis_compressor::process: Success
+Total slices: 11
+Slice: 0, alpha: 0, orig width/height: 1024x1024, width/height: 1024x1024, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 65536, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 81920, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 86016, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 87040, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 87296, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 87360, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 87376, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 87380, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 87381, image_index: 0, mip_level: 9, iframe: 0
+Slice: 10, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 87382, image_index: 0, mip_level: 10, iframe: 0
+Mode: UASTC LDR 4x4 Effort Level (0-4): 1
+Encoding slice 0
+Encoding slice 1
+Encoding slice 2
+Encoding slice 3
+Encoding slice 4
+Encoding slice 5
+Encoding slice 6
+Encoding slice 7
+Encoding slice 8
+Encoding slice 9
+Encoding slice 10
+basis_compressor::process: Success
+Total slices: 11
+Slice: 0, alpha: 0, orig width/height: 1024x1024, width/height: 1024x1024, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 65536, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 81920, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 86016, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 87040, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 87296, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 87360, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 87376, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 87380, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 87381, image_index: 0, mip_level: 9, iframe: 0
+Slice: 10, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 87382, image_index: 0, mip_level: 10, iframe: 0
+Mode: ETC1S Quality (0-255): 220, Comp Level (Effort, 0-6): 1
+basis_compressor::process: Success
+  medium 1024px ✓
+Total slices: 12
+Slice: 0, alpha: 0, orig width/height: 2048x2048, width/height: 2048x2048, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 1024x1024, width/height: 1024x1024, first_block: 262144, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 327680, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 344064, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 348160, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 349184, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 349440, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 349504, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 349520, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 349524, image_index: 0, mip_level: 9, iframe: 0
+Slice: 10, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 349525, image_index: 0, mip_level: 10, iframe: 0
+Slice: 11, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 349526, image_index: 0, mip_level: 11, iframe: 0
+Mode: ETC1S Quality (0-255): 220, Comp Level (Effort, 0-6): 1
+basis_compressor::process: Success
+Total slices: 12
+Slice: 0, alpha: 0, orig width/height: 2048x2048, width/height: 2048x2048, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 1024x1024, width/height: 1024x1024, first_block: 262144, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 327680, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 344064, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 348160, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 349184, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 349440, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 349504, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 349520, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 349524, image_index: 0, mip_level: 9, iframe: 0
+Slice: 10, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 349525, image_index: 0, mip_level: 10, iframe: 0
+Slice: 11, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 349526, image_index: 0, mip_level: 11, iframe: 0
+Mode: UASTC LDR 4x4 Effort Level (0-4): 1
+Encoding slice 0
+Encoding slice 1
+Encoding slice 2
+Encoding slice 3
+Encoding slice 4
+Encoding slice 5
+Encoding slice 6
+Encoding slice 7
+Encoding slice 8
+Encoding slice 9
+Encoding slice 10
+Encoding slice 11
+basis_compressor::process: Success
+Total slices: 12
+Slice: 0, alpha: 0, orig width/height: 2048x2048, width/height: 2048x2048, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 1024x1024, width/height: 1024x1024, first_block: 262144, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 327680, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 344064, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 348160, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 349184, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 349440, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 349504, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 349520, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 349524, image_index: 0, mip_level: 9, iframe: 0
+Slice: 10, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 349525, image_index: 0, mip_level: 10, iframe: 0
+Slice: 11, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 349526, image_index: 0, mip_level: 11, iframe: 0
+Mode: ETC1S Quality (0-255): 220, Comp Level (Effort, 0-6): 1
+basis_compressor::process: Success
+  high 2048px ✓
+Material floor-commercial-grey: preparing source
+Total slices: 10
+Slice: 0, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 16384, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 20480, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 21504, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 21760, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 21824, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 21840, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 21844, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 21845, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 21846, image_index: 0, mip_level: 9, iframe: 0
+Mode: ETC1S Quality (0-255): 220, Comp Level (Effort, 0-6): 1
+basis_compressor::process: Success
+Total slices: 10
+Slice: 0, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 16384, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 20480, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 21504, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 21760, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 21824, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 21840, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 21844, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 21845, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 21846, image_index: 0, mip_level: 9, iframe: 0
+Mode: UASTC LDR 4x4 Effort Level (0-4): 1
+Encoding slice 0
+Encoding slice 1
+Encoding slice 2
+Encoding slice 3
+Encoding slice 4
+Encoding slice 5
+Encoding slice 6
+Encoding slice 7
+Encoding slice 8
+Encoding slice 9
+basis_compressor::process: Success
+Total slices: 10
+Slice: 0, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 16384, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 20480, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 21504, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 21760, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 21824, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 21840, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 21844, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 21845, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 21846, image_index: 0, mip_level: 9, iframe: 0
+Mode: ETC1S Quality (0-255): 220, Comp Level (Effort, 0-6): 1
+basis_compressor::process: Success
+  low 512px ✓
+Total slices: 11
+Slice: 0, alpha: 0, orig width/height: 1024x1024, width/height: 1024x1024, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 65536, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 81920, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 86016, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 87040, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 87296, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 87360, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 87376, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 87380, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 87381, image_index: 0, mip_level: 9, iframe: 0
+Slice: 10, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 87382, image_index: 0, mip_level: 10, iframe: 0
+Mode: ETC1S Quality (0-255): 220, Comp Level (Effort, 0-6): 1
+basis_compressor::process: Success
+Total slices: 11
+Slice: 0, alpha: 0, orig width/height: 1024x1024, width/height: 1024x1024, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 65536, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 81920, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 86016, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 87040, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 87296, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 87360, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 87376, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 87380, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 87381, image_index: 0, mip_level: 9, iframe: 0
+Slice: 10, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 87382, image_index: 0, mip_level: 10, iframe: 0
+Mode: UASTC LDR 4x4 Effort Level (0-4): 1
+Encoding slice 0
+Encoding slice 1
+Encoding slice 2
+Encoding slice 3
+Encoding slice 4
+Encoding slice 5
+Encoding slice 6
+Encoding slice 7
+Encoding slice 8
+Encoding slice 9
+Encoding slice 10
+basis_compressor::process: Success
+Total slices: 11
+Slice: 0, alpha: 0, orig width/height: 1024x1024, width/height: 1024x1024, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 65536, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 81920, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 86016, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 87040, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 87296, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 87360, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 87376, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 87380, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 87381, image_index: 0, mip_level: 9, iframe: 0
+Slice: 10, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 87382, image_index: 0, mip_level: 10, iframe: 0
+Mode: ETC1S Quality (0-255): 220, Comp Level (Effort, 0-6): 1
+basis_compressor::process: Success
+  medium 1024px ✓
+Total slices: 12
+Slice: 0, alpha: 0, orig width/height: 2048x2048, width/height: 2048x2048, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 1024x1024, width/height: 1024x1024, first_block: 262144, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 327680, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 344064, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 348160, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 349184, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 349440, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 349504, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 349520, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 349524, image_index: 0, mip_level: 9, iframe: 0
+Slice: 10, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 349525, image_index: 0, mip_level: 10, iframe: 0
+Slice: 11, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 349526, image_index: 0, mip_level: 11, iframe: 0
+Mode: ETC1S Quality (0-255): 220, Comp Level (Effort, 0-6): 1
+basis_compressor::process: Success
+Total slices: 12
+Slice: 0, alpha: 0, orig width/height: 2048x2048, width/height: 2048x2048, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 1024x1024, width/height: 1024x1024, first_block: 262144, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 327680, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 344064, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 348160, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 349184, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 349440, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 349504, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 349520, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 349524, image_index: 0, mip_level: 9, iframe: 0
+Slice: 10, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 349525, image_index: 0, mip_level: 10, iframe: 0
+Slice: 11, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 349526, image_index: 0, mip_level: 11, iframe: 0
+Mode: UASTC LDR 4x4 Effort Level (0-4): 1
+Encoding slice 0
+Encoding slice 1
+Encoding slice 2
+Encoding slice 3
+Encoding slice 4
+Encoding slice 5
+Encoding slice 6
+Encoding slice 7
+Encoding slice 8
+Encoding slice 9
+Encoding slice 10
+Encoding slice 11
+basis_compressor::process: Success
+Total slices: 12
+Slice: 0, alpha: 0, orig width/height: 2048x2048, width/height: 2048x2048, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 1024x1024, width/height: 1024x1024, first_block: 262144, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 327680, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 344064, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 348160, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 349184, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 349440, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 349504, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 349520, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 349524, image_index: 0, mip_level: 9, iframe: 0
+Slice: 10, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 349525, image_index: 0, mip_level: 10, iframe: 0
+Slice: 11, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 349526, image_index: 0, mip_level: 11, iframe: 0
+Mode: ETC1S Quality (0-255): 220, Comp Level (Effort, 0-6): 1
+basis_compressor::process: Success
+  high 2048px ✓
+Material metal-painted: preparing source
+Total slices: 10
+Slice: 0, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 16384, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 20480, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 21504, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 21760, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 21824, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 21840, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 21844, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 21845, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 21846, image_index: 0, mip_level: 9, iframe: 0
+Mode: ETC1S Quality (0-255): 220, Comp Level (Effort, 0-6): 1
+basis_compressor::process: Success
+Total slices: 10
+Slice: 0, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 16384, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 20480, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 21504, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 21760, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 21824, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 21840, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 21844, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 21845, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 21846, image_index: 0, mip_level: 9, iframe: 0
+Mode: UASTC LDR 4x4 Effort Level (0-4): 1
+Encoding slice 0
+Encoding slice 1
+Encoding slice 2
+Encoding slice 3
+Encoding slice 4
+Encoding slice 5
+Encoding slice 6
+Encoding slice 7
+Encoding slice 8
+Encoding slice 9
+basis_compressor::process: Success
+Total slices: 10
+Slice: 0, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 16384, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 20480, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 21504, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 21760, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 21824, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 21840, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 21844, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 21845, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 21846, image_index: 0, mip_level: 9, iframe: 0
+Mode: ETC1S Quality (0-255): 220, Comp Level (Effort, 0-6): 1
+basis_compressor::process: Success
+  low 512px ✓
+Total slices: 11
+Slice: 0, alpha: 0, orig width/height: 1024x1024, width/height: 1024x1024, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 65536, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 81920, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 86016, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 87040, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 87296, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 87360, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 87376, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 87380, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 87381, image_index: 0, mip_level: 9, iframe: 0
+Slice: 10, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 87382, image_index: 0, mip_level: 10, iframe: 0
+Mode: ETC1S Quality (0-255): 220, Comp Level (Effort, 0-6): 1
+basis_compressor::process: Success
+Total slices: 11
+Slice: 0, alpha: 0, orig width/height: 1024x1024, width/height: 1024x1024, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 65536, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 81920, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 86016, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 87040, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 87296, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 87360, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 87376, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 87380, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 87381, image_index: 0, mip_level: 9, iframe: 0
+Slice: 10, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 87382, image_index: 0, mip_level: 10, iframe: 0
+Mode: UASTC LDR 4x4 Effort Level (0-4): 1
+Encoding slice 0
+Encoding slice 1
+Encoding slice 2
+Encoding slice 3
+Encoding slice 4
+Encoding slice 5
+Encoding slice 6
+Encoding slice 7
+Encoding slice 8
+Encoding slice 9
+Encoding slice 10
+basis_compressor::process: Success
+Total slices: 11
+Slice: 0, alpha: 0, orig width/height: 1024x1024, width/height: 1024x1024, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 65536, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 81920, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 86016, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 87040, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 87296, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 87360, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 87376, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 87380, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 87381, image_index: 0, mip_level: 9, iframe: 0
+Slice: 10, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 87382, image_index: 0, mip_level: 10, iframe: 0
+Mode: ETC1S Quality (0-255): 220, Comp Level (Effort, 0-6): 1
+basis_compressor::process: Success
+  medium 1024px ✓
+Total slices: 12
+Slice: 0, alpha: 0, orig width/height: 2048x2048, width/height: 2048x2048, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 1024x1024, width/height: 1024x1024, first_block: 262144, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 327680, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 344064, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 348160, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 349184, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 349440, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 349504, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 349520, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 349524, image_index: 0, mip_level: 9, iframe: 0
+Slice: 10, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 349525, image_index: 0, mip_level: 10, iframe: 0
+Slice: 11, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 349526, image_index: 0, mip_level: 11, iframe: 0
+Mode: ETC1S Quality (0-255): 220, Comp Level (Effort, 0-6): 1
+basis_compressor::process: Success
+Total slices: 12
+Slice: 0, alpha: 0, orig width/height: 2048x2048, width/height: 2048x2048, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 1024x1024, width/height: 1024x1024, first_block: 262144, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 327680, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 344064, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 348160, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 349184, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 349440, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 349504, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 349520, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 349524, image_index: 0, mip_level: 9, iframe: 0
+Slice: 10, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 349525, image_index: 0, mip_level: 10, iframe: 0
+Slice: 11, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 349526, image_index: 0, mip_level: 11, iframe: 0
+Mode: UASTC LDR 4x4 Effort Level (0-4): 1
+Encoding slice 0
+Encoding slice 1
+Encoding slice 2
+Encoding slice 3
+Encoding slice 4
+Encoding slice 5
+Encoding slice 6
+Encoding slice 7
+Encoding slice 8
+Encoding slice 9
+Encoding slice 10
+Encoding slice 11
+basis_compressor::process: Success
+Total slices: 12
+Slice: 0, alpha: 0, orig width/height: 2048x2048, width/height: 2048x2048, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 1024x1024, width/height: 1024x1024, first_block: 262144, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 327680, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 344064, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 348160, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 349184, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 349440, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 349504, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 349520, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 349524, image_index: 0, mip_level: 9, iframe: 0
+Slice: 10, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 349525, image_index: 0, mip_level: 10, iframe: 0
+Slice: 11, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 349526, image_index: 0, mip_level: 11, iframe: 0
+Mode: ETC1S Quality (0-255): 220, Comp Level (Effort, 0-6): 1
+basis_compressor::process: Success
+  high 2048px ✓
+Material wood-oak: preparing source
+Total slices: 10
+Slice: 0, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 16384, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 20480, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 21504, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 21760, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 21824, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 21840, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 21844, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 21845, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 21846, image_index: 0, mip_level: 9, iframe: 0
+Mode: ETC1S Quality (0-255): 220, Comp Level (Effort, 0-6): 1
+basis_compressor::process: Success
+Total slices: 10
+Slice: 0, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 16384, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 20480, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 21504, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 21760, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 21824, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 21840, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 21844, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 21845, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 21846, image_index: 0, mip_level: 9, iframe: 0
+Mode: UASTC LDR 4x4 Effort Level (0-4): 1
+Encoding slice 0
+Encoding slice 1
+Encoding slice 2
+Encoding slice 3
+Encoding slice 4
+Encoding slice 5
+Encoding slice 6
+Encoding slice 7
+Encoding slice 8
+Encoding slice 9
+basis_compressor::process: Success
+Total slices: 10
+Slice: 0, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 16384, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 20480, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 21504, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 21760, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 21824, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 21840, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 21844, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 21845, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 21846, image_index: 0, mip_level: 9, iframe: 0
+Mode: ETC1S Quality (0-255): 220, Comp Level (Effort, 0-6): 1
+basis_compressor::process: Success
+  low 512px ✓
+Total slices: 11
+Slice: 0, alpha: 0, orig width/height: 1024x1024, width/height: 1024x1024, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 65536, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 81920, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 86016, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 87040, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 87296, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 87360, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 87376, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 87380, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 87381, image_index: 0, mip_level: 9, iframe: 0
+Slice: 10, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 87382, image_index: 0, mip_level: 10, iframe: 0
+Mode: ETC1S Quality (0-255): 220, Comp Level (Effort, 0-6): 1
+basis_compressor::process: Success
+Total slices: 11
+Slice: 0, alpha: 0, orig width/height: 1024x1024, width/height: 1024x1024, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 65536, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 81920, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 86016, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 87040, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 87296, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 87360, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 87376, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 87380, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 87381, image_index: 0, mip_level: 9, iframe: 0
+Slice: 10, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 87382, image_index: 0, mip_level: 10, iframe: 0
+Mode: UASTC LDR 4x4 Effort Level (0-4): 1
+Encoding slice 0
+Encoding slice 1
+Encoding slice 2
+Encoding slice 3
+Encoding slice 4
+Encoding slice 5
+Encoding slice 6
+Encoding slice 7
+Encoding slice 8
+Encoding slice 9
+Encoding slice 10
+basis_compressor::process: Success
+Total slices: 11
+Slice: 0, alpha: 0, orig width/height: 1024x1024, width/height: 1024x1024, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 65536, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 81920, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 86016, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 87040, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 87296, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 87360, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 87376, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 87380, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 87381, image_index: 0, mip_level: 9, iframe: 0
+Slice: 10, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 87382, image_index: 0, mip_level: 10, iframe: 0
+Mode: ETC1S Quality (0-255): 220, Comp Level (Effort, 0-6): 1
+basis_compressor::process: Success
+  medium 1024px ✓
+Total slices: 12
+Slice: 0, alpha: 0, orig width/height: 2048x2048, width/height: 2048x2048, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 1024x1024, width/height: 1024x1024, first_block: 262144, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 327680, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 344064, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 348160, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 349184, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 349440, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 349504, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 349520, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 349524, image_index: 0, mip_level: 9, iframe: 0
+Slice: 10, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 349525, image_index: 0, mip_level: 10, iframe: 0
+Slice: 11, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 349526, image_index: 0, mip_level: 11, iframe: 0
+Mode: ETC1S Quality (0-255): 220, Comp Level (Effort, 0-6): 1
+basis_compressor::process: Success
+Total slices: 12
+Slice: 0, alpha: 0, orig width/height: 2048x2048, width/height: 2048x2048, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 1024x1024, width/height: 1024x1024, first_block: 262144, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 327680, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 344064, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 348160, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 349184, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 349440, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 349504, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 349520, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 349524, image_index: 0, mip_level: 9, iframe: 0
+Slice: 10, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 349525, image_index: 0, mip_level: 10, iframe: 0
+Slice: 11, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 349526, image_index: 0, mip_level: 11, iframe: 0
+Mode: UASTC LDR 4x4 Effort Level (0-4): 1
+Encoding slice 0
+Encoding slice 1
+Encoding slice 2
+Encoding slice 3
+Encoding slice 4
+Encoding slice 5
+Encoding slice 6
+Encoding slice 7
+Encoding slice 8
+Encoding slice 9
+Encoding slice 10
+Encoding slice 11
+basis_compressor::process: Success
+Total slices: 12
+Slice: 0, alpha: 0, orig width/height: 2048x2048, width/height: 2048x2048, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 1024x1024, width/height: 1024x1024, first_block: 262144, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 327680, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 344064, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 348160, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 349184, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 349440, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 349504, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 349520, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 349524, image_index: 0, mip_level: 9, iframe: 0
+Slice: 10, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 349525, image_index: 0, mip_level: 10, iframe: 0
+Slice: 11, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 349526, image_index: 0, mip_level: 11, iframe: 0
+Mode: ETC1S Quality (0-255): 220, Comp Level (Effort, 0-6): 1
+basis_compressor::process: Success
+  high 2048px ✓
+Material fabric-woven: preparing source
+Total slices: 10
+Slice: 0, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 16384, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 20480, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 21504, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 21760, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 21824, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 21840, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 21844, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 21845, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 21846, image_index: 0, mip_level: 9, iframe: 0
+Mode: ETC1S Quality (0-255): 220, Comp Level (Effort, 0-6): 1
+basis_compressor::process: Success
+Total slices: 10
+Slice: 0, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 16384, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 20480, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 21504, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 21760, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 21824, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 21840, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 21844, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 21845, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 21846, image_index: 0, mip_level: 9, iframe: 0
+Mode: UASTC LDR 4x4 Effort Level (0-4): 1
+Encoding slice 0
+Encoding slice 1
+Encoding slice 2
+Encoding slice 3
+Encoding slice 4
+Encoding slice 5
+Encoding slice 6
+Encoding slice 7
+Encoding slice 8
+Encoding slice 9
+basis_compressor::process: Success
+Total slices: 10
+Slice: 0, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 16384, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 20480, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 21504, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 21760, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 21824, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 21840, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 21844, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 21845, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 21846, image_index: 0, mip_level: 9, iframe: 0
+Mode: ETC1S Quality (0-255): 220, Comp Level (Effort, 0-6): 1
+basis_compressor::process: Success
+  low 512px ✓
+Total slices: 11
+Slice: 0, alpha: 0, orig width/height: 1024x1024, width/height: 1024x1024, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 65536, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 81920, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 86016, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 87040, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 87296, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 87360, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 87376, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 87380, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 87381, image_index: 0, mip_level: 9, iframe: 0
+Slice: 10, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 87382, image_index: 0, mip_level: 10, iframe: 0
+Mode: ETC1S Quality (0-255): 220, Comp Level (Effort, 0-6): 1
+basis_compressor::process: Success
+Total slices: 11
+Slice: 0, alpha: 0, orig width/height: 1024x1024, width/height: 1024x1024, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 65536, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 81920, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 86016, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 87040, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 87296, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 87360, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 87376, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 87380, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 87381, image_index: 0, mip_level: 9, iframe: 0
+Slice: 10, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 87382, image_index: 0, mip_level: 10, iframe: 0
+Mode: UASTC LDR 4x4 Effort Level (0-4): 1
+Encoding slice 0
+Encoding slice 1
+Encoding slice 2
+Encoding slice 3
+Encoding slice 4
+Encoding slice 5
+Encoding slice 6
+Encoding slice 7
+Encoding slice 8
+Encoding slice 9
+Encoding slice 10
+basis_compressor::process: Success
+Total slices: 11
+Slice: 0, alpha: 0, orig width/height: 1024x1024, width/height: 1024x1024, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 65536, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 81920, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 86016, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 87040, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 87296, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 87360, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 87376, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 87380, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 87381, image_index: 0, mip_level: 9, iframe: 0
+Slice: 10, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 87382, image_index: 0, mip_level: 10, iframe: 0
+Mode: ETC1S Quality (0-255): 220, Comp Level (Effort, 0-6): 1
+basis_compressor::process: Success
+  medium 1024px ✓
+Total slices: 12
+Slice: 0, alpha: 0, orig width/height: 2048x2048, width/height: 2048x2048, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 1024x1024, width/height: 1024x1024, first_block: 262144, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 327680, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 344064, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 348160, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 349184, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 349440, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 349504, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 349520, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 349524, image_index: 0, mip_level: 9, iframe: 0
+Slice: 10, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 349525, image_index: 0, mip_level: 10, iframe: 0
+Slice: 11, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 349526, image_index: 0, mip_level: 11, iframe: 0
+Mode: ETC1S Quality (0-255): 220, Comp Level (Effort, 0-6): 1
+basis_compressor::process: Success
+Total slices: 12
+Slice: 0, alpha: 0, orig width/height: 2048x2048, width/height: 2048x2048, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 1024x1024, width/height: 1024x1024, first_block: 262144, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 327680, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 344064, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 348160, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 349184, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 349440, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 349504, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 349520, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 349524, image_index: 0, mip_level: 9, iframe: 0
+Slice: 10, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 349525, image_index: 0, mip_level: 10, iframe: 0
+Slice: 11, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 349526, image_index: 0, mip_level: 11, iframe: 0
+Mode: UASTC LDR 4x4 Effort Level (0-4): 1
+Encoding slice 0
+Encoding slice 1
+Encoding slice 2
+Encoding slice 3
+Encoding slice 4
+Encoding slice 5
+Encoding slice 6
+Encoding slice 7
+Encoding slice 8
+Encoding slice 9
+Encoding slice 10
+Encoding slice 11
+basis_compressor::process: Success
+Total slices: 12
+Slice: 0, alpha: 0, orig width/height: 2048x2048, width/height: 2048x2048, first_block: 0, image_index: 0, mip_level: 0, iframe: 0
+Slice: 1, alpha: 0, orig width/height: 1024x1024, width/height: 1024x1024, first_block: 262144, image_index: 0, mip_level: 1, iframe: 0
+Slice: 2, alpha: 0, orig width/height: 512x512, width/height: 512x512, first_block: 327680, image_index: 0, mip_level: 2, iframe: 0
+Slice: 3, alpha: 0, orig width/height: 256x256, width/height: 256x256, first_block: 344064, image_index: 0, mip_level: 3, iframe: 0
+Slice: 4, alpha: 0, orig width/height: 128x128, width/height: 128x128, first_block: 348160, image_index: 0, mip_level: 4, iframe: 0
+Slice: 5, alpha: 0, orig width/height: 64x64, width/height: 64x64, first_block: 349184, image_index: 0, mip_level: 5, iframe: 0
+Slice: 6, alpha: 0, orig width/height: 32x32, width/height: 32x32, first_block: 349440, image_index: 0, mip_level: 6, iframe: 0
+Slice: 7, alpha: 0, orig width/height: 16x16, width/height: 16x16, first_block: 349504, image_index: 0, mip_level: 7, iframe: 0
+Slice: 8, alpha: 0, orig width/height: 8x8, width/height: 8x8, first_block: 349520, image_index: 0, mip_level: 8, iframe: 0
+Slice: 9, alpha: 0, orig width/height: 4x4, width/height: 4x4, first_block: 349524, image_index: 0, mip_level: 9, iframe: 0
+Slice: 10, alpha: 0, orig width/height: 2x2, width/height: 4x4, first_block: 349525, image_index: 0, mip_level: 10, iframe: 0
+Slice: 11, alpha: 0, orig width/height: 1x1, width/height: 4x4, first_block: 349526, image_index: 0, mip_level: 11, iframe: 0
+Mode: ETC1S Quality (0-255): 220, Comp Level (Effort, 0-6): 1
+basis_compressor::process: Success
+  high 2048px ✓
+Assets ready. All URLs are relative to Vite BASE_URL; production needs only static HTTP.

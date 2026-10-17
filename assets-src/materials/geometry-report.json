@@ -1,0 +1,32 @@
+[
+  {
+    "input": "assets-src\\exports\\room-editor.glb",
+    "output": "public\\assets\\architecture\\room-editor.meshopt.glb",
+    "bytesBefore": 255952,
+    "bytesAfter": 119488
+  },
+  {
+    "input": "assets-src\\exports\\room.glb",
+    "output": "public\\assets\\architecture\\room.meshopt.glb",
+    "bytesBefore": 4157640,
+    "bytesAfter": 1159652
+  },
+  {
+    "input": "assets-src\\exports\\context.glb",
+    "output": "public\\assets\\architecture\\context.meshopt.glb",
+    "bytesBefore": 107560,
+    "bytesAfter": 76492
+  },
+  {
+    "input": "assets-src\\exports\\space-editor.glb",
+    "output": "public\\assets\\architecture\\space-editor.meshopt.glb",
+    "bytesBefore": 7684120,
+    "bytesAfter": 1324876
+  },
+  {
+    "input": "assets-src\\exports\\space.glb",
+    "output": "public\\assets\\architecture\\space.meshopt.glb",
+    "bytesBefore": 11896964,
+    "bytesAfter": 3031580
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "files": {
+    "baseColor": "E:/ArchViz_Resources/RoomAtelier/materials/wall-painted/original/94c314cafa1b/baseColor.jpg",
+    "normal": "E:/ArchViz_Resources/RoomAtelier/materials/wall-painted/original/94c314cafa1b/normal.jpg",
+    "roughness": "E:/ArchViz_Resources/RoomAtelier/materials/wall-painted/original/94c314cafa1b/roughness.jpg",
+    "ao": "E:/ArchViz_Resources/RoomAtelier/materials/wall-painted/original/94c314cafa1b/ao.jpg"
+  },
+  "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+  "license": "Fab Standard",
+  "licenseEvidence": "Epic Games Launcher / Fab UI showed Saved in library before Download Only, then On disk 19.39 MB; medium texture set downloaded 2026-10-17 without a purchase, login or new agreement. Local cache Painted_Plaster-c698e997.",
+  "tileMeters": 1,
+  "note": "Owned Quixel/Fab fine painted-plaster scan, repainted to the photographed warm light finish. No stains or strong roughness are introduced."
+}

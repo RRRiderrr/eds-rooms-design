@@ -1,0 +1,28 @@
+[
+  {
+    "asset": "lightmap",
+    "method": "OpenImageDenoise offline scene-linear HDR compositor",
+    "guides": "none; static UV atlas has 12/16px gutters",
+    "size": [
+      2048,
+      2048
+    ],
+    "seconds": 1.2939634323120117,
+    "rawSource": "E:\\ArchViz_Resources\\bake\\denoising\\lightmap.raw.hdr",
+    "rawHash": "aa0ea5b1d7352d5d7bc36e59c7f8accb05c53270e2f2bfa0d0feb84104e8472e",
+    "outputHash": "fe3765bfbbda6878448f014b9936de9e1d487781f583988c5af08b6a22f2605c"
+  },
+  {
+    "asset": "space-lightmap",
+    "method": "OpenImageDenoise offline scene-linear HDR compositor",
+    "guides": "none; static UV atlas has 12/16px gutters",
+    "size": [
+      4096,
+      4096
+    ],
+    "seconds": 1.8988218307495117,
+    "rawSource": "E:\\ArchViz_Resources\\bake\\denoising\\space-lightmap.raw.hdr",
+    "rawHash": "4bda9255d710c993b620ed17bcbc1a93e89a1d22e1c3da106a206657cade6be7",
+    "outputHash": "cf468367c170b830157ac1b8fa388a1b8b3032e566dfb852a8f3bf6fa44a6e98"
+  }
+]

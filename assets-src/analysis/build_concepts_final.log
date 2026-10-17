@@ -1,0 +1,372 @@
+00:00.578  blend            | Read blend: "C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\assets-src\room_archviz.blend"
+C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\tools\build_concepts.py:17: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  if not m.use_nodes:m.use_nodes=True
+19:57:25 | INFO: Data are loaded, start creating Blender stuff
+19:57:25 | INFO: Blender create Mesh node 0
+19:57:25 | INFO: Blender create Mesh node 1
+19:57:25 | INFO: Blender create Mesh node 2
+19:57:25 | INFO: glTF import finished in 0.02s
+IMPORTED accessory 1 4
+19:57:25 | INFO: Data are loaded, start creating Blender stuff
+19:57:25 | INFO: Blender create Mesh node 0
+19:57:25 | INFO: Blender create Mesh node 1
+19:57:25 | INFO: Blender create Mesh node 2
+19:57:25 | INFO: glTF import finished in 0.01s
+IMPORTED accessory 2 4
+19:57:25 | INFO: Data are loaded, start creating Blender stuff
+19:57:25 | INFO: Blender create Mesh node 0
+19:57:25 | INFO: Blender create Mesh node 1
+19:57:25 | INFO: Blender create Mesh node 2
+19:57:25 | INFO: glTF import finished in 0.01s
+IMPORTED accessory 3 4
+19:57:25 | INFO: Data are loaded, start creating Blender stuff
+19:57:25 | INFO: Blender create Mesh node 0
+19:57:25 | INFO: glTF import finished in 0.01s
+IMPORTED acousticPanel 1 2
+19:57:25 | INFO: Data are loaded, start creating Blender stuff
+19:57:25 | INFO: Blender create Mesh node 0
+19:57:25 | INFO: Blender create Mesh node 1
+19:57:25 | INFO: Blender create Mesh node 2
+19:57:25 | INFO: glTF import finished in 0.03s
+IMPORTED acousticPanel 2 4
+19:57:25 | INFO: Data are loaded, start creating Blender stuff
+19:57:25 | INFO: Blender create Mesh node 0
+19:57:25 | INFO: glTF import finished in 0.01s
+IMPORTED acousticPanel 3 2
+19:57:25 | INFO: Data are loaded, start creating Blender stuff
+19:57:25 | INFO: Blender create Mesh node 0
+19:57:25 | INFO: Blender create Mesh node 1
+19:57:25 | INFO: glTF import finished in 0.02s
+IMPORTED armchair 1 3
+19:57:25 | INFO: Data are loaded, start creating Blender stuff
+19:57:25 | INFO: Blender create Mesh node 0
+19:57:25 | INFO: Blender create Mesh node 1
+19:57:25 | INFO: glTF import finished in 0.02s
+IMPORTED armchair 2 3
+19:57:25 | INFO: Data are loaded, start creating Blender stuff
+19:57:25 | INFO: Blender create Mesh node 0
+19:57:25 | INFO: Blender create Mesh node 1
+19:57:25 | INFO: glTF import finished in 0.02s
+IMPORTED armchair 3 3
+19:57:25 | INFO: Data are loaded, start creating Blender stuff
+19:57:25 | INFO: Blender create Mesh node 0
+19:57:25 | INFO: Blender create Mesh node 1
+19:57:25 | INFO: Blender create Mesh node 2
+19:57:25 | INFO: Blender create Mesh node 3
+19:57:25 | INFO: glTF import finished in 0.02s
+IMPORTED art 1 5
+19:57:25 | INFO: Data are loaded, start creating Blender stuff
+19:57:25 | INFO: Blender create Mesh node 0
+19:57:25 | INFO: Blender create Mesh node 1
+19:57:25 | INFO: Blender create Mesh node 2
+19:57:25 | INFO: Blender create Mesh node 3
+19:57:25 | INFO: glTF import finished in 0.02s
+IMPORTED art 2 5
+19:57:25 | INFO: Data are loaded, start creating Blender stuff
+19:57:25 | INFO: Blender create Mesh node 0
+19:57:25 | INFO: Blender create Mesh node 1
+19:57:25 | INFO: Blender create Mesh node 2
+19:57:25 | INFO: Blender create Mesh node 3
+19:57:25 | INFO: glTF import finished in 0.02s
+IMPORTED art 3 5
+19:57:25 | INFO: Data are loaded, start creating Blender stuff
+19:57:25 | INFO: Blender create Mesh node 0
+19:57:25 | INFO: Blender create Mesh node 1
+19:57:25 | INFO: Blender create Mesh node 2
+19:57:25 | INFO: glTF import finished in 0.02s
+IMPORTED barStool 1 4
+19:57:25 | INFO: Data are loaded, start creating Blender stuff
+19:57:25 | INFO: Blender create Mesh node 0
+19:57:25 | INFO: Blender create Mesh node 1
+19:57:25 | INFO: glTF import finished in 0.01s
+IMPORTED barStool 2 3
+19:57:25 | INFO: Data are loaded, start creating Blender stuff
+19:57:25 | INFO: Blender create Mesh node 0
+19:57:25 | INFO: Blender create Mesh node 1
+19:57:25 | INFO: glTF import finished in 0.01s
+IMPORTED barStool 3 3
+19:57:25 | INFO: Data are loaded, start creating Blender stuff
+19:57:25 | INFO: Blender create Mesh node 0
+19:57:25 | INFO: Blender create Mesh node 1
+19:57:25 | INFO: Blender create Mesh node 2
+19:57:25 | INFO: glTF import finished in 0.02s
+IMPORTED bench 1 4
+19:57:25 | INFO: Data are loaded, start creating Blender stuff
+19:57:25 | INFO: Blender create Mesh node 0
+19:57:25 | INFO: Blender create Mesh node 1
+19:57:25 | INFO: glTF import finished in 0.01s
+IMPORTED bench 2 3
+19:57:25 | INFO: Data are loaded, start creating Blender stuff
+19:57:25 | INFO: Blender create Mesh node 0
+19:57:25 | INFO: Blender create Mesh node 1
+19:57:25 | INFO: Blender create Mesh node 2
+19:57:25 | INFO: glTF import finished in 0.02s
+IMPORTED board 1 4
+19:57:25 | INFO: Data are loaded, start creating Blender stuff
+19:57:25 | INFO: Blender create Mesh node 0
+19:57:25 | INFO: Blender create Mesh node 1
+19:57:25 | INFO: Blender create Mesh node 2
+19:57:25 | INFO: glTF import finished in 0.02s
+IMPORTED board 2 4
+19:57:25 | INFO: Data are loaded, start creating Blender stuff
+19:57:25 | INFO: Blender create Mesh node 0
+19:57:25 | INFO: Blender create Mesh node 1
+19:57:25 | INFO: Blender create Mesh node 2
+19:57:25 | INFO: Blender create Mesh node 3
+19:57:25 | INFO: glTF import finished in 0.02s
+IMPORTED board 3 5
+19:57:25 | INFO: Data are loaded, start creating Blender stuff
+19:57:25 | INFO: Blender create Mesh node 0
+19:57:25 | INFO: Blender create Mesh node 1
+19:57:25 | INFO: glTF import finished in 0.01s
+IMPORTED chair 1 3
+19:57:25 | INFO: Data are loaded, start creating Blender stuff
+19:57:25 | INFO: Blender create Mesh node 0
+19:57:25 | INFO: Blender create Mesh node 1
+19:57:25 | INFO: glTF import finished in 0.01s
+IMPORTED chair 2 3
+19:57:25 | INFO: Data are loaded, start creating Blender stuff
+19:57:25 | INFO: Blender create Mesh node 0
+19:57:25 | INFO: Blender create Mesh node 1
+19:57:25 | INFO: glTF import finished in 0.03s
+IMPORTED chair 3 3
+19:57:25 | INFO: Data are loaded, start creating Blender stuff
+19:57:25 | INFO: Blender create Mesh node 0
+19:57:25 | INFO: Blender create Mesh node 1
+19:57:25 | INFO: Blender create Mesh node 2
+19:57:25 | INFO: glTF import finished in 0.02s
+IMPORTED clock 1 4
+19:57:25 | INFO: Data are loaded, start creating Blender stuff
+19:57:25 | INFO: Blender create Mesh node 0
+19:57:25 | INFO: Blender create Mesh node 1
+19:57:25 | INFO: Blender create Mesh node 2
+19:57:25 | INFO: glTF import finished in 0.02s
+IMPORTED clock 2 4
+19:57:25 | INFO: Data are loaded, start creating Blender stuff
+19:57:25 | INFO: Blender create Mesh node 0
+19:57:25 | INFO: Blender create Mesh node 1
+19:57:25 | INFO: glTF import finished in 0.01s
+IMPORTED coffeeTable 1 3
+19:57:25 | INFO: Data are loaded, start creating Blender stuff
+19:57:25 | INFO: Blender create Mesh node 0
+19:57:25 | INFO: Blender create Mesh node 1
+19:57:25 | INFO: glTF import finished in 0.02s
+IMPORTED coffeeTable 2 3
+19:57:25 | INFO: Data are loaded, start creating Blender stuff
+19:57:25 | INFO: Blender create Mesh node 0
+19:57:25 | INFO: Blender create Mesh node 1
+19:57:25 | INFO: glTF import finished in 0.03s
+IMPORTED coffeeTable 3 3
+19:57:26 | INFO: Data are loaded, start creating Blender stuff
+19:57:26 | INFO: Blender create Mesh node 0
+19:57:26 | INFO: Blender create Mesh node 1
+19:57:26 | INFO: Blender create Mesh node 2
+19:57:26 | INFO: glTF import finished in 0.01s
+IMPORTED floorLamp 1 4
+19:57:26 | INFO: Data are loaded, start creating Blender stuff
+19:57:26 | INFO: Blender create Mesh node 0
+19:57:26 | INFO: Blender create Mesh node 1
+19:57:26 | INFO: Blender create Mesh node 2
+19:57:26 | INFO: glTF import finished in 0.02s
+IMPORTED floorLamp 2 4
+19:57:26 | INFO: Data are loaded, start creating Blender stuff
+19:57:26 | INFO: Blender create Mesh node 0
+19:57:26 | INFO: Blender create Mesh node 1
+19:57:26 | INFO: glTF import finished in 0.01s
+IMPORTED meetingTable 1 3
+19:57:26 | INFO: Data are loaded, start creating Blender stuff
+19:57:26 | INFO: Blender create Mesh node 0
+19:57:26 | INFO: Blender create Mesh node 1
+19:57:26 | INFO: glTF import finished in 0.02s
+IMPORTED meetingTable 2 3
+19:57:26 | INFO: Data are loaded, start creating Blender stuff
+19:57:26 | INFO: Blender create Mesh node 0
+19:57:26 | INFO: Blender create Mesh node 1
+19:57:26 | INFO: glTF import finished in 0.02s
+IMPORTED meetingTable 3 3
+19:57:26 | INFO: Data are loaded, start creating Blender stuff
+19:57:26 | INFO: Blender create Mesh node 0
+19:57:26 | INFO: Blender create Mesh node 1
+19:57:26 | INFO: Blender create Mesh node 2
+19:57:26 | INFO: Blender create Mesh node 3
+19:57:26 | INFO: glTF import finished in 0.05s
+IMPORTED plant 1 5
+19:57:26 | INFO: Data are loaded, start creating Blender stuff
+19:57:26 | INFO: Blender create Mesh node 0
+19:57:26 | INFO: Blender create Mesh node 1
+19:57:26 | INFO: Blender create Mesh node 2
+19:57:26 | INFO: Blender create Mesh node 3
+19:57:26 | INFO: glTF import finished in 0.07s
+IMPORTED plant 2 5
+19:57:26 | INFO: Data are loaded, start creating Blender stuff
+19:57:26 | INFO: Blender create Mesh node 0
+19:57:26 | INFO: Blender create Mesh node 1
+19:57:26 | INFO: Blender create Mesh node 2
+19:57:26 | INFO: Blender create Mesh node 3
+19:57:26 | INFO: glTF import finished in 0.05s
+IMPORTED plant 3 5
+19:57:26 | INFO: Data are loaded, start creating Blender stuff
+19:57:26 | INFO: Blender create Mesh node 0
+19:57:26 | INFO: Blender create Mesh node 1
+19:57:26 | INFO: glTF import finished in 0.01s
+IMPORTED pouf 1 3
+19:57:26 | INFO: Data are loaded, start creating Blender stuff
+19:57:26 | INFO: Blender create Mesh node 0
+19:57:26 | INFO: glTF import finished in 0.01s
+IMPORTED pouf 2 2
+19:57:26 | INFO: Data are loaded, start creating Blender stuff
+19:57:26 | INFO: Blender create Mesh node 0
+19:57:26 | INFO: glTF import finished in 0.02s
+IMPORTED rug 1 2
+19:57:26 | INFO: Data are loaded, start creating Blender stuff
+19:57:26 | INFO: Blender create Mesh node 0
+19:57:26 | INFO: glTF import finished in 0.01s
+IMPORTED rug 2 2
+19:57:26 | INFO: Data are loaded, start creating Blender stuff
+19:57:26 | INFO: Blender create Mesh node 0
+19:57:26 | INFO: glTF import finished in 0.00s
+IMPORTED rug 3 2
+19:57:26 | INFO: Data are loaded, start creating Blender stuff
+19:57:26 | INFO: Blender create Mesh node 0
+19:57:26 | INFO: Blender create Mesh node 1
+19:57:26 | INFO: glTF import finished in 0.02s
+IMPORTED separator 2 3
+19:57:26 | INFO: Data are loaded, start creating Blender stuff
+19:57:26 | INFO: Blender create Mesh node 0
+19:57:26 | INFO: Blender create Mesh node 1
+19:57:26 | INFO: glTF import finished in 0.01s
+IMPORTED sideTable 1 3
+19:57:26 | INFO: Data are loaded, start creating Blender stuff
+19:57:26 | INFO: Blender create Mesh node 0
+19:57:26 | INFO: Blender create Mesh node 1
+19:57:26 | INFO: glTF import finished in 0.02s
+IMPORTED sideTable 2 3
+19:57:26 | INFO: Data are loaded, start creating Blender stuff
+19:57:26 | INFO: Blender create Mesh node 0
+19:57:26 | INFO: glTF import finished in 0.01s
+IMPORTED sideTable 3 2
+19:57:26 | INFO: Data are loaded, start creating Blender stuff
+19:57:26 | INFO: Blender create Mesh node 0
+19:57:26 | INFO: glTF import finished in 0.04s
+IMPORTED sign 1 2
+19:57:26 | INFO: Data are loaded, start creating Blender stuff
+19:57:26 | INFO: Blender create Mesh node 0
+19:57:26 | INFO: glTF import finished in 0.04s
+IMPORTED sign 2 2
+19:57:26 | INFO: Data are loaded, start creating Blender stuff
+19:57:26 | INFO: Blender create Mesh node 0
+19:57:26 | INFO: Blender create Mesh node 1
+19:57:26 | INFO: glTF import finished in 0.03s
+IMPORTED sofa 1 3
+19:57:26 | INFO: Data are loaded, start creating Blender stuff
+19:57:26 | INFO: Blender create Mesh node 0
+19:57:26 | INFO: Blender create Mesh node 1
+19:57:26 | INFO: Blender create Mesh node 2
+19:57:26 | INFO: glTF import finished in 0.03s
+IMPORTED sofa 2 4
+19:57:26 | INFO: Data are loaded, start creating Blender stuff
+19:57:26 | INFO: Blender create Mesh node 0
+19:57:26 | INFO: Blender create Mesh node 1
+19:57:26 | INFO: glTF import finished in 0.03s
+IMPORTED sofa 3 3
+19:57:26 | INFO: Data are loaded, start creating Blender stuff
+19:57:26 | INFO: Blender create Mesh node 0
+19:57:26 | INFO: Blender create Mesh node 1
+19:57:26 | INFO: glTF import finished in 0.03s
+IMPORTED sofa 4 3
+19:57:26 | INFO: Data are loaded, start creating Blender stuff
+19:57:26 | INFO: Blender create Mesh node 0
+19:57:26 | INFO: Blender create Mesh node 1
+19:57:26 | INFO: glTF import finished in 0.04s
+IMPORTED storage 1 3
+19:57:26 | INFO: Data are loaded, start creating Blender stuff
+19:57:26 | INFO: Blender create Mesh node 0
+19:57:26 | INFO: Blender create Mesh node 1
+19:57:26 | INFO: Blender create Mesh node 2
+19:57:26 | INFO: Blender create Mesh node 3
+19:57:26 | INFO: glTF import finished in 0.05s
+IMPORTED storage 2 5
+19:57:26 | INFO: Data are loaded, start creating Blender stuff
+19:57:26 | INFO: Blender create Mesh node 0
+19:57:26 | INFO: Blender create Mesh node 1
+19:57:26 | INFO: glTF import finished in 0.03s
+IMPORTED storage 3 3
+19:57:26 | INFO: Data are loaded, start creating Blender stuff
+19:57:26 | INFO: Blender create Mesh node 0
+19:57:26 | INFO: Blender create Mesh node 1
+19:57:26 | INFO: glTF import finished in 0.02s
+IMPORTED windowBar 1 3
+19:57:26 | INFO: Data are loaded, start creating Blender stuff
+19:57:26 | INFO: Blender create Mesh node 0
+19:57:26 | INFO: Blender create Mesh node 1
+19:57:26 | INFO: glTF import finished in 0.02s
+IMPORTED windowBar 2 3
+19:57:26 | INFO: Data are loaded, start creating Blender stuff
+19:57:26 | INFO: Blender create Mesh node 0
+19:57:26 | INFO: glTF import finished in 0.01s
+IMPORTED windowBar 3 2
+19:57:26 | INFO: Data are loaded, start creating Blender stuff
+19:57:26 | INFO: Blender create Mesh node 0
+19:57:26 | INFO: Blender create Mesh node 1
+19:57:26 | INFO: glTF import finished in 0.03s
+IMPORTED workDesk 1 3
+19:57:26 | INFO: Data are loaded, start creating Blender stuff
+19:57:26 | INFO: Blender create Mesh node 0
+19:57:26 | INFO: Blender create Mesh node 1
+19:57:26 | INFO: glTF import finished in 0.03s
+IMPORTED workDesk 3 3
+C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\tools\build_concepts.py:17: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  if not m.use_nodes:m.use_nodes=True
+00:11.781  render           | Saved: 'C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\assets-src\previews\concepts\preset-00-window.jpg'
+00:20.593  render           | Saved: 'C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\assets-src\previews\concepts\preset-00-door.jpg'
+PRESET_QC_RENDERED 0
+00:29.796  render           | Saved: 'C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\assets-src\previews\concepts\preset-01-window.jpg'
+00:38.609  render           | Saved: 'C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\assets-src\previews\concepts\preset-01-door.jpg'
+PRESET_QC_RENDERED 1
+00:47.609  render           | Saved: 'C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\assets-src\previews\concepts\preset-02-window.jpg'
+00:56.484  render           | Saved: 'C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\assets-src\previews\concepts\preset-02-door.jpg'
+PRESET_QC_RENDERED 2
+01:05.671  render           | Saved: 'C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\assets-src\previews\concepts\preset-03-window.jpg'
+01:14.687  render           | Saved: 'C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\assets-src\previews\concepts\preset-03-door.jpg'
+PRESET_QC_RENDERED 3
+01:23.390  render           | Saved: 'C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\assets-src\previews\concepts\preset-04-window.jpg'
+01:32.296  render           | Saved: 'C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\assets-src\previews\concepts\preset-04-door.jpg'
+PRESET_QC_RENDERED 4
+01:41.515  render           | Saved: 'C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\assets-src\previews\concepts\preset-05-window.jpg'
+01:50.390  render           | Saved: 'C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\assets-src\previews\concepts\preset-05-door.jpg'
+PRESET_QC_RENDERED 5
+01:59.250  render           | Saved: 'C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\assets-src\previews\concepts\preset-06-window.jpg'
+02:07.781  render           | Saved: 'C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\assets-src\previews\concepts\preset-06-door.jpg'
+PRESET_QC_RENDERED 6
+02:16.937  render           | Saved: 'C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\assets-src\previews\concepts\preset-07-window.jpg'
+02:25.578  render           | Saved: 'C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\assets-src\previews\concepts\preset-07-door.jpg'
+PRESET_QC_RENDERED 7
+02:34.703  render           | Saved: 'C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\assets-src\previews\concepts\preset-08-window.jpg'
+02:43.296  render           | Saved: 'C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\assets-src\previews\concepts\preset-08-door.jpg'
+PRESET_QC_RENDERED 8
+02:52.578  render           | Saved: 'C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\assets-src\previews\concepts\preset-09-window.jpg'
+03:02.250  render           | Saved: 'C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\assets-src\previews\concepts\preset-09-door.jpg'
+PRESET_QC_RENDERED 9
+03:11.187  render           | Saved: 'C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\assets-src\previews\concepts\preset-10-window.jpg'
+03:19.765  render           | Saved: 'C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\assets-src\previews\concepts\preset-10-door.jpg'
+PRESET_QC_RENDERED 10
+03:28.843  render           | Saved: 'C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\assets-src\previews\concepts\preset-11-window.jpg'
+03:37.859  render           | Saved: 'C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\assets-src\previews\concepts\preset-11-door.jpg'
+PRESET_QC_RENDERED 11
+03:46.609  render           | Saved: 'C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\assets-src\previews\concepts\preset-12-window.jpg'
+03:54.890  render           | Saved: 'C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\assets-src\previews\concepts\preset-12-door.jpg'
+PRESET_QC_RENDERED 12
+04:03.703  render           | Saved: 'C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\assets-src\previews\concepts\preset-13-window.jpg'
+04:12.328  render           | Saved: 'C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\assets-src\previews\concepts\preset-13-door.jpg'
+PRESET_QC_RENDERED 13
+04:21.968  render           | Saved: 'C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\assets-src\previews\concepts\preset-14-window.jpg'
+04:31.500  render           | Saved: 'C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\assets-src\previews\concepts\preset-14-door.jpg'
+PRESET_QC_RENDERED 14
+04:41.921  render           | Saved: 'C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\assets-src\previews\concepts\preset-15-window.jpg'
+04:51.562  render           | Saved: 'C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\assets-src\previews\concepts\preset-15-door.jpg'
+PRESET_QC_RENDERED 15
+Info: Saved as "lounge_concepts.blend"
+ALL_BLENDER_CONCEPTS_READY
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

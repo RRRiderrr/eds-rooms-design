@@ -1,0 +1,862 @@
+{
+  "checkedAt": "2026-10-17T19:59:46.725015+00:00",
+  "project": "rooms design",
+  "preview": "http://127.0.0.1:4174/",
+  "build": {
+    "passed": true,
+    "command": "npm run build",
+    "bundle": "index-B57NvPFT.js",
+    "evidence": "assets-src/analysis/furniture-drag-build-final.log"
+  },
+  "unitTests": {
+    "passed": 70,
+    "failed": 0,
+    "evidence": "assets-src/analysis/furniture-fixes-unit-final.log"
+  },
+  "browserFunctionalSuite": {
+    "initialRun": {
+      "startTime": "2026-10-17T18:25:24.267Z",
+      "duration": 855880.0499999999,
+      "expected": 88,
+      "skipped": 11,
+      "unexpected": 1,
+      "flaky": 0
+    },
+    "resolvedFailure": {
+      "project": "webkit-tablet",
+      "test": "all16 presets, empty0, both modes and actual room remain coherent",
+      "cause": "shadow sampler used before its first shadow map render",
+      "fix": "gate lights until environment ready; explicitly dirty new shadow maps",
+      "repeatPassed": true,
+      "evidence": "assets-src/analysis/webkit-shadow-readiness-recheck.log"
+    },
+    "effectiveUniquePassed": 89,
+    "inapplicableInputCasesSkipped": 11,
+    "remainingFailures": 0,
+    "note": "One initially failing test was rerun after the product fix; the entire 100-case suite was not rerun afterward."
+  },
+  "highArchitectureOcclusion": {
+    "stats": {
+      "startTime": "2026-10-17T18:46:12.044Z",
+      "duration": 131851.51400000002,
+      "expected": 5,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "browserProjects": [
+      "chromium-desktop",
+      "chromium-phone",
+      "chromium-landscape",
+      "webkit-tablet",
+      "firefox-desktop"
+    ],
+    "assertions": [
+      "opaque walls occlude changing panorama",
+      "floor retains opaque primary pass",
+      "primary MSAA >= 2",
+      "no page/GL console errors"
+    ],
+    "evidence": "assets-src/analysis/high-occlusion-regression.log"
+  },
+  "highRendering": {
+    "checkedAt": "2026-10-17T18:55:07.147Z",
+    "editorLoadsHeavyResources": [],
+    "stats": {
+      "fps": 60.00400026668439,
+      "quality": {
+        "level": "high",
+        "scale": 1,
+        "dpr": 1,
+        "target": 60,
+        "ao": true,
+        "shadows": true,
+        "anisotropy": 16
+      },
+      "drawCalls": 1064,
+      "triangles": 1885614,
+      "geometries": 412,
+      "textures": 77,
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4070 Ti (0x00002782) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "passes": [
+        "Sh",
+        "Rh",
+        "e",
+        "Oh",
+        "wh"
+      ],
+      "msaa": 4,
+      "reflectionSamples": 0,
+      "space": {
+        "min": [
+          -25.7477145,
+          0,
+          -5.2209095
+        ],
+        "max": [
+          23.8522855,
+          4.355,
+          3.2490904999999994
+        ]
+      },
+      "protectedArchitecture": true
+    },
+    "errors": []
+  },
+  "sourcePreservation": {
+    "originalObjectCount": 766,
+    "currentObjectCount": 766,
+    "changedGeometryTransformParentOrMaterialAssignment": [],
+    "allOriginalGeometryPreserved": true
+  },
+  "materials": {
+    "passed": true,
+    "materials": 5,
+    "textures": [
+      {
+        "material": "wall-painted",
+        "quality": "low",
+        "role": "baseColor",
+        "width": 512,
+        "height": 512,
+        "levels": 10,
+        "transfer": 2,
+        "bytes": 104795
+      },
+      {
+        "material": "wall-painted",
+        "quality": "low",
+        "role": "normal",
+        "width": 512,
+        "height": 512,
+        "levels": 10,
+        "transfer": 1,
+        "bytes": 268018
+      },
+      {
+        "material": "wall-painted",
+        "quality": "low",
+        "role": "orm",
+        "width": 512,
+        "height": 512,
+        "levels": 10,
+        "transfer": 1,
+        "bytes": 106758
+      },
+      {
+        "material": "wall-painted",
+        "quality": "medium",
+        "role": "baseColor",
+        "width": 1024,
+        "height": 1024,
+        "levels": 11,
+        "transfer": 2,
+        "bytes": 413813
+      },
+      {
+        "material": "wall-painted",
+        "quality": "medium",
+        "role": "normal",
+        "width": 1024,
+        "height": 1024,
+        "levels": 11,
+        "transfer": 1,
+        "bytes": 1094151
+      },
+      {
+        "material": "wall-painted",
+        "quality": "medium",
+        "role": "orm",
+        "width": 1024,
+        "height": 1024,
+        "levels": 11,
+        "transfer": 1,
+        "bytes": 517385
+      },
+      {
+        "material": "wall-painted",
+        "quality": "high",
+        "role": "baseColor",
+        "width": 2048,
+        "height": 2048,
+        "levels": 12,
+        "transfer": 2,
+        "bytes": 1662445
+      },
+      {
+        "material": "wall-painted",
+        "quality": "high",
+        "role": "normal",
+        "width": 2048,
+        "height": 2048,
+        "levels": 12,
+        "transfer": 1,
+        "bytes": 4525951
+      },
+      {
+        "material": "wall-painted",
+        "quality": "high",
+        "role": "orm",
+        "width": 2048,
+        "height": 2048,
+        "levels": 12,
+        "transfer": 1,
+        "bytes": 2443445
+      },
+      {
+        "material": "floor-commercial-grey",
+        "quality": "low",
+        "role": "baseColor",
+        "width": 512,
+        "height": 512,
+        "levels": 10,
+        "transfer": 2,
+        "bytes": 2899
+      },
+      {
+        "material": "floor-commercial-grey",
+        "quality": "low",
+        "role": "normal",
+        "width": 512,
+        "height": 512,
+        "levels": 10,
+        "transfer": 1,
+        "bytes": 204466
+      },
+      {
+        "material": "floor-commercial-grey",
+        "quality": "low",
+        "role": "orm",
+        "width": 512,
+        "height": 512,
+        "levels": 10,
+        "transfer": 1,
+        "bytes": 1117
+      },
+      {
+        "material": "floor-commercial-grey",
+        "quality": "medium",
+        "role": "baseColor",
+        "width": 1024,
+        "height": 1024,
+        "levels": 11,
+        "transfer": 2,
+        "bytes": 16518
+      },
+      {
+        "material": "floor-commercial-grey",
+        "quality": "medium",
+        "role": "normal",
+        "width": 1024,
+        "height": 1024,
+        "levels": 11,
+        "transfer": 1,
+        "bytes": 951538
+      },
+      {
+        "material": "floor-commercial-grey",
+        "quality": "medium",
+        "role": "orm",
+        "width": 1024,
+        "height": 1024,
+        "levels": 11,
+        "transfer": 1,
+        "bytes": 1421
+      },
+      {
+        "material": "floor-commercial-grey",
+        "quality": "high",
+        "role": "baseColor",
+        "width": 2048,
+        "height": 2048,
+        "levels": 12,
+        "transfer": 2,
+        "bytes": 151693
+      },
+      {
+        "material": "floor-commercial-grey",
+        "quality": "high",
+        "role": "normal",
+        "width": 2048,
+        "height": 2048,
+        "levels": 12,
+        "transfer": 1,
+        "bytes": 4067639
+      },
+      {
+        "material": "floor-commercial-grey",
+        "quality": "high",
+        "role": "orm",
+        "width": 2048,
+        "height": 2048,
+        "levels": 12,
+        "transfer": 1,
+        "bytes": 2024
+      },
+      {
+        "material": "metal-painted",
+        "quality": "low",
+        "role": "baseColor",
+        "width": 512,
+        "height": 512,
+        "levels": 10,
+        "transfer": 2,
+        "bytes": 33366
+      },
+      {
+        "material": "metal-painted",
+        "quality": "low",
+        "role": "normal",
+        "width": 512,
+        "height": 512,
+        "levels": 10,
+        "transfer": 1,
+        "bytes": 222165
+      },
+      {
+        "material": "metal-painted",
+        "quality": "low",
+        "role": "orm",
+        "width": 512,
+        "height": 512,
+        "levels": 10,
+        "transfer": 1,
+        "bytes": 5032
+      },
+      {
+        "material": "metal-painted",
+        "quality": "medium",
+        "role": "baseColor",
+        "width": 1024,
+        "height": 1024,
+        "levels": 11,
+        "transfer": 2,
+        "bytes": 145277
+      },
+      {
+        "material": "metal-painted",
+        "quality": "medium",
+        "role": "normal",
+        "width": 1024,
+        "height": 1024,
+        "levels": 11,
+        "transfer": 1,
+        "bytes": 990828
+      },
+      {
+        "material": "metal-painted",
+        "quality": "medium",
+        "role": "orm",
+        "width": 1024,
+        "height": 1024,
+        "levels": 11,
+        "transfer": 1,
+        "bytes": 25596
+      },
+      {
+        "material": "metal-painted",
+        "quality": "high",
+        "role": "baseColor",
+        "width": 2048,
+        "height": 2048,
+        "levels": 12,
+        "transfer": 2,
+        "bytes": 453474
+      },
+      {
+        "material": "metal-painted",
+        "quality": "high",
+        "role": "normal",
+        "width": 2048,
+        "height": 2048,
+        "levels": 12,
+        "transfer": 1,
+        "bytes": 4095831
+      },
+      {
+        "material": "metal-painted",
+        "quality": "high",
+        "role": "orm",
+        "width": 2048,
+        "height": 2048,
+        "levels": 12,
+        "transfer": 1,
+        "bytes": 79027
+      },
+      {
+        "material": "wood-oak",
+        "quality": "low",
+        "role": "baseColor",
+        "width": 512,
+        "height": 512,
+        "levels": 10,
+        "transfer": 2,
+        "bytes": 66202
+      },
+      {
+        "material": "wood-oak",
+        "quality": "low",
+        "role": "normal",
+        "width": 512,
+        "height": 512,
+        "levels": 10,
+        "transfer": 1,
+        "bytes": 112620
+      },
+      {
+        "material": "wood-oak",
+        "quality": "low",
+        "role": "orm",
+        "width": 512,
+        "height": 512,
+        "levels": 10,
+        "transfer": 1,
+        "bytes": 41194
+      },
+      {
+        "material": "wood-oak",
+        "quality": "medium",
+        "role": "baseColor",
+        "width": 1024,
+        "height": 1024,
+        "levels": 11,
+        "transfer": 2,
+        "bytes": 193613
+      },
+      {
+        "material": "wood-oak",
+        "quality": "medium",
+        "role": "normal",
+        "width": 1024,
+        "height": 1024,
+        "levels": 11,
+        "transfer": 1,
+        "bytes": 607606
+      },
+      {
+        "material": "wood-oak",
+        "quality": "medium",
+        "role": "orm",
+        "width": 1024,
+        "height": 1024,
+        "levels": 11,
+        "transfer": 1,
+        "bytes": 148458
+      },
+      {
+        "material": "wood-oak",
+        "quality": "high",
+        "role": "baseColor",
+        "width": 2048,
+        "height": 2048,
+        "levels": 12,
+        "transfer": 2,
+        "bytes": 710158
+      },
+      {
+        "material": "wood-oak",
+        "quality": "high",
+        "role": "normal",
+        "width": 2048,
+        "height": 2048,
+        "levels": 12,
+        "transfer": 1,
+        "bytes": 2557673
+      },
+      {
+        "material": "wood-oak",
+        "quality": "high",
+        "role": "orm",
+        "width": 2048,
+        "height": 2048,
+        "levels": 12,
+        "transfer": 1,
+        "bytes": 436333
+      },
+      {
+        "material": "fabric-woven",
+        "quality": "low",
+        "role": "baseColor",
+        "width": 512,
+        "height": 512,
+        "levels": 10,
+        "transfer": 2,
+        "bytes": 82852
+      },
+      {
+        "material": "fabric-woven",
+        "quality": "low",
+        "role": "normal",
+        "width": 512,
+        "height": 512,
+        "levels": 10,
+        "transfer": 1,
+        "bytes": 266971
+      },
+      {
+        "material": "fabric-woven",
+        "quality": "low",
+        "role": "orm",
+        "width": 512,
+        "height": 512,
+        "levels": 10,
+        "transfer": 1,
+        "bytes": 40050
+      },
+      {
+        "material": "fabric-woven",
+        "quality": "medium",
+        "role": "baseColor",
+        "width": 1024,
+        "height": 1024,
+        "levels": 11,
+        "transfer": 2,
+        "bytes": 227870
+      },
+      {
+        "material": "fabric-woven",
+        "quality": "medium",
+        "role": "normal",
+        "width": 1024,
+        "height": 1024,
+        "levels": 11,
+        "transfer": 1,
+        "bytes": 1225262
+      },
+      {
+        "material": "fabric-woven",
+        "quality": "medium",
+        "role": "orm",
+        "width": 1024,
+        "height": 1024,
+        "levels": 11,
+        "transfer": 1,
+        "bytes": 163481
+      },
+      {
+        "material": "fabric-woven",
+        "quality": "high",
+        "role": "baseColor",
+        "width": 2048,
+        "height": 2048,
+        "levels": 12,
+        "transfer": 2,
+        "bytes": 828749
+      },
+      {
+        "material": "fabric-woven",
+        "quality": "high",
+        "role": "normal",
+        "width": 2048,
+        "height": 2048,
+        "levels": 12,
+        "transfer": 1,
+        "bytes": 4967737
+      },
+      {
+        "material": "fabric-woven",
+        "quality": "high",
+        "role": "orm",
+        "width": 2048,
+        "height": 2048,
+        "levels": 12,
+        "transfer": 1,
+        "bytes": 684383
+      }
+    ],
+    "geometry": [
+      {
+        "filename": "room.meshopt.glb",
+        "bytes": 1159652,
+        "nodes": 73,
+        "hasDoor": true
+      },
+      {
+        "filename": "room-editor.meshopt.glb",
+        "bytes": 119488,
+        "nodes": 73,
+        "hasDoor": true
+      }
+    ],
+    "failures": []
+  },
+  "blenderConcepts": {
+    "presets": 16,
+    "controlViews": 32,
+    "file": "assets-src/lounge_concepts.blend",
+    "report": "assets-src/concepts/blender-visual-review.json",
+    "imageBrightnessGuard": true,
+    "contactSheet": "assets-src/previews/concepts/all-presets-review.jpg"
+  },
+  "sourceAssets": {
+    "ownedFabQuixel": [
+      "pjBoU0",
+      "tezmdjno",
+      "tfjcffgc",
+      "ugzobcglw"
+    ],
+    "localMegascansFabric": "sjfvce3c",
+    "requiredSourcesMissing": [],
+    "positiveModelVariants": 75,
+    "heavyResourceRoot": "E:/ArchViz_Resources"
+  },
+  "lighting": {
+    "fixedDirectLights": 25,
+    "cameraChangesFixtureOutput": false,
+    "highShadowMaps": 6,
+    "mediumShadowMaps": 2,
+    "lowRetainsSameIndirectGI": true
+  },
+  "newFeatures": [
+    "six photo-derived grouped signage variants; five unique corridor signs in every preset",
+    "glass and organic coffee tables; three different bar-stool silhouettes",
+    "wall TVs; supported-top coffee machines",
+    "true full-sphere synthetic factory panorama and separate glass PMREM",
+    "Editor right-click launch ArchViz at actual floor position",
+    "EDS icon with rooms design text; removed Local footer label",
+    "painted-wall UASTC and sub-LSB output dither"
+  ],
+  "screenshots": [
+    "test-results/furniture-review/matte-floor-lounge.png",
+    "test-results/furniture-review/matte-floor-full-space.png",
+    "test-results/furniture-review/preset-6-85in-tv.png",
+    "assets-src/previews/concepts/all-presets-review.jpg"
+  ],
+  "limitations": [
+    "Exact parity with Lumen Studio has not been established.",
+    "Some furniture is project-authored modular geometry; real plants and selected chairs are CC0 scans rather than Fab.",
+    "Factory panorama is generated LDR converted to RGBE, not measured HDR.",
+    "Signage dimensions are inferred from door and wall scale; tiny unreadable timeline text is reconstructed.",
+    "Browser engine/viewport tests do not certify physical iOS/Android devices."
+  ],
+  "staticSubdirectoryAndCapabilityFallback": [
+    {
+      "basic": false,
+      "url": "http://127.0.0.1:58148/eds/index.html",
+      "ready": true,
+      "hdrTargets": true,
+      "objects": 2,
+      "mode": "archviz",
+      "errors": []
+    },
+    {
+      "basic": true,
+      "url": "http://127.0.0.1:58148/eds/index.html",
+      "ready": true,
+      "hdrTargets": false,
+      "objects": 2,
+      "mode": "archviz",
+      "errors": []
+    }
+  ],
+  "latestFurnitureRevision": {
+    "productionReview": {
+      "checkedAt": "2026-10-17T19:53:46.806Z",
+      "floor": {
+        "source": "tezmdjno",
+        "roughness": {
+          "min": 0.8941176470588236,
+          "max": 0.9098039215686274,
+          "mean": 0.9022924582163493,
+          "metalMax": 0
+        },
+        "floors": [
+          {
+            "mesh": "Floor_Continuous_00",
+            "metalness": 0,
+            "normal": [
+              0.12,
+              0.12
+            ],
+            "roughnessMap": true,
+            "baseColorMap": true
+          },
+          {
+            "mesh": "Floor_Continuous_00",
+            "metalness": 0,
+            "normal": [
+              0.12,
+              0.12
+            ],
+            "roughnessMap": true,
+            "baseColorMap": true
+          }
+        ]
+      },
+      "televisions": [
+        {
+          "preset": "builtin-3",
+          "tv": {
+            "id": "ProjectBoard",
+            "assetId": "television",
+            "variant": 3,
+            "material": "graphite",
+            "position": [
+              2.5613175,
+              1.45,
+              -1.45
+            ],
+            "rotation": -1.5707963267948966,
+            "wallId": "east"
+          },
+          "sofa": {
+            "id": "MainSofa",
+            "assetId": "sofa",
+            "variant": 4,
+            "material": "blue",
+            "position": [
+              -1.3,
+              0,
+              -1.45
+            ],
+            "rotation": 1.5707963267948966
+          },
+          "model": "ProjectBoard",
+          "actualWorldDimensions": [
+            0.06471855735915222,
+            1.099978623240454,
+            1.8999999761581423
+          ],
+          "hasProduction": true
+        },
+        {
+          "preset": "builtin-6",
+          "tv": {
+            "id": "ProjectBoard",
+            "assetId": "television",
+            "variant": 3,
+            "material": "graphite",
+            "position": [
+              -1,
+              1.45,
+              -3.0083905
+            ],
+            "rotation": 0,
+            "wallId": "near"
+          },
+          "sofa": {
+            "id": "MainSofa",
+            "assetId": "sofa",
+            "variant": 1,
+            "material": "sage",
+            "position": [
+              -1,
+              0,
+              0.25
+            ],
+            "rotation": 3.141592653589793
+          },
+          "model": "ProjectBoard",
+          "actualWorldDimensions": [
+            1.899999976158142,
+            1.099978623240454,
+            0.06471855735915222
+          ],
+          "hasProduction": true
+        },
+        {
+          "preset": "builtin-9",
+          "tv": {
+            "id": "ProjectBoard",
+            "assetId": "television",
+            "variant": 3,
+            "material": "graphite",
+            "position": [
+              2.5613175,
+              1.45,
+              -1.35
+            ],
+            "rotation": -1.5707963267948966,
+            "wallId": "east"
+          },
+          "sofa": {
+            "id": "MainSofa",
+            "assetId": "sofa",
+            "variant": 2,
+            "material": "clay",
+            "position": [
+              -1.4,
+              0,
+              -1.35
+            ],
+            "rotation": 1.5707963267948966
+          },
+          "model": "ProjectBoard",
+          "actualWorldDimensions": [
+            0.06471855735915222,
+            1.099978623240454,
+            1.899999976158142
+          ],
+          "hasProduction": true
+        },
+        {
+          "preset": "builtin-13",
+          "tv": {
+            "id": "ProjectBoard",
+            "assetId": "television",
+            "variant": 3,
+            "material": "graphite",
+            "position": [
+              -2.5613175,
+              1.45,
+              -0.25
+            ],
+            "rotation": 1.5707963267948966,
+            "wallId": "west"
+          },
+          "sofa": {
+            "id": "MainSofa",
+            "assetId": "sofa",
+            "variant": 3,
+            "material": "blue",
+            "position": [
+              1.3,
+              0,
+              -0.25
+            ],
+            "rotation": -1.5707963267948966
+          },
+          "model": "ProjectBoard",
+          "actualWorldDimensions": [
+            0.06471855735915222,
+            1.099978623240454,
+            1.899999976158142
+          ],
+          "hasProduction": true
+        }
+      ],
+      "shots": [
+        "preset-3-85in-tv.png",
+        "preset-6-85in-tv.png",
+        "preset-9-85in-tv.png",
+        "preset-13-85in-tv.png",
+        "matte-floor-lounge.png",
+        "matte-floor-full-space.png"
+      ],
+      "errors": []
+    },
+    "highAndWindowBrowserStats": {
+      "startTime": "2026-10-17T19:53:10.927Z",
+      "duration": 217393.239,
+      "expected": 10,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "libraryDragProductionStats": {
+      "startTime": "2026-10-17T19:54:07.993Z",
+      "duration": 36614.829,
+      "expected": 8,
+      "skipped": 8,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "geometryEvidence": "tests/furniture-quality.test.ts",
+    "navigationEvidence": "tests/navigation.test.ts and tests/e2e/navigation.spec.ts",
+    "draftCompatibilityEvidence": "tests/draft.test.ts",
+    "layoutEvidence": "docs/layout-review.md and tests/preset-layout.test.ts",
+    "builtinPresets": 16,
+    "controlViews": 32,
+    "scopeNote": "The previous broad 100-case suite remains historical; latest revision reran 70 unit and 18 targeted browser cases, with 8 inapplicable input cases skipped. No known current failing check."
+  }
+}

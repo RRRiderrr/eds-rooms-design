@@ -1,0 +1,34 @@
+import './browser-path.mjs';
+import {chromium} from '@playwright/test';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const root=path.dirname(path.dirname(fileURLToPath(import.meta.url)));
+const browser=await chromium.launch({headless:true,args:['--enable-webgl','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+const page=await browser.newPage({viewport:{width:1440,height:1040},deviceScaleFactor:1});
+const errors=[];page.on('pageerror',error=>errors.push(error.message));
+await page.route('**/__real_models_qa__',route=>route.fulfill({contentType:'text/html',body:'<!doctype html><html><body style="margin:0;background:#d6dcdb"><div id="view"></div></body></html>'}));
+await page.goto('http://127.0.0.1:5186/__real_models_qa__');
+const result=await page.evaluate(async()=>{
+ const THREE=await import('/node_modules/three/build/three.module.js');
+ const {GLTFLoader}=await import('/node_modules/three/examples/jsm/loaders/GLTFLoader.js');
+ const {KTX2Loader}=await import('/node_modules/three/examples/jsm/loaders/KTX2Loader.js');
+ const {MeshoptDecoder}=await import('/node_modules/three/examples/jsm/libs/meshopt_decoder.module.js');
+ const {RoomEnvironment}=await import('/node_modules/three/examples/jsm/environments/RoomEnvironment.js');
+ const renderer=new THREE.WebGLRenderer({antialias:true,alpha:false,preserveDrawingBuffer:true});renderer.setSize(1440,1040);renderer.setPixelRatio(1);renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=.78;renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.shadowMap.enabled=true;renderer.setClearColor('#77817d');document.querySelector('#view').appendChild(renderer.domElement);
+ const ktx=new KTX2Loader().setTranscoderPath('/assets/decoders/basis/').detectSupport(renderer).setWorkerLimit(2);
+ const loader=new GLTFLoader().setMeshoptDecoder(MeshoptDecoder).setKTX2Loader(ktx);
+ const pmrem=new THREE.PMREMGenerator(renderer);const environment=pmrem.fromScene(new RoomEnvironment(),.03).texture;
+ const report=[];const groups=[];const scene=new THREE.Scene();scene.environment=environment;scene.environmentIntensity=.42;
+ scene.add(new THREE.HemisphereLight('#ffffff','#999d91',.45));const light=new THREE.DirectionalLight('#fff7e9',1.1);light.position.set(2,4,3);light.castShadow=true;light.shadow.mapSize.set(2048,2048);light.shadow.camera.left=light.shadow.camera.bottom=-4;light.shadow.camera.right=light.shadow.camera.top=4;light.shadow.bias=-.0001;scene.add(light);
+ const ground=new THREE.Mesh(new THREE.PlaneGeometry(20,20),new THREE.MeshStandardMaterial({color:'#969e98',roughness:.85}));ground.rotation.x=-Math.PI/2;ground.position.y=-.008;ground.receiveShadow=true;scene.add(ground);
+ const ids=['armchair-2','plant-1','plant-2','chair-2'];
+ for(let i=0;i<ids.length;i++){const id=ids[i];const gltf=await loader.loadAsync(`/assets/models/${id}.glb`);const model=gltf.scene;const bounds=new THREE.Box3().setFromObject(model);const textures=new Set();let masked=0,meshes=0,triangles=0;model.traverse(o=>{if(!o.isMesh)return;o.castShadow=true;o.receiveShadow=true;meshes++;triangles+=(o.geometry.index?.count??o.geometry.attributes.position.count)/3;for(const m of Array.isArray(o.material)?o.material:[o.material]){if(m.alphaTest>0)masked++;for(const t of [m.map,m.normalMap,m.roughnessMap,m.metalnessMap,m.aoMap])if(t)textures.add(t);}});model.position.set((i%2)*2.1-1.05,0,Math.floor(i/2)*2.1-1.05);scene.add(model);groups.push(model);report.push({id,bounds:bounds.getSize(new THREE.Vector3()).toArray(),meshes,triangles,masked,compressedTextures:[...textures].filter(t=>t.isCompressedTexture).length,textureCount:textures.size});}
+ const camera=new THREE.PerspectiveCamera(36,1440/1040,.01,100);camera.position.set(4.6,4.5,6.4);camera.lookAt(0,.5,0);renderer.render(scene,camera);
+ return {webgl2:renderer.capabilities.isWebGL2,models:report,drawCalls:renderer.info.render.calls,triangles:renderer.info.render.triangles,gpuTextures:renderer.info.memory.textures};
+});
+await fs.mkdir(path.join(root,'assets-src/previews'),{recursive:true});
+await page.screenshot({path:path.join(root,'assets-src/previews/real-models-browser.png'),fullPage:true});
+await fs.writeFile(path.join(root,'assets-src/materials/real-models-browser-validation.json'),JSON.stringify({...result,errors},null,2));
+console.log(JSON.stringify({...result,errors},null,2));await browser.close();
+if(errors.length||result.models.some(m=>m.compressedTextures<1)||result.models.filter(m=>m.id.startsWith('plant')).some(m=>m.masked<1))process.exitCode=1;

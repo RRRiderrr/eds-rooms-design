@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "materials": 5,
+  "textures": 45,
+  "geometry": [
+    {
+      "filename": "room.meshopt.glb",
+      "bytes": 1159652,
+      "nodes": 73,
+      "hasDoor": true
+    },
+    {
+      "filename": "room-editor.meshopt.glb",
+      "bytes": 119488,
+      "nodes": 73,
+      "hasDoor": true
+    }
+  ],
+  "failures": []
+}

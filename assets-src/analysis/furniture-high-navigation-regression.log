@@ -1,0 +1,37 @@
+[WebServer] (node:72400) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 10 tests using 1 worker
+
+(node:67460) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:67460) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [chromium-desktop] › tests\e2e\high-render.spec.ts:4:1 › High preserves opaque architecture with a panorama and four-sample AA (29.0s)
+  ok  2 [chromium-desktop] › tests\e2e\navigation.spec.ts:4:1 › actual lounge and full-space windows block walking and raised flight (12.6s)
+(node:61204) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:61204) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  3 [chromium-phone] › tests\e2e\high-render.spec.ts:4:1 › High preserves opaque architecture with a panorama and four-sample AA (28.7s)
+  ok  4 [chromium-phone] › tests\e2e\navigation.spec.ts:4:1 › actual lounge and full-space windows block walking and raised flight (12.5s)
+(node:68288) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:68288) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  5 [chromium-landscape] › tests\e2e\high-render.spec.ts:4:1 › High preserves opaque architecture with a panorama and four-sample AA (27.5s)
+  ok  6 [chromium-landscape] › tests\e2e\navigation.spec.ts:4:1 › actual lounge and full-space windows block walking and raised flight (15.9s)
+(node:66368) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:66368) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  7 [webkit-tablet] › tests\e2e\high-render.spec.ts:4:1 › High preserves opaque architecture with a panorama and four-sample AA (26.9s)
+  ok  8 [webkit-tablet] › tests\e2e\navigation.spec.ts:4:1 › actual lounge and full-space windows block walking and raised flight (14.1s)
+(node:57940) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:57940) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  9 [firefox-desktop] › tests\e2e\high-render.spec.ts:4:1 › High preserves opaque architecture with a panorama and four-sample AA (28.1s)
+  ok 10 [firefox-desktop] › tests\e2e\navigation.spec.ts:4:1 › actual lounge and full-space windows block walking and raised flight (15.3s)
+
+  10 passed (3.6m)

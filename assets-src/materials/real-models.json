@@ -1,0 +1,292 @@
+[
+  {
+    "assetId": "armchair",
+    "variant": 2,
+    "label": "Дубове лаунж-крісло з м’якою оббивкою",
+    "sourceId": "modern_arm_chair_01",
+    "sourceUrl": "https://polyhaven.com/a/modern_arm_chair_01",
+    "license": "CC0-1.0",
+    "sourcePath": "E:\\ArchViz_Resources\\PolyHaven\\modern_arm_chair_01",
+    "uniformScale": 0.9,
+    "dimensions": [
+      0.7383099764585496,
+      0.9205668510723627,
+      0.8879055172204972
+    ],
+    "bounds": {
+      "min": [
+        -0.3691549882292748,
+        0,
+        -0.4439527586102486
+      ],
+      "max": [
+        0.3691549882292748,
+        0.9205668510723627,
+        0.4439527586102486
+      ],
+      "size": [
+        0.7383099764585496,
+        0.9205668510723627,
+        0.8879055172204972
+      ]
+    },
+    "production": "assets/models/armchair-2.glb",
+    "fallback": "assets/models/armchair-2.fallback.glb",
+    "quality": {
+      "medium": "assets/models/armchair-2.glb",
+      "low": "assets/models/armchair-2.low.glb",
+      "high": "assets/models/armchair-2.high.glb"
+    },
+    "hasLeafAlpha": false,
+    "sourcePbr": true,
+    "qualityMetadata": {
+      "medium": {
+        "triangles": 7235,
+        "textureSize": 1024,
+        "bytes": 2260988
+      },
+      "low": {
+        "triangles": 4010,
+        "textureSize": 512,
+        "bytes": 685648
+      },
+      "high": {
+        "triangles": 8916,
+        "textureSize": 2048,
+        "bytes": 7710788
+      }
+    }
+  },
+  {
+    "assetId": "plant",
+    "variant": 1,
+    "label": "Листяна рослина у керамічному кашпо",
+    "sourceId": "potted_plant_01",
+    "sourceUrl": "https://polyhaven.com/a/potted_plant_01",
+    "license": "CC0-1.0",
+    "sourcePath": "E:\\ArchViz_Resources\\PolyHaven\\potted_plant_01",
+    "uniformScale": 0.9154548989748156,
+    "dimensions": [
+      0.5377264254460495,
+      1.2360142446356281,
+      0.58
+    ],
+    "bounds": {
+      "min": [
+        -0.26886321272302477,
+        0,
+        -0.29
+      ],
+      "max": [
+        0.26886321272302477,
+        1.2360142446356281,
+        0.29
+      ],
+      "size": [
+        0.5377264254460495,
+        1.2360142446356281,
+        0.58
+      ]
+    },
+    "production": "assets/models/plant-1.glb",
+    "fallback": "assets/models/plant-1.fallback.glb",
+    "quality": {
+      "medium": "assets/models/plant-1.glb",
+      "low": "assets/models/plant-1.low.glb",
+      "high": "assets/models/plant-1.high.glb"
+    },
+    "hasLeafAlpha": true,
+    "sourcePbr": true,
+    "qualityMetadata": {
+      "medium": {
+        "triangles": 21473,
+        "textureSize": 1024,
+        "bytes": 3476844
+      },
+      "low": {
+        "triangles": 10383,
+        "textureSize": 512,
+        "bytes": 1077304
+      },
+      "high": {
+        "triangles": 58376,
+        "textureSize": 2048,
+        "bytes": 12333860
+      }
+    }
+  },
+  {
+    "assetId": "plant",
+    "variant": 2,
+    "label": "Широколиста рослина у кашпо",
+    "sourceId": "potted_plant_02",
+    "sourceUrl": "https://polyhaven.com/a/potted_plant_02",
+    "license": "CC0-1.0",
+    "sourcePath": "E:\\ArchViz_Resources\\PolyHaven\\potted_plant_02",
+    "uniformScale": 0.9270391210479432,
+    "dimensions": [
+      0.65,
+      0.779805598967807,
+      0.6094230732801177
+    ],
+    "bounds": {
+      "min": [
+        -0.325,
+        0,
+        -0.30471153664005884
+      ],
+      "max": [
+        0.325,
+        0.779805598967807,
+        0.30471153664005884
+      ],
+      "size": [
+        0.65,
+        0.779805598967807,
+        0.6094230732801177
+      ]
+    },
+    "production": "assets/models/plant-2.glb",
+    "fallback": "assets/models/plant-2.fallback.glb",
+    "quality": {
+      "medium": "assets/models/plant-2.glb",
+      "low": "assets/models/plant-2.low.glb",
+      "high": "assets/models/plant-2.high.glb"
+    },
+    "hasLeafAlpha": true,
+    "sourcePbr": true,
+    "qualityMetadata": {
+      "medium": {
+        "triangles": 9210,
+        "textureSize": 1024,
+        "bytes": 2809384
+      },
+      "low": {
+        "triangles": 4724,
+        "textureSize": 512,
+        "bytes": 864952
+      },
+      "high": {
+        "triangles": 25342,
+        "textureSize": 2048,
+        "bytes": 9954564
+      }
+    }
+  },
+  {
+    "assetId": "chair",
+    "variant": 2,
+    "label": "Стілець з м’якою високою спинкою",
+    "sourceId": "dining_chair_02",
+    "sourceUrl": "https://polyhaven.com/a/dining_chair_02",
+    "license": "CC0-1.0",
+    "sourcePath": "E:\\ArchViz_Resources\\PolyHaven\\dining_chair_02",
+    "uniformScale": 0.9368167199671359,
+    "dimensions": [
+      0.4061763488822283,
+      0.9118764945719297,
+      0.54
+    ],
+    "bounds": {
+      "min": [
+        -0.20308817444111416,
+        0,
+        -0.27
+      ],
+      "max": [
+        0.20308817444111416,
+        0.9118764945719297,
+        0.27
+      ],
+      "size": [
+        0.4061763488822283,
+        0.9118764945719297,
+        0.54
+      ]
+    },
+    "production": "assets/models/chair-2.glb",
+    "fallback": "assets/models/chair-2.fallback.glb",
+    "quality": {
+      "medium": "assets/models/chair-2.glb",
+      "low": "assets/models/chair-2.low.glb",
+      "high": "assets/models/chair-2.high.glb"
+    },
+    "hasLeafAlpha": false,
+    "sourcePbr": true,
+    "qualityMetadata": {
+      "medium": {
+        "triangles": 12106,
+        "textureSize": 1024,
+        "bytes": 1500076
+      },
+      "low": {
+        "triangles": 5503,
+        "textureSize": 512,
+        "bytes": 450804
+      },
+      "high": {
+        "triangles": 22013,
+        "textureSize": 2048,
+        "bytes": 5045488
+      }
+    }
+  },
+  {
+    "assetId": "plant",
+    "variant": 3,
+    "label": "Компактна листяна рослина у кашпо",
+    "sourceId": "potted_plant_01",
+    "sourceUrl": "https://polyhaven.com/a/potted_plant_01",
+    "license": "CC0-1.0",
+    "sourcePath": "E:\\ArchViz_Resources\\PolyHaven\\potted_plant_01",
+    "uniformScale": 0.5682133855705752,
+    "dimensions": [
+      0.33376122958720317,
+      0.7671812552910796,
+      0.36
+    ],
+    "bounds": {
+      "min": [
+        -0.16688061479360158,
+        0,
+        -0.18
+      ],
+      "max": [
+        0.16688061479360158,
+        0.7671812552910796,
+        0.18
+      ],
+      "size": [
+        0.33376122958720317,
+        0.7671812552910796,
+        0.36
+      ]
+    },
+    "production": "assets/models/plant-3.glb",
+    "fallback": "assets/models/plant-3.fallback.glb",
+    "quality": {
+      "medium": "assets/models/plant-3.glb",
+      "low": "assets/models/plant-3.low.glb",
+      "high": "assets/models/plant-3.high.glb"
+    },
+    "qualityMetadata": {
+      "medium": {
+        "triangles": 21473,
+        "textureSize": 1024,
+        "bytes": 3476848
+      },
+      "low": {
+        "triangles": 10383,
+        "textureSize": 512,
+        "bytes": 1077308
+      },
+      "high": {
+        "triangles": 58376,
+        "textureSize": 2048,
+        "bytes": 12333864
+      }
+    },
+    "hasLeafAlpha": true,
+    "sourcePbr": true
+  }
+]

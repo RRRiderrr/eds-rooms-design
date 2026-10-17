@@ -1,0 +1,61 @@
+{
+  "webgl2": true,
+  "models": [
+    {
+      "id": "armchair-2",
+      "bounds": [
+        0.7382908499200603,
+        0.9205668510723627,
+        0.8878650530851124
+      ],
+      "meshes": 2,
+      "triangles": 8916,
+      "masked": 0,
+      "compressedTextures": 6,
+      "textureCount": 6
+    },
+    {
+      "id": "plant-1",
+      "bounds": [
+        0.5377387198046589,
+        1.2360142446356281,
+        0.5799918737615266
+      ],
+      "meshes": 4,
+      "triangles": 176226,
+      "masked": 1,
+      "compressedTextures": 6,
+      "textureCount": 6
+    },
+    {
+      "id": "plant-2",
+      "bounds": [
+        0.65,
+        0.7798176328371577,
+        0.6094171445814496
+      ],
+      "meshes": 3,
+      "triangles": 69806,
+      "masked": 1,
+      "compressedTextures": 6,
+      "textureCount": 6
+    },
+    {
+      "id": "chair-2",
+      "bounds": [
+        0.40622153969745345,
+        0.9118764945719297,
+        0.5400517366149744
+      ],
+      "meshes": 1,
+      "triangles": 22013,
+      "masked": 0,
+      "compressedTextures": 3,
+      "textureCount": 3
+    }
+  ],
+  "drawCalls": 21,
+  "triangles": 553924,
+  "gpuTextures": 26,
+  "errors": []
+}

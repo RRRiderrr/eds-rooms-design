@@ -1,0 +1,22 @@
+[WebServer] (node:69492) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:60720) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:60720) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 22:39:25 [vite] (client) [console.warn] THREE.WebGLProgram: Program Info Log: (210,86-138): warning X4122: sum of 0.996094 and -2.98545e-017 cannot be represented accurately in double precision
+[WebServer] (209,39-65): warning X4122: sum of 1 and -1.49272e-017 cannot be represented accurately in double precision
+[WebServer] (210,87-113): warning X4122: sum of 1 and -1.49272e-017 cannot be represented accurately in double precision
+[WebServer] (209,39-65): warning X4122: sum of 1 and -1.66644e-018 cannot be represented accurately in double precision
+[WebServer] (210,87-113): warning X4122: sum of 1 and -1.66644e-018 cannot be represented accurately in double precision
+[WebServer] 22:39:27 [vite] (client) [console.warn] THREE.WebGLProgram: Program Info Log: (210,86-138): warning X4122: sum of 0.996094 and -2.98545e-017 cannot be represented accurately in double precision
+[WebServer] (209,39-65): warning X4122: sum of 1 and -1.49272e-017 cannot be represented accurately in double precision
+[WebServer] (210,87-113): warning X4122: sum of 1 and -1.49272e-017 cannot be represented accurately in double precision
+[WebServer] (209,39-65): warning X4122: sum of 1 and -1.66644e-018 cannot be represented accurately in double precision
+[WebServer] (210,87-113): warning X4122: sum of 1 and -1.66644e-018 cannot be represented accurately in double precision
+  ok 1 tests\e2e\navigation.spec.ts:4:1 › actual lounge and full-space windows block walking and raised flight (11.9s)
+
+  1 passed (13.9s)

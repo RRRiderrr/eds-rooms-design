@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "materials": [
+    {
+      "id": "wall-painted",
+      "label": "Тёплая окрашенная штукатурка",
+      "polyhaven": "white_plaster_02",
+      "tileMeters": 1.5,
+      "fallbackColor": "#e8e5d8",
+      "roughness": 0.84,
+      "metalness": 0,
+      "normalStrength": 0.08,
+      "finish": {
+        "target": [
+          232,
+          229,
+          219
+        ],
+        "variation": 0.1
+      },
+      "note": "CC0 scan converted to fine warm interior paint: warm calibrated albedo, scan variation reduced to 10%, restrained .08 normal strength."
+    },
+    {
+      "id": "floor-commercial-grey",
+      "label": "Серое коммерческое покрытие — матовая поверхность",
+      "polyhaven": "smooth_concrete_floor",
+      "tileMeters": 2,
+      "fallbackColor": "#777b7b",
+      "roughness": 0.88,
+      "metalness": 0,
+      "normalStrength": 0.1,
+      "neutralize": true,
+      "note": "Owned Quixel smooth scan calibrated to the photographed matte grey commercial floor. Roughness .88 with restrained scan variation, dielectric finish, no polished clearcoat. Exact flooring product is unknown.",
+      "finish": {
+        "target": [
+          150,
+          153,
+          154
+        ],
+        "variation": 0.6
+      }
+    },
+    {
+      "id": "metal-painted",
+      "label": "Тёмный окрашенный металл",
+      "procedural": "powder-coat",
+      "tileMeters": 0.25,
+      "fallbackColor": "#272d32",
+      "roughness": 0.54,
+      "metalness": 0.08,
+      "normalStrength": 0.12,
+      "baseColorMode": "tint",
+      "note": "Coated surface: preserve authored/curated paint colour. Runtime loads normal and ORM only, avoiding dark-albedo multiplication or baked-light colour contamination."
+    },
+    {
+      "id": "wood-oak",
+      "label": "Натуральный светлый дубовый шпон",
+      "polyhaven": "white_oak_veneer",
+      "tileMeters": 2,
+      "fallbackColor": "#bda17d",
+      "roughness": 0.55,
+      "metalness": 0,
+      "normalStrength": 0.3
+    },
+    {
+      "id": "fabric-woven",
+      "label": "Тканая мебельная обивка",
+      "polyhaven": "denim_fabric",
+      "tileMeters": 1,
+      "fallbackColor": "#9daba8",
+      "roughness": 0.95,
+      "metalness": 0,
+      "normalStrength": 0.14,
+      "neutralize": true,
+      "note": "Neutralized CC0 scanned woven textile; curated upholstery colours are applied by the catalogue."
+    }
+  ],
+  "architectureMapping": [
+    {
+      "match": "^01_WALLS_",
+      "materialId": "wall-painted"
+    },
+    {
+      "match": "^02_FLOOR_",
+      "materialId": "floor-commercial-grey"
+    },
+    {
+      "match": "^(?:05_WINDOW_FRAMES_|15_WALLS_Window_Panels_)",
+      "materialId": "metal-painted-white"
+    },
+    {
+      "match": "^(?:07_CEILING_DECK|08_CEILING_STEEL|03_DOOR_LEAVES|04_DOOR_FRAMES|09_LIGHT_BODIES|13_SKIRTING)_",
+      "materialId": "metal-painted"
+    }
+  ]
+}

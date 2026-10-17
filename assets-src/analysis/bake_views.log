@@ -1,0 +1,13 @@
+00:00.468  blend            | Read blend: "C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\assets-src\room_archviz.blend"
+00:07.703  render           | Saved: 'C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\public\assets\architecture\environment.hdr'
+00:36.859  render           | Saved: 'C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\public\assets\architecture\fallback.jpg'
+<string>:26: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+Traceback (most recent call last):
+  File "C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\tools\bake_room_views.py", line 8, in <module>
+    exec(code[code.index('def camera('):])
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 45, in <module>
+NameError: name 'targets' is not defined
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

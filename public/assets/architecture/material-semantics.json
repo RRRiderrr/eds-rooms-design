@@ -1,0 +1,460 @@
+{
+  "schemaVersion": 1,
+  "matching": "EXACT original material names, never mesh-name WALL substring",
+  "materials": {
+    "01_WALLS_Plain_Warm_White": {
+      "role": "wall-paint",
+      "pbrMaterialId": "wall-painted",
+      "editorColor": "#e6e9e4",
+      "sourceLinearColor": [
+        0.7300000190734863,
+        0.699999988079071,
+        0.6000000238418579,
+        1.0
+      ],
+      "roughness": 0.6499999761581421,
+      "forceNoAlbedoMap": false,
+      "glass": null
+    },
+    "02_FLOOR_Plain_Cool_Grey": {
+      "role": "floor-commercial",
+      "pbrMaterialId": "floor-commercial-grey",
+      "editorColor": "#ccd4d7",
+      "sourceLinearColor": [
+        0.28999999165534973,
+        0.3199999928474426,
+        0.36000001430511475,
+        1.0
+      ],
+      "roughness": 0.7799999713897705,
+      "forceNoAlbedoMap": false,
+      "glass": null
+    },
+    "03_DOOR_LEAVES_Plain_Neutral_Grey": {
+      "role": "door-leaf",
+      "pbrMaterialId": null,
+      "editorColor": "#92a1a9",
+      "sourceLinearColor": [
+        0.15000000596046448,
+        0.15199999511241913,
+        0.1599999964237213,
+        1.0
+      ],
+      "roughness": 0.5799999833106995,
+      "forceNoAlbedoMap": false,
+      "glass": null
+    },
+    "04_DOOR_FRAMES_Plain_Graphite": {
+      "role": "door-frame",
+      "pbrMaterialId": null,
+      "editorColor": "#72848c",
+      "sourceLinearColor": [
+        0.07000000029802322,
+        0.07000000029802322,
+        0.07400000095367432,
+        1.0
+      ],
+      "roughness": 0.5199999809265137,
+      "forceNoAlbedoMap": false,
+      "glass": null
+    },
+    "05_WINDOW_FRAMES_Plain_Ivory": {
+      "role": "window-frame-white",
+      "pbrMaterialId": null,
+      "editorColor": "#f6f7f2",
+      "sourceLinearColor": [
+        0.7300000190734863,
+        0.7900000214576721,
+        0.8100000023841858,
+        1.0
+      ],
+      "roughness": 0.47999998927116394,
+      "forceNoAlbedoMap": true,
+      "glass": null
+    },
+    "06_WINDOW_PANES_Plain_Blue": {
+      "role": "glass-clear",
+      "pbrMaterialId": null,
+      "editorColor": "#a5cbd3",
+      "sourceLinearColor": [
+        0.2199999988079071,
+        0.41999998688697815,
+        0.5,
+        1.0
+      ],
+      "roughness": 0.30000001192092896,
+      "forceNoAlbedoMap": false,
+      "glass": {
+        "transmission": 0.96,
+        "roughness": 0.045,
+        "ior": 1.5,
+        "thickness": 0.018,
+        "color": "#f5fcff"
+      }
+    },
+    "07_CEILING_DECK_Plain_Charcoal": {
+      "role": "ceiling-dark-painted-metal",
+      "pbrMaterialId": null,
+      "editorColor": "#a6b5bd",
+      "sourceLinearColor": [
+        0.08500000089406967,
+        0.10999999940395355,
+        0.14000000059604645,
+        1.0
+      ],
+      "roughness": 0.7200000286102295,
+      "forceNoAlbedoMap": true,
+      "glass": null
+    },
+    "08_CEILING_STEEL_Plain_Dark_Grey": {
+      "role": "ceiling-dark-painted-metal",
+      "pbrMaterialId": null,
+      "editorColor": "#a6b5bd",
+      "sourceLinearColor": [
+        0.054999999701976776,
+        0.07500000298023224,
+        0.0949999988079071,
+        1.0
+      ],
+      "roughness": 0.5199999809265137,
+      "forceNoAlbedoMap": true,
+      "glass": null
+    },
+    "09_LIGHT_BODIES_Plain_Graphite": {
+      "role": "fixture-dark-metal",
+      "pbrMaterialId": null,
+      "editorColor": "#8d9fa8",
+      "sourceLinearColor": [
+        0.05999999865889549,
+        0.07000000029802322,
+        0.07999999821186066,
+        1.0
+      ],
+      "roughness": 0.44999998807907104,
+      "forceNoAlbedoMap": false,
+      "glass": null
+    },
+    "10_LIGHT_DIFFUSERS_Plain_White": {
+      "role": "light-diffuser",
+      "pbrMaterialId": null,
+      "editorColor": "#fff8d9",
+      "sourceLinearColor": [
+        0.8999999761581421,
+        0.9599999785423279,
+        1.0,
+        1.0
+      ],
+      "roughness": 0.4000000059604645,
+      "forceNoAlbedoMap": false,
+      "glass": null
+    },
+    "11_HVAC_Cassettes_Plain_Light_Grey": {
+      "role": "hvac",
+      "pbrMaterialId": null,
+      "editorColor": "#c8d0d1",
+      "sourceLinearColor": [
+        0.47999998927116394,
+        0.550000011920929,
+        0.5899999737739563,
+        1.0
+      ],
+      "roughness": 0.6499999761581421,
+      "forceNoAlbedoMap": false,
+      "glass": null
+    },
+    "12_FIXTURES_Plain_Dark_Grey": {
+      "role": "fixture",
+      "pbrMaterialId": null,
+      "editorColor": "#a9b8be",
+      "sourceLinearColor": [
+        0.12999999523162842,
+        0.14000000059604645,
+        0.1599999964237213,
+        1.0
+      ],
+      "roughness": 0.5,
+      "forceNoAlbedoMap": false,
+      "glass": null
+    },
+    "13_SKIRTING_Plain_Mid_Grey": {
+      "role": "fixture",
+      "pbrMaterialId": null,
+      "editorColor": "#a9b8be",
+      "sourceLinearColor": [
+        0.2800000011920929,
+        0.33000001311302185,
+        0.36000001430511475,
+        1.0
+      ],
+      "roughness": 0.6000000238418579,
+      "forceNoAlbedoMap": false,
+      "glass": null
+    },
+    "14_HANDLES_Plain_Silver": {
+      "role": "fixture",
+      "pbrMaterialId": null,
+      "editorColor": "#a9b8be",
+      "sourceLinearColor": [
+        0.5600000023841858,
+        0.5899999737739563,
+        0.6000000238418579,
+        1.0
+      ],
+      "roughness": 0.25,
+      "forceNoAlbedoMap": false,
+      "glass": null
+    },
+    "15_WALLS_Window_Panels_Plain_White": {
+      "role": "wall-paint",
+      "pbrMaterialId": "wall-painted",
+      "editorColor": "#e6e9e4",
+      "sourceLinearColor": [
+        0.8199999928474426,
+        0.8500000238418579,
+        0.8399999737739563,
+        1.0
+      ],
+      "roughness": 0.6499999761581421,
+      "forceNoAlbedoMap": false,
+      "glass": null
+    },
+    "16_DESK_TOPS_Plain_White": {
+      "role": "furniture-white",
+      "pbrMaterialId": null,
+      "editorColor": "#f0f1eb",
+      "sourceLinearColor": [
+        0.8700000047683716,
+        0.8799999952316284,
+        0.8600000143051147,
+        1.0
+      ],
+      "roughness": 0.5799999833106995,
+      "forceNoAlbedoMap": false,
+      "glass": null
+    },
+    "17_DESK_FRAMES_Plain_Black": {
+      "role": "fixture-black",
+      "pbrMaterialId": null,
+      "editorColor": "#536872",
+      "sourceLinearColor": [
+        0.02500000037252903,
+        0.029999999329447746,
+        0.03500000014901161,
+        1.0
+      ],
+      "roughness": 0.5799999833106995,
+      "forceNoAlbedoMap": false,
+      "glass": null
+    },
+    "18_DRAWER_CABINETS_Plain_Grey": {
+      "role": "fixture",
+      "pbrMaterialId": null,
+      "editorColor": "#a9b8be",
+      "sourceLinearColor": [
+        0.30000001192092896,
+        0.3199999928474426,
+        0.3400000035762787,
+        1.0
+      ],
+      "roughness": 0.5799999833106995,
+      "forceNoAlbedoMap": false,
+      "glass": null
+    },
+    "19_DESK_CABINET_SIDES_Plain_Dark_Grey": {
+      "role": "fixture",
+      "pbrMaterialId": null,
+      "editorColor": "#a9b8be",
+      "sourceLinearColor": [
+        0.10499999672174454,
+        0.11999999731779099,
+        0.13500000536441803,
+        1.0
+      ],
+      "roughness": 0.5799999833106995,
+      "forceNoAlbedoMap": false,
+      "glass": null
+    },
+    "DOOR_HARDWARE_Plain_Black": {
+      "role": "fixture-black",
+      "pbrMaterialId": null,
+      "editorColor": "#536872",
+      "sourceLinearColor": [
+        0.014000000432133675,
+        0.014999999664723873,
+        0.017000000923871994,
+        1.0
+      ],
+      "roughness": 0.41999998688697815,
+      "forceNoAlbedoMap": false,
+      "glass": null
+    },
+    "DOOR_LOCK_CYLINDERS_Plain_Dark_Metal": {
+      "role": "fixture",
+      "pbrMaterialId": null,
+      "editorColor": "#a9b8be",
+      "sourceLinearColor": [
+        0.10000000149011612,
+        0.10499999672174454,
+        0.10999999940395355,
+        1.0
+      ],
+      "roughness": 0.30000001192092896,
+      "forceNoAlbedoMap": false,
+      "glass": null
+    },
+    "ELECTRICAL_DETAIL_Black_Housing": {
+      "role": "electrical-black",
+      "pbrMaterialId": null,
+      "editorColor": "#536872",
+      "sourceLinearColor": [
+        0.017999999225139618,
+        0.02199999988079071,
+        0.026000000536441803,
+        1.0
+      ],
+      "roughness": 0.41999998688697815,
+      "forceNoAlbedoMap": false,
+      "glass": null
+    },
+    "ELECTRICAL_DETAIL_Black_Recess": {
+      "role": "electrical-black",
+      "pbrMaterialId": null,
+      "editorColor": "#536872",
+      "sourceLinearColor": [
+        0.014000000432133675,
+        0.017000000923871994,
+        0.019999999552965164,
+        1.0
+      ],
+      "roughness": 0.5199999809265137,
+      "forceNoAlbedoMap": false,
+      "glass": null
+    },
+    "ELECTRICAL_DETAIL_Black_Rim": {
+      "role": "electrical-black",
+      "pbrMaterialId": null,
+      "editorColor": "#536872",
+      "sourceLinearColor": [
+        0.029999999329447746,
+        0.03500000014901161,
+        0.03999999910593033,
+        1.0
+      ],
+      "roughness": 0.3199999928474426,
+      "forceNoAlbedoMap": false,
+      "glass": null
+    },
+    "ELECTRICAL_DETAIL_Contact_Bore_Interior": {
+      "role": "fixture",
+      "pbrMaterialId": null,
+      "editorColor": "#a9b8be",
+      "sourceLinearColor": [
+        0.03500000014901161,
+        0.03999999910593033,
+        0.04600000008940697,
+        1.0
+      ],
+      "roughness": 0.47999998927116394,
+      "forceNoAlbedoMap": false,
+      "glass": null
+    },
+    "ELECTRICAL_DETAIL_Data_Insert_Light_Grey": {
+      "role": "fixture",
+      "pbrMaterialId": null,
+      "editorColor": "#a9b8be",
+      "sourceLinearColor": [
+        0.6800000071525574,
+        0.7200000286102295,
+        0.7400000095367432,
+        1.0
+      ],
+      "roughness": 0.41999998688697815,
+      "forceNoAlbedoMap": false,
+      "glass": null
+    },
+    "ELECTRICAL_DETAIL_Earthing_Contacts": {
+      "role": "fixture",
+      "pbrMaterialId": null,
+      "editorColor": "#a9b8be",
+      "sourceLinearColor": [
+        0.5299999713897705,
+        0.5600000023841858,
+        0.6000000238418579,
+        1.0
+      ],
+      "roughness": 0.23999999463558197,
+      "forceNoAlbedoMap": false,
+      "glass": null
+    },
+    "ELECTRICAL_DETAIL_RJ45_Gold_Contacts": {
+      "role": "fixture",
+      "pbrMaterialId": null,
+      "editorColor": "#a9b8be",
+      "sourceLinearColor": [
+        0.6600000262260437,
+        0.41999998688697815,
+        0.10999999940395355,
+        1.0
+      ],
+      "roughness": 0.23000000417232513,
+      "forceNoAlbedoMap": false,
+      "glass": null
+    },
+    "ELECTRICAL_DETAIL_White_Conduit": {
+      "role": "electrical-white",
+      "pbrMaterialId": null,
+      "editorColor": "#f0f1eb",
+      "sourceLinearColor": [
+        0.7799999713897705,
+        0.800000011920929,
+        0.8100000023841858,
+        1.0
+      ],
+      "roughness": 0.47999998927116394,
+      "forceNoAlbedoMap": true,
+      "glass": null
+    },
+    "ELECTRICAL_DETAIL_White_Housing": {
+      "role": "electrical-white",
+      "pbrMaterialId": null,
+      "editorColor": "#f0f1eb",
+      "sourceLinearColor": [
+        0.7699999809265137,
+        0.7900000214576721,
+        0.800000011920929,
+        1.0
+      ],
+      "roughness": 0.36000001430511475,
+      "forceNoAlbedoMap": true,
+      "glass": null
+    },
+    "ELECTRICAL_DETAIL_White_Recess": {
+      "role": "electrical-white",
+      "pbrMaterialId": null,
+      "editorColor": "#f0f1eb",
+      "sourceLinearColor": [
+        0.6499999761581421,
+        0.6800000071525574,
+        0.6899999976158142,
+        1.0
+      ],
+      "roughness": 0.47999998927116394,
+      "forceNoAlbedoMap": true,
+      "glass": null
+    },
+    "ELECTRICAL_DETAIL_White_Rim": {
+      "role": "electrical-white",
+      "pbrMaterialId": null,
+      "editorColor": "#f0f1eb",
+      "sourceLinearColor": [
+        0.8600000143051147,
+        0.8700000047683716,
+        0.8700000047683716,
+        1.0
+      ],
+      "roughness": 0.30000001192092896,
+      "forceNoAlbedoMap": true,
+      "glass": null
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "files": {
+    "baseColor": "E:/ArchViz_Resources/RoomAtelier/materials/metal-painted/original/d447757a7cb0/baseColor.jpg",
+    "normal": "E:/ArchViz_Resources/RoomAtelier/materials/metal-painted/original/d447757a7cb0/normal.jpg",
+    "roughness": "E:/ArchViz_Resources/RoomAtelier/materials/metal-painted/original/d447757a7cb0/roughness.jpg",
+    "ao": "E:/ArchViz_Resources/RoomAtelier/materials/metal-painted/original/d447757a7cb0/ao.jpg"
+  },
+  "source": "Quixel Megascans Painted Metal Door ugzobcglw - owned Fab library download",
+  "license": "Fab Standard",
+  "licenseEvidence": "Epic Games Launcher / Fab UI showed Saved in library before Download Only, then On disk 8.03 MB; medium texture set downloaded 2026-10-17 without a purchase, login or new agreement. Local cache Painted_Metal_Door-c9661075.",
+  "tileMeters": [
+    2,
+    1
+  ],
+  "note": "Owned Quixel/Fab intact painted metal. The runtime preserves authored paint colours and uses normal/roughness data only, so ceilings stay dark and frames stay white. This scan is painted metal; a specific powder-coating manufacture is not asserted."
+}

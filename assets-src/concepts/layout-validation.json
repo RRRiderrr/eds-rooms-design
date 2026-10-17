@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-17T19:43:14.117Z",
+  "presets": [
+    {
+      "id": "builtin-0",
+      "name": "0: Порожній простір",
+      "objects": 5,
+      "valid": true
+    },
+    {
+      "id": "builtin-1",
+      "name": "1: Тепла Скандинавія",
+      "objects": 23,
+      "valid": true
+    },
+    {
+      "id": "builtin-2",
+      "name": "2: М’який індустріальний",
+      "objects": 22,
+      "valid": true
+    },
+    {
+      "id": "builtin-3",
+      "name": "3: Мінімалістичні технології",
+      "objects": 22,
+      "valid": true
+    },
+    {
+      "id": "builtin-4",
+      "name": "4: Темний преміум · розмова",
+      "objects": 22,
+      "valid": true
+    },
+    {
+      "id": "builtin-5",
+      "name": "5: Світлий преміум · робота біля вікна",
+      "objects": 23,
+      "valid": true
+    },
+    {
+      "id": "builtin-6",
+      "name": "6: Біофільний відпочинок",
+      "objects": 23,
+      "valid": true
+    },
+    {
+      "id": "builtin-7",
+      "name": "7: Творча студія",
+      "objects": 24,
+      "valid": true
+    },
+    {
+      "id": "builtin-8",
+      "name": "8: Сучасний коворкінг",
+      "objects": 23,
+      "valid": true
+    },
+    {
+      "id": "builtin-9",
+      "name": "9: Неформальні ділові зустрічі",
+      "objects": 22,
+      "valid": true
+    },
+    {
+      "id": "builtin-10",
+      "name": "10: Гнучка співпраця",
+      "objects": 23,
+      "valid": true
+    },
+    {
+      "id": "builtin-11",
+      "name": "11: Кав’ярня для роботи",
+      "objects": 23,
+      "valid": true
+    },
+    {
+      "id": "builtin-12",
+      "name": "12: Акустична зосередженість",
+      "objects": 23,
+      "valid": true
+    },
+    {
+      "id": "builtin-13",
+      "name": "13: Медіазона та презентації",
+      "objects": 23,
+      "valid": true
+    },
+    {
+      "id": "builtin-14",
+      "name": "14: Тепла бібліотека",
+      "objects": 23,
+      "valid": true
+    },
+    {
+      "id": "builtin-15",
+      "name": "15: Відкритий форум",
+      "objects": 23,
+      "valid": true
+    }
+  ],
+  "issues": []
+}

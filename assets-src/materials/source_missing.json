@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 2,
+  "checkedAt": "2026-10-17",
+  "status": "All five required production material roles have available sources. Four owned Fab/Quixel surfaces and one user-authorized local Megascans fabric are ingested.",
+  "auditedLocations": [
+    {
+      "path": "C:/Users/kakuc/Documents/Megascans Library",
+      "result": "UAssets metadata only; no surface textures"
+    },
+    {
+      "path": "E:/Megascans Library",
+      "result": "One surface: Furniture Fabric sjfvce3c, downloaded 2022; albedo, normal and roughness 2K exist"
+    },
+    {
+      "path": "C:/Users/kakuc/AppData/Local/FabPlugins",
+      "result": "Fab Unreal integration binaries, no downloaded material source assets"
+    },
+    {
+      "provider": "Plugin Management",
+      "query": "Fab Quixel Megascans",
+      "result": "No connected/download-capable provider returned"
+    },
+    {
+      "provider": "Available browser inventory",
+      "result": "Only Codex in-app/MCP tabs were available; no existing signed-in Fab/Quixel browser library session found.",
+      "note": "Historical browser inventory only; superseded by successful native Epic Games Launcher access on 2026-10-17."
+    },
+    {
+      "provider": "Epic Games Launcher Fab My Library",
+      "result": "Authorized library opened: 517 owned items. Painted Plaster pjBoU0 downloaded without purchase to E:/ArchViz_Resources/FabDownloads. On continuation native automation could not initialize after one kernel reset (missing runtime path); no access workaround was used."
+    },
+    {
+      "provider": "Native Epic Games Launcher / Fab using documented Computer Use @oai/sky",
+      "checkedAt": "2026-10-17",
+      "result": "Authorized My Library showed 517 ordinary entries and a Quixel collection entry point. Painted Plaster, Smooth Concrete, Oak Veneer and Painted Metal Door were specifically observed as Saved in library before Download Only; all four completed to On disk. No purchase, account login or new agreement.",
+      "downloadCache": "E:/ArchViz_Resources/FabDownloads/VaultCache"
+    },
+    {
+      "provider": "Fab My Library targeted furniture search",
+      "query": "sofa",
+      "checkedAt": "2026-10-17",
+      "result": "No products returned. No broad search, purchase or unrelated antique substitution."
+    }
+  ],
+  "localCandidates": [
+    {
+      "id": "sjfvce3c",
+      "label": "Megascans Furniture Fabric",
+      "path": "E:/Megascans Library/Downloaded/surface/fabric_furniture fabric_sjfvce3c",
+      "tileMeters": 1,
+      "status": "2K albedo/normal/roughness ingested from the user-authorized local library; acquisition entitlement is not encoded in metadata",
+      "productionIncluded": true,
+      "reason": "User authorized existing local resources. Source metadata does not explicitly state UE-only; this project does not claim verified Fab Standard entitlement."
+    },
+    {
+      "id": "pjBoU0",
+      "label": "Quixel Painted Plaster",
+      "path": "E:/ArchViz_Resources/FabDownloads/VaultCache/FabLibrary/Painted_Plaster-c698e997",
+      "productionIncluded": true,
+      "license": "Fab Standard",
+      "tileMeters": 1
+    }
+  ],
+  "missing": [],
+  "automaticReplacement": "Add per-material entries to assets-src/materials/overrides.json: {materials:[{id,license,licenseEvidence,sourceLabel,tileMeters,files:{baseColor,normal,roughness,ao,metalness}}]}. Paths may be absolute local files. Run npm run assets; no application changes are required.",
+  "fallbacks": "Explicitly labelled Poly Haven CC0 plaster/floor/oak/fabric and original coating remain configured in sources.json. Current wall, floor, wood and metal production maps use the owned Fab sources, not those fallbacks.",
+  "references": [
+    "https://www.fab.com/eula",
+    "https://polyhaven.com/license"
+  ],
+  "available": [
+    {
+      "target": "wall-painted",
+      "sourceId": "pjBoU0",
+      "source": "Quixel Megascans Painted Plaster pjBoU0 - owned Fab library download",
+      "license": "Fab Standard",
+      "licenseEvidence": "Epic Games Launcher / Fab UI showed Saved in library before Download Only, then On disk 19.39 MB; medium texture set downloaded 2026-10-17 without a purchase, login or new agreement. Local cache Painted_Plaster-c698e997.",
+      "tileMeters": 1,
+      "productionIncluded": true,
+      "sourceFiles": {
+        "baseColor": "E:\\ArchViz_Resources\\FabDownloads\\VaultCache\\FabLibrary\\Painted_Plaster-c698e997\\texture-set\\mid\\painted_plaster_pjbou0_2_extracted\\Painted_Plaster_pjBoU0_2K_BaseColor.jpg",
+        "normal": "E:\\ArchViz_Resources\\FabDownloads\\VaultCache\\FabLibrary\\Painted_Plaster-c698e997\\texture-set\\mid\\painted_plaster_pjbou0_2_extracted\\Painted_Plaster_pjBoU0_2K_Normal.jpg",
+        "roughness": "E:\\ArchViz_Resources\\FabDownloads\\VaultCache\\FabLibrary\\Painted_Plaster-c698e997\\texture-set\\mid\\painted_plaster_pjbou0_2_extracted\\Painted_Plaster_pjBoU0_2K_Roughness.jpg",
+        "ao": "E:\\ArchViz_Resources\\FabDownloads\\VaultCache\\FabLibrary\\Painted_Plaster-c698e997\\texture-set\\mid\\painted_plaster_pjbou0_2_extracted\\Painted_Plaster_pjBoU0_2K_AO.jpg"
+      }
+    },
+    {
+      "target": "floor-commercial-grey",
+      "sourceId": "tezmdjno",
+      "source": "Quixel Megascans Smooth Concrete tezmdjno - owned Fab library download",
+      "license": "Fab Standard",
+      "licenseEvidence": "Epic Games Launcher / Fab UI showed Saved in library before Download Only, then On disk 15.31 MB; medium texture set downloaded 2026-10-17 without a purchase, login or new agreement. Local cache Smooth_Concrete-6c270df9.",
+      "tileMeters": 2,
+      "productionIncluded": true,
+      "sourceFiles": {
+        "baseColor": "E:\\ArchViz_Resources\\FabDownloads\\VaultCache\\FabLibrary\\Smooth_Concrete-6c270df9\\texture-set\\mid\\smooth_concrete_tezmdjno_extracted\\Smooth_Concrete_tezmdjno_2K_BaseColor.jpg",
+        "normal": "E:\\ArchViz_Resources\\FabDownloads\\VaultCache\\FabLibrary\\Smooth_Concrete-6c270df9\\texture-set\\mid\\smooth_concrete_tezmdjno_extracted\\Smooth_Concrete_tezmdjno_2K_Normal.jpg",
+        "roughness": "E:\\ArchViz_Resources\\FabDownloads\\VaultCache\\FabLibrary\\Smooth_Concrete-6c270df9\\texture-set\\mid\\smooth_concrete_tezmdjno_extracted\\Smooth_Concrete_tezmdjno_2K_Roughness.jpg",
+        "ao": "E:\\ArchViz_Resources\\FabDownloads\\VaultCache\\FabLibrary\\Smooth_Concrete-6c270df9\\texture-set\\mid\\smooth_concrete_tezmdjno_extracted\\Smooth_Concrete_tezmdjno_2K_AO.jpg"
+      }
+    },
+    {
+      "target": "wood-oak",
+      "sourceId": "tfjcffgc",
+      "source": "Quixel Megascans Oak Veneer tfjcffgc - owned Fab library download",
+      "license": "Fab Standard",
+      "licenseEvidence": "Epic Games Launcher / Fab UI showed Saved in library before Download Only, then On disk 5.25 MB; medium texture set downloaded 2026-10-17 without a purchase, login or new agreement. Local cache Oak_Veneer-b93dc40c.",
+      "tileMeters": [
+        2,
+        4
+      ],
+      "productionIncluded": true,
+      "sourceFiles": {
+        "baseColor": "E:\\ArchViz_Resources\\FabDownloads\\VaultCache\\FabLibrary\\Oak_Veneer-b93dc40c\\texture-set\\mid\\oak_veneer_tfjcffgc_2k_extracted\\Oak_Veneer_tfjcffgc_2K_BaseColor.jpg",
+        "normal": "E:\\ArchViz_Resources\\FabDownloads\\VaultCache\\FabLibrary\\Oak_Veneer-b93dc40c\\texture-set\\mid\\oak_veneer_tfjcffgc_2k_extracted\\Oak_Veneer_tfjcffgc_2K_Normal.jpg",
+        "roughness": "E:\\ArchViz_Resources\\FabDownloads\\VaultCache\\FabLibrary\\Oak_Veneer-b93dc40c\\texture-set\\mid\\oak_veneer_tfjcffgc_2k_extracted\\Oak_Veneer_tfjcffgc_2K_Roughness.jpg"
+      }
+    },
+    {
+      "target": "metal-painted",
+      "sourceId": "ugzobcglw",
+      "source": "Quixel Megascans Painted Metal Door ugzobcglw - owned Fab library download",
+      "license": "Fab Standard",
+      "licenseEvidence": "Epic Games Launcher / Fab UI showed Saved in library before Download Only, then On disk 8.03 MB; medium texture set downloaded 2026-10-17 without a purchase, login or new agreement. Local cache Painted_Metal_Door-c9661075.",
+      "tileMeters": [
+        2,
+        1
+      ],
+      "productionIncluded": true,
+      "sourceFiles": {
+        "baseColor": "E:\\ArchViz_Resources\\FabDownloads\\VaultCache\\FabLibrary\\Painted_Metal_Door-c9661075\\texture-set\\mid\\painted_metal_door_ugzob_extracted\\Painted_Metal_Door_ugzobcglw_2K_BaseColor.jpg",
+        "normal": "E:\\ArchViz_Resources\\FabDownloads\\VaultCache\\FabLibrary\\Painted_Metal_Door-c9661075\\texture-set\\mid\\painted_metal_door_ugzob_extracted\\Painted_Metal_Door_ugzobcglw_2K_Normal.jpg",
+        "roughness": "E:\\ArchViz_Resources\\FabDownloads\\VaultCache\\FabLibrary\\Painted_Metal_Door-c9661075\\texture-set\\mid\\painted_metal_door_ugzob_extracted\\Painted_Metal_Door_ugzobcglw_2K_Roughness.jpg",
+        "ao": "E:\\ArchViz_Resources\\FabDownloads\\VaultCache\\FabLibrary\\Painted_Metal_Door-c9661075\\texture-set\\mid\\painted_metal_door_ugzob_extracted\\Painted_Metal_Door_ugzobcglw_2K_AO.jpg"
+      }
+    }
+  ],
+  "remainingLimits": [
+    {
+      "target": "exact-original-floor-product",
+      "status": "Unknown; the smooth scan is calibrated to the photograph, not a claim to identify the installed commercial product."
+    },
+    {
+      "target": "fabric-woven entitlement evidence",
+      "status": "Old local Bridge metadata does not encode the acquisition license. User authorized the local resource; no Fab Standard entitlement is claimed for sjfvce3c. Optional CC0 fabric remains configured."
+    },
+    {
+      "target": "additional realistic sofa",
+      "status": "The targeted My Library search returned no items. Existing project-authored sofa geometry remains, without claiming a library model was obtained."
+    }
+  ],
+  "productionManifest": "public/assets/materials/manifest.json",
+  "sourceMapping": "assets-src/materials/overrides.json",
+  "sourceRegistration": "node tools/register-fab-materials.mjs",
+  "heavyResourceRoot": "E:/ArchViz_Resources"
+}

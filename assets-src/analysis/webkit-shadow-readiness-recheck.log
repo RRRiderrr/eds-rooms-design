@@ -1,0 +1,12 @@
+[WebServer] (node:58100) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:72588) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:72588) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [webkit-tablet] › tests\e2e\editor.spec.ts:30:2 › Measured lounge / production editor › all16 presets, empty0, both modes and actual room remain coherent (2.0m)
+
+  1 passed (2.1m)

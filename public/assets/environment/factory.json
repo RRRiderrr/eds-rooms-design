@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "type": "genuine scene-linear Cycles render, not LDR promotion",
+  "source": "Actual office corrugated deck and steel truss geometry reused in a separate photo-derived industrial factory backdrop; grey hall trusses and yellow crane beams follow supplied reference. Factory exterior dimensions are a background reconstruction, never an edit of the measured room.",
+  "referencePhoto": "codex-clipboard-150ced87-85c5-42c2-9bfe-69830e75ea65.png",
+  "projection": "equirectangular",
+  "high": "assets/environment/factory.hdr",
+  "medium": "assets/environment/factory-2k.hdr",
+  "low": "assets/environment/factory-1k.hdr",
+  "dimensions": [
+    4096,
+    2048
+  ],
+  "linearRGBRange": [
+    0.0020880524534732103,
+    40.48358154296875
+  ],
+  "percentile99": 0.340939462184906,
+  "samples": 64,
+  "bounces": 8,
+  "renderSeconds": 45.52248024940491,
+  "frontUV": [
+    0.5,
+    0.5
+  ],
+  "recommendedInitialBackgroundRotationY": -1.5707963267948966,
+  "authoringFile": "E:/ArchViz_Resources/factory/factory_environment.blend",
+  "windowProjection": {
+    "url": "assets/environment/factory-window.hdr",
+    "projection": "perspective planar",
+    "resolution": [
+      2048,
+      640
+    ],
+    "linearRGBRange": [
+      0.0035913842730224133,
+      41.82984924316406
+    ],
+    "anchors": "assets/architecture/runtime-lighting.json.windowBackdrops"
+  }
+}

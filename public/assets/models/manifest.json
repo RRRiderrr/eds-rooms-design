@@ -1,0 +1,5358 @@
+{
+  "schemaVersion": 1,
+  "projectId": "polycam-lounge-room",
+  "generator": "EDS rooms design — original modular furniture",
+  "generatedAt": "2026-10-17T19:43:13.725Z",
+  "units": "metres",
+  "upAxis": "Y",
+  "assets": [
+    {
+      "assetId": "sofa",
+      "variant": 1,
+      "label": "1 / М’який — двомісний",
+      "category": "seating",
+      "placement": "floor",
+      "dimensions": [
+        1.8,
+        0.79,
+        0.84
+      ],
+      "materials": [
+        {
+          "id": "oat",
+          "label": "Вівсяна тканина",
+          "color": "#c8bca8",
+          "surface": "fabric"
+        },
+        {
+          "id": "graphite",
+          "label": "Графітова тканина",
+          "color": "#414749",
+          "surface": "fabric"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієва тканина",
+          "color": "#7b9182",
+          "surface": "fabric"
+        },
+        {
+          "id": "ochre",
+          "label": "Тепла охра",
+          "color": "#b38b48",
+          "surface": "fabric"
+        },
+        {
+          "id": "blue",
+          "label": "Синій текстиль",
+          "color": "#465f79",
+          "surface": "fabric"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#ad7562",
+          "surface": "fabric"
+        }
+      ],
+      "production": "assets/models/sofa-1.glb",
+      "proxy": "assets/proxies/sofa-1.glb",
+      "quality": {
+        "high": "assets/models/sofa-1.glb",
+        "medium": "assets/models/sofa-1.glb",
+        "low": "assets/models/sofa-1.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.8999999761581421,
+          -2.98023217215615e-10,
+          -0.41499999165534973
+        ],
+        "max": [
+          0.8999999761581421,
+          0.7699999809265137,
+          0.4000000059604645
+        ],
+        "size": [
+          1.7999999523162842,
+          0.7699999812245368,
+          0.8149999976158142
+        ]
+      },
+      "bytes": {
+        "production": 694804,
+        "proxy": 14820
+      }
+    },
+    {
+      "assetId": "sofa",
+      "variant": 2,
+      "label": "2 / Каркасний — тримісний",
+      "category": "seating",
+      "placement": "floor",
+      "dimensions": [
+        2.18,
+        0.77,
+        0.86
+      ],
+      "materials": [
+        {
+          "id": "oat",
+          "label": "Вівсяна тканина",
+          "color": "#c8bca8",
+          "surface": "fabric"
+        },
+        {
+          "id": "graphite",
+          "label": "Графітова тканина",
+          "color": "#414749",
+          "surface": "fabric"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієва тканина",
+          "color": "#7b9182",
+          "surface": "fabric"
+        },
+        {
+          "id": "ochre",
+          "label": "Тепла охра",
+          "color": "#b38b48",
+          "surface": "fabric"
+        },
+        {
+          "id": "blue",
+          "label": "Синій текстиль",
+          "color": "#465f79",
+          "surface": "fabric"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#ad7562",
+          "surface": "fabric"
+        }
+      ],
+      "production": "assets/models/sofa-2.glb",
+      "proxy": "assets/proxies/sofa-2.glb",
+      "quality": {
+        "high": "assets/models/sofa-2.glb",
+        "medium": "assets/models/sofa-2.glb",
+        "low": "assets/models/sofa-2.glb"
+      },
+      "bounds": {
+        "min": [
+          -1.090000033378601,
+          -2.98023217215615e-10,
+          -0.42500001192092896
+        ],
+        "max": [
+          1.090000033378601,
+          0.75,
+          0.4099999964237213
+        ],
+        "size": [
+          2.180000066757202,
+          0.7500000002980232,
+          0.8350000083446503
+        ]
+      },
+      "bytes": {
+        "production": 917700,
+        "proxy": 17216
+      }
+    },
+    {
+      "assetId": "sofa",
+      "variant": 3,
+      "label": "3 / Низький — модульний",
+      "category": "seating",
+      "placement": "floor",
+      "dimensions": [
+        2.12,
+        0.69,
+        0.9
+      ],
+      "materials": [
+        {
+          "id": "oat",
+          "label": "Вівсяна тканина",
+          "color": "#c8bca8",
+          "surface": "fabric"
+        },
+        {
+          "id": "graphite",
+          "label": "Графітова тканина",
+          "color": "#414749",
+          "surface": "fabric"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієва тканина",
+          "color": "#7b9182",
+          "surface": "fabric"
+        },
+        {
+          "id": "ochre",
+          "label": "Тепла охра",
+          "color": "#b38b48",
+          "surface": "fabric"
+        },
+        {
+          "id": "blue",
+          "label": "Синій текстиль",
+          "color": "#465f79",
+          "surface": "fabric"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#ad7562",
+          "surface": "fabric"
+        }
+      ],
+      "production": "assets/models/sofa-3.glb",
+      "proxy": "assets/proxies/sofa-3.glb",
+      "quality": {
+        "high": "assets/models/sofa-3.glb",
+        "medium": "assets/models/sofa-3.glb",
+        "low": "assets/models/sofa-3.glb"
+      },
+      "bounds": {
+        "min": [
+          -1.059999942779541,
+          1.490116086078075e-10,
+          -0.4449999928474426
+        ],
+        "max": [
+          1.059999942779541,
+          0.6700000166893005,
+          0.4300000071525574
+        ],
+        "size": [
+          2.119999885559082,
+          0.670000016540289,
+          0.875
+        ]
+      },
+      "bytes": {
+        "production": 691352,
+        "proxy": 14604
+      }
+    },
+    {
+      "assetId": "sofa",
+      "variant": 4,
+      "label": "4 / Компактний",
+      "category": "seating",
+      "placement": "floor",
+      "dimensions": [
+        1.55,
+        0.8,
+        0.78
+      ],
+      "materials": [
+        {
+          "id": "oat",
+          "label": "Вівсяна тканина",
+          "color": "#c8bca8",
+          "surface": "fabric"
+        },
+        {
+          "id": "graphite",
+          "label": "Графітова тканина",
+          "color": "#414749",
+          "surface": "fabric"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієва тканина",
+          "color": "#7b9182",
+          "surface": "fabric"
+        },
+        {
+          "id": "ochre",
+          "label": "Тепла охра",
+          "color": "#b38b48",
+          "surface": "fabric"
+        },
+        {
+          "id": "blue",
+          "label": "Синій текстиль",
+          "color": "#465f79",
+          "surface": "fabric"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#ad7562",
+          "surface": "fabric"
+        }
+      ],
+      "production": "assets/models/sofa-4.glb",
+      "proxy": "assets/proxies/sofa-4.glb",
+      "quality": {
+        "high": "assets/models/sofa-4.glb",
+        "medium": "assets/models/sofa-4.glb",
+        "low": "assets/models/sofa-4.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.7749999761581421,
+          -2.98023217215615e-10,
+          -0.38499999046325684
+        ],
+        "max": [
+          0.7749999761581421,
+          0.7799999713897705,
+          0.3700000047683716
+        ],
+        "size": [
+          1.5499999523162842,
+          0.7799999716877937,
+          0.7549999952316284
+        ]
+      },
+      "bytes": {
+        "production": 694768,
+        "proxy": 14832
+      }
+    },
+    {
+      "assetId": "armchair",
+      "variant": 1,
+      "label": "1 / Оболонка",
+      "category": "seating",
+      "placement": "floor",
+      "dimensions": [
+        0.78,
+        0.8,
+        0.78
+      ],
+      "materials": [
+        {
+          "id": "oat",
+          "label": "Вівсяна тканина",
+          "color": "#c8bca8",
+          "surface": "fabric"
+        },
+        {
+          "id": "graphite",
+          "label": "Графітова тканина",
+          "color": "#414749",
+          "surface": "fabric"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієва тканина",
+          "color": "#7b9182",
+          "surface": "fabric"
+        },
+        {
+          "id": "ochre",
+          "label": "Тепла охра",
+          "color": "#b38b48",
+          "surface": "fabric"
+        },
+        {
+          "id": "blue",
+          "label": "Синій текстиль",
+          "color": "#465f79",
+          "surface": "fabric"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#ad7562",
+          "surface": "fabric"
+        }
+      ],
+      "production": "assets/models/armchair-1.glb",
+      "proxy": "assets/proxies/armchair-1.glb",
+      "quality": {
+        "high": "assets/models/armchair-1.glb",
+        "medium": "assets/models/armchair-1.glb",
+        "low": "assets/models/armchair-1.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.3799999952316284,
+          -0.0024937361013144255,
+          -0.384041428565979
+        ],
+        "max": [
+          0.3799999952316284,
+          0.800000011920929,
+          0.3499999940395355
+        ],
+        "size": [
+          0.7599999904632568,
+          0.8024937480222434,
+          0.7340414226055145
+        ]
+      },
+      "bytes": {
+        "production": 198628,
+        "proxy": 9948
+      }
+    },
+    {
+      "assetId": "armchair",
+      "variant": 2,
+      "label": "2 / Дубове м’яке крісло",
+      "category": "seating",
+      "placement": "floor",
+      "dimensions": [
+        0.7383099764585496,
+        0.9205668510723627,
+        0.8879055172204972
+      ],
+      "materials": [
+        {
+          "id": "oat",
+          "label": "Вівсяна тканина",
+          "color": "#c8bca8",
+          "surface": "fabric"
+        },
+        {
+          "id": "graphite",
+          "label": "Графітова тканина",
+          "color": "#414749",
+          "surface": "fabric"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієва тканина",
+          "color": "#7b9182",
+          "surface": "fabric"
+        },
+        {
+          "id": "ochre",
+          "label": "Тепла охра",
+          "color": "#b38b48",
+          "surface": "fabric"
+        },
+        {
+          "id": "blue",
+          "label": "Синій текстиль",
+          "color": "#465f79",
+          "surface": "fabric"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#ad7562",
+          "surface": "fabric"
+        }
+      ],
+      "production": "assets/models/armchair-2.glb",
+      "proxy": "assets/proxies/armchair-2.glb",
+      "quality": {
+        "medium": "assets/models/armchair-2.glb",
+        "low": "assets/models/armchair-2.low.glb",
+        "high": "assets/models/armchair-2.high.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.3691549882292748,
+          0,
+          -0.4439527586102486
+        ],
+        "max": [
+          0.3691549882292748,
+          0.9205668510723627,
+          0.4439527586102486
+        ],
+        "size": [
+          0.7383099764585496,
+          0.9205668510723627,
+          0.8879055172204972
+        ]
+      },
+      "bytes": {
+        "production": 2261108,
+        "proxy": 18800,
+        "fallback": 350672
+      },
+      "sourcePbr": true,
+      "fallback": "assets/models/armchair-2.fallback.glb",
+      "sourceId": "modern_arm_chair_01",
+      "sourceUrl": "https://polyhaven.com/a/modern_arm_chair_01",
+      "license": "CC0-1.0",
+      "source": "Poly Haven",
+      "productionOverride": true,
+      "qualityMetadata": {
+        "medium": {
+          "triangles": 7235,
+          "textureSize": 1024,
+          "bytes": 2260988
+        },
+        "low": {
+          "triangles": 4010,
+          "textureSize": 512,
+          "bytes": 685648
+        },
+        "high": {
+          "triangles": 8916,
+          "textureSize": 2048,
+          "bytes": 7710788
+        }
+      }
+    },
+    {
+      "assetId": "armchair",
+      "variant": 3,
+      "label": "3 / Клубне",
+      "category": "seating",
+      "placement": "floor",
+      "dimensions": [
+        0.85,
+        0.75,
+        0.8
+      ],
+      "materials": [
+        {
+          "id": "oat",
+          "label": "Вівсяна тканина",
+          "color": "#c8bca8",
+          "surface": "fabric"
+        },
+        {
+          "id": "graphite",
+          "label": "Графітова тканина",
+          "color": "#414749",
+          "surface": "fabric"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієва тканина",
+          "color": "#7b9182",
+          "surface": "fabric"
+        },
+        {
+          "id": "ochre",
+          "label": "Тепла охра",
+          "color": "#b38b48",
+          "surface": "fabric"
+        },
+        {
+          "id": "blue",
+          "label": "Синій текстиль",
+          "color": "#465f79",
+          "surface": "fabric"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#ad7562",
+          "surface": "fabric"
+        }
+      ],
+      "production": "assets/models/armchair-3.glb",
+      "proxy": "assets/proxies/armchair-3.glb",
+      "quality": {
+        "high": "assets/models/armchair-3.glb",
+        "medium": "assets/models/armchair-3.glb",
+        "low": "assets/models/armchair-3.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.41499999165534973,
+          -0.002662908984348178,
+          -0.3945663869380951
+        ],
+        "max": [
+          0.41499999165534973,
+          0.75,
+          0.36000001430511475
+        ],
+        "size": [
+          0.8299999833106995,
+          0.7526629089843482,
+          0.7545664012432098
+        ]
+      },
+      "bytes": {
+        "production": 197500,
+        "proxy": 10024
+      }
+    },
+    {
+      "assetId": "pouf",
+      "variant": 1,
+      "label": "1 / Круглий",
+      "category": "seating",
+      "placement": "floor",
+      "dimensions": [
+        0.55,
+        0.43,
+        0.55
+      ],
+      "materials": [
+        {
+          "id": "oat",
+          "label": "Вівсяна тканина",
+          "color": "#c8bca8",
+          "surface": "fabric"
+        },
+        {
+          "id": "graphite",
+          "label": "Графітова тканина",
+          "color": "#414749",
+          "surface": "fabric"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієва тканина",
+          "color": "#7b9182",
+          "surface": "fabric"
+        },
+        {
+          "id": "ochre",
+          "label": "Тепла охра",
+          "color": "#b38b48",
+          "surface": "fabric"
+        },
+        {
+          "id": "blue",
+          "label": "Синій текстиль",
+          "color": "#465f79",
+          "surface": "fabric"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#ad7562",
+          "surface": "fabric"
+        }
+      ],
+      "production": "assets/models/pouf-1.glb",
+      "proxy": "assets/proxies/pouf-1.glb",
+      "quality": {
+        "high": "assets/models/pouf-1.glb",
+        "medium": "assets/models/pouf-1.glb",
+        "low": "assets/models/pouf-1.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.2750000059604645,
+          -1.8626451769865326e-10,
+          -0.2750000059604645
+        ],
+        "max": [
+          0.2750000059604645,
+          0.4300000071525574,
+          0.2750000059604645
+        ],
+        "size": [
+          0.550000011920929,
+          0.4300000073388219,
+          0.550000011920929
+        ]
+      },
+      "bytes": {
+        "production": 134204,
+        "proxy": 7180
+      }
+    },
+    {
+      "assetId": "pouf",
+      "variant": 2,
+      "label": "2 / Блок",
+      "category": "seating",
+      "placement": "floor",
+      "dimensions": [
+        0.6,
+        0.43,
+        0.6
+      ],
+      "materials": [
+        {
+          "id": "oat",
+          "label": "Вівсяна тканина",
+          "color": "#c8bca8",
+          "surface": "fabric"
+        },
+        {
+          "id": "graphite",
+          "label": "Графітова тканина",
+          "color": "#414749",
+          "surface": "fabric"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієва тканина",
+          "color": "#7b9182",
+          "surface": "fabric"
+        },
+        {
+          "id": "ochre",
+          "label": "Тепла охра",
+          "color": "#b38b48",
+          "surface": "fabric"
+        },
+        {
+          "id": "blue",
+          "label": "Синій текстиль",
+          "color": "#465f79",
+          "surface": "fabric"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#ad7562",
+          "surface": "fabric"
+        }
+      ],
+      "production": "assets/models/pouf-2.glb",
+      "proxy": "assets/proxies/pouf-2.glb",
+      "quality": {
+        "high": "assets/models/pouf-2.glb",
+        "medium": "assets/models/pouf-2.glb",
+        "low": "assets/models/pouf-2.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.30000001192092896,
+          0.02499999850988388,
+          -0.30000001192092896
+        ],
+        "max": [
+          0.30000001192092896,
+          0.4300000071525574,
+          0.30000001192092896
+        ],
+        "size": [
+          0.6000000238418579,
+          0.4050000086426735,
+          0.6000000238418579
+        ]
+      },
+      "bytes": {
+        "production": 48300,
+        "proxy": 2604
+      }
+    },
+    {
+      "assetId": "bench",
+      "variant": 1,
+      "label": "1 / Дерево й тканина",
+      "category": "seating",
+      "placement": "floor",
+      "dimensions": [
+        1.4,
+        0.47,
+        0.45
+      ],
+      "materials": [
+        {
+          "id": "oat",
+          "label": "Вівсяна тканина",
+          "color": "#c8bca8",
+          "surface": "fabric"
+        },
+        {
+          "id": "graphite",
+          "label": "Графітова тканина",
+          "color": "#414749",
+          "surface": "fabric"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієва тканина",
+          "color": "#7b9182",
+          "surface": "fabric"
+        },
+        {
+          "id": "ochre",
+          "label": "Тепла охра",
+          "color": "#b38b48",
+          "surface": "fabric"
+        },
+        {
+          "id": "blue",
+          "label": "Синій текстиль",
+          "color": "#465f79",
+          "surface": "fabric"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#ad7562",
+          "surface": "fabric"
+        }
+      ],
+      "production": "assets/models/bench-1.glb",
+      "proxy": "assets/proxies/bench-1.glb",
+      "quality": {
+        "high": "assets/models/bench-1.glb",
+        "medium": "assets/models/bench-1.glb",
+        "low": "assets/models/bench-1.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.699999988079071,
+          -0.0032830513082444668,
+          -0.22499999403953552
+        ],
+        "max": [
+          0.699999988079071,
+          0.49000000953674316,
+          0.22499999403953552
+        ],
+        "size": [
+          1.399999976158142,
+          0.49328306084498763,
+          0.44999998807907104
+        ]
+      },
+      "bytes": {
+        "production": 89684,
+        "proxy": 10036
+      }
+    },
+    {
+      "assetId": "bench",
+      "variant": 2,
+      "label": "2 / М’яка оббивка",
+      "category": "seating",
+      "placement": "floor",
+      "dimensions": [
+        1.65,
+        0.46,
+        0.5
+      ],
+      "materials": [
+        {
+          "id": "oat",
+          "label": "Вівсяна тканина",
+          "color": "#c8bca8",
+          "surface": "fabric"
+        },
+        {
+          "id": "graphite",
+          "label": "Графітова тканина",
+          "color": "#414749",
+          "surface": "fabric"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієва тканина",
+          "color": "#7b9182",
+          "surface": "fabric"
+        },
+        {
+          "id": "ochre",
+          "label": "Тепла охра",
+          "color": "#b38b48",
+          "surface": "fabric"
+        },
+        {
+          "id": "blue",
+          "label": "Синій текстиль",
+          "color": "#465f79",
+          "surface": "fabric"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#ad7562",
+          "surface": "fabric"
+        }
+      ],
+      "production": "assets/models/bench-2.glb",
+      "proxy": "assets/proxies/bench-2.glb",
+      "quality": {
+        "high": "assets/models/bench-2.glb",
+        "medium": "assets/models/bench-2.glb",
+        "low": "assets/models/bench-2.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.824999988079071,
+          -0.003972100559622049,
+          -0.25
+        ],
+        "max": [
+          0.824999988079071,
+          0.46000000834465027,
+          0.25
+        ],
+        "size": [
+          1.649999976158142,
+          0.4639721089042723,
+          0.5
+        ]
+      },
+      "bytes": {
+        "production": 61932,
+        "proxy": 8536
+      }
+    },
+    {
+      "assetId": "coffeeTable",
+      "variant": 1,
+      "label": "1 / Круглий Ø70",
+      "category": "tables",
+      "placement": "floor",
+      "dimensions": [
+        0.7,
+        0.4,
+        0.7
+      ],
+      "materials": [
+        {
+          "id": "oak",
+          "label": "Натуральний дуб",
+          "color": "#b88e60",
+          "surface": "wood"
+        },
+        {
+          "id": "walnut",
+          "label": "Темний горіх",
+          "color": "#604533",
+          "surface": "wood"
+        },
+        {
+          "id": "ash",
+          "label": "Світлий ясен",
+          "color": "#ddd0b3",
+          "surface": "wood"
+        },
+        {
+          "id": "white",
+          "label": "Матовий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        },
+        {
+          "id": "black",
+          "label": "Графітовий",
+          "color": "#30383d",
+          "surface": "metal"
+        }
+      ],
+      "production": "assets/models/coffeeTable-1.glb",
+      "proxy": "assets/proxies/coffeeTable-1.glb",
+      "quality": {
+        "high": "assets/models/coffeeTable-1.glb",
+        "medium": "assets/models/coffeeTable-1.glb",
+        "low": "assets/models/coffeeTable-1.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.3499999940395355,
+          -1.8626451769865326e-10,
+          -0.3499999940395355
+        ],
+        "max": [
+          0.3499999940395355,
+          0.4000000059604645,
+          0.3499999940395355
+        ],
+        "size": [
+          0.699999988079071,
+          0.400000006146729,
+          0.699999988079071
+        ]
+      },
+      "bytes": {
+        "production": 161052,
+        "proxy": 11688
+      }
+    },
+    {
+      "assetId": "coffeeTable",
+      "variant": 2,
+      "label": "2 / Овальний 110",
+      "category": "tables",
+      "placement": "floor",
+      "dimensions": [
+        1.1,
+        0.39,
+        0.55
+      ],
+      "materials": [
+        {
+          "id": "oak",
+          "label": "Натуральний дуб",
+          "color": "#b88e60",
+          "surface": "wood"
+        },
+        {
+          "id": "walnut",
+          "label": "Темний горіх",
+          "color": "#604533",
+          "surface": "wood"
+        },
+        {
+          "id": "ash",
+          "label": "Світлий ясен",
+          "color": "#ddd0b3",
+          "surface": "wood"
+        },
+        {
+          "id": "white",
+          "label": "Матовий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        },
+        {
+          "id": "black",
+          "label": "Графітовий",
+          "color": "#30383d",
+          "surface": "metal"
+        }
+      ],
+      "production": "assets/models/coffeeTable-2.glb",
+      "proxy": "assets/proxies/coffeeTable-2.glb",
+      "quality": {
+        "high": "assets/models/coffeeTable-2.glb",
+        "medium": "assets/models/coffeeTable-2.glb",
+        "low": "assets/models/coffeeTable-2.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.550000011920929,
+          6.079673653403006e-9,
+          -0.2750000059604645
+        ],
+        "max": [
+          0.550000011920929,
+          0.38999998569488525,
+          0.2750000059604645
+        ],
+        "size": [
+          1.100000023841858,
+          0.3899999796152116,
+          0.550000011920929
+        ]
+      },
+      "bytes": {
+        "production": 524344,
+        "proxy": 10024
+      }
+    },
+    {
+      "assetId": "coffeeTable",
+      "variant": 3,
+      "label": "3 / Прямокутний 90",
+      "category": "tables",
+      "placement": "floor",
+      "dimensions": [
+        0.9,
+        0.42,
+        0.55
+      ],
+      "materials": [
+        {
+          "id": "oak",
+          "label": "Натуральний дуб",
+          "color": "#b88e60",
+          "surface": "wood"
+        },
+        {
+          "id": "walnut",
+          "label": "Темний горіх",
+          "color": "#604533",
+          "surface": "wood"
+        },
+        {
+          "id": "ash",
+          "label": "Світлий ясен",
+          "color": "#ddd0b3",
+          "surface": "wood"
+        },
+        {
+          "id": "white",
+          "label": "Матовий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        },
+        {
+          "id": "black",
+          "label": "Графітовий",
+          "color": "#30383d",
+          "surface": "metal"
+        }
+      ],
+      "production": "assets/models/coffeeTable-3.glb",
+      "proxy": "assets/proxies/coffeeTable-3.glb",
+      "quality": {
+        "high": "assets/models/coffeeTable-3.glb",
+        "medium": "assets/models/coffeeTable-3.glb",
+        "low": "assets/models/coffeeTable-3.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.44999998807907104,
+          5.4836273299940785e-9,
+          -0.2750000059604645
+        ],
+        "max": [
+          0.44999998807907104,
+          0.41999998688697815,
+          0.2750000059604645
+        ],
+        "size": [
+          0.8999999761581421,
+          0.4199999814033508,
+          0.550000011920929
+        ]
+      },
+      "bytes": {
+        "production": 451644,
+        "proxy": 8500
+      }
+    },
+    {
+      "assetId": "sideTable",
+      "variant": 1,
+      "label": "1 / Круглий Ø40",
+      "category": "tables",
+      "placement": "floor",
+      "dimensions": [
+        0.4,
+        0.56,
+        0.4
+      ],
+      "materials": [
+        {
+          "id": "oak",
+          "label": "Натуральний дуб",
+          "color": "#b88e60",
+          "surface": "wood"
+        },
+        {
+          "id": "walnut",
+          "label": "Темний горіх",
+          "color": "#604533",
+          "surface": "wood"
+        },
+        {
+          "id": "ash",
+          "label": "Світлий ясен",
+          "color": "#ddd0b3",
+          "surface": "wood"
+        },
+        {
+          "id": "white",
+          "label": "Матовий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        },
+        {
+          "id": "black",
+          "label": "Графітовий",
+          "color": "#30383d",
+          "surface": "metal"
+        }
+      ],
+      "production": "assets/models/sideTable-1.glb",
+      "proxy": "assets/proxies/sideTable-1.glb",
+      "quality": {
+        "high": "assets/models/sideTable-1.glb",
+        "medium": "assets/models/sideTable-1.glb",
+        "low": "assets/models/sideTable-1.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.20000000298023224,
+          -1.0728836485895954e-8,
+          -0.20000000298023224
+        ],
+        "max": [
+          0.20000000298023224,
+          0.5600000023841858,
+          0.20000000298023224
+        ],
+        "size": [
+          0.4000000059604645,
+          0.5600000131130223,
+          0.4000000059604645
+        ]
+      },
+      "bytes": {
+        "production": 159960,
+        "proxy": 11600
+      }
+    },
+    {
+      "assetId": "sideTable",
+      "variant": 2,
+      "label": "2 / С-подібний",
+      "category": "tables",
+      "placement": "floor",
+      "dimensions": [
+        0.45,
+        0.63,
+        0.38
+      ],
+      "materials": [
+        {
+          "id": "oak",
+          "label": "Натуральний дуб",
+          "color": "#b88e60",
+          "surface": "wood"
+        },
+        {
+          "id": "walnut",
+          "label": "Темний горіх",
+          "color": "#604533",
+          "surface": "wood"
+        },
+        {
+          "id": "ash",
+          "label": "Світлий ясен",
+          "color": "#ddd0b3",
+          "surface": "wood"
+        },
+        {
+          "id": "white",
+          "label": "Матовий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        },
+        {
+          "id": "black",
+          "label": "Графітовий",
+          "color": "#30383d",
+          "surface": "metal"
+        }
+      ],
+      "production": "assets/models/sideTable-2.glb",
+      "proxy": "assets/proxies/sideTable-2.glb",
+      "quality": {
+        "high": "assets/models/sideTable-2.glb",
+        "medium": "assets/models/sideTable-2.glb",
+        "low": "assets/models/sideTable-2.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.22499999403953552,
+          2.2351741291171123e-10,
+          -0.1899999976158142
+        ],
+        "max": [
+          0.22499999403953552,
+          0.6299999952316284,
+          0.1899999976158142
+        ],
+        "size": [
+          0.44999998807907104,
+          0.629999995008111,
+          0.3799999952316284
+        ]
+      },
+      "bytes": {
+        "production": 172084,
+        "proxy": 5500
+      }
+    },
+    {
+      "assetId": "sideTable",
+      "variant": 3,
+      "label": "3 / Блок",
+      "category": "tables",
+      "placement": "floor",
+      "dimensions": [
+        0.36,
+        0.5,
+        0.36
+      ],
+      "materials": [
+        {
+          "id": "oak",
+          "label": "Натуральний дуб",
+          "color": "#b88e60",
+          "surface": "wood"
+        },
+        {
+          "id": "walnut",
+          "label": "Темний горіх",
+          "color": "#604533",
+          "surface": "wood"
+        },
+        {
+          "id": "ash",
+          "label": "Світлий ясен",
+          "color": "#ddd0b3",
+          "surface": "wood"
+        },
+        {
+          "id": "white",
+          "label": "Матовий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        },
+        {
+          "id": "black",
+          "label": "Графітовий",
+          "color": "#30383d",
+          "surface": "metal"
+        }
+      ],
+      "production": "assets/models/sideTable-3.glb",
+      "proxy": "assets/proxies/sideTable-3.glb",
+      "quality": {
+        "high": "assets/models/sideTable-3.glb",
+        "medium": "assets/models/sideTable-3.glb",
+        "low": "assets/models/sideTable-3.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.18000000715255737,
+          0,
+          -0.18000000715255737
+        ],
+        "max": [
+          0.18000000715255737,
+          0.5,
+          0.18000000715255737
+        ],
+        "size": [
+          0.36000001430511475,
+          0.5,
+          0.36000001430511475
+        ]
+      },
+      "bytes": {
+        "production": 46872,
+        "proxy": 2532
+      }
+    },
+    {
+      "assetId": "meetingTable",
+      "variant": 1,
+      "label": "1 / Круглий Ø95",
+      "category": "tables",
+      "placement": "floor",
+      "dimensions": [
+        0.95,
+        0.74,
+        0.95
+      ],
+      "materials": [
+        {
+          "id": "oak",
+          "label": "Натуральний дуб",
+          "color": "#b88e60",
+          "surface": "wood"
+        },
+        {
+          "id": "walnut",
+          "label": "Темний горіх",
+          "color": "#604533",
+          "surface": "wood"
+        },
+        {
+          "id": "ash",
+          "label": "Світлий ясен",
+          "color": "#ddd0b3",
+          "surface": "wood"
+        },
+        {
+          "id": "white",
+          "label": "Матовий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        },
+        {
+          "id": "black",
+          "label": "Графітовий",
+          "color": "#30383d",
+          "surface": "metal"
+        }
+      ],
+      "production": "assets/models/meetingTable-1.glb",
+      "proxy": "assets/proxies/meetingTable-1.glb",
+      "quality": {
+        "high": "assets/models/meetingTable-1.glb",
+        "medium": "assets/models/meetingTable-1.glb",
+        "low": "assets/models/meetingTable-1.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.4749999940395355,
+          -1.4305114426349519e-8,
+          -0.4749999940395355
+        ],
+        "max": [
+          0.4749999940395355,
+          0.7400000095367432,
+          0.4749999940395355
+        ],
+        "size": [
+          0.949999988079071,
+          0.7400000238418576,
+          0.949999988079071
+        ]
+      },
+      "bytes": {
+        "production": 158344,
+        "proxy": 11496
+      }
+    },
+    {
+      "assetId": "meetingTable",
+      "variant": 2,
+      "label": "2 / Капсула 140",
+      "category": "tables",
+      "placement": "floor",
+      "dimensions": [
+        1.4,
+        0.74,
+        0.78
+      ],
+      "materials": [
+        {
+          "id": "oak",
+          "label": "Натуральний дуб",
+          "color": "#b88e60",
+          "surface": "wood"
+        },
+        {
+          "id": "walnut",
+          "label": "Темний горіх",
+          "color": "#604533",
+          "surface": "wood"
+        },
+        {
+          "id": "ash",
+          "label": "Світлий ясен",
+          "color": "#ddd0b3",
+          "surface": "wood"
+        },
+        {
+          "id": "white",
+          "label": "Матовий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        },
+        {
+          "id": "black",
+          "label": "Графітовий",
+          "color": "#30383d",
+          "surface": "metal"
+        }
+      ],
+      "production": "assets/models/meetingTable-2.glb",
+      "proxy": "assets/proxies/meetingTable-2.glb",
+      "quality": {
+        "high": "assets/models/meetingTable-2.glb",
+        "medium": "assets/models/meetingTable-2.glb",
+        "low": "assets/models/meetingTable-2.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.699999988079071,
+          9.059905714536853e-9,
+          -0.38999998569488525
+        ],
+        "max": [
+          0.699999988079071,
+          0.7400000095367432,
+          0.38999998569488525
+        ],
+        "size": [
+          1.399999976158142,
+          0.7400000004768374,
+          0.7799999713897705
+        ]
+      },
+      "bytes": {
+        "production": 520256,
+        "proxy": 9996
+      }
+    },
+    {
+      "assetId": "meetingTable",
+      "variant": 3,
+      "label": "3 / Компактний 110",
+      "category": "tables",
+      "placement": "floor",
+      "dimensions": [
+        1.1,
+        0.74,
+        0.7
+      ],
+      "materials": [
+        {
+          "id": "oak",
+          "label": "Натуральний дуб",
+          "color": "#b88e60",
+          "surface": "wood"
+        },
+        {
+          "id": "walnut",
+          "label": "Темний горіх",
+          "color": "#604533",
+          "surface": "wood"
+        },
+        {
+          "id": "ash",
+          "label": "Світлий ясен",
+          "color": "#ddd0b3",
+          "surface": "wood"
+        },
+        {
+          "id": "white",
+          "label": "Матовий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        },
+        {
+          "id": "black",
+          "label": "Графітовий",
+          "color": "#30383d",
+          "surface": "metal"
+        }
+      ],
+      "production": "assets/models/meetingTable-3.glb",
+      "proxy": "assets/proxies/meetingTable-3.glb",
+      "quality": {
+        "high": "assets/models/meetingTable-3.glb",
+        "medium": "assets/models/meetingTable-3.glb",
+        "low": "assets/models/meetingTable-3.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.550000011920929,
+          9.059905714536853e-9,
+          -0.3499999940395355
+        ],
+        "max": [
+          0.550000011920929,
+          0.7400000095367432,
+          0.3499999940395355
+        ],
+        "size": [
+          1.100000023841858,
+          0.7400000004768374,
+          0.699999988079071
+        ]
+      },
+      "bytes": {
+        "production": 447012,
+        "proxy": 8328
+      }
+    },
+    {
+      "assetId": "chair",
+      "variant": 1,
+      "label": "1 / Оболонка",
+      "category": "chairs",
+      "placement": "floor",
+      "dimensions": [
+        0.47,
+        0.81,
+        0.51
+      ],
+      "materials": [
+        {
+          "id": "oat",
+          "label": "Вівсяна тканина",
+          "color": "#c8bca8",
+          "surface": "fabric"
+        },
+        {
+          "id": "graphite",
+          "label": "Графітова тканина",
+          "color": "#414749",
+          "surface": "fabric"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієва тканина",
+          "color": "#7b9182",
+          "surface": "fabric"
+        },
+        {
+          "id": "ochre",
+          "label": "Тепла охра",
+          "color": "#b38b48",
+          "surface": "fabric"
+        },
+        {
+          "id": "blue",
+          "label": "Синій текстиль",
+          "color": "#465f79",
+          "surface": "fabric"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#ad7562",
+          "surface": "fabric"
+        }
+      ],
+      "production": "assets/models/chair-1.glb",
+      "proxy": "assets/proxies/chair-1.glb",
+      "quality": {
+        "high": "assets/models/chair-1.glb",
+        "medium": "assets/models/chair-1.glb",
+        "low": "assets/models/chair-1.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.2224999964237213,
+          -0.0011859744554385543,
+          -0.2574999928474426
+        ],
+        "max": [
+          0.2224999964237213,
+          0.7950000166893005,
+          0.2524999976158142
+        ],
+        "size": [
+          0.4449999928474426,
+          0.7961859911447391,
+          0.5099999904632568
+        ]
+      },
+      "bytes": {
+        "production": 228184,
+        "proxy": 10244
+      }
+    },
+    {
+      "assetId": "chair",
+      "variant": 2,
+      "label": "2 / М’яка висока спинка",
+      "category": "chairs",
+      "placement": "floor",
+      "dimensions": [
+        0.4061763488822283,
+        0.9118764945719297,
+        0.54
+      ],
+      "materials": [
+        {
+          "id": "oat",
+          "label": "Вівсяна тканина",
+          "color": "#c8bca8",
+          "surface": "fabric"
+        },
+        {
+          "id": "graphite",
+          "label": "Графітова тканина",
+          "color": "#414749",
+          "surface": "fabric"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієва тканина",
+          "color": "#7b9182",
+          "surface": "fabric"
+        },
+        {
+          "id": "ochre",
+          "label": "Тепла охра",
+          "color": "#b38b48",
+          "surface": "fabric"
+        },
+        {
+          "id": "blue",
+          "label": "Синій текстиль",
+          "color": "#465f79",
+          "surface": "fabric"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#ad7562",
+          "surface": "fabric"
+        }
+      ],
+      "production": "assets/models/chair-2.glb",
+      "proxy": "assets/proxies/chair-2.glb",
+      "quality": {
+        "medium": "assets/models/chair-2.glb",
+        "low": "assets/models/chair-2.low.glb",
+        "high": "assets/models/chair-2.high.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.20308817444111416,
+          0,
+          -0.27
+        ],
+        "max": [
+          0.20308817444111416,
+          0.9118764945719297,
+          0.27
+        ],
+        "size": [
+          0.4061763488822283,
+          0.9118764945719297,
+          0.54
+        ]
+      },
+      "bytes": {
+        "production": 1500004,
+        "proxy": 16500,
+        "fallback": 323536
+      },
+      "sourcePbr": true,
+      "fallback": "assets/models/chair-2.fallback.glb",
+      "sourceId": "dining_chair_02",
+      "sourceUrl": "https://polyhaven.com/a/dining_chair_02",
+      "license": "CC0-1.0",
+      "source": "Poly Haven",
+      "productionOverride": true,
+      "qualityMetadata": {
+        "medium": {
+          "triangles": 12106,
+          "textureSize": 1024,
+          "bytes": 1500076
+        },
+        "low": {
+          "triangles": 5503,
+          "textureSize": 512,
+          "bytes": 450804
+        },
+        "high": {
+          "triangles": 22013,
+          "textureSize": 2048,
+          "bytes": 5045488
+        }
+      }
+    },
+    {
+      "assetId": "chair",
+      "variant": 3,
+      "label": "3 / Офісний",
+      "category": "chairs",
+      "placement": "floor",
+      "dimensions": [
+        0.56,
+        0.91,
+        0.58
+      ],
+      "materials": [
+        {
+          "id": "oat",
+          "label": "Вівсяна тканина",
+          "color": "#c8bca8",
+          "surface": "fabric"
+        },
+        {
+          "id": "graphite",
+          "label": "Графітова тканина",
+          "color": "#414749",
+          "surface": "fabric"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієва тканина",
+          "color": "#7b9182",
+          "surface": "fabric"
+        },
+        {
+          "id": "ochre",
+          "label": "Тепла охра",
+          "color": "#b38b48",
+          "surface": "fabric"
+        },
+        {
+          "id": "blue",
+          "label": "Синій текстиль",
+          "color": "#465f79",
+          "surface": "fabric"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#ad7562",
+          "surface": "fabric"
+        }
+      ],
+      "production": "assets/models/chair-3.glb",
+      "proxy": "assets/proxies/chair-3.glb",
+      "quality": {
+        "high": "assets/models/chair-3.glb",
+        "medium": "assets/models/chair-3.glb",
+        "low": "assets/models/chair-3.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.26750001311302185,
+          -2.9802322831784522e-9,
+          -0.29249998927116394
+        ],
+        "max": [
+          0.2680000066757202,
+          0.8949999809265137,
+          0.2874999940395355
+        ],
+        "size": [
+          0.5355000197887421,
+          0.894999983906746,
+          0.5799999833106995
+        ]
+      },
+      "bytes": {
+        "production": 619360,
+        "proxy": 31388
+      }
+    },
+    {
+      "assetId": "barStool",
+      "variant": 1,
+      "label": "1 / Круглий без спинки",
+      "category": "chairs",
+      "placement": "floor",
+      "dimensions": [
+        0.45,
+        0.75,
+        0.47
+      ],
+      "materials": [
+        {
+          "id": "oat",
+          "label": "Вівсяна тканина",
+          "color": "#c8bca8",
+          "surface": "fabric"
+        },
+        {
+          "id": "graphite",
+          "label": "Графітова тканина",
+          "color": "#414749",
+          "surface": "fabric"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієва тканина",
+          "color": "#7b9182",
+          "surface": "fabric"
+        },
+        {
+          "id": "ochre",
+          "label": "Тепла охра",
+          "color": "#b38b48",
+          "surface": "fabric"
+        },
+        {
+          "id": "blue",
+          "label": "Синій текстиль",
+          "color": "#465f79",
+          "surface": "fabric"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#ad7562",
+          "surface": "fabric"
+        }
+      ],
+      "production": "assets/models/barStool-1.glb",
+      "proxy": "assets/proxies/barStool-1.glb",
+      "quality": {
+        "high": "assets/models/barStool-1.glb",
+        "medium": "assets/models/barStool-1.glb",
+        "low": "assets/models/barStool-1.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.2160000056028366,
+          -0.0007219279068522155,
+          -0.2160000056028366
+        ],
+        "max": [
+          0.2160000056028366,
+          0.75,
+          0.2160000056028366
+        ],
+        "size": [
+          0.4320000112056732,
+          0.7507219279068522,
+          0.4320000112056732
+        ]
+      },
+      "bytes": {
+        "production": 142924,
+        "proxy": 22896
+      }
+    },
+    {
+      "assetId": "barStool",
+      "variant": 2,
+      "label": "2 / Гнута оболонка",
+      "category": "chairs",
+      "placement": "floor",
+      "dimensions": [
+        0.48,
+        1.03,
+        0.48
+      ],
+      "materials": [
+        {
+          "id": "oat",
+          "label": "Вівсяна тканина",
+          "color": "#c8bca8",
+          "surface": "fabric"
+        },
+        {
+          "id": "graphite",
+          "label": "Графітова тканина",
+          "color": "#414749",
+          "surface": "fabric"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієва тканина",
+          "color": "#7b9182",
+          "surface": "fabric"
+        },
+        {
+          "id": "ochre",
+          "label": "Тепла охра",
+          "color": "#b38b48",
+          "surface": "fabric"
+        },
+        {
+          "id": "blue",
+          "label": "Синій текстиль",
+          "color": "#465f79",
+          "surface": "fabric"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#ad7562",
+          "surface": "fabric"
+        }
+      ],
+      "production": "assets/models/barStool-2.glb",
+      "proxy": "assets/proxies/barStool-2.glb",
+      "quality": {
+        "high": "assets/models/barStool-2.glb",
+        "medium": "assets/models/barStool-2.glb",
+        "low": "assets/models/barStool-2.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.22850000858306885,
+          1.9371509951682242e-10,
+          -0.23600080609321594
+        ],
+        "max": [
+          0.22849999368190765,
+          1.0311305522918701,
+          0.2160000056028366
+        ],
+        "size": [
+          0.4570000022649765,
+          1.031130552098155,
+          0.45200081169605255
+        ]
+      },
+      "bytes": {
+        "production": 691660,
+        "proxy": 38040
+      }
+    },
+    {
+      "assetId": "barStool",
+      "variant": 3,
+      "label": "3 / Висока спинка",
+      "category": "chairs",
+      "placement": "floor",
+      "dimensions": [
+        0.43,
+        1.15,
+        0.45
+      ],
+      "materials": [
+        {
+          "id": "oat",
+          "label": "Вівсяна тканина",
+          "color": "#c8bca8",
+          "surface": "fabric"
+        },
+        {
+          "id": "graphite",
+          "label": "Графітова тканина",
+          "color": "#414749",
+          "surface": "fabric"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієва тканина",
+          "color": "#7b9182",
+          "surface": "fabric"
+        },
+        {
+          "id": "ochre",
+          "label": "Тепла охра",
+          "color": "#b38b48",
+          "surface": "fabric"
+        },
+        {
+          "id": "blue",
+          "label": "Синій текстиль",
+          "color": "#465f79",
+          "surface": "fabric"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#ad7562",
+          "surface": "fabric"
+        }
+      ],
+      "production": "assets/models/barStool-3.glb",
+      "proxy": "assets/proxies/barStool-3.glb",
+      "quality": {
+        "high": "assets/models/barStool-3.glb",
+        "medium": "assets/models/barStool-3.glb",
+        "low": "assets/models/barStool-3.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.2020999938249588,
+          -4.3213366218708416e-10,
+          -0.2020999938249588
+        ],
+        "max": [
+          0.2020999938249588,
+          1.149999976158142,
+          0.2175000011920929
+        ],
+        "size": [
+          0.4041999876499176,
+          1.1499999765902758,
+          0.4195999950170517
+        ]
+      },
+      "bytes": {
+        "production": 164736,
+        "proxy": 18668
+      }
+    },
+    {
+      "assetId": "workDesk",
+      "variant": 1,
+      "label": "1 / Тонкий 120",
+      "category": "work",
+      "placement": "floor",
+      "dimensions": [
+        1.2,
+        0.74,
+        0.6
+      ],
+      "materials": [
+        {
+          "id": "oak",
+          "label": "Натуральний дуб",
+          "color": "#b88e60",
+          "surface": "wood"
+        },
+        {
+          "id": "walnut",
+          "label": "Темний горіх",
+          "color": "#604533",
+          "surface": "wood"
+        },
+        {
+          "id": "ash",
+          "label": "Світлий ясен",
+          "color": "#ddd0b3",
+          "surface": "wood"
+        },
+        {
+          "id": "white",
+          "label": "Матовий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        },
+        {
+          "id": "black",
+          "label": "Графітовий",
+          "color": "#30383d",
+          "surface": "metal"
+        }
+      ],
+      "production": "assets/models/workDesk-1.glb",
+      "proxy": "assets/proxies/workDesk-1.glb",
+      "quality": {
+        "high": "assets/models/workDesk-1.glb",
+        "medium": "assets/models/workDesk-1.glb",
+        "low": "assets/models/workDesk-1.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.6000000238418579,
+          9.059905714536853e-9,
+          -0.30000001192092896
+        ],
+        "max": [
+          0.6000000238418579,
+          0.7455000281333923,
+          0.30000001192092896
+        ],
+        "size": [
+          1.2000000476837158,
+          0.7455000190734866,
+          0.6000000238418579
+        ]
+      },
+      "bytes": {
+        "production": 527224,
+        "proxy": 8292
+      }
+    },
+    {
+      "assetId": "workDesk",
+      "variant": 2,
+      "label": "2 / Студійний 140",
+      "category": "work",
+      "placement": "floor",
+      "dimensions": [
+        1.4,
+        0.74,
+        0.65
+      ],
+      "materials": [
+        {
+          "id": "oak",
+          "label": "Натуральний дуб",
+          "color": "#b88e60",
+          "surface": "wood"
+        },
+        {
+          "id": "walnut",
+          "label": "Темний горіх",
+          "color": "#604533",
+          "surface": "wood"
+        },
+        {
+          "id": "ash",
+          "label": "Світлий ясен",
+          "color": "#ddd0b3",
+          "surface": "wood"
+        },
+        {
+          "id": "white",
+          "label": "Матовий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        },
+        {
+          "id": "black",
+          "label": "Графітовий",
+          "color": "#30383d",
+          "surface": "metal"
+        }
+      ],
+      "production": "assets/models/workDesk-2.glb",
+      "proxy": "assets/proxies/workDesk-2.glb",
+      "quality": {
+        "high": "assets/models/workDesk-2.glb",
+        "medium": "assets/models/workDesk-2.glb",
+        "low": "assets/models/workDesk-2.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.699999988079071,
+          9.059905714536853e-9,
+          -0.32499998807907104
+        ],
+        "max": [
+          0.699999988079071,
+          0.7455000281333923,
+          0.32499998807907104
+        ],
+        "size": [
+          1.399999976158142,
+          0.7455000190734866,
+          0.6499999761581421
+        ]
+      },
+      "bytes": {
+        "production": 526280,
+        "proxy": 8324
+      }
+    },
+    {
+      "assetId": "workDesk",
+      "variant": 3,
+      "label": "3 / Для ноутбука 100",
+      "category": "work",
+      "placement": "floor",
+      "dimensions": [
+        1,
+        0.74,
+        0.55
+      ],
+      "materials": [
+        {
+          "id": "oak",
+          "label": "Натуральний дуб",
+          "color": "#b88e60",
+          "surface": "wood"
+        },
+        {
+          "id": "walnut",
+          "label": "Темний горіх",
+          "color": "#604533",
+          "surface": "wood"
+        },
+        {
+          "id": "ash",
+          "label": "Світлий ясен",
+          "color": "#ddd0b3",
+          "surface": "wood"
+        },
+        {
+          "id": "white",
+          "label": "Матовий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        },
+        {
+          "id": "black",
+          "label": "Графітовий",
+          "color": "#30383d",
+          "surface": "metal"
+        }
+      ],
+      "production": "assets/models/workDesk-3.glb",
+      "proxy": "assets/proxies/workDesk-3.glb",
+      "quality": {
+        "high": "assets/models/workDesk-3.glb",
+        "medium": "assets/models/workDesk-3.glb",
+        "low": "assets/models/workDesk-3.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.5,
+          9.059905714536853e-9,
+          -0.2750000059604645
+        ],
+        "max": [
+          0.5,
+          0.7455000281333923,
+          0.2750000059604645
+        ],
+        "size": [
+          1,
+          0.7455000190734866,
+          0.550000011920929
+        ]
+      },
+      "bytes": {
+        "production": 530900,
+        "proxy": 8380
+      }
+    },
+    {
+      "assetId": "windowBar",
+      "variant": 1,
+      "label": "1 / Дуб і сталь",
+      "category": "work",
+      "placement": "floor",
+      "dimensions": [
+        2.9,
+        1.05,
+        0.55
+      ],
+      "materials": [
+        {
+          "id": "oak",
+          "label": "Натуральний дуб",
+          "color": "#b88e60",
+          "surface": "wood"
+        },
+        {
+          "id": "walnut",
+          "label": "Темний горіх",
+          "color": "#604533",
+          "surface": "wood"
+        },
+        {
+          "id": "ash",
+          "label": "Світлий ясен",
+          "color": "#ddd0b3",
+          "surface": "wood"
+        },
+        {
+          "id": "white",
+          "label": "Матовий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        },
+        {
+          "id": "black",
+          "label": "Графітовий",
+          "color": "#30383d",
+          "surface": "metal"
+        }
+      ],
+      "production": "assets/models/windowBar-1.glb",
+      "proxy": "assets/proxies/windowBar-1.glb",
+      "quality": {
+        "high": "assets/models/windowBar-1.glb",
+        "medium": "assets/models/windowBar-1.glb",
+        "low": "assets/models/windowBar-1.glb"
+      },
+      "bounds": {
+        "min": [
+          -1.4500000476837158,
+          3.3527614018424856e-10,
+          -0.2750000059604645
+        ],
+        "max": [
+          1.4500000476837158,
+          1.0499999523162842,
+          0.2750000059604645
+        ],
+        "size": [
+          2.9000000953674316,
+          1.049999951981008,
+          0.550000011920929
+        ]
+      },
+      "bytes": {
+        "production": 331052,
+        "proxy": 7160
+      }
+    },
+    {
+      "assetId": "windowBar",
+      "variant": 2,
+      "label": "2 / Консоль",
+      "category": "work",
+      "placement": "floor",
+      "dimensions": [
+        2.8,
+        1.05,
+        0.55
+      ],
+      "materials": [
+        {
+          "id": "oak",
+          "label": "Натуральний дуб",
+          "color": "#b88e60",
+          "surface": "wood"
+        },
+        {
+          "id": "walnut",
+          "label": "Темний горіх",
+          "color": "#604533",
+          "surface": "wood"
+        },
+        {
+          "id": "ash",
+          "label": "Світлий ясен",
+          "color": "#ddd0b3",
+          "surface": "wood"
+        },
+        {
+          "id": "white",
+          "label": "Матовий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        },
+        {
+          "id": "black",
+          "label": "Графітовий",
+          "color": "#30383d",
+          "surface": "metal"
+        }
+      ],
+      "production": "assets/models/windowBar-2.glb",
+      "proxy": "assets/proxies/windowBar-2.glb",
+      "quality": {
+        "high": "assets/models/windowBar-2.glb",
+        "medium": "assets/models/windowBar-2.glb",
+        "low": "assets/models/windowBar-2.glb"
+      },
+      "bounds": {
+        "min": [
+          -1.399999976158142,
+          0.7475832104682922,
+          -0.2750000059604645
+        ],
+        "max": [
+          1.399999976158142,
+          1.0499999523162842,
+          0.2750000059604645
+        ],
+        "size": [
+          2.799999952316284,
+          0.30241674184799194,
+          0.550000011920929
+        ]
+      },
+      "bytes": {
+        "production": 176728,
+        "proxy": 8572
+      }
+    },
+    {
+      "assetId": "windowBar",
+      "variant": 3,
+      "label": "3 / Масивна",
+      "category": "work",
+      "placement": "floor",
+      "dimensions": [
+        3.2,
+        1.05,
+        0.6
+      ],
+      "materials": [
+        {
+          "id": "oak",
+          "label": "Натуральний дуб",
+          "color": "#b88e60",
+          "surface": "wood"
+        },
+        {
+          "id": "walnut",
+          "label": "Темний горіх",
+          "color": "#604533",
+          "surface": "wood"
+        },
+        {
+          "id": "ash",
+          "label": "Світлий ясен",
+          "color": "#ddd0b3",
+          "surface": "wood"
+        },
+        {
+          "id": "white",
+          "label": "Матовий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        },
+        {
+          "id": "black",
+          "label": "Графітовий",
+          "color": "#30383d",
+          "surface": "metal"
+        }
+      ],
+      "production": "assets/models/windowBar-3.glb",
+      "proxy": "assets/proxies/windowBar-3.glb",
+      "quality": {
+        "high": "assets/models/windowBar-3.glb",
+        "medium": "assets/models/windowBar-3.glb",
+        "low": "assets/models/windowBar-3.glb"
+      },
+      "bounds": {
+        "min": [
+          -1.600000023841858,
+          4.76837147544984e-9,
+          -0.30000001192092896
+        ],
+        "max": [
+          1.600000023841858,
+          1.0499999523162842,
+          0.30000001192092896
+        ],
+        "size": [
+          3.200000047683716,
+          1.0499999475479127,
+          0.6000000238418579
+        ]
+      },
+      "bytes": {
+        "production": 163164,
+        "proxy": 3760
+      }
+    },
+    {
+      "assetId": "storage",
+      "variant": 1,
+      "label": "1 / Низька тумба",
+      "category": "storage",
+      "placement": "floor",
+      "dimensions": [
+        1.2,
+        0.72,
+        0.38
+      ],
+      "materials": [
+        {
+          "id": "oak",
+          "label": "Натуральний дуб",
+          "color": "#b88e60",
+          "surface": "wood"
+        },
+        {
+          "id": "walnut",
+          "label": "Темний горіх",
+          "color": "#604533",
+          "surface": "wood"
+        },
+        {
+          "id": "ash",
+          "label": "Світлий ясен",
+          "color": "#ddd0b3",
+          "surface": "wood"
+        },
+        {
+          "id": "white",
+          "label": "Матовий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        },
+        {
+          "id": "black",
+          "label": "Графітовий",
+          "color": "#30383d",
+          "surface": "metal"
+        }
+      ],
+      "production": "assets/models/storage-1.glb",
+      "proxy": "assets/proxies/storage-1.glb",
+      "quality": {
+        "high": "assets/models/storage-1.glb",
+        "medium": "assets/models/storage-1.glb",
+        "low": "assets/models/storage-1.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.6000000238418579,
+          6.705522803684971e-10,
+          -0.1899999976158142
+        ],
+        "max": [
+          0.6000000238418579,
+          0.7200000286102295,
+          0.22599999606609344
+        ],
+        "size": [
+          1.2000000476837158,
+          0.7200000279396772,
+          0.41599999368190765
+        ]
+      },
+      "bytes": {
+        "production": 624096,
+        "proxy": 10192
+      }
+    },
+    {
+      "assetId": "storage",
+      "variant": 2,
+      "label": "2 / Відкритий стелаж",
+      "category": "storage",
+      "placement": "floor",
+      "dimensions": [
+        0.8,
+        1.35,
+        0.32
+      ],
+      "materials": [
+        {
+          "id": "oak",
+          "label": "Натуральний дуб",
+          "color": "#b88e60",
+          "surface": "wood"
+        },
+        {
+          "id": "walnut",
+          "label": "Темний горіх",
+          "color": "#604533",
+          "surface": "wood"
+        },
+        {
+          "id": "ash",
+          "label": "Світлий ясен",
+          "color": "#ddd0b3",
+          "surface": "wood"
+        },
+        {
+          "id": "white",
+          "label": "Матовий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        },
+        {
+          "id": "black",
+          "label": "Графітовий",
+          "color": "#30383d",
+          "surface": "metal"
+        }
+      ],
+      "production": "assets/models/storage-2.glb",
+      "proxy": "assets/proxies/storage-2.glb",
+      "quality": {
+        "high": "assets/models/storage-2.glb",
+        "medium": "assets/models/storage-2.glb",
+        "low": "assets/models/storage-2.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.4000000059604645,
+          6.705522803684971e-10,
+          -0.1599999964237213
+        ],
+        "max": [
+          0.4000000059604645,
+          1.350000023841858,
+          0.1599999964237213
+        ],
+        "size": [
+          0.800000011920929,
+          1.3500000231713056,
+          0.3199999928474426
+        ]
+      },
+      "bytes": {
+        "production": 871036,
+        "proxy": 8788
+      }
+    },
+    {
+      "assetId": "storage",
+      "variant": 3,
+      "label": "3 / Компактний",
+      "category": "storage",
+      "placement": "floor",
+      "dimensions": [
+        0.7,
+        0.7,
+        0.38
+      ],
+      "materials": [
+        {
+          "id": "oak",
+          "label": "Натуральний дуб",
+          "color": "#b88e60",
+          "surface": "wood"
+        },
+        {
+          "id": "walnut",
+          "label": "Темний горіх",
+          "color": "#604533",
+          "surface": "wood"
+        },
+        {
+          "id": "ash",
+          "label": "Світлий ясен",
+          "color": "#ddd0b3",
+          "surface": "wood"
+        },
+        {
+          "id": "white",
+          "label": "Матовий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        },
+        {
+          "id": "black",
+          "label": "Графітовий",
+          "color": "#30383d",
+          "surface": "metal"
+        }
+      ],
+      "production": "assets/models/storage-3.glb",
+      "proxy": "assets/proxies/storage-3.glb",
+      "quality": {
+        "high": "assets/models/storage-3.glb",
+        "medium": "assets/models/storage-3.glb",
+        "low": "assets/models/storage-3.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.3499999940395355,
+          6.705522803684971e-10,
+          -0.1899999976158142
+        ],
+        "max": [
+          0.3499999940395355,
+          0.699999988079071,
+          0.22599999606609344
+        ],
+        "size": [
+          0.699999988079071,
+          0.6999999874085188,
+          0.41599999368190765
+        ]
+      },
+      "bytes": {
+        "production": 549660,
+        "proxy": 9452
+      }
+    },
+    {
+      "assetId": "floorLamp",
+      "variant": 1,
+      "label": "1 / Купол",
+      "category": "lighting",
+      "placement": "floor",
+      "dimensions": [
+        0.4,
+        1.6,
+        0.4
+      ],
+      "materials": [
+        {
+          "id": "white",
+          "label": "Теплий білий",
+          "color": "#dddcd3",
+          "surface": "ceramic"
+        },
+        {
+          "id": "black",
+          "label": "Темний графіт",
+          "color": "#30383d",
+          "surface": "metal"
+        },
+        {
+          "id": "sage",
+          "label": "Приглушений зелений",
+          "color": "#819183",
+          "surface": "plastic"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#b47c65",
+          "surface": "ceramic"
+        }
+      ],
+      "production": "assets/models/floorLamp-1.glb",
+      "proxy": "assets/proxies/floorLamp-1.glb",
+      "quality": {
+        "high": "assets/models/floorLamp-1.glb",
+        "medium": "assets/models/floorLamp-1.glb",
+        "low": "assets/models/floorLamp-1.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.20000000298023224,
+          -1.8626451769865326e-10,
+          -0.20000000298023224
+        ],
+        "max": [
+          0.20000000298023224,
+          1.600000023841858,
+          0.20000000298023224
+        ],
+        "size": [
+          0.4000000059604645,
+          1.6000000240281225,
+          0.4000000059604645
+        ]
+      },
+      "bytes": {
+        "production": 142220,
+        "proxy": 19728
+      }
+    },
+    {
+      "assetId": "floorLamp",
+      "variant": 2,
+      "label": "2 / Конус",
+      "category": "lighting",
+      "placement": "floor",
+      "dimensions": [
+        0.38,
+        1.5,
+        0.38
+      ],
+      "materials": [
+        {
+          "id": "white",
+          "label": "Теплий білий",
+          "color": "#dddcd3",
+          "surface": "ceramic"
+        },
+        {
+          "id": "black",
+          "label": "Темний графіт",
+          "color": "#30383d",
+          "surface": "metal"
+        },
+        {
+          "id": "sage",
+          "label": "Приглушений зелений",
+          "color": "#819183",
+          "surface": "plastic"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#b47c65",
+          "surface": "ceramic"
+        }
+      ],
+      "production": "assets/models/floorLamp-2.glb",
+      "proxy": "assets/proxies/floorLamp-2.glb",
+      "quality": {
+        "high": "assets/models/floorLamp-2.glb",
+        "medium": "assets/models/floorLamp-2.glb",
+        "low": "assets/models/floorLamp-2.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.1899999976158142,
+          -2.6226043559063328e-8,
+          -0.1899999976158142
+        ],
+        "max": [
+          0.1899999976158142,
+          1.5,
+          0.1899999976158142
+        ],
+        "size": [
+          0.3799999952316284,
+          1.5000000262260436,
+          0.3799999952316284
+        ]
+      },
+      "bytes": {
+        "production": 142208,
+        "proxy": 19540
+      }
+    },
+    {
+      "assetId": "plant",
+      "variant": 1,
+      "label": "1 / Листяна рослина",
+      "category": "plants",
+      "placement": "floor",
+      "dimensions": [
+        0.5377264254460495,
+        1.2360142446356281,
+        0.58
+      ],
+      "materials": [
+        {
+          "id": "white",
+          "label": "Теплий білий",
+          "color": "#dddcd3",
+          "surface": "ceramic"
+        },
+        {
+          "id": "black",
+          "label": "Темний графіт",
+          "color": "#30383d",
+          "surface": "metal"
+        },
+        {
+          "id": "sage",
+          "label": "Приглушений зелений",
+          "color": "#819183",
+          "surface": "plastic"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#b47c65",
+          "surface": "ceramic"
+        }
+      ],
+      "production": "assets/models/plant-1.glb",
+      "proxy": "assets/proxies/plant-1.glb",
+      "quality": {
+        "medium": "assets/models/plant-1.glb",
+        "low": "assets/models/plant-1.low.glb",
+        "high": "assets/models/plant-1.high.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.26886321272302477,
+          0,
+          -0.29
+        ],
+        "max": [
+          0.26886321272302477,
+          1.2360142446356281,
+          0.29
+        ],
+        "size": [
+          0.5377264254460495,
+          1.2360142446356281,
+          0.58
+        ]
+      },
+      "bytes": {
+        "production": 3476980,
+        "proxy": 41824,
+        "fallback": 2187720
+      },
+      "sourcePbr": true,
+      "fallback": "assets/models/plant-1.fallback.glb",
+      "sourceId": "potted_plant_01",
+      "sourceUrl": "https://polyhaven.com/a/potted_plant_01",
+      "license": "CC0-1.0",
+      "source": "Poly Haven",
+      "productionOverride": true,
+      "qualityMetadata": {
+        "medium": {
+          "triangles": 21473,
+          "textureSize": 1024,
+          "bytes": 3476844
+        },
+        "low": {
+          "triangles": 10383,
+          "textureSize": 512,
+          "bytes": 1077304
+        },
+        "high": {
+          "triangles": 58376,
+          "textureSize": 2048,
+          "bytes": 12333860
+        }
+      }
+    },
+    {
+      "assetId": "plant",
+      "variant": 2,
+      "label": "2 / Широколиста рослина",
+      "category": "plants",
+      "placement": "floor",
+      "dimensions": [
+        0.65,
+        0.779805598967807,
+        0.6094230732801177
+      ],
+      "materials": [
+        {
+          "id": "white",
+          "label": "Теплий білий",
+          "color": "#dddcd3",
+          "surface": "ceramic"
+        },
+        {
+          "id": "black",
+          "label": "Темний графіт",
+          "color": "#30383d",
+          "surface": "metal"
+        },
+        {
+          "id": "sage",
+          "label": "Приглушений зелений",
+          "color": "#819183",
+          "surface": "plastic"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#b47c65",
+          "surface": "ceramic"
+        }
+      ],
+      "production": "assets/models/plant-2.glb",
+      "proxy": "assets/proxies/plant-2.glb",
+      "quality": {
+        "medium": "assets/models/plant-2.glb",
+        "low": "assets/models/plant-2.low.glb",
+        "high": "assets/models/plant-2.high.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.325,
+          0,
+          -0.30471153664005884
+        ],
+        "max": [
+          0.325,
+          0.779805598967807,
+          0.30471153664005884
+        ],
+        "size": [
+          0.65,
+          0.779805598967807,
+          0.6094230732801177
+        ]
+      },
+      "bytes": {
+        "production": 2809448,
+        "proxy": 42156,
+        "fallback": 1043060
+      },
+      "sourcePbr": true,
+      "fallback": "assets/models/plant-2.fallback.glb",
+      "sourceId": "potted_plant_02",
+      "sourceUrl": "https://polyhaven.com/a/potted_plant_02",
+      "license": "CC0-1.0",
+      "source": "Poly Haven",
+      "productionOverride": true,
+      "qualityMetadata": {
+        "medium": {
+          "triangles": 9210,
+          "textureSize": 1024,
+          "bytes": 2809384
+        },
+        "low": {
+          "triangles": 4724,
+          "textureSize": 512,
+          "bytes": 864952
+        },
+        "high": {
+          "triangles": 25342,
+          "textureSize": 2048,
+          "bytes": 9954564
+        }
+      }
+    },
+    {
+      "assetId": "plant",
+      "variant": 3,
+      "label": "3 / Компактна листяна",
+      "category": "plants",
+      "placement": "floor",
+      "dimensions": [
+        0.33376122958720317,
+        0.7671812552910796,
+        0.36
+      ],
+      "materials": [
+        {
+          "id": "white",
+          "label": "Теплий білий",
+          "color": "#dddcd3",
+          "surface": "ceramic"
+        },
+        {
+          "id": "black",
+          "label": "Темний графіт",
+          "color": "#30383d",
+          "surface": "metal"
+        },
+        {
+          "id": "sage",
+          "label": "Приглушений зелений",
+          "color": "#819183",
+          "surface": "plastic"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#b47c65",
+          "surface": "ceramic"
+        }
+      ],
+      "production": "assets/models/plant-3.glb",
+      "proxy": "assets/proxies/plant-3.glb",
+      "quality": {
+        "medium": "assets/models/plant-3.glb",
+        "low": "assets/models/plant-3.low.glb",
+        "high": "assets/models/plant-3.high.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.16688061479360158,
+          0,
+          -0.18
+        ],
+        "max": [
+          0.16688061479360158,
+          0.7671812552910796,
+          0.18
+        ],
+        "size": [
+          0.33376122958720317,
+          0.7671812552910796,
+          0.36
+        ]
+      },
+      "bytes": {
+        "production": 3476984,
+        "proxy": 40852
+      },
+      "fallback": "assets/models/plant-3.fallback.glb",
+      "qualityMetadata": {
+        "medium": {
+          "triangles": 21473,
+          "textureSize": 1024,
+          "bytes": 3476848
+        },
+        "low": {
+          "triangles": 10383,
+          "textureSize": 512,
+          "bytes": 1077308
+        },
+        "high": {
+          "triangles": 58376,
+          "textureSize": 2048,
+          "bytes": 12333864
+        }
+      },
+      "sourcePbr": true,
+      "sourceUrl": "https://polyhaven.com/a/potted_plant_01",
+      "license": "CC0-1.0",
+      "productionOverride": true
+    },
+    {
+      "assetId": "acousticPanel",
+      "variant": 1,
+      "label": "1 / Текстильна",
+      "category": "acoustic",
+      "placement": "wall",
+      "dimensions": [
+        0.65,
+        1.2,
+        0.06
+      ],
+      "materials": [
+        {
+          "id": "oat",
+          "label": "Вівсяна тканина",
+          "color": "#c8bca8",
+          "surface": "fabric"
+        },
+        {
+          "id": "graphite",
+          "label": "Графітова тканина",
+          "color": "#414749",
+          "surface": "fabric"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієва тканина",
+          "color": "#7b9182",
+          "surface": "fabric"
+        },
+        {
+          "id": "ochre",
+          "label": "Тепла охра",
+          "color": "#b38b48",
+          "surface": "fabric"
+        },
+        {
+          "id": "blue",
+          "label": "Синій текстиль",
+          "color": "#465f79",
+          "surface": "fabric"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#ad7562",
+          "surface": "fabric"
+        }
+      ],
+      "production": "assets/models/acousticPanel-1.glb",
+      "proxy": "assets/proxies/acousticPanel-1.glb",
+      "quality": {
+        "high": "assets/models/acousticPanel-1.glb",
+        "medium": "assets/models/acousticPanel-1.glb",
+        "low": "assets/models/acousticPanel-1.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.32499998807907104,
+          -0.6000000238418579,
+          -0.029999999329447746
+        ],
+        "max": [
+          0.32499998807907104,
+          0.6000000238418579,
+          0.03200000151991844
+        ],
+        "size": [
+          0.6499999761581421,
+          1.2000000476837158,
+          0.06200000084936619
+        ]
+      },
+      "bytes": {
+        "production": 153972,
+        "proxy": 2584
+      }
+    },
+    {
+      "assetId": "acousticPanel",
+      "variant": 2,
+      "label": "2 / Рейкова",
+      "category": "acoustic",
+      "placement": "wall",
+      "dimensions": [
+        0.75,
+        1.35,
+        0.065
+      ],
+      "materials": [
+        {
+          "id": "oat",
+          "label": "Вівсяна тканина",
+          "color": "#c8bca8",
+          "surface": "fabric"
+        },
+        {
+          "id": "graphite",
+          "label": "Графітова тканина",
+          "color": "#414749",
+          "surface": "fabric"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієва тканина",
+          "color": "#7b9182",
+          "surface": "fabric"
+        },
+        {
+          "id": "ochre",
+          "label": "Тепла охра",
+          "color": "#b38b48",
+          "surface": "fabric"
+        },
+        {
+          "id": "blue",
+          "label": "Синій текстиль",
+          "color": "#465f79",
+          "surface": "fabric"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#ad7562",
+          "surface": "fabric"
+        }
+      ],
+      "production": "assets/models/acousticPanel-2.glb",
+      "proxy": "assets/proxies/acousticPanel-2.glb",
+      "quality": {
+        "high": "assets/models/acousticPanel-2.glb",
+        "medium": "assets/models/acousticPanel-2.glb",
+        "low": "assets/models/acousticPanel-2.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.375,
+          -0.675000011920929,
+          -0.032499998807907104
+        ],
+        "max": [
+          0.375,
+          0.675000011920929,
+          0.048500001430511475
+        ],
+        "size": [
+          0.75,
+          1.350000023841858,
+          0.08100000023841858
+        ]
+      },
+      "bytes": {
+        "production": 588728,
+        "proxy": 8304
+      }
+    },
+    {
+      "assetId": "acousticPanel",
+      "variant": 3,
+      "label": "3 / Квадратна",
+      "category": "acoustic",
+      "placement": "wall",
+      "dimensions": [
+        0.8,
+        0.8,
+        0.065
+      ],
+      "materials": [
+        {
+          "id": "oat",
+          "label": "Вівсяна тканина",
+          "color": "#c8bca8",
+          "surface": "fabric"
+        },
+        {
+          "id": "graphite",
+          "label": "Графітова тканина",
+          "color": "#414749",
+          "surface": "fabric"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієва тканина",
+          "color": "#7b9182",
+          "surface": "fabric"
+        },
+        {
+          "id": "ochre",
+          "label": "Тепла охра",
+          "color": "#b38b48",
+          "surface": "fabric"
+        },
+        {
+          "id": "blue",
+          "label": "Синій текстиль",
+          "color": "#465f79",
+          "surface": "fabric"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#ad7562",
+          "surface": "fabric"
+        }
+      ],
+      "production": "assets/models/acousticPanel-3.glb",
+      "proxy": "assets/proxies/acousticPanel-3.glb",
+      "quality": {
+        "high": "assets/models/acousticPanel-3.glb",
+        "medium": "assets/models/acousticPanel-3.glb",
+        "low": "assets/models/acousticPanel-3.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.4000000059604645,
+          -0.4000000059604645,
+          -0.032499998807907104
+        ],
+        "max": [
+          0.4000000059604645,
+          0.4000000059604645,
+          0.03449999913573265
+        ],
+        "size": [
+          0.800000011920929,
+          0.800000011920929,
+          0.06699999794363976
+        ]
+      },
+      "bytes": {
+        "production": 158488,
+        "proxy": 2564
+      }
+    },
+    {
+      "assetId": "art",
+      "variant": 1,
+      "label": "1 / Геометрія",
+      "category": "wallDecor",
+      "placement": "wall",
+      "dimensions": [
+        0.9,
+        0.65,
+        0.045
+      ],
+      "materials": [
+        {
+          "id": "white",
+          "label": "Теплий білий",
+          "color": "#dddcd3",
+          "surface": "ceramic"
+        },
+        {
+          "id": "black",
+          "label": "Темний графіт",
+          "color": "#30383d",
+          "surface": "metal"
+        },
+        {
+          "id": "sage",
+          "label": "Приглушений зелений",
+          "color": "#819183",
+          "surface": "plastic"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#b47c65",
+          "surface": "ceramic"
+        }
+      ],
+      "production": "assets/models/art-1.glb",
+      "proxy": "assets/proxies/art-1.glb",
+      "quality": {
+        "high": "assets/models/art-1.glb",
+        "medium": "assets/models/art-1.glb",
+        "low": "assets/models/art-1.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.44999998807907104,
+          -0.32499998807907104,
+          -0.02250000089406967
+        ],
+        "max": [
+          0.44999998807907104,
+          0.32499998807907104,
+          0.042500000447034836
+        ],
+        "size": [
+          0.8999999761581421,
+          0.6499999761581421,
+          0.06500000134110451
+        ]
+      },
+      "bytes": {
+        "production": 208228,
+        "proxy": 11604
+      }
+    },
+    {
+      "assetId": "art",
+      "variant": 2,
+      "label": "2 / Диптих",
+      "category": "wallDecor",
+      "placement": "wall",
+      "dimensions": [
+        1.1,
+        0.65,
+        0.045
+      ],
+      "materials": [
+        {
+          "id": "white",
+          "label": "Теплий білий",
+          "color": "#dddcd3",
+          "surface": "ceramic"
+        },
+        {
+          "id": "black",
+          "label": "Темний графіт",
+          "color": "#30383d",
+          "surface": "metal"
+        },
+        {
+          "id": "sage",
+          "label": "Приглушений зелений",
+          "color": "#819183",
+          "surface": "plastic"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#b47c65",
+          "surface": "ceramic"
+        }
+      ],
+      "production": "assets/models/art-2.glb",
+      "proxy": "assets/proxies/art-2.glb",
+      "quality": {
+        "high": "assets/models/art-2.glb",
+        "medium": "assets/models/art-2.glb",
+        "low": "assets/models/art-2.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.550000011920929,
+          -0.32499998807907104,
+          -0.02250000089406967
+        ],
+        "max": [
+          0.550000011920929,
+          0.32499998807907104,
+          0.051500000059604645
+        ],
+        "size": [
+          1.100000023841858,
+          0.6499999761581421,
+          0.07400000095367432
+        ]
+      },
+      "bytes": {
+        "production": 260280,
+        "proxy": 14512
+      }
+    },
+    {
+      "assetId": "art",
+      "variant": 3,
+      "label": "3 / Пейзаж",
+      "category": "wallDecor",
+      "placement": "wall",
+      "dimensions": [
+        1.05,
+        0.6,
+        0.045
+      ],
+      "materials": [
+        {
+          "id": "white",
+          "label": "Теплий білий",
+          "color": "#dddcd3",
+          "surface": "ceramic"
+        },
+        {
+          "id": "black",
+          "label": "Темний графіт",
+          "color": "#30383d",
+          "surface": "metal"
+        },
+        {
+          "id": "sage",
+          "label": "Приглушений зелений",
+          "color": "#819183",
+          "surface": "plastic"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#b47c65",
+          "surface": "ceramic"
+        }
+      ],
+      "production": "assets/models/art-3.glb",
+      "proxy": "assets/proxies/art-3.glb",
+      "quality": {
+        "high": "assets/models/art-3.glb",
+        "medium": "assets/models/art-3.glb",
+        "low": "assets/models/art-3.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.5249999761581421,
+          -0.30000001192092896,
+          -0.02250000089406967
+        ],
+        "max": [
+          0.5249999761581421,
+          0.30000001192092896,
+          0.044999998062849045
+        ],
+        "size": [
+          1.0499999523162842,
+          0.6000000238418579,
+          0.06749999895691872
+        ]
+      },
+      "bytes": {
+        "production": 208624,
+        "proxy": 11056
+      }
+    },
+    {
+      "assetId": "sign",
+      "variant": 1,
+      "label": "1 / Співпраця",
+      "category": "signage",
+      "placement": "wall",
+      "dimensions": [
+        0.8,
+        0.18,
+        0.035
+      ],
+      "materials": [
+        {
+          "id": "white",
+          "label": "Теплий білий",
+          "color": "#dddcd3",
+          "surface": "ceramic"
+        },
+        {
+          "id": "black",
+          "label": "Темний графіт",
+          "color": "#30383d",
+          "surface": "metal"
+        },
+        {
+          "id": "sage",
+          "label": "Приглушений зелений",
+          "color": "#819183",
+          "surface": "plastic"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#b47c65",
+          "surface": "ceramic"
+        }
+      ],
+      "production": "assets/models/sign-1.glb",
+      "proxy": "assets/proxies/sign-1.glb",
+      "quality": {
+        "high": "assets/models/sign-1.glb",
+        "medium": "assets/models/sign-1.glb",
+        "low": "assets/models/sign-1.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.3869999945163727,
+          -0.09000000357627869,
+          -0.017500000074505806
+        ],
+        "max": [
+          0.3869999945163727,
+          0.09000000357627869,
+          0.017500000074505806
+        ],
+        "size": [
+          0.7739999890327454,
+          0.18000000715255737,
+          0.03500000014901161
+        ]
+      },
+      "bytes": {
+        "production": 823228,
+        "proxy": 9980
+      }
+    },
+    {
+      "assetId": "sign",
+      "variant": 2,
+      "label": "2 / Відпочинок",
+      "category": "signage",
+      "placement": "wall",
+      "dimensions": [
+        0.85,
+        0.18,
+        0.035
+      ],
+      "materials": [
+        {
+          "id": "white",
+          "label": "Теплий білий",
+          "color": "#dddcd3",
+          "surface": "ceramic"
+        },
+        {
+          "id": "black",
+          "label": "Темний графіт",
+          "color": "#30383d",
+          "surface": "metal"
+        },
+        {
+          "id": "sage",
+          "label": "Приглушений зелений",
+          "color": "#819183",
+          "surface": "plastic"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#b47c65",
+          "surface": "ceramic"
+        }
+      ],
+      "production": "assets/models/sign-2.glb",
+      "proxy": "assets/proxies/sign-2.glb",
+      "quality": {
+        "high": "assets/models/sign-2.glb",
+        "medium": "assets/models/sign-2.glb",
+        "low": "assets/models/sign-2.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.41062501072883606,
+          -0.09000000357627869,
+          -0.017500000074505806
+        ],
+        "max": [
+          0.40162500739097595,
+          0.09000000357627869,
+          0.017500000074505806
+        ],
+        "size": [
+          0.812250018119812,
+          0.18000000715255737,
+          0.03500000014901161
+        ]
+      },
+      "bytes": {
+        "production": 824016,
+        "proxy": 10560
+      }
+    },
+    {
+      "assetId": "clock",
+      "variant": 1,
+      "label": "1 / Круглий Ø32",
+      "category": "clocks",
+      "placement": "wall",
+      "dimensions": [
+        0.32,
+        0.32,
+        0.045
+      ],
+      "materials": [
+        {
+          "id": "white",
+          "label": "Теплий білий",
+          "color": "#dddcd3",
+          "surface": "ceramic"
+        },
+        {
+          "id": "black",
+          "label": "Темний графіт",
+          "color": "#30383d",
+          "surface": "metal"
+        },
+        {
+          "id": "sage",
+          "label": "Приглушений зелений",
+          "color": "#819183",
+          "surface": "plastic"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#b47c65",
+          "surface": "ceramic"
+        }
+      ],
+      "production": "assets/models/clock-1.glb",
+      "proxy": "assets/proxies/clock-1.glb",
+      "quality": {
+        "high": "assets/models/clock-1.glb",
+        "medium": "assets/models/clock-1.glb",
+        "low": "assets/models/clock-1.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.1599999964237213,
+          -0.1599999964237213,
+          -0.02250000089406967
+        ],
+        "max": [
+          0.1599999964237213,
+          0.1599999964237213,
+          0.04349999874830246
+        ],
+        "size": [
+          0.3199999928474426,
+          0.3199999928474426,
+          0.06599999964237213
+        ]
+      },
+      "bytes": {
+        "production": 102656,
+        "proxy": 18324
+      }
+    },
+    {
+      "assetId": "clock",
+      "variant": 2,
+      "label": "2 / Мінімалістичний Ø40",
+      "category": "clocks",
+      "placement": "wall",
+      "dimensions": [
+        0.4,
+        0.4,
+        0.045
+      ],
+      "materials": [
+        {
+          "id": "white",
+          "label": "Теплий білий",
+          "color": "#dddcd3",
+          "surface": "ceramic"
+        },
+        {
+          "id": "black",
+          "label": "Темний графіт",
+          "color": "#30383d",
+          "surface": "metal"
+        },
+        {
+          "id": "sage",
+          "label": "Приглушений зелений",
+          "color": "#819183",
+          "surface": "plastic"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#b47c65",
+          "surface": "ceramic"
+        }
+      ],
+      "production": "assets/models/clock-2.glb",
+      "proxy": "assets/proxies/clock-2.glb",
+      "quality": {
+        "high": "assets/models/clock-2.glb",
+        "medium": "assets/models/clock-2.glb",
+        "low": "assets/models/clock-2.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.20000000298023224,
+          -0.20000000298023224,
+          -0.02250000089406967
+        ],
+        "max": [
+          0.20000000298023224,
+          0.20000000298023224,
+          0.04349999874830246
+        ],
+        "size": [
+          0.4000000059604645,
+          0.4000000059604645,
+          0.06599999964237213
+        ]
+      },
+      "bytes": {
+        "production": 103480,
+        "proxy": 18124
+      }
+    },
+    {
+      "assetId": "board",
+      "variant": 1,
+      "label": "1 / Маркерна дошка",
+      "category": "boards",
+      "placement": "wall",
+      "dimensions": [
+        1.2,
+        0.8,
+        0.055
+      ],
+      "materials": [
+        {
+          "id": "white",
+          "label": "Теплий білий",
+          "color": "#dddcd3",
+          "surface": "ceramic"
+        },
+        {
+          "id": "black",
+          "label": "Темний графіт",
+          "color": "#30383d",
+          "surface": "metal"
+        },
+        {
+          "id": "sage",
+          "label": "Приглушений зелений",
+          "color": "#819183",
+          "surface": "plastic"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#b47c65",
+          "surface": "ceramic"
+        }
+      ],
+      "production": "assets/models/board-1.glb",
+      "proxy": "assets/proxies/board-1.glb",
+      "quality": {
+        "high": "assets/models/board-1.glb",
+        "medium": "assets/models/board-1.glb",
+        "low": "assets/models/board-1.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.6000000238418579,
+          -0.42100000381469727,
+          -0.027499999850988388
+        ],
+        "max": [
+          0.6000000238418579,
+          0.4000000059604645,
+          0.05000000074505806
+        ],
+        "size": [
+          1.2000000476837158,
+          0.8210000097751617,
+          0.07750000059604645
+        ]
+      },
+      "bytes": {
+        "production": 284200,
+        "proxy": 8220
+      }
+    },
+    {
+      "assetId": "board",
+      "variant": 2,
+      "label": "2 / Екран 55",
+      "category": "boards",
+      "placement": "wall",
+      "dimensions": [
+        1.23,
+        0.72,
+        0.06
+      ],
+      "materials": [
+        {
+          "id": "white",
+          "label": "Теплий білий",
+          "color": "#dddcd3",
+          "surface": "ceramic"
+        },
+        {
+          "id": "black",
+          "label": "Темний графіт",
+          "color": "#30383d",
+          "surface": "metal"
+        },
+        {
+          "id": "sage",
+          "label": "Приглушений зелений",
+          "color": "#819183",
+          "surface": "plastic"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#b47c65",
+          "surface": "ceramic"
+        }
+      ],
+      "production": "assets/models/board-2.glb",
+      "proxy": "assets/proxies/board-2.glb",
+      "quality": {
+        "high": "assets/models/board-2.glb",
+        "medium": "assets/models/board-2.glb",
+        "low": "assets/models/board-2.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.6150000095367432,
+          -0.36000001430511475,
+          -0.029999999329447746
+        ],
+        "max": [
+          0.6150000095367432,
+          0.36000001430511475,
+          0.04699999839067459
+        ],
+        "size": [
+          1.2300000190734863,
+          0.7200000286102295,
+          0.07699999772012234
+        ]
+      },
+      "bytes": {
+        "production": 148312,
+        "proxy": 6512
+      }
+    },
+    {
+      "assetId": "board",
+      "variant": 3,
+      "label": "3 / Коркова дошка",
+      "category": "boards",
+      "placement": "wall",
+      "dimensions": [
+        1.1,
+        0.75,
+        0.06
+      ],
+      "materials": [
+        {
+          "id": "white",
+          "label": "Теплий білий",
+          "color": "#dddcd3",
+          "surface": "ceramic"
+        },
+        {
+          "id": "black",
+          "label": "Темний графіт",
+          "color": "#30383d",
+          "surface": "metal"
+        },
+        {
+          "id": "sage",
+          "label": "Приглушений зелений",
+          "color": "#819183",
+          "surface": "plastic"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#b47c65",
+          "surface": "ceramic"
+        }
+      ],
+      "production": "assets/models/board-3.glb",
+      "proxy": "assets/proxies/board-3.glb",
+      "quality": {
+        "high": "assets/models/board-3.glb",
+        "medium": "assets/models/board-3.glb",
+        "low": "assets/models/board-3.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.550000011920929,
+          -0.375,
+          -0.029999999329447746
+        ],
+        "max": [
+          0.550000011920929,
+          0.375,
+          0.04149999842047691
+        ],
+        "size": [
+          1.100000023841858,
+          0.75,
+          0.07149999774992466
+        ]
+      },
+      "bytes": {
+        "production": 281944,
+        "proxy": 8216
+      }
+    },
+    {
+      "assetId": "accessory",
+      "variant": 1,
+      "label": "1 / Книги й таця",
+      "category": "accessories",
+      "placement": "floor",
+      "dimensions": [
+        0.38,
+        0.18,
+        0.26
+      ],
+      "materials": [
+        {
+          "id": "white",
+          "label": "Теплий білий",
+          "color": "#dddcd3",
+          "surface": "ceramic"
+        },
+        {
+          "id": "black",
+          "label": "Темний графіт",
+          "color": "#30383d",
+          "surface": "metal"
+        },
+        {
+          "id": "sage",
+          "label": "Приглушений зелений",
+          "color": "#819183",
+          "surface": "plastic"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#b47c65",
+          "surface": "ceramic"
+        }
+      ],
+      "production": "assets/models/accessory-1.glb",
+      "proxy": "assets/proxies/accessory-1.glb",
+      "quality": {
+        "high": "assets/models/accessory-1.glb",
+        "medium": "assets/models/accessory-1.glb",
+        "low": "assets/models/accessory-1.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.1899999976158142,
+          0.0024999999441206455,
+          -0.12999999523162842
+        ],
+        "max": [
+          0.1899999976158142,
+          0.1525000035762787,
+          0.12999999523162842
+        ],
+        "size": [
+          0.3799999952316284,
+          0.15000000363215804,
+          0.25999999046325684
+        ]
+      },
+      "bytes": {
+        "production": 148344,
+        "proxy": 8960
+      }
+    },
+    {
+      "assetId": "accessory",
+      "variant": 2,
+      "label": "2 / Ноутбук і чашка",
+      "category": "accessories",
+      "placement": "floor",
+      "dimensions": [
+        0.4,
+        0.24,
+        0.3
+      ],
+      "materials": [
+        {
+          "id": "white",
+          "label": "Теплий білий",
+          "color": "#dddcd3",
+          "surface": "ceramic"
+        },
+        {
+          "id": "black",
+          "label": "Темний графіт",
+          "color": "#30383d",
+          "surface": "metal"
+        },
+        {
+          "id": "sage",
+          "label": "Приглушений зелений",
+          "color": "#819183",
+          "surface": "plastic"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#b47c65",
+          "surface": "ceramic"
+        }
+      ],
+      "production": "assets/models/accessory-2.glb",
+      "proxy": "assets/proxies/accessory-2.glb",
+      "quality": {
+        "high": "assets/models/accessory-2.glb",
+        "medium": "assets/models/accessory-2.glb",
+        "low": "assets/models/accessory-2.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.17999999225139618,
+          -2.1606683109354208e-10,
+          -0.13209301233291626
+        ],
+        "max": [
+          0.21799999475479126,
+          0.22044621407985687,
+          0.10499999672174454
+        ],
+        "size": [
+          0.39799998700618744,
+          0.2204462142959237,
+          0.2370930090546608
+        ]
+      },
+      "bytes": {
+        "production": 1808340,
+        "proxy": 25816
+      }
+    },
+    {
+      "assetId": "accessory",
+      "variant": 3,
+      "label": "3 / Ваза",
+      "category": "accessories",
+      "placement": "floor",
+      "dimensions": [
+        0.18,
+        0.3,
+        0.18
+      ],
+      "materials": [
+        {
+          "id": "white",
+          "label": "Теплий білий",
+          "color": "#dddcd3",
+          "surface": "ceramic"
+        },
+        {
+          "id": "black",
+          "label": "Темний графіт",
+          "color": "#30383d",
+          "surface": "metal"
+        },
+        {
+          "id": "sage",
+          "label": "Приглушений зелений",
+          "color": "#819183",
+          "surface": "plastic"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#b47c65",
+          "surface": "ceramic"
+        }
+      ],
+      "production": "assets/models/accessory-3.glb",
+      "proxy": "assets/proxies/accessory-3.glb",
+      "quality": {
+        "high": "assets/models/accessory-3.glb",
+        "medium": "assets/models/accessory-3.glb",
+        "low": "assets/models/accessory-3.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.05400000140070915,
+          2.38418573772492e-9,
+          -0.05400000140070915
+        ],
+        "max": [
+          0.07999999821186066,
+          0.30049318075180054,
+          0.05400000140070915
+        ],
+        "size": [
+          0.1339999996125698,
+          0.3004931783676148,
+          0.1080000028014183
+        ]
+      },
+      "bytes": {
+        "production": 86908,
+        "proxy": 12204
+      }
+    },
+    {
+      "assetId": "rug",
+      "variant": 1,
+      "label": "1 / 200 × 140",
+      "category": "rugs",
+      "placement": "floor",
+      "dimensions": [
+        2,
+        0.012,
+        1.4
+      ],
+      "materials": [
+        {
+          "id": "oat",
+          "label": "Вівсяна тканина",
+          "color": "#c8bca8",
+          "surface": "fabric"
+        },
+        {
+          "id": "graphite",
+          "label": "Графітова тканина",
+          "color": "#414749",
+          "surface": "fabric"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієва тканина",
+          "color": "#7b9182",
+          "surface": "fabric"
+        },
+        {
+          "id": "ochre",
+          "label": "Тепла охра",
+          "color": "#b38b48",
+          "surface": "fabric"
+        },
+        {
+          "id": "blue",
+          "label": "Синій текстиль",
+          "color": "#465f79",
+          "surface": "fabric"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#ad7562",
+          "surface": "fabric"
+        }
+      ],
+      "production": "assets/models/rug-1.glb",
+      "proxy": "assets/proxies/rug-1.glb",
+      "quality": {
+        "high": "assets/models/rug-1.glb",
+        "medium": "assets/models/rug-1.glb",
+        "low": "assets/models/rug-1.glb"
+      },
+      "bounds": {
+        "min": [
+          -1,
+          -5.215406578829018e-11,
+          -0.699999988079071
+        ],
+        "max": [
+          1,
+          0.014000000432133675,
+          0.699999988079071
+        ],
+        "size": [
+          2,
+          0.01400000048428774,
+          1.399999976158142
+        ]
+      },
+      "bytes": {
+        "production": 181356,
+        "proxy": 2552
+      }
+    },
+    {
+      "assetId": "rug",
+      "variant": 2,
+      "label": "2 / 240 × 170",
+      "category": "rugs",
+      "placement": "floor",
+      "dimensions": [
+        2.4,
+        0.012,
+        1.7
+      ],
+      "materials": [
+        {
+          "id": "oat",
+          "label": "Вівсяна тканина",
+          "color": "#c8bca8",
+          "surface": "fabric"
+        },
+        {
+          "id": "graphite",
+          "label": "Графітова тканина",
+          "color": "#414749",
+          "surface": "fabric"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієва тканина",
+          "color": "#7b9182",
+          "surface": "fabric"
+        },
+        {
+          "id": "ochre",
+          "label": "Тепла охра",
+          "color": "#b38b48",
+          "surface": "fabric"
+        },
+        {
+          "id": "blue",
+          "label": "Синій текстиль",
+          "color": "#465f79",
+          "surface": "fabric"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#ad7562",
+          "surface": "fabric"
+        }
+      ],
+      "production": "assets/models/rug-2.glb",
+      "proxy": "assets/proxies/rug-2.glb",
+      "quality": {
+        "high": "assets/models/rug-2.glb",
+        "medium": "assets/models/rug-2.glb",
+        "low": "assets/models/rug-2.glb"
+      },
+      "bounds": {
+        "min": [
+          -1.2000000476837158,
+          -5.215406578829018e-11,
+          -0.8500000238418579
+        ],
+        "max": [
+          1.2000000476837158,
+          0.014000000432133675,
+          0.8500000238418579
+        ],
+        "size": [
+          2.4000000953674316,
+          0.01400000048428774,
+          1.7000000476837158
+        ]
+      },
+      "bytes": {
+        "production": 178272,
+        "proxy": 2608
+      }
+    },
+    {
+      "assetId": "rug",
+      "variant": 3,
+      "label": "3 / Круглий Ø180",
+      "category": "rugs",
+      "placement": "floor",
+      "dimensions": [
+        1.8,
+        0.012,
+        1.8
+      ],
+      "materials": [
+        {
+          "id": "oat",
+          "label": "Вівсяна тканина",
+          "color": "#c8bca8",
+          "surface": "fabric"
+        },
+        {
+          "id": "graphite",
+          "label": "Графітова тканина",
+          "color": "#414749",
+          "surface": "fabric"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієва тканина",
+          "color": "#7b9182",
+          "surface": "fabric"
+        },
+        {
+          "id": "ochre",
+          "label": "Тепла охра",
+          "color": "#b38b48",
+          "surface": "fabric"
+        },
+        {
+          "id": "blue",
+          "label": "Синій текстиль",
+          "color": "#465f79",
+          "surface": "fabric"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#ad7562",
+          "surface": "fabric"
+        }
+      ],
+      "production": "assets/models/rug-3.glb",
+      "proxy": "assets/proxies/rug-3.glb",
+      "quality": {
+        "high": "assets/models/rug-3.glb",
+        "medium": "assets/models/rug-3.glb",
+        "low": "assets/models/rug-3.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.8999999761581421,
+          -5.215406578829018e-11,
+          -0.8999999761581421
+        ],
+        "max": [
+          0.8999999761581421,
+          0.012000000104308128,
+          0.8999999761581421
+        ],
+        "size": [
+          1.7999999523162842,
+          0.012000000156462194,
+          1.7999999523162842
+        ]
+      },
+      "bytes": {
+        "production": 16540,
+        "proxy": 4196
+      }
+    },
+    {
+      "assetId": "separator",
+      "variant": 1,
+      "label": "1 / Рейкова",
+      "category": "separators",
+      "placement": "floor",
+      "dimensions": [
+        1.05,
+        1.15,
+        0.24
+      ],
+      "materials": [
+        {
+          "id": "oat",
+          "label": "Вівсяна тканина",
+          "color": "#c8bca8",
+          "surface": "fabric"
+        },
+        {
+          "id": "graphite",
+          "label": "Графітова тканина",
+          "color": "#414749",
+          "surface": "fabric"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієва тканина",
+          "color": "#7b9182",
+          "surface": "fabric"
+        },
+        {
+          "id": "ochre",
+          "label": "Тепла охра",
+          "color": "#b38b48",
+          "surface": "fabric"
+        },
+        {
+          "id": "blue",
+          "label": "Синій текстиль",
+          "color": "#465f79",
+          "surface": "fabric"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#ad7562",
+          "surface": "fabric"
+        }
+      ],
+      "production": "assets/models/separator-1.glb",
+      "proxy": "assets/proxies/separator-1.glb",
+      "quality": {
+        "high": "assets/models/separator-1.glb",
+        "medium": "assets/models/separator-1.glb",
+        "low": "assets/models/separator-1.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.5249999761581421,
+          -3.5762786065873797e-9,
+          -0.11999999731779099
+        ],
+        "max": [
+          0.5249999761581421,
+          1.149999976158142,
+          0.11999999731779099
+        ],
+        "size": [
+          1.0499999523162842,
+          1.1499999797344207,
+          0.23999999463558197
+        ]
+      },
+      "bytes": {
+        "production": 682120,
+        "proxy": 12016
+      }
+    },
+    {
+      "assetId": "separator",
+      "variant": 2,
+      "label": "2 / Повстяна",
+      "category": "separators",
+      "placement": "floor",
+      "dimensions": [
+        1.1,
+        1.2,
+        0.25
+      ],
+      "materials": [
+        {
+          "id": "oat",
+          "label": "Вівсяна тканина",
+          "color": "#c8bca8",
+          "surface": "fabric"
+        },
+        {
+          "id": "graphite",
+          "label": "Графітова тканина",
+          "color": "#414749",
+          "surface": "fabric"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієва тканина",
+          "color": "#7b9182",
+          "surface": "fabric"
+        },
+        {
+          "id": "ochre",
+          "label": "Тепла охра",
+          "color": "#b38b48",
+          "surface": "fabric"
+        },
+        {
+          "id": "blue",
+          "label": "Синій текстиль",
+          "color": "#465f79",
+          "surface": "fabric"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#ad7562",
+          "surface": "fabric"
+        }
+      ],
+      "production": "assets/models/separator-2.glb",
+      "proxy": "assets/proxies/separator-2.glb",
+      "quality": {
+        "high": "assets/models/separator-2.glb",
+        "medium": "assets/models/separator-2.glb",
+        "low": "assets/models/separator-2.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.550000011920929,
+          -3.5762786065873797e-9,
+          -0.125
+        ],
+        "max": [
+          0.550000011920929,
+          1.1999999284744263,
+          0.125
+        ],
+        "size": [
+          1.100000023841858,
+          1.1999999320507049,
+          0.25
+        ]
+      },
+      "bytes": {
+        "production": 217444,
+        "proxy": 5864
+      }
+    },
+    {
+      "assetId": "separator",
+      "variant": 3,
+      "label": "3 / Кашпо",
+      "category": "separators",
+      "placement": "floor",
+      "dimensions": [
+        1.1,
+        0.9,
+        0.3
+      ],
+      "materials": [
+        {
+          "id": "oat",
+          "label": "Вівсяна тканина",
+          "color": "#c8bca8",
+          "surface": "fabric"
+        },
+        {
+          "id": "graphite",
+          "label": "Графітова тканина",
+          "color": "#414749",
+          "surface": "fabric"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієва тканина",
+          "color": "#7b9182",
+          "surface": "fabric"
+        },
+        {
+          "id": "ochre",
+          "label": "Тепла охра",
+          "color": "#b38b48",
+          "surface": "fabric"
+        },
+        {
+          "id": "blue",
+          "label": "Синій текстиль",
+          "color": "#465f79",
+          "surface": "fabric"
+        },
+        {
+          "id": "clay",
+          "label": "Теракота",
+          "color": "#ad7562",
+          "surface": "fabric"
+        }
+      ],
+      "production": "assets/models/separator-3.glb",
+      "proxy": "assets/proxies/separator-3.glb",
+      "quality": {
+        "high": "assets/models/separator-3.glb",
+        "medium": "assets/models/separator-3.glb",
+        "low": "assets/models/separator-3.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.550000011920929,
+          -3.5762786065873797e-9,
+          -0.15000000596046448
+        ],
+        "max": [
+          0.5535594820976257,
+          0.8729999661445618,
+          0.16699999570846558
+        ],
+        "size": [
+          1.1035594940185547,
+          0.8729999697208404,
+          0.31700000166893005
+        ]
+      },
+      "bytes": {
+        "production": 784432,
+        "proxy": 41212
+      }
+    },
+    {
+      "assetId": "coffeeTable",
+      "variant": 4,
+      "label": "4 / Скляний на гнутих опорах",
+      "category": "tables",
+      "placement": "floor",
+      "dimensions": [
+        0.9,
+        0.4,
+        0.65
+      ],
+      "materials": [
+        {
+          "id": "oak",
+          "label": "Натуральний дуб",
+          "color": "#b88e60",
+          "surface": "wood"
+        },
+        {
+          "id": "walnut",
+          "label": "Темний горіх",
+          "color": "#604533",
+          "surface": "wood"
+        },
+        {
+          "id": "ash",
+          "label": "Світлий ясен",
+          "color": "#ddd0b3",
+          "surface": "wood"
+        },
+        {
+          "id": "white",
+          "label": "Матовий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        },
+        {
+          "id": "black",
+          "label": "Графітовий",
+          "color": "#30383d",
+          "surface": "metal"
+        }
+      ],
+      "production": "assets/models/coffeeTable-4.glb",
+      "proxy": "assets/proxies/coffeeTable-4.glb",
+      "quality": {
+        "high": "assets/models/coffeeTable-4.glb",
+        "medium": "assets/models/coffeeTable-4.glb",
+        "low": "assets/models/coffeeTable-4.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.44999998807907104,
+          0,
+          -0.32499998807907104
+        ],
+        "max": [
+          0.44999998807907104,
+          0.4000000059604645,
+          0.32499998807907104
+        ],
+        "size": [
+          0.8999999761581421,
+          0.4000000059604645,
+          0.6499999761581421
+        ]
+      },
+      "bytes": {
+        "production": 239708,
+        "proxy": 20832
+      }
+    },
+    {
+      "assetId": "coffeeTable",
+      "variant": 5,
+      "label": "5 / Органічна галька",
+      "category": "tables",
+      "placement": "floor",
+      "dimensions": [
+        1.12,
+        0.39,
+        0.72
+      ],
+      "materials": [
+        {
+          "id": "oak",
+          "label": "Натуральний дуб",
+          "color": "#b88e60",
+          "surface": "wood"
+        },
+        {
+          "id": "walnut",
+          "label": "Темний горіх",
+          "color": "#604533",
+          "surface": "wood"
+        },
+        {
+          "id": "ash",
+          "label": "Світлий ясен",
+          "color": "#ddd0b3",
+          "surface": "wood"
+        },
+        {
+          "id": "white",
+          "label": "Матовий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        },
+        {
+          "id": "black",
+          "label": "Графітовий",
+          "color": "#30383d",
+          "surface": "metal"
+        }
+      ],
+      "production": "assets/models/coffeeTable-5.glb",
+      "proxy": "assets/proxies/coffeeTable-5.glb",
+      "quality": {
+        "high": "assets/models/coffeeTable-5.glb",
+        "medium": "assets/models/coffeeTable-5.glb",
+        "low": "assets/models/coffeeTable-5.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.5600010752677917,
+          1.6689301052252858e-9,
+          -0.360005259513855
+        ],
+        "max": [
+          0.5600147843360901,
+          0.38999998569488525,
+          0.3600042462348938
+        ],
+        "size": [
+          1.1200158596038818,
+          0.38999998402595515,
+          0.7200095057487488
+        ]
+      },
+      "bytes": {
+        "production": 122664,
+        "proxy": 18656
+      }
+    },
+    {
+      "assetId": "television",
+      "variant": 1,
+      "label": "1 / Тонка рамка · 55″",
+      "category": "boards",
+      "placement": "wall",
+      "dimensions": [
+        1.23,
+        0.71,
+        0.055
+      ],
+      "materials": [
+        {
+          "id": "graphite",
+          "label": "Графітова рамка",
+          "color": "#252b30",
+          "surface": "plastic"
+        },
+        {
+          "id": "silver",
+          "label": "Сатинована металева рамка",
+          "color": "#afb5b8",
+          "surface": "metal"
+        }
+      ],
+      "production": "assets/models/television-1.glb",
+      "proxy": "assets/proxies/television-1.glb",
+      "quality": {
+        "high": "assets/models/television-1.glb",
+        "medium": "assets/models/television-1.glb",
+        "low": "assets/models/television-1.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.6150000095367432,
+          -0.35499998927116394,
+          -0.027499999850988388
+        ],
+        "max": [
+          0.6150000095367432,
+          0.35499998927116394,
+          0.027400000020861626
+        ],
+        "size": [
+          1.2300000190734863,
+          0.7099999785423279,
+          0.054899999871850014
+        ]
+      },
+      "bytes": {
+        "production": 791304,
+        "proxy": 8032
+      }
+    },
+    {
+      "assetId": "television",
+      "variant": 2,
+      "label": "2 / Тонка рамка · 65″",
+      "category": "boards",
+      "placement": "wall",
+      "dimensions": [
+        1.45,
+        0.84,
+        0.055
+      ],
+      "materials": [
+        {
+          "id": "graphite",
+          "label": "Графітова рамка",
+          "color": "#252b30",
+          "surface": "plastic"
+        },
+        {
+          "id": "silver",
+          "label": "Сатинована металева рамка",
+          "color": "#afb5b8",
+          "surface": "metal"
+        }
+      ],
+      "production": "assets/models/television-2.glb",
+      "proxy": "assets/proxies/television-2.glb",
+      "quality": {
+        "high": "assets/models/television-2.glb",
+        "medium": "assets/models/television-2.glb",
+        "low": "assets/models/television-2.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.7250000238418579,
+          -0.41999998688697815,
+          -0.027499999850988388
+        ],
+        "max": [
+          0.7250000238418579,
+          0.41999998688697815,
+          0.027400000020861626
+        ],
+        "size": [
+          1.4500000476837158,
+          0.8399999737739563,
+          0.054899999871850014
+        ]
+      },
+      "bytes": {
+        "production": 783336,
+        "proxy": 8024
+      }
+    },
+    {
+      "assetId": "coffeeMachine",
+      "variant": 1,
+      "label": "1 / Еспресо з ріжком",
+      "category": "accessories",
+      "placement": "floor",
+      "dimensions": [
+        0.27,
+        0.34,
+        0.38
+      ],
+      "materials": [
+        {
+          "id": "steel",
+          "label": "Сатинований метал",
+          "color": "#b2b8ba",
+          "surface": "metal"
+        },
+        {
+          "id": "graphite",
+          "label": "Матовий графіт",
+          "color": "#30363a",
+          "surface": "plastic"
+        },
+        {
+          "id": "white",
+          "label": "Теплий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        }
+      ],
+      "production": "assets/models/coffeeMachine-1.glb",
+      "proxy": "assets/proxies/coffeeMachine-1.glb",
+      "quality": {
+        "high": "assets/models/coffeeMachine-1.glb",
+        "medium": "assets/models/coffeeMachine-1.glb",
+        "low": "assets/models/coffeeMachine-1.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.13500000536441803,
+          -1.0430813157658037e-10,
+          -0.1899999976158142
+        ],
+        "max": [
+          0.13500000536441803,
+          0.3400000035762787,
+          0.1899999976158142
+        ],
+        "size": [
+          0.27000001072883606,
+          0.3400000036805868,
+          0.3799999952316284
+        ]
+      },
+      "bytes": {
+        "production": 679984,
+        "proxy": 36632
+      }
+    },
+    {
+      "assetId": "coffeeMachine",
+      "variant": 2,
+      "label": "2 / Автомат із бункером",
+      "category": "accessories",
+      "placement": "floor",
+      "dimensions": [
+        0.35,
+        0.43,
+        0.43
+      ],
+      "materials": [
+        {
+          "id": "steel",
+          "label": "Сатинований метал",
+          "color": "#b2b8ba",
+          "surface": "metal"
+        },
+        {
+          "id": "graphite",
+          "label": "Матовий графіт",
+          "color": "#30363a",
+          "surface": "plastic"
+        },
+        {
+          "id": "white",
+          "label": "Теплий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        }
+      ],
+      "production": "assets/models/coffeeMachine-2.glb",
+      "proxy": "assets/proxies/coffeeMachine-2.glb",
+      "quality": {
+        "high": "assets/models/coffeeMachine-2.glb",
+        "medium": "assets/models/coffeeMachine-2.glb",
+        "low": "assets/models/coffeeMachine-2.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.17499999701976776,
+          -1.0430813157658037e-10,
+          -0.2150000035762787
+        ],
+        "max": [
+          0.17499999701976776,
+          0.4300000071525574,
+          0.2150000035762787
+        ],
+        "size": [
+          0.3499999940395355,
+          0.4300000072568655,
+          0.4300000071525574
+        ]
+      },
+      "bytes": {
+        "production": 1764716,
+        "proxy": 31824
+      }
+    },
+    {
+      "assetId": "edsSignage",
+      "variant": 1,
+      "label": "1 / Історія · прозорі панелі",
+      "category": "signage",
+      "placement": "wall",
+      "dimensions": [
+        1.68,
+        1.82,
+        0.035
+      ],
+      "materials": [
+        {
+          "id": "original",
+          "label": "Оригінальні матеріали та друк",
+          "color": "#35383a",
+          "surface": "metal"
+        }
+      ],
+      "production": "assets/models/edsSignage-1.glb",
+      "proxy": "assets/proxies/edsSignage-1.glb",
+      "quality": {
+        "high": "assets/models/edsSignage-1.glb",
+        "medium": "assets/models/edsSignage-1.glb",
+        "low": "assets/models/edsSignage-1.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.8399999737739563,
+          -0.9190000295639038,
+          -0.017500000074505806
+        ],
+        "max": [
+          0.8399999737739563,
+          0.9169999957084656,
+          0.020000001415610313
+        ],
+        "size": [
+          1.6799999475479126,
+          1.8360000252723694,
+          0.03750000149011612
+        ]
+      },
+      "bytes": {
+        "production": 512512,
+        "proxy": 9236
+      }
+    },
+    {
+      "assetId": "edsSignage",
+      "variant": 2,
+      "label": "2 / Структура групи",
+      "category": "signage",
+      "placement": "wall",
+      "dimensions": [
+        3.3,
+        1.72,
+        0.025
+      ],
+      "materials": [
+        {
+          "id": "original",
+          "label": "Оригінальні матеріали та друк",
+          "color": "#35383a",
+          "surface": "metal"
+        }
+      ],
+      "production": "assets/models/edsSignage-2.glb",
+      "proxy": "assets/proxies/edsSignage-2.glb",
+      "quality": {
+        "high": "assets/models/edsSignage-2.glb",
+        "medium": "assets/models/edsSignage-2.glb",
+        "low": "assets/models/edsSignage-2.glb"
+      },
+      "bounds": {
+        "min": [
+          -1.6501350402832031,
+          -0.8680943250656128,
+          -0.012500000186264515
+        ],
+        "max": [
+          1.4788621664047241,
+          0.8393900394439697,
+          0.007000000216066837
+        ],
+        "size": [
+          3.1289972066879272,
+          1.7074843645095825,
+          0.019500000402331352
+        ]
+      },
+      "bytes": {
+        "production": 1641572,
+        "proxy": 114852
+      }
+    },
+    {
+      "assetId": "edsSignage",
+      "variant": 3,
+      "label": "3 / Дерев’яна карта світу",
+      "category": "signage",
+      "placement": "wall",
+      "dimensions": [
+        3.2,
+        1.84,
+        0.028
+      ],
+      "materials": [
+        {
+          "id": "original",
+          "label": "Оригінальні матеріали та друк",
+          "color": "#35383a",
+          "surface": "metal"
+        }
+      ],
+      "production": "assets/models/edsSignage-3.glb",
+      "proxy": "assets/proxies/edsSignage-3.glb",
+      "quality": {
+        "high": "assets/models/edsSignage-3.glb",
+        "medium": "assets/models/edsSignage-3.glb",
+        "low": "assets/models/edsSignage-3.glb"
+      },
+      "bounds": {
+        "min": [
+          -1.5475914478302002,
+          -0.9200000166893005,
+          -0.010999999940395355
+        ],
+        "max": [
+          1.5475914478302002,
+          0.9200000166893005,
+          0.009700000286102295
+        ],
+        "size": [
+          3.0951828956604004,
+          1.840000033378601,
+          0.02070000022649765
+        ]
+      },
+      "bytes": {
+        "production": 1711204,
+        "proxy": 109324
+      }
+    },
+    {
+      "assetId": "edsSignage",
+      "variant": 4,
+      "label": "4 / План продажів",
+      "category": "signage",
+      "placement": "wall",
+      "dimensions": [
+        3,
+        1.25,
+        0.04
+      ],
+      "materials": [
+        {
+          "id": "original",
+          "label": "Оригінальні матеріали та друк",
+          "color": "#35383a",
+          "surface": "metal"
+        }
+      ],
+      "production": "assets/models/edsSignage-4.glb",
+      "proxy": "assets/proxies/edsSignage-4.glb",
+      "quality": {
+        "high": "assets/models/edsSignage-4.glb",
+        "medium": "assets/models/edsSignage-4.glb",
+        "low": "assets/models/edsSignage-4.glb"
+      },
+      "bounds": {
+        "min": [
+          -1.4800000190734863,
+          -0.6076170206069946,
+          -0.020000001415610313
+        ],
+        "max": [
+          1.4850000143051147,
+          0.5870000123977661,
+          0.017500001937150955
+        ],
+        "size": [
+          2.965000033378601,
+          1.1946170330047607,
+          0.03750000335276127
+        ]
+      },
+      "bytes": {
+        "production": 656076,
+        "proxy": 12016
+      }
+    },
+    {
+      "assetId": "edsSignage",
+      "variant": 5,
+      "label": "5 / Україна · відвантаження",
+      "category": "signage",
+      "placement": "wall",
+      "dimensions": [
+        3.2,
+        1.32,
+        0.04
+      ],
+      "materials": [
+        {
+          "id": "original",
+          "label": "Оригінальні матеріали та друк",
+          "color": "#35383a",
+          "surface": "metal"
+        }
+      ],
+      "production": "assets/models/edsSignage-5.glb",
+      "proxy": "assets/proxies/edsSignage-5.glb",
+      "quality": {
+        "high": "assets/models/edsSignage-5.glb",
+        "medium": "assets/models/edsSignage-5.glb",
+        "low": "assets/models/edsSignage-5.glb"
+      },
+      "bounds": {
+        "min": [
+          -1.5850000381469727,
+          -0.5690000057220459,
+          -0.019999999552965164
+        ],
+        "max": [
+          1.5800000429153442,
+          0.5869406461715698,
+          0.011500000953674316
+        ],
+        "size": [
+          3.165000081062317,
+          1.1559406518936157,
+          0.03150000050663948
+        ]
+      },
+      "bytes": {
+        "production": 1228752,
+        "proxy": 20988
+      }
+    },
+    {
+      "assetId": "edsSignage",
+      "variant": 6,
+      "label": "6 / Об’ємний логотип EDS",
+      "category": "signage",
+      "placement": "wall",
+      "dimensions": [
+        1.45,
+        0.455,
+        0.075
+      ],
+      "materials": [
+        {
+          "id": "original",
+          "label": "Оригінальні матеріали та друк",
+          "color": "#35383a",
+          "surface": "metal"
+        }
+      ],
+      "production": "assets/models/edsSignage-6.glb",
+      "proxy": "assets/proxies/edsSignage-6.glb",
+      "quality": {
+        "high": "assets/models/edsSignage-6.glb",
+        "medium": "assets/models/edsSignage-6.glb",
+        "low": "assets/models/edsSignage-6.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.7250000238418579,
+          -0.22750000655651093,
+          -0.03750000149011612
+        ],
+        "max": [
+          0.7239052653312683,
+          0.22750000655651093,
+          0.03750000149011612
+        ],
+        "size": [
+          1.4489052891731262,
+          0.45500001311302185,
+          0.07500000298023224
+        ]
+      },
+      "bytes": {
+        "production": 148332,
+        "proxy": 25336
+      }
+    },
+    {
+      "assetId": "television",
+      "variant": 3,
+      "label": "3 / Великий екран · 85″",
+      "category": "boards",
+      "placement": "wall",
+      "dimensions": [
+        1.9,
+        1.1,
+        0.065
+      ],
+      "materials": [
+        {
+          "id": "graphite",
+          "label": "Графітова рамка",
+          "color": "#252b30",
+          "surface": "plastic"
+        },
+        {
+          "id": "silver",
+          "label": "Сатинована металева рамка",
+          "color": "#afb5b8",
+          "surface": "metal"
+        }
+      ],
+      "production": "assets/models/television-3.glb",
+      "proxy": "assets/proxies/television-3.glb",
+      "quality": {
+        "high": "assets/models/television-3.glb",
+        "medium": "assets/models/television-3.glb",
+        "low": "assets/models/television-3.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.949999988079071,
+          -0.550000011920929,
+          -0.032499998807907104
+        ],
+        "max": [
+          0.949999988079071,
+          0.550000011920929,
+          0.03220000118017197
+        ],
+        "size": [
+          1.899999976158142,
+          1.100000023841858,
+          0.06469999998807907
+        ]
+      },
+      "bytes": {
+        "production": 772192,
+        "proxy": 7948
+      }
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+00:01.766  blend            | Read blend: "C:\Users\kakuc\Downloads\blender-mcp\ThreeJS_ArchViz\assets-src\reconstructed_room.before_archviz.blend"
+INFO Draco is available, use library at F:\SteamLibrary\steamapps\common\Blender\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_draco_bridge.dll
+INFO MeshOptimizer is available, use library at F:\SteamLibrary\steamapps\common\Blender\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_meshopt_bridge.dll
+20:09:19 | INFO: Starting glTF 2.0 export
+20:09:19 | INFO: Extracting primitive: Ceiling_Cable_Trays_Mesh.001
+20:09:19 | INFO: Primitives created: 1
+20:09:19 | INFO: Extracting primitive: Ceiling_Corrugated_Deck_Mesh.001
+20:09:19 | INFO: Primitives created: 1
+20:09:19 | INFO: Extracting primitive: Ceiling_Exposed_Steel_Trusses_Mesh.001
+20:09:19 | INFO: Primitives created: 1
+20:09:19 | INFO: Extracting primitive: Door_04_CLOSED_Frame_Head_Mesh.002
+20:09:19 | INFO: Primitives created: 1
+20:09:19 | INFO: Extracting primitive: Door_13_CLOSED_Hardware_Back_Handle_Rosette_Mesh.015
+20:09:19 | INFO: Primitives created: 1
+20:09:19 | INFO: Extracting primitive: Door_13_CLOSED_Hardware_Back_Key_Cylinder_Body_Mesh.015
+20:09:19 | INFO: Primitives created: 1
+20:09:19 | INFO: Extracting primitive: Door_13_CLOSED_Hardware_Back_Key_Cylinder_Head_Mesh.015
+20:09:19 | INFO: Primitives created: 1
+20:09:19 | INFO: Extracting primitive: Door_13_CLOSED_Hardware_Back_Key_Rosette_Mesh.015
+20:09:19 | INFO: Primitives created: 1
+20:09:19 | INFO: Extracting primitive: Door_13_CLOSED_Hardware_Back_Key_Slot_Mesh.015
+20:09:19 | INFO: Primitives created: 1
+20:09:19 | INFO: Extracting primitive: Door_13_CLOSED_Hardware_Back_Lever_Mesh.015
+20:09:19 | INFO: Primitives created: 1
+20:09:19 | INFO: Extracting primitive: Door_13_CLOSED_Hardware_Back_Lever_Return_Mesh.015
+20:09:19 | INFO: Primitives created: 1
+20:09:19 | INFO: Extracting primitive: Door_13_CLOSED_Hardware_Back_Spindle_Mesh.015
+20:09:19 | INFO: Primitives created: 1
+20:09:19 | INFO: Extracting primitive: Door_13_CLOSED_Hardware_Hall_Handle_Rosette_Mesh.015
+20:09:19 | INFO: Primitives created: 1
+20:09:19 | INFO: Extracting primitive: Door_13_CLOSED_Hardware_Hall_Key_Cylinder_Body_Mesh.015
+20:09:19 | INFO: Primitives created: 1
+20:09:19 | INFO: Extracting primitive: Door_13_CLOSED_Hardware_Hall_Key_Cylinder_Head_Mesh.015
+20:09:19 | INFO: Primitives created: 1
+20:09:19 | INFO: Extracting primitive: Door_13_CLOSED_Hardware_Hall_Key_Rosette_Mesh.015
+20:09:19 | INFO: Primitives created: 1
+20:09:19 | INFO: Extracting primitive: Door_13_CLOSED_Hardware_Hall_Key_Slot_Mesh.015
+20:09:19 | INFO: Primitives created: 1
+20:09:19 | INFO: Extracting primitive: Door_13_CLOSED_Hardware_Hall_Lever_Mesh.015
+20:09:19 | INFO: Primitives created: 1
+20:09:19 | INFO: Extracting primitive: Door_13_CLOSED_Hardware_Hall_Lever_Return_Mesh.015
+20:09:19 | INFO: Primitives created: 1
+20:09:19 | INFO: Extracting primitive: Door_13_CLOSED_Hardware_Hall_Spindle_Mesh.015
+20:09:19 | INFO: Primitives created: 1
+20:09:19 | INFO: Extracting primitive: Door_04_CLOSED_Jamb_L_Mesh.002
+20:09:19 | INFO: Primitives created: 1
+20:09:19 | INFO: Extracting primitive: Door_04_CLOSED_Jamb_R_Mesh.002
+20:09:19 | INFO: Primitives created: 1
+20:09:19 | INFO: Extracting primitive: Door_04_CLOSED_Leaf_Mesh.002
+20:09:19 | INFO: Primitives created: 1
+20:09:19 | INFO: Extracting primitive: Door_04_CLOSED_Threshold_Mesh.002
+20:09:19 | INFO: Primitives created: 1
+20:09:19 | INFO: Extracting primitive: Floor_Continuous_00_Mesh.001
+20:09:19 | INFO: Primitives created: 1
+20:09:19 | INFO: Extracting primitive: Hall_Lamp_North_04_Mesh.001
+20:09:19 | INFO: Primitives created: 2
+20:09:19 | INFO: Extracting primitive: Hall_Lamp_North_05_Mesh.001
+20:09:19 | INFO: Primitives created: 2
+20:09:19 | INFO: Extracting primitive: Lamp_Suspension_Cables_Mesh.001
+20:09:19 | INFO: Primitives created: 1
+20:09:19 | INFO: Extracting primitive: Wall_38_Clean_Three_Door_Edit.001
+20:09:19 | INFO: Primitives created: 1
+20:09:19 | INFO: Extracting primitive: Wall_38_Skirting_2_Uniform_Door_Mesh.001
+20:09:19 | INFO: Primitives created: 1
+20:09:19 | INFO: Extracting primitive: Wall_38_Skirting_3_Mesh.001
+20:09:19 | INFO: Primitives created: 1
+20:09:19 | INFO: Extracting primitive: Wall_38_Top_Steel_Beam_Mesh.001
+20:09:19 | INFO: Primitives created: 1
+20:09:19 | INFO: Finished glTF 2.0 export in 0.12292313575744629 s
+
+ACTUAL_CORRIDOR_CONTEXT_READY 32
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

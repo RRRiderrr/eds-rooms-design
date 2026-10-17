@@ -1,0 +1,153 @@
+{
+  "source": "production web GLBs, same asset IDs and preset JSON",
+  "conceptCollections": 16,
+  "renderEngine": "Cycles",
+  "samples": 20,
+  "viewsPerPreset": 2,
+  "presets": [
+    {
+      "presetId": "builtin-0",
+      "name": "0: \u041f\u043e\u0440\u043e\u0436\u043d\u0456\u0439 \u043f\u0440\u043e\u0441\u0442\u0456\u0440",
+      "objects": 5,
+      "views": [
+        "preset-00-window.jpg",
+        "preset-00-door.jpg"
+      ]
+    },
+    {
+      "presetId": "builtin-1",
+      "name": "1: \u0422\u0435\u043f\u043b\u0430 \u0421\u043a\u0430\u043d\u0434\u0438\u043d\u0430\u0432\u0456\u044f",
+      "objects": 23,
+      "views": [
+        "preset-01-window.jpg",
+        "preset-01-door.jpg"
+      ]
+    },
+    {
+      "presetId": "builtin-2",
+      "name": "2: \u041c\u2019\u044f\u043a\u0438\u0439 \u0456\u043d\u0434\u0443\u0441\u0442\u0440\u0456\u0430\u043b\u044c\u043d\u0438\u0439",
+      "objects": 22,
+      "views": [
+        "preset-02-window.jpg",
+        "preset-02-door.jpg"
+      ]
+    },
+    {
+      "presetId": "builtin-3",
+      "name": "3: \u041c\u0456\u043d\u0456\u043c\u0430\u043b\u0456\u0441\u0442\u0438\u0447\u043d\u0456 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0456\u0457",
+      "objects": 22,
+      "views": [
+        "preset-03-window.jpg",
+        "preset-03-door.jpg"
+      ]
+    },
+    {
+      "presetId": "builtin-4",
+      "name": "4: \u0422\u0435\u043c\u043d\u0438\u0439 \u043f\u0440\u0435\u043c\u0456\u0443\u043c \u00b7 \u0440\u043e\u0437\u043c\u043e\u0432\u0430",
+      "objects": 22,
+      "views": [
+        "preset-04-window.jpg",
+        "preset-04-door.jpg"
+      ]
+    },
+    {
+      "presetId": "builtin-5",
+      "name": "5: \u0421\u0432\u0456\u0442\u043b\u0438\u0439 \u043f\u0440\u0435\u043c\u0456\u0443\u043c \u00b7 \u0440\u043e\u0431\u043e\u0442\u0430 \u0431\u0456\u043b\u044f \u0432\u0456\u043a\u043d\u0430",
+      "objects": 23,
+      "views": [
+        "preset-05-window.jpg",
+        "preset-05-door.jpg"
+      ]
+    },
+    {
+      "presetId": "builtin-6",
+      "name": "6: \u0411\u0456\u043e\u0444\u0456\u043b\u044c\u043d\u0438\u0439 \u0432\u0456\u0434\u043f\u043e\u0447\u0438\u043d\u043e\u043a",
+      "objects": 23,
+      "views": [
+        "preset-06-window.jpg",
+        "preset-06-door.jpg"
+      ]
+    },
+    {
+      "presetId": "builtin-7",
+      "name": "7: \u0422\u0432\u043e\u0440\u0447\u0430 \u0441\u0442\u0443\u0434\u0456\u044f",
+      "objects": 24,
+      "views": [
+        "preset-07-window.jpg",
+        "preset-07-door.jpg"
+      ]
+    },
+    {
+      "presetId": "builtin-8",
+      "name": "8: \u0421\u0443\u0447\u0430\u0441\u043d\u0438\u0439 \u043a\u043e\u0432\u043e\u0440\u043a\u0456\u043d\u0433",
+      "objects": 23,
+      "views": [
+        "preset-08-window.jpg",
+        "preset-08-door.jpg"
+      ]
+    },
+    {
+      "presetId": "builtin-9",
+      "name": "9: \u041d\u0435\u0444\u043e\u0440\u043c\u0430\u043b\u044c\u043d\u0456 \u0434\u0456\u043b\u043e\u0432\u0456 \u0437\u0443\u0441\u0442\u0440\u0456\u0447\u0456",
+      "objects": 22,
+      "views": [
+        "preset-09-window.jpg",
+        "preset-09-door.jpg"
+      ]
+    },
+    {
+      "presetId": "builtin-10",
+      "name": "10: \u0413\u043d\u0443\u0447\u043a\u0430 \u0441\u043f\u0456\u0432\u043f\u0440\u0430\u0446\u044f",
+      "objects": 23,
+      "views": [
+        "preset-10-window.jpg",
+        "preset-10-door.jpg"
+      ]
+    },
+    {
+      "presetId": "builtin-11",
+      "name": "11: \u041a\u0430\u0432\u2019\u044f\u0440\u043d\u044f \u0434\u043b\u044f \u0440\u043e\u0431\u043e\u0442\u0438",
+      "objects": 23,
+      "views": [
+        "preset-11-window.jpg",
+        "preset-11-door.jpg"
+      ]
+    },
+    {
+      "presetId": "builtin-12",
+      "name": "12: \u0410\u043a\u0443\u0441\u0442\u0438\u0447\u043d\u0430 \u0437\u043e\u0441\u0435\u0440\u0435\u0434\u0436\u0435\u043d\u0456\u0441\u0442\u044c",
+      "objects": 23,
+      "views": [
+        "preset-12-window.jpg",
+        "preset-12-door.jpg"
+      ]
+    },
+    {
+      "presetId": "builtin-13",
+      "name": "13: \u041c\u0435\u0434\u0456\u0430\u0437\u043e\u043d\u0430 \u0442\u0430 \u043f\u0440\u0435\u0437\u0435\u043d\u0442\u0430\u0446\u0456\u0457",
+      "objects": 23,
+      "views": [
+        "preset-13-window.jpg",
+        "preset-13-door.jpg"
+      ]
+    },
+    {
+      "presetId": "builtin-14",
+      "name": "14: \u0422\u0435\u043f\u043b\u0430 \u0431\u0456\u0431\u043b\u0456\u043e\u0442\u0435\u043a\u0430",
+      "objects": 23,
+      "views": [
+        "preset-14-window.jpg",
+        "preset-14-door.jpg"
+      ]
+    },
+    {
+      "presetId": "builtin-15",
+      "name": "15: \u0412\u0456\u0434\u043a\u0440\u0438\u0442\u0438\u0439 \u0444\u043e\u0440\u0443\u043c",
+      "objects": 23,
+      "views": [
+        "preset-15-window.jpg",
+        "preset-15-door.jpg"
+      ]
+    }
+  ]
+}

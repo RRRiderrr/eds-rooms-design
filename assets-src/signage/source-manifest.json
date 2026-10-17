@@ -1,0 +1,15 @@
+{
+  "references": {
+    "timeline": "e69ac1a0-78a4-4580-96d8-07ae2bbf4a5c",
+    "corporate": "98dd3aa0-dab4-4f21-a691-cf04cd19db27",
+    "world": "563c0b1d-ec62-4581-9020-bf00196c567f",
+    "sales": "cfa581df-5a3b-44ed-9742-3c85828d0896",
+    "ukraine": "cf962eb0-5cd7-45ce-acf3-be28caa2cb69",
+    "logo-photo": "8b242895-8183-42fe-8771-004cdd77d2d2",
+    "logo-vector": "09f326bd-8fe4-4dad-8199-3e1c78c597ba"
+  },
+  "resourcesRoot": "E:\\ArchViz_Resources\\Signage\\reference",
+  "rasterRetouchingUsed": false,
+  "physicalGeometry": true,
+  "mapPrints": "Unretouched source print on masked wooden geometry caps; wall background never receives geometry"
+}

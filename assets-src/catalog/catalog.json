@@ -1,0 +1,2067 @@
+[
+  {
+    "id": "edsSignage",
+    "label": "Вивіски EDS · з фотографій",
+    "category": "signage",
+    "placement": "wall",
+    "variants": [
+      {
+        "index": 0,
+        "label": "0 / Немає",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "model": "none"
+      },
+      {
+        "index": 1,
+        "label": "1 / Історія · прозорі панелі",
+        "dimensions": [
+          1.68,
+          1.82,
+          0.035
+        ],
+        "model": "eds-timeline"
+      },
+      {
+        "index": 2,
+        "label": "2 / Структура групи",
+        "dimensions": [
+          3.3,
+          1.72,
+          0.025
+        ],
+        "model": "eds-corporate"
+      },
+      {
+        "index": 3,
+        "label": "3 / Дерев’яна карта світу",
+        "dimensions": [
+          3.2,
+          1.84,
+          0.028
+        ],
+        "model": "eds-world-map"
+      },
+      {
+        "index": 4,
+        "label": "4 / План продажів",
+        "dimensions": [
+          3,
+          1.25,
+          0.04
+        ],
+        "model": "eds-sales-plan"
+      },
+      {
+        "index": 5,
+        "label": "5 / Україна · відвантаження",
+        "dimensions": [
+          3.2,
+          1.32,
+          0.04
+        ],
+        "model": "eds-ukraine"
+      },
+      {
+        "index": 6,
+        "label": "6 / Об’ємний логотип EDS",
+        "dimensions": [
+          1.45,
+          0.455,
+          0.075
+        ],
+        "model": "eds-logo"
+      }
+    ],
+    "materials": [
+      {
+        "id": "original",
+        "label": "Оригінальні матеріали та друк",
+        "color": "#35383a",
+        "surface": "metal"
+      }
+    ],
+    "description": "Складені настінні композиції за наданими фотографіями: окремі літери, дерев’яні контури, прозорі панелі й друк утворюють один предмет редактора.",
+    "collision": "wall",
+    "mountHeight": 1.7,
+    "productionRef": "catalog:edsSignage:production",
+    "proxyRef": "catalog:edsSignage:proxy"
+  },
+  {
+    "id": "sofa",
+    "label": "Диван",
+    "category": "seating",
+    "placement": "floor",
+    "variants": [
+      {
+        "index": 0,
+        "label": "0 / Немає",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "model": "none"
+      },
+      {
+        "index": 1,
+        "label": "1 / М’який — двомісний",
+        "dimensions": [
+          1.8,
+          0.79,
+          0.84
+        ],
+        "model": "sofa-soft"
+      },
+      {
+        "index": 2,
+        "label": "2 / Каркасний — тримісний",
+        "dimensions": [
+          2.18,
+          0.77,
+          0.86
+        ],
+        "model": "sofa-frame"
+      },
+      {
+        "index": 3,
+        "label": "3 / Низький — модульний",
+        "dimensions": [
+          2.12,
+          0.69,
+          0.9
+        ],
+        "model": "sofa-low"
+      },
+      {
+        "index": 4,
+        "label": "4 / Компактний",
+        "dimensions": [
+          1.55,
+          0.8,
+          0.78
+        ],
+        "model": "sofa-compact"
+      }
+    ],
+    "materials": [
+      {
+        "id": "oat",
+        "label": "Вівсяна тканина",
+        "color": "#c8bca8",
+        "surface": "fabric"
+      },
+      {
+        "id": "graphite",
+        "label": "Графітова тканина",
+        "color": "#414749",
+        "surface": "fabric"
+      },
+      {
+        "id": "sage",
+        "label": "Шавлієва тканина",
+        "color": "#7b9182",
+        "surface": "fabric"
+      },
+      {
+        "id": "ochre",
+        "label": "Тепла охра",
+        "color": "#b38b48",
+        "surface": "fabric"
+      },
+      {
+        "id": "blue",
+        "label": "Синій текстиль",
+        "color": "#465f79",
+        "surface": "fabric"
+      },
+      {
+        "id": "clay",
+        "label": "Теракота",
+        "color": "#ad7562",
+        "surface": "fabric"
+      }
+    ],
+    "description": "М’який диван з окремими подушками, опорами та зручною глибиною сидіння.",
+    "collision": "solid",
+    "productionRef": "catalog:sofa:production",
+    "proxyRef": "catalog:sofa:proxy"
+  },
+  {
+    "id": "armchair",
+    "label": "Лаунж-крісло",
+    "category": "seating",
+    "placement": "floor",
+    "variants": [
+      {
+        "index": 0,
+        "label": "0 / Немає",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "model": "none"
+      },
+      {
+        "index": 1,
+        "label": "1 / Оболонка",
+        "dimensions": [
+          0.78,
+          0.8,
+          0.78
+        ],
+        "model": "armchair-shell"
+      },
+      {
+        "index": 2,
+        "label": "2 / Дубове м’яке крісло",
+        "dimensions": [
+          0.7383099764585496,
+          0.9205668510723627,
+          0.8879055172204972
+        ],
+        "model": "armchair-frame"
+      },
+      {
+        "index": 3,
+        "label": "3 / Клубне",
+        "dimensions": [
+          0.85,
+          0.75,
+          0.8
+        ],
+        "model": "armchair-club"
+      }
+    ],
+    "materials": [
+      {
+        "id": "oat",
+        "label": "Вівсяна тканина",
+        "color": "#c8bca8",
+        "surface": "fabric"
+      },
+      {
+        "id": "graphite",
+        "label": "Графітова тканина",
+        "color": "#414749",
+        "surface": "fabric"
+      },
+      {
+        "id": "sage",
+        "label": "Шавлієва тканина",
+        "color": "#7b9182",
+        "surface": "fabric"
+      },
+      {
+        "id": "ochre",
+        "label": "Тепла охра",
+        "color": "#b38b48",
+        "surface": "fabric"
+      },
+      {
+        "id": "blue",
+        "label": "Синій текстиль",
+        "color": "#465f79",
+        "surface": "fabric"
+      },
+      {
+        "id": "clay",
+        "label": "Теракота",
+        "color": "#ad7562",
+        "surface": "fabric"
+      }
+    ],
+    "description": "Крісло для розмов і роботи за приставним столиком.",
+    "collision": "solid",
+    "productionRef": "catalog:armchair:production",
+    "proxyRef": "catalog:armchair:proxy"
+  },
+  {
+    "id": "pouf",
+    "label": "Пуф",
+    "category": "seating",
+    "placement": "floor",
+    "variants": [
+      {
+        "index": 0,
+        "label": "0 / Немає",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "model": "none"
+      },
+      {
+        "index": 1,
+        "label": "1 / Круглий",
+        "dimensions": [
+          0.55,
+          0.43,
+          0.55
+        ],
+        "model": "pouf-round"
+      },
+      {
+        "index": 2,
+        "label": "2 / Блок",
+        "dimensions": [
+          0.6,
+          0.43,
+          0.6
+        ],
+        "model": "pouf-square"
+      }
+    ],
+    "materials": [
+      {
+        "id": "oat",
+        "label": "Вівсяна тканина",
+        "color": "#c8bca8",
+        "surface": "fabric"
+      },
+      {
+        "id": "graphite",
+        "label": "Графітова тканина",
+        "color": "#414749",
+        "surface": "fabric"
+      },
+      {
+        "id": "sage",
+        "label": "Шавлієва тканина",
+        "color": "#7b9182",
+        "surface": "fabric"
+      },
+      {
+        "id": "ochre",
+        "label": "Тепла охра",
+        "color": "#b38b48",
+        "surface": "fabric"
+      },
+      {
+        "id": "blue",
+        "label": "Синій текстиль",
+        "color": "#465f79",
+        "surface": "fabric"
+      },
+      {
+        "id": "clay",
+        "label": "Теракота",
+        "color": "#ad7562",
+        "surface": "fabric"
+      }
+    ],
+    "description": "Мобільне додаткове місце.",
+    "collision": "solid",
+    "productionRef": "catalog:pouf:production",
+    "proxyRef": "catalog:pouf:proxy"
+  },
+  {
+    "id": "bench",
+    "label": "Банкетка",
+    "category": "seating",
+    "placement": "floor",
+    "variants": [
+      {
+        "index": 0,
+        "label": "0 / Немає",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "model": "none"
+      },
+      {
+        "index": 1,
+        "label": "1 / Дерево й тканина",
+        "dimensions": [
+          1.4,
+          0.47,
+          0.45
+        ],
+        "model": "bench"
+      },
+      {
+        "index": 2,
+        "label": "2 / М’яка оббивка",
+        "dimensions": [
+          1.65,
+          0.46,
+          0.5
+        ],
+        "model": "bench-soft"
+      }
+    ],
+    "materials": [
+      {
+        "id": "oat",
+        "label": "Вівсяна тканина",
+        "color": "#c8bca8",
+        "surface": "fabric"
+      },
+      {
+        "id": "graphite",
+        "label": "Графітова тканина",
+        "color": "#414749",
+        "surface": "fabric"
+      },
+      {
+        "id": "sage",
+        "label": "Шавлієва тканина",
+        "color": "#7b9182",
+        "surface": "fabric"
+      },
+      {
+        "id": "ochre",
+        "label": "Тепла охра",
+        "color": "#b38b48",
+        "surface": "fabric"
+      },
+      {
+        "id": "blue",
+        "label": "Синій текстиль",
+        "color": "#465f79",
+        "surface": "fabric"
+      },
+      {
+        "id": "clay",
+        "label": "Теракота",
+        "color": "#ad7562",
+        "surface": "fabric"
+      }
+    ],
+    "description": "Додаткові місця без високої спинки.",
+    "collision": "solid",
+    "productionRef": "catalog:bench:production",
+    "proxyRef": "catalog:bench:proxy"
+  },
+  {
+    "id": "coffeeTable",
+    "label": "Журнальний столик",
+    "category": "tables",
+    "placement": "floor",
+    "variants": [
+      {
+        "index": 0,
+        "label": "0 / Немає",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "model": "none"
+      },
+      {
+        "index": 1,
+        "label": "1 / Круглий Ø70",
+        "dimensions": [
+          0.7,
+          0.4,
+          0.7
+        ],
+        "model": "coffee-round"
+      },
+      {
+        "index": 2,
+        "label": "2 / Овальний 110",
+        "dimensions": [
+          1.1,
+          0.39,
+          0.55
+        ],
+        "model": "coffee-oval"
+      },
+      {
+        "index": 3,
+        "label": "3 / Прямокутний 90",
+        "dimensions": [
+          0.9,
+          0.42,
+          0.55
+        ],
+        "model": "coffee-rect"
+      },
+      {
+        "index": 4,
+        "label": "4 / Скляний на гнутих опорах",
+        "dimensions": [
+          0.9,
+          0.4,
+          0.65
+        ],
+        "model": "coffee-glass"
+      },
+      {
+        "index": 5,
+        "label": "5 / Органічна галька",
+        "dimensions": [
+          1.12,
+          0.39,
+          0.72
+        ],
+        "model": "coffee-organic"
+      }
+    ],
+    "materials": [
+      {
+        "id": "oak",
+        "label": "Натуральний дуб",
+        "color": "#b88e60",
+        "surface": "wood"
+      },
+      {
+        "id": "walnut",
+        "label": "Темний горіх",
+        "color": "#604533",
+        "surface": "wood"
+      },
+      {
+        "id": "ash",
+        "label": "Світлий ясен",
+        "color": "#ddd0b3",
+        "surface": "wood"
+      },
+      {
+        "id": "white",
+        "label": "Матовий білий",
+        "color": "#e3e2dc",
+        "surface": "plastic"
+      },
+      {
+        "id": "black",
+        "label": "Графітовий",
+        "color": "#30383d",
+        "surface": "metal"
+      }
+    ],
+    "description": "Журнальні столики з різними силуетами: круглий, овальний, прямокутний, прозорий скляний та органічний. Матеріал змінює стільницю або дерев’яні опори скляного варіанта.",
+    "collision": "solid",
+    "productionRef": "catalog:coffeeTable:production",
+    "proxyRef": "catalog:coffeeTable:proxy"
+  },
+  {
+    "id": "sideTable",
+    "label": "Приставний столик",
+    "category": "tables",
+    "placement": "floor",
+    "variants": [
+      {
+        "index": 0,
+        "label": "0 / Немає",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "model": "none"
+      },
+      {
+        "index": 1,
+        "label": "1 / Круглий Ø40",
+        "dimensions": [
+          0.4,
+          0.56,
+          0.4
+        ],
+        "model": "side-round"
+      },
+      {
+        "index": 2,
+        "label": "2 / С-подібний",
+        "dimensions": [
+          0.45,
+          0.63,
+          0.38
+        ],
+        "model": "side-c"
+      },
+      {
+        "index": 3,
+        "label": "3 / Блок",
+        "dimensions": [
+          0.36,
+          0.5,
+          0.36
+        ],
+        "model": "side-block"
+      }
+    ],
+    "materials": [
+      {
+        "id": "oak",
+        "label": "Натуральний дуб",
+        "color": "#b88e60",
+        "surface": "wood"
+      },
+      {
+        "id": "walnut",
+        "label": "Темний горіх",
+        "color": "#604533",
+        "surface": "wood"
+      },
+      {
+        "id": "ash",
+        "label": "Світлий ясен",
+        "color": "#ddd0b3",
+        "surface": "wood"
+      },
+      {
+        "id": "white",
+        "label": "Матовий білий",
+        "color": "#e3e2dc",
+        "surface": "plastic"
+      },
+      {
+        "id": "black",
+        "label": "Графітовий",
+        "color": "#30383d",
+        "surface": "metal"
+      }
+    ],
+    "description": "Поверхня для ноутбука, чашки та записів.",
+    "collision": "solid",
+    "productionRef": "catalog:sideTable:production",
+    "proxyRef": "catalog:sideTable:proxy"
+  },
+  {
+    "id": "meetingTable",
+    "label": "Стіл для переговорів",
+    "category": "tables",
+    "placement": "floor",
+    "variants": [
+      {
+        "index": 0,
+        "label": "0 / Немає",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "model": "none"
+      },
+      {
+        "index": 1,
+        "label": "1 / Круглий Ø95",
+        "dimensions": [
+          0.95,
+          0.74,
+          0.95
+        ],
+        "model": "meeting-round"
+      },
+      {
+        "index": 2,
+        "label": "2 / Капсула 140",
+        "dimensions": [
+          1.4,
+          0.74,
+          0.78
+        ],
+        "model": "meeting-capsule"
+      },
+      {
+        "index": 3,
+        "label": "3 / Компактний 110",
+        "dimensions": [
+          1.1,
+          0.74,
+          0.7
+        ],
+        "model": "meeting-rect"
+      }
+    ],
+    "materials": [
+      {
+        "id": "oak",
+        "label": "Натуральний дуб",
+        "color": "#b88e60",
+        "surface": "wood"
+      },
+      {
+        "id": "walnut",
+        "label": "Темний горіх",
+        "color": "#604533",
+        "surface": "wood"
+      },
+      {
+        "id": "ash",
+        "label": "Світлий ясен",
+        "color": "#ddd0b3",
+        "surface": "wood"
+      },
+      {
+        "id": "white",
+        "label": "Матовий білий",
+        "color": "#e3e2dc",
+        "surface": "plastic"
+      },
+      {
+        "id": "black",
+        "label": "Графітовий",
+        "color": "#30383d",
+        "surface": "metal"
+      }
+    ],
+    "description": "Компактна поверхня для невеликих зустрічей.",
+    "collision": "solid",
+    "productionRef": "catalog:meetingTable:production",
+    "proxyRef": "catalog:meetingTable:proxy"
+  },
+  {
+    "id": "chair",
+    "label": "Стілець",
+    "category": "chairs",
+    "placement": "floor",
+    "variants": [
+      {
+        "index": 0,
+        "label": "0 / Немає",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "model": "none"
+      },
+      {
+        "index": 1,
+        "label": "1 / Оболонка",
+        "dimensions": [
+          0.47,
+          0.81,
+          0.51
+        ],
+        "model": "chair-shell"
+      },
+      {
+        "index": 2,
+        "label": "2 / М’яка висока спинка",
+        "dimensions": [
+          0.4061763488822283,
+          0.9118764945719297,
+          0.54
+        ],
+        "model": "chair-soft"
+      },
+      {
+        "index": 3,
+        "label": "3 / Офісний",
+        "dimensions": [
+          0.56,
+          0.91,
+          0.58
+        ],
+        "model": "chair-office"
+      }
+    ],
+    "materials": [
+      {
+        "id": "oat",
+        "label": "Вівсяна тканина",
+        "color": "#c8bca8",
+        "surface": "fabric"
+      },
+      {
+        "id": "graphite",
+        "label": "Графітова тканина",
+        "color": "#414749",
+        "surface": "fabric"
+      },
+      {
+        "id": "sage",
+        "label": "Шавлієва тканина",
+        "color": "#7b9182",
+        "surface": "fabric"
+      },
+      {
+        "id": "ochre",
+        "label": "Тепла охра",
+        "color": "#b38b48",
+        "surface": "fabric"
+      },
+      {
+        "id": "blue",
+        "label": "Синій текстиль",
+        "color": "#465f79",
+        "surface": "fabric"
+      },
+      {
+        "id": "clay",
+        "label": "Теракота",
+        "color": "#ad7562",
+        "surface": "fabric"
+      }
+    ],
+    "description": "Сидіння заввишки 45 см; збережено реальний габарит.",
+    "collision": "solid",
+    "productionRef": "catalog:chair:production",
+    "proxyRef": "catalog:chair:proxy"
+  },
+  {
+    "id": "barStool",
+    "label": "Високий стілець",
+    "category": "chairs",
+    "placement": "floor",
+    "variants": [
+      {
+        "index": 0,
+        "label": "0 / Немає",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "model": "none"
+      },
+      {
+        "index": 1,
+        "label": "1 / Круглий без спинки",
+        "dimensions": [
+          0.45,
+          0.75,
+          0.47
+        ],
+        "model": "stool-round"
+      },
+      {
+        "index": 2,
+        "label": "2 / Гнута оболонка",
+        "dimensions": [
+          0.48,
+          1.03,
+          0.48
+        ],
+        "model": "stool-shell"
+      },
+      {
+        "index": 3,
+        "label": "3 / Висока спинка",
+        "dimensions": [
+          0.43,
+          1.15,
+          0.45
+        ],
+        "model": "stool-highback"
+      }
+    ],
+    "materials": [
+      {
+        "id": "oat",
+        "label": "Вівсяна тканина",
+        "color": "#c8bca8",
+        "surface": "fabric"
+      },
+      {
+        "id": "graphite",
+        "label": "Графітова тканина",
+        "color": "#414749",
+        "surface": "fabric"
+      },
+      {
+        "id": "sage",
+        "label": "Шавлієва тканина",
+        "color": "#7b9182",
+        "surface": "fabric"
+      },
+      {
+        "id": "ochre",
+        "label": "Тепла охра",
+        "color": "#b38b48",
+        "surface": "fabric"
+      },
+      {
+        "id": "blue",
+        "label": "Синій текстиль",
+        "color": "#465f79",
+        "surface": "fabric"
+      },
+      {
+        "id": "clay",
+        "label": "Теракота",
+        "color": "#ad7562",
+        "surface": "fabric"
+      }
+    ],
+    "description": "Три різні конструкції: кругле сидіння на дерев’яних ніжках, гнута оболонка на полозах і висока м’яка спинка на центральній опорі. Сидіння 73–75 см та підніжка для стільниці заввишки 105 см.",
+    "collision": "solid",
+    "productionRef": "catalog:barStool:production",
+    "proxyRef": "catalog:barStool:proxy"
+  },
+  {
+    "id": "workDesk",
+    "label": "Робочий стіл",
+    "category": "work",
+    "placement": "floor",
+    "variants": [
+      {
+        "index": 0,
+        "label": "0 / Немає",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "model": "none"
+      },
+      {
+        "index": 1,
+        "label": "1 / Тонкий 120",
+        "dimensions": [
+          1.2,
+          0.74,
+          0.6
+        ],
+        "model": "desk-slim"
+      },
+      {
+        "index": 2,
+        "label": "2 / Студійний 140",
+        "dimensions": [
+          1.4,
+          0.74,
+          0.65
+        ],
+        "model": "desk-frame"
+      },
+      {
+        "index": 3,
+        "label": "3 / Для ноутбука 100",
+        "dimensions": [
+          1,
+          0.74,
+          0.55
+        ],
+        "model": "desk-compact"
+      }
+    ],
+    "materials": [
+      {
+        "id": "oak",
+        "label": "Натуральний дуб",
+        "color": "#b88e60",
+        "surface": "wood"
+      },
+      {
+        "id": "walnut",
+        "label": "Темний горіх",
+        "color": "#604533",
+        "surface": "wood"
+      },
+      {
+        "id": "ash",
+        "label": "Світлий ясен",
+        "color": "#ddd0b3",
+        "surface": "wood"
+      },
+      {
+        "id": "white",
+        "label": "Матовий білий",
+        "color": "#e3e2dc",
+        "surface": "plastic"
+      },
+      {
+        "id": "black",
+        "label": "Графітовий",
+        "color": "#30383d",
+        "surface": "metal"
+      }
+    ],
+    "description": "Повноцінна глибина для ноутбука та місце для ніг.",
+    "collision": "solid",
+    "productionRef": "catalog:workDesk:production",
+    "proxyRef": "catalog:workDesk:proxy"
+  },
+  {
+    "id": "windowBar",
+    "label": "Бар біля вікна",
+    "category": "work",
+    "placement": "floor",
+    "variants": [
+      {
+        "index": 0,
+        "label": "0 / Немає",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "model": "none"
+      },
+      {
+        "index": 1,
+        "label": "1 / Дуб і сталь",
+        "dimensions": [
+          2.9,
+          1.05,
+          0.55
+        ],
+        "model": "bar-frame"
+      },
+      {
+        "index": 2,
+        "label": "2 / Консоль",
+        "dimensions": [
+          2.8,
+          1.05,
+          0.55
+        ],
+        "model": "bar-floating"
+      },
+      {
+        "index": 3,
+        "label": "3 / Масивна",
+        "dimensions": [
+          3.2,
+          1.05,
+          0.6
+        ],
+        "model": "bar-solid"
+      }
+    ],
+    "materials": [
+      {
+        "id": "oak",
+        "label": "Натуральний дуб",
+        "color": "#b88e60",
+        "surface": "wood"
+      },
+      {
+        "id": "walnut",
+        "label": "Темний горіх",
+        "color": "#604533",
+        "surface": "wood"
+      },
+      {
+        "id": "ash",
+        "label": "Світлий ясен",
+        "color": "#ddd0b3",
+        "surface": "wood"
+      },
+      {
+        "id": "white",
+        "label": "Матовий білий",
+        "color": "#e3e2dc",
+        "surface": "plastic"
+      },
+      {
+        "id": "black",
+        "label": "Графітовий",
+        "color": "#30383d",
+        "surface": "metal"
+      }
+    ],
+    "description": "Робоча поверхня біля вікна; опори залишають місце для колін.",
+    "collision": "solid",
+    "productionRef": "catalog:windowBar:production",
+    "proxyRef": "catalog:windowBar:proxy"
+  },
+  {
+    "id": "storage",
+    "label": "Тумба / стелаж",
+    "category": "storage",
+    "placement": "floor",
+    "variants": [
+      {
+        "index": 0,
+        "label": "0 / Немає",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "model": "none"
+      },
+      {
+        "index": 1,
+        "label": "1 / Низька тумба",
+        "dimensions": [
+          1.2,
+          0.72,
+          0.38
+        ],
+        "model": "storage-low"
+      },
+      {
+        "index": 2,
+        "label": "2 / Відкритий стелаж",
+        "dimensions": [
+          0.8,
+          1.35,
+          0.32
+        ],
+        "model": "storage-shelf"
+      },
+      {
+        "index": 3,
+        "label": "3 / Компактний",
+        "dimensions": [
+          0.7,
+          0.7,
+          0.38
+        ],
+        "model": "storage-compact"
+      }
+    ],
+    "materials": [
+      {
+        "id": "oak",
+        "label": "Натуральний дуб",
+        "color": "#b88e60",
+        "surface": "wood"
+      },
+      {
+        "id": "walnut",
+        "label": "Темний горіх",
+        "color": "#604533",
+        "surface": "wood"
+      },
+      {
+        "id": "ash",
+        "label": "Світлий ясен",
+        "color": "#ddd0b3",
+        "surface": "wood"
+      },
+      {
+        "id": "white",
+        "label": "Матовий білий",
+        "color": "#e3e2dc",
+        "surface": "plastic"
+      },
+      {
+        "id": "black",
+        "label": "Графітовий",
+        "color": "#30383d",
+        "surface": "metal"
+      }
+    ],
+    "description": "Низькі меблі для зберігання та організації переговорної.",
+    "collision": "solid",
+    "productionRef": "catalog:storage:production",
+    "proxyRef": "catalog:storage:proxy"
+  },
+  {
+    "id": "floorLamp",
+    "label": "Торшер",
+    "category": "lighting",
+    "placement": "floor",
+    "variants": [
+      {
+        "index": 0,
+        "label": "0 / Немає",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "model": "none"
+      },
+      {
+        "index": 1,
+        "label": "1 / Купол",
+        "dimensions": [
+          0.4,
+          1.6,
+          0.4
+        ],
+        "model": "lamp-dome"
+      },
+      {
+        "index": 2,
+        "label": "2 / Конус",
+        "dimensions": [
+          0.38,
+          1.5,
+          0.38
+        ],
+        "model": "lamp-cone"
+      }
+    ],
+    "materials": [
+      {
+        "id": "white",
+        "label": "Теплий білий",
+        "color": "#dddcd3",
+        "surface": "ceramic"
+      },
+      {
+        "id": "black",
+        "label": "Темний графіт",
+        "color": "#30383d",
+        "surface": "metal"
+      },
+      {
+        "id": "sage",
+        "label": "Приглушений зелений",
+        "color": "#819183",
+        "surface": "plastic"
+      },
+      {
+        "id": "clay",
+        "label": "Теракота",
+        "color": "#b47c65",
+        "surface": "ceramic"
+      }
+    ],
+    "description": "Локальне світло для затишної зони; стеля залишається незмінною.",
+    "collision": "solid",
+    "productionRef": "catalog:floorLamp:production",
+    "proxyRef": "catalog:floorLamp:proxy"
+  },
+  {
+    "id": "plant",
+    "label": "Рослина в кашпо",
+    "category": "plants",
+    "placement": "floor",
+    "variants": [
+      {
+        "index": 0,
+        "label": "0 / Немає",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "model": "none"
+      },
+      {
+        "index": 1,
+        "label": "1 / Листяна рослина",
+        "dimensions": [
+          0.5377264254460495,
+          1.2360142446356281,
+          0.58
+        ],
+        "model": "plant-ficus"
+      },
+      {
+        "index": 2,
+        "label": "2 / Широколиста рослина",
+        "dimensions": [
+          0.65,
+          0.779805598967807,
+          0.6094230732801177
+        ],
+        "model": "plant-palm"
+      },
+      {
+        "index": 3,
+        "label": "3 / Компактна листяна",
+        "dimensions": [
+          0.33376122958720317,
+          0.7671812552910796,
+          0.36
+        ],
+        "model": "plant-ficus"
+      }
+    ],
+    "materials": [
+      {
+        "id": "white",
+        "label": "Теплий білий",
+        "color": "#dddcd3",
+        "surface": "ceramic"
+      },
+      {
+        "id": "black",
+        "label": "Темний графіт",
+        "color": "#30383d",
+        "surface": "metal"
+      },
+      {
+        "id": "sage",
+        "label": "Приглушений зелений",
+        "color": "#819183",
+        "surface": "plastic"
+      },
+      {
+        "id": "clay",
+        "label": "Теракота",
+        "color": "#b47c65",
+        "surface": "ceramic"
+      }
+    ],
+    "description": "Кімнатна рослина з окремими листками та об’ємним кашпо.",
+    "collision": "solid",
+    "productionRef": "catalog:plant:production",
+    "proxyRef": "catalog:plant:proxy"
+  },
+  {
+    "id": "acousticPanel",
+    "label": "Акустична панель",
+    "category": "acoustic",
+    "placement": "wall",
+    "variants": [
+      {
+        "index": 0,
+        "label": "0 / Немає",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "model": "none"
+      },
+      {
+        "index": 1,
+        "label": "1 / Текстильна",
+        "dimensions": [
+          0.65,
+          1.2,
+          0.06
+        ],
+        "model": "acoustic-soft"
+      },
+      {
+        "index": 2,
+        "label": "2 / Рейкова",
+        "dimensions": [
+          0.75,
+          1.35,
+          0.065
+        ],
+        "model": "acoustic-slat"
+      },
+      {
+        "index": 3,
+        "label": "3 / Квадратна",
+        "dimensions": [
+          0.8,
+          0.8,
+          0.065
+        ],
+        "model": "acoustic-square"
+      }
+    ],
+    "materials": [
+      {
+        "id": "oat",
+        "label": "Вівсяна тканина",
+        "color": "#c8bca8",
+        "surface": "fabric"
+      },
+      {
+        "id": "graphite",
+        "label": "Графітова тканина",
+        "color": "#414749",
+        "surface": "fabric"
+      },
+      {
+        "id": "sage",
+        "label": "Шавлієва тканина",
+        "color": "#7b9182",
+        "surface": "fabric"
+      },
+      {
+        "id": "ochre",
+        "label": "Тепла охра",
+        "color": "#b38b48",
+        "surface": "fabric"
+      },
+      {
+        "id": "blue",
+        "label": "Синій текстиль",
+        "color": "#465f79",
+        "surface": "fabric"
+      },
+      {
+        "id": "clay",
+        "label": "Теракота",
+        "color": "#ad7562",
+        "surface": "fabric"
+      }
+    ],
+    "description": "Настінна акустична поверхня.",
+    "collision": "wall",
+    "mountHeight": 1.65,
+    "productionRef": "catalog:acousticPanel:production",
+    "proxyRef": "catalog:acousticPanel:proxy"
+  },
+  {
+    "id": "art",
+    "label": "Картина / панно",
+    "category": "wallDecor",
+    "placement": "wall",
+    "variants": [
+      {
+        "index": 0,
+        "label": "0 / Немає",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "model": "none"
+      },
+      {
+        "index": 1,
+        "label": "1 / Геометрія",
+        "dimensions": [
+          0.9,
+          0.65,
+          0.045
+        ],
+        "model": "art-geometric"
+      },
+      {
+        "index": 2,
+        "label": "2 / Диптих",
+        "dimensions": [
+          1.1,
+          0.65,
+          0.045
+        ],
+        "model": "art-diptych"
+      },
+      {
+        "index": 3,
+        "label": "3 / Пейзаж",
+        "dimensions": [
+          1.05,
+          0.6,
+          0.045
+        ],
+        "model": "art-landscape"
+      }
+    ],
+    "materials": [
+      {
+        "id": "white",
+        "label": "Теплий білий",
+        "color": "#dddcd3",
+        "surface": "ceramic"
+      },
+      {
+        "id": "black",
+        "label": "Темний графіт",
+        "color": "#30383d",
+        "surface": "metal"
+      },
+      {
+        "id": "sage",
+        "label": "Приглушений зелений",
+        "color": "#819183",
+        "surface": "plastic"
+      },
+      {
+        "id": "clay",
+        "label": "Теракота",
+        "color": "#b47c65",
+        "surface": "ceramic"
+      }
+    ],
+    "description": "Авторська абстрактна композиція в тонкій рамці.",
+    "collision": "wall",
+    "mountHeight": 1.65,
+    "productionRef": "catalog:art:production",
+    "proxyRef": "catalog:art:proxy"
+  },
+  {
+    "id": "sign",
+    "label": "Об’ємна вивіска",
+    "category": "signage",
+    "placement": "wall",
+    "variants": [
+      {
+        "index": 0,
+        "label": "0 / Немає",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "model": "none"
+      },
+      {
+        "index": 1,
+        "label": "1 / Співпраця",
+        "dimensions": [
+          0.8,
+          0.18,
+          0.035
+        ],
+        "model": "sign-collab"
+      },
+      {
+        "index": 2,
+        "label": "2 / Відпочинок",
+        "dimensions": [
+          0.85,
+          0.18,
+          0.035
+        ],
+        "model": "sign-lounge"
+      }
+    ],
+    "materials": [
+      {
+        "id": "white",
+        "label": "Теплий білий",
+        "color": "#dddcd3",
+        "surface": "ceramic"
+      },
+      {
+        "id": "black",
+        "label": "Темний графіт",
+        "color": "#30383d",
+        "surface": "metal"
+      },
+      {
+        "id": "sage",
+        "label": "Приглушений зелений",
+        "color": "#819183",
+        "surface": "plastic"
+      },
+      {
+        "id": "clay",
+        "label": "Теракота",
+        "color": "#b47c65",
+        "surface": "ceramic"
+      }
+    ],
+    "description": "Об’ємні геометричні літери для зони зустрічей.",
+    "collision": "wall",
+    "mountHeight": 2.25,
+    "productionRef": "catalog:sign:production",
+    "proxyRef": "catalog:sign:proxy"
+  },
+  {
+    "id": "clock",
+    "label": "Годинник",
+    "category": "clocks",
+    "placement": "wall",
+    "variants": [
+      {
+        "index": 0,
+        "label": "0 / Немає",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "model": "none"
+      },
+      {
+        "index": 1,
+        "label": "1 / Круглий Ø32",
+        "dimensions": [
+          0.32,
+          0.32,
+          0.045
+        ],
+        "model": "clock-round"
+      },
+      {
+        "index": 2,
+        "label": "2 / Мінімалістичний Ø40",
+        "dimensions": [
+          0.4,
+          0.4,
+          0.045
+        ],
+        "model": "clock-minimal"
+      }
+    ],
+    "materials": [
+      {
+        "id": "white",
+        "label": "Теплий білий",
+        "color": "#dddcd3",
+        "surface": "ceramic"
+      },
+      {
+        "id": "black",
+        "label": "Темний графіт",
+        "color": "#30383d",
+        "surface": "metal"
+      },
+      {
+        "id": "sage",
+        "label": "Приглушений зелений",
+        "color": "#819183",
+        "surface": "plastic"
+      },
+      {
+        "id": "clay",
+        "label": "Теракота",
+        "color": "#b47c65",
+        "surface": "ceramic"
+      }
+    ],
+    "description": "Аналоговий циферблат зі стрілками та позначками.",
+    "collision": "wall",
+    "mountHeight": 2.15,
+    "productionRef": "catalog:clock:production",
+    "proxyRef": "catalog:clock:proxy"
+  },
+  {
+    "id": "board",
+    "label": "Дошка / екран",
+    "category": "boards",
+    "placement": "wall",
+    "variants": [
+      {
+        "index": 0,
+        "label": "0 / Немає",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "model": "none"
+      },
+      {
+        "index": 1,
+        "label": "1 / Маркерна дошка",
+        "dimensions": [
+          1.2,
+          0.8,
+          0.055
+        ],
+        "model": "board-white"
+      },
+      {
+        "index": 2,
+        "label": "2 / Екран 55",
+        "dimensions": [
+          1.23,
+          0.72,
+          0.06
+        ],
+        "model": "board-screen"
+      },
+      {
+        "index": 3,
+        "label": "3 / Коркова дошка",
+        "dimensions": [
+          1.1,
+          0.75,
+          0.06
+        ],
+        "model": "board-pin"
+      }
+    ],
+    "materials": [
+      {
+        "id": "white",
+        "label": "Теплий білий",
+        "color": "#dddcd3",
+        "surface": "ceramic"
+      },
+      {
+        "id": "black",
+        "label": "Темний графіт",
+        "color": "#30383d",
+        "surface": "metal"
+      },
+      {
+        "id": "sage",
+        "label": "Приглушений зелений",
+        "color": "#819183",
+        "surface": "plastic"
+      },
+      {
+        "id": "clay",
+        "label": "Теракота",
+        "color": "#b47c65",
+        "surface": "ceramic"
+      }
+    ],
+    "description": "Поверхня для проєктів, презентацій і гібридних зустрічей.",
+    "collision": "wall",
+    "mountHeight": 1.6,
+    "productionRef": "catalog:board:production",
+    "proxyRef": "catalog:board:proxy"
+  },
+  {
+    "id": "television",
+    "label": "Настінний телевізор",
+    "category": "boards",
+    "placement": "wall",
+    "variants": [
+      {
+        "index": 0,
+        "label": "0 / Немає",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "model": "none"
+      },
+      {
+        "index": 1,
+        "label": "1 / Тонка рамка · 55″",
+        "dimensions": [
+          1.23,
+          0.71,
+          0.055
+        ],
+        "model": "tv-55"
+      },
+      {
+        "index": 2,
+        "label": "2 / Тонка рамка · 65″",
+        "dimensions": [
+          1.45,
+          0.84,
+          0.055
+        ],
+        "model": "tv-65"
+      },
+      {
+        "index": 3,
+        "label": "3 / Великий екран · 85″",
+        "dimensions": [
+          1.9,
+          1.1,
+          0.065
+        ],
+        "model": "tv-85"
+      }
+    ],
+    "materials": [
+      {
+        "id": "graphite",
+        "label": "Графітова рамка",
+        "color": "#252b30",
+        "surface": "plastic"
+      },
+      {
+        "id": "silver",
+        "label": "Сатинована металева рамка",
+        "color": "#afb5b8",
+        "surface": "metal"
+      }
+    ],
+    "description": "Тонкий настінний екран із заднім корпусом, кронштейном, відбивним склом і нижнім індикатором. Розміщується лише на стіні.",
+    "collision": "wall",
+    "mountHeight": 1.6,
+    "productionRef": "catalog:television:production",
+    "proxyRef": "catalog:television:proxy"
+  },
+  {
+    "id": "accessory",
+    "label": "Набір аксесуарів",
+    "category": "accessories",
+    "placement": "floor",
+    "variants": [
+      {
+        "index": 0,
+        "label": "0 / Немає",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "model": "none"
+      },
+      {
+        "index": 1,
+        "label": "1 / Книги й таця",
+        "dimensions": [
+          0.38,
+          0.18,
+          0.26
+        ],
+        "model": "accessory-books"
+      },
+      {
+        "index": 2,
+        "label": "2 / Ноутбук і чашка",
+        "dimensions": [
+          0.4,
+          0.24,
+          0.3
+        ],
+        "model": "accessory-laptop"
+      },
+      {
+        "index": 3,
+        "label": "3 / Ваза",
+        "dimensions": [
+          0.18,
+          0.3,
+          0.18
+        ],
+        "model": "accessory-vase"
+      }
+    ],
+    "materials": [
+      {
+        "id": "white",
+        "label": "Теплий білий",
+        "color": "#dddcd3",
+        "surface": "ceramic"
+      },
+      {
+        "id": "black",
+        "label": "Темний графіт",
+        "color": "#30383d",
+        "surface": "metal"
+      },
+      {
+        "id": "sage",
+        "label": "Приглушений зелений",
+        "color": "#819183",
+        "surface": "plastic"
+      },
+      {
+        "id": "clay",
+        "label": "Теракота",
+        "color": "#b47c65",
+        "surface": "ceramic"
+      }
+    ],
+    "description": "Невелика композиція на столі чи тумбі.",
+    "collision": "accessory",
+    "productionRef": "catalog:accessory:production",
+    "proxyRef": "catalog:accessory:proxy"
+  },
+  {
+    "id": "coffeeMachine",
+    "label": "Кавомашина",
+    "category": "accessories",
+    "placement": "floor",
+    "variants": [
+      {
+        "index": 0,
+        "label": "0 / Немає",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "model": "none"
+      },
+      {
+        "index": 1,
+        "label": "1 / Еспресо з ріжком",
+        "dimensions": [
+          0.27,
+          0.34,
+          0.38
+        ],
+        "model": "coffee-espresso"
+      },
+      {
+        "index": 2,
+        "label": "2 / Автомат із бункером",
+        "dimensions": [
+          0.35,
+          0.43,
+          0.43
+        ],
+        "model": "coffee-automatic"
+      }
+    ],
+    "materials": [
+      {
+        "id": "steel",
+        "label": "Сатинований метал",
+        "color": "#b2b8ba",
+        "surface": "metal"
+      },
+      {
+        "id": "graphite",
+        "label": "Матовий графіт",
+        "color": "#30363a",
+        "surface": "plastic"
+      },
+      {
+        "id": "white",
+        "label": "Теплий білий",
+        "color": "#e3e2dc",
+        "surface": "plastic"
+      }
+    ],
+    "description": "Повноцінна кавова точка зі знімною тацею, носиком і чашкою. Поставте на стіл, барну стільницю чи тумбу: розміщення перевіряє площу та висоту опори.",
+    "collision": "accessory",
+    "productionRef": "catalog:coffeeMachine:production",
+    "proxyRef": "catalog:coffeeMachine:proxy"
+  },
+  {
+    "id": "rug",
+    "label": "Килим",
+    "category": "rugs",
+    "placement": "floor",
+    "variants": [
+      {
+        "index": 0,
+        "label": "0 / Немає",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "model": "none"
+      },
+      {
+        "index": 1,
+        "label": "1 / 200 × 140",
+        "dimensions": [
+          2,
+          0.012,
+          1.4
+        ],
+        "model": "rug-rect"
+      },
+      {
+        "index": 2,
+        "label": "2 / 240 × 170",
+        "dimensions": [
+          2.4,
+          0.012,
+          1.7
+        ],
+        "model": "rug-large"
+      },
+      {
+        "index": 3,
+        "label": "3 / Круглий Ø180",
+        "dimensions": [
+          1.8,
+          0.012,
+          1.8
+        ],
+        "model": "rug-round"
+      }
+    ],
+    "materials": [
+      {
+        "id": "oat",
+        "label": "Вівсяна тканина",
+        "color": "#c8bca8",
+        "surface": "fabric"
+      },
+      {
+        "id": "graphite",
+        "label": "Графітова тканина",
+        "color": "#414749",
+        "surface": "fabric"
+      },
+      {
+        "id": "sage",
+        "label": "Шавлієва тканина",
+        "color": "#7b9182",
+        "surface": "fabric"
+      },
+      {
+        "id": "ochre",
+        "label": "Тепла охра",
+        "color": "#b38b48",
+        "surface": "fabric"
+      },
+      {
+        "id": "blue",
+        "label": "Синій текстиль",
+        "color": "#465f79",
+        "surface": "fabric"
+      },
+      {
+        "id": "clay",
+        "label": "Теракота",
+        "color": "#ad7562",
+        "surface": "fabric"
+      }
+    ],
+    "description": "Тонкий килим для зонування та додаткової акустики.",
+    "collision": "cover",
+    "productionRef": "catalog:rug:production",
+    "proxyRef": "catalog:rug:proxy"
+  },
+  {
+    "id": "separator",
+    "label": "Низька перегородка",
+    "category": "separators",
+    "placement": "floor",
+    "variants": [
+      {
+        "index": 0,
+        "label": "0 / Немає",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "model": "none"
+      },
+      {
+        "index": 1,
+        "label": "1 / Рейкова",
+        "dimensions": [
+          1.05,
+          1.15,
+          0.24
+        ],
+        "model": "separator-slat"
+      },
+      {
+        "index": 2,
+        "label": "2 / Повстяна",
+        "dimensions": [
+          1.1,
+          1.2,
+          0.25
+        ],
+        "model": "separator-felt"
+      },
+      {
+        "index": 3,
+        "label": "3 / Кашпо",
+        "dimensions": [
+          1.1,
+          0.9,
+          0.3
+        ],
+        "model": "separator-planter"
+      }
+    ],
+    "materials": [
+      {
+        "id": "oat",
+        "label": "Вівсяна тканина",
+        "color": "#c8bca8",
+        "surface": "fabric"
+      },
+      {
+        "id": "graphite",
+        "label": "Графітова тканина",
+        "color": "#414749",
+        "surface": "fabric"
+      },
+      {
+        "id": "sage",
+        "label": "Шавлієва тканина",
+        "color": "#7b9182",
+        "surface": "fabric"
+      },
+      {
+        "id": "ochre",
+        "label": "Тепла охра",
+        "color": "#b38b48",
+        "surface": "fabric"
+      },
+      {
+        "id": "blue",
+        "label": "Синій текстиль",
+        "color": "#465f79",
+        "surface": "fabric"
+      },
+      {
+        "id": "clay",
+        "label": "Теракота",
+        "color": "#ad7562",
+        "surface": "fabric"
+      }
+    ],
+    "description": "Легке розділення зони відпочинку та робочої зони без ізоляції.",
+    "collision": "solid",
+    "productionRef": "catalog:separator:production",
+    "proxyRef": "catalog:separator:proxy"
+  }
+]

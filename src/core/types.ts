@@ -1,0 +1,33 @@
+export type Vec3 = [number, number, number];
+export type AppMode = 'editor' | 'archviz';
+export type PlacementType = 'floor' | 'wall';
+export type Category = 'seating' | 'tables' | 'chairs' | 'work' | 'storage' | 'lighting' | 'plants' | 'acoustic' | 'wallDecor' | 'signage' | 'clocks' | 'boards' | 'accessories' | 'rugs' | 'separators';
+export interface AssetVariant { index: number; label: string; dimensions: Vec3; model: string; }
+export interface MaterialVariant { id: string; label: string; color: string; surface: 'fabric' | 'wood' | 'metal' | 'plastic' | 'stone' | 'ceramic' | 'leaf' | 'rug'; }
+export interface AssetDefinition {
+  id: string; label: string; category: Category; placement: PlacementType;
+  variants: AssetVariant[]; materials: MaterialVariant[];
+  collision: 'solid' | 'cover' | 'accessory' | 'wall';
+  mountHeight?: number; description: string;
+  productionRef: string; proxyRef: string;
+}
+export interface SceneObject { id: string; assetId: string; variant: number; material: string; position: Vec3; rotation: number; wallId?: string; }
+export interface LayerVisibility { ceiling: boolean; walls: boolean; doors: boolean; windows: boolean; structure: boolean; furniture: boolean; decor: boolean; plants: boolean; wallDecor: boolean; grid: boolean; autoWalls: boolean; }
+export interface SceneConfig {
+  schemaVersion: 1; projectId: 'polycam-lounge-room'; roomId: string; presetId: string; name: string;
+  createdAt: string; updatedAt: string; basePresetId: string; modified: boolean;
+  objects: SceneObject[]; doorOpen: boolean; layers: LayerVisibility;
+}
+export interface WallSurface { id: string; axis: 'x' | 'z'; coordinate: number; normal: Vec3; min: number; max: number; label?: string; height?: number; openings?: { min: number; max: number; minY: number; maxY: number; kind: 'door' | 'window' }[]; }
+export interface RoomDefinition {
+  id: string; architectureId: string; width: number; depth: number; height: number;
+  bounds: { minX: number; maxX: number; minZ: number; maxZ: number };
+  walls: WallSurface[];
+  door: { wallId: string; center: number; width: number; height: number; hinge: Vec3; swing: { minX: number; maxX: number; minZ: number; maxZ: number } };
+  window: { wallId: string; min: number; max: number; sill: number; height: number };
+  obstacles: { id: string; minX: number; maxX: number; minZ: number; maxZ: number; height: number; kind?: 'wall' | 'column' | 'structure' }[];
+}
+export interface PlacementResult { valid: boolean; reason?: string; collidingId?: string; }
+export interface SceneStoreSnapshot { config: SceneConfig; canUndo: boolean; canRedo: boolean; }
+export const DEFAULT_LAYERS: LayerVisibility = { ceiling: false, walls: true, doors: true, windows: true, structure: true, furniture: true, decor: true, plants: true, wallDecor: true, grid: true, autoWalls: true };
+export const PROJECT_ID = 'polycam-lounge-room' as const;

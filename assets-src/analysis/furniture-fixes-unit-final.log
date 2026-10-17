@@ -1,0 +1,13 @@
+
+> eds-rooms-design@1.0.0 test
+> vitest run
+
+
+ RUN  v4.1.12 C:/Users/kakuc/Downloads/blender-mcp/ThreeJS_ArchViz
+
+
+ Test Files  8 passed (8)
+      Tests  70 passed (70)
+   Start at  22:52:15
+   Duration  1.61s (transform 906ms, setup 0ms, import 2.00s, tests 2.27s, environment 1ms)
+
