@@ -1,14 +1,21 @@
+import {defaultDoorPlaqueLabel} from '../core/door-labels';
 import { DEFAULT_LAYERS, PROJECT_ID, type SceneConfig, type SceneObject } from '../core/types';
 import { getAsset, getVariant } from './catalog';
-import { wallAnchor } from '../core/placement';
+import { validatePlacement, wallAnchor } from '../core/placement';
 import { hallSigns } from './hall-signs';
 import { ROOM } from '../core/room';
+import { defaultRegionPresets, objectRegion } from '../core/regions';
+import { HALL_LAYOUT, hallWallSurfaces, originalHallTables } from '../core/hall';
+import type { RoomDefinition, WallFinish } from '../core/types';
+import { getPaintableBounds } from '../core/wall-paint';
+import { rearPartitions } from './rear-partitions';
+import { hallClocks } from './hall-clocks';
 const date='2026-10-16T00:00:00.000Z';
 const pi=Math.PI;
 function item(id:string,assetId:string,variant:number,x:number,z:number,rotation=0,material?:string,y=0):SceneObject { return {id,assetId,variant,material:material??getAsset(assetId).materials[0].id,position:[x,y,z],rotation}; }
 function wall(id:string,assetId:string,variant:number,wallId:string,along:number,height:number,material?:string):SceneObject { return {...item(id,assetId,variant,0,0,0,material),...wallAnchor(wallId,along,height,getVariant(assetId,variant).dimensions[2])}; }
-function common(style:number):SceneObject[] {return [wall('ProjectBoard','board',style%3+1,'east',.65,1.65),wall('AcousticEast','acousticPanel',style%3+1,'east',-1.2,1.65,style%2?'graphite':'sage'),wall('Artwork','art',style%3+1,'near',-1.15,1.65),wall('RoomClock','clock',style%2+1,'near',.55,2.3,'black'),wall('AcousticWest','acousticPanel',style%3+1,'west',1.25,1.75,style%2?'oat':'blue')];}
-function preset(index:number,name:string,objects:SceneObject[]):SceneConfig {return {schemaVersion:1,projectId:PROJECT_ID,roomId:'lounge-room-01',presetId:`builtin-${index}`,name:`${index}: ${name}`,createdAt:date,updatedAt:date,basePresetId:`builtin-${index}`,modified:false,objects:[...objects,...hallSigns()],doorOpen:false,layers:{...DEFAULT_LAYERS}};}
+function common(style:number):SceneObject[] {return [wall('ProjectBoard','board',style%3===2?1:style%3+1,'east',.65,1.65),wall('AcousticEast','acousticPanel',style%3+1,'east',-1.2,1.65,style%2?'graphite':'sage'),wall('Artwork','art',style%3+1,'near',-1.15,1.65),wall('RoomClock','clock',style%2+1,'near',.55,2.3,'black'),wall('AcousticWest','acousticPanel',style%3+1,'west',1.25,1.75,style%2?'oat':'blue')];}
+function preset(index:number,name:string,objects:SceneObject[]):SceneConfig {return {schemaVersion:2,projectId:PROJECT_ID,roomId:'lounge-room-01',presetId:`builtin-${index}`,name:`${index}: ${name}`,createdAt:date,updatedAt:date,basePresetId:`builtin-${index}`,modified:false,hallDecorRevision:1,doorLabelRevision:1,objects:[...objects,...hallSigns()].map(o=>({...o,regionId:objectRegion(o)})),doorOpen:false,layers:{...DEFAULT_LAYERS},regionPresets:defaultRegionPresets(`builtin-${index}`),wallFinishes:{}};}
 function bar(variant:number,material:string):SceneObject[] {const z=variant===2?ROOM.bounds.maxZ-getVariant('windowBar',variant).dimensions[2]/2+.003:2.715,seatZ=1.95+z-2.715;return [item('WindowBar','windowBar',variant,0,z,0,material),item('BarSeatA','barStool',variant,-.83,seatZ,0,'graphite'),item('BarSeatB','barStool',variant,.83,seatZ,0,'oat')];}
 function accessory(id:string,x:number,z:number,height:number,variant=1):SceneObject {return item(id,'accessory',variant,x,z,0,'white',height);}
 export const BUILTIN_PRESETS:SceneConfig[] = [
@@ -58,6 +65,8 @@ export const BUILTIN_PRESETS:SceneConfig[] = [
 function deepFreeze<T>(value:T):T { if(value&&typeof value==='object') {Object.freeze(value); Object.values(value).forEach(v=>{if(v&&typeof v==='object'&&!Object.isFrozen(v))deepFreeze(v);});}return value; }
 for(const p of BUILTIN_PRESETS){
  const index=Number(p.presetId.slice(8));
+ if([3,6,13].includes(index))p.objects.push({...wall('MarkerBoard','board',1,index===13?'east':'west',index===13?1.2:-1.15,1.75,'white'),regionId:'meeting'});
+ if([1,4,7,9,10].includes(index))p.objects.push({...wall('MarkerBoard','board',1,[4,7,10].includes(index)?'east':'west',[4,7,10].includes(index)?1.95:-1.15,1.75,'white'),regionId:'meeting'});
  const mediaWall={3:['east',-1.45],6:['near',-1],9:['east',-1.35],13:['west',-.25]}[index] as [string,number]|undefined;
  if(mediaWall){
   const board=p.objects.find(o=>o.id==='ProjectBoard')!;Object.assign(board,wall('ProjectBoard','television',3,mediaWall[0],mediaWall[1],1.45,'graphite'));
@@ -81,6 +90,150 @@ for(const p of BUILTIN_PRESETS){
   if(object.assetId==='accessory'&&object.variant===2){const seats=p.objects.filter(o=>o.assetId==='chair'||o.assetId==='barStool').sort((a,b)=>Math.hypot(a.position[0]-object.position[0],a.position[2]-object.position[2])-Math.hypot(b.position[0]-object.position[0],b.position[2]-object.position[2]));if(seats[0])face(object,seats[0]);}
  }
 }
-BUILTIN_PRESETS.forEach(deepFreeze);
-export function clonePreset(preset:SceneConfig|string|number):SceneConfig {const source=typeof preset==='number'?BUILTIN_PRESETS[preset]:typeof preset==='string'?BUILTIN_PRESETS.find(p=>p.presetId===preset):preset;if(!source)throw new Error('Пресет не знайдено');return JSON.parse(JSON.stringify(source));}
+const hallWallRoom:RoomDefinition={...ROOM,walls:hallWallSurfaces()};
+const doorNames:Record<string,string>={
+ 'door-02':'Кімната команди','door-03':'Переговорна','door-04':'Проєктний відділ',
+ 'door-05':'Інженерний відділ','door-06':'Керівник проєктів','door-07':'Робочий кабінет',
+ 'door-08':'Технічне приміщення','door-09':'Комерційний відділ','door-10':'Кабінет команди',
+ 'door-11':'Архів','door-12':'Сервісна кімната','door-13':'Склад','door-14':'Сходи','door-15':'Вхід',
+};
+const corporate=['eds-blue','eds-lavender','eds-lime','eds-black'];
+function hallItem(id:string,assetId:string,variant:number,x:number,z:number,rotation=0,material?:string,y=0):SceneObject {
+ return {...item(`hall-${id}`,assetId,variant,x,z,rotation,material,y),regionId:'hall'};
+}
+function hallDoorObjects(style:number):SceneObject[]{
+ return HALL_LAYOUT.doors.flatMap((door,index)=>{
+  const surface=hallWallRoom.walls.find(w=>w.id===door.wallId)!;
+  const along=(p:number[])=>p[surface.axis==='x'?2:0];
+  const plaqueVariant=style%3+1,panelVariant=style%3+1;
+  const plaque=wallAnchor(door.wallId,along(door.colorElementPosition),1.55,getVariant('doorPlaque',plaqueVariant).dimensions[2],hallWallRoom);
+  const panelDimensions=getVariant('brandDoorPanel',panelVariant).dimensions;
+  const panel=wallAnchor(door.wallId,along(door.colorElementPosition),(surface.height??3.6)-panelDimensions[1]/2,panelDimensions[2],hallWallRoom);
+  const number=door.id.slice(-2),label=doorNames[door.id]??door.label;
+  return [
+   {id:`hall-${door.id}-plaque`,assetId:'doorPlaque',variant:plaqueVariant,material:style%3===2?'eds-lavender':'eds-white',...plaque,regionId:'hall' as const,label:defaultDoorPlaqueLabel(door.id)},
+   {id:`hall-${door.id}-brand`,assetId:'brandDoorPanel',variant:panelVariant,material:corporate[(index+style)%corporate.length],...panel,regionId:'hall' as const},
+  ];
+ });
+}
+function beanPair(prefix:string,x:number,z:number,variant:number,colors:[string,string]=['eds-blue','eds-lime']):SceneObject[]{
+ const table=hallItem(`${prefix}-coffee`,'coffeeTable',variant%5+1,x,z,0,'oak');
+ const seats=[hallItem(`${prefix}-bean-a`,'beanBag',variant,-1.35+x,z-.75,0,colors[0]),hallItem(`${prefix}-bean-b`,'beanBag',variant,1.35+x,z-.75,0,colors[1])];
+ for(const seat of seats)seat.rotation=Math.atan2(x-seat.position[0],z-seat.position[2]);
+ return [table,...seats,hallItem(`${prefix}-rug`,'rug',2,x,z-.2,0,'oat')];
+}
+function sofaNook(prefix:string,x:number,z:number,style:number):SceneObject[]{
+ const sofa=hallItem(`${prefix}-sofa`,'sofa',style%4+1,x,z+1.15,pi,style%2?'blue':'oat');
+ return [...beanPair(prefix,x,z,style%3+1),sofa,hallItem(`${prefix}-light`,'floorLamp',style%2+1,x-2.15,z+1.25,0,'black')];
+}
+function meetingSet(prefix:string,x:number,z:number,variant:number):SceneObject[]{
+ const table=hallItem(`${prefix}-table`,'meetingTable',variant,x,z,0,'oak');
+ const seats=[[-1,0],[1,0],[0,-.95],[0,.95]].map(([dx,dz],i)=>hallItem(`${prefix}-seat-${i}`,'chair',i%3+1,x+dx,z+dz,Math.atan2(-dx,-dz),i%2?'blue':'graphite'));
+ return [table,...seats];
+}
+const hallPlants=(style:number)=>[
+ hallItem('plant-west','plant',style%2+1,-12.2,1.8,0,style%2?'white':'black'),
+ hallItem('plant-east','plant',style%2+1,21.8,1.95,0,style%2?'clay':'white'),
+];
+function hallPreset(index:number,name:string,decor:SceneObject[],finishes:Record<string,WallFinish>={}):SceneConfig{
+ const id=`hall-preset-${index}`,config=preset(0,name,[]);
+ config.presetId=config.basePresetId=id;config.name=`${index}: ${name}`;
+ config.objects=[...originalHallTables(),...hallDoorObjects(index),...hallSigns(index),...hallClocks(index),...decor,...rearPartitions(index)];
+ config.regionPresets.hall={presetId:id,basePresetId:id,modified:false};config.wallFinishes=finishes;
+ return config;
+}
+const finish=(motif:WallFinish['motif'],accent='#0b30c1',color:string|null=null):WallFinish=>({color,motif,accent});
+/** Independent main-hall designs use the real source desk transforms unchanged.
+ * Service-room names are proposed design labels, not a survey of room use. */
+export const HALL_PRESETS:SceneConfig[]=[
+ hallPreset(0,'EDS · робота та відпочинок',[
+  ...beanPair('west',-16,.35,1),...beanPair('east',18.7,.7,2),...hallPlants(0),
+ ]),
+ hallPreset(1,'Корпоративний діалог',[
+  ...sofaNook('west',-16,.35,1),...meetingSet('east',18.4,.45,1),
+  hallItem('east-bean','beanBag',3,21.5,-.5,-pi/2,'eds-lavender'),...hallPlants(1),
+ ],{'wall-38':finish(1)}),
+ hallPreset(2,'М’який індастріал',[
+  ...beanPair('west',-16,.3,2,['eds-black','eds-lime']),hallItem('west-bench','bench',2,-16,1.8,pi,'graphite'),
+  ...sofaNook('east',18.5,.6,2),hallItem('west-shelf','storage',2,-18.8,1.8,pi,'walnut'),...hallPlants(0),
+ ],{'wall-38':finish(3,'#a0ff3d')}),
+ hallPreset(3,'Біофільний простір',[
+  ...beanPair('west',-16,.35,3,['eds-lavender','eds-blue']),...sofaNook('east',18.5,.6,0),
+  hallItem('west-planter','separator',3,-16,2.05,0,'sage'),hallItem('west-green','plant',3,-18.4,1.7,0,'clay'),
+  hallItem('east-green','plant',2,21.9,-1.1,0,'white'),...hallPlants(1),
+ ],{'wall-23':finish(2,'#a2b8fe')}),
+ hallPreset(4,'Кавова пауза',[
+  ...meetingSet('west',-16,.4,1),hallItem('west-bean','beanBag',1,-12.8,.1,-pi/2,'eds-lime'),
+  ...beanPair('east',18.5,.5,2),hallItem('east-cafe','workDesk',2,18.5,2.35,pi,'walnut'),
+  hallItem('east-coffee-machine','coffeeMachine',2,18.5,2.35,0,'steel',.74),...hallPlants(0),
+ ],{'wall-38':finish(1,'#a2b8fe')}),
+ hallPreset(5,'Тиха робота',[
+  hallItem('west-work','workDesk',2,-16,1.85,pi,'oak'),hallItem('west-work-chair','chair',3,-16,.9,0,'blue'),
+  hallItem('west-laptop','accessory',2,-16,1.85,pi,'white',.74),hallItem('west-separator','separator',2,-17.6,1.05,pi/2,'sage'),
+  hallItem('west-bean-a','beanBag',2,-18.8,.1,.8,'eds-blue'),hallItem('west-bean-b','beanBag',3,-13.5,.1,-.8,'eds-lavender'),
+  ...beanPair('east',18.7,.6,1),hallItem('east-shelf','storage',2,18.7,2.45,pi,'ash'),...hallPlants(1),
+ ],{'wall-13':finish(2,'#0b30c1')}),
+ hallPreset(6,'Командна співпраця',[
+  ...meetingSet('west',-16,.3,2),...meetingSet('east',18.4,.45,3),
+  hallItem('west-bean-a','beanBag',3,-18.8,.2,.9,'eds-lime'),hallItem('west-bean-b','beanBag',2,-12.8,.2,-.9,'eds-blue'),
+  hallItem('east-bean-a','beanBag',1,21.4,-.8,-1,'eds-lavender'),...hallPlants(0),
+ ],{'wall-38':finish(3,'#0b30c1'),'wall-13':finish(1,'#a0ff3d')}),
+ hallPreset(7,'Відкриті зустрічі',[
+  ...sofaNook('west',-16,.35,3),...beanPair('east',18.5,.55,3),
+  hallItem('east-bench','bench',2,18.5,2.05,pi,'blue'),hallItem('east-side','sideTable',1,21.1,1.75,0,'oak'),...hallPlants(1),
+ ],{'wall-38':finish(2,'#a2b8fe'),'wall-23':finish(3,'#0b30c1')}),
+];
+// One full-wall statement composition per furnished design. The opposite
+// surfaces remain quiet; no furniture or television placement is changed.
+const mural=(index:NonNullable<WallFinish['mural']>,color='#f0f0f0'):WallFinish=>({...finish(0,'#0b30c1',color),mural:index});
+const meetingFinishes:Record<number,Record<string,WallFinish>>={
+ 1:{west:mural(7)},2:{west:mural(5)},
+ 3:{west:mural(8)},4:{east:mural(3)},
+ 5:{west:mural(2)},6:{east:mural(7)},
+ 7:{west:mural(4)},8:{east:mural(5)},
+ 9:{west:mural(6)},10:{west:mural(4)},
+ 11:{east:mural(6)},12:{east:mural(7)},
+ 13:{east:mural(8)},14:{east:mural(2)},
+ 15:{west:mural(1)},
+};
+/** Built-ins reserve a whole painted feature wall instead of placing a board
+ * through the corporate logotype. This only reanchors mounted items; saved
+ * user configs and all floor furniture keep their exact transforms. */
+function clearStatementWall(config:SceneConfig):void {
+ const statement=Object.entries(config.wallFinishes).find(([,f])=>f.mural)?.[0];
+ if(!statement)return;
+ const room:RoomDefinition={...ROOM,walls:ROOM.walls.map(w=>({...w,height:Math.min(w.height??ROOM.height,getPaintableBounds(w.id)?.maxY??ROOM.height),...(w.id==='west'?{max:Math.min(w.max,ROOM.obstacles[0].minZ-.04)}:{})}))};
+ const quiet=statement==='west'?'east':'west';
+ const pending=config.objects.filter(o=>o.wallId===statement&&getAsset(o.assetId).placement==='wall'&&o.variant>0).sort((a,b)=>(getAsset(a.assetId).category==='boards'?0:1)-(getAsset(b.assetId).category==='boards'?0:1));
+ for(const object of pending){
+  const [width,,depth]=getVariant(object.assetId,object.variant).dimensions;
+  const original=ROOM.walls.find(w=>w.id===statement)!;
+  const along=object.position[original.axis==='x'?2:0];
+  let placed=false;
+  // Keep working surfaces at their original useful height before trying
+  // another row. All candidates use the same measured aperture validation.
+  for(const height of [...new Set([object.position[1],1.65,1.75,2.3,2.7])]){
+   for(const wallId of [quiet,'near','far']){
+    const surface=room.walls.find(w=>w.id===wallId)!;
+    const inset=width/2+.1;
+    for(const center of [...new Set([along,-2.2,2.2,-1.6,1.6,0,-.8,.8,surface.min+inset,surface.max-inset])]){
+     const candidate={...object,...wallAnchor(wallId,center,height,depth,room)};
+     if(validatePlacement(candidate,config.objects,room).valid){Object.assign(object,candidate);placed=true;break;}
+    }
+    if(placed)break;
+   }
+   if(placed)break;
+  }
+  if(!placed)throw new Error(`Немає вільної тихої стіни для ${config.presetId}:${object.id}`);
+ }
+}
+for(const config of BUILTIN_PRESETS){
+ config.wallFinishes=meetingFinishes[Number(config.presetId.slice(8))]??{};
+ clearStatementWall(config);
+ const meeting=config.objects.filter(o=>objectRegion(o)==='meeting').map(o=>({...o,regionId:'meeting' as const}));
+ config.objects=[...meeting,...JSON.parse(JSON.stringify(HALL_PRESETS[0].objects))];
+}
+[...BUILTIN_PRESETS,...HALL_PRESETS].forEach(deepFreeze);
+export const MEETING_PRESETS=BUILTIN_PRESETS;
+export function clonePreset(preset:SceneConfig|string|number):SceneConfig {const source=typeof preset==='number'?BUILTIN_PRESETS[preset]:typeof preset==='string'?[...BUILTIN_PRESETS,...HALL_PRESETS].find(p=>p.presetId===preset):preset;if(!source)throw new Error('Пресет не знайдено');return JSON.parse(JSON.stringify(source));}
 

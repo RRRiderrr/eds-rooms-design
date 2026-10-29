@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "source": "Actual current WebGL production assets, PBR, architecture and SceneState",
+  "renderedAt": "2026-10-29T08:39:56.692Z",
+  "images": [
+    {
+      "region": "meeting",
+      "presetId": "builtin-0",
+      "file": "preset-0.jpg"
+    },
+    {
+      "region": "meeting",
+      "presetId": "builtin-1",
+      "file": "preset-1.jpg"
+    },
+    {
+      "region": "meeting",
+      "presetId": "builtin-2",
+      "file": "preset-2.jpg"
+    },
+    {
+      "region": "meeting",
+      "presetId": "builtin-3",
+      "file": "preset-3.jpg"
+    },
+    {
+      "region": "meeting",
+      "presetId": "builtin-4",
+      "file": "preset-4.jpg"
+    },
+    {
+      "region": "meeting",
+      "presetId": "builtin-5",
+      "file": "preset-5.jpg"
+    },
+    {
+      "region": "meeting",
+      "presetId": "builtin-6",
+      "file": "preset-6.jpg"
+    },
+    {
+      "region": "meeting",
+      "presetId": "builtin-7",
+      "file": "preset-7.jpg"
+    },
+    {
+      "region": "meeting",
+      "presetId": "builtin-8",
+      "file": "preset-8.jpg"
+    },
+    {
+      "region": "meeting",
+      "presetId": "builtin-9",
+      "file": "preset-9.jpg"
+    },
+    {
+      "region": "meeting",
+      "presetId": "builtin-10",
+      "file": "preset-10.jpg"
+    },
+    {
+      "region": "meeting",
+      "presetId": "builtin-11",
+      "file": "preset-11.jpg"
+    },
+    {
+      "region": "meeting",
+      "presetId": "builtin-12",
+      "file": "preset-12.jpg"
+    },
+    {
+      "region": "meeting",
+      "presetId": "builtin-13",
+      "file": "preset-13.jpg"
+    },
+    {
+      "region": "meeting",
+      "presetId": "builtin-14",
+      "file": "preset-14.jpg"
+    },
+    {
+      "region": "meeting",
+      "presetId": "builtin-15",
+      "file": "preset-15.jpg"
+    },
+    {
+      "region": "hall",
+      "presetId": "hall-preset-0",
+      "file": "hall-0.jpg"
+    },
+    {
+      "region": "hall",
+      "presetId": "hall-preset-1",
+      "file": "hall-1.jpg"
+    },
+    {
+      "region": "hall",
+      "presetId": "hall-preset-2",
+      "file": "hall-2.jpg"
+    },
+    {
+      "region": "hall",
+      "presetId": "hall-preset-3",
+      "file": "hall-3.jpg"
+    },
+    {
+      "region": "hall",
+      "presetId": "hall-preset-4",
+      "file": "hall-4.jpg"
+    },
+    {
+      "region": "hall",
+      "presetId": "hall-preset-5",
+      "file": "hall-5.jpg"
+    },
+    {
+      "region": "hall",
+      "presetId": "hall-preset-6",
+      "file": "hall-6.jpg"
+    },
+    {
+      "region": "hall",
+      "presetId": "hall-preset-7",
+      "file": "hall-7.jpg"
+    }
+  ]
+}

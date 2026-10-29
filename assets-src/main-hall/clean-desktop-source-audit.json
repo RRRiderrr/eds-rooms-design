@@ -1,0 +1,245 @@
+{
+  "source": "C:\\Users\\kakuc\\Downloads\\blender-mcp\\reconstructed_room.blend",
+  "backup": "E:/ArchViz_Resources/main-hall/before-clean-desk-surfaces-20261029-180400.blend",
+  "removed": [
+    {
+      "name": "East_Desk_01_Wall_Bank_Row_1_Black_Cable_Grommet",
+      "dimensions": [
+        0.06000000238418579,
+        0.04499998688697815,
+        0.003000020980834961
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "East_Desk_02_Wall_Bank_Row_2_Black_Cable_Grommet",
+      "dimensions": [
+        0.06000000238418579,
+        0.04499998688697815,
+        0.003000020980834961
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "East_Desk_03_Wall_Bank_Row_3_Black_Cable_Grommet",
+      "dimensions": [
+        0.06000000238418579,
+        0.04499998688697815,
+        0.003000020980834961
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "East_Desk_04_Island_A_West_Row_1_Black_Cable_Grommet",
+      "dimensions": [
+        0.06000000238418579,
+        0.04499998688697815,
+        0.003000020980834961
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "East_Desk_05_Island_A_West_Row_2_Black_Cable_Grommet",
+      "dimensions": [
+        0.06000000238418579,
+        0.04499998688697815,
+        0.003000020980834961
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "East_Desk_06_Island_A_West_Row_3_Black_Cable_Grommet",
+      "dimensions": [
+        0.06000000238418579,
+        0.04499998688697815,
+        0.003000020980834961
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "East_Desk_07_Island_A_East_Row_1_Black_Cable_Grommet",
+      "dimensions": [
+        0.06000000238418579,
+        0.04499998688697815,
+        0.003000020980834961
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "East_Desk_08_Island_A_East_Row_2_Black_Cable_Grommet",
+      "dimensions": [
+        0.06000000238418579,
+        0.04499998688697815,
+        0.003000020980834961
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "East_Desk_09_Island_A_East_Row_3_Black_Cable_Grommet",
+      "dimensions": [
+        0.06000000238418579,
+        0.04499998688697815,
+        0.003000020980834961
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "East_Desk_10_Island_B_West_Row_1_Black_Cable_Grommet",
+      "dimensions": [
+        0.06000000238418579,
+        0.04499998688697815,
+        0.003000020980834961
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "East_Desk_11_Island_B_West_Row_2_Black_Cable_Grommet",
+      "dimensions": [
+        0.06000000238418579,
+        0.04499998688697815,
+        0.003000020980834961
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "East_Desk_12_Island_B_West_Row_3_Black_Cable_Grommet",
+      "dimensions": [
+        0.06000000238418579,
+        0.04499998688697815,
+        0.003000020980834961
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "East_Desk_13_Island_B_East_Row_1_Black_Cable_Grommet",
+      "dimensions": [
+        0.06000000238418579,
+        0.04499998688697815,
+        0.003000020980834961
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "East_Desk_14_Island_B_East_Row_2_Black_Cable_Grommet",
+      "dimensions": [
+        0.06000000238418579,
+        0.04499998688697815,
+        0.003000020980834961
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "East_Desk_15_Island_B_East_Row_3_Black_Cable_Grommet",
+      "dimensions": [
+        0.06000000238418579,
+        0.04499998688697815,
+        0.003000020980834961
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "East_Desk_16_Outer_Bank_Row_1_Black_Cable_Grommet",
+      "dimensions": [
+        0.06000000238418579,
+        0.04499998688697815,
+        0.003000020980834961
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "East_Desk_17_Outer_Bank_Row_2_Black_Cable_Grommet",
+      "dimensions": [
+        0.06000000238418579,
+        0.04499998688697815,
+        0.003000020980834961
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "East_Desk_18_Outer_Bank_Row_3_Black_Cable_Grommet",
+      "dimensions": [
+        0.06000000238418579,
+        0.04499998688697815,
+        0.003000020980834961
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "objectsBefore": 765,
+  "objectsAfter": 747,
+  "allOtherGeometryAndTransformsUnchanged": true,
+  "saved": true,
+  "reason": "Remove superfluous raised black cable caps from otherwise continuous white desktops. Frames already stop at desktop underside."
+}

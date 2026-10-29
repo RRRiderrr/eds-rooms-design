@@ -38,7 +38,7 @@ export async function attachSignagePrints(document, publicRoot = path.join(proje
       const converted = document.createAccessor(`${sourceUV.getName()}-signage-top-origin`).setType('VEC2').setArray(array).setBuffer(sourceUV.getBuffer());
       primitive.setAttribute('TEXCOORD_0', converted).setExtras({ ...primitive.getExtras(), signagePrintUVTopOrigin: true });
     }
-    material.setExtras({ ...extras, sourcePbr: true, printSource: 'User-provided photo; real coast/country geometric mask, printed top caps only' });
+    material.setExtras({ ...extras, sourcePbr: true, printSource: extras.printSource ?? 'User-provided photo; real coast/country geometric mask, printed top caps only' });
     count++;
   }
   return count;

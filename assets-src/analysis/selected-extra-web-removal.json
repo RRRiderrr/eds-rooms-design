@@ -1,0 +1,29 @@
+{
+  "sourceObject": "Wall_42_Skirting_0",
+  "bounds": {
+    "min": [
+      8.71992046,
+      0,
+      2.71686749
+    ],
+    "max": [
+      8.84991962,
+      0.07,
+      3.11312943
+    ]
+  },
+  "reports": [
+    {
+      "name": "space",
+      "removedTriangles": 12,
+      "allVertexAttributesUnchanged": true,
+      "materialsAndLightmapsPreserved": true
+    },
+    {
+      "name": "space-editor",
+      "removedTriangles": 12,
+      "allVertexAttributesUnchanged": true,
+      "materialsAndLightmapsPreserved": true
+    }
+  ]
+}

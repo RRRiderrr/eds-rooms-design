@@ -4,6 +4,8 @@ import { HDRLoader } from 'three/addons/loaders/HDRLoader.js';
 import { MeshoptDecoder } from 'three/addons/libs/meshopt_decoder.module.js';
 import type { TextureQuality } from '../assets/materials';
 import type { LayerVisibility, AppMode } from '../core/types';
+import { repairMeetingWallAssemblies,repairMeetingWallManifest } from './meeting-solid-walls';
+import {solidWallCutawayVisible,isSolidWallPart} from './solid-wall-visibility';
 export const assetUrl=(path:string)=>new URL(import.meta.env.BASE_URL+path.replace(/^\.\//,'').replace(/^\//,''),document.baseURI).href;
 export interface NodeMetadata {name:string;category:string;wallId?:string;lightmapped?:boolean;}
 export interface ArchitectureManifest {
@@ -29,8 +31,10 @@ export class Architecture {
     const loader=new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);
     progress('Завантажуємо справжню архітектуру');
     const [editor,space]=await Promise.all([loader.loadAsync(assetUrl('assets/architecture/room-editor.meshopt.glb')),loader.loadAsync(assetUrl('assets/architecture/space-editor.meshopt.glb'))]);
+    const solidReport=repairMeetingWallAssemblies(editor.scene,space.scene);repairMeetingWallManifest(this.space!,solidReport);
     this.editor.add(editor.scene,space.scene);this.root.add(this.production,this.editor);
-    this.decorate(editor.scene);this.decorate(space.scene,this.space!.nodes);
+    const nodes=[...this.manifest.nodes,...this.space!.nodes];
+    this.decorate(editor.scene,nodes);this.decorate(space.scene,nodes);
     this.editorDoor=this.editor.getObjectByName(this.manifest.door.node);
     this.editorDoor?.traverse(o=>{o.userData.interactiveDoor=true;});
     this.setMode(this.mode);
@@ -39,10 +43,11 @@ export class Architecture {
       group.traverse(o=>{
         o.userData.protected=true;
         const meta=nodes.find(n=>n.name===o.name)||nodes.find(n=>o.name.startsWith(n.name+'_'));
-        const inherited=meta??(o.parent?this.categories.get(o.parent):undefined);if(inherited){this.categories.set(o,inherited);o.userData.archCategory=inherited.category;}
+        const source=meta??(o.userData.uniformEntranceSteel?{name:o.name,category:'ceiling',lightmapped:false}:undefined)??(o.parent?this.categories.get(o.parent):undefined);
+        const inherited=source?{...source,...(o.userData.forceNoBake?{lightmapped:false}:{}),...(o.userData.solidAssemblyPart?{category:'walls'}:{})}:undefined;if(inherited){this.categories.set(o,inherited);o.userData.archCategory=inherited.category;}
         if(o instanceof THREE.Mesh){o.frustumCulled=true;o.receiveShadow=true;o.castShadow=inherited?['walls','doors','structure','columns','existingFurniture'].includes(inherited.category):false;
-          if(this.editor===group||group.parent===this.editor){const mats=Array.isArray(o.material)?o.material:[o.material];o.material=mats.map(m=>{const name=m.name;const color=/06_WINDOW_PANES/.test(name)?'#8fb6bd':/03_DOOR|04_DOOR/.test(name)?'#78958c':/02_FLOOR/.test(name)?'#edf1e9':/01_WALLS|15_WALLS/.test(name)?'#c5d2c7':/05_WINDOW/.test(name)?'#f8faf3':/08_CEILING|12_FIXTURES|17_DESK/.test(name)?'#617d7d':/16_DESK/.test(name)?'#dcd7c4':'#9cafaa';return new THREE.MeshBasicMaterial({color,side:THREE.DoubleSide});});if(o.material.length===1)o.material=o.material[0];
-           if(['walls','doors','floor','structure','existingFurniture','windows'].includes(inherited?.category??'')){const edges=new THREE.LineSegments(new THREE.EdgesGeometry(o.geometry,30),new THREE.LineBasicMaterial({color:'#839a8e',transparent:true,opacity:.42}));edges.name='Editor_Architectural_Edges';edges.userData.protected=true;edges.raycast=()=>{};o.add(edges);}
+          if(this.editor===group||group.parent===this.editor){const mats=Array.isArray(o.material)?o.material:[o.material];o.material=mats.map(m=>{const name=m.name;const color=/06_WINDOW_PANES/.test(name)?'#8fb6bd':/03_DOOR|04_DOOR/.test(name)?'#78958c':/02_FLOOR/.test(name)?'#edf1e9':/01_WALLS|15_WALLS/.test(name)?'#c5d2c7':/05_WINDOW/.test(name)?'#f8faf3':/08_CEILING|12_FIXTURES|17_DESK/.test(name)?'#617d7d':/16_DESK/.test(name)?'#dcd7c4':'#9cafaa';const material=new THREE.MeshBasicMaterial({color,side:THREE.DoubleSide});material.name=name;material.userData.blenderMaterialName=name;return material;});if(o.material.length===1)o.material=o.material[0];
+           if(!o.userData.solidAssemblyPart&&['walls','doors','floor','structure','existingFurniture','windows'].includes(inherited?.category??'')){const edges=new THREE.LineSegments(new THREE.EdgesGeometry(o.geometry,30),new THREE.LineBasicMaterial({color:'#839a8e',transparent:true,opacity:.42}));edges.name='Editor_Architectural_Edges';edges.userData.protected=true;edges.raycast=()=>{};o.add(edges);}
           }
           else {const mats=Array.isArray(o.material)?o.material:[o.material];for(const m of mats){if(m instanceof THREE.MeshStandardMaterial){m.envMapIntensity=.25;m.roughness=Math.max(.18,m.roughness);}}}
         }
@@ -51,7 +56,7 @@ export class Architecture {
   ensureProduction(renderer:THREE.WebGLRenderer,progress:(text:string)=>void){return this.productionPromise??=this.loadProduction(renderer,progress);}
   private async loadProduction(renderer:THREE.WebGLRenderer,progress:(text:string)=>void){
     const loader=new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);
-    const [arch,space]=await Promise.all([loader.loadAsync(assetUrl('assets/architecture/room.meshopt.glb')),loader.loadAsync(assetUrl('assets/architecture/space.meshopt.glb'))]);this.roomGroup=arch.scene;this.spaceGroup=space.scene;this.production.add(arch.scene,space.scene);this.decorate(arch.scene);this.decorate(space.scene,this.space!.nodes);
+    const [arch,space]=await Promise.all([loader.loadAsync(assetUrl('assets/architecture/room.meshopt.glb')),loader.loadAsync(assetUrl('assets/architecture/space.meshopt.glb'))]);repairMeetingWallAssemblies(arch.scene,space.scene);this.roomGroup=arch.scene;this.spaceGroup=space.scene;this.production.add(arch.scene,space.scene);const nodes=[...this.manifest.nodes,...this.space!.nodes];this.decorate(arch.scene,nodes);this.decorate(space.scene,nodes);
     this.door=this.production.getObjectByName(this.manifest.door.node);
     for(const d of [this.door,this.editorDoor])d?.traverse(o=>{o.userData.interactiveDoor=true;});
     progress('Підключаємо розраховане освітлення');
@@ -59,7 +64,7 @@ export class Architecture {
     try{
       this.lightmap=await hdr.loadAsync(assetUrl('assets/architecture/lightmap.hdr'));
       this.lightmap.flipY=false;this.lightmap.channel=1;this.lightmap.colorSpace=THREE.LinearSRGBColorSpace;
-      arch.scene.traverse(o=>{if(!(o instanceof THREE.Mesh))return;const meta=this.categories.get(o);if(!meta?.lightmapped)return;
+      arch.scene.traverse(o=>{if(!(o instanceof THREE.Mesh)||o.userData.bakedAtlasScope==='space')return;const meta=this.categories.get(o);if(!meta?.lightmapped)return;
         const mats=Array.isArray(o.material)?o.material:[o.material];
         for(let i=0;i<mats.length;i++){const mat=mats[i].clone();if(mat instanceof THREE.MeshStandardMaterial){mat.lightMap=this.lightmap!;mat.lightMapIntensity=1;mat.envMapIntensity=.12;}mats[i]=mat;}
         o.material=Array.isArray(o.material)?mats:mats[0];
@@ -73,7 +78,7 @@ export class Architecture {
     const hdr=new HDRLoader();const tier=quality==='high'&&this.maxTextureSize<4096?'medium':quality;const path=this.space?.lighting?.qualities?.[tier];
     const [atlas,backdrop]=await Promise.all([path?hdr.loadAsync(assetUrl(path)):Promise.resolve(undefined),this.loadPanorama(tier)]);
     if(revision!==this.tierRevision){atlas?.dispose();backdrop?.dispose();return;}
-    if(atlas){atlas.flipY=false;atlas.channel=1;atlas.colorSpace=THREE.LinearSRGBColorSpace;const old=this.spaceLightmap;this.spaceLightmap=atlas;this.spaceGroup.traverse(o=>{if(!(o instanceof THREE.Mesh)||!this.categories.get(o)?.lightmapped)return;for(const mat of Array.isArray(o.material)?o.material:[o.material])if(mat instanceof THREE.MeshStandardMaterial){mat.lightMap=atlas;mat.lightMapIntensity=1;mat.needsUpdate=true;}});old?.dispose();}
+    if(atlas){atlas.flipY=false;atlas.channel=1;atlas.colorSpace=THREE.LinearSRGBColorSpace;const old=this.spaceLightmap;this.spaceLightmap=atlas;this.production.traverse(o=>{if(!(o instanceof THREE.Mesh)||o.userData.bakedAtlasScope!=='space'||!this.categories.get(o)?.lightmapped)return;for(const mat of Array.isArray(o.material)?o.material:[o.material])if(mat instanceof THREE.MeshStandardMaterial){mat.lightMap=atlas;mat.lightMapIntensity=1;mat.needsUpdate=true;}});old?.dispose();}
     this.loadedTier=quality;if(backdrop){backdrop.mapping=THREE.EquirectangularReflectionMapping;const old=this.backdrop;this.backdrop=backdrop;this.prepareGlassEnvironment();old?.dispose();}
   }
   private prepareGlassEnvironment(){
@@ -130,15 +135,20 @@ export class Architecture {
     const editor=this.mode==='editor';
     const group=editor?this.editor:this.production;
     group.traverse(o=>{
+      if(o.userData.solidWallAssembly){o.visible=!editor||layers.walls&&(!layers.autoWalls||solidWallCutawayVisible(o,camera.position));return;}
+      if(o.userData.solidWallOutline){o.visible=editor&&layers.walls;return;}
       const meta=this.categories.get(o);if(!meta)return;
       const category=meta.category.toLowerCase();let visible=true;
+      // These source tables now live in SceneState as editable hallDesk instances.
+      // Keep the protected source export intact; suppress its combined duplicate.
+      if(o.name==='Space_existingFurniture'||category==='existingfurniture'){o.visible=false;return;}
       if(category.includes('ceiling')||category.includes('hvac')||category.includes('lighting'))visible=!editor||layers.ceiling;
       else if(category.includes('door'))visible=!editor||layers.doors;
       else if(category.includes('window'))visible=!editor||layers.windows;
       else if(category.includes('column')||category.includes('structure'))visible=!editor||layers.structure;
       else if(category.includes('wall')||category.includes('skirting')){
         visible=!editor||layers.walls;
-        if(editor&&layers.autoWalls&&visible&&meta.wallId){const wall=[...this.manifest.walls,...(this.space?.walls??[])].find(w=>w.id===meta.wallId);if(wall){const v=wall.axis==='x'?camera.position.x-wall.coordinate:camera.position.z-wall.coordinate;const normal=wall.axis==='x'?wall.normal[0]:wall.normal[2];if(v*normal<0)visible=false;}}
+        if(editor&&layers.autoWalls&&visible&&meta.wallId&&!isSolidWallPart(o)){const wall=[...this.manifest.walls,...(this.space?.walls??[])].find(w=>w.id===meta.wallId);if(wall){const v=wall.axis==='x'?camera.position.x-wall.coordinate:camera.position.z-wall.coordinate;const normal=wall.axis==='x'?wall.normal[0]:wall.normal[2];if(v*normal<0)visible=false;}}
       }
       o.visible=visible;
     });

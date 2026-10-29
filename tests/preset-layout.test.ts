@@ -16,10 +16,10 @@ const toward=(object:SceneObject,target:SceneObject)=>{
 describe('Finished room layout ergonomics',()=>{
   beforeAll(()=>configureSpace(JSON.parse(readFileSync(new URL('../public/assets/architecture/scene-space.json',import.meta.url),'utf8'))));
 
-  it('validates all sixteen layouts against the measured room and keeps all five hall signs',()=>{
+  it('validates all sixteen layouts against the measured room and keeps the two approved corporate signs',()=>{
     for(const config of BUILTIN_PRESETS){
       expect(validateScene(config.objects,getPlacementRoom),config.presetId).toEqual([]);
-      const signs=config.objects.filter(o=>o.assetId==='edsSignage'&&o.wallId==='wall-38');expect(signs).toHaveLength(5);expect(signs.map(o=>o.variant).sort()).toEqual([1,2,3,4,5]);
+      const signs=config.objects.filter(o=>['edsTimeline','edsUkraine'].includes(o.assetId)&&o.wallId==='wall-38');expect(signs).toHaveLength(2);expect(signs.map(o=>o.assetId).sort()).toEqual(['edsTimeline','edsUkraine']);
     }
   });
 

@@ -1,0 +1,28 @@
+{
+  "status": "ok",
+  "result": {
+    "removed": {
+      "name": "Wall_42_Skirting_0",
+      "type": "MESH",
+      "location": [
+        9.732634544372559,
+        -3.935908079147339,
+        0.03500000014901161
+      ],
+      "dimensions": [
+        0.12999999523162842,
+        0.396261990070343,
+        0.07000000029802322
+      ],
+      "mesh": "Wall_42_Skirting_0_Mesh"
+    },
+    "backup": "E:\\ArchViz_Resources\\RoomAtelier\\before-selected-extra-removal-20261029-180114.blend",
+    "file": "C:\\Users\\kakuc\\Downloads\\blender-mcp\\reconstructed_room.blend",
+    "objectsBefore": 766,
+    "objectsAfter": 765,
+    "allOtherGeometryAndTransformsUnchanged": true,
+    "saved": true
+  },
+  "stdout": "Info: Saved copy as \"before-selected-extra-removal-20261029-180114.blend\"\nInfo: Saved as \"reconstructed_room.blend\"\n",
+  "roundtrip_ms": 3019.9
+}

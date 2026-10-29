@@ -1,5 +1,262 @@
 [
   {
+    "id": "beanBag",
+    "label": "Крісло-мішок",
+    "category": "seating",
+    "placement": "floor",
+    "variants": [
+      {
+        "index": 0,
+        "label": "0 / Немає",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "model": "none"
+      },
+      {
+        "index": 1,
+        "label": "1 / Груша",
+        "dimensions": [
+          0.88,
+          0.96,
+          0.96
+        ],
+        "model": "beanbag-pear"
+      },
+      {
+        "index": 2,
+        "label": "2 / Лаунж зі спинкою",
+        "dimensions": [
+          1.04,
+          0.78,
+          1.1
+        ],
+        "model": "beanbag-lounge"
+      },
+      {
+        "index": 3,
+        "label": "3 / Подушка-крісло",
+        "dimensions": [
+          1.02,
+          0.7,
+          0.98
+        ],
+        "model": "beanbag-pillow"
+      }
+    ],
+    "materials": [
+      {
+        "id": "eds-blue",
+        "label": "EDS · синій",
+        "color": "#0B30C1",
+        "surface": "fabric"
+      },
+      {
+        "id": "eds-lavender",
+        "label": "EDS · лавандовий",
+        "color": "#A2B8FE",
+        "surface": "fabric"
+      },
+      {
+        "id": "eds-lime",
+        "label": "EDS · лаймовий",
+        "color": "#A0FF3D",
+        "surface": "fabric"
+      },
+      {
+        "id": "eds-white",
+        "label": "EDS · білий",
+        "color": "#F0F0F0",
+        "surface": "fabric"
+      },
+      {
+        "id": "eds-black",
+        "label": "EDS · чорний",
+        "color": "#000000",
+        "surface": "fabric"
+      }
+    ],
+    "description": "Три м’які крісла з підтримкою спини, плавною посадкою й природними заглибленими складками тканини. Реальні розміри збережено.",
+    "collision": "solid",
+    "productionRef": "catalog:beanBag:production",
+    "proxyRef": "catalog:beanBag:proxy"
+  },
+  {
+    "id": "doorPlaque",
+    "label": "Дверна табличка",
+    "category": "signage",
+    "placement": "wall",
+    "variants": [
+      {
+        "index": 0,
+        "label": "0 / Немає",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "model": "none"
+      },
+      {
+        "index": 1,
+        "label": "1 / Прозорий PMMA · 190 × 145",
+        "dimensions": [
+          0.19,
+          0.145,
+          0.034
+        ],
+        "model": "plaque-pmma"
+      },
+      {
+        "index": 2,
+        "label": "2 / Матовий алюміній",
+        "dimensions": [
+          0.22,
+          0.12,
+          0.012
+        ],
+        "model": "plaque-aluminium"
+      },
+      {
+        "index": 3,
+        "label": "3 / Корпоративна касета",
+        "dimensions": [
+          0.24,
+          0.14,
+          0.018
+        ],
+        "model": "plaque-corporate"
+      }
+    ],
+    "materials": [
+      {
+        "id": "eds-blue",
+        "label": "EDS · синій",
+        "color": "#0B30C1",
+        "surface": "plastic"
+      },
+      {
+        "id": "eds-lavender",
+        "label": "EDS · лавандовий",
+        "color": "#A2B8FE",
+        "surface": "plastic"
+      },
+      {
+        "id": "eds-lime",
+        "label": "EDS · лаймовий",
+        "color": "#A0FF3D",
+        "surface": "plastic"
+      },
+      {
+        "id": "eds-white",
+        "label": "EDS · білий",
+        "color": "#F0F0F0",
+        "surface": "plastic"
+      },
+      {
+        "id": "eds-black",
+        "label": "EDS · чорний",
+        "color": "#000000",
+        "surface": "plastic"
+      }
+    ],
+    "description": "Українська назва приміщення поруч із дверима. Прозора пластина PMMA 4 мм на чотирьох сталевих дистанцерах 25 мм або дві тонкі альтернативи.",
+    "collision": "wall",
+    "mountHeight": 1.55,
+    "productionRef": "catalog:doorPlaque:production",
+    "proxyRef": "catalog:doorPlaque:proxy"
+  },
+  {
+    "id": "brandDoorPanel",
+    "label": "Фарбована смуга біля дверей",
+    "category": "signage",
+    "placement": "wall",
+    "variants": [
+      {
+        "index": 0,
+        "label": "0 / Немає",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "model": "none"
+      },
+      {
+        "index": 1,
+        "label": "1 / Вузька · 22 см",
+        "dimensions": [
+          0.22,
+          3.53,
+          0.024
+        ],
+        "model": "brand-strip"
+      },
+      {
+        "index": 2,
+        "label": "2 / Середня · 28 см",
+        "dimensions": [
+          0.28,
+          3.53,
+          0.024
+        ],
+        "model": "brand-chamfer"
+      },
+      {
+        "index": 3,
+        "label": "3 / Широка · 34 см",
+        "dimensions": [
+          0.34,
+          3.53,
+          0.028
+        ],
+        "model": "brand-motif"
+      }
+    ],
+    "materials": [
+      {
+        "id": "eds-blue",
+        "label": "Припилений синій",
+        "color": "#A7B9D1",
+        "surface": "plastic"
+      },
+      {
+        "id": "eds-lavender",
+        "label": "Світла лаванда",
+        "color": "#BDC5DF",
+        "surface": "plastic"
+      },
+      {
+        "id": "eds-lime",
+        "label": "Світла шавлія",
+        "color": "#C7D8AE",
+        "surface": "plastic"
+      },
+      {
+        "id": "eds-white",
+        "label": "Теплий крейдяний",
+        "color": "#E7E6DD",
+        "surface": "plastic"
+      },
+      {
+        "id": "eds-black",
+        "label": "Світлий графіт",
+        "color": "#ABB3B1",
+        "surface": "plastic"
+      }
+    ],
+    "description": "Матова фарба без рамок і виступів на поверхні стіни: від плінтуса до чорної балки. Колір і ширину можна змінювати. Назву та номер приміщення містить окрема табличка на смузі.",
+    "collision": "wall",
+    "mountHeight": 1.835,
+    "productionRef": "catalog:brandDoorPanel:production",
+    "proxyRef": "catalog:brandDoorPanel:proxy",
+    "wallClearance": 0.02,
+    "wallTopClearance": 0,
+    "wallLayer": "background"
+  },
+  {
     "id": "edsSignage",
     "label": "Вивіски EDS · з фотографій",
     "category": "signage",
@@ -977,6 +1234,92 @@
     "proxyRef": "catalog:workDesk:proxy"
   },
   {
+    "id": "hallDesk",
+    "label": "Стіл головного залу · оригінал",
+    "category": "work",
+    "placement": "floor",
+    "variants": [
+      {
+        "index": 0,
+        "label": "0 / Немає",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "model": "none"
+      },
+      {
+        "index": 1,
+        "label": "1 / Кутовий · 3 шухляди",
+        "dimensions": [
+          1.6000004,
+          0.75,
+          1.6000001
+        ],
+        "model": "source-west-corner",
+        "supportPolygon": [
+          [
+            -0.8,
+            -0.8
+          ],
+          [
+            0,
+            -0.8
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0.8,
+            0
+          ],
+          [
+            0.8,
+            0.8
+          ],
+          [
+            -0.8,
+            0.8
+          ]
+        ]
+      },
+      {
+        "index": 2,
+        "label": "2 / Прямий · люк праворуч",
+        "dimensions": [
+          1.4000001,
+          0.753,
+          0.8000002
+        ],
+        "model": "rect-grommet-right"
+      },
+      {
+        "index": 3,
+        "label": "3 / Прямий · люк ліворуч",
+        "dimensions": [
+          1.4000001,
+          0.753,
+          0.8000002
+        ],
+        "model": "rect-grommet-left"
+      }
+    ],
+    "materials": [
+      {
+        "id": "original",
+        "label": "Оригінальні білий, сірий і чорний",
+        "color": "#eeeeea",
+        "surface": "plastic"
+      }
+    ],
+    "description": "Точні моделі робочих столів з поточного Blender-проєкту. Збережено форму, люки, ніжки й шухляди, без довільної зміни габаритів.",
+    "collision": "solid",
+    "productionRef": "catalog:hallDesk:production",
+    "proxyRef": "catalog:hallDesk:proxy"
+  },
+  {
     "id": "windowBar",
     "label": "Бар біля вікна",
     "category": "work",
@@ -1459,6 +1802,319 @@
     "mountHeight": 1.65,
     "productionRef": "catalog:art:production",
     "proxyRef": "catalog:art:proxy"
+  },
+  {
+    "id": "edsTimeline",
+    "label": "EDS · Історія розвитку",
+    "category": "signage",
+    "placement": "wall",
+    "variants": [
+      {
+        "index": 0,
+        "label": "0 / Немає",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "model": "none"
+      },
+      {
+        "index": 1,
+        "label": "1 / Енергія віх",
+        "dimensions": [
+          1.68,
+          1.82,
+          0.035
+        ],
+        "model": "eds-timeline-brand-1"
+      },
+      {
+        "index": 2,
+        "label": "2 / Нічний маршрут",
+        "dimensions": [
+          1.68,
+          1.82,
+          0.035
+        ],
+        "model": "eds-timeline-brand-2"
+      },
+      {
+        "index": 3,
+        "label": "3 / Вертикаль прогресу",
+        "dimensions": [
+          1.68,
+          1.82,
+          0.035
+        ],
+        "model": "eds-timeline-brand-3"
+      },
+      {
+        "index": 4,
+        "label": "4 / Лавандовий архів",
+        "dimensions": [
+          1.68,
+          1.82,
+          0.035
+        ],
+        "model": "eds-timeline-brand-4"
+      },
+      {
+        "index": 5,
+        "label": "5 / Інженерна сітка",
+        "dimensions": [
+          1.68,
+          1.82,
+          0.035
+        ],
+        "model": "eds-timeline-brand-5"
+      },
+      {
+        "index": 6,
+        "label": "6 / Картки майбутнього",
+        "dimensions": [
+          1.68,
+          1.82,
+          0.035
+        ],
+        "model": "eds-timeline-brand-6"
+      },
+      {
+        "index": 7,
+        "label": "7 / Діагональ розвитку",
+        "dimensions": [
+          1.68,
+          1.82,
+          0.035
+        ],
+        "model": "eds-timeline-brand-7"
+      },
+      {
+        "index": 8,
+        "label": "8 / Лаймова система",
+        "dimensions": [
+          1.68,
+          1.82,
+          0.035
+        ],
+        "model": "eds-timeline-brand-8"
+      }
+    ],
+    "materials": [
+      {
+        "id": "original",
+        "label": "Фірмовий дизайн EDS",
+        "color": "#000000",
+        "surface": "plastic"
+      }
+    ],
+    "description": "Вісім композицій історії EDS: хронологія та український текст у корпоративних кольорах, із точним фірмовим логотипом. Оригінальне фото виконання залишається у вивісках з фотографій.",
+    "collision": "wall",
+    "mountHeight": 1.65,
+    "productionRef": "catalog:edsTimeline:production",
+    "proxyRef": "catalog:edsTimeline:proxy"
+  },
+  {
+    "id": "edsUkraine",
+    "label": "EDS · Україна та відвантаження",
+    "category": "signage",
+    "placement": "wall",
+    "variants": [
+      {
+        "index": 0,
+        "label": "0 / Немає",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "model": "none"
+      },
+      {
+        "index": 1,
+        "label": "1 / Світлий баланс",
+        "dimensions": [
+          3.2,
+          1.32,
+          0.04
+        ],
+        "model": "eds-ukraine-brand-1"
+      },
+      {
+        "index": 2,
+        "label": "2 / Нічний імпульс",
+        "dimensions": [
+          3.2,
+          1.32,
+          0.04
+        ],
+        "model": "eds-ukraine-brand-2"
+      },
+      {
+        "index": 3,
+        "label": "3 / Лавандова географія",
+        "dimensions": [
+          3.2,
+          1.32,
+          0.04
+        ],
+        "model": "eds-ukraine-brand-3"
+      },
+      {
+        "index": 4,
+        "label": "4 / Модулі енергії",
+        "dimensions": [
+          3.2,
+          1.32,
+          0.04
+        ],
+        "model": "eds-ukraine-brand-4"
+      },
+      {
+        "index": 5,
+        "label": "5 / Карта в центрі",
+        "dimensions": [
+          3.2,
+          1.32,
+          0.04
+        ],
+        "model": "eds-ukraine-brand-5"
+      },
+      {
+        "index": 6,
+        "label": "6 / Повітряний контур",
+        "dimensions": [
+          3.2,
+          1.32,
+          0.04
+        ],
+        "model": "eds-ukraine-brand-6"
+      },
+      {
+        "index": 7,
+        "label": "7 / Діагональ потужності",
+        "dimensions": [
+          3.2,
+          1.32,
+          0.04
+        ],
+        "model": "eds-ukraine-brand-7"
+      },
+      {
+        "index": 8,
+        "label": "8 / Панорама результатів",
+        "dimensions": [
+          3.2,
+          1.32,
+          0.04
+        ],
+        "model": "eds-ukraine-brand-8"
+      }
+    ],
+    "materials": [
+      {
+        "id": "original",
+        "label": "Фірмовий дизайн EDS",
+        "color": "#000000",
+        "surface": "plastic"
+      }
+    ],
+    "description": "Вісім корпоративних композицій з точними контурами України, рельєфними областями та сімома змінними показниками: пластикові картки у напрямних, магнітні цифри або e-ink модулі. Кожна композиція — один редагований предмет.",
+    "collision": "wall",
+    "mountHeight": 1.68,
+    "productionRef": "catalog:edsUkraine:production",
+    "proxyRef": "catalog:edsUkraine:proxy"
+  },
+  {
+    "id": "wallClock",
+    "label": "Настінні годинники без корпусу",
+    "category": "clocks",
+    "placement": "wall",
+    "variants": [
+      {
+        "index": 0,
+        "label": "0 / Немає",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "model": "none"
+      },
+      {
+        "index": 1,
+        "label": "1 / Цифри та слова · як на фото",
+        "dimensions": [
+          1.25,
+          1.25,
+          0.035
+        ],
+        "model": "clock-floating-words"
+      },
+      {
+        "index": 2,
+        "label": "2 / Тонкі хвилинні риски",
+        "dimensions": [
+          1.25,
+          1.25,
+          0.035
+        ],
+        "model": "clock-floating-ticks"
+      },
+      {
+        "index": 3,
+        "label": "3 / EDS · енергія кольору",
+        "dimensions": [
+          1.25,
+          1.25,
+          0.035
+        ],
+        "model": "clock-floating-energy"
+      },
+      {
+        "index": 4,
+        "label": "4 / Римські цифри · сатин",
+        "dimensions": [
+          1.25,
+          1.25,
+          0.035
+        ],
+        "model": "clock-floating-roman"
+      },
+      {
+        "index": 5,
+        "label": "5 / Лавандовий мінімалізм",
+        "dimensions": [
+          1.25,
+          1.25,
+          0.035
+        ],
+        "model": "clock-floating-minimal"
+      },
+      {
+        "index": 6,
+        "label": "6 / EDS · графічні чверті",
+        "dimensions": [
+          1.25,
+          1.25,
+          0.035
+        ],
+        "model": "clock-floating-quarters"
+      }
+    ],
+    "materials": [
+      {
+        "id": "original",
+        "label": "Матеріали дизайну",
+        "color": "#000000",
+        "surface": "metal"
+      }
+    ],
+    "description": "Окремі об’ємні цифри, поділки та стрілки без циферблата й корпусу: стіна залишається видимою. Шість композицій; стрілки показують місцевий час пристрою.",
+    "collision": "wall",
+    "mountHeight": 1.9,
+    "productionRef": "catalog:wallClock:production",
+    "proxyRef": "catalog:wallClock:proxy"
   },
   {
     "id": "sign",
@@ -2063,5 +2719,125 @@
     "collision": "solid",
     "productionRef": "catalog:separator:production",
     "proxyRef": "catalog:separator:proxy"
+  },
+  {
+    "id": "botanicalDivider",
+    "label": "Висока перегородка з рослинами",
+    "category": "separators",
+    "placement": "floor",
+    "variants": [
+      {
+        "index": 0,
+        "label": "0 / Немає",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "model": "none"
+      },
+      {
+        "index": 1,
+        "label": "1 / Дуб і м’який екран",
+        "dimensions": [
+          2,
+          2.3,
+          0.48
+        ],
+        "model": "botanical-oak-screen"
+      },
+      {
+        "index": 2,
+        "label": "2 / Модульний зелений стелаж",
+        "dimensions": [
+          2,
+          2.3,
+          0.48
+        ],
+        "model": "botanical-plant-shelf"
+      },
+      {
+        "index": 3,
+        "label": "3 / Решітка з ліанами",
+        "dimensions": [
+          2,
+          2.3,
+          0.48
+        ],
+        "model": "botanical-vine-trellis"
+      },
+      {
+        "index": 4,
+        "label": "4 / Живий зелений екран",
+        "dimensions": [
+          2,
+          2.3,
+          0.48
+        ],
+        "model": "botanical-living-wall"
+      },
+      {
+        "index": 5,
+        "label": "5 / Рейковий сад",
+        "dimensions": [
+          2,
+          2.3,
+          0.48
+        ],
+        "model": "botanical-slat-garden"
+      },
+      {
+        "index": 6,
+        "label": "6 / Акустичний сад",
+        "dimensions": [
+          2,
+          2.3,
+          0.48
+        ],
+        "model": "botanical-acoustic-garden"
+      }
+    ],
+    "materials": [
+      {
+        "id": "oak",
+        "label": "Натуральний дуб",
+        "color": "#b88e60",
+        "surface": "wood"
+      },
+      {
+        "id": "walnut",
+        "label": "Темний горіх",
+        "color": "#604533",
+        "surface": "wood"
+      },
+      {
+        "id": "graphite",
+        "label": "Матовий графіт",
+        "color": "#30383d",
+        "surface": "metal"
+      },
+      {
+        "id": "terracotta",
+        "label": "Теракотовий метал",
+        "color": "#a7674b",
+        "surface": "metal"
+      },
+      {
+        "id": "white",
+        "label": "Теплий білий",
+        "color": "#e3e2dc",
+        "surface": "plastic"
+      },
+      {
+        "id": "sage",
+        "label": "Шавлієвий",
+        "color": "#819183",
+        "surface": "plastic"
+      }
+    ],
+    "description": "Мобільна перегородка з кашпо та об’ємною зеленню. Відкриті стелажі, решітки й рейки мають справжні просвіти; м’який екран і акустичні вставки — окремі конструктивні варіанти. Колір каркаса змінюється. Габарит 2 × 2,3 м, стійка основа 48 см.",
+    "collision": "solid",
+    "productionRef": "catalog:botanicalDivider:production",
+    "proxyRef": "catalog:botanicalDivider:proxy"
   }
 ]

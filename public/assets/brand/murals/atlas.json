@@ -1,0 +1,265 @@
+{
+  "schemaVersion": 1,
+  "width": 4096,
+  "height": 4096,
+  "colorSpace": "srgb",
+  "alpha": "unpremultiplied",
+  "texture": "assets/brand/murals/wall-print-atlas.webp",
+  "png": "assets/brand/murals/wall-print-atlas.png",
+  "orientation": {
+    "source": "top-left image pixels",
+    "textureFlipY": true,
+    "uv": "bottom-left WebGL UV; sample uvRect.xy + localUV * uvRect.zw, localUV.y points up"
+  },
+  "gutterPixels": 16,
+  "sourceResolution": [
+    4096,
+    2304
+  ],
+  "sourceBrandSHA256": "8da4364bd6b4050558dfda5a8944fdd16aaf00c7ed6da1991e83befce380d3d9",
+  "wordmarkSHA256": "786582dd8d2255e18722cbfa446bee3879fee942bf465ee1f77574cf58ecf3a4",
+  "tiles": [
+    {
+      "id": "mural-1",
+      "kind": "mural",
+      "pixelRectTopLeft": [
+        16,
+        16,
+        1328,
+        747
+      ],
+      "uvRectBottomLeft": [
+        0.00390625,
+        0.813720703125,
+        0.32421875,
+        0.182373046875
+      ],
+      "index": 1,
+      "label": "EDS · енергія та цінності",
+      "description": "Монументальний логотип, синя й лаймова діагоналі та чорна стіна цінностей.",
+      "sourceSvg": "assets/brand/murals/mural-1.svg",
+      "sourceAspect": 1.7777777777777777,
+      "opaque": true
+    },
+    {
+      "id": "mural-2",
+      "kind": "mural",
+      "pixelRectTopLeft": [
+        1376,
+        16,
+        1328,
+        747
+      ],
+      "uvRectBottomLeft": [
+        0.3359375,
+        0.813720703125,
+        0.32421875,
+        0.182373046875
+      ],
+      "index": 2,
+      "label": "EDS · спільні ідеї",
+      "description": "Світла композиція, великий синій логотип, лавандова геометрія та лаймовий акцент.",
+      "sourceSvg": "assets/brand/murals/mural-2.svg",
+      "sourceAspect": 1.7777777777777777,
+      "opaque": true
+    },
+    {
+      "id": "mural-3",
+      "kind": "mural",
+      "pixelRectTopLeft": [
+        2736,
+        16,
+        1328,
+        747
+      ],
+      "uvRectBottomLeft": [
+        0.66796875,
+        0.813720703125,
+        0.32421875,
+        0.182373046875
+      ],
+      "index": 3,
+      "label": "EDS · культура співдії",
+      "description": "Чорна типографічна стіна з білим логотипом, корпоративними цінностями й кольоровими полями.",
+      "sourceSvg": "assets/brand/murals/mural-3.svg",
+      "sourceAspect": 1.7777777777777777,
+      "opaque": true
+    },
+    {
+      "id": "mural-4",
+      "kind": "mural",
+      "pixelRectTopLeft": [
+        16,
+        795,
+        1328,
+        747
+      ],
+      "uvRectBottomLeft": [
+        0.00390625,
+        0.62353515625,
+        0.32421875,
+        0.182373046875
+      ],
+      "index": 4,
+      "label": "EDS · простір для діалогу",
+      "description": "Синя колона з парними чвертями, редакційна типографіка та світле поле для відкритої розмови.",
+      "sourceSvg": "assets/brand/murals/mural-4.svg",
+      "sourceAspect": 1.7777777777777777,
+      "opaque": true
+    },
+    {
+      "id": "mural-5",
+      "kind": "mural",
+      "pixelRectTopLeft": [
+        1376,
+        795,
+        1328,
+        747
+      ],
+      "uvRectBottomLeft": [
+        0.3359375,
+        0.62353515625,
+        0.32421875,
+        0.182373046875
+      ],
+      "index": 5,
+      "label": "EDS · інженерія рішень",
+      "description": "Інженерні траси, точні знаки та великий чорний логотип на світлому полі.",
+      "sourceSvg": "assets/brand/murals/mural-5.svg",
+      "sourceAspect": 1.7777777777777777,
+      "opaque": true
+    },
+    {
+      "id": "mural-6",
+      "kind": "mural",
+      "pixelRectTopLeft": [
+        2736,
+        795,
+        1328,
+        747
+      ],
+      "uvRectBottomLeft": [
+        0.66796875,
+        0.62353515625,
+        0.32421875,
+        0.182373046875
+      ],
+      "index": 6,
+      "label": "EDS · сила партнерства",
+      "description": "Асиметрична чорна колона та великі взаємопов’язані лавандові й сині корпоративні форми.",
+      "sourceSvg": "assets/brand/murals/mural-6.svg",
+      "sourceAspect": 1.7777777777777777,
+      "opaque": true
+    },
+    {
+      "id": "mural-7",
+      "kind": "mural",
+      "pixelRectTopLeft": [
+        16,
+        1574,
+        1328,
+        747
+      ],
+      "uvRectBottomLeft": [
+        0.00390625,
+        0.433349609375,
+        0.32421875,
+        0.182373046875
+      ],
+      "index": 7,
+      "label": "EDS · спокійна енергія",
+      "description": "Повітряна світла композиція з великими лавандовими формами, чітким логотипом і невеликим лаймовим акцентом.",
+      "sourceSvg": "assets/brand/murals/mural-7.svg",
+      "sourceAspect": 1.7777777777777777,
+      "opaque": true
+    },
+    {
+      "id": "mural-8",
+      "kind": "mural",
+      "pixelRectTopLeft": [
+        1376,
+        1574,
+        1328,
+        747
+      ],
+      "uvRectBottomLeft": [
+        0.3359375,
+        0.433349609375,
+        0.32421875,
+        0.182373046875
+      ],
+      "index": 8,
+      "label": "EDS · енергія майбутнього",
+      "description": "Монументальний білий логотип на корпоративному синьому полі з лаймовими геометричними акцентами.",
+      "sourceSvg": "assets/brand/murals/mural-8.svg",
+      "sourceAspect": 1.7777777777777777,
+      "opaque": true
+    },
+    {
+      "id": "motif-1",
+      "kind": "mask",
+      "pixelRectTopLeft": [
+        16,
+        2700,
+        1024,
+        1024
+      ],
+      "uvRectBottomLeft": [
+        0.00390625,
+        0.0908203125,
+        0.25,
+        0.25
+      ],
+      "index": 1,
+      "alphaMask": true,
+      "physicalTileMeters": [
+        3.24,
+        0.491
+      ]
+    },
+    {
+      "id": "motif-2",
+      "kind": "mask",
+      "pixelRectTopLeft": [
+        1056,
+        2700,
+        1024,
+        1024
+      ],
+      "uvRectBottomLeft": [
+        0.2578125,
+        0.0908203125,
+        0.25,
+        0.25
+      ],
+      "index": 2,
+      "alphaMask": true,
+      "physicalTileMeters": [
+        2.4,
+        2.4
+      ]
+    },
+    {
+      "id": "motif-3",
+      "kind": "mask",
+      "pixelRectTopLeft": [
+        2096,
+        2700,
+        1024,
+        1024
+      ],
+      "uvRectBottomLeft": [
+        0.51171875,
+        0.0908203125,
+        0.25,
+        0.25
+      ],
+      "index": 3,
+      "alphaMask": true,
+      "physicalTileMeters": [
+        0.6,
+        0.6
+      ]
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 {
-  "source": "Cycles renders of actual room and shipped production GLBs",
+  "source": "Actual current WebGL production assets, PBR, measured architecture and SceneState",
+  "renderedAt": "2026-10-29T08:39:56.697Z",
   "items": [
     {
       "presetId": "builtin-0",
@@ -64,6 +65,38 @@
     {
       "presetId": "builtin-15",
       "image": "assets/preset-thumbnails/preset-15.jpg"
+    },
+    {
+      "presetId": "hall-preset-0",
+      "image": "assets/preset-thumbnails/hall-0.jpg"
+    },
+    {
+      "presetId": "hall-preset-1",
+      "image": "assets/preset-thumbnails/hall-1.jpg"
+    },
+    {
+      "presetId": "hall-preset-2",
+      "image": "assets/preset-thumbnails/hall-2.jpg"
+    },
+    {
+      "presetId": "hall-preset-3",
+      "image": "assets/preset-thumbnails/hall-3.jpg"
+    },
+    {
+      "presetId": "hall-preset-4",
+      "image": "assets/preset-thumbnails/hall-4.jpg"
+    },
+    {
+      "presetId": "hall-preset-5",
+      "image": "assets/preset-thumbnails/hall-5.jpg"
+    },
+    {
+      "presetId": "hall-preset-6",
+      "image": "assets/preset-thumbnails/hall-6.jpg"
+    },
+    {
+      "presetId": "hall-preset-7",
+      "image": "assets/preset-thumbnails/hall-7.jpg"
     }
   ]
 }

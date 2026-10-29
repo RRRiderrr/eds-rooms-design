@@ -5,7 +5,7 @@ test('High preserves opaque architecture with a panorama and four-sample AA',asy
  test.setTimeout(120_000);await page.setViewportSize({width:980,height:720});const errors:string[]=[];
  page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
  await page.goto('/?mode=editor');await page.waitForFunction(()=>window.__ROOM_ATELIER__?.ready);
- await page.evaluate(()=>{const a=window.__ROOM_ATELIER__!;const config=structuredClone(a.store.state);config.objects=config.objects.filter(o=>o.assetId==='edsSignage'&&o.wallId==='wall-38');a.store.applyPreset(config);a.setMode('archviz');});
+ await page.evaluate(()=>{const a=window.__ROOM_ATELIER__!;const config=structuredClone(a.store.state);config.objects=config.objects.filter(o=>['edsTimeline','edsUkraine'].includes(o.assetId)&&o.wallId==='wall-38');a.store.applyPreset(config);a.setMode('archviz');});
  await page.evaluate(()=>Reflect.get(window.__ROOM_ATELIER__!.view,'archvizPromise'));
  await page.locator('[data-property=quality]').selectOption('high');await page.evaluate(()=>Reflect.get(window.__ROOM_ATELIER__!.view,'tierRefresh'));await page.waitForTimeout(1000);
  const samples=await page.evaluate(()=>Reflect.get(window.__ROOM_ATELIER__!.view,'composer').renderTarget1.samples);expect(samples).toBeGreaterThanOrEqual(2);

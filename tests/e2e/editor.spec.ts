@@ -32,8 +32,8 @@ test.describe('Measured lounge / production editor',()=>{
   await mode(page,'Editor');
   for(let index=0;index<=15;index++){
    await preset(page,index);const config=await state(page);expect(config.roomId).toBe('lounge-room-01');expect(config.objects.some(o=>o.id==='RoomSign')).toBe(false);
-   const signs=config.objects.filter(o=>o.assetId==='edsSignage'&&o.wallId==='wall-38');expect(signs).toHaveLength(5);expect(signs.map(o=>o.variant).sort()).toEqual([1,2,3,4,5]);
-   if(index===0){expect(config.objects).toHaveLength(5);expect(config.objects.every(o=>o.assetId==='edsSignage'&&o.wallId==='wall-38')).toBe(true);}else expect(config.objects.filter(o=>o.variant>0&&o.wallId!=='wall-38').length).toBeGreaterThanOrEqual(12);
+   const signs=config.objects.filter(o=>['edsTimeline','edsUkraine'].includes(o.assetId)&&o.wallId==='wall-38');expect(signs).toHaveLength(2);expect(signs.map(o=>o.assetId).sort()).toEqual(['edsTimeline','edsUkraine']);
+   if(index===0){expect(config.objects.filter(o=>o.regionId==='meeting')).toHaveLength(0);}else expect(config.objects.filter(o=>o.variant>0&&o.wallId!=='wall-38').length).toBeGreaterThanOrEqual(12);
    await settle(page);await info.attach(`preset-${index}-editor`,{body:await page.screenshot(),contentType:'image/png'});
    await mode(page,'ArchViz');await productionReady(page);await info.attach(`preset-${index}-archviz`,{body:await page.screenshot(),contentType:'image/png'});await mode(page,'Editor');
   }

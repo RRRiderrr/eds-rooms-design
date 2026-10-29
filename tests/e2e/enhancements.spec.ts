@@ -183,17 +183,17 @@ test.describe('EDS furniture, navigation, signage and identity regression',()=>{
     await info.attach('source-pbr-before-after',{body:JSON.stringify({before,after},null,2),contentType:'application/json'});
   });
 
-  test('every builtin preserves five unique corridor signs and offers the sixth library option',async({page},info)=>{
+  test('every builtin uses the two approved corporate sign families with eight design options',async({page},info)=>{
     test.setTimeout(120_000);const summary:unknown[]=[];
     for(let index=0;index<=15;index++){
-      await preset(page,index);const config=await configuration(page),signs=config.objects.filter(o=>o.assetId==='edsSignage'&&o.wallId==='wall-38'&&o.variant>0);
-      expect(signs,`Preset ${index} signs`).toHaveLength(5);expect(new Set(signs.map(o=>o.id)).size).toBe(5);expect(signs.map(o=>o.variant).sort()).toEqual([1,2,3,4,5]);
+      await preset(page,index);const config=await configuration(page),signs=config.objects.filter(o=>['edsTimeline','edsUkraine'].includes(o.assetId)&&o.wallId==='wall-38'&&o.variant>0);
+      expect(signs,`Preset ${index} signs`).toHaveLength(2);expect(new Set(signs.map(o=>o.id)).size).toBe(2);expect(signs.map(o=>o.assetId).sort()).toEqual(['edsTimeline','edsUkraine']);
       expect(signs.every(o=>o.wallId==='wall-38')).toBe(true);expect(signs.every(o=>Math.abs(o.position[0])>2.7||Math.abs(o.position[2])>3.1)).toBe(true);
-      if(index===0)expect(config.objects.filter(o=>o.variant>0&&o.assetId!=='edsSignage')).toHaveLength(0);
+      if(index===0)expect(config.objects.filter(o=>o.variant>0&&o.regionId==='meeting')).toHaveLength(0);
       summary.push({preset:config.presetId,signs:signs.map(o=>({id:o.id,variant:o.variant,wallId:o.wallId,position:o.position}))});
     }
-    await panel(page,'scene');const first=(await configuration(page)).objects.find(o=>o.assetId==='edsSignage')!;await page.locator(`[data-object-id="${first.id}"]`).click();await properties(page);
-    await expect(page.getByTestId('variant-select').locator('option')).toHaveCount(7);await expect(page.getByTestId('variant-select').locator('option').first()).toHaveAttribute('value','0');
+    await panel(page,'scene');const first=(await configuration(page)).objects.find(o=>o.assetId==='edsTimeline')!;await page.locator(`[data-object-id="${first.id}"]`).click();await properties(page);
+    await expect(page.getByTestId('variant-select').locator('option')).toHaveCount(9);await expect(page.getByTestId('variant-select').locator('option').first()).toHaveAttribute('value','0');
     await page.getByTestId('variant-select').selectOption('0');await expect.poll(async()=>(await configuration(page)).objects.find(o=>o.id===first.id)?.variant).toBe(0);
     await info.attach('all-preset-corridor-signage',{body:JSON.stringify(summary,null,2),contentType:'application/json'});
   });

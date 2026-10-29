@@ -1,0 +1,101 @@
+[
+  {
+    "assetId": "beanBag",
+    "variant": 1,
+    "size": [
+      0.8799999952316284,
+      0.9599999785423279,
+      0.9599999785423279
+    ],
+    "meshes": 3,
+    "triangles": 42602
+  },
+  {
+    "assetId": "beanBag",
+    "variant": 2,
+    "size": [
+      1.0399999618530273,
+      0.7799999713897705,
+      1.100000023841858
+    ],
+    "meshes": 3,
+    "triangles": 48362
+  },
+  {
+    "assetId": "beanBag",
+    "variant": 3,
+    "size": [
+      1.0199999809265137,
+      0.699999988079071,
+      0.9800000190734863
+    ],
+    "meshes": 3,
+    "triangles": 51434
+  },
+  {
+    "assetId": "doorPlaque",
+    "variant": 1,
+    "size": [
+      0.1899999976158142,
+      0.14499999582767487,
+      0.03400000184774399
+    ],
+    "meshes": 5,
+    "triangles": 6114
+  },
+  {
+    "assetId": "doorPlaque",
+    "variant": 2,
+    "size": [
+      0.2199999988079071,
+      0.11999999731779099,
+      0.012600000052154064
+    ],
+    "meshes": 4,
+    "triangles": 3534
+  },
+  {
+    "assetId": "doorPlaque",
+    "variant": 3,
+    "size": [
+      0.23999999463558197,
+      0.14000000059604645,
+      0.01869999961256981
+    ],
+    "meshes": 4,
+    "triangles": 3534
+  },
+  {
+    "assetId": "brandDoorPanel",
+    "variant": 1,
+    "size": [
+      0.2199999988079071,
+      3.5299999713897705,
+      0.0005
+    ],
+    "meshes": 2,
+    "triangles": 8
+  },
+  {
+    "assetId": "brandDoorPanel",
+    "variant": 2,
+    "size": [
+      0.2800000011920929,
+      3.5299999713897705,
+      0.0005
+    ],
+    "meshes": 2,
+    "triangles": 8
+  },
+  {
+    "assetId": "brandDoorPanel",
+    "variant": 3,
+    "size": [
+      0.3400000035762787,
+      3.5299999713897705,
+      0.0005
+    ],
+    "meshes": 2,
+    "triangles": 8
+  }
+]

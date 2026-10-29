@@ -1,61 +1,93 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-17T19:43:15.600Z",
+  "updatedAt": "2026-10-29T01:42:19.073Z",
   "assets": [
     {
-      "assetId": "pouf",
+      "assetId": "brandDoorPanel",
       "variant": 1,
       "bytes": {
-        "production": 134204,
-        "proxy": 7180
+        "production": 2728,
+        "proxy": 2724
       }
     },
     {
-      "assetId": "coffeeTable",
-      "variant": 1,
-      "bytes": {
-        "production": 161052,
-        "proxy": 11688
-      }
-    },
-    {
-      "assetId": "coffeeTable",
+      "assetId": "brandDoorPanel",
       "variant": 2,
       "bytes": {
-        "production": 524344,
-        "proxy": 10024
+        "production": 2728,
+        "proxy": 2724
       }
     },
     {
-      "assetId": "sideTable",
+      "assetId": "brandDoorPanel",
+      "variant": 3,
+      "bytes": {
+        "production": 2728,
+        "proxy": 2724
+      }
+    },
+    {
+      "assetId": "edsUkraine",
       "variant": 1,
       "bytes": {
-        "production": 159960,
-        "proxy": 11600
+        "production": 397524,
+        "proxy": 395380
       }
     },
     {
-      "assetId": "meetingTable",
-      "variant": 1,
-      "bytes": {
-        "production": 158344,
-        "proxy": 11496
-      }
-    },
-    {
-      "assetId": "meetingTable",
+      "assetId": "edsUkraine",
       "variant": 2,
       "bytes": {
-        "production": 520256,
-        "proxy": 9996
+        "production": 504988,
+        "proxy": 502720
       }
     },
     {
-      "assetId": "barStool",
-      "variant": 2,
+      "assetId": "edsUkraine",
+      "variant": 3,
       "bytes": {
-        "production": 691660,
-        "proxy": 38040
+        "production": 383972,
+        "proxy": 381804
+      }
+    },
+    {
+      "assetId": "edsUkraine",
+      "variant": 4,
+      "bytes": {
+        "production": 402128,
+        "proxy": 399856
+      }
+    },
+    {
+      "assetId": "edsUkraine",
+      "variant": 5,
+      "bytes": {
+        "production": 372428,
+        "proxy": 370176
+      }
+    },
+    {
+      "assetId": "edsUkraine",
+      "variant": 6,
+      "bytes": {
+        "production": 397064,
+        "proxy": 394800
+      }
+    },
+    {
+      "assetId": "edsUkraine",
+      "variant": 7,
+      "bytes": {
+        "production": 504508,
+        "proxy": 502256
+      }
+    },
+    {
+      "assetId": "edsUkraine",
+      "variant": 8,
+      "bytes": {
+        "production": 387536,
+        "proxy": 385280
       }
     }
   ]

@@ -1,0 +1,19 @@
+import './browser-path.mjs';
+import {chromium} from 'playwright';
+import {createServer} from 'vite';
+import {mkdir,writeFile} from 'node:fs/promises';
+import path from 'node:path';
+import sharp from 'sharp';
+const root=path.resolve(import.meta.dirname,'..'),output='E:/ArchViz_Resources/qa/corporate-signage';await mkdir(output,{recursive:true});
+const html=`<!doctype html><html><body style="margin:0"><script type="module">
+import * as THREE from 'three';import{createCorporateSignage}from'/src/catalog/corporate-signage.ts';
+const renderer=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});renderer.setPixelRatio(1);renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.15;document.body.append(renderer.domElement);
+const scene=new THREE.Scene();scene.background=new THREE.Color('#d5d8d1');scene.add(new THREE.HemisphereLight('#ffffff','#b0b6a8',2));const key=new THREE.DirectionalLight('#fff9ed',2.5);key.position.set(-3,5,6);scene.add(key);let active;const camera=new THREE.OrthographicCamera();
+window.draw=({kind,variant,width,height})=>{if(active){scene.remove(active);active.traverse(o=>{if(o.isMesh){o.geometry.dispose();o.material.dispose();}});}active=createCorporateSignage(kind,variant,false);scene.add(active);const box=new THREE.Box3().setFromObject(active),size=box.getSize(new THREE.Vector3()),ratio=width/height,frustumHeight=Math.max(size.y*1.08,size.x/ratio*1.08);renderer.setSize(width,height);camera.left=-frustumHeight*ratio/2;camera.right=-camera.left;camera.top=frustumHeight/2;camera.bottom=-camera.top;camera.near=.01;camera.far=20;camera.position.set(0,0,4);camera.lookAt(0,0,0);camera.updateProjectionMatrix();renderer.render(scene,camera);return{triangles:renderer.info.render.triangles,drawCalls:renderer.info.render.calls,bounds:size.toArray(),blocks:active.userData.textBlocks.length};};window.ready=true;
+</script></body></html>`;
+const server=await createServer({root,server:{host:'127.0.0.1',port:0},appType:'custom',plugins:[{name:'corporate-signage-qa',configureServer(vite){vite.middlewares.use('/__corporate_signs',async(_req,res)=>{res.statusCode=200;res.setHeader('Content-Type','text/html');res.end(await vite.transformIndexHtml('/__corporate_signs',html));});}}]});let browser;
+try{await server.listen();browser=await chromium.launch({headless:true});const page=await browser.newPage({viewport:{width:1200,height:1320},deviceScaleFactor:1}),errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto(`http://127.0.0.1:${server.httpServer.address().port}/__corporate_signs`);await page.waitForFunction(()=>window.ready);const report=[];
+for(const kind of ['timeline','ukraine']){const tiles=[];for(let variant=1;variant<=8;variant++){const width=kind==='timeline'?1200:1800,height=kind==='timeline'?1320:800;await page.setViewportSize({width,height});const stats=await page.evaluate(args=>window.draw(args),{kind,variant,width,height});const file=`${kind}-${variant}-front.png`,png=await page.locator('canvas').screenshot();await writeFile(path.join(output,file),png);tiles.push({input:await sharp(png).resize(kind==='timeline'?450:600,kind==='timeline'?495:267).png().toBuffer(),left:((variant-1)%4)*(kind==='timeline'?450:600),top:Math.floor((variant-1)/4)*(kind==='timeline'?495:267)});report.push({kind,variant,file,...stats});}
+await sharp({create:{width:kind==='timeline'?1800:2400,height:kind==='timeline'?990:534,channels:4,background:'#d5d8d1'}}).composite(tiles).png().toFile(path.join(output,`${kind}-contact-sheet.png`));}
+await writeFile(path.join(output,'report.json'),JSON.stringify({builtAt:new Date().toISOString(),source:'Real source meshes rendered by Three.js WebGL2, not illustrated mockups',images:report,errors},null,2));if(errors.length)throw new Error(JSON.stringify(errors));console.log(output);
+}finally{await browser?.close();await server.close();}

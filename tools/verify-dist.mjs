@@ -34,6 +34,7 @@ for (const relative of [
   'architecture/probes.json', 'architecture/runtime-lighting.json',
   'environment/factory-panorama.json', 'materials/manifest.json',
   'models/manifest.json', 'thumbnails/manifest.json', 'preset-thumbnails/manifest.json',
+  'brand/murals/atlas.json',
 ]) {
   await requireFile('assets/' + relative);
   const manifest = JSON.parse(await fs.readFile(path.join(root, 'assets', relative), 'utf8'));

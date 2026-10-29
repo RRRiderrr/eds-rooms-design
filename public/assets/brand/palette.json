@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "path": "C:/Users/kakuc/Downloads/Telegram Desktop/EDS_RGB_design_elements (2).svg",
+    "sha256": "8da4364bd6b4050558dfda5a8944fdd16aaf00c7ed6da1991e83befce380d3d9",
+    "copyright": "User-supplied EDS corporate identity. Use only within this authorised project.",
+    "originalCopy": "E:\\ArchViz_Resources\\RoomAtelier\\brand\\EDS_RGB_design_elements.svg"
+  },
+  "colors": [
+    {
+      "id": "eds-blue",
+      "label": "EDS · синій",
+      "hex": "#0B30C1"
+    },
+    {
+      "id": "eds-lavender",
+      "label": "EDS · лавандовий",
+      "hex": "#A2B8FE"
+    },
+    {
+      "id": "eds-lime",
+      "label": "EDS · лаймовий",
+      "hex": "#A0FF3D"
+    },
+    {
+      "id": "eds-white",
+      "label": "EDS · білий",
+      "hex": "#F0F0F0"
+    },
+    {
+      "id": "eds-black",
+      "label": "EDS · чорний",
+      "hex": "#000000"
+    }
+  ],
+  "motifs": [
+    {
+      "index": 0,
+      "id": "none",
+      "label": "0 / Немає"
+    },
+    {
+      "index": 1,
+      "id": "motif-1",
+      "label": "Діагональна штриховка",
+      "svg": "assets/brand/motif-1.svg",
+      "png": "assets/brand/motif-1.png",
+      "tileMeters": [
+        3.24,
+        0.491
+      ],
+      "sourceGroup": 3,
+      "sourceBBox": [
+        161.7100067138672,
+        136.83999633789062,
+        810.4199829101562,
+        122.79000854492188
+      ],
+      "format": "black RGB, alpha mask"
+    },
+    {
+      "index": 2,
+      "id": "motif-2",
+      "label": "Сітка хрестів",
+      "svg": "assets/brand/motif-2.svg",
+      "png": "assets/brand/motif-2.png",
+      "tileMeters": [
+        2.4,
+        2.4
+      ],
+      "sourceGroup": 7,
+      "sourceBBox": [
+        1173.7899169921875,
+        621.6900024414062,
+        351.39013671875,
+        351.3800048828125
+      ],
+      "format": "black RGB, alpha mask"
+    },
+    {
+      "index": 3,
+      "id": "motif-3",
+      "label": "Парні чверті диска",
+      "svg": "assets/brand/motif-3.svg",
+      "png": "assets/brand/motif-3.png",
+      "tileMeters": [
+        0.6,
+        0.6
+      ],
+      "sourceGroup": 4,
+      "sourceBBox": [
+        302.70001220703125,
+        299.010009765625,
+        79.3399658203125,
+        79.33999633789062
+      ],
+      "format": "black RGB, alpha mask"
+    }
+  ],
+  "wordmark": {
+    "svg": "assets/brand/eds-wordmark-original.svg",
+    "png": "assets/brand/eds-wordmark-original.png",
+    "sourceGroup": "40/0/0"
+  }
+}

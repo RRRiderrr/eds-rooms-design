@@ -1,3 +1,4 @@
+import {updateWallClockHands} from './wall-clock-time';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { TransformControls } from 'three/addons/controls/TransformControls.js';
@@ -21,15 +22,25 @@ import { validatePlacement,snapPosition,snapAngle,wallAnchor,footprint,rectangle
 import { DirectLighting } from './direct-lighting';
 import { FirstPersonNavigation } from './first-person';
 import { architectureCollisionMeshes,architectureMoveAllowed } from './navigation';
+import { WallFinishes } from './wall-finishes';
+import {yieldStartupFrame,uploadSceneTextures,waitForGpu} from './startup-gpu';
+import {createWallSelection,disposeWallSelection} from './wall-selection';
+import { applyPlaqueLabel } from './plaque-labels';
+import { ROOM } from '../core/room';
+import { getPaintableBounds,getWallPaintRect } from '../core/wall-paint';
+import { partitionMoveAllowed,partitionPointAllowed } from '../core/partition-navigation';
 
 export interface ViewCallbacks {
  select(id:string|null):void;door():void;change(object:SceneObject):void;begin():void;end():void;
- status(message:string):void;quality(settings:QualitySettings,fps:number):void;launch?(point:Vec3):void;
+ status(message:string):void;quality(settings:QualitySettings,fps:number):void;preparing?(busy:boolean):void;progress?(text:string,percent?:number):void;launch?(point:Vec3):void;selectWall?(id:string):void;
 }
 interface Visual {root:THREE.Group;signature:string;leases:MaterialLease[];mode:AppMode;disposed:boolean;templateKey?:string;loadRevision?:number;}
 export interface LibraryPlacementFeedback {valid:boolean;reason?:string;surface?:'floor'|'wall'|'support';}
 interface LibraryPreview {original:SceneObject;candidate?:SceneObject;root:THREE.Group;outline:THREE.Box3Helper;colors:Map<THREE.MeshStandardMaterial,THREE.Color>;feedback:LibraryPlacementFeedback;}
 export class SceneView {
+ private wallClockMinute=-1;
+ private startupPreparing=true;
+ readonly startupDiagnostics:{startedAt:number;completedAt?:number;programsAtReady?:number;texturesAtReady?:number;warmFrames:number;quality?:string;calibrationMs?:number}={startedAt:performance.now(),warmFrames:0};
  readonly renderer:THREE.WebGLRenderer;readonly scene=new THREE.Scene();readonly camera=new THREE.PerspectiveCamera(62,1,.08,100);
  readonly architecture=new Architecture();readonly objects=new THREE.Group();readonly grid:THREE.GridHelper;
  readonly quality:AdaptiveQuality;readonly controls:OrbitControls;readonly gizmo:TransformControls;
@@ -47,6 +58,8 @@ export class SceneView {
  private directLighting=new DirectLighting();private shadowLight:THREE.SpotLight;private collisionMeshes:THREE.Mesh[]=[];private spaceBounds={min:new THREE.Vector3(-2.61,0,-3.15),max:new THREE.Vector3(2.61,4.32,3.15)};
  private contextMenu?:HTMLDivElement;private contextStart?:{x:number;y:number};private shadowDirty=true;
  private libraryPreview?:LibraryPreview;
+ private wallFinishes=new WallFinishes();private paintSelection=false;activeRegion:'hall'|'meeting'='meeting';
+ private selectedWallId:string|null=null;private wallSelection?:THREE.Group;
  constructor(readonly host:HTMLElement,private callbacks:ViewCallbacks){
   const canvas=document.createElement('canvas');const gl=canvas.getContext('webgl2',{antialias:true,alpha:false,powerPreference:'high-performance'});
   if(!gl)throw new Error('WEBGL2_UNAVAILABLE');
@@ -96,11 +109,81 @@ export class SceneView {
   canvas.addEventListener('webglcontextrestored',()=>this.callbacks.status('Графіку відновлено'));
   this.resetCamera();this.resize();this.last=performance.now();this.raf=requestAnimationFrame(t=>this.frame(t));
  }
- async init(progress:(text:string)=>void){
-  await this.architecture.load(this.renderer,progress);this.ready=true;
+ async init(progress:(text:string,percent?:number)=>void){
+  this.navigation.setEnabled(false);this.controls.enabled=false;progress('Завантаження архітектури',2);await yieldStartupFrame();
+  await Promise.all([this.architecture.load(this.renderer,text=>progress(text,3)),this.wallFinishes.load()]);this.ready=true;progress('Архітектуру підготовлено',14);
   if(this.architecture.space){configureSpace(this.architecture.space);this.configureFloorGrid(this.architecture.space.bounds);this.spaceBounds={min:new THREE.Vector3(...this.architecture.space.bounds.min),max:new THREE.Vector3(...this.architecture.space.bounds.max)};if(this.mode==='editor')this.resetCamera();}
+  if(this.activeRegion==='hall')this.focusRegion('hall');
   if(this.mode==='archviz')await this.ensureArchViz(progress);
   this.architecture.setMode(this.mode);this.sync(this.config);this.applyQuality(this.quality.settings);this.resize();
+  await this.prepareFirstFrames(progress);this.finishStartup();
+ }
+ private finishStartup(){
+  this.startupPreparing=false;this.last=performance.now();this.navigation.setEnabled(this.mode==='archviz');this.controls.enabled=this.mode==='editor';
+  this.startupDiagnostics.completedAt=performance.now();this.startupDiagnostics.programsAtReady=this.renderer.info.programs?.length??0;this.startupDiagnostics.texturesAtReady=this.renderer.info.memory.textures;this.startupDiagnostics.quality=this.quality.settings.level;
+ }
+ private renderStartupFrame(updateShadows=false){
+  this.directLighting.update(this.camera,this.quality.settings);
+  this.ao.enabled=this.hdrTargets&&this.quality.settings.ao&&this.mode==='archviz';this.reflections.enabled=this.hdrTargets&&this.mode==='archviz'&&this.quality.settings.level==='high';
+  this.renderer.shadowMap.needsUpdate=this.mode==='archviz'&&this.quality.settings.shadows&&(updateShadows||this.directLighting.needsShadowRender);
+  if(this.mode==='editor')this.renderer.render(this.scene,this.camera);else this.composer.render(0);
+  this.startupDiagnostics.warmFrames++;
+ }
+ private async warmActiveScene(progress:(text:string,percent?:number)=>void,start:number,end:number){
+  const at=(fraction:number)=>start+(end-start)*fraction;
+  progress('Підготовка текстур GPU',at(0));await yieldStartupFrame();
+  await uploadSceneTextures(this.renderer,this.scene,(done,total)=>progress(`Підготовка текстур GPU · ${done} / ${total}`,at(total?done/total*.25:.25)));
+  this.directLighting.update(this.camera,this.quality.settings);this.scene.updateMatrixWorld(true);this.camera.updateMatrixWorld(true);
+  progress('Компіляція шейдерів',at(.28));await yieldStartupFrame();
+  const previousTarget=this.renderer.getRenderTarget();
+  try{if(this.mode==='archviz')this.renderer.setRenderTarget(this.composer.readBuffer);await this.renderer.compileAsync(this.scene,this.camera);}finally{this.renderer.setRenderTarget(previousTarget);}
+  const position=this.camera.position.clone(),quaternion=this.camera.quaternion.clone(),target=this.controls.target.clone(),frustum=new Map<THREE.Object3D,boolean>(),visibility=new Map<THREE.Object3D,boolean>();
+  if(this.mode==='editor')this.architecture.editor.traverse(o=>{if(o.userData.solidWallAssembly||o.userData.archCategory==='walls'){visibility.set(o,o.visible);o.visible=true;}});
+  this.scene.traverseVisible(o=>{if(o instanceof THREE.Mesh||o instanceof THREE.Line){frustum.set(o,o.frustumCulled);o.frustumCulled=false;}});
+  const poses:[THREE.Vector3,THREE.Vector3][]=[
+   ...[[1,0,0],[-1,0,0],[0,0,1],[0,0,-1],[0,1,0],[0,-1,0]].map(d=>[new THREE.Vector3(0,1.65,0),new THREE.Vector3(d[0],1.65+d[1],d[2])] as [THREE.Vector3,THREE.Vector3]),
+   [new THREE.Vector3(-13,1.65,0),new THREE.Vector3(-5,1.65,0)],[new THREE.Vector3(13,1.65,0),new THREE.Vector3(5,1.65,0)],
+  ];
+  try{
+   for(let i=0;i<poses.length;i++){
+    this.camera.position.copy(poses[i][0]);this.camera.lookAt(poses[i][1]);this.camera.updateMatrixWorld(true);
+    progress(`Компіляція шейдерів і підготовка кадрів · ${i+1} / ${poses.length}`,at(.35+.55*i/poses.length));await yieldStartupFrame();
+    this.renderStartupFrame(i===0);await waitForGpu(this.renderer);
+   }
+  }finally{frustum.forEach((value,object)=>object.frustumCulled=value);visibility.forEach((value,object)=>object.visible=value);this.camera.position.copy(position);this.camera.quaternion.copy(quaternion);this.controls.target.copy(target);this.camera.updateMatrixWorld(true);}
+  progress('Підготовка першого кадру',at(.94));this.renderStartupFrame(true);await waitForGpu(this.renderer);await yieldStartupFrame();progress('Кадри підготовлено',end);
+ }
+ private async benchmarkStartup(){
+  const position=this.camera.position.clone(),quaternion=this.camera.quaternion.clone(),times:number[]=[];
+  try{for(let i=0;i<12;i++){
+   this.camera.position.set(i<6?1.92:6.4,1.65,i<6?-2.28:-4.1);this.camera.lookAt(i<6?-.3:15,1.1,i<6?.5:-2.6);this.camera.updateMatrixWorld(true);
+   const start=performance.now();this.renderStartupFrame();await waitForGpu(this.renderer);if(performance.now()-start<12)await yieldStartupFrame();if(i%6>1)times.push(performance.now()-start);
+  }}finally{this.camera.position.copy(position);this.camera.quaternion.copy(quaternion);this.camera.updateMatrixWorld(true);}
+  times.sort((a,b)=>a-b);return times[Math.floor(times.length/2)]??1000/60;
+ }
+ private async prepareFirstFrames(progress:(text:string,percent?:number)=>void){
+  if(this.mode==='editor'){await this.warmActiveScene(progress,18,99);}
+  else{
+   await this.warmActiveScene(progress,63,this.quality.manual==='auto'?81:99);
+   if(this.quality.manual==='auto'){
+    progress('Визначення якості графіки',82);await yieldStartupFrame();
+    let ms=await this.benchmarkStartup();const level=ms>29?'low':ms>20?'medium':'high';this.startupDiagnostics.calibrationMs=ms;
+    if(level!==this.quality.settings.level){
+     this.quality.settleStartup(level,ms);progress('Підготовка обраної якості графіки',84);await this.tierRefresh;await this.warmActiveScene(progress,85,94);
+     if(level==='high'){
+      ms=await this.benchmarkStartup();if(ms>23){this.quality.settleStartup('medium',ms);await this.tierRefresh;await this.warmActiveScene(progress,95,99);}
+     }
+    }
+    this.quality.settleStartup(this.quality.settings.level,ms);
+   }else this.quality.settleStartup(this.quality.settings.level);
+  }
+  progress('Простір готовий',100);this.renderStartupFrame(true);await waitForGpu(this.renderer);await yieldStartupFrame();
+ }
+ private async prepareArchVizTransition(){
+  this.startupPreparing=true;this.navigation.setEnabled(false);this.controls.enabled=false;this.callbacks.preparing?.(true);
+  const progress=(text:string,percent?:number)=>this.callbacks.progress?.(text,percent);
+  try{await this.ensureArchViz(progress);await this.prepareFirstFrames(progress);this.finishStartup();this.callbacks.preparing?.(false);}
+  catch(error){progress('Не вдалося підготувати графіку. Оновіть сторінку.');this.callbacks.status((error as Error).message);}
  }
  private configureFloorGrid(bounds:{min:[number,number,number];max:[number,number,number]}){
   const positions:number[]=[],colors:number[]=[];const add=(x:number,z:number,x2:number,z2:number,major:boolean)=>{positions.push(x,0,z,x2,0,z2);const c=new THREE.Color(major?'#94aa9c':'#cad8ca');for(let i=0;i<2;i++)colors.push(c.r,c.g,c.b);};
@@ -108,14 +191,17 @@ export class SceneView {
   for(let z=Math.ceil(bounds.min[2]*4)/4;z<=bounds.max[2];z+=.25)add(bounds.min[0],z,bounds.max[0],z,Math.abs(z-Math.round(z))<.01);
   this.grid.geometry.dispose();this.grid.geometry=new THREE.BufferGeometry();this.grid.geometry.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));this.grid.geometry.setAttribute('color',new THREE.Float32BufferAttribute(colors,3));
  }
- private ensureArchViz(progress:(text:string)=>void=()=>{}){return this.archvizPromise??=(async()=>{
-  await Promise.all([this.architecture.ensureProduction(this.renderer,progress),this.probes.load(),this.directLighting.load(),this.architecture.addWindowBackdrops()]);
+ private ensureArchViz(progress:(text:string,percent?:number)=>void=()=>{}){return this.archvizPromise??=(async()=>{
+  progress('Завантаження освітлення та оточення',16);await this.architecture.setQuality(this.quality.settings.level);
+  let done=0;await Promise.all([this.architecture.ensureProduction(this.renderer,text=>progress(text,16)),this.probes.load(),this.directLighting.load(),this.architecture.addWindowBackdrops()].map(job=>job.then(()=>progress('Завантаження освітлення та оточення',16+9*++done/4))));
   if(this.architecture.environment){this.scene.environment=this.architecture.environment;this.scene.environmentIntensity=.3;}
-  await this.architecture.setQuality(this.quality.settings.level);await this.prepareArchitectureMaterials();this.updateCollisionMeshes();this.updateBackdrop();
+  await this.architecture.setQuality(this.quality.settings.level);await this.prepareArchitectureMaterials((done,total)=>progress(`Матеріали та текстури · ${done} / ${total}`,25+12*done/Math.max(1,total)));this.updateCollisionMeshes();this.updateBackdrop();
   const reflectors:THREE.Mesh[]=[];this.architecture.production.traverse(o=>{if(o instanceof THREE.Mesh&&o.userData.archCategory==='floor')reflectors.push(o);});this.reflections.selects=reflectors;
-  for(const obj of this.config?.objects??[]){const v=this.visuals.get(obj.id);if(v&&v.mode==='archviz')await this.loadProduction(v,obj);}this.environmentReady=true;this.directLighting.group.visible=this.mode==='archviz';this.shadowDirty=true;this.activeTextureTier=this.quality.settings.level;
+  const objects=(this.config?.objects??[]).filter(o=>this.visuals.get(o.id)?.mode==='archviz');let loaded=0;
+  for(let i=0;i<objects.length;i+=4)await Promise.all(objects.slice(i,i+4).map(async object=>{await this.loadProduction(this.visuals.get(object.id)!,object);progress(`Моделі предметів · ${++loaded} / ${objects.length}`,37+25*loaded/Math.max(1,objects.length));}));
+  this.environmentReady=true;this.directLighting.group.visible=this.mode==='archviz';this.shadowDirty=true;this.activeTextureTier=this.quality.settings.level;
  })();}
- private async prepareArchitectureMaterials(){
+ private async prepareArchitectureMaterials(progress?:(done:number,total:number)=>void){
   this.library??=new MaterialLibrary(this.renderer);this.library.configureModelLoader(this.loader);
   const revision=++this.materialRevision,leases:MaterialLease[]=[];const oldLeases=this.architectureLeases;this.architectureLeases=leases;const oldMaterials:THREE.Material[]=[];
   const jobs:Promise<void>[]=[];
@@ -146,10 +232,10 @@ export class SceneView {
      if(o.userData.interactiveDoor)this.probes.apply(lease.material,new THREE.Vector3(1.9,1,-2.9));
      else if(!original.lightMap)this.probes.apply(lease.material,new THREE.Vector3(0,1,0));
      leases.push(lease);updated.push(lease.material);
-    }for(let i=0;i<updated.length;i++){const m=updated[i],source=originals[i];m.side=source.side;m.userData.blenderMaterialName=source.userData.blenderMaterialName??source.name;m.userData.runtimeMaterial=true;if(/07_CEILING/.test(m.userData.blenderMaterialName))m.side=THREE.DoubleSide;}if(revision===this.materialRevision)o.material=Array.isArray(o.material)?updated:updated[0];
+    }for(let i=0;i<updated.length;i++){const m=updated[i],source=originals[i];m.side=source.side;m.userData.blenderMaterialName=source.userData.blenderMaterialName??source.name;m.userData.runtimeMaterial=true;if(/07_CEILING/.test(m.userData.blenderMaterialName))m.side=THREE.DoubleSide;if(o.userData.continuousWallLighting&&m instanceof THREE.MeshStandardMaterial)this.probes.applyContinuousWall(m,o);}if(revision===this.materialRevision)o.material=Array.isArray(o.material)?updated:updated[0];
    })().catch(e=>console.warn('PBR material fallback',e)));
   });
-  await Promise.all(jobs);if(revision===this.materialRevision){oldLeases.forEach(l=>l.release());oldMaterials.forEach(m=>m.dispose());this.architecture.applyGlassReflections();}
+  let completed=0;await Promise.all(jobs.map(job=>job.then(()=>progress?.(++completed,jobs.length))));if(revision===this.materialRevision){oldLeases.forEach(l=>l.release());oldMaterials.forEach(m=>m.dispose());this.architecture.applyGlassReflections();if(this.config)this.wallFinishes.apply(this.architecture,this.config);}
  }
  private updateBackdrop(){this.scene.background=this.mode==='archviz'&&this.architecture.backdrop?this.architecture.backdrop:new THREE.Color('#e7e9e4');this.scene.backgroundRotation.y=-Math.PI/2;this.scene.backgroundIntensity=.85;}
  private refreshTextureTier(){this.activeTextureTier=this.quality.settings.level;const refresh=async()=>{await this.architecture.setQuality(this.quality.settings.level);await this.prepareArchitectureMaterials();for(const object of this.config.objects){const v=this.visuals.get(object.id);if(v?.mode==='archviz')await this.loadProduction(v,object);}this.updateBackdrop();};return this.tierRefresh=this.tierRefresh.then(refresh,refresh);}
@@ -157,25 +243,60 @@ export class SceneView {
   if(!config)return;this.config=config;this.shadowDirty=true;
   const ids=new Set(config.objects.filter(o=>o.variant>0).map(o=>o.id));
   for(const [id,visual]of this.visuals)if(!ids.has(id)){this.removeVisual(visual);this.visuals.delete(id);}
-  for(const obj of config.objects){if(obj.variant===0)continue;const signature=`${obj.assetId}:${obj.variant}:${obj.material}:${this.mode}`;let visual=this.visuals.get(obj.id);
+  for(const obj of config.objects){if(obj.variant===0)continue;const signature=`${obj.assetId}:${obj.variant}:${obj.material}:${obj.label??''}:${this.mode}:${this.plaqueUnderlay(obj)??''}`;let visual=this.visuals.get(obj.id);
    if(visual?.signature!==signature){if(visual)this.removeVisual(visual);visual=this.createVisual(obj,signature);this.visuals.set(obj.id,visual);}
    visual.root.position.set(...obj.position);visual.root.rotation.y=obj.rotation;
+   if(obj.assetId==='brandDoorPanel')this.updateWallPaintProxy(visual.root,obj);
    const category=getAsset(obj.assetId).category;visual.root.visible=(category==='plants'?config.layers.plants:['wallDecor','signage','clocks','boards','acoustic'].includes(category)?config.layers.wallDecor:['accessories','rugs','lighting'].includes(category)?config.layers.decor:config.layers.furniture)||this.mode==='archviz';
    visual.root.traverse(o=>{if(o instanceof THREE.Mesh){const mats=Array.isArray(o.material)?o.material:[o.material];for(const m of mats)this.probes.update(m,new THREE.Vector3(...obj.position).add(new THREE.Vector3(0,.65,0)));}});
   }
-  this.architecture.setDoor(config.doorOpen);this.grid.visible=this.mode==='editor'&&config.layers.grid;this.architecture.setLayers(config.layers,this.camera);this.updateSelection();
+  this.architecture.setDoor(config.doorOpen);this.grid.visible=this.mode==='editor'&&config.layers.grid;this.architecture.setLayers(config.layers,this.camera);if(this.ready)this.wallFinishes.apply(this.architecture,config);this.updateSelection();
  }
  private createVisual(object:SceneObject,signature:string):Visual{
-  const root=createAssetObject(object.assetId,object.variant,object.material,this.mode);root.name=object.id;root.userData.instanceId=object.id;
-  root.traverse(child=>child.userData.instanceId=object.id);this.objects.add(root);
+  const root=object.assetId==='brandDoorPanel'?this.createWallPaintProxy(object):createAssetObject(object.assetId,object.variant,object.material,this.mode);root.name=object.id;root.userData.instanceId=object.id;
+  root.traverse(child=>child.userData.instanceId=object.id);applyPlaqueLabel(root,object,this.plaqueUnderlay(object));this.objects.add(root);
   const visual:Visual={root,signature,leases:[],mode:this.mode,disposed:false};
-  if(this.mode==='archviz'){
+  if(object.assetId==='brandDoorPanel')visual.templateKey='wall-paint';
+  else if(this.mode==='archviz'){
 
    if(this.environmentReady)void this.loadProduction(visual,object);
   }
   return visual;
  }
+ private plaqueUnderlay(object:SceneObject):string|undefined {
+  if(object.assetId!=='doorPlaque'||object.variant!==1)return;
+  const wall=getPlacementSurfaces().find(w=>w.id===object.wallId);if(!wall)return;
+  const along=object.position[wall.axis==='x'?2:0];
+  const strip=this.config.objects.find(o=>{
+   if(o.assetId!=='brandDoorPanel'||!o.variant||o.wallId!==object.wallId)return false;
+   const rect=getWallPaintRect(o,wall);return along>=rect.minAlong&&along<=rect.maxAlong&&object.position[1]>=rect.minY&&object.position[1]<=rect.maxY;
+  });
+  return strip?getMaterial(strip.assetId,strip.material).color:this.config.wallFinishes?.[wall.id]?.color??undefined;
+ }
+ private createWallPaintProxy(object:SceneObject):THREE.Group {
+  const group=new THREE.Group();group.userData={assetId:'brandDoorPanel',wallPaint:true};
+  // Keep a true surface for selection and drag, without drawing geometry or
+  // writing depth. The colored strip itself belongs to WallFinishes' albedo.
+  const material=new THREE.MeshBasicMaterial({colorWrite:false,depthWrite:false,transparent:true,opacity:0,side:THREE.FrontSide});material.userData.owned=true;
+  const hit=new THREE.Mesh(new THREE.PlaneGeometry(1,1),material);hit.name='BrandDoorPanel_PaintHit';hit.castShadow=false;hit.receiveShadow=false;group.add(hit);
+  return group;
+ }
+ private updateWallPaintProxy(root:THREE.Group,object:SceneObject):void {
+  const wall=getPlacementSurfaces().find(w=>w.id===object.wallId);
+  const hit=(root.getObjectByName('BrandDoorPanel_PaintHit')??root.getObjectByName('BrandDoorPanel_PaintSwatch')) as THREE.Mesh|undefined;
+  if(!wall||!hit){if(hit)hit.visible=false;return;}
+  const rect=getWallPaintRect(object,wall),width=rect.maxAlong-rect.minAlong,height=rect.maxY-rect.minY;
+  const inverseRotation=new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0,1,0),-object.rotation);
+  const localPoint=(along:number,y:number,offset:number)=>new THREE.Vector3(
+   wall.axis==='x'?wall.coordinate+wall.normal[0]*offset:along,y,
+   wall.axis==='z'?wall.coordinate+wall.normal[2]*offset:along,
+  ).sub(new THREE.Vector3(...object.position)).applyQuaternion(inverseRotation);
+  hit.geometry.computeBoundingBox();const sourceSize=hit.geometry.boundingBox!.getSize(new THREE.Vector3());
+  hit.visible=width>0&&height>0;hit.scale.set(width/sourceSize.x,height/sourceSize.y,1);
+  hit.position.copy(localPoint((rect.minAlong+rect.maxAlong)/2,(rect.minY+rect.maxY)/2,.00025));
+ }
  private async loadProduction(visual:Visual,object:SceneObject){
+  if(object.assetId==='brandDoorPanel'){visual.templateKey='wall-paint';return;}
   const revision=(visual.loadRevision??0)+1;visual.loadRevision=revision;const pendingLeases:MaterialLease[]=[];
   const id=`${object.assetId}-${object.variant}`,level=this.quality.settings.level,key=`${id}:${level}`;let promise=this.templates.get(key);this.library??=new MaterialLibrary(this.renderer);this.library.configureModelLoader(this.loader);
   if(!promise){promise=(async()=>{const manifest=await(this.modelManifest??=fetch(assetUrl('assets/models/manifest.json')).then(r=>r.json()));const entry=manifest.assets.find((a:{assetId:string;variant:number})=>a.assetId===object.assetId&&a.variant===object.variant);const path=entry?.quality?.[level]??entry?.production??`assets/models/${id}.glb`;try{return(await this.loader.loadAsync(assetUrl(path))).scene;}catch(e){if(entry?.fallback)return(await this.loader.loadAsync(assetUrl(entry.fallback))).scene;throw e;}})();this.templates.set(key,promise);}
@@ -183,36 +304,80 @@ export class SceneView {
    const template=await promise;if(visual.disposed||visual.loadRevision!==revision)return;
    const model=template.clone(true);const selected=getMaterial(object.assetId,object.material),defaultFinish=getAsset(object.assetId).materials[0];
    const leases=pendingLeases;const jobs:Promise<void>[]=[];this.library??=new MaterialLibrary(this.renderer);this.library.configureModelLoader(this.loader);
-   this.shadowDirty=true;model.traverse(o=>{o.userData.instanceId=object.id;if(!(o instanceof THREE.Mesh))return;o.userData.sharedGeometry=true;o.castShadow=true;o.receiveShadow=true;o.frustumCulled=true;
+   this.shadowDirty=true;model.traverse(o=>{o.userData.instanceId=object.id;if(!(o instanceof THREE.Mesh))return;o.userData.sharedGeometry=true;o.receiveShadow=true;o.frustumCulled=true;
     const originals=Array.isArray(o.material)?o.material:[o.material];
+    const flatArtwork=['edsTimeline','edsUkraine'].includes(object.assetId)&&originals.every(mat=>!['backing','mount','3d-map'].includes(mat.userData.artworkRole));
+    o.castShadow=!flatArtwork&&!(object.assetId==='wallClock'&&o.parent?.userData.clockHand==='second');
     jobs.push((async()=>{const mats:THREE.Material[]=[];
      for(const raw of originals){const original=raw as THREE.MeshStandardMaterial;const isFinish=original.userData.colorVariant===defaultFinish.id&&original.userData.surface===defaultFinish.surface;
-      const surface=isFinish?selected.surface:original.userData.surface as string|undefined;const effectiveColor=isFinish?selected.color:'#'+original.color.getHexString();
-      const role=surface==='fabric'||surface==='rug'?'fabric-woven':surface==='wood'?'wood-oak':surface==='metal'?'metal-painted':undefined;
+      const surface=isFinish?selected.surface:original.userData.surface as string|undefined;const effectiveColor=object.assetId==='hallDesk'?'#'+original.color.getHexString():isFinish?selected.color:'#'+original.color.getHexString();
+      const role=object.assetId==='hallDesk'?'metal-painted':surface==='fabric'||surface==='rug'?'fabric-woven':surface==='wood'?'wood-oak':surface==='metal'?'metal-painted':undefined;
       let mat:THREE.MeshStandardMaterial;
-      if(original.userData.sourcePbr){mat=original.clone();mat.userData.owned=true;if(original.userData.tintable&&isFinish)mat.color.set(effectiveColor);}
-      else if(role){const lease=await this.library!.acquire(role,this.quality.settings.level,{color:effectiveColor,metersPerUv:1,anisotropy:this.quality.settings.anisotropy,normalStrength:surface==='fabric'?.14:surface==='wood'?.1:.2});if(visual.disposed){lease.release();return;}leases.push(lease);mat=lease.material;}
+      if(original.userData.sourcePbr&&object.assetId!=='hallDesk'){mat=original.clone();mat.userData.owned=true;if(original.userData.tintable&&isFinish)mat.color.set(effectiveColor);}
+      else if(role){const lease=await this.library!.acquire(role,this.quality.settings.level,{color:effectiveColor,metersPerUv:1,anisotropy:this.quality.settings.anisotropy,normalStrength:object.assetId==='hallDesk'?.045:object.assetId==='beanBag'?.055:surface==='fabric'?.14:surface==='wood'?.1:.2});if(visual.disposed){lease.release();return;}leases.push(lease);mat=lease.material;if(object.assetId==='hallDesk'){mat.roughness=.68;mat.metalness=.06;}}
       else{mat=original.clone();if(isFinish)mat.color.set(effectiveColor);mat.userData.owned=true;}
       if(mat.alphaTest>0)mat.alphaToCoverage=this.quality.settings.level==='high';mat.envMapIntensity=.5;this.probes.apply(mat,new THREE.Vector3(...object.position).add(new THREE.Vector3(0,.65,0)));mats.push(mat);
      }o.material=Array.isArray(o.material)?mats:mats[0];
     })());
    });await Promise.all(jobs);if(visual.disposed||visual.loadRevision!==revision){leases.forEach(l=>l.release());return;}
    // Swap only when the complete active asset and its materials are ready.
-   for(const child of [...visual.root.children]){if(child.userData.contactShadow)continue;visual.root.remove(child);child.traverse(o=>{if(o instanceof THREE.Mesh){if(!o.userData.sharedGeometry)o.geometry.dispose();for(const m of Array.isArray(o.material)?o.material:[o.material])if(m.userData.owned)m.dispose();}});}
-   visual.leases.forEach(l=>l.release());visual.leases=leases;visual.templateKey=key;visual.root.add(model);this.shadowDirty=true;this.updateSelection();this.trimTemplateCache();
+   for(const child of [...visual.root.children]){if(child.userData.contactShadow)continue;visual.root.remove(child);child.traverse(o=>{if(o instanceof THREE.Mesh){if(!o.userData.sharedGeometry)o.geometry.dispose();for(const m of Array.isArray(o.material)?o.material:[o.material])if(m.userData.owned){(m.userData.ownedPrint as THREE.Texture|undefined)?.dispose();m.dispose();}}});}
+   visual.leases.forEach(l=>l.release());visual.leases=leases;visual.templateKey=key;applyPlaqueLabel(model,object,this.plaqueUnderlay(object));visual.root.add(model);this.shadowDirty=true;this.updateSelection();this.trimTemplateCache();
   }catch(e){pendingLeases.forEach(l=>l.release());this.templates.delete(key);console.warn('Generated production mesh retained',key,e);}
  }
  private trimTemplateCache(){if(this.templates.size<=20)return;const active=new Set([...this.visuals.values()].map(v=>v.templateKey));for(const[key,promise]of this.templates){if(this.templates.size<=16)break;if(active.has(key))continue;this.templates.delete(key);void promise.then(root=>root.traverse(o=>{if(o instanceof THREE.Mesh){o.geometry.dispose();for(const m of Array.isArray(o.material)?o.material:[o.material]){for(const value of Object.values(m))if(value instanceof THREE.Texture)value.dispose();m.dispose();}}}));}}
- private removeVisual(visual:Visual){visual.disposed=true;visual.leases.forEach(l=>l.release());this.objects.remove(visual.root);visual.root.traverse(o=>{if(o instanceof THREE.Mesh){if(!o.userData.sharedGeometry)o.geometry.dispose();for(const m of Array.isArray(o.material)?o.material:[o.material])if(m.userData.owned)m.dispose();}});}
+ private removeVisual(visual:Visual){visual.disposed=true;visual.leases.forEach(l=>l.release());this.objects.remove(visual.root);visual.root.traverse(o=>{if(o instanceof THREE.Mesh){if(!o.userData.sharedGeometry)o.geometry.dispose();for(const m of Array.isArray(o.material)?o.material:[o.material])if(m.userData.owned){(m.userData.ownedPrint as THREE.Texture|undefined)?.dispose();m.dispose();}}});}
  private makeShadowTexture(){const canvas=document.createElement('canvas');canvas.width=canvas.height=64;const c=canvas.getContext('2d')!;const gradient=c.createRadialGradient(32,32,2,32,32,31);gradient.addColorStop(0,'rgba(0,0,0,0.23)');gradient.addColorStop(.55,'rgba(0,0,0,0.10)');gradient.addColorStop(1,'rgba(0,0,0,0)');c.fillStyle=gradient;c.fillRect(0,0,64,64);const t=new THREE.CanvasTexture(canvas);t.colorSpace=THREE.SRGBColorSpace;return t;}
  private addContactShadow(root:THREE.Group,object:SceneObject){const a=getAsset(object.assetId);if(a.placement!=='floor'||a.collision==='accessory'||a.collision==='cover')return;const[w,,d]=getVariant(object.assetId,object.variant).dimensions;const m=new THREE.Mesh(new THREE.PlaneGeometry(w*1.2,d*1.2),new THREE.MeshBasicMaterial({map:this.shadowTexture,transparent:true,depthWrite:false,polygonOffset:true,polygonOffsetFactor:-1}));m.rotation.x=-Math.PI/2;m.position.y=.009;m.userData.contactShadow=true;root.add(m);}
- setMode(mode:AppMode){if(mode!=='editor')this.cancelLibraryPlacement();if(this.mode===mode)return;this.mode=mode;this.updateBackdrop();this.architecture.setMode(mode);if(mode==='archviz'&&this.ready)void this.ensureArchViz(t=>this.callbacks.status(t)).catch(e=>this.callbacks.status(e.message));this.scene.getObjectByName('Editor_Ambient')!.visible=mode==='editor';this.directLighting.group.visible=mode==='archviz'&&this.environmentReady;this.navigation.setEnabled(mode==='archviz');this.controls.enabled=mode==='editor';this.grid.visible=mode==='editor'&&this.config?.layers.grid;this.renderer.toneMappingExposure=mode==='editor'?1:.78;this.controls.maxPolarAngle=mode==='editor'?Math.PI*.44:Math.PI*.94;this.controls.minPolarAngle=mode==='editor'?.25:.08;this.controls.minDistance=mode==='editor'?3:.45;this.controls.maxDistance=mode==='editor'?95:40;this.resetCamera();if(this.config)this.sync(this.config);this.updateSelection();}
+ setMode(mode:AppMode){if(mode!=='editor')this.cancelLibraryPlacement();if(this.mode===mode)return;this.mode=mode;this.updateBackdrop();this.architecture.setMode(mode);this.scene.getObjectByName('Editor_Ambient')!.visible=mode==='editor';this.directLighting.group.visible=mode==='archviz'&&this.environmentReady;this.navigation.setEnabled(mode==='archviz');this.controls.enabled=mode==='editor';this.grid.visible=mode==='editor'&&this.config?.layers.grid;this.renderer.toneMappingExposure=mode==='editor'?1:.78;this.controls.maxPolarAngle=mode==='editor'?Math.PI*.44:Math.PI*.94;this.controls.minPolarAngle=mode==='editor'?.25:.08;this.controls.minDistance=mode==='editor'?3:.45;this.controls.maxDistance=mode==='editor'?95:40;this.resetCamera();if(this.config)this.sync(this.config);this.updateSelection();if(mode==='archviz'&&this.ready&&!this.environmentReady&&!this.startupPreparing)void this.prepareArchVizTransition();}
  resetCamera(){if(this.mode==='editor'){const span=this.spaceBounds.max.x-this.spaceBounds.min.x;if(span>10){const cx=(this.spaceBounds.min.x+this.spaceBounds.max.x)/2;this.camera.position.set(cx+8,24,-26);this.controls.target.set(cx,.4,0);}else{this.camera.position.set(7.2,9.7,-8);this.controls.target.set(0,.4,0);}}else{this.camera.position.set(1.92,1.65,-2.28);this.controls.target.set(-.3,1.08,.5);}this.cameraSafe.copy(this.camera.position);this.camera.lookAt(this.controls.target);if(this.mode==='editor')this.controls.update();this.navigation?.syncFromCamera();}
- focus(){const object=this.selectedObject();if(!object){this.resetCamera();return;}const p=new THREE.Vector3(...object.position);if(this.mode==='editor'){this.controls.target.copy(p).add(new THREE.Vector3(0,.4,0));this.camera.position.copy(p).add(new THREE.Vector3(4.6,6.5,-5));}else{const d=getVariant(object.assetId,object.variant).dimensions;this.controls.target.copy(p).add(new THREE.Vector3(0,getAsset(object.assetId).placement==='wall'?0:d[1]/2,0));let eye:THREE.Vector3|undefined;for(let i=0;i<12;i++){const angle=i*Math.PI/6,candidate=new THREE.Vector3(p.x+Math.sin(angle)*2.1,1.65,p.z-Math.cos(angle)*2.1);if(!this.cameraAllowed(candidate))continue;const direction=this.controls.target.clone().sub(candidate),distance=direction.length();const ray=new THREE.Raycaster(candidate,direction.normalize(),0,Math.max(.1,distance-.1));if(ray.intersectObjects(this.collisionMeshes,false).some(hit=>hit.object.visible))continue;eye=candidate;break;}if(!eye){this.callbacks.status('Для цього предмета немає вільного ракурсу');return;}this.camera.position.copy(eye);this.keepCameraSafe();}if(this.mode==='editor')this.controls.update();else{this.camera.lookAt(this.controls.target);this.navigation.syncFromCamera();}}
- setSelected(id:string|null){this.selected=id;this.updateSelection();}
+ focus(){const object=this.selectedObject();if(!object){if(this.selectedWallId&&this.paintSelection)this.focusWall(this.selectedWallId);else this.resetCamera();return;}const p=new THREE.Vector3(...object.position);if(this.mode==='editor'){this.controls.target.copy(p).add(new THREE.Vector3(0,.4,0));this.camera.position.copy(p).add(new THREE.Vector3(4.6,6.5,-5));}else{const d=getVariant(object.assetId,object.variant).dimensions;this.controls.target.copy(p).add(new THREE.Vector3(0,getAsset(object.assetId).placement==='wall'?0:d[1]/2,0));let eye:THREE.Vector3|undefined;for(let i=0;i<12;i++){const angle=(getAsset(object.assetId).placement==='wall'?Math.PI-object.rotation:object.assetId==='botanicalDivider'?((this.camera.position.x-p.x)*Math.sin(object.rotation)+(this.camera.position.z-p.z)*Math.cos(object.rotation)>=0?Math.PI-object.rotation:-object.rotation):0)+i*Math.PI/6,candidate=new THREE.Vector3(p.x+Math.sin(angle)*2.1,1.65,p.z-Math.cos(angle)*2.1);if(!this.cameraAllowed(candidate))continue;const direction=this.controls.target.clone().sub(candidate),distance=direction.length();const ray=new THREE.Raycaster(candidate,direction.normalize(),0,Math.max(.1,distance-.1));if(ray.intersectObjects(this.collisionMeshes,false).some(hit=>hit.object.visible))continue;eye=candidate;break;}if(!eye){this.callbacks.status('Для цього предмета немає вільного ракурсу');return;}this.camera.position.copy(eye);this.keepCameraSafe();}if(this.mode==='editor')this.controls.update();else{this.camera.lookAt(this.controls.target);this.navigation.syncFromCamera();}}
+ setSelected(id:string|null){this.selected=id;if(id)this.setSelectedWall(null);this.updateSelection();}
+ setSelectedWall(id:string|null){
+  if(this.wallSelection){this.scene.remove(this.wallSelection);disposeWallSelection(this.wallSelection);this.wallSelection=undefined;}
+  this.selectedWallId=id;
+  const wall=id?getPlacementSurfaces().find(w=>w.id===id):undefined;
+  if(wall){this.wallSelection=createWallSelection(wall);this.scene.add(this.wallSelection);this.updateWallSelection();}
+ }
+ private updateWallSelection(){if(this.wallSelection)this.wallSelection.visible=this.mode==='editor'&&this.paintSelection&&!this.libraryPreview&&!!this.config?.layers.walls;}
  selectedObject(){return this.config?.objects.find(o=>o.id===this.selected);}
  setTool(tool:'select'|'move'|'rotate'){this.tool=tool;this.updateSelection();}
+ setPaintSelection(enabled:boolean){this.paintSelection=enabled;if(enabled){this.setSelected(null);this.gizmo.detach();}else this.setSelectedWall(null);this.updateWallSelection();this.renderer.domElement.style.cursor=enabled?'crosshair':'';}
+ focusRegion(region:'hall'|'meeting'){
+  this.activeRegion=region;
+  if(region==='meeting'){
+   if(this.mode==='editor'){this.camera.position.set(7.2,9.7,-8);this.controls.target.set(0,.4,0);this.controls.update();}
+   else{this.camera.position.set(1.92,1.65,-2.28);this.camera.lookAt(-.3,1.08,.5);this.navigation.syncFromCamera();}
+  }else if(this.mode==='editor'){this.resetCamera();}
+  else{this.camera.position.set(6.4,1.65,-4.1);this.camera.lookAt(15,1.5,-2.6);this.navigation.syncFromCamera();}
+  this.cameraSafe.copy(this.camera.position);
+ }
+ focusWall(id:string){
+  const wall=getPlacementSurfaces().find(w=>w.id===id);if(!wall)return;
+  const meeting=ROOM.walls.some(w=>w.id===id),paint=getPaintableBounds(id),along=(wall.min+wall.max)/2;
+  const target=new THREE.Vector3(wall.axis==='x'?wall.coordinate:along,paint?(paint.minY+paint.maxY)/2:1.85,wall.axis==='z'?wall.coordinate:along);
+  const tan=Math.tan(THREE.MathUtils.degToRad(this.camera.fov)/2),height=paint?paint.maxY-paint.minY:3.53;
+  // A full-wall composition should fit the desktop view. Stay inside the
+  // measured room on narrow screens instead of moving behind the opposite wall.
+  const fit=Math.max(height/(2*tan),(wall.max-wall.min)/(2*tan*this.camera.aspect))*1.08;
+  const distance=meeting?Math.min((wall.axis==='x'?ROOM.width:ROOM.depth)-.3,fit):this.mode==='editor'?3.6:2.2;
+  const normal=new THREE.Vector3(...wall.normal),eye=target.clone().addScaledVector(normal,distance);eye.y=this.mode==='editor'?2.5:1.65;
+  if(this.mode==='editor')this.controls.maxPolarAngle=Math.PI*.49;
+  this.camera.position.copy(eye);this.controls.target.copy(target);this.camera.lookAt(target);if(this.mode==='editor')this.controls.update();else this.navigation.syncFromCamera();this.cameraSafe.copy(eye);
+ }
+ private paintWallAt(e:PointerEvent){
+  this.pointerRay(e);const hits=this.ray.intersectObject(this.architecture.editor,true);
+  for(const hit of hits){let visible=true;for(let p:THREE.Object3D|null=hit.object;p;p=p.parent)if(!p.visible)visible=false;if(!visible)continue;
+   if(hit.object.userData.archCategory!=='walls')continue;
+   const meta=this.architecture.getMetadata(hit.object);if(!meta?.wallId||!hit.face)continue;
+   const normal=hit.face.normal.clone().applyMatrix3(new THREE.Matrix3().getNormalMatrix(hit.object.matrixWorld)).normalize();if(Math.abs(normal.y)>.3)continue;
+   const alias=ROOM.walls.find(w=>Math.abs((w.axis==='x'?hit.point.x:hit.point.z)-w.coordinate)<.16&&(w.axis==='x'?hit.point.z:hit.point.x)>=w.min-.01&&(w.axis==='x'?hit.point.z:hit.point.x)<=w.max+.01&&normal.dot(new THREE.Vector3(...w.normal))>.8);
+   this.callbacks.selectWall?.(alias?.id??meta.wallId);return;
+  }
+  this.callbacks.status('Оберіть видиму вертикальну стіну або скористайтеся списком поверхонь');
+ }
  private updateSelection(){
+  this.updateWallSelection();
   const visual=this.selected?this.visuals.get(this.selected):undefined;const object=this.selectedObject();
   if(!visual||!object){this.highlight.visible=false;this.gizmo.detach();return;}
   this.highlight.box.setFromObject(visual.root);this.highlight.visible=this.mode==='editor';
@@ -225,7 +390,7 @@ export class SceneView {
   if(valid.valid)this.callbacks.change(candidate);else{this.callbacks.status(valid.reason??'Неприпустиме положення');this.internalGizmo=true;visual.root.position.set(...object.position);visual.root.rotation.y=object.rotation;this.internalGizmo=false;}this.highlight.box.setFromObject(visual.root);
  }
  beginLibraryPlacement(assetId:string,clientX:number,clientY:number,modifiers:{altKey?:boolean;shiftKey?:boolean}={}):LibraryPlacementFeedback {
-  this.cancelLibraryPlacement();this.closeContextMenu();
+  this.cancelLibraryPlacement();this.closeContextMenu();this.setSelectedWall(null);
   const asset=getAsset(assetId),variant=asset.variants.find(v=>v.index>0)!;
   const original:SceneObject={id:`${assetId}-${crypto.randomUUID()}`,assetId,variant:variant.index,material:asset.materials[0].id,position:[0,0,0],rotation:0};
   const root=createAssetObject(assetId,variant.index,original.material,'editor');root.name='Library_Placement_Preview';root.visible=false;root.userData.libraryPreview=true;
@@ -266,7 +431,10 @@ export class SceneView {
    });
    const wall=surfaces[0];if(!wall)return fail('Ця поверхня не підтримує настінне кріплення');
    const along=wall.axis==='x'?hit.point.z:hit.point.x,height=hit.point.y,room=getPlacementRoom({position:hit.point.toArray() as Vec3,wallId:wall.id});
-   candidate={...preview.original,...wallAnchor(wall.id,snapping?Math.round(along/step)*step:along,snapping?Math.round(height/step)*step:height,variant.dimensions[2],room)};surface='wall';
+   const minY=(asset.wallClearance??.18)+variant.dimensions[1]/2,maxY=Math.min(room.height-.3,(wall.height??room.height)-(asset.wallTopClearance??.03))-variant.dimensions[1]/2;
+   const requested=snapping?Math.round(height/step)*step:height;
+   const mountedHeight=asset.wallLayer==='background'&&variant.dimensions[1]>(wall.height??room.height)*.75?maxY:Math.max(minY,Math.min(maxY,requested));
+   candidate={...preview.original,...wallAnchor(wall.id,snapping?Math.round(along/step)*step:along,mountedHeight,variant.dimensions[2],room)};surface='wall';
   }else if(asset.collision==='accessory'){
    const supportMeshes:THREE.Mesh[]=[];this.objects.traverse(node=>{if(node instanceof THREE.Mesh&&!node.userData.contactShadow&&visible(node)){const object=this.config.objects.find(o=>o.id===node.userData.instanceId);if(object&&['tables','work','storage'].includes(getAsset(object.assetId).category))supportMeshes.push(node);}});
    const hit=this.ray.intersectObjects(supportMeshes,false).find(hit=>{
@@ -284,7 +452,7 @@ export class SceneView {
  private showLibraryPreview(preview:LibraryPreview){
   const valid=preview.feedback.valid;this.renderer.domElement.dataset.libraryPlacement=valid?'valid':'invalid';
   preview.root.visible=!!preview.candidate;preview.outline.visible=!!preview.candidate;
-  if(preview.candidate){preview.root.position.set(...preview.candidate.position);preview.root.rotation.y=preview.candidate.rotation;preview.root.updateMatrixWorld(true);preview.outline.box.setFromObject(preview.root);}
+  if(preview.candidate){preview.root.position.set(...preview.candidate.position);preview.root.rotation.y=preview.candidate.rotation;if(preview.candidate.assetId==='brandDoorPanel')this.updateWallPaintProxy(preview.root,preview.candidate);preview.root.updateMatrixWorld(true);preview.outline.box.setFromObject(preview.root);}
   (preview.outline.material as THREE.LineBasicMaterial).color.set(valid?0x2b8064:0xc24e3d);for(const[material,color]of preview.colors)material.color.copy(color).lerp(new THREE.Color(valid?0x518b68:0xc95c4b),valid?.12:.48);
  }
  getLibraryPlacement(){const preview=this.libraryPreview;return preview?{object:preview.candidate?structuredClone(preview.candidate):undefined,...preview.feedback}:null;}
@@ -309,13 +477,14 @@ export class SceneView {
   const directions=[new THREE.Vector3(1,0,0),new THREE.Vector3(-1,0,0),new THREE.Vector3(0,0,1),new THREE.Vector3(0,0,-1)];
   const clearanceRay=new THREE.Raycaster();clearanceRay.far=.18;
   const clear=(p:THREE.Vector3)=>this.cameraAllowed(p)&&directions.every(d=>{clearanceRay.set(p,d);return!clearanceRay.intersectObjects(this.collisionMeshes,false).length;});
-  if(!clear(destination)){this.callbacks.status('Точка надто близько до стіни чи дверей. Оберіть вільну точку на підлозі.');return false;}
+  if(!clear(destination)){this.callbacks.status('Точка надто близько до стіни, дверей чи перегородки. Оберіть вільну точку на підлозі.');return false;}
   const direction=new THREE.Vector3();this.camera.getWorldDirection(direction);direction.y=0;if(direction.lengthSq()<.1)direction.set(0,0,1);direction.normalize();
   this.camera.position.copy(destination);this.camera.lookAt(destination.clone().add(direction));this.controls.target.copy(destination).add(direction);this.cameraSafe.copy(destination);this.navigation.syncFromCamera();this.ray.far=Infinity;
   this.callbacks.status('ArchViz запущено з вибраної точки');return true;
  }
  private pick(e:PointerEvent){this.pointerRay(e);const hits=this.ray.intersectObjects([this.objects,this.architecture.root],true);for(const h of hits){if(!h.object.visible||h.object.userData.contactShadow)continue;let p:THREE.Object3D|null=h.object,visible=true;while(p){if(!p.visible)visible=false;p=p.parent;}if(!visible)continue;const id=h.object.userData.instanceId as string|undefined;if(id)return{id,door:false};if(h.object.userData.interactiveDoor)return{id:null,door:true};return{id:null,door:false};}return{id:null,door:false};}
  private pointerDown(e:PointerEvent){if(e.button!==0)return;this.pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});if(this.pointers.size>1){if(this.dragging?.active)this.callbacks.end();this.dragging=undefined;this.controls.enabled=true;this.press=undefined;return;}if(this.gizmo.dragging||this.gizmo.axis)return;
+  if(this.mode==='editor'&&this.paintSelection){this.press={id:e.pointerId,x:e.clientX,y:e.clientY,time:performance.now(),hit:null,door:false};return;}
   const hit=this.pick(e);this.press={id:e.pointerId,x:e.clientX,y:e.clientY,time:performance.now(),hit:hit.id,door:hit.door};
   if(this.mode==='editor'&&hit.id&&hit.id===this.selected){const original=this.selectedObject();if(original){this.pointerRay(e);const plane=new THREE.Plane(new THREE.Vector3(0,1,0),-original.position[1]);const p=this.ray.ray.intersectPlane(plane,new THREE.Vector3());this.dragging={id:hit.id,startX:e.clientX,startY:e.clientY,original:structuredClone(original),offset:p?p.sub(new THREE.Vector3(...original.position)):new THREE.Vector3(),active:false,wall:original.wallId};this.controls.enabled=false;}}
  }
@@ -325,7 +494,10 @@ export class SceneView {
   this.pointerRay(e);const asset=getAsset(drag.original.assetId);let candidate:SceneObject;
   if(asset.placement==='wall'){
    const room=getPlacementRoom(drag.original),wall=room.walls.find(w=>w.id===drag.wall)!;const n=new THREE.Vector3(...wall.normal);const plane=new THREE.Plane(n,-wall.coordinate*(wall.axis==='x'?n.x:n.z));const p=this.ray.ray.intersectPlane(plane,new THREE.Vector3());if(!p)return;
-   const along=wall.axis==='x'?p.z:p.x;const height=p.y;const anchored=wallAnchor(wall.id,this.snap?Math.round(along/this.gridStep)*this.gridStep:along,this.snap?Math.round(height/this.gridStep)*this.gridStep:height,getVariant(asset.id,drag.original.variant).dimensions[2],room);candidate={...drag.original,...anchored};
+   const along=wall.axis==='x'?p.z:p.x;const dimensions=getVariant(asset.id,drag.original.variant).dimensions;
+   const minY=(asset.wallClearance??.18)+dimensions[1]/2,maxY=Math.min(room.height-.3,(wall.height??room.height)-(asset.wallTopClearance??.03))-dimensions[1]/2;
+   const requested=this.snap?Math.round(p.y/this.gridStep)*this.gridStep:p.y,height=asset.wallLayer==='background'&&dimensions[1]>(wall.height??room.height)*.75?maxY:Math.max(minY,Math.min(maxY,requested));
+   const anchored=wallAnchor(wall.id,this.snap?Math.round(along/this.gridStep)*this.gridStep:along,height,dimensions[2],room);candidate={...drag.original,...anchored};
   }else if(asset.collision==='accessory'){
    const supports=this.ray.intersectObject(this.objects,true).filter(hit=>{const id=hit.object.userData.instanceId;if(!id||id===drag.id||hit.object.userData.contactShadow)return false;const support=this.config.objects.find(o=>o.id===id);return support&&['tables','work','storage'].includes(getAsset(support.assetId).category);});
    const hit=supports[0];if(!hit){this.callbacks.status('Для аксесуара потрібна поверхня столу або тумби');return;}
@@ -339,23 +511,24 @@ export class SceneView {
  private pointerUp(e:PointerEvent){this.pointers.delete(e.pointerId);if(this.dragging?.active){this.callbacks.end();this.dragging=undefined;this.controls.enabled=this.mode==='editor';this.press=undefined;this.suppressClick=false;return;}this.dragging=undefined;this.controls.enabled=this.mode==='editor';
   const p=this.press;this.press=undefined;if(!p||this.suppressClick){this.suppressClick=false;return;}
   if(Math.hypot(e.clientX-p.x,e.clientY-p.y)>7||performance.now()-p.time>650)return;
+  if(this.mode==='editor'&&this.paintSelection){this.paintWallAt(e);return;}
   if(p.door){this.callbacks.door();return;}this.callbacks.select(p.hit);
  }
  rotateSelected(delta:number){const obj=this.selectedObject();if(!obj||getAsset(obj.assetId).placement==='wall')return;const candidate={...obj,rotation:snapAngle(obj.rotation+delta,15,this.angleSnap)};const v=validatePlacement(candidate,this.config.objects,getPlacementRoom(candidate),{freePlacement:this.freePlacement});if(v.valid)this.callbacks.change(candidate);else this.callbacks.status(v.reason??'Поворот неможливий');}
  moveSelected(dx:number,dz:number){const obj=this.selectedObject();if(!obj)return;let candidate:SceneObject;if(getAsset(obj.assetId).placement==='wall'){const room=getPlacementRoom(obj),wall=room.walls.find(w=>w.id===obj.wallId)!;const along=(wall.axis==='x'?obj.position[2]:obj.position[0])+dx;candidate={...obj,...wallAnchor(wall.id,along,obj.position[1]+dz,getVariant(obj.assetId,obj.variant).dimensions[2],room)};}else candidate={...obj,position:[obj.position[0]+dx,obj.position[1],obj.position[2]+dz]};const v=validatePlacement(candidate,this.config.objects,getPlacementRoom(candidate),{freePlacement:this.freePlacement});if(v.valid)this.callbacks.change(candidate);else this.callbacks.status(v.reason??'Переміщення неможливе');}
  walk(direction:'forward'|'back'|'left'|'right'){
-  const look=this.controls.target.clone().sub(this.camera.position);look.y=0;look.normalize();const right=new THREE.Vector3().crossVectors(look,new THREE.Vector3(0,1,0));const step=direction==='forward'?look:direction==='back'?look.negate():direction==='right'?right:right.negate();step.multiplyScalar(.35);const p=this.camera.position.clone().add(step);if(this.cameraMoveAllowed(this.camera.position,p)){this.camera.position.copy(p);this.controls.target.add(step);this.cameraSafe.copy(p);}else this.callbacks.status('Тут стіна, вікно або двері');
+  const look=this.controls.target.clone().sub(this.camera.position);look.y=0;look.normalize();const right=new THREE.Vector3().crossVectors(look,new THREE.Vector3(0,1,0));const step=direction==='forward'?look:direction==='back'?look.negate():direction==='right'?right:right.negate();step.multiplyScalar(.35);const p=this.camera.position.clone().add(step);if(this.cameraMoveAllowed(this.camera.position,p)){this.camera.position.copy(p);this.controls.target.add(step);this.cameraSafe.copy(p);}else this.callbacks.status('Тут стіна, вікно, двері або перегородка');
  }
- private cameraAllowed(p:THREE.Vector3){const b=this.spaceBounds;return p.x>b.min.x+.12&&p.x<b.max.x-.12&&p.z>b.min.z+.12&&p.z<b.max.z-.12&&p.y>=.22&&p.y<b.max.y-.13;}
+ private cameraAllowed(p:THREE.Vector3){const b=this.spaceBounds;return p.x>b.min.x+.12&&p.x<b.max.x-.12&&p.z>b.min.z+.12&&p.z<b.max.z-.12&&p.y>=.22&&p.y<b.max.y-.13&&partitionPointAllowed(this.config?.objects??[],p);}
  private updateCollisionMeshes(){this.collisionMeshes=architectureCollisionMeshes(this.architecture.production);}
- private cameraMoveAllowed(from:THREE.Vector3,to:THREE.Vector3){return this.cameraAllowed(to)&&architectureMoveAllowed(this.collisionMeshes,from,to);}
+ private cameraMoveAllowed(from:THREE.Vector3,to:THREE.Vector3){return this.cameraAllowed(to)&&partitionMoveAllowed(this.config?.objects??[],from,to)&&architectureMoveAllowed(this.collisionMeshes,from,to);}
  private keepCameraSafe(){if(this.mode!=='archviz')return;this.camera.position.y=THREE.MathUtils.clamp(this.camera.position.y,.22,this.spaceBounds.max.y-.13);this.cameraSafe.copy(this.camera.position);}
  private applyQuality(settings:QualitySettings){this.shadowDirty=true;if(this.environmentReady&&this.activeTextureTier!==settings.level)void this.refreshTextureTier().catch(e=>console.warn('Texture tier fallback',e));this.renderer.setPixelRatio(settings.dpr*settings.scale);this.composer.setPixelRatio(settings.dpr*settings.scale);this.ao.enabled=this.hdrTargets&&settings.ao&&this.mode==='archviz';this.aa.enabled=settings.level!=='low';this.renderer.shadowMap.enabled=settings.shadows;this.shadowLight.castShadow=settings.shadows;const samples=settings.level==='high'?Math.min(4,this.renderer.capabilities.maxSamples):settings.level==='medium'?2:0;for(const target of [this.composer.renderTarget1,this.composer.renderTarget2])if(target.samples!==samples){target.dispose();target.samples=samples;}this.resize();this.callbacks.quality(settings,this.quality.fps);}
  private resize(){const w=this.host.clientWidth,h=this.host.clientHeight;if(!w||!h)return;this.camera.aspect=w/h;this.camera.updateProjectionMatrix();this.renderer.setSize(w,h,false);this.composer.setSize(w,h);}
- private frame(now:number){this.raf=requestAnimationFrame(t=>this.frame(t));const dt=Math.min(.06,(now-this.last)/1000);this.last=now;if(this.mode==='archviz'&&this.environmentReady)this.quality.tick(now);if(this.mode==='editor')this.controls.update();else{this.navigation.update(dt);if(this.directLighting.update(this.camera,this.quality.settings)||this.directLighting.needsShadowRender)this.shadowDirty=true;}this.keepCameraSafe();if(this.ready&&this.config){const doorAngle=this.architecture.door?.rotation.y;this.architecture.animate(dt);if(doorAngle!==this.architecture.door?.rotation.y)this.shadowDirty=true;this.architecture.setLayers(this.config.layers,this.camera);}this.ao.enabled=this.hdrTargets&&this.quality.settings.ao&&this.mode==='archviz';
+ private frame(now:number){this.raf=requestAnimationFrame(t=>this.frame(t));if(this.startupPreparing){this.last=now;return;}if(this.mode==='archviz'){const time=new Date(),minute=Math.floor(time.getTime()/60000);for(const object of this.config?.objects??[]){if(object.assetId==='wallClock'){const root=this.visuals.get(object.id)?.root;if(root)updateWallClockHands(root,time);if(this.wallClockMinute!==minute)this.shadowDirty=true;}}this.wallClockMinute=minute;}const dt=Math.min(.06,(now-this.last)/1000);this.last=now;if(this.mode==='archviz'&&this.environmentReady)this.quality.tick(now);if(this.mode==='editor')this.controls.update();else{this.navigation.update(dt);if(this.directLighting.update(this.camera,this.quality.settings)||this.directLighting.needsShadowRender)this.shadowDirty=true;}this.keepCameraSafe();if(this.ready&&this.config){const doorAngle=this.architecture.door?.rotation.y;this.architecture.animate(dt);if(doorAngle!==this.architecture.door?.rotation.y)this.shadowDirty=true;this.architecture.setLayers(this.config.layers,this.camera);}this.ao.enabled=this.hdrTargets&&this.quality.settings.ao&&this.mode==='archviz';
   this.reflections.enabled=this.hdrTargets&&this.mode==='archviz'&&this.quality.settings.level==='high';this.renderer.info.reset();this.renderer.shadowMap.needsUpdate=this.mode==='archviz'&&this.quality.settings.shadows&&this.shadowDirty;if(this.mode==='editor')this.renderer.render(this.scene,this.camera);else{this.composer.render(dt);this.shadowDirty=false;}
   if(++this.renderCount%60===0)this.callbacks.quality(this.quality.settings,this.quality.fps);
  }
  getStats(){return{fps:this.quality.fps,quality:this.quality.settings,drawCalls:this.renderer.info.render.calls,triangles:this.renderer.info.render.triangles,geometries:this.renderer.info.memory.geometries,textures:this.renderer.info.memory.textures};}
- dispose(){this.cancelLibraryPlacement();cancelAnimationFrame(this.raf);this.resizeObserver.disconnect();this.controls.dispose();this.gizmo.dispose();this.visuals.forEach(v=>this.removeVisual(v));this.library?.dispose();this.architectureLeases.forEach(l=>l.release());this.shadowTexture.dispose();this.directLighting.dispose();this.renderer.dispose();this.composer.dispose();}
+ dispose(){this.setSelectedWall(null);this.cancelLibraryPlacement();cancelAnimationFrame(this.raf);this.resizeObserver.disconnect();this.controls.dispose();this.gizmo.dispose();this.visuals.forEach(v=>this.removeVisual(v));this.library?.dispose();this.architectureLeases.forEach(l=>l.release());this.shadowTexture.dispose();this.wallFinishes.dispose();this.directLighting.dispose();this.renderer.dispose();this.composer.dispose();}
 }

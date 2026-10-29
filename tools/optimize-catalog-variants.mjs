@@ -3,7 +3,7 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {NodeIO} from '@gltf-transform/core';
 import {ALL_EXTENSIONS} from '@gltf-transform/extensions';
-import {dedup,prune,meshopt} from '@gltf-transform/functions';
+import {dedup,prune,weld,meshopt} from '@gltf-transform/functions';
 import {MeshoptEncoder,MeshoptDecoder} from 'meshoptimizer';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const requested=process.argv.find(a=>a.startsWith('--variants='));if(!requested)throw new Error('Provide explicit --variants=asset:index,... to keep unrelated production sources untouched.');
@@ -15,7 +15,7 @@ for(const entry of initial.assets.filter(e=>keys.has(`${e.assetId}:${e.variant}`
  const bytes={};for(const role of ['production','proxy']){
   const relative=entry[role];if(!relative.startsWith('assets/')||relative.includes('..'))throw new Error('Invalid output path');const absolute=path.join(root,'public',relative),source=await readFile(absolute);
   const backup=path.join(root,'assets-src/exports/catalogue',relative);await mkdir(path.dirname(backup),{recursive:true});await writeFile(backup,source);
-  const doc=await io.read(absolute);await doc.transform(dedup({propertyTypes:['Accessor','Mesh','Texture']}),prune({keepAttributes:true,keepLeaves:true}),meshopt({encoder:MeshoptEncoder,level:'medium'}));await io.write(absolute,doc);bytes[role]=(await readFile(absolute)).byteLength;
+  const doc=await io.read(absolute);await doc.transform(dedup({propertyTypes:['Accessor','Mesh','Texture']}),weld(),prune({keepAttributes:true,keepLeaves:true}),meshopt({encoder:MeshoptEncoder,level:'medium'}));await io.write(absolute,doc);bytes[role]=(await readFile(absolute)).byteLength;
  }
  report.push({assetId:entry.assetId,variant:entry.variant,bytes});
 }

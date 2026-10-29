@@ -1,0 +1,3675 @@
+{
+  "schemaVersion": 1,
+  "sourceFile": "reconstructed_room.blend",
+  "sourceCenter": [
+    0.9477145,
+    -1.0209095,
+    0
+  ],
+  "units": "metres",
+  "upAxis": "Y",
+  "regionId": "hall",
+  "originalTables": [
+    {
+      "id": "source-desk-west-01",
+      "assetId": "hallDesk",
+      "variant": 1,
+      "material": "original",
+      "position": [
+        -9.99771469,
+        0.0,
+        -2.47090955
+      ],
+      "rotation": 0.0,
+      "dimensions": [
+        1.60000002,
+        0.75,
+        1.60000002
+      ],
+      "sourceRoot": "Desk_01",
+      "sourceMeshes": [
+        "Desk_01_Black_Steel_Frame",
+        "Desk_01_Grey_3_Drawer_Pedestal",
+        "Desk_01_White_Top"
+      ],
+      "sourceWorldMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -9.05000019
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.45000005
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldBounds": {
+        "min": [
+          -10.79771488,
+          0.0,
+          -3.2709095
+        ],
+        "max": [
+          -9.1977145,
+          0.75,
+          -1.67090954
+        ]
+      },
+      "regionId": "hall",
+      "production": "assets/models/hallDesk-1.glb",
+      "proxy": "assets/proxies/hallDesk-1.glb"
+    },
+    {
+      "id": "source-desk-west-02",
+      "assetId": "hallDesk",
+      "variant": 1,
+      "material": "original",
+      "position": [
+        -7.4477145,
+        0.0,
+        -2.47090955
+      ],
+      "rotation": 0.0,
+      "dimensions": [
+        1.60000002,
+        0.75,
+        1.60000002
+      ],
+      "sourceRoot": "Desk_02",
+      "sourceMeshes": [
+        "Desk_02_Black_Steel_Frame",
+        "Desk_02_Grey_3_Drawer_Pedestal",
+        "Desk_02_White_Top"
+      ],
+      "sourceWorldMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -6.5
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.45000005
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldBounds": {
+        "min": [
+          -8.24771469,
+          0.0,
+          -3.2709095
+        ],
+        "max": [
+          -6.64771431,
+          0.75,
+          -1.67090954
+        ]
+      },
+      "regionId": "hall",
+      "production": "assets/models/hallDesk-1.glb",
+      "proxy": "assets/proxies/hallDesk-1.glb"
+    },
+    {
+      "id": "source-desk-west-03",
+      "assetId": "hallDesk",
+      "variant": 1,
+      "material": "original",
+      "position": [
+        -4.96771448,
+        0.0,
+        -2.47090955
+      ],
+      "rotation": 0.0,
+      "dimensions": [
+        1.60000002,
+        0.75,
+        1.60000002
+      ],
+      "sourceRoot": "Desk_03",
+      "sourceMeshes": [
+        "Desk_03_Black_Steel_Frame",
+        "Desk_03_Grey_3_Drawer_Pedestal",
+        "Desk_03_White_Top"
+      ],
+      "sourceWorldMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -4.01999998
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.45000005
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldBounds": {
+        "min": [
+          -5.76771467,
+          0.0,
+          -3.2709095
+        ],
+        "max": [
+          -4.16771453,
+          0.75,
+          -1.67090954
+        ]
+      },
+      "regionId": "hall",
+      "production": "assets/models/hallDesk-1.glb",
+      "proxy": "assets/proxies/hallDesk-1.glb"
+    },
+    {
+      "id": "source-desk-west-04",
+      "assetId": "hallDesk",
+      "variant": 1,
+      "material": "original",
+      "position": [
+        -9.99771469,
+        0.0,
+        -0.47090949
+      ],
+      "rotation": 0.0,
+      "dimensions": [
+        1.60000002,
+        0.75,
+        1.60000002
+      ],
+      "sourceRoot": "Desk_04",
+      "sourceMeshes": [
+        "Desk_04_Black_Steel_Frame",
+        "Desk_04_Grey_3_Drawer_Pedestal",
+        "Desk_04_White_Top"
+      ],
+      "sourceWorldMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -9.05000019
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.55000001
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldBounds": {
+        "min": [
+          -10.79771488,
+          0.0,
+          -1.2709095
+        ],
+        "max": [
+          -9.1977145,
+          0.75,
+          0.32909052
+        ]
+      },
+      "regionId": "hall",
+      "production": "assets/models/hallDesk-1.glb",
+      "proxy": "assets/proxies/hallDesk-1.glb"
+    },
+    {
+      "id": "source-desk-west-05",
+      "assetId": "hallDesk",
+      "variant": 1,
+      "material": "original",
+      "position": [
+        -7.4477145,
+        0.0,
+        -0.47090949
+      ],
+      "rotation": 0.0,
+      "dimensions": [
+        1.60000002,
+        0.75,
+        1.60000002
+      ],
+      "sourceRoot": "Desk_05",
+      "sourceMeshes": [
+        "Desk_05_Black_Steel_Frame",
+        "Desk_05_Grey_3_Drawer_Pedestal",
+        "Desk_05_White_Top"
+      ],
+      "sourceWorldMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -6.5
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.55000001
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldBounds": {
+        "min": [
+          -8.24771469,
+          0.0,
+          -1.2709095
+        ],
+        "max": [
+          -6.64771431,
+          0.75,
+          0.32909052
+        ]
+      },
+      "regionId": "hall",
+      "production": "assets/models/hallDesk-1.glb",
+      "proxy": "assets/proxies/hallDesk-1.glb"
+    },
+    {
+      "id": "source-desk-west-06",
+      "assetId": "hallDesk",
+      "variant": 1,
+      "material": "original",
+      "position": [
+        -4.96771448,
+        0.0,
+        -0.47090949
+      ],
+      "rotation": 0.0,
+      "dimensions": [
+        1.60000002,
+        0.75,
+        1.60000002
+      ],
+      "sourceRoot": "Desk_06",
+      "sourceMeshes": [
+        "Desk_06_Black_Steel_Frame",
+        "Desk_06_Grey_3_Drawer_Pedestal",
+        "Desk_06_White_Top"
+      ],
+      "sourceWorldMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -4.01999998
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.55000001
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldBounds": {
+        "min": [
+          -5.76771467,
+          0.0,
+          -1.2709095
+        ],
+        "max": [
+          -4.16771453,
+          0.75,
+          0.32909052
+        ]
+      },
+      "regionId": "hall",
+      "production": "assets/models/hallDesk-1.glb",
+      "proxy": "assets/proxies/hallDesk-1.glb"
+    },
+    {
+      "id": "source-desk-west-07",
+      "assetId": "hallDesk",
+      "variant": 1,
+      "material": "original",
+      "position": [
+        -7.4477145,
+        0.0,
+        1.80909042
+      ],
+      "rotation": 0.0,
+      "dimensions": [
+        1.60000002,
+        0.75,
+        1.60000002
+      ],
+      "sourceRoot": "Desk_07",
+      "sourceMeshes": [
+        "Desk_07_Black_Steel_Frame",
+        "Desk_07_Grey_3_Drawer_Pedestal",
+        "Desk_07_White_Top"
+      ],
+      "sourceWorldMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -6.5
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -2.82999992
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldBounds": {
+        "min": [
+          -8.24771469,
+          0.0,
+          1.00909047
+        ],
+        "max": [
+          -6.64771431,
+          0.75,
+          2.60909038
+        ]
+      },
+      "regionId": "hall",
+      "production": "assets/models/hallDesk-1.glb",
+      "proxy": "assets/proxies/hallDesk-1.glb"
+    },
+    {
+      "id": "source-desk-west-08",
+      "assetId": "hallDesk",
+      "variant": 1,
+      "material": "original",
+      "position": [
+        -4.96771448,
+        0.0,
+        1.80909042
+      ],
+      "rotation": 0.0,
+      "dimensions": [
+        1.60000002,
+        0.75,
+        1.60000002
+      ],
+      "sourceRoot": "Desk_08",
+      "sourceMeshes": [
+        "Desk_08_Black_Steel_Frame",
+        "Desk_08_Grey_3_Drawer_Pedestal",
+        "Desk_08_White_Top"
+      ],
+      "sourceWorldMatrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -4.01999998
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -2.82999992
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldBounds": {
+        "min": [
+          -5.76771467,
+          0.0,
+          1.00909047
+        ],
+        "max": [
+          -4.16771453,
+          0.75,
+          2.60909038
+        ]
+      },
+      "regionId": "hall",
+      "production": "assets/models/hallDesk-1.glb",
+      "proxy": "assets/proxies/hallDesk-1.glb"
+    },
+    {
+      "id": "source-desk-east-01",
+      "assetId": "hallDesk",
+      "variant": 2,
+      "material": "original",
+      "position": [
+        3.81731064,
+        0.0,
+        1.82909041
+      ],
+      "rotation": -1.57079637,
+      "dimensions": [
+        1.39999998,
+        0.75,
+        0.80000001
+      ],
+      "sourceRoot": "East_Desk_01_Wall_Bank_Row_1",
+      "sourceMeshes": [
+        "East_Desk_01_Wall_Bank_Row_1_Black_U_Frame",
+        "East_Desk_01_Wall_Bank_Row_1_Dark_Pedestal_Two_Grey_Drawers",
+        "East_Desk_01_Wall_Bank_Row_1_White_Rectangular_Top"
+      ],
+      "sourceWorldMatrix": [
+        [
+          -4e-08,
+          1.0,
+          0.0,
+          4.76502514
+        ],
+        [
+          -1.0,
+          -4e-08,
+          0.0,
+          -2.8499999
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldBounds": {
+        "min": [
+          3.41731054,
+          0.0,
+          1.12909036
+        ],
+        "max": [
+          4.21731073,
+          0.75,
+          2.52909045
+        ]
+      },
+      "regionId": "hall",
+      "production": "assets/models/hallDesk-2.glb",
+      "proxy": "assets/proxies/hallDesk-2.glb"
+    },
+    {
+      "id": "source-desk-east-02",
+      "assetId": "hallDesk",
+      "variant": 2,
+      "material": "original",
+      "position": [
+        3.81731064,
+        0.0,
+        0.42909055
+      ],
+      "rotation": -1.57079637,
+      "dimensions": [
+        1.39999998,
+        0.75,
+        0.80000001
+      ],
+      "sourceRoot": "East_Desk_02_Wall_Bank_Row_2",
+      "sourceMeshes": [
+        "East_Desk_02_Wall_Bank_Row_2_Black_U_Frame",
+        "East_Desk_02_Wall_Bank_Row_2_Dark_Pedestal_Two_Grey_Drawers",
+        "East_Desk_02_Wall_Bank_Row_2_White_Rectangular_Top"
+      ],
+      "sourceWorldMatrix": [
+        [
+          -4e-08,
+          1.0,
+          0.0,
+          4.76502514
+        ],
+        [
+          -1.0,
+          -4e-08,
+          0.0,
+          -1.45000005
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldBounds": {
+        "min": [
+          3.41731054,
+          0.0,
+          -0.27090944
+        ],
+        "max": [
+          4.21731073,
+          0.75,
+          1.1290906
+        ]
+      },
+      "regionId": "hall",
+      "production": "assets/models/hallDesk-2.glb",
+      "proxy": "assets/proxies/hallDesk-2.glb"
+    },
+    {
+      "id": "source-desk-east-03",
+      "assetId": "hallDesk",
+      "variant": 2,
+      "material": "original",
+      "position": [
+        3.81731064,
+        0.0,
+        -0.9709095
+      ],
+      "rotation": -1.57079637,
+      "dimensions": [
+        1.39999998,
+        0.75,
+        0.80000001
+      ],
+      "sourceRoot": "East_Desk_03_Wall_Bank_Row_3",
+      "sourceMeshes": [
+        "East_Desk_03_Wall_Bank_Row_3_Black_U_Frame",
+        "East_Desk_03_Wall_Bank_Row_3_Dark_Pedestal_Two_Grey_Drawers",
+        "East_Desk_03_Wall_Bank_Row_3_White_Rectangular_Top"
+      ],
+      "sourceWorldMatrix": [
+        [
+          -4e-08,
+          1.0,
+          0.0,
+          4.76502514
+        ],
+        [
+          -1.0,
+          -4e-08,
+          0.0,
+          -0.05
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldBounds": {
+        "min": [
+          3.41731054,
+          0.0,
+          -1.67090948
+        ],
+        "max": [
+          4.21731073,
+          0.75,
+          -0.2709095
+        ]
+      },
+      "regionId": "hall",
+      "production": "assets/models/hallDesk-2.glb",
+      "proxy": "assets/proxies/hallDesk-2.glb"
+    },
+    {
+      "id": "source-desk-east-04",
+      "assetId": "hallDesk",
+      "variant": 3,
+      "material": "original",
+      "position": [
+        5.4522856,
+        0.0,
+        1.82909041
+      ],
+      "rotation": 1.57079637,
+      "dimensions": [
+        1.39999998,
+        0.75,
+        0.80000001
+      ],
+      "sourceRoot": "East_Desk_04_Island_A_West_Row_1",
+      "sourceMeshes": [
+        "East_Desk_04_Island_A_West_Row_1_Black_U_Frame",
+        "East_Desk_04_Island_A_West_Row_1_Dark_Pedestal_Two_Grey_Drawers",
+        "East_Desk_04_Island_A_West_Row_1_White_Rectangular_Top"
+      ],
+      "sourceWorldMatrix": [
+        [
+          -4e-08,
+          -1.0,
+          0.0,
+          6.4000001
+        ],
+        [
+          1.0,
+          -4e-08,
+          0.0,
+          -2.8499999
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldBounds": {
+        "min": [
+          5.0522855,
+          0.0,
+          1.12909036
+        ],
+        "max": [
+          5.85228569,
+          0.75,
+          2.52909045
+        ]
+      },
+      "regionId": "hall",
+      "production": "assets/models/hallDesk-3.glb",
+      "proxy": "assets/proxies/hallDesk-3.glb"
+    },
+    {
+      "id": "source-desk-east-05",
+      "assetId": "hallDesk",
+      "variant": 3,
+      "material": "original",
+      "position": [
+        5.4522856,
+        0.0,
+        0.42909055
+      ],
+      "rotation": 1.57079637,
+      "dimensions": [
+        1.39999998,
+        0.75,
+        0.80000001
+      ],
+      "sourceRoot": "East_Desk_05_Island_A_West_Row_2",
+      "sourceMeshes": [
+        "East_Desk_05_Island_A_West_Row_2_Black_U_Frame",
+        "East_Desk_05_Island_A_West_Row_2_Dark_Pedestal_Two_Grey_Drawers",
+        "East_Desk_05_Island_A_West_Row_2_White_Rectangular_Top"
+      ],
+      "sourceWorldMatrix": [
+        [
+          -4e-08,
+          -1.0,
+          0.0,
+          6.4000001
+        ],
+        [
+          1.0,
+          -4e-08,
+          0.0,
+          -1.45000005
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldBounds": {
+        "min": [
+          5.0522855,
+          0.0,
+          -0.27090944
+        ],
+        "max": [
+          5.85228569,
+          0.75,
+          1.1290906
+        ]
+      },
+      "regionId": "hall",
+      "production": "assets/models/hallDesk-3.glb",
+      "proxy": "assets/proxies/hallDesk-3.glb"
+    },
+    {
+      "id": "source-desk-east-06",
+      "assetId": "hallDesk",
+      "variant": 3,
+      "material": "original",
+      "position": [
+        5.4522856,
+        0.0,
+        -0.9709095
+      ],
+      "rotation": 1.57079637,
+      "dimensions": [
+        1.39999998,
+        0.75,
+        0.80000001
+      ],
+      "sourceRoot": "East_Desk_06_Island_A_West_Row_3",
+      "sourceMeshes": [
+        "East_Desk_06_Island_A_West_Row_3_Black_U_Frame",
+        "East_Desk_06_Island_A_West_Row_3_Dark_Pedestal_Two_Grey_Drawers",
+        "East_Desk_06_Island_A_West_Row_3_White_Rectangular_Top"
+      ],
+      "sourceWorldMatrix": [
+        [
+          -4e-08,
+          -1.0,
+          0.0,
+          6.4000001
+        ],
+        [
+          1.0,
+          -4e-08,
+          0.0,
+          -0.05
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldBounds": {
+        "min": [
+          5.0522855,
+          0.0,
+          -1.67090948
+        ],
+        "max": [
+          5.85228569,
+          0.75,
+          -0.2709095
+        ]
+      },
+      "regionId": "hall",
+      "production": "assets/models/hallDesk-3.glb",
+      "proxy": "assets/proxies/hallDesk-3.glb"
+    },
+    {
+      "id": "source-desk-east-07",
+      "assetId": "hallDesk",
+      "variant": 2,
+      "material": "original",
+      "position": [
+        6.25228531,
+        0.0,
+        1.82909041
+      ],
+      "rotation": -1.57079637,
+      "dimensions": [
+        1.39999998,
+        0.75,
+        0.80000001
+      ],
+      "sourceRoot": "East_Desk_07_Island_A_East_Row_1",
+      "sourceMeshes": [
+        "East_Desk_07_Island_A_East_Row_1_Black_U_Frame",
+        "East_Desk_07_Island_A_East_Row_1_Dark_Pedestal_Two_Grey_Drawers",
+        "East_Desk_07_Island_A_East_Row_1_White_Rectangular_Top"
+      ],
+      "sourceWorldMatrix": [
+        [
+          -4e-08,
+          1.0,
+          0.0,
+          7.19999981
+        ],
+        [
+          -1.0,
+          -4e-08,
+          0.0,
+          -2.8499999
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldBounds": {
+        "min": [
+          5.85228521,
+          0.0,
+          1.12909036
+        ],
+        "max": [
+          6.6522854,
+          0.75,
+          2.52909045
+        ]
+      },
+      "regionId": "hall",
+      "production": "assets/models/hallDesk-2.glb",
+      "proxy": "assets/proxies/hallDesk-2.glb"
+    },
+    {
+      "id": "source-desk-east-08",
+      "assetId": "hallDesk",
+      "variant": 2,
+      "material": "original",
+      "position": [
+        6.25228531,
+        0.0,
+        0.42909055
+      ],
+      "rotation": -1.57079637,
+      "dimensions": [
+        1.39999998,
+        0.75,
+        0.80000001
+      ],
+      "sourceRoot": "East_Desk_08_Island_A_East_Row_2",
+      "sourceMeshes": [
+        "East_Desk_08_Island_A_East_Row_2_Black_U_Frame",
+        "East_Desk_08_Island_A_East_Row_2_Dark_Pedestal_Two_Grey_Drawers",
+        "East_Desk_08_Island_A_East_Row_2_White_Rectangular_Top"
+      ],
+      "sourceWorldMatrix": [
+        [
+          -4e-08,
+          1.0,
+          0.0,
+          7.19999981
+        ],
+        [
+          -1.0,
+          -4e-08,
+          0.0,
+          -1.45000005
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldBounds": {
+        "min": [
+          5.85228521,
+          0.0,
+          -0.27090944
+        ],
+        "max": [
+          6.6522854,
+          0.75,
+          1.1290906
+        ]
+      },
+      "regionId": "hall",
+      "production": "assets/models/hallDesk-2.glb",
+      "proxy": "assets/proxies/hallDesk-2.glb"
+    },
+    {
+      "id": "source-desk-east-09",
+      "assetId": "hallDesk",
+      "variant": 2,
+      "material": "original",
+      "position": [
+        6.25228531,
+        0.0,
+        -0.9709095
+      ],
+      "rotation": -1.57079637,
+      "dimensions": [
+        1.39999998,
+        0.75,
+        0.80000001
+      ],
+      "sourceRoot": "East_Desk_09_Island_A_East_Row_3",
+      "sourceMeshes": [
+        "East_Desk_09_Island_A_East_Row_3_Black_U_Frame",
+        "East_Desk_09_Island_A_East_Row_3_Dark_Pedestal_Two_Grey_Drawers",
+        "East_Desk_09_Island_A_East_Row_3_White_Rectangular_Top"
+      ],
+      "sourceWorldMatrix": [
+        [
+          -4e-08,
+          1.0,
+          0.0,
+          7.19999981
+        ],
+        [
+          -1.0,
+          -4e-08,
+          0.0,
+          -0.05
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldBounds": {
+        "min": [
+          5.85228521,
+          0.0,
+          -1.67090948
+        ],
+        "max": [
+          6.6522854,
+          0.75,
+          -0.2709095
+        ]
+      },
+      "regionId": "hall",
+      "production": "assets/models/hallDesk-2.glb",
+      "proxy": "assets/proxies/hallDesk-2.glb"
+    },
+    {
+      "id": "source-desk-east-10",
+      "assetId": "hallDesk",
+      "variant": 3,
+      "material": "original",
+      "position": [
+        10.00446541,
+        0.0,
+        1.82909041
+      ],
+      "rotation": 1.57079637,
+      "dimensions": [
+        1.39999998,
+        0.75,
+        0.80000001
+      ],
+      "sourceRoot": "East_Desk_10_Island_B_West_Row_1",
+      "sourceMeshes": [
+        "East_Desk_10_Island_B_West_Row_1_Black_U_Frame",
+        "East_Desk_10_Island_B_West_Row_1_Dark_Pedestal_Two_Grey_Drawers",
+        "East_Desk_10_Island_B_West_Row_1_White_Rectangular_Top"
+      ],
+      "sourceWorldMatrix": [
+        [
+          -4e-08,
+          -1.0,
+          0.0,
+          10.95217991
+        ],
+        [
+          1.0,
+          -4e-08,
+          0.0,
+          -2.8499999
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldBounds": {
+        "min": [
+          9.60446579,
+          0.0,
+          1.12909036
+        ],
+        "max": [
+          10.40446503,
+          0.75,
+          2.52909045
+        ]
+      },
+      "regionId": "hall",
+      "production": "assets/models/hallDesk-3.glb",
+      "proxy": "assets/proxies/hallDesk-3.glb"
+    },
+    {
+      "id": "source-desk-east-11",
+      "assetId": "hallDesk",
+      "variant": 3,
+      "material": "original",
+      "position": [
+        10.00446541,
+        0.0,
+        0.42909055
+      ],
+      "rotation": 1.57079637,
+      "dimensions": [
+        1.39999998,
+        0.75,
+        0.80000001
+      ],
+      "sourceRoot": "East_Desk_11_Island_B_West_Row_2",
+      "sourceMeshes": [
+        "East_Desk_11_Island_B_West_Row_2_Black_U_Frame",
+        "East_Desk_11_Island_B_West_Row_2_Dark_Pedestal_Two_Grey_Drawers",
+        "East_Desk_11_Island_B_West_Row_2_White_Rectangular_Top"
+      ],
+      "sourceWorldMatrix": [
+        [
+          -4e-08,
+          -1.0,
+          0.0,
+          10.95217991
+        ],
+        [
+          1.0,
+          -4e-08,
+          0.0,
+          -1.45000005
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldBounds": {
+        "min": [
+          9.60446579,
+          0.0,
+          -0.27090944
+        ],
+        "max": [
+          10.40446503,
+          0.75,
+          1.1290906
+        ]
+      },
+      "regionId": "hall",
+      "production": "assets/models/hallDesk-3.glb",
+      "proxy": "assets/proxies/hallDesk-3.glb"
+    },
+    {
+      "id": "source-desk-east-12",
+      "assetId": "hallDesk",
+      "variant": 3,
+      "material": "original",
+      "position": [
+        10.00446541,
+        0.0,
+        -0.9709095
+      ],
+      "rotation": 1.57079637,
+      "dimensions": [
+        1.39999998,
+        0.75,
+        0.80000001
+      ],
+      "sourceRoot": "East_Desk_12_Island_B_West_Row_3",
+      "sourceMeshes": [
+        "East_Desk_12_Island_B_West_Row_3_Black_U_Frame",
+        "East_Desk_12_Island_B_West_Row_3_Dark_Pedestal_Two_Grey_Drawers",
+        "East_Desk_12_Island_B_West_Row_3_White_Rectangular_Top"
+      ],
+      "sourceWorldMatrix": [
+        [
+          -4e-08,
+          -1.0,
+          0.0,
+          10.95217991
+        ],
+        [
+          1.0,
+          -4e-08,
+          0.0,
+          -0.05
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldBounds": {
+        "min": [
+          9.60446579,
+          0.0,
+          -1.67090948
+        ],
+        "max": [
+          10.40446503,
+          0.75,
+          -0.2709095
+        ]
+      },
+      "regionId": "hall",
+      "production": "assets/models/hallDesk-3.glb",
+      "proxy": "assets/proxies/hallDesk-3.glb"
+    },
+    {
+      "id": "source-desk-east-13",
+      "assetId": "hallDesk",
+      "variant": 2,
+      "material": "original",
+      "position": [
+        10.8044656,
+        0.0,
+        1.82909041
+      ],
+      "rotation": -1.57079637,
+      "dimensions": [
+        1.39999998,
+        0.75,
+        0.80000001
+      ],
+      "sourceRoot": "East_Desk_13_Island_B_East_Row_1",
+      "sourceMeshes": [
+        "East_Desk_13_Island_B_East_Row_1_Black_U_Frame",
+        "East_Desk_13_Island_B_East_Row_1_Dark_Pedestal_Two_Grey_Drawers",
+        "East_Desk_13_Island_B_East_Row_1_White_Rectangular_Top"
+      ],
+      "sourceWorldMatrix": [
+        [
+          -4e-08,
+          1.0,
+          0.0,
+          11.7521801
+        ],
+        [
+          -1.0,
+          -4e-08,
+          0.0,
+          -2.8499999
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldBounds": {
+        "min": [
+          10.40446598,
+          0.0,
+          1.12909036
+        ],
+        "max": [
+          11.20446522,
+          0.75,
+          2.52909045
+        ]
+      },
+      "regionId": "hall",
+      "production": "assets/models/hallDesk-2.glb",
+      "proxy": "assets/proxies/hallDesk-2.glb"
+    },
+    {
+      "id": "source-desk-east-14",
+      "assetId": "hallDesk",
+      "variant": 2,
+      "material": "original",
+      "position": [
+        10.8044656,
+        0.0,
+        0.42909055
+      ],
+      "rotation": -1.57079637,
+      "dimensions": [
+        1.39999998,
+        0.75,
+        0.80000001
+      ],
+      "sourceRoot": "East_Desk_14_Island_B_East_Row_2",
+      "sourceMeshes": [
+        "East_Desk_14_Island_B_East_Row_2_Black_U_Frame",
+        "East_Desk_14_Island_B_East_Row_2_Dark_Pedestal_Two_Grey_Drawers",
+        "East_Desk_14_Island_B_East_Row_2_White_Rectangular_Top"
+      ],
+      "sourceWorldMatrix": [
+        [
+          -4e-08,
+          1.0,
+          0.0,
+          11.7521801
+        ],
+        [
+          -1.0,
+          -4e-08,
+          0.0,
+          -1.45000005
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldBounds": {
+        "min": [
+          10.40446598,
+          0.0,
+          -0.27090944
+        ],
+        "max": [
+          11.20446522,
+          0.75,
+          1.1290906
+        ]
+      },
+      "regionId": "hall",
+      "production": "assets/models/hallDesk-2.glb",
+      "proxy": "assets/proxies/hallDesk-2.glb"
+    },
+    {
+      "id": "source-desk-east-15",
+      "assetId": "hallDesk",
+      "variant": 2,
+      "material": "original",
+      "position": [
+        10.8044656,
+        0.0,
+        -0.9709095
+      ],
+      "rotation": -1.57079637,
+      "dimensions": [
+        1.39999998,
+        0.75,
+        0.80000001
+      ],
+      "sourceRoot": "East_Desk_15_Island_B_East_Row_3",
+      "sourceMeshes": [
+        "East_Desk_15_Island_B_East_Row_3_Black_U_Frame",
+        "East_Desk_15_Island_B_East_Row_3_Dark_Pedestal_Two_Grey_Drawers",
+        "East_Desk_15_Island_B_East_Row_3_White_Rectangular_Top"
+      ],
+      "sourceWorldMatrix": [
+        [
+          -4e-08,
+          1.0,
+          0.0,
+          11.7521801
+        ],
+        [
+          -1.0,
+          -4e-08,
+          0.0,
+          -0.05
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldBounds": {
+        "min": [
+          10.40446598,
+          0.0,
+          -1.67090948
+        ],
+        "max": [
+          11.20446522,
+          0.75,
+          -0.2709095
+        ]
+      },
+      "regionId": "hall",
+      "production": "assets/models/hallDesk-2.glb",
+      "proxy": "assets/proxies/hallDesk-2.glb"
+    },
+    {
+      "id": "source-desk-east-16",
+      "assetId": "hallDesk",
+      "variant": 3,
+      "material": "original",
+      "position": [
+        13.19174511,
+        0.0,
+        1.82909041
+      ],
+      "rotation": 1.57079637,
+      "dimensions": [
+        1.39999998,
+        0.75,
+        0.80000001
+      ],
+      "sourceRoot": "East_Desk_16_Outer_Bank_Row_1",
+      "sourceMeshes": [
+        "East_Desk_16_Outer_Bank_Row_1_Black_U_Frame",
+        "East_Desk_16_Outer_Bank_Row_1_Dark_Pedestal_Two_Grey_Drawers",
+        "East_Desk_16_Outer_Bank_Row_1_White_Rectangular_Top"
+      ],
+      "sourceWorldMatrix": [
+        [
+          -4e-08,
+          -1.0,
+          0.0,
+          14.13945961
+        ],
+        [
+          1.0,
+          -4e-08,
+          0.0,
+          -2.8499999
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldBounds": {
+        "min": [
+          12.79174549,
+          0.0,
+          1.12909036
+        ],
+        "max": [
+          13.59174473,
+          0.75,
+          2.52909045
+        ]
+      },
+      "regionId": "hall",
+      "production": "assets/models/hallDesk-3.glb",
+      "proxy": "assets/proxies/hallDesk-3.glb"
+    },
+    {
+      "id": "source-desk-east-17",
+      "assetId": "hallDesk",
+      "variant": 3,
+      "material": "original",
+      "position": [
+        13.19174511,
+        0.0,
+        0.42909055
+      ],
+      "rotation": 1.57079637,
+      "dimensions": [
+        1.39999998,
+        0.75,
+        0.80000001
+      ],
+      "sourceRoot": "East_Desk_17_Outer_Bank_Row_2",
+      "sourceMeshes": [
+        "East_Desk_17_Outer_Bank_Row_2_Black_U_Frame",
+        "East_Desk_17_Outer_Bank_Row_2_Dark_Pedestal_Two_Grey_Drawers",
+        "East_Desk_17_Outer_Bank_Row_2_White_Rectangular_Top"
+      ],
+      "sourceWorldMatrix": [
+        [
+          -4e-08,
+          -1.0,
+          0.0,
+          14.13945961
+        ],
+        [
+          1.0,
+          -4e-08,
+          0.0,
+          -1.45000005
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldBounds": {
+        "min": [
+          12.79174549,
+          0.0,
+          -0.27090944
+        ],
+        "max": [
+          13.59174473,
+          0.75,
+          1.1290906
+        ]
+      },
+      "regionId": "hall",
+      "production": "assets/models/hallDesk-3.glb",
+      "proxy": "assets/proxies/hallDesk-3.glb"
+    },
+    {
+      "id": "source-desk-east-18",
+      "assetId": "hallDesk",
+      "variant": 3,
+      "material": "original",
+      "position": [
+        13.19174511,
+        0.0,
+        -0.9709095
+      ],
+      "rotation": 1.57079637,
+      "dimensions": [
+        1.39999998,
+        0.75,
+        0.80000001
+      ],
+      "sourceRoot": "East_Desk_18_Outer_Bank_Row_3",
+      "sourceMeshes": [
+        "East_Desk_18_Outer_Bank_Row_3_Black_U_Frame",
+        "East_Desk_18_Outer_Bank_Row_3_Dark_Pedestal_Two_Grey_Drawers",
+        "East_Desk_18_Outer_Bank_Row_3_White_Rectangular_Top"
+      ],
+      "sourceWorldMatrix": [
+        [
+          -4e-08,
+          -1.0,
+          0.0,
+          14.13945961
+        ],
+        [
+          1.0,
+          -4e-08,
+          0.0,
+          -0.05
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "worldBounds": {
+        "min": [
+          12.79174549,
+          0.0,
+          -1.67090948
+        ],
+        "max": [
+          13.59174473,
+          0.75,
+          -0.2709095
+        ]
+      },
+      "regionId": "hall",
+      "production": "assets/models/hallDesk-3.glb",
+      "proxy": "assets/proxies/hallDesk-3.glb"
+    }
+  ],
+  "doors": [
+    {
+      "id": "door-02",
+      "sourceRoot": "Door_02_CLOSED",
+      "leafName": "Door_02_CLOSED_Leaf",
+      "sourceMeshes": [
+        "Door_02_CLOSED_Frame_Head",
+        "Door_02_CLOSED_Hardware_Back_Handle_Rosette",
+        "Door_02_CLOSED_Hardware_Back_Key_Cylinder_Body",
+        "Door_02_CLOSED_Hardware_Back_Key_Cylinder_Head",
+        "Door_02_CLOSED_Hardware_Back_Key_Rosette",
+        "Door_02_CLOSED_Hardware_Back_Key_Slot",
+        "Door_02_CLOSED_Hardware_Back_Lever",
+        "Door_02_CLOSED_Hardware_Back_Lever_Return",
+        "Door_02_CLOSED_Hardware_Back_Spindle",
+        "Door_02_CLOSED_Hardware_Hall_Handle_Rosette",
+        "Door_02_CLOSED_Hardware_Hall_Key_Cylinder_Body",
+        "Door_02_CLOSED_Hardware_Hall_Key_Cylinder_Head",
+        "Door_02_CLOSED_Hardware_Hall_Key_Rosette",
+        "Door_02_CLOSED_Hardware_Hall_Key_Slot",
+        "Door_02_CLOSED_Hardware_Hall_Lever",
+        "Door_02_CLOSED_Hardware_Hall_Lever_Return",
+        "Door_02_CLOSED_Hardware_Hall_Spindle",
+        "Door_02_CLOSED_Jamb_L",
+        "Door_02_CLOSED_Jamb_R",
+        "Door_02_CLOSED_Leaf",
+        "Door_02_CLOSED_Threshold"
+      ],
+      "wallId": "wall-23",
+      "label": "Двері 02",
+      "position": [
+        -21.51837223,
+        1.02250004,
+        1.75492458
+      ],
+      "along": -21.51837223,
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "rotation": 3.14159265,
+      "wallSurfaceCoordinate": 1.70492439,
+      "leafWidth": 0.90000153,
+      "leafHeight": 2.04500008,
+      "opening": {
+        "id": "door-02",
+        "min": -22.01837223,
+        "max": -21.01837223,
+        "bottom": 0,
+        "top": 2.1,
+        "kind": "door"
+      },
+      "interactive": false,
+      "regionId": "hall",
+      "classification": "Exactly one face is in the connected main hall polygon; all closed door leaves were barriers",
+      "plaquePosition": [
+        -22.19337223,
+        1.55,
+        1.67992439
+      ],
+      "colorElementPosition": [
+        -22.47837223,
+        1.06,
+        1.68792439
+      ],
+      "anchorSide": -1,
+      "plaque": {
+        "assetId": "doorPlaque",
+        "variant": 1,
+        "position": [
+          -22.19337223,
+          1.55,
+          1.67992439
+        ],
+        "rotation": 3.14159265,
+        "dimensions": [
+          0.19,
+          0.145,
+          0.034
+        ]
+      },
+      "colorElement": {
+        "assetId": "brandDoorPanel",
+        "variant": 1,
+        "position": [
+          -22.47837223,
+          1.06,
+          1.68792439
+        ],
+        "rotation": 3.14159265,
+        "dimensions": [
+          0.24,
+          2.12,
+          0.018
+        ]
+      }
+    },
+    {
+      "id": "door-03",
+      "sourceRoot": "Door_03_CLOSED",
+      "leafName": "Door_03_CLOSED_Leaf",
+      "sourceMeshes": [
+        "Door_03_CLOSED_Frame_Head",
+        "Door_03_CLOSED_Hardware_Back_Handle_Rosette",
+        "Door_03_CLOSED_Hardware_Back_Key_Cylinder_Body",
+        "Door_03_CLOSED_Hardware_Back_Key_Cylinder_Head",
+        "Door_03_CLOSED_Hardware_Back_Key_Rosette",
+        "Door_03_CLOSED_Hardware_Back_Key_Slot",
+        "Door_03_CLOSED_Hardware_Back_Lever",
+        "Door_03_CLOSED_Hardware_Back_Lever_Return",
+        "Door_03_CLOSED_Hardware_Back_Spindle",
+        "Door_03_CLOSED_Hardware_Hall_Handle_Rosette",
+        "Door_03_CLOSED_Hardware_Hall_Key_Cylinder_Body",
+        "Door_03_CLOSED_Hardware_Hall_Key_Cylinder_Head",
+        "Door_03_CLOSED_Hardware_Hall_Key_Rosette",
+        "Door_03_CLOSED_Hardware_Hall_Key_Slot",
+        "Door_03_CLOSED_Hardware_Hall_Lever",
+        "Door_03_CLOSED_Hardware_Hall_Lever_Return",
+        "Door_03_CLOSED_Hardware_Hall_Spindle",
+        "Door_03_CLOSED_Jamb_L",
+        "Door_03_CLOSED_Jamb_R",
+        "Door_03_CLOSED_Leaf",
+        "Door_03_CLOSED_Threshold"
+      ],
+      "wallId": "wall-21",
+      "label": "Переговорна",
+      "position": [
+        1.9513777,
+        1.02250004,
+        -3.09889026
+      ],
+      "along": 1.9513777,
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "rotation": 3.14159265,
+      "wallSurfaceCoordinate": -3.14889045,
+      "leafWidth": 0.90000153,
+      "leafHeight": 2.04500008,
+      "opening": {
+        "id": "door-03",
+        "min": 1.4513777,
+        "max": 2.4513777,
+        "bottom": 0,
+        "top": 2.1,
+        "kind": "door"
+      },
+      "interactive": true,
+      "regionId": "hall",
+      "classification": "Exactly one face is in the connected main hall polygon; all closed door leaves were barriers",
+      "plaquePosition": [
+        1.2763777,
+        1.55,
+        -3.17389045
+      ],
+      "colorElementPosition": [
+        0.9913777,
+        1.06,
+        -3.16589045
+      ],
+      "anchorSide": -1,
+      "plaque": {
+        "assetId": "doorPlaque",
+        "variant": 1,
+        "position": [
+          1.2763777,
+          1.55,
+          -3.17389045
+        ],
+        "rotation": 3.14159265,
+        "dimensions": [
+          0.19,
+          0.145,
+          0.034
+        ]
+      },
+      "colorElement": {
+        "assetId": "brandDoorPanel",
+        "variant": 1,
+        "position": [
+          0.9913777,
+          1.06,
+          -3.16589045
+        ],
+        "rotation": 3.14159265,
+        "dimensions": [
+          0.24,
+          2.12,
+          0.018
+        ]
+      }
+    },
+    {
+      "id": "door-04",
+      "sourceRoot": "Door_04_CLOSED",
+      "leafName": "Door_04_CLOSED_Leaf",
+      "sourceMeshes": [
+        "Door_04_CLOSED_Frame_Head",
+        "Door_04_CLOSED_Hardware_Back_Handle_Rosette",
+        "Door_04_CLOSED_Hardware_Back_Key_Cylinder_Body",
+        "Door_04_CLOSED_Hardware_Back_Key_Cylinder_Head",
+        "Door_04_CLOSED_Hardware_Back_Key_Rosette",
+        "Door_04_CLOSED_Hardware_Back_Key_Slot",
+        "Door_04_CLOSED_Hardware_Back_Lever",
+        "Door_04_CLOSED_Hardware_Back_Lever_Return",
+        "Door_04_CLOSED_Hardware_Back_Spindle",
+        "Door_04_CLOSED_Hardware_Hall_Handle_Rosette",
+        "Door_04_CLOSED_Hardware_Hall_Key_Cylinder_Body",
+        "Door_04_CLOSED_Hardware_Hall_Key_Cylinder_Head",
+        "Door_04_CLOSED_Hardware_Hall_Key_Rosette",
+        "Door_04_CLOSED_Hardware_Hall_Key_Slot",
+        "Door_04_CLOSED_Hardware_Hall_Lever",
+        "Door_04_CLOSED_Hardware_Hall_Lever_Return",
+        "Door_04_CLOSED_Hardware_Hall_Spindle",
+        "Door_04_CLOSED_Jamb_L",
+        "Door_04_CLOSED_Jamb_R",
+        "Door_04_CLOSED_Leaf",
+        "Door_04_CLOSED_Threshold"
+      ],
+      "wallId": "wall-38",
+      "label": "Двері 04",
+      "position": [
+        -12.09771412,
+        1.02250004,
+        -5.1735117
+      ],
+      "along": -12.09771412,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "rotation": 0,
+      "wallSurfaceCoordinate": -5.1235115,
+      "leafWidth": 0.90000153,
+      "leafHeight": 2.04500008,
+      "opening": {
+        "id": "door-04",
+        "min": -12.59771412,
+        "max": -11.59771412,
+        "bottom": 0,
+        "top": 2.1,
+        "kind": "door"
+      },
+      "interactive": false,
+      "regionId": "hall",
+      "classification": "Exactly one face is in the connected main hall polygon; all closed door leaves were barriers",
+      "plaquePosition": [
+        -12.77271412,
+        1.55,
+        -5.09851151
+      ],
+      "colorElementPosition": [
+        -13.05771412,
+        1.06,
+        -5.10651151
+      ],
+      "anchorSide": -1,
+      "plaque": {
+        "assetId": "doorPlaque",
+        "variant": 1,
+        "position": [
+          -12.77271412,
+          1.55,
+          -5.09851151
+        ],
+        "rotation": 0,
+        "dimensions": [
+          0.19,
+          0.145,
+          0.034
+        ]
+      },
+      "colorElement": {
+        "assetId": "brandDoorPanel",
+        "variant": 1,
+        "position": [
+          -13.05771412,
+          1.06,
+          -5.10651151
+        ],
+        "rotation": 0,
+        "dimensions": [
+          0.24,
+          2.12,
+          0.018
+        ]
+      }
+    },
+    {
+      "id": "door-05",
+      "sourceRoot": "Door_05_CLOSED",
+      "leafName": "Door_05_CLOSED_Leaf",
+      "sourceMeshes": [
+        "Door_05_CLOSED_Frame_Head",
+        "Door_05_CLOSED_Hardware_Back_Handle_Rosette",
+        "Door_05_CLOSED_Hardware_Back_Key_Cylinder_Body",
+        "Door_05_CLOSED_Hardware_Back_Key_Cylinder_Head",
+        "Door_05_CLOSED_Hardware_Back_Key_Rosette",
+        "Door_05_CLOSED_Hardware_Back_Key_Slot",
+        "Door_05_CLOSED_Hardware_Back_Lever",
+        "Door_05_CLOSED_Hardware_Back_Lever_Return",
+        "Door_05_CLOSED_Hardware_Back_Spindle",
+        "Door_05_CLOSED_Hardware_Hall_Handle_Rosette",
+        "Door_05_CLOSED_Hardware_Hall_Key_Cylinder_Body",
+        "Door_05_CLOSED_Hardware_Hall_Key_Cylinder_Head",
+        "Door_05_CLOSED_Hardware_Hall_Key_Rosette",
+        "Door_05_CLOSED_Hardware_Hall_Key_Slot",
+        "Door_05_CLOSED_Hardware_Hall_Lever",
+        "Door_05_CLOSED_Hardware_Hall_Lever_Return",
+        "Door_05_CLOSED_Hardware_Hall_Spindle",
+        "Door_05_CLOSED_Jamb_L",
+        "Door_05_CLOSED_Jamb_R",
+        "Door_05_CLOSED_Leaf",
+        "Door_05_CLOSED_Threshold"
+      ],
+      "wallId": "wall-38",
+      "label": "Двері 05",
+      "position": [
+        -6.28009384,
+        1.02250004,
+        -5.1735117
+      ],
+      "along": -6.28009384,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "rotation": 0,
+      "wallSurfaceCoordinate": -5.1235115,
+      "leafWidth": 0.90000153,
+      "leafHeight": 2.04500008,
+      "opening": {
+        "id": "door-05",
+        "min": -6.78009384,
+        "max": -5.78009384,
+        "bottom": 0,
+        "top": 2.1,
+        "kind": "door"
+      },
+      "interactive": false,
+      "regionId": "hall",
+      "classification": "Exactly one face is in the connected main hall polygon; all closed door leaves were barriers",
+      "plaquePosition": [
+        -6.95509384,
+        1.55,
+        -5.09851151
+      ],
+      "colorElementPosition": [
+        -7.24009384,
+        1.06,
+        -5.10651151
+      ],
+      "anchorSide": -1,
+      "plaque": {
+        "assetId": "doorPlaque",
+        "variant": 1,
+        "position": [
+          -6.95509384,
+          1.55,
+          -5.09851151
+        ],
+        "rotation": 0,
+        "dimensions": [
+          0.19,
+          0.145,
+          0.034
+        ]
+      },
+      "colorElement": {
+        "assetId": "brandDoorPanel",
+        "variant": 1,
+        "position": [
+          -7.24009384,
+          1.06,
+          -5.10651151
+        ],
+        "rotation": 0,
+        "dimensions": [
+          0.24,
+          2.12,
+          0.018
+        ]
+      }
+    },
+    {
+      "id": "door-06",
+      "sourceRoot": "Door_06_CLOSED",
+      "leafName": "Door_06_CLOSED_Leaf",
+      "sourceMeshes": [
+        "Door_06_CLOSED_Frame_Head",
+        "Door_06_CLOSED_Hardware_Back_Handle_Rosette",
+        "Door_06_CLOSED_Hardware_Back_Key_Cylinder_Body",
+        "Door_06_CLOSED_Hardware_Back_Key_Cylinder_Head",
+        "Door_06_CLOSED_Hardware_Back_Key_Rosette",
+        "Door_06_CLOSED_Hardware_Back_Key_Slot",
+        "Door_06_CLOSED_Hardware_Back_Lever",
+        "Door_06_CLOSED_Hardware_Back_Lever_Return",
+        "Door_06_CLOSED_Hardware_Back_Spindle",
+        "Door_06_CLOSED_Hardware_Hall_Handle_Rosette",
+        "Door_06_CLOSED_Hardware_Hall_Key_Cylinder_Body",
+        "Door_06_CLOSED_Hardware_Hall_Key_Cylinder_Head",
+        "Door_06_CLOSED_Hardware_Hall_Key_Rosette",
+        "Door_06_CLOSED_Hardware_Hall_Key_Slot",
+        "Door_06_CLOSED_Hardware_Hall_Lever",
+        "Door_06_CLOSED_Hardware_Hall_Lever_Return",
+        "Door_06_CLOSED_Hardware_Hall_Spindle",
+        "Door_06_CLOSED_Jamb_L",
+        "Door_06_CLOSED_Jamb_R",
+        "Door_06_CLOSED_Leaf",
+        "Door_06_CLOSED_Threshold"
+      ],
+      "wallId": "wall-38",
+      "label": "Двері 06",
+      "position": [
+        -0.36040943,
+        1.02250004,
+        -5.1735117
+      ],
+      "along": -0.36040943,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "rotation": 0,
+      "wallSurfaceCoordinate": -5.1235115,
+      "leafWidth": 0.90000153,
+      "leafHeight": 2.04500008,
+      "opening": {
+        "id": "door-06",
+        "min": -0.86040943,
+        "max": 0.13959057,
+        "bottom": 0,
+        "top": 2.1,
+        "kind": "door"
+      },
+      "interactive": false,
+      "regionId": "hall",
+      "classification": "Exactly one face is in the connected main hall polygon; all closed door leaves were barriers",
+      "plaquePosition": [
+        -1.03540943,
+        1.55,
+        -5.09851151
+      ],
+      "colorElementPosition": [
+        -1.32040943,
+        1.06,
+        -5.10651151
+      ],
+      "anchorSide": -1,
+      "plaque": {
+        "assetId": "doorPlaque",
+        "variant": 1,
+        "position": [
+          -1.03540943,
+          1.55,
+          -5.09851151
+        ],
+        "rotation": 0,
+        "dimensions": [
+          0.19,
+          0.145,
+          0.034
+        ]
+      },
+      "colorElement": {
+        "assetId": "brandDoorPanel",
+        "variant": 1,
+        "position": [
+          -1.32040943,
+          1.06,
+          -5.10651151
+        ],
+        "rotation": 0,
+        "dimensions": [
+          0.24,
+          2.12,
+          0.018
+        ]
+      }
+    },
+    {
+      "id": "door-07",
+      "sourceRoot": "Door_07_CLOSED",
+      "leafName": "Door_07_CLOSED_Leaf",
+      "sourceMeshes": [
+        "Door_07_CLOSED_Frame_Head",
+        "Door_07_CLOSED_Hardware_Back_Handle_Rosette",
+        "Door_07_CLOSED_Hardware_Back_Key_Cylinder_Body",
+        "Door_07_CLOSED_Hardware_Back_Key_Cylinder_Head",
+        "Door_07_CLOSED_Hardware_Back_Key_Rosette",
+        "Door_07_CLOSED_Hardware_Back_Key_Slot",
+        "Door_07_CLOSED_Hardware_Back_Lever",
+        "Door_07_CLOSED_Hardware_Back_Lever_Return",
+        "Door_07_CLOSED_Hardware_Back_Spindle",
+        "Door_07_CLOSED_Hardware_Hall_Handle_Rosette",
+        "Door_07_CLOSED_Hardware_Hall_Key_Cylinder_Body",
+        "Door_07_CLOSED_Hardware_Hall_Key_Cylinder_Head",
+        "Door_07_CLOSED_Hardware_Hall_Key_Rosette",
+        "Door_07_CLOSED_Hardware_Hall_Key_Slot",
+        "Door_07_CLOSED_Hardware_Hall_Lever",
+        "Door_07_CLOSED_Hardware_Hall_Lever_Return",
+        "Door_07_CLOSED_Hardware_Hall_Spindle",
+        "Door_07_CLOSED_Jamb_L",
+        "Door_07_CLOSED_Jamb_R",
+        "Door_07_CLOSED_Leaf",
+        "Door_07_CLOSED_Threshold"
+      ],
+      "wallId": "wall-38",
+      "label": "Двері 07",
+      "position": [
+        5.70669491,
+        1.02250004,
+        -5.1735117
+      ],
+      "along": 5.70669491,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "rotation": 0,
+      "wallSurfaceCoordinate": -5.1235115,
+      "leafWidth": 0.90000153,
+      "leafHeight": 2.04500008,
+      "opening": {
+        "id": "door-07",
+        "min": 5.20669491,
+        "max": 6.20669491,
+        "bottom": 0,
+        "top": 2.1,
+        "kind": "door"
+      },
+      "interactive": false,
+      "regionId": "hall",
+      "classification": "Exactly one face is in the connected main hall polygon; all closed door leaves were barriers",
+      "plaquePosition": [
+        5.03169491,
+        1.55,
+        -5.09851151
+      ],
+      "colorElementPosition": [
+        4.74669491,
+        1.06,
+        -5.10651151
+      ],
+      "anchorSide": -1,
+      "plaque": {
+        "assetId": "doorPlaque",
+        "variant": 1,
+        "position": [
+          5.03169491,
+          1.55,
+          -5.09851151
+        ],
+        "rotation": 0,
+        "dimensions": [
+          0.19,
+          0.145,
+          0.034
+        ]
+      },
+      "colorElement": {
+        "assetId": "brandDoorPanel",
+        "variant": 1,
+        "position": [
+          4.74669491,
+          1.06,
+          -5.10651151
+        ],
+        "rotation": 0,
+        "dimensions": [
+          0.24,
+          2.12,
+          0.018
+        ]
+      }
+    },
+    {
+      "id": "door-08",
+      "sourceRoot": "Door_08_CLOSED",
+      "leafName": "Door_08_CLOSED_Leaf",
+      "sourceMeshes": [
+        "Door_08_CLOSED_Frame_Head",
+        "Door_08_CLOSED_Hardware_Back_Handle_Rosette",
+        "Door_08_CLOSED_Hardware_Back_Key_Cylinder_Body",
+        "Door_08_CLOSED_Hardware_Back_Key_Cylinder_Head",
+        "Door_08_CLOSED_Hardware_Back_Key_Rosette",
+        "Door_08_CLOSED_Hardware_Back_Key_Slot",
+        "Door_08_CLOSED_Hardware_Back_Lever",
+        "Door_08_CLOSED_Hardware_Back_Lever_Return",
+        "Door_08_CLOSED_Hardware_Back_Spindle",
+        "Door_08_CLOSED_Hardware_Hall_Handle_Rosette",
+        "Door_08_CLOSED_Hardware_Hall_Key_Cylinder_Body",
+        "Door_08_CLOSED_Hardware_Hall_Key_Cylinder_Head",
+        "Door_08_CLOSED_Hardware_Hall_Key_Rosette",
+        "Door_08_CLOSED_Hardware_Hall_Key_Slot",
+        "Door_08_CLOSED_Hardware_Hall_Lever",
+        "Door_08_CLOSED_Hardware_Hall_Lever_Return",
+        "Door_08_CLOSED_Hardware_Hall_Spindle",
+        "Door_08_CLOSED_Jamb_L",
+        "Door_08_CLOSED_Jamb_R",
+        "Door_08_CLOSED_Leaf",
+        "Door_08_CLOSED_Threshold"
+      ],
+      "wallId": "wall-38",
+      "label": "Двері 08",
+      "position": [
+        11.95368893,
+        1.02250004,
+        -5.1735117
+      ],
+      "along": 11.95368893,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "rotation": 0,
+      "wallSurfaceCoordinate": -5.1235115,
+      "leafWidth": 0.90000153,
+      "leafHeight": 2.04500008,
+      "opening": {
+        "id": "door-08",
+        "min": 11.45368893,
+        "max": 12.45368893,
+        "bottom": 0,
+        "top": 2.1,
+        "kind": "door"
+      },
+      "interactive": false,
+      "regionId": "hall",
+      "classification": "Exactly one face is in the connected main hall polygon; all closed door leaves were barriers",
+      "plaquePosition": [
+        11.27868893,
+        1.55,
+        -5.09851151
+      ],
+      "colorElementPosition": [
+        10.99368893,
+        1.06,
+        -5.10651151
+      ],
+      "anchorSide": -1,
+      "plaque": {
+        "assetId": "doorPlaque",
+        "variant": 1,
+        "position": [
+          11.27868893,
+          1.55,
+          -5.09851151
+        ],
+        "rotation": 0,
+        "dimensions": [
+          0.19,
+          0.145,
+          0.034
+        ]
+      },
+      "colorElement": {
+        "assetId": "brandDoorPanel",
+        "variant": 1,
+        "position": [
+          10.99368893,
+          1.06,
+          -5.10651151
+        ],
+        "rotation": 0,
+        "dimensions": [
+          0.24,
+          2.12,
+          0.018
+        ]
+      }
+    },
+    {
+      "id": "door-09",
+      "sourceRoot": "Door_09_CLOSED",
+      "leafName": "Door_09_CLOSED_Leaf",
+      "sourceMeshes": [
+        "Door_09_CLOSED_Frame_Head",
+        "Door_09_CLOSED_Hardware_Back_Handle_Rosette",
+        "Door_09_CLOSED_Hardware_Back_Key_Cylinder_Body",
+        "Door_09_CLOSED_Hardware_Back_Key_Cylinder_Head",
+        "Door_09_CLOSED_Hardware_Back_Key_Rosette",
+        "Door_09_CLOSED_Hardware_Back_Key_Slot",
+        "Door_09_CLOSED_Hardware_Back_Lever",
+        "Door_09_CLOSED_Hardware_Back_Lever_Return",
+        "Door_09_CLOSED_Hardware_Back_Spindle",
+        "Door_09_CLOSED_Hardware_Hall_Handle_Rosette",
+        "Door_09_CLOSED_Hardware_Hall_Key_Cylinder_Body",
+        "Door_09_CLOSED_Hardware_Hall_Key_Cylinder_Head",
+        "Door_09_CLOSED_Hardware_Hall_Key_Rosette",
+        "Door_09_CLOSED_Hardware_Hall_Key_Slot",
+        "Door_09_CLOSED_Hardware_Hall_Lever",
+        "Door_09_CLOSED_Hardware_Hall_Lever_Return",
+        "Door_09_CLOSED_Hardware_Hall_Spindle",
+        "Door_09_CLOSED_Jamb_L",
+        "Door_09_CLOSED_Jamb_R",
+        "Door_09_CLOSED_Leaf",
+        "Door_09_CLOSED_Threshold"
+      ],
+      "wallId": "wall-38",
+      "label": "Двері 09",
+      "position": [
+        18.98034222,
+        1.02250004,
+        -5.1735117
+      ],
+      "along": 18.98034222,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "rotation": 0,
+      "wallSurfaceCoordinate": -5.1235115,
+      "leafWidth": 0.90000153,
+      "leafHeight": 2.04500008,
+      "opening": {
+        "id": "door-09",
+        "min": 18.48034222,
+        "max": 19.48034222,
+        "bottom": 0,
+        "top": 2.1,
+        "kind": "door"
+      },
+      "interactive": false,
+      "regionId": "hall",
+      "classification": "Exactly one face is in the connected main hall polygon; all closed door leaves were barriers",
+      "plaquePosition": [
+        18.30534222,
+        1.55,
+        -5.09851151
+      ],
+      "colorElementPosition": [
+        18.02034222,
+        1.06,
+        -5.10651151
+      ],
+      "anchorSide": -1,
+      "plaque": {
+        "assetId": "doorPlaque",
+        "variant": 1,
+        "position": [
+          18.30534222,
+          1.55,
+          -5.09851151
+        ],
+        "rotation": 0,
+        "dimensions": [
+          0.19,
+          0.145,
+          0.034
+        ]
+      },
+      "colorElement": {
+        "assetId": "brandDoorPanel",
+        "variant": 1,
+        "position": [
+          18.02034222,
+          1.06,
+          -5.10651151
+        ],
+        "rotation": 0,
+        "dimensions": [
+          0.24,
+          2.12,
+          0.018
+        ]
+      }
+    },
+    {
+      "id": "door-10",
+      "sourceRoot": "Door_10_CLOSED",
+      "leafName": "Door_10_CLOSED_Leaf",
+      "sourceMeshes": [
+        "Door_10_CLOSED_Frame_Head",
+        "Door_10_CLOSED_Hardware_Back_Handle_Rosette",
+        "Door_10_CLOSED_Hardware_Back_Key_Cylinder_Body",
+        "Door_10_CLOSED_Hardware_Back_Key_Cylinder_Head",
+        "Door_10_CLOSED_Hardware_Back_Key_Rosette",
+        "Door_10_CLOSED_Hardware_Back_Key_Slot",
+        "Door_10_CLOSED_Hardware_Back_Lever",
+        "Door_10_CLOSED_Hardware_Back_Lever_Return",
+        "Door_10_CLOSED_Hardware_Back_Spindle",
+        "Door_10_CLOSED_Hardware_Hall_Handle_Rosette",
+        "Door_10_CLOSED_Hardware_Hall_Key_Cylinder_Body",
+        "Door_10_CLOSED_Hardware_Hall_Key_Cylinder_Head",
+        "Door_10_CLOSED_Hardware_Hall_Key_Rosette",
+        "Door_10_CLOSED_Hardware_Hall_Key_Slot",
+        "Door_10_CLOSED_Hardware_Hall_Lever",
+        "Door_10_CLOSED_Hardware_Hall_Lever_Return",
+        "Door_10_CLOSED_Hardware_Hall_Spindle",
+        "Door_10_CLOSED_Jamb_L",
+        "Door_10_CLOSED_Jamb_R",
+        "Door_10_CLOSED_Leaf",
+        "Door_10_CLOSED_Threshold"
+      ],
+      "wallId": "wall-13",
+      "label": "Двері 10",
+      "position": [
+        23.79938538,
+        1.02250004,
+        2.42431169
+      ],
+      "along": 2.42431169,
+      "normal": [
+        -1,
+        0,
+        0
+      ],
+      "rotation": -1.57079633,
+      "wallSurfaceCoordinate": 23.74938519,
+      "leafWidth": 0.90000153,
+      "leafHeight": 2.04500008,
+      "opening": {
+        "id": "door-10",
+        "min": 1.92431169,
+        "max": 2.92431169,
+        "bottom": 0,
+        "top": 2.1,
+        "kind": "door"
+      },
+      "interactive": false,
+      "regionId": "hall",
+      "classification": "Exactly one face is in the connected main hall polygon; all closed door leaves were barriers",
+      "plaquePosition": [
+        23.72438519,
+        1.55,
+        1.74931169
+      ],
+      "colorElementPosition": [
+        23.73238519,
+        1.06,
+        1.46431169
+      ],
+      "anchorSide": -1,
+      "plaque": {
+        "assetId": "doorPlaque",
+        "variant": 1,
+        "position": [
+          23.72438519,
+          1.55,
+          1.74931169
+        ],
+        "rotation": -1.57079633,
+        "dimensions": [
+          0.19,
+          0.145,
+          0.034
+        ]
+      },
+      "colorElement": {
+        "assetId": "brandDoorPanel",
+        "variant": 1,
+        "position": [
+          23.73238519,
+          1.06,
+          1.46431169
+        ],
+        "rotation": -1.57079633,
+        "dimensions": [
+          0.24,
+          2.12,
+          0.018
+        ]
+      }
+    },
+    {
+      "id": "door-11",
+      "sourceRoot": "Door_11_CLOSED",
+      "leafName": "Door_11_CLOSED_Leaf",
+      "sourceMeshes": [
+        "Door_11_CLOSED_Frame_Head",
+        "Door_11_CLOSED_Hardware_Back_Handle_Rosette",
+        "Door_11_CLOSED_Hardware_Back_Key_Cylinder_Body",
+        "Door_11_CLOSED_Hardware_Back_Key_Cylinder_Head",
+        "Door_11_CLOSED_Hardware_Back_Key_Rosette",
+        "Door_11_CLOSED_Hardware_Back_Key_Slot",
+        "Door_11_CLOSED_Hardware_Back_Lever",
+        "Door_11_CLOSED_Hardware_Back_Lever_Return",
+        "Door_11_CLOSED_Hardware_Back_Spindle",
+        "Door_11_CLOSED_Hardware_Hall_Handle_Rosette",
+        "Door_11_CLOSED_Hardware_Hall_Key_Cylinder_Body",
+        "Door_11_CLOSED_Hardware_Hall_Key_Cylinder_Head",
+        "Door_11_CLOSED_Hardware_Hall_Key_Rosette",
+        "Door_11_CLOSED_Hardware_Hall_Key_Slot",
+        "Door_11_CLOSED_Hardware_Hall_Lever",
+        "Door_11_CLOSED_Hardware_Hall_Lever_Return",
+        "Door_11_CLOSED_Hardware_Hall_Spindle",
+        "Door_11_CLOSED_Jamb_L",
+        "Door_11_CLOSED_Jamb_R",
+        "Door_11_CLOSED_Leaf",
+        "Door_11_CLOSED_Threshold"
+      ],
+      "wallId": "wall-13",
+      "label": "Двері 11",
+      "position": [
+        23.79938538,
+        1.02250004,
+        -1.95723055
+      ],
+      "along": -1.95723055,
+      "normal": [
+        -1,
+        0,
+        0
+      ],
+      "rotation": -1.57079633,
+      "wallSurfaceCoordinate": 23.74938519,
+      "leafWidth": 0.90000147,
+      "leafHeight": 2.04500008,
+      "opening": {
+        "id": "door-11",
+        "min": -2.45723055,
+        "max": -1.45723055,
+        "bottom": 0,
+        "top": 2.1,
+        "kind": "door"
+      },
+      "interactive": false,
+      "regionId": "hall",
+      "classification": "Exactly one face is in the connected main hall polygon; all closed door leaves were barriers",
+      "plaquePosition": [
+        23.72438519,
+        1.55,
+        -1.28223055
+      ],
+      "colorElementPosition": [
+        23.73238519,
+        1.06,
+        -0.99723055
+      ],
+      "anchorSide": 1,
+      "plaque": {
+        "assetId": "doorPlaque",
+        "variant": 1,
+        "position": [
+          23.72438519,
+          1.55,
+          -1.28223055
+        ],
+        "rotation": -1.57079633,
+        "dimensions": [
+          0.19,
+          0.145,
+          0.034
+        ]
+      },
+      "colorElement": {
+        "assetId": "brandDoorPanel",
+        "variant": 1,
+        "position": [
+          23.73238519,
+          1.06,
+          -0.99723055
+        ],
+        "rotation": -1.57079633,
+        "dimensions": [
+          0.24,
+          2.12,
+          0.018
+        ]
+      }
+    },
+    {
+      "id": "door-12",
+      "sourceRoot": "Door_12_CLOSED",
+      "leafName": "Door_12_CLOSED_Leaf",
+      "sourceMeshes": [
+        "Door_12_CLOSED_Frame_Head",
+        "Door_12_CLOSED_Hardware_Back_Handle_Rosette",
+        "Door_12_CLOSED_Hardware_Back_Key_Cylinder_Body",
+        "Door_12_CLOSED_Hardware_Back_Key_Cylinder_Head",
+        "Door_12_CLOSED_Hardware_Back_Key_Rosette",
+        "Door_12_CLOSED_Hardware_Back_Key_Slot",
+        "Door_12_CLOSED_Hardware_Back_Lever",
+        "Door_12_CLOSED_Hardware_Back_Lever_Return",
+        "Door_12_CLOSED_Hardware_Back_Spindle",
+        "Door_12_CLOSED_Hardware_Hall_Handle_Rosette",
+        "Door_12_CLOSED_Hardware_Hall_Key_Cylinder_Body",
+        "Door_12_CLOSED_Hardware_Hall_Key_Cylinder_Head",
+        "Door_12_CLOSED_Hardware_Hall_Key_Rosette",
+        "Door_12_CLOSED_Hardware_Hall_Key_Slot",
+        "Door_12_CLOSED_Hardware_Hall_Lever",
+        "Door_12_CLOSED_Hardware_Hall_Lever_Return",
+        "Door_12_CLOSED_Hardware_Hall_Spindle",
+        "Door_12_CLOSED_Jamb_L",
+        "Door_12_CLOSED_Jamb_R",
+        "Door_12_CLOSED_Leaf",
+        "Door_12_CLOSED_Threshold"
+      ],
+      "wallId": "wall-13",
+      "label": "Двері 12",
+      "position": [
+        23.79938538,
+        1.02250004,
+        -3.49662204
+      ],
+      "along": -3.49662204,
+      "normal": [
+        -1,
+        0,
+        0
+      ],
+      "rotation": -1.57079633,
+      "wallSurfaceCoordinate": 23.74938519,
+      "leafWidth": 0.90000153,
+      "leafHeight": 2.04500008,
+      "opening": {
+        "id": "door-12",
+        "min": -3.99662204,
+        "max": -2.99662204,
+        "bottom": 0,
+        "top": 2.1,
+        "kind": "door"
+      },
+      "interactive": false,
+      "regionId": "hall",
+      "classification": "Exactly one face is in the connected main hall polygon; all closed door leaves were barriers",
+      "plaquePosition": [
+        23.72438519,
+        1.55,
+        -4.17162204
+      ],
+      "colorElementPosition": [
+        23.73238519,
+        1.06,
+        -4.45662204
+      ],
+      "anchorSide": -1,
+      "plaque": {
+        "assetId": "doorPlaque",
+        "variant": 1,
+        "position": [
+          23.72438519,
+          1.55,
+          -4.17162204
+        ],
+        "rotation": -1.57079633,
+        "dimensions": [
+          0.19,
+          0.145,
+          0.034
+        ]
+      },
+      "colorElement": {
+        "assetId": "brandDoorPanel",
+        "variant": 1,
+        "position": [
+          23.73238519,
+          1.06,
+          -4.45662204
+        ],
+        "rotation": -1.57079633,
+        "dimensions": [
+          0.24,
+          2.12,
+          0.018
+        ]
+      }
+    },
+    {
+      "id": "door-13",
+      "sourceRoot": "Door_13_CLOSED",
+      "leafName": "Door_13_CLOSED_Leaf",
+      "sourceMeshes": [
+        "Door_13_CLOSED_Frame_Head",
+        "Door_13_CLOSED_Hardware_Back_Handle_Rosette",
+        "Door_13_CLOSED_Hardware_Back_Key_Cylinder_Body",
+        "Door_13_CLOSED_Hardware_Back_Key_Cylinder_Head",
+        "Door_13_CLOSED_Hardware_Back_Key_Rosette",
+        "Door_13_CLOSED_Hardware_Back_Key_Slot",
+        "Door_13_CLOSED_Hardware_Back_Lever",
+        "Door_13_CLOSED_Hardware_Back_Lever_Return",
+        "Door_13_CLOSED_Hardware_Back_Spindle",
+        "Door_13_CLOSED_Hardware_Hall_Handle_Rosette",
+        "Door_13_CLOSED_Hardware_Hall_Key_Cylinder_Body",
+        "Door_13_CLOSED_Hardware_Hall_Key_Cylinder_Head",
+        "Door_13_CLOSED_Hardware_Hall_Key_Rosette",
+        "Door_13_CLOSED_Hardware_Hall_Key_Slot",
+        "Door_13_CLOSED_Hardware_Hall_Lever",
+        "Door_13_CLOSED_Hardware_Hall_Lever_Return",
+        "Door_13_CLOSED_Hardware_Hall_Spindle",
+        "Door_13_CLOSED_Jamb_L",
+        "Door_13_CLOSED_Jamb_R",
+        "Door_13_CLOSED_Leaf",
+        "Door_13_CLOSED_Threshold"
+      ],
+      "wallId": "wall-38",
+      "label": "Двері 13",
+      "position": [
+        -19.34771412,
+        1.02250004,
+        -5.1735117
+      ],
+      "along": -19.34771412,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "rotation": 0,
+      "wallSurfaceCoordinate": -5.1235115,
+      "leafWidth": 0.90000153,
+      "leafHeight": 2.04500008,
+      "opening": {
+        "id": "door-13",
+        "min": -19.84771412,
+        "max": -18.84771412,
+        "bottom": 0,
+        "top": 2.1,
+        "kind": "door"
+      },
+      "interactive": false,
+      "regionId": "hall",
+      "classification": "Exactly one face is in the connected main hall polygon; all closed door leaves were barriers",
+      "plaquePosition": [
+        -20.02271412,
+        1.55,
+        -5.09851151
+      ],
+      "colorElementPosition": [
+        -20.30771412,
+        1.06,
+        -5.10651151
+      ],
+      "anchorSide": -1,
+      "plaque": {
+        "assetId": "doorPlaque",
+        "variant": 1,
+        "position": [
+          -20.02271412,
+          1.55,
+          -5.09851151
+        ],
+        "rotation": 0,
+        "dimensions": [
+          0.19,
+          0.145,
+          0.034
+        ]
+      },
+      "colorElement": {
+        "assetId": "brandDoorPanel",
+        "variant": 1,
+        "position": [
+          -20.30771412,
+          1.06,
+          -5.10651151
+        ],
+        "rotation": 0,
+        "dimensions": [
+          0.24,
+          2.12,
+          0.018
+        ]
+      }
+    },
+    {
+      "id": "door-14",
+      "sourceRoot": "Door_14_CLOSED",
+      "leafName": "Door_14_CLOSED_Leaf",
+      "sourceMeshes": [
+        "Door_14_CLOSED_Frame_Head",
+        "Door_14_CLOSED_Hardware_Back_Handle_Rosette",
+        "Door_14_CLOSED_Hardware_Back_Key_Cylinder_Body",
+        "Door_14_CLOSED_Hardware_Back_Key_Cylinder_Head",
+        "Door_14_CLOSED_Hardware_Back_Key_Rosette",
+        "Door_14_CLOSED_Hardware_Back_Key_Slot",
+        "Door_14_CLOSED_Hardware_Back_Lever",
+        "Door_14_CLOSED_Hardware_Back_Lever_Return",
+        "Door_14_CLOSED_Hardware_Back_Spindle",
+        "Door_14_CLOSED_Hardware_Hall_Handle_Rosette",
+        "Door_14_CLOSED_Hardware_Hall_Key_Cylinder_Body",
+        "Door_14_CLOSED_Hardware_Hall_Key_Cylinder_Head",
+        "Door_14_CLOSED_Hardware_Hall_Key_Rosette",
+        "Door_14_CLOSED_Hardware_Hall_Key_Slot",
+        "Door_14_CLOSED_Hardware_Hall_Lever",
+        "Door_14_CLOSED_Hardware_Hall_Lever_Return",
+        "Door_14_CLOSED_Hardware_Hall_Spindle",
+        "Door_14_CLOSED_Jamb_L",
+        "Door_14_CLOSED_Jamb_R",
+        "Door_14_CLOSED_Leaf",
+        "Door_14_CLOSED_Threshold"
+      ],
+      "wallId": "wall-12",
+      "label": "Сходи",
+      "position": [
+        -23.38849991,
+        1.02250004,
+        -3.85635323
+      ],
+      "along": -3.85635323,
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "rotation": 1.57079633,
+      "wallSurfaceCoordinate": -23.33850162,
+      "leafWidth": 0.90000153,
+      "leafHeight": 2.04500008,
+      "opening": {
+        "id": "door-14",
+        "min": -4.35635324,
+        "max": -3.35635323,
+        "bottom": 0,
+        "top": 2.1,
+        "kind": "door"
+      },
+      "interactive": false,
+      "regionId": "hall",
+      "classification": "Exactly one face is in the connected main hall polygon; all closed door leaves were barriers",
+      "plaquePosition": [
+        -23.31350163,
+        1.55,
+        -4.53135324
+      ],
+      "colorElementPosition": [
+        -23.32150162,
+        1.06,
+        -4.81635324
+      ],
+      "anchorSide": -1,
+      "plaque": {
+        "assetId": "doorPlaque",
+        "variant": 1,
+        "position": [
+          -23.31350163,
+          1.55,
+          -4.53135324
+        ],
+        "rotation": 1.57079633,
+        "dimensions": [
+          0.19,
+          0.145,
+          0.034
+        ]
+      },
+      "colorElement": {
+        "assetId": "brandDoorPanel",
+        "variant": 1,
+        "position": [
+          -23.32150162,
+          1.06,
+          -4.81635324
+        ],
+        "rotation": 1.57079633,
+        "dimensions": [
+          0.24,
+          2.12,
+          0.018
+        ]
+      }
+    },
+    {
+      "id": "door-15",
+      "sourceRoot": "Door_15_CLOSED",
+      "leafName": "Door_15_CLOSED_Leaf",
+      "sourceMeshes": [
+        "Door_15_CLOSED_Frame_Head",
+        "Door_15_CLOSED_Hardware_Back_Handle_Rosette",
+        "Door_15_CLOSED_Hardware_Back_Key_Cylinder_Body",
+        "Door_15_CLOSED_Hardware_Back_Key_Cylinder_Head",
+        "Door_15_CLOSED_Hardware_Back_Key_Rosette",
+        "Door_15_CLOSED_Hardware_Back_Key_Slot",
+        "Door_15_CLOSED_Hardware_Back_Lever",
+        "Door_15_CLOSED_Hardware_Back_Lever_Return",
+        "Door_15_CLOSED_Hardware_Back_Spindle",
+        "Door_15_CLOSED_Hardware_Hall_Handle_Rosette",
+        "Door_15_CLOSED_Hardware_Hall_Key_Cylinder_Body",
+        "Door_15_CLOSED_Hardware_Hall_Key_Cylinder_Head",
+        "Door_15_CLOSED_Hardware_Hall_Key_Rosette",
+        "Door_15_CLOSED_Hardware_Hall_Key_Slot",
+        "Door_15_CLOSED_Hardware_Hall_Lever",
+        "Door_15_CLOSED_Hardware_Hall_Lever_Return",
+        "Door_15_CLOSED_Hardware_Hall_Spindle",
+        "Door_15_CLOSED_Jamb_L",
+        "Door_15_CLOSED_Jamb_R",
+        "Door_15_CLOSED_Leaf",
+        "Door_15_CLOSED_Threshold"
+      ],
+      "wallId": "wall-4",
+      "label": "Вхід",
+      "position": [
+        -25.69495934,
+        1.02250004,
+        0.32909055
+      ],
+      "along": 0.32909055,
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "rotation": 1.57079633,
+      "wallSurfaceCoordinate": -25.64495914,
+      "leafWidth": 0.90000147,
+      "leafHeight": 2.04500008,
+      "opening": {
+        "id": "door-15",
+        "min": -0.17090945,
+        "max": 0.82909055,
+        "bottom": 0,
+        "top": 2.1,
+        "kind": "door"
+      },
+      "interactive": false,
+      "regionId": "hall",
+      "classification": "Exactly one face is in the connected main hall polygon; all closed door leaves were barriers",
+      "plaquePosition": [
+        -25.61995914,
+        1.55,
+        -0.34590945
+      ],
+      "colorElementPosition": [
+        -25.62795914,
+        1.06,
+        -0.63090945
+      ],
+      "anchorSide": -1,
+      "plaque": {
+        "assetId": "doorPlaque",
+        "variant": 1,
+        "position": [
+          -25.61995914,
+          1.55,
+          -0.34590945
+        ],
+        "rotation": 1.57079633,
+        "dimensions": [
+          0.19,
+          0.145,
+          0.034
+        ]
+      },
+      "colorElement": {
+        "assetId": "brandDoorPanel",
+        "variant": 1,
+        "position": [
+          -25.62795914,
+          1.06,
+          -0.63090945
+        ],
+        "rotation": 1.57079633,
+        "dimensions": [
+          0.24,
+          2.12,
+          0.018
+        ]
+      }
+    }
+  ],
+  "excludedDoors": [
+    {
+      "id": "door-01",
+      "sourceRoot": "Door_01_CLOSED",
+      "reason": "Neither face belongs to the connected main hall",
+      "hallFacingSides": []
+    }
+  ],
+  "hallWalls": [
+    {
+      "id": "wall-23",
+      "sourceNode": "Wall_23_Clean",
+      "axis": "z",
+      "coordinate": 1.70492439,
+      "min": -25.74496525,
+      "max": -20.85933369,
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "height": 3.5999999,
+      "thickness": 0.10000038,
+      "surface": "hall-facing actual mesh plane",
+      "openings": [
+        {
+          "id": "door-02",
+          "min": -22.01837223,
+          "max": -21.01837223,
+          "bottom": 0,
+          "top": 2.1,
+          "kind": "door"
+        }
+      ]
+    },
+    {
+      "id": "wall-21",
+      "sourceNode": "Wall_21_Clean",
+      "axis": "z",
+      "coordinate": -3.14889045,
+      "min": -2.65181451,
+      "max": 2.65181548,
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "height": 3.5999999,
+      "thickness": 0.09999991,
+      "surface": "hall-facing actual mesh plane",
+      "openings": [
+        {
+          "id": "door-03",
+          "min": 1.4513777,
+          "max": 2.4513777,
+          "bottom": 0,
+          "top": 2.1,
+          "kind": "door"
+        }
+      ]
+    },
+    {
+      "id": "wall-38",
+      "sourceNode": "Wall_38_Clean",
+      "axis": "z",
+      "coordinate": -5.1235115,
+      "min": -23.38850468,
+      "max": 23.84938557,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "height": 3.5999999,
+      "thickness": 0.10000038,
+      "surface": "hall-facing actual mesh plane",
+      "openings": [
+        {
+          "id": "door-04",
+          "min": -12.59771412,
+          "max": -11.59771412,
+          "bottom": 0,
+          "top": 2.1,
+          "kind": "door"
+        },
+        {
+          "id": "door-05",
+          "min": -6.78009384,
+          "max": -5.78009384,
+          "bottom": 0,
+          "top": 2.1,
+          "kind": "door"
+        },
+        {
+          "id": "door-06",
+          "min": -0.86040943,
+          "max": 0.13959057,
+          "bottom": 0,
+          "top": 2.1,
+          "kind": "door"
+        },
+        {
+          "id": "door-07",
+          "min": 5.20669491,
+          "max": 6.20669491,
+          "bottom": 0,
+          "top": 2.1,
+          "kind": "door"
+        },
+        {
+          "id": "door-08",
+          "min": 11.45368893,
+          "max": 12.45368893,
+          "bottom": 0,
+          "top": 2.1,
+          "kind": "door"
+        },
+        {
+          "id": "door-09",
+          "min": 18.48034222,
+          "max": 19.48034222,
+          "bottom": 0,
+          "top": 2.1,
+          "kind": "door"
+        },
+        {
+          "id": "door-13",
+          "min": -19.84771412,
+          "max": -18.84771412,
+          "bottom": 0,
+          "top": 2.1,
+          "kind": "door"
+        }
+      ]
+    },
+    {
+      "id": "wall-13",
+      "sourceNode": "Wall_13_Clean",
+      "axis": "x",
+      "coordinate": 23.74938519,
+      "min": -5.2235095,
+      "max": 3.21313028,
+      "normal": [
+        -1,
+        0,
+        0
+      ],
+      "height": 3.5999999,
+      "thickness": 0.10000038,
+      "surface": "hall-facing actual mesh plane",
+      "openings": [
+        {
+          "id": "door-10",
+          "min": 1.92431169,
+          "max": 2.92431169,
+          "bottom": 0,
+          "top": 2.1,
+          "kind": "door"
+        },
+        {
+          "id": "door-11",
+          "min": -2.45723055,
+          "max": -1.45723055,
+          "bottom": 0,
+          "top": 2.1,
+          "kind": "door"
+        },
+        {
+          "id": "door-12",
+          "min": -3.99662204,
+          "max": -2.99662204,
+          "bottom": 0,
+          "top": 2.1,
+          "kind": "door"
+        }
+      ]
+    },
+    {
+      "id": "wall-12",
+      "sourceNode": "Wall_12_Clean",
+      "axis": "x",
+      "coordinate": -23.33850162,
+      "min": -5.1235096,
+      "max": -0.9936895,
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "height": 3.5999999,
+      "thickness": 0.10000038,
+      "surface": "hall-facing actual mesh plane",
+      "openings": [
+        {
+          "id": "door-14",
+          "min": -4.35635324,
+          "max": -3.35635323,
+          "bottom": 0,
+          "top": 2.1,
+          "kind": "door"
+        }
+      ]
+    },
+    {
+      "id": "wall-4",
+      "sourceNode": "Wall_4_Clean",
+      "axis": "x",
+      "coordinate": -25.64495914,
+      "min": -1.0936895,
+      "max": 1.80492048,
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "height": 3.5999999,
+      "thickness": 0.10000038,
+      "surface": "hall-facing actual mesh plane",
+      "openings": [
+        {
+          "id": "door-15",
+          "min": -0.17090945,
+          "max": 0.82909055,
+          "bottom": 0,
+          "top": 2.1,
+          "kind": "door"
+        }
+      ]
+    }
+  ],
+  "hallBounds": {
+    "min": [
+      -25.64475914,
+      0,
+      -5.12331151
+    ],
+    "max": [
+      23.74918519,
+      4.32,
+      3.11292942
+    ]
+  },
+  "hallFloorPolygon": {
+    "outer": [
+      [
+        -23.33830162,
+        -5.12331151
+      ],
+      [
+        23.74918519,
+        -5.12331151
+      ],
+      [
+        23.74918519,
+        3.11292942
+      ],
+      [
+        15.21474174,
+        3.11292942
+      ],
+      [
+        15.21474174,
+        2.63757046
+      ],
+      [
+        15.11434136,
+        2.63757046
+      ],
+      [
+        15.11434136,
+        3.11292942
+      ],
+      [
+        9.4669247,
+        3.11292942
+      ],
+      [
+        9.4669247,
+        2.6547304
+      ],
+      [
+        9.36652432,
+        2.6547304
+      ],
+      [
+        9.36652432,
+        3.11292942
+      ],
+      [
+        8.78512577,
+        3.11292942
+      ],
+      [
+        8.78472577,
+        3.11292942
+      ],
+      [
+        3.41751054,
+        3.11292942
+      ],
+      [
+        3.41751054,
+        -3.04869054
+      ],
+      [
+        3.41751531,
+        -3.04869054
+      ],
+      [
+        3.41751531,
+        -3.14909045
+      ],
+      [
+        2.65201548,
+        -3.14909045
+      ],
+      [
+        2.65161548,
+        -3.14909045
+      ],
+      [
+        -2.65161451,
+        -3.14909045
+      ],
+      [
+        -2.65201451,
+        -3.14909045
+      ],
+      [
+        -3.29919447,
+        -3.14909045
+      ],
+      [
+        -3.29919447,
+        -3.14908949
+      ],
+      [
+        -3.29919447,
+        -3.04869054
+      ],
+      [
+        -3.29919447,
+        2.6136876
+      ],
+      [
+        -9.08110425,
+        2.6136876
+      ],
+      [
+        -9.08150424,
+        2.6136876
+      ],
+      [
+        -20.4847345,
+        2.6136876
+      ],
+      [
+        -20.4847345,
+        1.80512454
+      ],
+      [
+        -20.4847345,
+        1.70472439
+      ],
+      [
+        -20.4847345,
+        1.70472058
+      ],
+      [
+        -20.58513488,
+        1.70472058
+      ],
+      [
+        -20.58513488,
+        1.70472439
+      ],
+      [
+        -20.85913369,
+        1.70472439
+      ],
+      [
+        -20.85953369,
+        1.70472439
+      ],
+      [
+        -25.64475914,
+        1.70472439
+      ],
+      [
+        -25.64475914,
+        -0.9934865
+      ],
+      [
+        -23.70569457,
+        -0.9934865
+      ],
+      [
+        -23.70529457,
+        -0.9934865
+      ],
+      [
+        -23.33830544,
+        -0.9934865
+      ],
+      [
+        -23.33830544,
+        -0.9934895
+      ],
+      [
+        -23.33830162,
+        -0.9934895
+      ],
+      [
+        -23.33830162,
+        -5.12331151
+      ]
+    ],
+    "holes": [],
+    "numericalClosureTolerance": 0.0002,
+    "source": "Actual floor rectangle minus actual closed wall/leaf mesh bounds; no furniture blockers"
+  },
+  "hallAreaSquareMetres": 339.29517621,
+  "meetingRoom": {
+    "id": "meeting",
+    "sourceRoomId": "lounge-room-01",
+    "architectureId": "polycam-current-room-v1",
+    "bounds": {
+      "min": [
+        -2.60181754,
+        0,
+        -3.04889054
+      ],
+      "max": [
+        2.60181744,
+        4.32,
+        3.04889374
+      ]
+    },
+    "dimensions": {
+      "width": 5.20363498,
+      "depth": 6.09778428,
+      "height": 4.32
+    },
+    "walls": [
+      {
+        "id": "west",
+        "sourceWallId": "wall-17",
+        "axis": "x",
+        "coordinate": -2.60181754,
+        "min": -3.04889054,
+        "max": 3.04889374,
+        "normal": [
+          1,
+          0,
+          0
+        ],
+        "height": 3.6
+      },
+      {
+        "id": "east",
+        "sourceWallId": "wall-26",
+        "axis": "x",
+        "coordinate": 2.60181744,
+        "min": -3.04889054,
+        "max": 3.04889374,
+        "normal": [
+          -1,
+          0,
+          0
+        ],
+        "height": 3.6
+      },
+      {
+        "id": "near",
+        "sourceWallId": "wall-21",
+        "axis": "z",
+        "coordinate": -3.04889054,
+        "min": -2.60181754,
+        "max": 2.60181744,
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "height": 3.6
+      },
+      {
+        "id": "far",
+        "sourceWallId": "wall-16",
+        "axis": "z",
+        "coordinate": 3.04889374,
+        "min": -2.60181754,
+        "max": 2.60181744,
+        "normal": [
+          0,
+          0,
+          -1
+        ],
+        "height": 3.6
+      }
+    ],
+    "window": {
+      "wallId": "far",
+      "sourceId": "Window_06",
+      "min": -1.87675851,
+      "max": 1.89735658,
+      "sill": 1.42500687,
+      "height": 1.16320705,
+      "frameBounds": {
+        "min": [
+          -1.87675851,
+          1.42500687,
+          3.02959566
+        ],
+        "max": [
+          1.89735658,
+          2.58821392,
+          3.15959578
+        ]
+      }
+    },
+    "door": {
+      "wallId": "near",
+      "id": "door-03",
+      "center": 1.9513777,
+      "width": 0.90000153,
+      "height": 2.04500008,
+      "openingMin": 1.4513777,
+      "openingMax": 2.4513777,
+      "openingHeight": 2.1,
+      "hinge": [
+        1.5013769,
+        0,
+        -3.0988903
+      ],
+      "openAngle": -1.65806279,
+      "node": "Interactive_Door_03",
+      "hallAnchorWallId": "wall-21"
+    }
+  },
+  "staticFurnitureNodes": [
+    "Space_existingFurniture"
+  ],
+  "staticSourceMeshes": [
+    "Desk_01_Black_Steel_Frame",
+    "Desk_01_Grey_3_Drawer_Pedestal",
+    "Desk_01_White_Top",
+    "Desk_02_Black_Steel_Frame",
+    "Desk_02_Grey_3_Drawer_Pedestal",
+    "Desk_02_White_Top",
+    "Desk_03_Black_Steel_Frame",
+    "Desk_03_Grey_3_Drawer_Pedestal",
+    "Desk_03_White_Top",
+    "Desk_04_Black_Steel_Frame",
+    "Desk_04_Grey_3_Drawer_Pedestal",
+    "Desk_04_White_Top",
+    "Desk_05_Black_Steel_Frame",
+    "Desk_05_Grey_3_Drawer_Pedestal",
+    "Desk_05_White_Top",
+    "Desk_06_Black_Steel_Frame",
+    "Desk_06_Grey_3_Drawer_Pedestal",
+    "Desk_06_White_Top",
+    "Desk_07_Black_Steel_Frame",
+    "Desk_07_Grey_3_Drawer_Pedestal",
+    "Desk_07_White_Top",
+    "Desk_08_Black_Steel_Frame",
+    "Desk_08_Grey_3_Drawer_Pedestal",
+    "Desk_08_White_Top",
+    "East_Desk_01_Wall_Bank_Row_1_Black_U_Frame",
+    "East_Desk_01_Wall_Bank_Row_1_Dark_Pedestal_Two_Grey_Drawers",
+    "East_Desk_01_Wall_Bank_Row_1_White_Rectangular_Top",
+    "East_Desk_02_Wall_Bank_Row_2_Black_U_Frame",
+    "East_Desk_02_Wall_Bank_Row_2_Dark_Pedestal_Two_Grey_Drawers",
+    "East_Desk_02_Wall_Bank_Row_2_White_Rectangular_Top",
+    "East_Desk_03_Wall_Bank_Row_3_Black_U_Frame",
+    "East_Desk_03_Wall_Bank_Row_3_Dark_Pedestal_Two_Grey_Drawers",
+    "East_Desk_03_Wall_Bank_Row_3_White_Rectangular_Top",
+    "East_Desk_04_Island_A_West_Row_1_Black_U_Frame",
+    "East_Desk_04_Island_A_West_Row_1_Dark_Pedestal_Two_Grey_Drawers",
+    "East_Desk_04_Island_A_West_Row_1_White_Rectangular_Top",
+    "East_Desk_05_Island_A_West_Row_2_Black_U_Frame",
+    "East_Desk_05_Island_A_West_Row_2_Dark_Pedestal_Two_Grey_Drawers",
+    "East_Desk_05_Island_A_West_Row_2_White_Rectangular_Top",
+    "East_Desk_06_Island_A_West_Row_3_Black_U_Frame",
+    "East_Desk_06_Island_A_West_Row_3_Dark_Pedestal_Two_Grey_Drawers",
+    "East_Desk_06_Island_A_West_Row_3_White_Rectangular_Top",
+    "East_Desk_07_Island_A_East_Row_1_Black_U_Frame",
+    "East_Desk_07_Island_A_East_Row_1_Dark_Pedestal_Two_Grey_Drawers",
+    "East_Desk_07_Island_A_East_Row_1_White_Rectangular_Top",
+    "East_Desk_08_Island_A_East_Row_2_Black_U_Frame",
+    "East_Desk_08_Island_A_East_Row_2_Dark_Pedestal_Two_Grey_Drawers",
+    "East_Desk_08_Island_A_East_Row_2_White_Rectangular_Top",
+    "East_Desk_09_Island_A_East_Row_3_Black_U_Frame",
+    "East_Desk_09_Island_A_East_Row_3_Dark_Pedestal_Two_Grey_Drawers",
+    "East_Desk_09_Island_A_East_Row_3_White_Rectangular_Top",
+    "East_Desk_10_Island_B_West_Row_1_Black_U_Frame",
+    "East_Desk_10_Island_B_West_Row_1_Dark_Pedestal_Two_Grey_Drawers",
+    "East_Desk_10_Island_B_West_Row_1_White_Rectangular_Top",
+    "East_Desk_11_Island_B_West_Row_2_Black_U_Frame",
+    "East_Desk_11_Island_B_West_Row_2_Dark_Pedestal_Two_Grey_Drawers",
+    "East_Desk_11_Island_B_West_Row_2_White_Rectangular_Top",
+    "East_Desk_12_Island_B_West_Row_3_Black_U_Frame",
+    "East_Desk_12_Island_B_West_Row_3_Dark_Pedestal_Two_Grey_Drawers",
+    "East_Desk_12_Island_B_West_Row_3_White_Rectangular_Top",
+    "East_Desk_13_Island_B_East_Row_1_Black_U_Frame",
+    "East_Desk_13_Island_B_East_Row_1_Dark_Pedestal_Two_Grey_Drawers",
+    "East_Desk_13_Island_B_East_Row_1_White_Rectangular_Top",
+    "East_Desk_14_Island_B_East_Row_2_Black_U_Frame",
+    "East_Desk_14_Island_B_East_Row_2_Dark_Pedestal_Two_Grey_Drawers",
+    "East_Desk_14_Island_B_East_Row_2_White_Rectangular_Top",
+    "East_Desk_15_Island_B_East_Row_3_Black_U_Frame",
+    "East_Desk_15_Island_B_East_Row_3_Dark_Pedestal_Two_Grey_Drawers",
+    "East_Desk_15_Island_B_East_Row_3_White_Rectangular_Top",
+    "East_Desk_16_Outer_Bank_Row_1_Black_U_Frame",
+    "East_Desk_16_Outer_Bank_Row_1_Dark_Pedestal_Two_Grey_Drawers",
+    "East_Desk_16_Outer_Bank_Row_1_White_Rectangular_Top",
+    "East_Desk_17_Outer_Bank_Row_2_Black_U_Frame",
+    "East_Desk_17_Outer_Bank_Row_2_Dark_Pedestal_Two_Grey_Drawers",
+    "East_Desk_17_Outer_Bank_Row_2_White_Rectangular_Top",
+    "East_Desk_18_Outer_Bank_Row_3_Black_U_Frame",
+    "East_Desk_18_Outer_Bank_Row_3_Dark_Pedestal_Two_Grey_Drawers",
+    "East_Desk_18_Outer_Bank_Row_3_White_Rectangular_Top"
+  ],
+  "tableAssets": {
+    "manifest": "assets/architecture/hall-desk-manifest.json",
+    "editorProxyData": "assets-src/main-hall/editor-proxies.json"
+  },
+  "lightingNote": "Existing source furniture was excluded from the architecture Cycles bake; hiding static nodes does not leave baked furniture shadows",
+  "validation": {
+    "tables": 26,
+    "hallFacingDoors": 14,
+    "excludedDoors": [
+      "door-01"
+    ],
+    "allAnchorsOffDoorLeaves": true,
+    "allPairsAvoidOtherDoorOpenings": true
+  }
+}

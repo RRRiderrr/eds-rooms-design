@@ -1,13 +1,27 @@
+import {createCorporateSignage} from './corporate-signage';
+import {createWallClock} from './wall-clocks';
 import * as THREE from 'three';
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 import { getAsset, getMaterial, getVariant } from './catalog';
 import { createSignageObject } from './signage';
+import { createCorporateObject } from './corporate';
+import { createSourceDesk } from './source-desks';
+import { createPlanter } from './planter';
+import { createBotanicalDivider } from './botanical-dividers';
 import type { AppMode, MaterialVariant } from '../core/types';
 export type MaterialPalette=Partial<Record<MaterialVariant['surface']|'black'|'glass'|'paper'|'soil',THREE.Material>>;
 export function createAssetObject(assetId:string,variantIndex:number,materialId:string,mode:AppMode='archviz',palette:MaterialPalette={}):THREE.Group {
  const group=new THREE.Group();group.name=`${assetId}:${variantIndex}:${mode}`;group.userData={assetId,variant:variantIndex,mode};if(!variantIndex)return group;
  const asset=getAsset(assetId),variant=getVariant(assetId,variantIndex),selected=getMaterial(assetId,materialId),[w,h,d]=variant.dimensions;
+ if(assetId==='hallDesk')return createSourceDesk(variantIndex,mode==='editor');
+ if(assetId==='separator'&&variantIndex===3)return createPlanter([w,h,d],selected,mode==='editor');
+ if(assetId==='edsTimeline'||assetId==='edsUkraine')return createCorporateSignage(assetId==='edsTimeline'?'timeline':'ukraine',variantIndex,mode==='editor');
+ if(assetId==='wallClock'){const clock=createWallClock(variantIndex,mode==='editor');clock.position.z=-.0255;return clock;}
+ if(assetId==='botanicalDivider')return createBotanicalDivider([w,h,d],variantIndex,selected,mode==='editor');
+ if(['beanBag','doorPlaque','brandDoorPanel'].includes(assetId)){
+  const object=createCorporateObject(assetId,variantIndex,[w,h,d],selected,mode==='editor');object.name=group.name;return object;
+ }
  if(assetId==='edsSignage'){
   const sign=createSignageObject(variant.model,mode==='editor');sign.name=group.name;sign.userData={...group.userData,dimensions:[w,h,d],placement:'wall'};
   sign.traverse(o=>{if(o instanceof THREE.Mesh){o.castShadow=mode==='archviz';o.receiveShadow=mode==='archviz';o.userData.assetId=assetId;}});return sign;
@@ -193,7 +207,7 @@ export function createAssetObject(assetId:string,variantIndex:number,materialId:
  }
  case 'board': {
   box(w,h,d,0,0,0,finish,.012);box(w-.035,h-.035,.008,0,0,d/2+.003,variantIndex===2?glass:variantIndex===3?cloth:white,.003);
-  if(variantIndex===1){box(w*.38,.007,.004,-w*.2,h*.22,d/2+.01,finish);for(let i=0;i<3;i++)box(w*.65,.005,.004,-w*.1,h*.05-i*.08,d/2+.01,black);box(w*.9,.018,.045,0,-h/2-.012,d/2,black);}
+  if(variantIndex===1){box(w*.9,.018,.045,0,-h/2-.012,d/2,black);if(!simple){const ink=[black,material('marker-blue','#193e8c',.5),material('marker-green','#284c36',.5)];for(let i=0;i<3;i++)rod(new THREE.Vector3(-.20+i*.14,-h/2+.002,d/2+.01),new THREE.Vector3(-.10+i*.14,-h/2+.002,d/2+.01),.004,ink[i]);}}
   else if(variantIndex===2){box(w*.68,h*.48,.005,0,0,d/2+.01,black,.005);box(w*.45,.012,.004,-w*.07,-h*.2,d/2+.015,finish);}
   else {for(let i=0;i<5;i++)box(.12,.12,.003,-w*.35+(i%3)*.26,h*.2-Math.floor(i/3)*.25,d/2+.01,i%2?white:finish,.002);}
   break;
@@ -252,7 +266,6 @@ export function createAssetObject(assetId:string,variantIndex:number,materialId:
  case 'separator': {
   if(variantIndex===1){for(const x of [-w/2+.04,w/2-.04])box(.055,h,.055,x,h/2,0,wood);for(let i=1;i<9;i++)box(.025,h-.06,.04,-w/2+i*w/9,h/2,0,wood);box(w,.05,.05,0,h-.025,0,wood);box(w-.08,.12,.025,0,.18,.03,finish,.015);}
   else if(variantIndex===2)box(w,h-.15,.05,0,(h+.15)/2,0,cloth,.025);
-  else {box(w,h*.5,d,0,h*.25,0,wood);box(w-.06,h*.25,.018,0,h*.25,d/2+.008,finish,.015);for(let i=0;i<9;i++)sphere(.08,h*.25,.03,-w*.4+i*w*.1,h*.72,0,leaf,Math.sin(i)*.4);}
   for(const x of [-w*.37,w*.37]){box(.04,.18,.04,x,.09,0,black);box(.2,.025,d,x,.0125,0,black);}break;
  }
  }

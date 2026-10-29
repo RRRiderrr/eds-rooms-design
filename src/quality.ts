@@ -6,6 +6,14 @@ export class AdaptiveQuality {
   fps=60; measured=false; manual:QualityLevel|'auto'='auto';
   constructor(private change:(settings:QualitySettings)=>void){}
   setManual(level:QualityLevel|'auto') {this.manual=level;if(level!=='auto')this.apply(level,1);else{this.warmup=0;this.measured=false;this.samples=[];}}
+  /** Startup calibration is rendered under the loader, so the initial tier
+   * change does not arrive several seconds into the visitor's first walk. */
+  settleStartup(level:QualityLevel,frameMs=1000/60){
+    if(this.manual==='auto'&&this.settings.level!==level)this.apply(level,1);
+    const ms=Math.max(1000/60,Math.min(150,Number.isFinite(frameMs)?frameMs:1000/60));
+    this.measured=true;this.samples=Array.from({length:30},()=>ms);this.fps=1000/ms;
+    this.last=performance.now();this.elapsed=0;this.warmup=0;this.stable=0;
+  }
   private apply(level:QualityLevel,scale:number) {
     this.settings={level,scale,dpr:Math.min(devicePixelRatio,level==='high'?2:level==='medium'?1.5:1.1),target:level==='low'?30:60,ao:level==='high',shadows:level!=='low',anisotropy:level==='high'?16:level==='medium'?8:2};this.change({...this.settings});
   }

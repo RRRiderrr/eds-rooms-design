@@ -16,7 +16,9 @@ export class DirectLighting {
    const lamp=new THREE.SpotLight(0xffffff,room?15:32,room?6.5:8,1.18,.82,2);
    lamp.name=source.id;lamp.position.set(...source.position);lamp.target.position.copy(lamp.position).add(new THREE.Vector3(...source.direction));
    lamp.color.setRGB(...source.colorLinear);lamp.userData.sourceId=source.id;
-   lamp.shadow.camera.near=.15;lamp.shadow.camera.far=room?7:9;lamp.shadow.bias=-.00003;lamp.shadow.normalBias=.009;lamp.shadow.radius=3;
+   // Wide fixture cones need a small PCF footprint: radius 3 sampled the wall's
+   // own depth at grazing angles, producing horizontal bands on plain paint.
+   lamp.shadow.camera.near=.3;lamp.shadow.camera.far=lamp.distance;lamp.shadow.bias=-.0001;lamp.shadow.normalBias=.012;lamp.shadow.radius=1.5;
    this.group.add(lamp,lamp.target);return lamp;
   });this.revision='';
  }
@@ -26,7 +28,9 @@ export class DirectLighting {
   const medium=new Set(['Room_Lamp_Inner_East_North_Area','Hall_Lamp_Central_03_Area']);
   for(const lamp of this.lamps){
    lamp.castShadow=quality.shadows&&(quality.level==='high'?high:medium).has(lamp.name);
-   const size=quality.level==='high'&&lamp.name.startsWith('Room_')?2048:1024;
+   // Keep metre-scale receiver accuracy in both shadowed tiers. Medium has
+   // only two shadow casters; High has six. Low does not render shadow maps.
+   const size=2048;
    if(lamp.shadow.mapSize.x!==size){lamp.shadow.map?.dispose();lamp.shadow.map=null;lamp.shadow.mapSize.set(size,size);}
   }
   return true;

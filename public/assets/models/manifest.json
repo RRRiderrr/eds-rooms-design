@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "projectId": "polycam-lounge-room",
   "generator": "EDS rooms design — original modular furniture",
-  "generatedAt": "2026-10-17T19:43:13.725Z",
+  "generatedAt": "2026-10-29T01:42:01.446Z",
   "units": "metres",
   "upAxis": "Y",
   "assets": [
@@ -3838,8 +3838,8 @@
         ]
       },
       "bytes": {
-        "production": 284200,
-        "proxy": 8220
+        "production": 32824,
+        "proxy": 5820
       }
     },
     {
@@ -4621,23 +4621,23 @@
       "bounds": {
         "min": [
           -0.550000011920929,
-          -3.5762786065873797e-9,
+          -7.599592066753758e-10,
           -0.15000000596046448
         ],
         "max": [
-          0.5535594820976257,
-          0.8729999661445618,
-          0.16699999570846558
+          0.550000011920929,
+          0.9000000357627869,
+          0.15000000596046448
         ],
         "size": [
-          1.1035594940185547,
-          0.8729999697208404,
-          0.31700000166893005
+          1.100000023841858,
+          0.9000000365227461,
+          0.30000001192092896
         ]
       },
       "bytes": {
-        "production": 784432,
-        "proxy": 41212
+        "production": 653940,
+        "proxy": 107248
       }
     },
     {
@@ -5352,6 +5352,2342 @@
       "bytes": {
         "production": 772192,
         "proxy": 7948
+      }
+    },
+    {
+      "assetId": "beanBag",
+      "variant": 1,
+      "label": "1 / Груша",
+      "category": "seating",
+      "placement": "floor",
+      "dimensions": [
+        0.88,
+        0.96,
+        0.96
+      ],
+      "materials": [
+        {
+          "id": "eds-blue",
+          "label": "EDS · синій",
+          "color": "#0B30C1",
+          "surface": "fabric"
+        },
+        {
+          "id": "eds-lavender",
+          "label": "EDS · лавандовий",
+          "color": "#A2B8FE",
+          "surface": "fabric"
+        },
+        {
+          "id": "eds-lime",
+          "label": "EDS · лаймовий",
+          "color": "#A0FF3D",
+          "surface": "fabric"
+        },
+        {
+          "id": "eds-white",
+          "label": "EDS · білий",
+          "color": "#F0F0F0",
+          "surface": "fabric"
+        },
+        {
+          "id": "eds-black",
+          "label": "EDS · чорний",
+          "color": "#000000",
+          "surface": "fabric"
+        }
+      ],
+      "production": "assets/models/beanBag-1.glb",
+      "proxy": "assets/proxies/beanBag-1.glb",
+      "quality": {
+        "high": "assets/models/beanBag-1.glb",
+        "medium": "assets/models/beanBag-1.glb",
+        "low": "assets/models/beanBag-1.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.4400000274181366,
+          0,
+          -0.47999998927116394
+        ],
+        "max": [
+          0.4400000274181366,
+          0.9599999785423279,
+          0.47999998927116394
+        ],
+        "size": [
+          0.8800000548362732,
+          0.9599999785423279,
+          0.9599999785423279
+        ]
+      },
+      "bytes": {
+        "production": 293700,
+        "proxy": 36312
+      }
+    },
+    {
+      "assetId": "beanBag",
+      "variant": 2,
+      "label": "2 / Лаунж зі спинкою",
+      "category": "seating",
+      "placement": "floor",
+      "dimensions": [
+        1.04,
+        0.78,
+        1.1
+      ],
+      "materials": [
+        {
+          "id": "eds-blue",
+          "label": "EDS · синій",
+          "color": "#0B30C1",
+          "surface": "fabric"
+        },
+        {
+          "id": "eds-lavender",
+          "label": "EDS · лавандовий",
+          "color": "#A2B8FE",
+          "surface": "fabric"
+        },
+        {
+          "id": "eds-lime",
+          "label": "EDS · лаймовий",
+          "color": "#A0FF3D",
+          "surface": "fabric"
+        },
+        {
+          "id": "eds-white",
+          "label": "EDS · білий",
+          "color": "#F0F0F0",
+          "surface": "fabric"
+        },
+        {
+          "id": "eds-black",
+          "label": "EDS · чорний",
+          "color": "#000000",
+          "surface": "fabric"
+        }
+      ],
+      "production": "assets/models/beanBag-2.glb",
+      "proxy": "assets/proxies/beanBag-2.glb",
+      "quality": {
+        "high": "assets/models/beanBag-2.glb",
+        "medium": "assets/models/beanBag-2.glb",
+        "low": "assets/models/beanBag-2.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.5200000405311584,
+          0,
+          -0.550000011920929
+        ],
+        "max": [
+          0.5200000405311584,
+          0.7799999713897705,
+          0.550000011920929
+        ],
+        "size": [
+          1.040000081062317,
+          0.7799999713897705,
+          1.100000023841858
+        ]
+      },
+      "bytes": {
+        "production": 285488,
+        "proxy": 35868
+      }
+    },
+    {
+      "assetId": "beanBag",
+      "variant": 3,
+      "label": "3 / Подушка-крісло",
+      "category": "seating",
+      "placement": "floor",
+      "dimensions": [
+        1.02,
+        0.7,
+        0.98
+      ],
+      "materials": [
+        {
+          "id": "eds-blue",
+          "label": "EDS · синій",
+          "color": "#0B30C1",
+          "surface": "fabric"
+        },
+        {
+          "id": "eds-lavender",
+          "label": "EDS · лавандовий",
+          "color": "#A2B8FE",
+          "surface": "fabric"
+        },
+        {
+          "id": "eds-lime",
+          "label": "EDS · лаймовий",
+          "color": "#A0FF3D",
+          "surface": "fabric"
+        },
+        {
+          "id": "eds-white",
+          "label": "EDS · білий",
+          "color": "#F0F0F0",
+          "surface": "fabric"
+        },
+        {
+          "id": "eds-black",
+          "label": "EDS · чорний",
+          "color": "#000000",
+          "surface": "fabric"
+        }
+      ],
+      "production": "assets/models/beanBag-3.glb",
+      "proxy": "assets/proxies/beanBag-3.glb",
+      "quality": {
+        "high": "assets/models/beanBag-3.glb",
+        "medium": "assets/models/beanBag-3.glb",
+        "low": "assets/models/beanBag-3.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.5099999904632568,
+          0,
+          -0.49000000953674316
+        ],
+        "max": [
+          0.5099999904632568,
+          0.699999988079071,
+          0.49000000953674316
+        ],
+        "size": [
+          1.0199999809265137,
+          0.699999988079071,
+          0.9800000190734863
+        ]
+      },
+      "bytes": {
+        "production": 281532,
+        "proxy": 35892
+      }
+    },
+    {
+      "assetId": "doorPlaque",
+      "variant": 1,
+      "label": "1 / Прозорий PMMA · 190 × 145",
+      "category": "signage",
+      "placement": "wall",
+      "dimensions": [
+        0.19,
+        0.145,
+        0.034
+      ],
+      "materials": [
+        {
+          "id": "eds-blue",
+          "label": "EDS · синій",
+          "color": "#0B30C1",
+          "surface": "plastic"
+        },
+        {
+          "id": "eds-lavender",
+          "label": "EDS · лавандовий",
+          "color": "#A2B8FE",
+          "surface": "plastic"
+        },
+        {
+          "id": "eds-lime",
+          "label": "EDS · лаймовий",
+          "color": "#A0FF3D",
+          "surface": "plastic"
+        },
+        {
+          "id": "eds-white",
+          "label": "EDS · білий",
+          "color": "#F0F0F0",
+          "surface": "plastic"
+        },
+        {
+          "id": "eds-black",
+          "label": "EDS · чорний",
+          "color": "#000000",
+          "surface": "plastic"
+        }
+      ],
+      "production": "assets/models/doorPlaque-1.glb",
+      "proxy": "assets/proxies/doorPlaque-1.glb",
+      "quality": {
+        "high": "assets/models/doorPlaque-1.glb",
+        "medium": "assets/models/doorPlaque-1.glb",
+        "low": "assets/models/doorPlaque-1.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.0949999988079071,
+          -0.07249999791383743,
+          -0.017000000923871994
+        ],
+        "max": [
+          0.0949999988079071,
+          0.07249999791383743,
+          0.017000000923871994
+        ],
+        "size": [
+          0.1899999976158142,
+          0.14499999582767487,
+          0.03400000184774399
+        ]
+      },
+      "bytes": {
+        "production": 46096,
+        "proxy": 20316
+      }
+    },
+    {
+      "assetId": "doorPlaque",
+      "variant": 2,
+      "label": "2 / Матовий алюміній",
+      "category": "signage",
+      "placement": "wall",
+      "dimensions": [
+        0.22,
+        0.12,
+        0.012
+      ],
+      "materials": [
+        {
+          "id": "eds-blue",
+          "label": "EDS · синій",
+          "color": "#0B30C1",
+          "surface": "plastic"
+        },
+        {
+          "id": "eds-lavender",
+          "label": "EDS · лавандовий",
+          "color": "#A2B8FE",
+          "surface": "plastic"
+        },
+        {
+          "id": "eds-lime",
+          "label": "EDS · лаймовий",
+          "color": "#A0FF3D",
+          "surface": "plastic"
+        },
+        {
+          "id": "eds-white",
+          "label": "EDS · білий",
+          "color": "#F0F0F0",
+          "surface": "plastic"
+        },
+        {
+          "id": "eds-black",
+          "label": "EDS · чорний",
+          "color": "#000000",
+          "surface": "plastic"
+        }
+      ],
+      "production": "assets/models/doorPlaque-2.glb",
+      "proxy": "assets/proxies/doorPlaque-2.glb",
+      "quality": {
+        "high": "assets/models/doorPlaque-2.glb",
+        "medium": "assets/models/doorPlaque-2.glb",
+        "low": "assets/models/doorPlaque-2.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.10999999940395355,
+          -0.05999999865889549,
+          -0.006000000052154064
+        ],
+        "max": [
+          0.10999999940395355,
+          0.05999999865889549,
+          0.0066
+        ],
+        "size": [
+          0.2199999988079071,
+          0.11999999731779099,
+          0.012600000052154064
+        ]
+      },
+      "bytes": {
+        "production": 26444,
+        "proxy": 16032
+      }
+    },
+    {
+      "assetId": "doorPlaque",
+      "variant": 3,
+      "label": "3 / Корпоративна касета",
+      "category": "signage",
+      "placement": "wall",
+      "dimensions": [
+        0.24,
+        0.14,
+        0.018
+      ],
+      "materials": [
+        {
+          "id": "eds-blue",
+          "label": "EDS · синій",
+          "color": "#0B30C1",
+          "surface": "plastic"
+        },
+        {
+          "id": "eds-lavender",
+          "label": "EDS · лавандовий",
+          "color": "#A2B8FE",
+          "surface": "plastic"
+        },
+        {
+          "id": "eds-lime",
+          "label": "EDS · лаймовий",
+          "color": "#A0FF3D",
+          "surface": "plastic"
+        },
+        {
+          "id": "eds-white",
+          "label": "EDS · білий",
+          "color": "#F0F0F0",
+          "surface": "plastic"
+        },
+        {
+          "id": "eds-black",
+          "label": "EDS · чорний",
+          "color": "#000000",
+          "surface": "plastic"
+        }
+      ],
+      "production": "assets/models/doorPlaque-3.glb",
+      "proxy": "assets/proxies/doorPlaque-3.glb",
+      "quality": {
+        "high": "assets/models/doorPlaque-3.glb",
+        "medium": "assets/models/doorPlaque-3.glb",
+        "low": "assets/models/doorPlaque-3.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.11999999731779099,
+          -0.07000000029802322,
+          -0.008999999612569809
+        ],
+        "max": [
+          0.11999999731779099,
+          0.07000000029802322,
+          0.0097
+        ],
+        "size": [
+          0.23999999463558197,
+          0.14000000059604645,
+          0.01869999961256981
+        ]
+      },
+      "bytes": {
+        "production": 26172,
+        "proxy": 15936
+      }
+    },
+    {
+      "assetId": "brandDoorPanel",
+      "variant": 1,
+      "label": "1 / Вузька · 22 см",
+      "category": "signage",
+      "placement": "wall",
+      "dimensions": [
+        0.22,
+        3.53,
+        0.024
+      ],
+      "materials": [
+        {
+          "id": "eds-blue",
+          "label": "Припилений синій",
+          "color": "#A7B9D1",
+          "surface": "plastic"
+        },
+        {
+          "id": "eds-lavender",
+          "label": "Світла лаванда",
+          "color": "#BDC5DF",
+          "surface": "plastic"
+        },
+        {
+          "id": "eds-lime",
+          "label": "Світла шавлія",
+          "color": "#C7D8AE",
+          "surface": "plastic"
+        },
+        {
+          "id": "eds-white",
+          "label": "Теплий крейдяний",
+          "color": "#E7E6DD",
+          "surface": "plastic"
+        },
+        {
+          "id": "eds-black",
+          "label": "Світлий графіт",
+          "color": "#ABB3B1",
+          "surface": "plastic"
+        }
+      ],
+      "production": "assets/models/brandDoorPanel-1.glb",
+      "proxy": "assets/proxies/brandDoorPanel-1.glb",
+      "quality": {
+        "high": "assets/models/brandDoorPanel-1.glb",
+        "medium": "assets/models/brandDoorPanel-1.glb",
+        "low": "assets/models/brandDoorPanel-1.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.10999999940395355,
+          -1.7649999856948853,
+          0
+        ],
+        "max": [
+          0.10999999940395355,
+          1.7649999856948853,
+          0
+        ],
+        "size": [
+          0.2199999988079071,
+          3.5299999713897705,
+          0
+        ]
+      },
+      "bytes": {
+        "production": 2728,
+        "proxy": 2724
+      }
+    },
+    {
+      "assetId": "brandDoorPanel",
+      "variant": 2,
+      "label": "2 / Середня · 28 см",
+      "category": "signage",
+      "placement": "wall",
+      "dimensions": [
+        0.28,
+        3.53,
+        0.024
+      ],
+      "materials": [
+        {
+          "id": "eds-blue",
+          "label": "Припилений синій",
+          "color": "#A7B9D1",
+          "surface": "plastic"
+        },
+        {
+          "id": "eds-lavender",
+          "label": "Світла лаванда",
+          "color": "#BDC5DF",
+          "surface": "plastic"
+        },
+        {
+          "id": "eds-lime",
+          "label": "Світла шавлія",
+          "color": "#C7D8AE",
+          "surface": "plastic"
+        },
+        {
+          "id": "eds-white",
+          "label": "Теплий крейдяний",
+          "color": "#E7E6DD",
+          "surface": "plastic"
+        },
+        {
+          "id": "eds-black",
+          "label": "Світлий графіт",
+          "color": "#ABB3B1",
+          "surface": "plastic"
+        }
+      ],
+      "production": "assets/models/brandDoorPanel-2.glb",
+      "proxy": "assets/proxies/brandDoorPanel-2.glb",
+      "quality": {
+        "high": "assets/models/brandDoorPanel-2.glb",
+        "medium": "assets/models/brandDoorPanel-2.glb",
+        "low": "assets/models/brandDoorPanel-2.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.14000000059604645,
+          -1.7649999856948853,
+          0
+        ],
+        "max": [
+          0.14000000059604645,
+          1.7649999856948853,
+          0
+        ],
+        "size": [
+          0.2800000011920929,
+          3.5299999713897705,
+          0
+        ]
+      },
+      "bytes": {
+        "production": 2728,
+        "proxy": 2724
+      }
+    },
+    {
+      "assetId": "brandDoorPanel",
+      "variant": 3,
+      "label": "3 / Широка · 34 см",
+      "category": "signage",
+      "placement": "wall",
+      "dimensions": [
+        0.34,
+        3.53,
+        0.028
+      ],
+      "materials": [
+        {
+          "id": "eds-blue",
+          "label": "Припилений синій",
+          "color": "#A7B9D1",
+          "surface": "plastic"
+        },
+        {
+          "id": "eds-lavender",
+          "label": "Світла лаванда",
+          "color": "#BDC5DF",
+          "surface": "plastic"
+        },
+        {
+          "id": "eds-lime",
+          "label": "Світла шавлія",
+          "color": "#C7D8AE",
+          "surface": "plastic"
+        },
+        {
+          "id": "eds-white",
+          "label": "Теплий крейдяний",
+          "color": "#E7E6DD",
+          "surface": "plastic"
+        },
+        {
+          "id": "eds-black",
+          "label": "Світлий графіт",
+          "color": "#ABB3B1",
+          "surface": "plastic"
+        }
+      ],
+      "production": "assets/models/brandDoorPanel-3.glb",
+      "proxy": "assets/proxies/brandDoorPanel-3.glb",
+      "quality": {
+        "high": "assets/models/brandDoorPanel-3.glb",
+        "medium": "assets/models/brandDoorPanel-3.glb",
+        "low": "assets/models/brandDoorPanel-3.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.17000000178813934,
+          -1.7649999856948853,
+          0
+        ],
+        "max": [
+          0.17000000178813934,
+          1.7649999856948853,
+          0
+        ],
+        "size": [
+          0.3400000035762787,
+          3.5299999713897705,
+          0
+        ]
+      },
+      "bytes": {
+        "production": 2728,
+        "proxy": 2724
+      }
+    },
+    {
+      "assetId": "botanicalDivider",
+      "variant": 1,
+      "label": "1 / Дуб і м’який екран",
+      "category": "separators",
+      "placement": "floor",
+      "dimensions": [
+        2,
+        2.3,
+        0.48
+      ],
+      "materials": [
+        {
+          "id": "oak",
+          "label": "Натуральний дуб",
+          "color": "#b88e60",
+          "surface": "wood"
+        },
+        {
+          "id": "walnut",
+          "label": "Темний горіх",
+          "color": "#604533",
+          "surface": "wood"
+        },
+        {
+          "id": "graphite",
+          "label": "Матовий графіт",
+          "color": "#30383d",
+          "surface": "metal"
+        },
+        {
+          "id": "terracotta",
+          "label": "Теракотовий метал",
+          "color": "#a7674b",
+          "surface": "metal"
+        },
+        {
+          "id": "white",
+          "label": "Теплий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієвий",
+          "color": "#819183",
+          "surface": "plastic"
+        }
+      ],
+      "production": "assets/models/botanicalDivider-1.glb",
+      "proxy": "assets/proxies/botanicalDivider-1.glb",
+      "quality": {
+        "high": "assets/models/botanicalDivider-1.glb",
+        "medium": "assets/models/botanicalDivider-1.glb",
+        "low": "assets/models/botanicalDivider-1.glb"
+      },
+      "bounds": {
+        "min": [
+          -1,
+          -7.450580430390374e-11,
+          -0.23999999463558197
+        ],
+        "max": [
+          1,
+          2.299999952316284,
+          0.23999999463558197
+        ],
+        "size": [
+          2,
+          2.29999995239079,
+          0.47999998927116394
+        ]
+      },
+      "bytes": {
+        "production": 519852,
+        "proxy": 79600
+      }
+    },
+    {
+      "assetId": "botanicalDivider",
+      "variant": 2,
+      "label": "2 / Модульний зелений стелаж",
+      "category": "separators",
+      "placement": "floor",
+      "dimensions": [
+        2,
+        2.3,
+        0.48
+      ],
+      "materials": [
+        {
+          "id": "oak",
+          "label": "Натуральний дуб",
+          "color": "#b88e60",
+          "surface": "wood"
+        },
+        {
+          "id": "walnut",
+          "label": "Темний горіх",
+          "color": "#604533",
+          "surface": "wood"
+        },
+        {
+          "id": "graphite",
+          "label": "Матовий графіт",
+          "color": "#30383d",
+          "surface": "metal"
+        },
+        {
+          "id": "terracotta",
+          "label": "Теракотовий метал",
+          "color": "#a7674b",
+          "surface": "metal"
+        },
+        {
+          "id": "white",
+          "label": "Теплий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієвий",
+          "color": "#819183",
+          "surface": "plastic"
+        }
+      ],
+      "production": "assets/models/botanicalDivider-2.glb",
+      "proxy": "assets/proxies/botanicalDivider-2.glb",
+      "quality": {
+        "high": "assets/models/botanicalDivider-2.glb",
+        "medium": "assets/models/botanicalDivider-2.glb",
+        "low": "assets/models/botanicalDivider-2.glb"
+      },
+      "bounds": {
+        "min": [
+          -1,
+          -7.450580430390374e-11,
+          -0.23999999463558197
+        ],
+        "max": [
+          1,
+          2.299999952316284,
+          0.23999999463558197
+        ],
+        "size": [
+          2,
+          2.29999995239079,
+          0.47999998927116394
+        ]
+      },
+      "bytes": {
+        "production": 718396,
+        "proxy": 110556
+      }
+    },
+    {
+      "assetId": "botanicalDivider",
+      "variant": 3,
+      "label": "3 / Решітка з ліанами",
+      "category": "separators",
+      "placement": "floor",
+      "dimensions": [
+        2,
+        2.3,
+        0.48
+      ],
+      "materials": [
+        {
+          "id": "oak",
+          "label": "Натуральний дуб",
+          "color": "#b88e60",
+          "surface": "wood"
+        },
+        {
+          "id": "walnut",
+          "label": "Темний горіх",
+          "color": "#604533",
+          "surface": "wood"
+        },
+        {
+          "id": "graphite",
+          "label": "Матовий графіт",
+          "color": "#30383d",
+          "surface": "metal"
+        },
+        {
+          "id": "terracotta",
+          "label": "Теракотовий метал",
+          "color": "#a7674b",
+          "surface": "metal"
+        },
+        {
+          "id": "white",
+          "label": "Теплий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієвий",
+          "color": "#819183",
+          "surface": "plastic"
+        }
+      ],
+      "production": "assets/models/botanicalDivider-3.glb",
+      "proxy": "assets/proxies/botanicalDivider-3.glb",
+      "quality": {
+        "high": "assets/models/botanicalDivider-3.glb",
+        "medium": "assets/models/botanicalDivider-3.glb",
+        "low": "assets/models/botanicalDivider-3.glb"
+      },
+      "bounds": {
+        "min": [
+          -1,
+          -7.450580430390374e-11,
+          -0.23999999463558197
+        ],
+        "max": [
+          1,
+          2.299999952316284,
+          0.23999999463558197
+        ],
+        "size": [
+          2,
+          2.29999995239079,
+          0.47999998927116394
+        ]
+      },
+      "bytes": {
+        "production": 497916,
+        "proxy": 102024
+      }
+    },
+    {
+      "assetId": "botanicalDivider",
+      "variant": 4,
+      "label": "4 / Живий зелений екран",
+      "category": "separators",
+      "placement": "floor",
+      "dimensions": [
+        2,
+        2.3,
+        0.48
+      ],
+      "materials": [
+        {
+          "id": "oak",
+          "label": "Натуральний дуб",
+          "color": "#b88e60",
+          "surface": "wood"
+        },
+        {
+          "id": "walnut",
+          "label": "Темний горіх",
+          "color": "#604533",
+          "surface": "wood"
+        },
+        {
+          "id": "graphite",
+          "label": "Матовий графіт",
+          "color": "#30383d",
+          "surface": "metal"
+        },
+        {
+          "id": "terracotta",
+          "label": "Теракотовий метал",
+          "color": "#a7674b",
+          "surface": "metal"
+        },
+        {
+          "id": "white",
+          "label": "Теплий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієвий",
+          "color": "#819183",
+          "surface": "plastic"
+        }
+      ],
+      "production": "assets/models/botanicalDivider-4.glb",
+      "proxy": "assets/proxies/botanicalDivider-4.glb",
+      "quality": {
+        "high": "assets/models/botanicalDivider-4.glb",
+        "medium": "assets/models/botanicalDivider-4.glb",
+        "low": "assets/models/botanicalDivider-4.glb"
+      },
+      "bounds": {
+        "min": [
+          -1,
+          -7.450580430390374e-11,
+          -0.23999999463558197
+        ],
+        "max": [
+          1,
+          2.299999952316284,
+          0.23999999463558197
+        ],
+        "size": [
+          2,
+          2.29999995239079,
+          0.47999998927116394
+        ]
+      },
+      "bytes": {
+        "production": 1016356,
+        "proxy": 168492
+      }
+    },
+    {
+      "assetId": "botanicalDivider",
+      "variant": 5,
+      "label": "5 / Рейковий сад",
+      "category": "separators",
+      "placement": "floor",
+      "dimensions": [
+        2,
+        2.3,
+        0.48
+      ],
+      "materials": [
+        {
+          "id": "oak",
+          "label": "Натуральний дуб",
+          "color": "#b88e60",
+          "surface": "wood"
+        },
+        {
+          "id": "walnut",
+          "label": "Темний горіх",
+          "color": "#604533",
+          "surface": "wood"
+        },
+        {
+          "id": "graphite",
+          "label": "Матовий графіт",
+          "color": "#30383d",
+          "surface": "metal"
+        },
+        {
+          "id": "terracotta",
+          "label": "Теракотовий метал",
+          "color": "#a7674b",
+          "surface": "metal"
+        },
+        {
+          "id": "white",
+          "label": "Теплий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієвий",
+          "color": "#819183",
+          "surface": "plastic"
+        }
+      ],
+      "production": "assets/models/botanicalDivider-5.glb",
+      "proxy": "assets/proxies/botanicalDivider-5.glb",
+      "quality": {
+        "high": "assets/models/botanicalDivider-5.glb",
+        "medium": "assets/models/botanicalDivider-5.glb",
+        "low": "assets/models/botanicalDivider-5.glb"
+      },
+      "bounds": {
+        "min": [
+          -1,
+          -7.450580430390374e-11,
+          -0.23999999463558197
+        ],
+        "max": [
+          1,
+          2.299999952316284,
+          0.23999999463558197
+        ],
+        "size": [
+          2,
+          2.29999995239079,
+          0.47999998927116394
+        ]
+      },
+      "bytes": {
+        "production": 642316,
+        "proxy": 101048
+      }
+    },
+    {
+      "assetId": "botanicalDivider",
+      "variant": 6,
+      "label": "6 / Акустичний сад",
+      "category": "separators",
+      "placement": "floor",
+      "dimensions": [
+        2,
+        2.3,
+        0.48
+      ],
+      "materials": [
+        {
+          "id": "oak",
+          "label": "Натуральний дуб",
+          "color": "#b88e60",
+          "surface": "wood"
+        },
+        {
+          "id": "walnut",
+          "label": "Темний горіх",
+          "color": "#604533",
+          "surface": "wood"
+        },
+        {
+          "id": "graphite",
+          "label": "Матовий графіт",
+          "color": "#30383d",
+          "surface": "metal"
+        },
+        {
+          "id": "terracotta",
+          "label": "Теракотовий метал",
+          "color": "#a7674b",
+          "surface": "metal"
+        },
+        {
+          "id": "white",
+          "label": "Теплий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієвий",
+          "color": "#819183",
+          "surface": "plastic"
+        }
+      ],
+      "production": "assets/models/botanicalDivider-6.glb",
+      "proxy": "assets/proxies/botanicalDivider-6.glb",
+      "quality": {
+        "high": "assets/models/botanicalDivider-6.glb",
+        "medium": "assets/models/botanicalDivider-6.glb",
+        "low": "assets/models/botanicalDivider-6.glb"
+      },
+      "bounds": {
+        "min": [
+          -1,
+          -7.450580430390374e-11,
+          -0.23999999463558197
+        ],
+        "max": [
+          1,
+          2.299999952316284,
+          0.23999999463558197
+        ],
+        "size": [
+          2,
+          2.29999995239079,
+          0.47999998927116394
+        ]
+      },
+      "bytes": {
+        "production": 439672,
+        "proxy": 79548
+      }
+    },
+    {
+      "assetId": "edsTimeline",
+      "variant": 1,
+      "label": "1 / Енергія віх",
+      "category": "signage",
+      "placement": "wall",
+      "dimensions": [
+        1.68,
+        1.82,
+        0.035
+      ],
+      "materials": [
+        {
+          "id": "original",
+          "label": "Фірмовий дизайн EDS",
+          "color": "#000000",
+          "surface": "plastic"
+        }
+      ],
+      "production": "assets/models/edsTimeline-1.glb",
+      "proxy": "assets/proxies/edsTimeline-1.glb",
+      "quality": {
+        "high": "assets/models/edsTimeline-1.glb",
+        "medium": "assets/models/edsTimeline-1.glb",
+        "low": "assets/models/edsTimeline-1.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.8399999737739563,
+          -0.9100000262260437,
+          -0.017500000074505806
+        ],
+        "max": [
+          0.8399999737739563,
+          0.9100000262260437,
+          0.017500000074505806
+        ],
+        "size": [
+          1.6799999475479126,
+          1.8200000524520874,
+          0.03500000014901161
+        ]
+      },
+      "bytes": {
+        "production": 1163820,
+        "proxy": 139644
+      }
+    },
+    {
+      "assetId": "edsTimeline",
+      "variant": 2,
+      "label": "2 / Нічний маршрут",
+      "category": "signage",
+      "placement": "wall",
+      "dimensions": [
+        1.68,
+        1.82,
+        0.035
+      ],
+      "materials": [
+        {
+          "id": "original",
+          "label": "Фірмовий дизайн EDS",
+          "color": "#000000",
+          "surface": "plastic"
+        }
+      ],
+      "production": "assets/models/edsTimeline-2.glb",
+      "proxy": "assets/proxies/edsTimeline-2.glb",
+      "quality": {
+        "high": "assets/models/edsTimeline-2.glb",
+        "medium": "assets/models/edsTimeline-2.glb",
+        "low": "assets/models/edsTimeline-2.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.8399999737739563,
+          -0.9100000262260437,
+          -0.017500000074505806
+        ],
+        "max": [
+          0.8399999737739563,
+          0.9100000262260437,
+          0.017500000074505806
+        ],
+        "size": [
+          1.6799999475479126,
+          1.8200000524520874,
+          0.03500000014901161
+        ]
+      },
+      "bytes": {
+        "production": 1202832,
+        "proxy": 158256
+      }
+    },
+    {
+      "assetId": "edsTimeline",
+      "variant": 3,
+      "label": "3 / Вертикаль прогресу",
+      "category": "signage",
+      "placement": "wall",
+      "dimensions": [
+        1.68,
+        1.82,
+        0.035
+      ],
+      "materials": [
+        {
+          "id": "original",
+          "label": "Фірмовий дизайн EDS",
+          "color": "#000000",
+          "surface": "plastic"
+        }
+      ],
+      "production": "assets/models/edsTimeline-3.glb",
+      "proxy": "assets/proxies/edsTimeline-3.glb",
+      "quality": {
+        "high": "assets/models/edsTimeline-3.glb",
+        "medium": "assets/models/edsTimeline-3.glb",
+        "low": "assets/models/edsTimeline-3.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.8399999737739563,
+          -0.9100000262260437,
+          -0.017500000074505806
+        ],
+        "max": [
+          0.8399999737739563,
+          0.9100000262260437,
+          0.017500000074505806
+        ],
+        "size": [
+          1.6799999475479126,
+          1.8200000524520874,
+          0.03500000014901161
+        ]
+      },
+      "bytes": {
+        "production": 1189136,
+        "proxy": 149192
+      }
+    },
+    {
+      "assetId": "edsTimeline",
+      "variant": 4,
+      "label": "4 / Лавандовий архів",
+      "category": "signage",
+      "placement": "wall",
+      "dimensions": [
+        1.68,
+        1.82,
+        0.035
+      ],
+      "materials": [
+        {
+          "id": "original",
+          "label": "Фірмовий дизайн EDS",
+          "color": "#000000",
+          "surface": "plastic"
+        }
+      ],
+      "production": "assets/models/edsTimeline-4.glb",
+      "proxy": "assets/proxies/edsTimeline-4.glb",
+      "quality": {
+        "high": "assets/models/edsTimeline-4.glb",
+        "medium": "assets/models/edsTimeline-4.glb",
+        "low": "assets/models/edsTimeline-4.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.8399999737739563,
+          -0.9100000262260437,
+          -0.017500000074505806
+        ],
+        "max": [
+          0.8399999737739563,
+          0.9100000262260437,
+          0.017500000074505806
+        ],
+        "size": [
+          1.6799999475479126,
+          1.8200000524520874,
+          0.03500000014901161
+        ]
+      },
+      "bytes": {
+        "production": 1155528,
+        "proxy": 131016
+      }
+    },
+    {
+      "assetId": "edsTimeline",
+      "variant": 5,
+      "label": "5 / Інженерна сітка",
+      "category": "signage",
+      "placement": "wall",
+      "dimensions": [
+        1.68,
+        1.82,
+        0.035
+      ],
+      "materials": [
+        {
+          "id": "original",
+          "label": "Фірмовий дизайн EDS",
+          "color": "#000000",
+          "surface": "plastic"
+        }
+      ],
+      "production": "assets/models/edsTimeline-5.glb",
+      "proxy": "assets/proxies/edsTimeline-5.glb",
+      "quality": {
+        "high": "assets/models/edsTimeline-5.glb",
+        "medium": "assets/models/edsTimeline-5.glb",
+        "low": "assets/models/edsTimeline-5.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.8399999737739563,
+          -0.9100000262260437,
+          -0.017500000074505806
+        ],
+        "max": [
+          0.8399999737739563,
+          0.9100000262260437,
+          0.017500000074505806
+        ],
+        "size": [
+          1.6799999475479126,
+          1.8200000524520874,
+          0.03500000014901161
+        ]
+      },
+      "bytes": {
+        "production": 1167932,
+        "proxy": 143816
+      }
+    },
+    {
+      "assetId": "edsTimeline",
+      "variant": 6,
+      "label": "6 / Картки майбутнього",
+      "category": "signage",
+      "placement": "wall",
+      "dimensions": [
+        1.68,
+        1.82,
+        0.035
+      ],
+      "materials": [
+        {
+          "id": "original",
+          "label": "Фірмовий дизайн EDS",
+          "color": "#000000",
+          "surface": "plastic"
+        }
+      ],
+      "production": "assets/models/edsTimeline-6.glb",
+      "proxy": "assets/proxies/edsTimeline-6.glb",
+      "quality": {
+        "high": "assets/models/edsTimeline-6.glb",
+        "medium": "assets/models/edsTimeline-6.glb",
+        "low": "assets/models/edsTimeline-6.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.8399999737739563,
+          -0.9100000262260437,
+          -0.017500000074505806
+        ],
+        "max": [
+          0.8399999737739563,
+          0.9100000262260437,
+          0.017500000074505806
+        ],
+        "size": [
+          1.6799999475479126,
+          1.8200000524520874,
+          0.03500000014901161
+        ]
+      },
+      "bytes": {
+        "production": 1178112,
+        "proxy": 148224
+      }
+    },
+    {
+      "assetId": "edsTimeline",
+      "variant": 7,
+      "label": "7 / Діагональ розвитку",
+      "category": "signage",
+      "placement": "wall",
+      "dimensions": [
+        1.68,
+        1.82,
+        0.035
+      ],
+      "materials": [
+        {
+          "id": "original",
+          "label": "Фірмовий дизайн EDS",
+          "color": "#000000",
+          "surface": "plastic"
+        }
+      ],
+      "production": "assets/models/edsTimeline-7.glb",
+      "proxy": "assets/proxies/edsTimeline-7.glb",
+      "quality": {
+        "high": "assets/models/edsTimeline-7.glb",
+        "medium": "assets/models/edsTimeline-7.glb",
+        "low": "assets/models/edsTimeline-7.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.8399999737739563,
+          -0.9100000262260437,
+          -0.017500000074505806
+        ],
+        "max": [
+          0.8399999737739563,
+          0.9100000262260437,
+          0.017500000074505806
+        ],
+        "size": [
+          1.6799999475479126,
+          1.8200000524520874,
+          0.03500000014901161
+        ]
+      },
+      "bytes": {
+        "production": 1179608,
+        "proxy": 151216
+      }
+    },
+    {
+      "assetId": "edsTimeline",
+      "variant": 8,
+      "label": "8 / Лаймова система",
+      "category": "signage",
+      "placement": "wall",
+      "dimensions": [
+        1.68,
+        1.82,
+        0.035
+      ],
+      "materials": [
+        {
+          "id": "original",
+          "label": "Фірмовий дизайн EDS",
+          "color": "#000000",
+          "surface": "plastic"
+        }
+      ],
+      "production": "assets/models/edsTimeline-8.glb",
+      "proxy": "assets/proxies/edsTimeline-8.glb",
+      "quality": {
+        "high": "assets/models/edsTimeline-8.glb",
+        "medium": "assets/models/edsTimeline-8.glb",
+        "low": "assets/models/edsTimeline-8.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.8399999737739563,
+          -0.9100000262260437,
+          -0.017500000074505806
+        ],
+        "max": [
+          0.8399999737739563,
+          0.9100000262260437,
+          0.017500000074505806
+        ],
+        "size": [
+          1.6799999475479126,
+          1.8200000524520874,
+          0.03500000014901161
+        ]
+      },
+      "bytes": {
+        "production": 1162040,
+        "proxy": 137580
+      }
+    },
+    {
+      "assetId": "edsUkraine",
+      "variant": 1,
+      "label": "1 / Світлий баланс",
+      "category": "signage",
+      "placement": "wall",
+      "dimensions": [
+        3.2,
+        1.32,
+        0.04
+      ],
+      "materials": [
+        {
+          "id": "original",
+          "label": "Фірмовий дизайн EDS",
+          "color": "#000000",
+          "surface": "plastic"
+        }
+      ],
+      "production": "assets/models/edsUkraine-1.glb",
+      "proxy": "assets/proxies/edsUkraine-1.glb",
+      "quality": {
+        "high": "assets/models/edsUkraine-1.glb",
+        "medium": "assets/models/edsUkraine-1.glb",
+        "low": "assets/models/edsUkraine-1.glb"
+      },
+      "bounds": {
+        "min": [
+          -1.600000023841858,
+          -0.6600000262260437,
+          -0.020000001415610313
+        ],
+        "max": [
+          1.600000023841858,
+          0.6600000262260437,
+          0.019999999552965164
+        ],
+        "size": [
+          3.200000047683716,
+          1.3200000524520874,
+          0.04000000096857548
+        ]
+      },
+      "bytes": {
+        "production": 397524,
+        "proxy": 395380
+      }
+    },
+    {
+      "assetId": "edsUkraine",
+      "variant": 2,
+      "label": "2 / Нічний імпульс",
+      "category": "signage",
+      "placement": "wall",
+      "dimensions": [
+        3.2,
+        1.32,
+        0.04
+      ],
+      "materials": [
+        {
+          "id": "original",
+          "label": "Фірмовий дизайн EDS",
+          "color": "#000000",
+          "surface": "plastic"
+        }
+      ],
+      "production": "assets/models/edsUkraine-2.glb",
+      "proxy": "assets/proxies/edsUkraine-2.glb",
+      "quality": {
+        "high": "assets/models/edsUkraine-2.glb",
+        "medium": "assets/models/edsUkraine-2.glb",
+        "low": "assets/models/edsUkraine-2.glb"
+      },
+      "bounds": {
+        "min": [
+          -1.600000023841858,
+          -0.6600000262260437,
+          -0.020000001415610313
+        ],
+        "max": [
+          1.600000023841858,
+          0.6600000262260437,
+          0.019999999552965164
+        ],
+        "size": [
+          3.200000047683716,
+          1.3200000524520874,
+          0.04000000096857548
+        ]
+      },
+      "bytes": {
+        "production": 504988,
+        "proxy": 502720
+      }
+    },
+    {
+      "assetId": "edsUkraine",
+      "variant": 3,
+      "label": "3 / Лавандова географія",
+      "category": "signage",
+      "placement": "wall",
+      "dimensions": [
+        3.2,
+        1.32,
+        0.04
+      ],
+      "materials": [
+        {
+          "id": "original",
+          "label": "Фірмовий дизайн EDS",
+          "color": "#000000",
+          "surface": "plastic"
+        }
+      ],
+      "production": "assets/models/edsUkraine-3.glb",
+      "proxy": "assets/proxies/edsUkraine-3.glb",
+      "quality": {
+        "high": "assets/models/edsUkraine-3.glb",
+        "medium": "assets/models/edsUkraine-3.glb",
+        "low": "assets/models/edsUkraine-3.glb"
+      },
+      "bounds": {
+        "min": [
+          -1.600000023841858,
+          -0.6600000262260437,
+          -0.020000001415610313
+        ],
+        "max": [
+          1.600000023841858,
+          0.6600000262260437,
+          0.019999999552965164
+        ],
+        "size": [
+          3.200000047683716,
+          1.3200000524520874,
+          0.04000000096857548
+        ]
+      },
+      "bytes": {
+        "production": 383972,
+        "proxy": 381804
+      }
+    },
+    {
+      "assetId": "edsUkraine",
+      "variant": 4,
+      "label": "4 / Модулі енергії",
+      "category": "signage",
+      "placement": "wall",
+      "dimensions": [
+        3.2,
+        1.32,
+        0.04
+      ],
+      "materials": [
+        {
+          "id": "original",
+          "label": "Фірмовий дизайн EDS",
+          "color": "#000000",
+          "surface": "plastic"
+        }
+      ],
+      "production": "assets/models/edsUkraine-4.glb",
+      "proxy": "assets/proxies/edsUkraine-4.glb",
+      "quality": {
+        "high": "assets/models/edsUkraine-4.glb",
+        "medium": "assets/models/edsUkraine-4.glb",
+        "low": "assets/models/edsUkraine-4.glb"
+      },
+      "bounds": {
+        "min": [
+          -1.600000023841858,
+          -0.6600000262260437,
+          -0.020000001415610313
+        ],
+        "max": [
+          1.600000023841858,
+          0.6600000262260437,
+          0.019999999552965164
+        ],
+        "size": [
+          3.200000047683716,
+          1.3200000524520874,
+          0.04000000096857548
+        ]
+      },
+      "bytes": {
+        "production": 402128,
+        "proxy": 399856
+      }
+    },
+    {
+      "assetId": "edsUkraine",
+      "variant": 5,
+      "label": "5 / Карта в центрі",
+      "category": "signage",
+      "placement": "wall",
+      "dimensions": [
+        3.2,
+        1.32,
+        0.04
+      ],
+      "materials": [
+        {
+          "id": "original",
+          "label": "Фірмовий дизайн EDS",
+          "color": "#000000",
+          "surface": "plastic"
+        }
+      ],
+      "production": "assets/models/edsUkraine-5.glb",
+      "proxy": "assets/proxies/edsUkraine-5.glb",
+      "quality": {
+        "high": "assets/models/edsUkraine-5.glb",
+        "medium": "assets/models/edsUkraine-5.glb",
+        "low": "assets/models/edsUkraine-5.glb"
+      },
+      "bounds": {
+        "min": [
+          -1.600000023841858,
+          -0.6600000262260437,
+          -0.020000001415610313
+        ],
+        "max": [
+          1.600000023841858,
+          0.6600000262260437,
+          0.019999999552965164
+        ],
+        "size": [
+          3.200000047683716,
+          1.3200000524520874,
+          0.04000000096857548
+        ]
+      },
+      "bytes": {
+        "production": 372428,
+        "proxy": 370176
+      }
+    },
+    {
+      "assetId": "edsUkraine",
+      "variant": 6,
+      "label": "6 / Повітряний контур",
+      "category": "signage",
+      "placement": "wall",
+      "dimensions": [
+        3.2,
+        1.32,
+        0.04
+      ],
+      "materials": [
+        {
+          "id": "original",
+          "label": "Фірмовий дизайн EDS",
+          "color": "#000000",
+          "surface": "plastic"
+        }
+      ],
+      "production": "assets/models/edsUkraine-6.glb",
+      "proxy": "assets/proxies/edsUkraine-6.glb",
+      "quality": {
+        "high": "assets/models/edsUkraine-6.glb",
+        "medium": "assets/models/edsUkraine-6.glb",
+        "low": "assets/models/edsUkraine-6.glb"
+      },
+      "bounds": {
+        "min": [
+          -1.600000023841858,
+          -0.6600000262260437,
+          -0.019999999552965164
+        ],
+        "max": [
+          1.600000023841858,
+          0.6600000262260437,
+          0.019999999552965164
+        ],
+        "size": [
+          3.200000047683716,
+          1.3200000524520874,
+          0.03999999910593033
+        ]
+      },
+      "bytes": {
+        "production": 397064,
+        "proxy": 394800
+      }
+    },
+    {
+      "assetId": "edsUkraine",
+      "variant": 7,
+      "label": "7 / Діагональ потужності",
+      "category": "signage",
+      "placement": "wall",
+      "dimensions": [
+        3.2,
+        1.32,
+        0.04
+      ],
+      "materials": [
+        {
+          "id": "original",
+          "label": "Фірмовий дизайн EDS",
+          "color": "#000000",
+          "surface": "plastic"
+        }
+      ],
+      "production": "assets/models/edsUkraine-7.glb",
+      "proxy": "assets/proxies/edsUkraine-7.glb",
+      "quality": {
+        "high": "assets/models/edsUkraine-7.glb",
+        "medium": "assets/models/edsUkraine-7.glb",
+        "low": "assets/models/edsUkraine-7.glb"
+      },
+      "bounds": {
+        "min": [
+          -1.600000023841858,
+          -0.6600000262260437,
+          -0.020000001415610313
+        ],
+        "max": [
+          1.600000023841858,
+          0.6600000262260437,
+          0.019999999552965164
+        ],
+        "size": [
+          3.200000047683716,
+          1.3200000524520874,
+          0.04000000096857548
+        ]
+      },
+      "bytes": {
+        "production": 504508,
+        "proxy": 502256
+      }
+    },
+    {
+      "assetId": "edsUkraine",
+      "variant": 8,
+      "label": "8 / Панорама результатів",
+      "category": "signage",
+      "placement": "wall",
+      "dimensions": [
+        3.2,
+        1.32,
+        0.04
+      ],
+      "materials": [
+        {
+          "id": "original",
+          "label": "Фірмовий дизайн EDS",
+          "color": "#000000",
+          "surface": "plastic"
+        }
+      ],
+      "production": "assets/models/edsUkraine-8.glb",
+      "proxy": "assets/proxies/edsUkraine-8.glb",
+      "quality": {
+        "high": "assets/models/edsUkraine-8.glb",
+        "medium": "assets/models/edsUkraine-8.glb",
+        "low": "assets/models/edsUkraine-8.glb"
+      },
+      "bounds": {
+        "min": [
+          -1.600000023841858,
+          -0.6600000262260437,
+          -0.020000001415610313
+        ],
+        "max": [
+          1.600000023841858,
+          0.6600000262260437,
+          0.019999999552965164
+        ],
+        "size": [
+          3.200000047683716,
+          1.3200000524520874,
+          0.04000000096857548
+        ]
+      },
+      "bytes": {
+        "production": 387536,
+        "proxy": 385280
+      }
+    },
+    {
+      "assetId": "wallClock",
+      "variant": 1,
+      "label": "1 / Цифри та слова · як на фото",
+      "category": "clocks",
+      "placement": "wall",
+      "dimensions": [
+        1.25,
+        1.25,
+        0.035
+      ],
+      "materials": [
+        {
+          "id": "original",
+          "label": "Матеріали дизайну",
+          "color": "#000000",
+          "surface": "metal"
+        }
+      ],
+      "production": "assets/models/wallClock-1.glb",
+      "proxy": "assets/proxies/wallClock-1.glb",
+      "quality": {
+        "high": "assets/models/wallClock-1.glb",
+        "medium": "assets/models/wallClock-1.glb",
+        "low": "assets/models/wallClock-1.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.625,
+          -0.6250000596046448,
+          -0.025500000074505803
+        ],
+        "max": [
+          0.625,
+          0.6250000596046448,
+          0.009500000149011614
+        ],
+        "size": [
+          1.25,
+          1.2500001192092896,
+          0.035000000223517416
+        ]
+      },
+      "bytes": {
+        "production": 439568,
+        "proxy": 72584
+      }
+    },
+    {
+      "assetId": "wallClock",
+      "variant": 2,
+      "label": "2 / Тонкі хвилинні риски",
+      "category": "clocks",
+      "placement": "wall",
+      "dimensions": [
+        1.25,
+        1.25,
+        0.035
+      ],
+      "materials": [
+        {
+          "id": "original",
+          "label": "Матеріали дизайну",
+          "color": "#000000",
+          "surface": "metal"
+        }
+      ],
+      "production": "assets/models/wallClock-2.glb",
+      "proxy": "assets/proxies/wallClock-2.glb",
+      "quality": {
+        "high": "assets/models/wallClock-2.glb",
+        "medium": "assets/models/wallClock-2.glb",
+        "low": "assets/models/wallClock-2.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.625,
+          -0.625,
+          -0.025500000074505803
+        ],
+        "max": [
+          0.625,
+          0.625,
+          0.009500000149011614
+        ],
+        "size": [
+          1.25,
+          1.25,
+          0.035000000223517416
+        ]
+      },
+      "bytes": {
+        "production": 164072,
+        "proxy": 44068
+      }
+    },
+    {
+      "assetId": "wallClock",
+      "variant": 3,
+      "label": "3 / EDS · енергія кольору",
+      "category": "clocks",
+      "placement": "wall",
+      "dimensions": [
+        1.25,
+        1.25,
+        0.035
+      ],
+      "materials": [
+        {
+          "id": "original",
+          "label": "Матеріали дизайну",
+          "color": "#000000",
+          "surface": "metal"
+        }
+      ],
+      "production": "assets/models/wallClock-3.glb",
+      "proxy": "assets/proxies/wallClock-3.glb",
+      "quality": {
+        "high": "assets/models/wallClock-3.glb",
+        "medium": "assets/models/wallClock-3.glb",
+        "low": "assets/models/wallClock-3.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.6249999403953552,
+          -0.6249999403953552,
+          -0.025500000074505803
+        ],
+        "max": [
+          0.6249999403953552,
+          0.6249999403953552,
+          0.009500000149011614
+        ],
+        "size": [
+          1.2499998807907104,
+          1.2499998807907104,
+          0.035000000223517416
+        ]
+      },
+      "bytes": {
+        "production": 327960,
+        "proxy": 58356
+      }
+    },
+    {
+      "assetId": "wallClock",
+      "variant": 4,
+      "label": "4 / Римські цифри · сатин",
+      "category": "clocks",
+      "placement": "wall",
+      "dimensions": [
+        1.25,
+        1.25,
+        0.035
+      ],
+      "materials": [
+        {
+          "id": "original",
+          "label": "Матеріали дизайну",
+          "color": "#000000",
+          "surface": "metal"
+        }
+      ],
+      "production": "assets/models/wallClock-4.glb",
+      "proxy": "assets/proxies/wallClock-4.glb",
+      "quality": {
+        "high": "assets/models/wallClock-4.glb",
+        "medium": "assets/models/wallClock-4.glb",
+        "low": "assets/models/wallClock-4.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.625,
+          -0.625,
+          -0.025500000074505803
+        ],
+        "max": [
+          0.625,
+          0.625,
+          0.009500000149011614
+        ],
+        "size": [
+          1.25,
+          1.25,
+          0.035000000223517416
+        ]
+      },
+      "bytes": {
+        "production": 88980,
+        "proxy": 29876
+      }
+    },
+    {
+      "assetId": "wallClock",
+      "variant": 5,
+      "label": "5 / Лавандовий мінімалізм",
+      "category": "clocks",
+      "placement": "wall",
+      "dimensions": [
+        1.25,
+        1.25,
+        0.035
+      ],
+      "materials": [
+        {
+          "id": "original",
+          "label": "Матеріали дизайну",
+          "color": "#000000",
+          "surface": "metal"
+        }
+      ],
+      "production": "assets/models/wallClock-5.glb",
+      "proxy": "assets/proxies/wallClock-5.glb",
+      "quality": {
+        "high": "assets/models/wallClock-5.glb",
+        "medium": "assets/models/wallClock-5.glb",
+        "low": "assets/models/wallClock-5.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.625,
+          -0.625,
+          -0.025500000074505803
+        ],
+        "max": [
+          0.625,
+          0.625,
+          0.009500000149011614
+        ],
+        "size": [
+          1.25,
+          1.25,
+          0.035000000223517416
+        ]
+      },
+      "bytes": {
+        "production": 422652,
+        "proxy": 62440
+      }
+    },
+    {
+      "assetId": "wallClock",
+      "variant": 6,
+      "label": "6 / EDS · графічні чверті",
+      "category": "clocks",
+      "placement": "wall",
+      "dimensions": [
+        1.25,
+        1.25,
+        0.035
+      ],
+      "materials": [
+        {
+          "id": "original",
+          "label": "Матеріали дизайну",
+          "color": "#000000",
+          "surface": "metal"
+        }
+      ],
+      "production": "assets/models/wallClock-6.glb",
+      "proxy": "assets/proxies/wallClock-6.glb",
+      "quality": {
+        "high": "assets/models/wallClock-6.glb",
+        "medium": "assets/models/wallClock-6.glb",
+        "low": "assets/models/wallClock-6.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.6249999403953552,
+          -0.625,
+          -0.025500000074505803
+        ],
+        "max": [
+          0.6249999403953552,
+          0.625,
+          0.009500000149011614
+        ],
+        "size": [
+          1.2499998807907104,
+          1.25,
+          0.035000000223517416
+        ]
+      },
+      "bytes": {
+        "production": 149292,
+        "proxy": 43108
+      }
+    },
+    {
+      "assetId": "hallDesk",
+      "variant": 1,
+      "label": "Кутовий · 3 шухляди",
+      "dimensions": [
+        1.600000023841858,
+        0.75,
+        1.600000023841858
+      ],
+      "production": "assets/models/hallDesk-1.glb",
+      "proxy": "assets/proxies/hallDesk-1.glb",
+      "productionOverride": true,
+      "quality": {
+        "low": "assets/models/hallDesk-1.glb",
+        "medium": "assets/models/hallDesk-1.glb",
+        "high": "assets/models/hallDesk-1.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.800000011920929,
+          0,
+          -0.800000011920929
+        ],
+        "max": [
+          0.800000011920929,
+          0.75,
+          0.800000011920929
+        ]
+      },
+      "sourceRoots": [
+        "Desk_01",
+        "Desk_02",
+        "Desk_03",
+        "Desk_04",
+        "Desk_05",
+        "Desk_06",
+        "Desk_07",
+        "Desk_08"
+      ],
+      "prototypeRoot": "Desk_01",
+      "canonicalHash": "a8be14dd7b9c8c394b8b820129dfbfc5f4a29c3f744384649f9bbc7b001b4c69",
+      "materials": [
+        {
+          "id": "original",
+          "label": "Оригінальні кольори",
+          "color": "#eeeeea",
+          "surface": "plastic"
+        }
+      ],
+      "bytes": {
+        "production": 192976,
+        "proxy": 35032
+      }
+    },
+    {
+      "assetId": "hallDesk",
+      "variant": 2,
+      "label": "Прямий · правий ряд",
+      "dimensions": [
+        1.399999976158142,
+        0.75,
+        0.800000011920929
+      ],
+      "production": "assets/models/hallDesk-2.glb",
+      "proxy": "assets/proxies/hallDesk-2.glb",
+      "productionOverride": true,
+      "quality": {
+        "low": "assets/models/hallDesk-2.glb",
+        "medium": "assets/models/hallDesk-2.glb",
+        "high": "assets/models/hallDesk-2.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.699999988079071,
+          0,
+          -0.4000000059604645
+        ],
+        "max": [
+          0.699999988079071,
+          0.75,
+          0.4000000059604645
+        ]
+      },
+      "sourceRoots": [
+        "East_Desk_01_Wall_Bank_Row_1",
+        "East_Desk_02_Wall_Bank_Row_2",
+        "East_Desk_03_Wall_Bank_Row_3",
+        "East_Desk_07_Island_A_East_Row_1",
+        "East_Desk_08_Island_A_East_Row_2",
+        "East_Desk_09_Island_A_East_Row_3",
+        "East_Desk_13_Island_B_East_Row_1",
+        "East_Desk_14_Island_B_East_Row_2",
+        "East_Desk_15_Island_B_East_Row_3"
+      ],
+      "prototypeRoot": "East_Desk_01_Wall_Bank_Row_1",
+      "canonicalHash": "95f78d35d2a1d95836293ab7c4b117130eceabd7993d3a2ca6816507ff6c511c",
+      "materials": [
+        {
+          "id": "original",
+          "label": "Оригінальні кольори",
+          "color": "#eeeeea",
+          "surface": "plastic"
+        }
+      ],
+      "bytes": {
+        "production": 174292,
+        "proxy": 33148
+      }
+    },
+    {
+      "assetId": "hallDesk",
+      "variant": 3,
+      "label": "Прямий · лівий ряд",
+      "dimensions": [
+        1.399999976158142,
+        0.75,
+        0.800000011920929
+      ],
+      "production": "assets/models/hallDesk-3.glb",
+      "proxy": "assets/proxies/hallDesk-3.glb",
+      "productionOverride": true,
+      "quality": {
+        "low": "assets/models/hallDesk-3.glb",
+        "medium": "assets/models/hallDesk-3.glb",
+        "high": "assets/models/hallDesk-3.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.699999988079071,
+          0,
+          -0.4000000059604645
+        ],
+        "max": [
+          0.699999988079071,
+          0.75,
+          0.4000000059604645
+        ]
+      },
+      "sourceRoots": [
+        "East_Desk_04_Island_A_West_Row_1",
+        "East_Desk_05_Island_A_West_Row_2",
+        "East_Desk_06_Island_A_West_Row_3",
+        "East_Desk_10_Island_B_West_Row_1",
+        "East_Desk_11_Island_B_West_Row_2",
+        "East_Desk_12_Island_B_West_Row_3",
+        "East_Desk_16_Outer_Bank_Row_1",
+        "East_Desk_17_Outer_Bank_Row_2",
+        "East_Desk_18_Outer_Bank_Row_3"
+      ],
+      "prototypeRoot": "East_Desk_04_Island_A_West_Row_1",
+      "canonicalHash": "95f78d35d2a1d95836293ab7c4b117130eceabd7993d3a2ca6816507ff6c511c",
+      "materials": [
+        {
+          "id": "original",
+          "label": "Оригінальні кольори",
+          "color": "#eeeeea",
+          "surface": "plastic"
+        }
+      ],
+      "bytes": {
+        "production": 174320,
+        "proxy": 33176
       }
     }
   ]

@@ -1,7 +1,8 @@
 import * as THREE from 'three';
 import './first-person.css';
 
-/** First person navigation. Furniture never participates in its collision query. */
+/** Architectural surfaces and tall privacy partitions block walking;
+ * ordinary furniture remains outside the collision query. */
 export class FirstPersonNavigation {
  enabled=false;private keys=new Set<string>();private yaw=0;private pitch=0;
  private look?:{id:number;x:number;y:number};private stick=new THREE.Vector2();private up=0;private stickId?:number;

@@ -14,7 +14,10 @@
     "check": "npm run test && npm run build",
     "export:catalog": "node tools/export_catalog.mjs",
     "assets:real": "node tools/ingest-real-models.mjs",
-    "assets:blender": "node tools/prepare-blender-catalog.mjs"
+    "assets:blender": "node tools/prepare-blender-catalog.mjs",
+    "export:hall": "python tools/extract_existing_hall.py",
+    "assets:brand": "node tools/prepare-corporate-brand.mjs",
+    "check:revisions": "node tools/check-customer-revisions.mjs && node tools/check-wall-finishes.mjs"
   },
   "dependencies": {
     "meshoptimizer": "^0.25.0",

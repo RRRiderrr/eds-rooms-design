@@ -22,8 +22,11 @@ try{
   page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)errors.push(`${r.status()} ${r.url()}`);});
   if(basic)await page.addInitScript(()=>{const original=WebGL2RenderingContext.prototype.getExtension;WebGL2RenderingContext.prototype.getExtension=function(name){return name==='EXT_color_buffer_float'?null:original.call(this,name);};});
   await page.goto(url+'?mode=editor');await page.waitForFunction(()=>window.__ROOM_ATELIER__?.ready,undefined,{timeout:120000});
-  await page.getByRole('button',{name:'ArchViz',exact:true}).click();await page.evaluate(()=>Reflect.get(window.__ROOM_ATELIER__.view,'archvizPromise'));
-  await page.waitForTimeout(250);const result=await page.evaluate(()=>({ready:window.__ROOM_ATELIER__.ready,hdrTargets:Reflect.get(window.__ROOM_ATELIER__.view,'hdrTargets'),objects:window.__ROOM_ATELIER__.view.architecture.production.children.length,mode:window.__ROOM_ATELIER__.getMode()}));
+  await page.getByRole('button',{name:'ArchViz',exact:true}).click();
+  // First ArchViz preparation now includes texture upload and real GPU frames
+  // after architecture loading: await the public readiness gate, not its GLB promise.
+  await page.waitForFunction(()=>window.__ROOM_ATELIER__?.ready&&!document.querySelector('#loading'),undefined,{timeout:120000});
+  const result=await page.evaluate(()=>({ready:window.__ROOM_ATELIER__.ready,hdrTargets:Reflect.get(window.__ROOM_ATELIER__.view,'hdrTargets'),objects:window.__ROOM_ATELIER__.view.architecture.production.children.length,mode:window.__ROOM_ATELIER__.getMode()}));
   report.push({profile:profile.name,basic,url,...result,errors});await page.screenshot({path:`test-results/review/${remote?'github-pages':'static-subpath'}-${profile.name}.png`});await page.close();
  }
  await fs.mkdir('test-results/review',{recursive:true});await fs.writeFile(`test-results/review/${remote?'github-pages':'static-hosting'}.json`,JSON.stringify(report,null,2));console.log(JSON.stringify(report));if(report.some(r=>r.errors.length||!r.ready||r.mode!=='archviz'))process.exitCode=1;

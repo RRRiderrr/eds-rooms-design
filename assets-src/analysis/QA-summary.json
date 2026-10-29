@@ -1,17 +1,20 @@
 {
-  "checkedAt": "2026-10-17T19:59:46.725015+00:00",
+  "checkedAt": "2026-10-29T08:48:10.913120+00:00",
   "project": "rooms design",
   "preview": "http://127.0.0.1:4174/",
   "build": {
     "passed": true,
     "command": "npm run build",
-    "bundle": "index-B57NvPFT.js",
-    "evidence": "assets-src/analysis/furniture-drag-build-final.log"
+    "bundle": "index-CjUGMggg.js",
+    "css": "index-wvAmbZ1q.css",
+    "evidence": "WORKLOG.md"
   },
   "unitTests": {
-    "passed": 70,
+    "passed": 172,
+    "files": 28,
     "failed": 0,
-    "evidence": "assets-src/analysis/furniture-fixes-unit-final.log"
+    "affectedTestsAfterFinalRefinements": 15,
+    "evidence": "WORKLOG.md"
   },
   "browserFunctionalSuite": {
     "initialRun": {
@@ -858,5 +861,709 @@
     "builtinPresets": 16,
     "controlViews": 32,
     "scopeNote": "The previous broad 100-case suite remains historical; latest revision reran 70 unit and 18 targeted browser cases, with 8 inapplicable input cases skipped. No known current failing check."
+  },
+  "latestLocalWallRevision": {
+    "checkedAt": "2026-10-21T16:20:51.070910+00:00",
+    "localOnly": true,
+    "build": "index-D1uwWPBu.js",
+    "unitTests": {
+      "passed": 107,
+      "failed": 0,
+      "files": 13
+    },
+    "staticLinkedFiles": 430,
+    "highChecks": 10,
+    "uiChecks": 16,
+    "samplers": {
+      "activeMaximum": 15,
+      "hardwareLimit": 16
+    },
+    "steelPixelDifference": 0,
+    "plaqueOrientationRenders": 24,
+    "preview": "http://127.0.0.1:4174/",
+    "reports": [
+      "test-results/wall-customer-fixes/report.json",
+      "test-results/wall-mural-ui/report.json",
+      "test-results/review/static-hosting.json"
+    ],
+    "furnishedScreenshot": "test-results/wall-customer-fixes/final-proof.png",
+    "githubChanged": false,
+    "customDraftReset": false
+  },
+  "latestSoftFurnishingsAndDoorLayout": {
+    "checkedAt": "2026-10-21T16:59:35.237Z",
+    "localOnly": true,
+    "build": "index-bGzxoFtH.js",
+    "unitTests": {
+      "passed": 118,
+      "failed": 0,
+      "files": 16
+    },
+    "staticLinkedFiles": 430,
+    "productionBeanbagTriangles": 42624,
+    "proxyBeanbagTriangles": 3968,
+    "productionPlanterTriangles": 60556,
+    "proxyPlanterTriangles": 7796,
+    "fabricNormalStrength": 0.055,
+    "preparedDoorPairs": {
+      "hall": 112,
+      "meetingDefaults": 224
+    },
+    "actualPresetSelections": 24,
+    "profiles": [
+      "Chromium High",
+      "WebKit High"
+    ],
+    "samplers": {
+      "activeMaximum": 15,
+      "hardwareLimit": 16
+    },
+    "staticProfiles": [
+      "desktop",
+      "desktop-no-float",
+      "phone"
+    ],
+    "reports": [
+      "test-results/soft-furnishings/report.json",
+      "test-results/wall-customer-fixes/report.json",
+      "test-results/review/static-hosting.json",
+      "test-results/customer-revisions/new-library-report.json"
+    ],
+    "proof": "test-results/soft-furnishings/production-contact-sheet.png",
+    "doorProof": "test-results/wall-customer-fixes/door-plaque-proof.png",
+    "preview": "http://127.0.0.1:4174/",
+    "githubChanged": false,
+    "customDraftReset": false,
+    "errors": [],
+    "doorChecksTotal": 17
+  },
+  "latestLocalWallShadowRevision": {
+    "checkedAt": "2026-10-22T10:20:44.581Z",
+    "localOnly": true,
+    "build": "index-D57Bkt4C.js",
+    "cause": "Grazing-angle dynamic shadow acne; metric UV0 and original Quixel maps preserved",
+    "settings": {
+      "mapSize": 2048,
+      "near": 0.3,
+      "bias": -0.0001,
+      "normalBias": 0.012,
+      "pcfRadius": 1.5,
+      "highCasters": 6,
+      "mediumCasters": 2
+    },
+    "unitTests": {
+      "passed": 118,
+      "failed": 0,
+      "files": 16
+    },
+    "staticLinkedFiles": 430,
+    "softFurnishingsProductionCheck": "passed",
+    "staticProfiles": [
+      "desktop",
+      "desktop-no-float",
+      "phone"
+    ],
+    "reports": [
+      "test-results/wall-shadows/report.json",
+      "test-results/soft-furnishings/report.json",
+      "test-results/review/static-hosting.json"
+    ],
+    "preview": "http://127.0.0.1:4174/",
+    "githubChanged": false,
+    "customDraftReset": false,
+    "browserRegression": {
+      "status": "passed",
+      "profiles": [
+        {
+          "browser": "chromium",
+          "tier": "high",
+          "wallViews": 6,
+          "glError": 0,
+          "errors": []
+        },
+        {
+          "browser": "chromium",
+          "tier": "medium",
+          "wallViews": 6,
+          "glError": 0,
+          "errors": []
+        },
+        {
+          "browser": "webkit",
+          "tier": "high",
+          "wallViews": 6,
+          "glError": 0,
+          "errors": []
+        },
+        {
+          "browser": "webkit",
+          "tier": "medium",
+          "wallViews": 6,
+          "glError": 0,
+          "errors": []
+        }
+      ],
+      "wallViews": 24,
+      "floorShadowPositions": 8,
+      "maxFixedRowRms": 0.032164461552116844,
+      "qualityCyclesPassed": true,
+      "proof": "test-results/wall-shadows/wall-proof.png"
+    }
+  },
+  "latestBotanicalRearPartitions": {
+    "checkedAt": "2026-10-22T11:04:51.463187+00:00",
+    "scope": "local main project folder only",
+    "build": "index-7RYqaYKQ.js",
+    "status": "passed",
+    "catalog": {
+      "assetId": "botanicalDivider",
+      "variants": 6,
+      "dimensionsM": [
+        2,
+        2.3,
+        0.48
+      ],
+      "productionAndProxyGlbs": 12,
+      "totalCatalogModelVariants": 93,
+      "frames": [
+        "oak",
+        "walnut",
+        "graphite",
+        "terracotta",
+        "white",
+        "sage"
+      ]
+    },
+    "layout": {
+      "modulesPerHallPreset": 4,
+      "hallPresets": 8,
+      "combinedMeetingDefaults": 16,
+      "rearDoors": [
+        "door-02",
+        "door-14",
+        "door-15"
+      ],
+      "physicalAisleM": 0.92,
+      "doorSwingPreserved": true,
+      "furnitureCollisions": 0
+    },
+    "browserRegression": {
+      "profiles": [
+        "chromium-high",
+        "webkit-high"
+      ],
+      "actualOpaqueCoreRays": 53136,
+      "coreMisses": 0,
+      "actualProductionModelsLoaded": true,
+      "variantAndMaterialSwitch": true,
+      "realMouseDragAndUndo": true,
+      "oldDraftAddOneUndoRedo": true,
+      "deletionPersistsAfterReload": true,
+      "liveMovedRemovedNavigation": true,
+      "browserHttpWebglErrors": 0
+    },
+    "userDraft": {
+      "origin": "http://127.0.0.1:4174/",
+      "hallPreset": "hall-preset-3",
+      "modified": true,
+      "objectsBefore": 92,
+      "objectsAfter": 96,
+      "existingObjectsAndFinishesPreserved": true,
+      "reloadVerified": true,
+      "broadFaceFocusVerified": true
+    },
+    "unitTests": {
+      "passed": 140,
+      "files": 20,
+      "failed": 0
+    },
+    "staticLinkedFiles": 448,
+    "staticProfiles": [
+      "desktop",
+      "desktop-no-float",
+      "phone"
+    ],
+    "reports": [
+      "test-results/botanical-partitions/report.json",
+      "test-results/botanical-partitions/framing-report.json",
+      "test-results/rear-partitions-layout/report.json",
+      "test-results/review/static-hosting.json"
+    ],
+    "githubChanged": false,
+    "blenderArchitectureChanged": false,
+    "customDraftReset": false,
+    "supersededBy": "latestOpenBotanicalRowCorrection"
+  },
+  "latestOpenBotanicalRowCorrection": {
+    "checkedAt": "2026-10-22T15:22:59.606396+00:00",
+    "status": "passed",
+    "scope": "local project only",
+    "build": "index-C9Nnk1tK.js",
+    "models": {
+      "variants": 6,
+      "openVariants": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "commonOpaqueCoreRemovedFromAll": true,
+      "physicalFeltScreenVariant": 1,
+      "separateAcousticPanelVariant": 6,
+      "actualCatalogueThumbnails": 6,
+      "regionPresetThumbnails": 24
+    },
+    "layout": {
+      "modulesPerHallPreset": 2,
+      "hallPresets": 8,
+      "combinedMeetingDefaults": 16,
+      "collinear": true,
+      "rowLengthM": 4,
+      "rowCentreXZ": [
+        -20.6,
+        -0.25
+      ],
+      "rotationRadians": -0.7853981633974483,
+      "screenedDoorIds": [
+        "door-15",
+        "door-02"
+      ],
+      "openDoorIds": [
+        "door-14"
+      ],
+      "walkingDiameterM": 1.1,
+      "doorSwingPreserved": true,
+      "furnitureCollisions": 0
+    },
+    "userDraft": {
+      "preset": "hall-preset-2",
+      "objectsBefore": 95,
+      "objectsAfter": 93,
+      "explicitUiCorrection": true,
+      "modelsAndColorsPreserved": true,
+      "otherObjectsAndFinishesPreserved": true,
+      "noReset": true,
+      "proof": "test-results/botanical-partitions/user-two-screen-row.png",
+      "reloadVerified": true
+    },
+    "unitTests": {
+      "passed": 143,
+      "files": 20,
+      "failed": 0
+    },
+    "staticLinkedFiles": 448,
+    "staticProfiles": [
+      "desktop",
+      "desktop-no-float",
+      "phone"
+    ],
+    "browserRegressionReport": "test-results/botanical-partitions/report.json",
+    "layoutReport": "test-results/rear-partitions-layout/report.json",
+    "githubChanged": false,
+    "blenderArchitectureChanged": false,
+    "browserRegression": {
+      "profiles": [
+        "chromium",
+        "webkit"
+      ],
+      "actualUiHallSelections": 16,
+      "stairDoorRays": 4704,
+      "stairDoorBlockedRays": 0,
+      "productionOpeningsVerifiedBothSides": true,
+      "actualCameraMoveAllowedRoutesPassed": true,
+      "modelMaterialSwitch": true,
+      "realMouseDragUndo": true,
+      "oldFourToTwoSingleUndoRedo": true,
+      "intentionalDeletionPersists": true,
+      "browserHttpWebglErrors": 0
+    }
+  },
+  "latestCorporateHallIdentity": {
+    "checkedAt": "2026-10-29T01:09:35.795823+00:00",
+    "status": "passed",
+    "scope": "local project only",
+    "build": "index-CU3NHtcC.js",
+    "catalogue": {
+      "positiveVariants": 115,
+      "timelineVariants": 8,
+      "ukraineVariants": 8,
+      "appliedClockVariants": 6,
+      "originalSignVariantsRetained": 6,
+      "targetedExports": 25,
+      "catalogueThumbnailsUpdated": 25,
+      "regionThumbnailsUpdated": 24,
+      "corporateSvgPathsAndPalettePreserved": true,
+      "all15HistoryEntriesRetained": true,
+      "shipmentValues": [
+        563,
+        380,
+        1420,
+        3211,
+        652,
+        473,
+        145
+      ]
+    },
+    "preparedLayouts": {
+      "hallPresets": 8,
+      "combinedMeetingDefaults": 16,
+      "signFamilies": [
+        "edsTimeline",
+        "edsUkraine"
+      ],
+      "signsPerHall": 2,
+      "appliedClocksPerHall": 1,
+      "numericPlaquesPerHall": 14,
+      "originalSignDesignsUsed": false
+    },
+    "clock": {
+      "wallId": "wall-12",
+      "blenderObject": "Wall_12_Clean",
+      "alongZ": -2.2,
+      "centreY": 1.9,
+      "flushToPlaster": true,
+      "backingOrCase": false,
+      "localTimeAnimation": true,
+      "frontFocusAndNoOccludersVerified": true,
+      "viewportEvidence": "test-results/blender-clock-wall-view.json"
+    },
+    "plaques": {
+      "numberOnlyDefaults": true,
+      "forcedLogoOrFooter": false,
+      "arbitraryTextSupported": true,
+      "multiline": true,
+      "maxCharacters": 500,
+      "blankParagraphsPreserved": true,
+      "actualWebglCasesPassed": 34,
+      "report": "test-results/plaque-labels/report.json"
+    },
+    "draft": {
+      "oneTimeRevision": 1,
+      "preserveFurnitureFinishesAndPositions": true,
+      "futureEditsAndDeletionsPersist": true,
+      "userPreset": "hall-preset-3",
+      "userObjectCount": 92,
+      "userDraftReset": false,
+      "userOriginalTabReloadedToFinalBuild": true,
+      "userProof": "test-results/hall-identity/user-current-ukraine.png"
+    },
+    "verification": {
+      "unitTestsPassed": 157,
+      "unitFiles": 24,
+      "linkedStaticFiles": 514,
+      "browserProfiles": [
+        "chromium",
+        "webkit"
+      ],
+      "checksPerBrowser": 7,
+      "hallSelectionsPerBrowser": 8,
+      "browserHttpWebglErrors": 0,
+      "staticProfiles": [
+        "desktop",
+        "desktop-basic",
+        "phone"
+      ],
+      "staticErrors": 0,
+      "fullHistoricalE2eRerun": false,
+      "browserReport": "test-results/hall-identity/report.json",
+      "staticReport": "test-results/review/static-hosting.json"
+    },
+    "githubChanged": false,
+    "blenderArchitectureChanged": false
+  },
+  "latestMeetingArchitectureAndReplaceableMetrics": {
+    "checkedAt": "2026-10-29T02:05:05.362587+00:00",
+    "status": "passed",
+    "scope": "local project only",
+    "build": "index-Cs4q9KL7.js",
+    "signs": {
+      "ukraineDesigns": 8,
+      "kpiModulesEach": 7,
+      "digitComponentsEach": 23,
+      "systems": {
+        "PVC inserts and rails": [
+          1,
+          4,
+          6
+        ],
+        "magnetic digits on steel": [
+          2,
+          7
+        ],
+        "e-ink modules": [
+          3,
+          5,
+          8
+        ]
+      },
+      "historyDatesStatic": true,
+      "targetedAssetExportsAndThumbnails": 11,
+      "report": "test-results/hall-identity/report.json"
+    },
+    "murals": {
+      "designs": 8,
+      "added": 5,
+      "furnishedMeetingPresets": 15,
+      "sourceLogoPreserved": true,
+      "atlasSize": [
+        4096,
+        4096
+      ],
+      "atlasBytes": 160378,
+      "samplers": 1,
+      "desktopPhoneChecksPassed": 16,
+      "report": "test-results/wall-mural-ui/report.json"
+    },
+    "editorSelection": {
+      "actualWallClickVerified": true,
+      "frameAndTint": true,
+      "openingsPreserved": true,
+      "archvizHidden": true,
+      "viewportChangedPixels": 514936,
+      "strongFramePixels": 14013,
+      "report": "test-results/wall-selection-wayfinding/report.json"
+    },
+    "architecture": {
+      "closedSolidAssemblies": 2,
+      "internalSkinsRemoved": true,
+      "originalInnerAndOuterPlanesPreserved": true,
+      "sourceUVAndBakeScopePreserved": true,
+      "aperturesPreserved": true,
+      "cavityCollisionBlocked": true,
+      "cutawayUsesActualFaceNormal": true,
+      "sourceBlenderOrGLBModified": false,
+      "repairAppliedBothWebModes": true,
+      "entrancePlasterTopM": 3,
+      "darkFieldTopM": 4.32,
+      "entrancePbrProbesUniform": true,
+      "actualSourceUnitTests": 7,
+      "browserChecksPerEngine": 4,
+      "report": "test-results/meeting-solid-walls/report.json",
+      "supersededBy": "latestExteriorWallRegressionFix"
+    },
+    "wayfinding": {
+      "palePaintPalette": [
+        "#A7B9D1",
+        "#BDC5DF",
+        "#C7D8AE",
+        "#E7E6DD",
+        "#ABB3B1"
+      ],
+      "defaultLabels": {
+        "14": "Вихід",
+        "10": "WC",
+        "15": "WC"
+      },
+      "otherNumbersPreserved": true,
+      "arbitraryMultilineTextPreserved": true,
+      "oneTimeRevision": "doorLabelRevision:1"
+    },
+    "verification": {
+      "unitTestsPassed": 170,
+      "files": 26,
+      "staticLinkedFiles": 519,
+      "regionThumbnailsUpdated": 24,
+      "engines": [
+        "chromium",
+        "webkit"
+      ],
+      "browserHttpWebglErrors": 0,
+      "staticProfiles": [
+        "desktop",
+        "desktop-basic",
+        "phone"
+      ],
+      "staticErrors": 0,
+      "fullHistoricalE2eRerun": false
+    },
+    "userDraft": {
+      "reset": false,
+      "furniturePreserved": true,
+      "meetingPreset": "builtin-3",
+      "statementWall": "west",
+      "mural": 8,
+      "actualUiChanged": true,
+      "reloadVerified": true,
+      "proof": "test-results/wall-selection-wayfinding/user-current-mural-8.png"
+    },
+    "githubChanged": false
+  },
+  "latestExteriorWallRegressionFix": {
+    "checkedAt": "2026-10-29T08:48:10.913120+00:00",
+    "status": "passed",
+    "scope": "local only",
+    "build": "index-CjUGMggg.js",
+    "closedShells": 3,
+    "fullHeightM": 4.32,
+    "hallPlasterTopM": 3,
+    "innerSidePlasterTopM": 3.6,
+    "metreUVs": true,
+    "continuousWorldBakedProbeIrradiance": true,
+    "staleWallUv1LightmapsRemoved": true,
+    "sourceProbeCount": 18,
+    "extraTextureSamplers": 0,
+    "obsoleteQuantizedBeamTrianglesRemoved": 196,
+    "atomicWholeWallCutaway": true,
+    "editorOrbitAnglesPerEngine": 8,
+    "crossMeshIrradianceComparisons": 1269,
+    "maxCrossMeshIrradianceError": 0,
+    "engines": [
+      "chromium",
+      "webkit"
+    ],
+    "browserChecksPerEngine": 4,
+    "browserHttpWebglErrors": 0,
+    "muralDesktopPhoneChecks": 16,
+    "selectionWayfindingRegressionPassed": true,
+    "staticLinkedFiles": 519,
+    "staticProfiles": [
+      "desktop",
+      "desktop-basic",
+      "phone"
+    ],
+    "staticErrors": 0,
+    "browserReport": "test-results/meeting-solid-walls-regression/final/report.json",
+    "baseline": "test-results/meeting-solid-walls-regression/baseline/report.json",
+    "userProof": "test-results/meeting-solid-walls-regression/final/user-editor-cutaway.png",
+    "userHallPreset": "hall-preset-7",
+    "userMeetingPreset": "builtin-15",
+    "userDraftReset": false,
+    "sourceBlenderOrGlbChanged": false,
+    "githubChanged": false
+  },
+  "latestStartupPreparation": {
+    "checkedAt": "2026-10-29T09:27:49.493452+00:00",
+    "status": "passed",
+    "scope": "local only",
+    "build": "index-B2DMhJCM.js",
+    "unitTestsPassed": 177,
+    "unitTestFiles": 30,
+    "asynchronousShaderCompile": true,
+    "gpuTextureUploadBeforeReady": true,
+    "realWarmRenderPoses": 8,
+    "gpuFencesBeforeReady": true,
+    "loaderProgress": [
+      0,
+      100
+    ],
+    "fakeProgressTimer": false,
+    "percentMeaning": "weighted completed work stages, not an ETA",
+    "startupAutoQualityUnderLoader": true,
+    "firstEditorToArchvizGated": true,
+    "manualQualityPreserved": true,
+    "chromiumCacheDisabled": [
+      "HTTP",
+      "GPU shader disk"
+    ],
+    "webkitFreshProcessAndContext": true,
+    "profiles": [
+      {
+        "engine": "chromium",
+        "profile": "desktop-high",
+        "readyMs": 11111,
+        "programGrowth": 0,
+        "textureGrowth": 0,
+        "late3dRequests": 0,
+        "p95FrameMs": 16.700000000000728,
+        "maxFrameMs": 16.80000000000109,
+        "errors": [],
+        "quality": "high"
+      },
+      {
+        "engine": "chromium",
+        "profile": "desktop-auto",
+        "readyMs": 19675,
+        "programGrowth": 0,
+        "textureGrowth": 0,
+        "late3dRequests": 0,
+        "p95FrameMs": 16.799999999999272,
+        "maxFrameMs": 83.29999999999927,
+        "errors": [],
+        "quality": "medium"
+      },
+      {
+        "engine": "chromium",
+        "profile": "phone-basic",
+        "readyMs": 10309,
+        "programGrowth": 0,
+        "textureGrowth": 0,
+        "late3dRequests": 0,
+        "p95FrameMs": 16.799999999999272,
+        "maxFrameMs": 33.29999999999927,
+        "errors": [],
+        "quality": "high"
+      },
+      {
+        "engine": "chromium",
+        "profile": "editor",
+        "readyMs": 1620,
+        "programGrowth": 0,
+        "textureGrowth": 0,
+        "late3dRequests": 0,
+        "p95FrameMs": 16.799999999999955,
+        "maxFrameMs": 16.800000000000182,
+        "errors": [],
+        "quality": "high"
+      },
+      {
+        "engine": "webkit",
+        "profile": "desktop-high",
+        "readyMs": 13223,
+        "programGrowth": 0,
+        "textureGrowth": 0,
+        "late3dRequests": 0,
+        "p95FrameMs": 32,
+        "maxFrameMs": 51,
+        "errors": [],
+        "quality": "high"
+      }
+    ],
+    "transitionProfiles": [
+      "desktop-high",
+      "phone-high"
+    ],
+    "transitionConfigFingerprintPreserved": true,
+    "staticLinkedFiles": 519,
+    "staticProfiles": [
+      "desktop",
+      "desktop-basic",
+      "phone"
+    ],
+    "staticErrors": 0,
+    "fullHistoricalE2eRerun": false,
+    "sourceBlenderOrGlbChanged": false,
+    "githubChanged": false,
+    "browserReport": "test-results/startup-readiness/final/report.json",
+    "webkitReport": "test-results/startup-readiness/webkit-final/report.json",
+    "transitionReport": "test-results/startup-transition/report.json",
+    "userProof": "test-results/startup-readiness/user-ready.png",
+    "userMeetingPreset": "builtin-15",
+    "userManualQuality": "high",
+    "userDraftReset": false,
+    "note": "Final Auto-only benchmark adjustment rechecked B2DMhJCM; unchanged manual High/phone/Editor code paths checked CpToZSis; final WebKit and transition checks B2DMhJCM."
+  },
+  "latestDeskSurfaceCleanup": {
+    "checkedAt": "2026-10-29T16:11:48.680294+00:00",
+    "status": "passed",
+    "build": "index-DRfDMlcD.js",
+    "removedRaisedBlackCableCaps": 18,
+    "actualDeskCount": 26,
+    "variants": 3,
+    "modes": [
+      "archviz",
+      "editor"
+    ],
+    "desktopTopM": 0.75,
+    "frameMaximumM": 0.725,
+    "sceneConfigFingerprintPreserved": true,
+    "unitTestsPassed": 179,
+    "unitTestFiles": 31,
+    "browserHttpErrors": 0,
+    "selectedBlenderObjectRemoved": "Wall_42_Skirting_0",
+    "selectedObjectRemovedFromWebExports": true,
+    "webRemovedTrianglesPerRepresentation": 12,
+    "vertexAttributesAndLightmapUvsUnchanged": true,
+    "browserReport": "test-results/desk-surfaces/report.json",
+    "proof": "test-results/desk-surfaces/archviz-variant-3.png"
   }
 }

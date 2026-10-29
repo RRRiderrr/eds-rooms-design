@@ -1,0 +1,77 @@
+{
+  "ok": true,
+  "tables": 26,
+  "sourceMeshParts": 78,
+  "sourceTemplates": 3,
+  "hallFacingDoors": 14,
+  "besideDoorAnchors": 28,
+  "originalGeometryUnchanged": true,
+  "exports": [
+    {
+      "variant": 1,
+      "kind": "production",
+      "vertices": 5388,
+      "dimensions": [
+        1.600000023841858,
+        0.75,
+        1.600000023841858
+      ],
+      "bytes": 192976
+    },
+    {
+      "variant": 1,
+      "kind": "proxy",
+      "vertices": 876,
+      "dimensions": [
+        1.600000023841858,
+        0.75,
+        1.600000023841858
+      ],
+      "bytes": 35032
+    },
+    {
+      "variant": 2,
+      "kind": "production",
+      "vertices": 4848,
+      "dimensions": [
+        1.399999976158142,
+        0.75,
+        0.800000011920929
+      ],
+      "bytes": 174292
+    },
+    {
+      "variant": 2,
+      "kind": "proxy",
+      "vertices": 816,
+      "dimensions": [
+        1.399999976158142,
+        0.75,
+        0.800000011920929
+      ],
+      "bytes": 33148
+    },
+    {
+      "variant": 3,
+      "kind": "production",
+      "vertices": 4848,
+      "dimensions": [
+        1.399999976158142,
+        0.75,
+        0.800000011920929
+      ],
+      "bytes": 174320
+    },
+    {
+      "variant": 3,
+      "kind": "proxy",
+      "vertices": 816,
+      "dimensions": [
+        1.399999976158142,
+        0.75,
+        0.800000011920929
+      ],
+      "bytes": 33176
+    }
+  ]
+}

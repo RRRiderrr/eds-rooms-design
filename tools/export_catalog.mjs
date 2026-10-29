@@ -26,22 +26,24 @@ const only=onlyArg?new Set(onlyArg.slice(7).split(',').filter(Boolean)):null;
 const variantsArg=process.argv.find(arg=>arg.startsWith('--variants='));
 const variants=variantsArg?new Set(variantsArg.slice(11).split(',').filter(Boolean)):null;
 const proxiesOnly=process.argv.includes('--proxies-only');
+const presetsOnly=process.argv.includes('--presets-only');
 await Promise.all(['models','proxies'].map(dir=>mkdir(path.join(destination,dir),{recursive:true})));
 const server=await createServer({root,server:{middlewareMode:true},appType:'custom'});
 try {
   const {ASSETS}=await server.ssrLoadModule('/src/catalog/catalog.ts');
-  const {BUILTIN_PRESETS}=await server.ssrLoadModule('/src/catalog/presets.ts');
+  const {BUILTIN_PRESETS,HALL_PRESETS=[]}=await server.ssrLoadModule('/src/catalog/presets.ts');
+  const allPresets=[...BUILTIN_PRESETS,...HALL_PRESETS];
   const {createAssetObject,disposeAssetObject}=await server.ssrLoadModule('/src/catalog/geometry.ts');
   const {validateScene}=await server.ssrLoadModule('/src/core/placement.ts');
   const {configureSpace,getPlacementRoom}=await server.ssrLoadModule('/src/core/space.ts');
   configureSpace(JSON.parse(await readFile(path.join(root,'public/assets/architecture/scene-space.json'),'utf8')));
   const exporter=new GLTFExporter();
   let previous;try{previous=JSON.parse(await readFile(path.join(destination,'models','manifest.json'),'utf8'));}catch{previous={assets:[]};}
-  const manifest=only||variants||proxiesOnly?previous:{schemaVersion:1,projectId:'polycam-lounge-room',generator:'EDS rooms design / original modular furniture',generatedAt:new Date().toISOString(),units:'metres',upAxis:'Y',assets:[]};
+  const manifest=only||variants||proxiesOnly||presetsOnly?previous:{schemaVersion:1,projectId:'polycam-lounge-room',generator:'EDS rooms design / original modular furniture',generatedAt:new Date().toISOString(),units:'metres',upAxis:'Y',assets:[]};
   manifest.generatedAt=new Date().toISOString();
   let totalBytes=0;
   let exported=0;
-  for(const asset of ASSETS.filter(a=>!only||only.has(a.id))) for(const variant of asset.variants.filter(v=>v.index>0&&(!variants||variants.has(`${asset.id}:${v.index}`)))) {
+  for(const asset of ASSETS.filter(a=>!presetsOnly&&(!only||only.has(a.id)))) for(const variant of asset.variants.filter(v=>v.index>0&&(!variants||variants.has(`${asset.id}:${v.index}`)))) {
     const old=previous.assets.find(e=>e.assetId===asset.id&&e.variant===variant.index);
     const preserveProduction=proxiesOnly||!!old?.sourcePbr||!!old?.productionOverride;
     const entry={...old,assetId:asset.id,variant:variant.index,label:variant.label,category:asset.category,placement:asset.placement,dimensions:variant.dimensions,materials:asset.materials,production:preserveProduction&&old?.production?old.production:`assets/models/${asset.id}-${variant.index}.glb`,proxy:`assets/proxies/${asset.id}-${variant.index}.glb`,quality:preserveProduction&&old?.quality?old.quality:{},bounds:preserveProduction&&old?.bounds?old.bounds:{},bytes:{...(preserveProduction?old?.bytes:{})}};
@@ -55,7 +57,7 @@ try {
       if(!(binary instanceof ArrayBuffer))throw new Error(`Expected GLB ArrayBuffer for ${asset.id}`);
       const relative=mode==='archviz'?entry.production:entry.proxy;
       let bytes=new Uint8Array(binary);
-      if(asset.id==='edsSignage'&&mode==='archviz'){
+      if(['edsSignage','doorPlaque','brandDoorPanel'].includes(asset.id)){
         const io=new NodeIO().registerExtensions(ALL_EXTENSIONS);const document=await io.readBinary(bytes);
         await attachSignagePrints(document,path.join(root,'public'));bytes=await io.writeBinary(document);
       }
@@ -71,13 +73,13 @@ try {
     if(existing>=0)manifest.assets[existing]=entry;else manifest.assets.push(entry);
     exported++;
   }
-  const issues=BUILTIN_PRESETS.flatMap(p=>validateScene(p.objects,getPlacementRoom).map(issue=>({preset:p.presetId,...issue})));
+  const issues=allPresets.flatMap(p=>validateScene(p.objects,getPlacementRoom).map(issue=>({preset:p.presetId,...issue})));
   if(issues.length)throw new Error(`Preset placement validation failed: ${JSON.stringify(issues)}`);
   await writeFile(path.join(destination,'models','manifest.json'),JSON.stringify(manifest,null,2));
   await mkdir(path.join(root,'assets-src','catalog'),{recursive:true});
   await mkdir(path.join(root,'assets-src','concepts'),{recursive:true});
   await writeFile(path.join(root,'assets-src','catalog','catalog.json'),JSON.stringify(ASSETS,null,2));
   await writeFile(path.join(root,'assets-src','concepts','presets.json'),JSON.stringify(BUILTIN_PRESETS,null,2));
-  await writeFile(path.join(root,'assets-src','concepts','layout-validation.json'),JSON.stringify({schemaVersion:1,checkedAt:new Date().toISOString(),presets:BUILTIN_PRESETS.map(p=>({id:p.presetId,name:p.name,objects:p.objects.length,valid:true})),issues},null,2));
-  console.log(`Processed ${exported} catalog variants (${(totalBytes/1024/1024).toFixed(2)} MiB written). Imported PBR production overrides are preserved. All ${BUILTIN_PRESETS.length} room configurations passed placement validation.`);
+  await writeFile(path.join(root,'assets-src','concepts','layout-validation.json'),JSON.stringify({schemaVersion:1,checkedAt:new Date().toISOString(),presets:allPresets.map(p=>({id:p.presetId,name:p.name,objects:p.objects.length,valid:true})),issues},null,2));
+  console.log(`Processed ${exported} catalog variants (${(totalBytes/1024/1024).toFixed(2)} MiB written). Imported PBR production overrides are preserved. All ${allPresets.length} hall and meeting configurations passed placement validation.`);
 } finally {await server.close();}

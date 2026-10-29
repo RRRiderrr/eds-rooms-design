@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-17T19:43:25.194Z",
+  "generatedAt": "2026-10-29T16:05:39.957Z",
   "source": "Actual optimized production GLBs, Three.js WebGL2 + shared PBR material pipeline",
   "images": [
     {
@@ -544,17 +544,6 @@
     },
     {
       "assetId": "board",
-      "variant": 1,
-      "file": "assets/thumbnails/board-1.webp",
-      "size": [
-        1.2000000476837158,
-        0.8209996529355649,
-        0.07745141562373542
-      ],
-      "triangles": 13610
-    },
-    {
-      "assetId": "board",
       "variant": 2,
       "file": "assets/thumbnails/board-2.webp",
       "size": [
@@ -662,17 +651,6 @@
         0.24991804162157966
       ],
       "triangles": 9722
-    },
-    {
-      "assetId": "separator",
-      "variant": 3,
-      "file": "assets/thumbnails/separator-3.webp",
-      "size": [
-        1.1035594940185547,
-        0.8729754595947239,
-        0.3170231052535907
-      ],
-      "triangles": 33554
     },
     {
       "assetId": "coffeeTable",
@@ -827,6 +805,468 @@
         0.4519790970611009
       ],
       "triangles": 33618
+    },
+    {
+      "assetId": "board",
+      "variant": 1,
+      "file": "assets/thumbnails/board-1.webp",
+      "size": [
+        1.2000000476837158,
+        0.8210380260439837,
+        0.07744537370367713
+      ],
+      "triangles": 6410
+    },
+    {
+      "assetId": "separator",
+      "variant": 3,
+      "file": "assets/thumbnails/separator-3.webp",
+      "size": [
+        1.100000023841858,
+        0.8999617377354736,
+        0.3000183176084074
+      ],
+      "triangles": 121114
+    },
+    {
+      "assetId": "beanBag",
+      "variant": 1,
+      "file": "assets/thumbnails/beanBag-1.webp",
+      "size": [
+        0.8799584751585077,
+        0.9599999785423279,
+        0.9599999785423279
+      ],
+      "triangles": 85250
+    },
+    {
+      "assetId": "beanBag",
+      "variant": 2,
+      "file": "assets/thumbnails/beanBag-2.webp",
+      "size": [
+        1.0399762181034857,
+        0.7799737709873265,
+        1.100000023841858
+      ],
+      "triangles": 85250
+    },
+    {
+      "assetId": "beanBag",
+      "variant": 3,
+      "file": "assets/thumbnails/beanBag-3.webp",
+      "size": [
+        1.0199999809265137,
+        0.6999639750698443,
+        0.9800305001833989
+      ],
+      "triangles": 85250
+    },
+    {
+      "assetId": "botanicalDivider",
+      "variant": 1,
+      "file": "assets/thumbnails/botanicalDivider-1.webp",
+      "size": [
+        2.000137291890486,
+        2.29999995239079,
+        0.47983641085675954
+      ],
+      "triangles": 96746
+    },
+    {
+      "assetId": "botanicalDivider",
+      "variant": 2,
+      "file": "assets/thumbnails/botanicalDivider-2.webp",
+      "size": [
+        2.000137291890486,
+        2.29999995239079,
+        0.47983641085675954
+      ],
+      "triangles": 139994
+    },
+    {
+      "assetId": "botanicalDivider",
+      "variant": 3,
+      "file": "assets/thumbnails/botanicalDivider-3.webp",
+      "size": [
+        2.000137291890486,
+        2.29999995239079,
+        0.47983641085675954
+      ],
+      "triangles": 89762
+    },
+    {
+      "assetId": "botanicalDivider",
+      "variant": 4,
+      "file": "assets/thumbnails/botanicalDivider-4.webp",
+      "size": [
+        2.0001152111892417,
+        2.300021048720247,
+        0.47999511703848385
+      ],
+      "triangles": 187682
+    },
+    {
+      "assetId": "botanicalDivider",
+      "variant": 5,
+      "file": "assets/thumbnails/botanicalDivider-5.webp",
+      "size": [
+        2.0001152111892417,
+        2.300021048720247,
+        0.47999511703848385
+      ],
+      "triangles": 112514
+    },
+    {
+      "assetId": "botanicalDivider",
+      "variant": 6,
+      "file": "assets/thumbnails/botanicalDivider-6.webp",
+      "size": [
+        2.0001152111892417,
+        2.2999445684113957,
+        0.47999511703848385
+      ],
+      "triangles": 82034
+    },
+    {
+      "assetId": "doorPlaque",
+      "variant": 1,
+      "file": "assets/thumbnails/doorPlaque-1.webp",
+      "size": [
+        0.1899999976158142,
+        0.14500350780903548,
+        0.03399720152163391
+      ],
+      "triangles": 6116
+    },
+    {
+      "assetId": "doorPlaque",
+      "variant": 2,
+      "file": "assets/thumbnails/doorPlaque-2.webp",
+      "size": [
+        0.2199999988079071,
+        0.12000732379200207,
+        0.012594750898569785
+      ],
+      "triangles": 3536
+    },
+    {
+      "assetId": "doorPlaque",
+      "variant": 3,
+      "file": "assets/thumbnails/doorPlaque-3.webp",
+      "size": [
+        0.23999999463558197,
+        0.13999938650058028,
+        0.01869441491172505
+      ],
+      "triangles": 3536
+    },
+    {
+      "assetId": "wallClock",
+      "variant": 1,
+      "file": "assets/thumbnails/wallClock-1.webp",
+      "size": [
+        1.2500001192092896,
+        1.2500001192092896,
+        0.03499801479029649
+      ],
+      "triangles": 34602
+    },
+    {
+      "assetId": "wallClock",
+      "variant": 2,
+      "file": "assets/thumbnails/wallClock-2.webp",
+      "size": [
+        1.25,
+        1.25,
+        0.03499801479029649
+      ],
+      "triangles": 12370
+    },
+    {
+      "assetId": "wallClock",
+      "variant": 3,
+      "file": "assets/thumbnails/wallClock-3.webp",
+      "size": [
+        1.2499998807907104,
+        1.2499998807907104,
+        0.03499801479029649
+      ],
+      "triangles": 24754
+    },
+    {
+      "assetId": "wallClock",
+      "variant": 4,
+      "file": "assets/thumbnails/wallClock-4.webp",
+      "size": [
+        1.25,
+        1.25,
+        0.03499801479029649
+      ],
+      "triangles": 6418
+    },
+    {
+      "assetId": "wallClock",
+      "variant": 5,
+      "file": "assets/thumbnails/wallClock-5.webp",
+      "size": [
+        1.25,
+        1.25,
+        0.03499801479029649
+      ],
+      "triangles": 32334
+    },
+    {
+      "assetId": "wallClock",
+      "variant": 6,
+      "file": "assets/thumbnails/wallClock-6.webp",
+      "size": [
+        1.2499998807907104,
+        1.25,
+        0.03499801479029649
+      ],
+      "triangles": 10930
+    },
+    {
+      "assetId": "edsTimeline",
+      "variant": 1,
+      "file": "assets/thumbnails/edsTimeline-1.webp",
+      "size": [
+        1.68002995655746,
+        1.8200043150077614,
+        0.03502145416431044
+      ],
+      "triangles": 145358
+    },
+    {
+      "assetId": "edsTimeline",
+      "variant": 2,
+      "file": "assets/thumbnails/edsTimeline-2.webp",
+      "size": [
+        1.68002995655746,
+        1.8200000524520874,
+        0.03502145416431044
+      ],
+      "triangles": 150108
+    },
+    {
+      "assetId": "edsTimeline",
+      "variant": 3,
+      "file": "assets/thumbnails/edsTimeline-3.webp",
+      "size": [
+        1.68002995655746,
+        1.8200000524520874,
+        0.03502145416431044
+      ],
+      "triangles": 149772
+    },
+    {
+      "assetId": "edsTimeline",
+      "variant": 4,
+      "file": "assets/thumbnails/edsTimeline-4.webp",
+      "size": [
+        1.68002995655746,
+        1.8200000524520874,
+        0.03502145416431044
+      ],
+      "triangles": 144708
+    },
+    {
+      "assetId": "edsTimeline",
+      "variant": 5,
+      "file": "assets/thumbnails/edsTimeline-5.webp",
+      "size": [
+        1.68002995655746,
+        1.8200000524520874,
+        0.03502145416431044
+      ],
+      "triangles": 146028
+    },
+    {
+      "assetId": "edsTimeline",
+      "variant": 6,
+      "file": "assets/thumbnails/edsTimeline-6.webp",
+      "size": [
+        1.68002995655746,
+        1.8200000524520874,
+        0.03502145416431044
+      ],
+      "triangles": 145356
+    },
+    {
+      "assetId": "edsTimeline",
+      "variant": 7,
+      "file": "assets/thumbnails/edsTimeline-7.webp",
+      "size": [
+        1.68002995655746,
+        1.8200000524520874,
+        0.03502145416431044
+      ],
+      "triangles": 144952
+    },
+    {
+      "assetId": "edsTimeline",
+      "variant": 8,
+      "file": "assets/thumbnails/edsTimeline-8.webp",
+      "size": [
+        1.68002995655746,
+        1.8200000524520874,
+        0.03502145416431044
+      ],
+      "triangles": 145548
+    },
+    {
+      "assetId": "brandDoorPanel",
+      "variant": 1,
+      "file": "assets/thumbnails/brandDoorPanel-1.webp",
+      "size": [
+        0.2197698886573422,
+        3.5299999713897705,
+        0
+      ],
+      "triangles": 6
+    },
+    {
+      "assetId": "brandDoorPanel",
+      "variant": 2,
+      "file": "assets/thumbnails/brandDoorPanel-2.webp",
+      "size": [
+        0.28009887770053415,
+        3.5299999713897705,
+        0
+      ],
+      "triangles": 6
+    },
+    {
+      "assetId": "brandDoorPanel",
+      "variant": 3,
+      "file": "assets/thumbnails/brandDoorPanel-3.webp",
+      "size": [
+        0.3399969453934176,
+        3.5299999713897705,
+        0
+      ],
+      "triangles": 6
+    },
+    {
+      "assetId": "edsUkraine",
+      "variant": 1,
+      "file": "assets/thumbnails/edsUkraine-1.webp",
+      "size": [
+        3.200000047683716,
+        1.320059835948997,
+        0.04000817980887811
+      ],
+      "triangles": 39390
+    },
+    {
+      "assetId": "edsUkraine",
+      "variant": 2,
+      "file": "assets/thumbnails/edsUkraine-2.webp",
+      "size": [
+        3.200000047683716,
+        1.320059835948997,
+        0.04000817980887811
+      ],
+      "triangles": 48982
+    },
+    {
+      "assetId": "edsUkraine",
+      "variant": 3,
+      "file": "assets/thumbnails/edsUkraine-3.webp",
+      "size": [
+        3.200000047683716,
+        1.320059835948997,
+        0.04000817980887811
+      ],
+      "triangles": 38222
+    },
+    {
+      "assetId": "edsUkraine",
+      "variant": 4,
+      "file": "assets/thumbnails/edsUkraine-4.webp",
+      "size": [
+        3.200000047683716,
+        1.320059835948997,
+        0.04000817980887811
+      ],
+      "triangles": 39698
+    },
+    {
+      "assetId": "edsUkraine",
+      "variant": 5,
+      "file": "assets/thumbnails/edsUkraine-5.webp",
+      "size": [
+        3.200000047683716,
+        1.320059835948997,
+        0.04000817980887811
+      ],
+      "triangles": 35806
+    },
+    {
+      "assetId": "edsUkraine",
+      "variant": 6,
+      "file": "assets/thumbnails/edsUkraine-6.webp",
+      "size": [
+        3.200000047683716,
+        1.320059835948997,
+        0.039844966565598196
+      ],
+      "triangles": 39446
+    },
+    {
+      "assetId": "edsUkraine",
+      "variant": 7,
+      "file": "assets/thumbnails/edsUkraine-7.webp",
+      "size": [
+        3.2000000523403287,
+        1.320059835948997,
+        0.04000817980887811
+      ],
+      "triangles": 48694
+    },
+    {
+      "assetId": "edsUkraine",
+      "variant": 8,
+      "file": "assets/thumbnails/edsUkraine-8.webp",
+      "size": [
+        3.200000047683716,
+        1.320059835948997,
+        0.04000817980887811
+      ],
+      "triangles": 37698
+    },
+    {
+      "assetId": "hallDesk",
+      "variant": 1,
+      "file": "assets/thumbnails/hallDesk-1.webp",
+      "size": [
+        1.600000023841858,
+        0.75,
+        1.600000023841858
+      ],
+      "triangles": 5442
+    },
+    {
+      "assetId": "hallDesk",
+      "variant": 2,
+      "file": "assets/thumbnails/hallDesk-2.webp",
+      "size": [
+        1.399999976158142,
+        0.75,
+        0.800000011920929
+      ],
+      "triangles": 4898
+    },
+    {
+      "assetId": "hallDesk",
+      "variant": 3,
+      "file": "assets/thumbnails/hallDesk-3.webp",
+      "size": [
+        1.399999976158142,
+        0.75,
+        0.800000011920929
+      ],
+      "triangles": 4898
     }
   ]
 }

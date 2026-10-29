@@ -15,6 +15,31 @@ export function wallAnchor(wallId:string,along:number,height:number,depth:number
  const inset=depth/2+.008;
  return {wallId,position:wall.axis==='x'?[wall.coordinate+wall.normal[0]*inset,height,along]:[along,height,wall.coordinate+wall.normal[2]*inset], rotation: wall.normal[0]===1?Math.PI/2:wall.normal[0]===-1?-Math.PI/2:wall.normal[2]===-1?Math.PI:0};
 }
+type Point2=[number,number];
+function pointInPolygon(point:Point2,polygon:Point2[]):boolean {
+ let inside=false;const [x,z]=point;
+ for(let i=0,j=polygon.length-1;i<polygon.length;j=i++){
+  const [ax,az]=polygon[i],[bx,bz]=polygon[j];
+  if((az>z)!==(bz>z)&&x<(bx-ax)*(z-az)/(bz-az)+ax)inside=!inside;
+ }
+ return inside;
+}
+function pointSegmentDistance(p:Point2,a:Point2,b:Point2):number {
+ const dx=b[0]-a[0],dz=b[1]-a[1],length=dx*dx+dz*dz;
+ const t=length?Math.max(0,Math.min(1,((p[0]-a[0])*dx+(p[1]-a[1])*dz)/length)):0;
+ return Math.hypot(p[0]-a[0]-t*dx,p[1]-a[1]-t*dz);
+}
+function segmentDistance(a:Point2,b:Point2,c:Point2,d:Point2):number {
+ const cross=(p:Point2,q:Point2,r:Point2)=>(q[0]-p[0])*(r[1]-p[1])-(q[1]-p[1])*(r[0]-p[0]);
+ if(cross(a,b,c)*cross(a,b,d)<0&&cross(c,d,a)*cross(c,d,b)<0)return 0;
+ return Math.min(pointSegmentDistance(a,c,d),pointSegmentDistance(b,c,d),pointSegmentDistance(c,a,b),pointSegmentDistance(d,a,b));
+}
+function polygonSupports(points:Point2[],polygon:Point2[],clearance=.008):boolean {
+ if(polygon.length<3||!points.every(point=>pointInPolygon(point,polygon)))return false;
+ // Testing only corners is insufficient for concave L-shaped worktops: a
+ // rotated accessory can have supported corners while its edge spans the cutout.
+ return points.every((point,i)=>polygon.every((edge,j)=>segmentDistance(point,points[(i+1)%points.length],edge,polygon[(j+1)%polygon.length])>=clearance));
+}
 export function findAccessorySupport(object:SceneObject,objects:SceneObject[]):SceneObject|undefined {
   const accessoryCorners=corners(footprint(object));
   return objects.find(o=>{
@@ -22,7 +47,9 @@ export function findAccessorySupport(object:SceneObject,objects:SceneObject[]):S
    const sv=getVariant(o.assetId,o.variant),[sw,sh,sd]=sv.dimensions;
    if(Math.abs(o.position[1]+sh-object.position[1])>.035)return false;
    const c=Math.cos(o.rotation),s=Math.sin(o.rotation),round=/round|oval/.test(sv.model);
-   return accessoryCorners.every(([x,z])=>{const dx=x-o.position[0],dz=z-o.position[2],lx=dx*c-dz*s,lz=dx*s+dz*c;return round?(lx/(sw/2-.008))**2+(lz/(sd/2-.008))**2<=1.001:Math.abs(lx)<=sw/2-.008&&Math.abs(lz)<=sd/2-.008;});
+   const local=accessoryCorners.map(([x,z])=>{const dx=x-o.position[0],dz=z-o.position[2];return[dx*c-dz*s,dx*s+dz*c] as Point2;});
+   if(sv.supportPolygon)return polygonSupports(local,sv.supportPolygon);
+   return local.every(([lx,lz])=>round?(lx/(sw/2-.008))**2+(lz/(sd/2-.008))**2<=1.001:Math.abs(lx)<=sw/2-.008&&Math.abs(lz)<=sd/2-.008);
   });
 }
 export function validatePlacement(object:SceneObject,objects:SceneObject[],room:RoomDefinition=ROOM,options:{freePlacement?:boolean}={}):PlacementResult {
@@ -35,11 +62,11 @@ export function validatePlacement(object:SceneObject,objects:SceneObject[],room:
   const expected=wallAnchor(wall.id,wall.axis==='x'?object.position[2]:object.position[0],object.position[1],d,room);
   if(Math.abs(object.position[wall.axis==='x'?0:2]-expected.position[wall.axis==='x'?0:2])>.07) return {valid:false,reason:'Предмет має бути закріплений у площині стіни'};
   const along=wall.axis==='x'?object.position[2]:object.position[0];
-  if(along-w/2<wall.min+.03||along+w/2>wall.max-.03||object.position[1]-h/2<.18||object.position[1]+h/2>Math.min(room.height-.3,(wall.height??room.height)-.03)) return {valid:false,reason:'Предмет виходить за межі стіни'};
+  if(along-w/2<wall.min+.03||along+w/2>wall.max-.03||object.position[1]-h/2<(asset.wallClearance??.18)-.00001||object.position[1]+h/2>Math.min(room.height-.3,(wall.height??room.height)-(asset.wallTopClearance??.03))+.00001) return {valid:false,reason:'Предмет виходить за межі стіни'};
   for(const opening of wall.openings??[])if(along+w/2>opening.min&&along-w/2<opening.max&&object.position[1]+h/2>opening.minY&&object.position[1]-h/2<opening.maxY)return {valid:false,reason:opening.kind==='window'?'Тут розташований віконний отвір':'Тут розташований дверний отвір'};
   if(wall.id===room.window.wallId&&along+w/2>room.window.min&&along-w/2<room.window.max&&object.position[1]+h/2>room.window.sill&&object.position[1]-h/2<room.window.sill+room.window.height) return {valid:false,reason:'Тут розташований віконний отвір'};
   if(wall.id===room.door.wallId&&along+w/2>room.door.center-room.door.width/2&&along-w/2<room.door.center+room.door.width/2&&object.position[1]-h/2<room.door.height) return {valid:false,reason:'Тут розташований дверний отвір'};
-  for(const other of objects) {if(other.id===object.id||other.variant===0||other.wallId!==object.wallId)continue; const a=getAsset(other.assetId);if(a.placement!=='wall')continue; const [ow,oh]=getVariant(other.assetId,other.variant).dimensions;const oa=wall.axis==='x'?other.position[2]:other.position[0];if(Math.abs(along-oa)<(w+ow)/2-.01&&Math.abs(object.position[1]-other.position[1])<(h+oh)/2-.01)return {valid:false,reason:'Настінні предмети перетинаються',collidingId:other.id};}
+  for(const other of objects) {if(other.id===object.id||other.variant===0||other.wallId!==object.wallId)continue; const a=getAsset(other.assetId);if(a.placement!=='wall'||a.wallLayer==='background'||asset.wallLayer==='background')continue; const [ow,oh]=getVariant(other.assetId,other.variant).dimensions;const oa=wall.axis==='x'?other.position[2]:other.position[0];if(Math.abs(along-oa)<(w+ow)/2-.01&&Math.abs(object.position[1]-other.position[1])<(h+oh)/2-.01)return {valid:false,reason:'Настінні предмети перетинаються',collidingId:other.id};}
   return {valid:true};
  }
  if(asset.collision==='accessory') {

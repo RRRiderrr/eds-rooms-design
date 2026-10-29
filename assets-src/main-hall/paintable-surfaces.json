@@ -1,0 +1,619 @@
+{
+  "schemaVersion": 1,
+  "units": "metres",
+  "sourceFile": "reconstructed_room.blend",
+  "coordinateSystem": "app Y-up",
+  "sourceInventory": "assets-src/main-hall/live-inventory.json",
+  "geometryFiles": [
+    {
+      "path": "public/assets/architecture/space.glb",
+      "sha256": "13bdda8cd35db278fda7040a47ba2abd19cab7fd979d744c187454d767779d00"
+    },
+    {
+      "path": "public/assets/architecture/room.glb",
+      "sha256": "3056c7b32ee47891c13ddb6a6cbee4eacc5668c9968f36e3d07de171641519a8"
+    }
+  ],
+  "hall": {
+    "wall-23": {
+      "minY": 0.07,
+      "maxY": 2.6500003,
+      "sourceNode": "Wall_23_Clean",
+      "steelNode": "Wall_23_Top_Steel_Beam",
+      "axis": "z",
+      "coordinate": 1.7049244,
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "material": "01_WALLS_Plain_Warm_White",
+      "proof": {
+        "plaster": {
+          "triangles": 122,
+          "files": [
+            "public/assets/architecture/space.glb"
+          ],
+          "bounds": {
+            "min": [
+              -25.7449646,
+              0,
+              1.7049243
+            ],
+            "max": [
+              -20.859333,
+              3.5999999,
+              1.8049247
+            ]
+          }
+        },
+        "steel": {
+          "triangles": 30,
+          "files": [
+            "public/assets/architecture/space.glb"
+          ],
+          "bounds": {
+            "min": [
+              -25.7449646,
+              2.6500003,
+              1.6949236
+            ],
+            "max": [
+              -20.859333,
+              4.3199997,
+              1.8149245
+            ]
+          }
+        },
+        "skirtingTop": 0.07,
+        "skirtingSources": [
+          "Wall_23_Skirting_0",
+          "Wall_23_Skirting_1"
+        ],
+        "frontTriangles": 44,
+        "rule": "Paint existing plaster only above the skirting and below the separate steel beam underside."
+      }
+    },
+    "wall-21": {
+      "minY": 0.07,
+      "maxY": 3.0000002,
+      "sourceNode": "Wall_21_Clean",
+      "steelNode": "Wall_21_Top_Steel_Beam",
+      "axis": "z",
+      "coordinate": -3.1488905,
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "material": "01_WALLS_Plain_Warm_White",
+      "proof": {
+        "plaster": {
+          "triangles": 68,
+          "files": [
+            "public/assets/architecture/room.glb"
+          ],
+          "bounds": {
+            "min": [
+              -2.6518145,
+              0,
+              -3.1488905
+            ],
+            "max": [
+              2.6518154,
+              3.5999999,
+              -3.0488906
+            ]
+          }
+        },
+        "steel": {
+          "triangles": 24,
+          "files": [
+            "public/assets/architecture/space.glb",
+            "public/assets/architecture/room.glb"
+          ],
+          "bounds": {
+            "min": [
+              -2.6518145,
+              3.0000002,
+              -3.1588905
+            ],
+            "max": [
+              2.6518154,
+              4.3200002,
+              -3.0388906
+            ]
+          }
+        },
+        "skirtingTop": 0.07,
+        "skirtingSources": [
+          "Wall_21_Skirting_0",
+          "Wall_21_Skirting_1"
+        ],
+        "frontTriangles": 18,
+        "rule": "Paint existing plaster only above the skirting and below the separate steel beam underside."
+      }
+    },
+    "wall-38": {
+      "minY": 0.07,
+      "maxY": 3.0000002,
+      "sourceNode": "Wall_38_Clean",
+      "steelNode": "Wall_38_Top_Steel_Beam",
+      "axis": "z",
+      "coordinate": -5.1235115,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "material": "01_WALLS_Plain_Warm_White",
+      "proof": {
+        "plaster": {
+          "triangles": 288,
+          "files": [
+            "public/assets/architecture/space.glb"
+          ],
+          "bounds": {
+            "min": [
+              -23.388504,
+              0,
+              -5.2235117
+            ],
+            "max": [
+              23.8493862,
+              3.5999999,
+              -5.1235113
+            ]
+          }
+        },
+        "steel": {
+          "triangles": 94,
+          "files": [
+            "public/assets/architecture/space.glb"
+          ],
+          "bounds": {
+            "min": [
+              -23.388504,
+              3.0000002,
+              -5.2335119
+            ],
+            "max": [
+              23.8493862,
+              4.3200002,
+              -5.113512
+            ]
+          }
+        },
+        "skirtingTop": 0.07,
+        "skirtingSources": [
+          "Wall_38_Skirting_0",
+          "Wall_38_Skirting_0_After_New_Door",
+          "Wall_38_Skirting_1",
+          "Wall_38_Skirting_2",
+          "Wall_38_Skirting_3",
+          "Wall_38_Skirting_4",
+          "Wall_38_Skirting_5",
+          "Wall_38_Skirting_6"
+        ],
+        "frontTriangles": 86,
+        "rule": "Paint existing plaster only above the skirting and below the separate steel beam underside."
+      }
+    },
+    "wall-13": {
+      "minY": 0.07,
+      "maxY": 3.0000002,
+      "sourceNode": "Wall_13_Clean",
+      "steelNode": "Wall_13_Top_Steel_Beam",
+      "axis": "x",
+      "coordinate": 23.7493852,
+      "normal": [
+        -1,
+        0,
+        0
+      ],
+      "material": "01_WALLS_Plain_Warm_White",
+      "proof": {
+        "plaster": {
+          "triangles": 322,
+          "files": [
+            "public/assets/architecture/space.glb"
+          ],
+          "bounds": {
+            "min": [
+              23.7493858,
+              0,
+              -5.2235098
+            ],
+            "max": [
+              23.8493862,
+              3.5999999,
+              3.2131302
+            ]
+          }
+        },
+        "steel": {
+          "triangles": 40,
+          "files": [
+            "public/assets/architecture/space.glb"
+          ],
+          "bounds": {
+            "min": [
+              23.7393875,
+              3.0000002,
+              -5.2235098
+            ],
+            "max": [
+              23.8593864,
+              4.3199997,
+              3.2131302
+            ]
+          }
+        },
+        "skirtingTop": 0.07,
+        "skirtingSources": [
+          "Wall_13_Skirting_0",
+          "Wall_13_Skirting_1",
+          "Wall_13_Skirting_2",
+          "Wall_13_Skirting_3"
+        ],
+        "frontTriangles": 102,
+        "rule": "Paint existing plaster only above the skirting and below the separate steel beam underside."
+      }
+    },
+    "wall-12": {
+      "minY": 0.07,
+      "maxY": 3.0500002,
+      "sourceNode": "Wall_12_Clean",
+      "steelNode": "Wall_12_Top_Steel_Beam",
+      "axis": "x",
+      "coordinate": -23.3385016,
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "material": "01_WALLS_Plain_Warm_White",
+      "proof": {
+        "plaster": {
+          "triangles": 36,
+          "files": [
+            "public/assets/architecture/space.glb"
+          ],
+          "bounds": {
+            "min": [
+              -23.4385014,
+              0,
+              -5.1235094
+            ],
+            "max": [
+              -23.338501,
+              3.5999999,
+              -0.9936895
+            ]
+          }
+        },
+        "steel": {
+          "triangles": 12,
+          "files": [
+            "public/assets/architecture/space.glb"
+          ],
+          "bounds": {
+            "min": [
+              -23.4484997,
+              3.0500002,
+              -5.1235094
+            ],
+            "max": [
+              -23.3285007,
+              4.3200002,
+              -0.9936895
+            ]
+          }
+        },
+        "skirtingTop": 0.07,
+        "skirtingSources": [
+          "Wall_12_Skirting_0",
+          "Wall_12_Skirting_0_After_New_Door"
+        ],
+        "frontTriangles": 8,
+        "rule": "Paint existing plaster only above the skirting and below the separate steel beam underside."
+      }
+    },
+    "wall-4": {
+      "minY": 0.07,
+      "maxY": 3.0500002,
+      "sourceNode": "Wall_4_Clean",
+      "steelNode": "Wall_4_Top_Steel_Beam",
+      "axis": "x",
+      "coordinate": -25.6449591,
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "material": "01_WALLS_Plain_Warm_White",
+      "proof": {
+        "plaster": {
+          "triangles": 44,
+          "files": [
+            "public/assets/architecture/space.glb"
+          ],
+          "bounds": {
+            "min": [
+              -25.7449589,
+              0,
+              -1.0936896
+            ],
+            "max": [
+              -25.6449585,
+              3.5999999,
+              1.8049204
+            ]
+          }
+        },
+        "steel": {
+          "triangles": 12,
+          "files": [
+            "public/assets/architecture/space.glb"
+          ],
+          "bounds": {
+            "min": [
+              -25.7549591,
+              3.0500002,
+              -1.0936896
+            ],
+            "max": [
+              -25.6349602,
+              4.3200002,
+              1.8049204
+            ]
+          }
+        },
+        "skirtingTop": 0.07,
+        "skirtingSources": [
+          "Wall_4_Skirting_0",
+          "Wall_4_Skirting_0_After_New_Door"
+        ],
+        "frontTriangles": 10,
+        "rule": "Paint existing plaster only above the skirting and below the separate steel beam underside."
+      }
+    }
+  },
+  "meeting": {
+    "west": {
+      "minY": 0.07,
+      "maxY": 3.5999999,
+      "sourceNode": "Wall_17_Clean",
+      "steelNode": "Wall_17_Top_Steel_Beam",
+      "axis": "x",
+      "coordinate": -2.6018175,
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "material": "01_WALLS_Plain_Warm_White",
+      "proof": {
+        "plaster": {
+          "triangles": 12,
+          "files": [
+            "public/assets/architecture/room.glb"
+          ],
+          "bounds": {
+            "min": [
+              -2.7018175,
+              0,
+              -3.0488896
+            ],
+            "max": [
+              -2.6018176,
+              3.5999999,
+              3.0488904
+            ]
+          }
+        },
+        "steel": {
+          "triangles": 18,
+          "files": [
+            "public/assets/architecture/room.glb"
+          ],
+          "bounds": {
+            "min": [
+              -2.7118175,
+              3.5999999,
+              -3.0488896
+            ],
+            "max": [
+              -2.5918176,
+              4.3200002,
+              3.0488908
+            ]
+          }
+        },
+        "skirtingTop": 0.07,
+        "skirtingSources": [
+          "Wall_17_Skirting_0"
+        ],
+        "frontTriangles": 2,
+        "rule": "Paint existing plaster only above the skirting and below the separate steel beam underside."
+      }
+    },
+    "east": {
+      "minY": 0.07,
+      "maxY": 3.5999999,
+      "sourceNode": "Wall_26_Clean",
+      "steelNode": "Wall_26_Top_Steel_Beam",
+      "axis": "x",
+      "coordinate": 2.6018174,
+      "normal": [
+        -1,
+        0,
+        0
+      ],
+      "material": "01_WALLS_Plain_Warm_White",
+      "proof": {
+        "plaster": {
+          "triangles": 20,
+          "files": [
+            "public/assets/architecture/room.glb"
+          ],
+          "bounds": {
+            "min": [
+              2.6018174,
+              0,
+              -3.0488896
+            ],
+            "max": [
+              2.7018175,
+              3.5999999,
+              2.6430104
+            ]
+          }
+        },
+        "steel": {
+          "triangles": 18,
+          "files": [
+            "public/assets/architecture/room.glb"
+          ],
+          "bounds": {
+            "min": [
+              2.5918174,
+              3.5999999,
+              -3.0488894
+            ],
+            "max": [
+              2.7118173,
+              4.3200002,
+              2.6430104
+            ]
+          }
+        },
+        "skirtingTop": 0.07,
+        "skirtingSources": [
+          "Wall_26_Skirting_0"
+        ],
+        "frontTriangles": 4,
+        "rule": "Paint existing plaster only above the skirting and below the separate steel beam underside."
+      }
+    },
+    "near": {
+      "minY": 0.07,
+      "maxY": 3.0000002,
+      "sourceNode": "Wall_21_Clean",
+      "steelNode": "Wall_21_Top_Steel_Beam",
+      "axis": "z",
+      "coordinate": -3.0488905,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "material": "01_WALLS_Plain_Warm_White",
+      "proof": {
+        "plaster": {
+          "triangles": 68,
+          "files": [
+            "public/assets/architecture/room.glb"
+          ],
+          "bounds": {
+            "min": [
+              -2.6518145,
+              0,
+              -3.1488905
+            ],
+            "max": [
+              2.6518154,
+              3.5999999,
+              -3.0488906
+            ]
+          }
+        },
+        "steel": {
+          "triangles": 24,
+          "files": [
+            "public/assets/architecture/space.glb",
+            "public/assets/architecture/room.glb"
+          ],
+          "bounds": {
+            "min": [
+              -2.6518145,
+              3.0000002,
+              -3.1588905
+            ],
+            "max": [
+              2.6518154,
+              4.3200002,
+              -3.0388906
+            ]
+          }
+        },
+        "skirtingTop": 0.07,
+        "skirtingSources": [
+          "Wall_21_Skirting_0",
+          "Wall_21_Skirting_1"
+        ],
+        "frontTriangles": 18,
+        "rule": "Paint existing plaster only above the skirting and below the separate steel beam underside."
+      }
+    },
+    "far": {
+      "minY": 0.07,
+      "maxY": 3.3500001,
+      "sourceNode": "Wall_16_Clean",
+      "steelNode": "Wall_16_Top_Steel_Beam",
+      "axis": "z",
+      "coordinate": 3.0488937,
+      "normal": [
+        0,
+        0,
+        -1
+      ],
+      "material": "15_WALLS_Window_Panels_Plain_White",
+      "proof": {
+        "plaster": {
+          "triangles": 96,
+          "files": [
+            "public/assets/architecture/room.glb"
+          ],
+          "bounds": {
+            "min": [
+              -2.6518145,
+              0,
+              3.0488937
+            ],
+            "max": [
+              2.7018154,
+              3.5999999,
+              3.1402977
+            ]
+          }
+        },
+        "steel": {
+          "triangles": 22,
+          "files": [
+            "public/assets/architecture/space.glb",
+            "public/assets/architecture/room.glb"
+          ],
+          "bounds": {
+            "min": [
+              -2.6518145,
+              3.3500001,
+              3.0345957
+            ],
+            "max": [
+              2.7018154,
+              4.3200002,
+              3.1545956
+            ]
+          }
+        },
+        "skirtingTop": 0.07,
+        "skirtingSources": [
+          "Wall_16_Skirting_0"
+        ],
+        "frontTriangles": 28,
+        "rule": "Paint existing plaster only above the skirting and below the separate steel beam underside."
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "sourceFile": "E:\\ArchViz_Resources\\main-hall\\source-20261029-180439.blend",
+  "families": [
+    {
+      "variant": 1,
+      "instances": 8,
+      "prototype": "Desk_01",
+      "dimensions": [
+        1.600000023841858,
+        0.75,
+        1.600000023841858
+      ],
+      "maximumWorldVertexErrorMetres": 0
+    },
+    {
+      "variant": 2,
+      "instances": 9,
+      "prototype": "East_Desk_01_Wall_Bank_Row_1",
+      "dimensions": [
+        1.399999976158142,
+        0.75,
+        0.800000011920929
+      ],
+      "maximumWorldVertexErrorMetres": 9.830249847454215e-07
+    },
+    {
+      "variant": 3,
+      "instances": 9,
+      "prototype": "East_Desk_04_Island_A_West_Row_1",
+      "dimensions": [
+        1.399999976158142,
+        0.75,
+        0.800000011920929
+      ],
+      "maximumWorldVertexErrorMetres": 9.830249847454215e-07
+    }
+  ],
+  "worldReconstructionMaxErrorMetres": 9.830249847454215e-07,
+  "sourceCount": 26
+}
