@@ -67,6 +67,7 @@ export class SceneView {
   const canvas=document.createElement('canvas');const gl=canvas.getContext('webgl2',{antialias:true,alpha:false,powerPreference:'high-performance'});
   if(!gl)throw new Error('WEBGL2_UNAVAILABLE');
   this.renderer=new THREE.WebGLRenderer({canvas,context:gl,antialias:true,alpha:false,powerPreference:'high-performance'});
+  this.wallFinishes.configure(this.renderer);
   this.renderer.info.autoReset=false;this.renderer.outputColorSpace=THREE.SRGBColorSpace;this.renderer.toneMapping=THREE.ACESFilmicToneMapping;this.renderer.toneMappingExposure=.78;
   this.renderer.setClearColor('#e7e9e4');this.renderer.shadowMap.enabled=true;this.renderer.shadowMap.autoUpdate=false;this.renderer.shadowMap.type=THREE.PCFShadowMap;canvas.setAttribute('aria-label','Тривимірний простір');canvas.tabIndex=0;
   this.host.append(canvas);this.scene.add(this.architecture.root,this.objects);
@@ -140,7 +141,11 @@ export class SceneView {
   this.directLighting.update(this.camera,this.quality.settings);this.scene.updateMatrixWorld(true);this.camera.updateMatrixWorld(true);
   progress('Компіляція шейдерів',at(.28));await yieldStartupFrame();
   const previousTarget=this.renderer.getRenderTarget();
-  try{if(this.mode==='archviz')this.renderer.setRenderTarget(this.composer.readBuffer);await this.renderer.compileAsync(this.scene,this.camera);}finally{this.renderer.setRenderTarget(previousTarget);}
+  try{
+   if(this.mode==='archviz')this.renderer.setRenderTarget(this.composer.readBuffer);
+   await this.renderer.compileAsync(this.scene,this.camera);
+   if(this.wallFinishes.recoverUnsupportedPrograms(this.renderer))await this.renderer.compileAsync(this.scene,this.camera);
+  }finally{this.renderer.setRenderTarget(previousTarget);}
   const position=this.camera.position.clone(),quaternion=this.camera.quaternion.clone(),target=this.controls.target.clone(),frustum=new Map<THREE.Object3D,boolean>(),visibility=new Map<THREE.Object3D,boolean>();
   if(this.mode==='editor')this.architecture.editor.traverse(o=>{if(o.userData.solidWallAssembly||o.userData.archCategory==='walls'){visibility.set(o,o.visible);o.visible=true;}});
   this.scene.traverseVisible(o=>{if(o instanceof THREE.Mesh||o instanceof THREE.Line){frustum.set(o,o.frustumCulled);o.frustumCulled=false;}});

@@ -7,12 +7,13 @@ import type { SceneConfig, SceneObject, WallFinish, WallSurface } from '../core/
 import type { Architecture } from './architecture';
 import {wallGraphicFor,sortedWallGraphics,MAX_GRAPHICS_PER_WALL} from '../core/wall-graphics';
 import atlas from '../../public/assets/brand/murals/atlas.json';
+import {renderPortableWallPaint,type PortableWallPaintFace} from './portable-wall-paint';
 
 const roomIds:Record<string,string>={'wall-17':'west','wall-26':'east','wall-21':'near','wall-16':'far'};
 const stripCapacity=32;
 // A closed wall can carry independently ordered ink on both faces.
 const graphicCapacity=MAX_GRAPHICS_PER_WALL*2;
-interface FinishBinding { material:THREE.MeshStandardMaterial|THREE.MeshBasicMaterial; uniforms:Record<string,{value:any}>; graphics:THREE.DataTexture; graphicSignature?:string; }
+interface FinishBinding { material:THREE.MeshStandardMaterial|THREE.MeshBasicMaterial; uniforms:Record<string,{value:any}>; graphics:THREE.DataTexture; graphicSignature?:string; portableSignature?:string; portableTexture?:THREE.CanvasTexture; paintInput?:{faces:PortableWallPaintFace[];strips:SceneObject[];graphics:SceneObject[]}; }
 const rect=(id:string)=>atlas.tiles.find(t=>t.id===id)!.uvRectBottomLeft.map(n=>Number(n).toFixed(10)).join(',');
 const muralDispatch=atlas.tiles.filter(t=>t.kind==='mural').map(t=>`if(index<${Number(t.index)+.5})return vec4(${rect(t.id)});`).join('');
 const motifDispatch=atlas.tiles.filter(t=>t.kind==='motif').map(t=>`if(index<${Number(t.index)+.5})return vec4(${rect(t.id)});`).join('');
@@ -20,6 +21,14 @@ const motifDispatch=atlas.tiles.filter(t=>t.kind==='motif').map(t=>`if(index<${N
  * lightmaps and shadows remain those of the original measured architecture. */
 export class WallFinishes {
  private bindings=new Map<THREE.Material,FinishBinding>();
+ private portable=false;private maxTextureSize=4096;
+ get backend(){return this.portable?'rgba-paint':'layer-table';}
+ configure(renderer:THREE.WebGLRenderer){
+  // A desktop-sized viewport says nothing about a phone's shader compiler.
+  // Keep the same albedo on touch GPUs without the large layered paint shader.
+  this.portable=(typeof matchMedia==='function'&&matchMedia('(pointer:coarse)').matches)||renderer.capabilities.maxFragmentUniforms<512;
+  this.maxTextureSize=Math.min(4096,renderer.capabilities.maxTextureSize);
+ }
  private texture?:THREE.Texture;private loading?:Promise<void>;
  private masks=new Map<number,{width:number;height:number;alpha:Uint8Array}>();
  async load(){return this.loading??=new THREE.TextureLoader().loadAsync(`${import.meta.env.BASE_URL}${atlas.texture}`).then(texture=>{
@@ -63,7 +72,7 @@ export class WallFinishes {
    }
   });
   const active=new Set<THREE.Material>();architecture.root.traverse(o=>{if(o instanceof THREE.Mesh)for(const m of Array.isArray(o.material)?o.material:[o.material])active.add(m);});
-  for(const [material,binding] of this.bindings)if(!active.has(material)){binding.graphics.dispose();this.bindings.delete(material);}
+  for(const [material,binding] of this.bindings)if(!active.has(material)){binding.graphics.dispose();binding.portableTexture?.dispose();this.bindings.delete(material);}
  }
  private bind(material:FinishBinding['material']):FinishBinding{
   const found=this.bindings.get(material);if(found)return found;
@@ -74,6 +83,7 @@ export class WallFinishes {
   const graphics=new THREE.DataTexture(new Float32Array(4*4*graphicCapacity),4,graphicCapacity,THREE.RGBAFormat,THREE.FloatType);
   graphics.minFilter=graphics.magFilter=THREE.NearestFilter;graphics.generateMipmaps=false;graphics.needsUpdate=true;
   uniforms.paintGraphics={value:graphics};uniforms.paintGraphicCount={value:0};
+  uniforms.paintPortable={value:null};uniforms.paintPortableEnabled={value:0};
   for(const suffix of ['A','B']){
    for(const name of ['Color','Accent','Normal'])uniforms[`paint${name}${suffix}`]={value:new THREE.Vector3()};
    for(const name of ['Enabled','Tint','Motif','Mural'])uniforms[`paint${name}${suffix}`]={value:0};
@@ -87,6 +97,20 @@ export class WallFinishes {
    previous(shader,renderer);Object.assign(shader.uniforms,uniforms);
    shader.vertexShader='varying vec3 vPaintWorld; varying vec3 vPaintNormal;\n'+shader.vertexShader;
    shader.vertexShader=shader.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nvPaintWorld=(modelMatrix*vec4(transformed,1.0)).xyz; vPaintNormal=normalize(mat3(modelMatrix)*normal);');
+   if(this.portable){
+    shader.fragmentShader=`varying vec3 vPaintWorld; varying vec3 vPaintNormal;
+uniform sampler2D paintPortable;uniform float paintPortableEnabled;
+uniform vec3 paintNormalA,paintNormalB;uniform vec4 paintBoundsA,paintBoundsB;
+`+shader.fragmentShader;
+    shader.fragmentShader=shader.fragmentShader.replace('#include <map_fragment>','#include <map_fragment>\nif(paintPortableEnabled>.5){'+['A','B'].map((s,index)=>`{
+ float along=abs(paintNormal${s}.x)>.5?vPaintWorld.z:vPaintWorld.x;
+ vec2 uv=vec2((along-paintBounds${s}.x)/max(.01,paintBounds${s}.y-paintBounds${s}.x),(vPaintWorld.y-paintBounds${s}.z)/max(.01,paintBounds${s}.w-paintBounds${s}.z));
+ float coverage=step(0.0,uv.x)*step(uv.x,1.0)*step(0.0,uv.y)*step(uv.y,1.0)*smoothstep(.65,.95,dot(normalize(vPaintNormal),paintNormal${s}))${index===1?'*(1.0-step(.999,dot(paintNormalA,paintNormalB)))':''};
+ vec4 ink=texture2D(paintPortable,vec2(clamp(uv.x,0.0,1.0),${index===0?'.5+':''}.5*clamp(uv.y,.001,.999)));
+ diffuseColor.rgb=mix(diffuseColor.rgb,ink.rgb,ink.a*coverage);
+}`).join('\n')+'}');
+    return;
+   }
    shader.fragmentShader=`varying vec3 vPaintWorld; varying vec3 vPaintNormal;
 uniform sampler2D paintMaskAtlas;
 uniform sampler2D paintGraphics;
@@ -156,7 +180,7 @@ for(int i=0;i<${graphicCapacity};i++){
  diffuseColor.rgb=mix(diffuseColor.rgb,ink.rgb,alpha);
 }`);
   };
-  material.customProgramCacheKey=()=>oldKey+'|corporate-wall-paint-murals-v5-graphic-layers';material.needsUpdate=true;
+  material.customProgramCacheKey=()=>oldKey+'|corporate-wall-paint-v6-'+this.backend;material.needsUpdate=true;
   const binding={material,uniforms,graphics};this.bindings.set(material,binding);return binding;
  }
  private update(binding:FinishBinding,finish:WallFinish|undefined,wall:WallSurface,other:WallFinish|undefined,otherWall:WallSurface,strips:SceneObject[],graphics:SceneObject[]){
@@ -193,6 +217,30 @@ for(int i=0;i<${graphicCapacity};i++){
    }
    u.paintGraphicCount.value=this.texture?index:0;binding.graphics.needsUpdate=true;
   }
+  binding.paintInput={faces:[{finish,wall},{finish:other,wall:otherWall}],strips,graphics};
+  if(this.portable)this.updatePortable(binding);
  }
- dispose(){this.texture?.dispose();for(const binding of this.bindings.values())binding.graphics.dispose();this.bindings.clear();this.masks.clear();}
+ private updatePortable(binding:FinishBinding){
+  if(!this.texture||!binding.paintInput)return;
+  const signature=JSON.stringify(binding.paintInput);if(binding.portableSignature===signature)return;
+  binding.portableSignature=signature;const {faces,strips,graphics}=binding.paintInput;
+  const canvas=renderPortableWallPaint(this.texture.image as CanvasImageSource,faces,strips,graphics,this.maxTextureSize);
+  binding.portableTexture?.dispose();binding.portableTexture=undefined;
+  if(canvas){const texture=new THREE.CanvasTexture(canvas);texture.colorSpace=THREE.SRGBColorSpace;texture.anisotropy=4;binding.portableTexture=texture;}
+  binding.uniforms.paintPortable.value=binding.portableTexture??null;binding.uniforms.paintPortableEnabled.value=canvas?1:0;
+ }
+ /** Validate the actual linked wall programs under the loader, not just the
+  * viewport/UA. A driver rejecting the desktop paint shader gets the same paint
+  * through an ordinary RGBA8 texture before the first interactive frame. */
+ recoverUnsupportedPrograms(renderer:THREE.WebGLRenderer){
+  if(this.portable)return false;const gl=renderer.getContext();
+  const failed=renderer.info.programs?.some(program=>{
+   const p=program as unknown as {program:WebGLProgram;fragmentShader:WebGLShader};
+   return gl.getShaderSource(p.fragmentShader)?.includes('uniform sampler2D paintGraphics')&&!gl.getProgramParameter(p.program,gl.LINK_STATUS);
+  });
+  if(!failed)return false;
+  this.portable=true;for(const binding of this.bindings.values()){this.updatePortable(binding);binding.material.needsUpdate=true;}
+  return true;
+ }
+ dispose(){this.texture?.dispose();for(const binding of this.bindings.values()){binding.graphics.dispose();binding.portableTexture?.dispose();}this.bindings.clear();this.masks.clear();}
 }
