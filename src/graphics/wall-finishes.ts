@@ -5,22 +5,39 @@ import { getPaintableBounds, getWallPaintRect } from '../core/wall-paint';
 import { getMaterial } from '../catalog/catalog';
 import type { SceneConfig, SceneObject, WallFinish, WallSurface } from '../core/types';
 import type { Architecture } from './architecture';
+import {wallGraphicFor,sortedWallGraphics,MAX_GRAPHICS_PER_WALL} from '../core/wall-graphics';
 import atlas from '../../public/assets/brand/murals/atlas.json';
 
 const roomIds:Record<string,string>={'wall-17':'west','wall-26':'east','wall-21':'near','wall-16':'far'};
 const stripCapacity=32;
-interface FinishBinding { material:THREE.MeshStandardMaterial|THREE.MeshBasicMaterial; uniforms:Record<string,{value:any}>; }
+// A closed wall can carry independently ordered ink on both faces.
+const graphicCapacity=MAX_GRAPHICS_PER_WALL*2;
+interface FinishBinding { material:THREE.MeshStandardMaterial|THREE.MeshBasicMaterial; uniforms:Record<string,{value:any}>; graphics:THREE.DataTexture; graphicSignature?:string; }
 const rect=(id:string)=>atlas.tiles.find(t=>t.id===id)!.uvRectBottomLeft.map(n=>Number(n).toFixed(10)).join(',');
 const muralDispatch=atlas.tiles.filter(t=>t.kind==='mural').map(t=>`if(index<${Number(t.index)+.5})return vec4(${rect(t.id)});`).join('');
+const motifDispatch=atlas.tiles.filter(t=>t.kind==='motif').map(t=>`if(index<${Number(t.index)+.5})return vec4(${rect(t.id)});`).join('');
 /** Paint is part of the actual plaster albedo. Openings, surface normals,
  * lightmaps and shadows remain those of the original measured architecture. */
 export class WallFinishes {
  private bindings=new Map<THREE.Material,FinishBinding>();
  private texture?:THREE.Texture;private loading?:Promise<void>;
+ private masks=new Map<number,{width:number;height:number;alpha:Uint8Array}>();
  async load(){return this.loading??=new THREE.TextureLoader().loadAsync(`${import.meta.env.BASE_URL}${atlas.texture}`).then(texture=>{
   texture.wrapS=texture.wrapT=THREE.ClampToEdgeWrapping;texture.flipY=true;
   texture.colorSpace=THREE.SRGBColorSpace;texture.anisotropy=8;this.texture=texture;
+  const canvas=document.createElement('canvas'),ctx=canvas.getContext('2d',{willReadFrequently:true})!;
+  for(const tile of atlas.tiles.filter(t=>t.kind==='motif')){
+   const [x,y,width,height]=tile.pixelRectTopLeft;canvas.width=width;canvas.height=height;
+   ctx.clearRect(0,0,width,height);ctx.drawImage(texture.image,x,y,width,height,0,0,width,height);
+   const rgba=ctx.getImageData(0,0,width,height).data,alpha=new Uint8Array(width*height);
+   for(let i=0;i<alpha.length;i++)alpha[i]=rgba[i*4+3];this.masks.set(tile.index,{width,height,alpha});
+  }
  }).catch(e=>console.warn('Corporate wall print unavailable',e));}
+ graphicHit(variant:number,u:number,v:number):boolean{
+  const mask=this.masks.get(variant);if(!mask)return true;
+  const x=Math.min(mask.width-1,Math.max(0,Math.floor(u*mask.width))),y=Math.min(mask.height-1,Math.max(0,Math.floor((1-v)*mask.height)));
+  return mask.alpha[y*mask.width+x]>8;
+ }
  apply(architecture:Architecture,config:SceneConfig){
   architecture.root.updateMatrixWorld(true);
   const surfaces=getPlacementSurfaces();
@@ -41,15 +58,22 @@ export class WallFinishes {
     const outsideAlias=object.userData.solidAssemblyPart?({'wall-2':'wall-17','wall-19':'wall-26'} as Record<string,string>)[meta.wallId]:undefined;
     const finish=config.wallFinishes?.[alias??meta.wallId]??(outsideAlias?config.wallFinishes?.[outsideAlias]:undefined);
     this.update(binding,finish,primaryWall,alias?config.wallFinishes?.[meta.wallId]:undefined,wall,
-     config.objects.filter(o=>o.assetId==='brandDoorPanel'&&o.variant>0&&(o.wallId===primaryWall.id||o.wallId===wall.id||o.wallId===outsideAlias)));
+     config.objects.filter(o=>o.assetId==='brandDoorPanel'&&o.variant>0&&(o.wallId===primaryWall.id||o.wallId===wall.id||o.wallId===outsideAlias)),
+     config.layers.wallDecor||!architecture.editor.visible?sortedWallGraphics(config.objects).filter(o=>o.wallId===primaryWall.id||o.wallId===wall.id||o.wallId===outsideAlias):[]);
    }
   });
   const active=new Set<THREE.Material>();architecture.root.traverse(o=>{if(o instanceof THREE.Mesh)for(const m of Array.isArray(o.material)?o.material:[o.material])active.add(m);});
-  for(const material of this.bindings.keys())if(!active.has(material))this.bindings.delete(material);
+  for(const [material,binding] of this.bindings)if(!active.has(material)){binding.graphics.dispose();this.bindings.delete(material);}
  }
  private bind(material:FinishBinding['material']):FinishBinding{
   const found=this.bindings.get(material);if(found)return found;
+  // Plaster is dielectric. Removing its unused metal map also reserves the one
+  // metadata sampler without exceeding WebGL2's minimum fragment texture budget.
+  if(material instanceof THREE.MeshStandardMaterial){material.metalness=0;material.metalnessMap=null;}
   const uniforms:FinishBinding['uniforms']={};
+  const graphics=new THREE.DataTexture(new Float32Array(4*4*graphicCapacity),4,graphicCapacity,THREE.RGBAFormat,THREE.FloatType);
+  graphics.minFilter=graphics.magFilter=THREE.NearestFilter;graphics.generateMipmaps=false;graphics.needsUpdate=true;
+  uniforms.paintGraphics={value:graphics};uniforms.paintGraphicCount={value:0};
   for(const suffix of ['A','B']){
    for(const name of ['Color','Accent','Normal'])uniforms[`paint${name}${suffix}`]={value:new THREE.Vector3()};
    for(const name of ['Enabled','Tint','Motif','Mural'])uniforms[`paint${name}${suffix}`]={value:0};
@@ -65,12 +89,14 @@ export class WallFinishes {
    shader.vertexShader=shader.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nvPaintWorld=(modelMatrix*vec4(transformed,1.0)).xyz; vPaintNormal=normalize(mat3(modelMatrix)*normal);');
    shader.fragmentShader=`varying vec3 vPaintWorld; varying vec3 vPaintNormal;
 uniform sampler2D paintMaskAtlas;
+uniform sampler2D paintGraphics;
+uniform int paintGraphicCount;
 uniform int paintStripCount;
 uniform vec4 paintStripRect[${stripCapacity}],paintStripStyle[${stripCapacity}];
 ${['A','B'].map(s=>`uniform vec3 paintColor${s},paintAccent${s},paintNormal${s};uniform vec4 paintBounds${s};uniform float paintEnabled${s},paintTint${s},paintMotif${s},paintMural${s};`).join('\n')}
 vec4 corporateTile(float index,bool mural){
  if(mural){${muralDispatch}return vec4(${rect('mural-1')});}
- if(index<1.5)return vec4(${rect('motif-1')});if(index<2.5)return vec4(${rect('motif-2')});return vec4(${rect('motif-3')});
+ ${motifDispatch}return vec4(${rect('motif-1')});
 }
 vec4 corporateSample(vec2 uv,float index,bool mural){
  vec4 tile=corporateTile(index,mural);
@@ -116,12 +142,24 @@ for(int i=0;i<${stripCapacity};i++){
  vec3 stripColor=style.rgb;
  if(abs(style.w)>2.5){float motif=corporateMask(vec2(stripUv.x,stripUv.y*8.0),3.0);stripColor=mix(stripColor,stripColor*.62,motif*.55);}
  diffuseColor.rgb=mix(diffuseColor.rgb,stripColor,coverage);
+}
+for(int i=0;i<${graphicCapacity};i++){
+ if(i>=paintGraphicCount)break;
+ vec4 rect=texelFetch(paintGraphics,ivec2(0,i),0),style=texelFetch(paintGraphics,ivec2(1,i),0);
+ vec4 ink=texelFetch(paintGraphics,ivec2(2,i),0),clip=texelFetch(paintGraphics,ivec2(3,i),0);
+ float along=abs(paintNormalA.x)>.5?vPaintWorld.z:vPaintWorld.x;
+ float direction=(abs(paintNormalA.x)>.5?-paintNormalA.x:paintNormalA.z)*style.w;
+ vec2 delta=vec2((along-rect.x)*direction,vPaintWorld.y-rect.y);
+ vec2 local=vec2(style.x*delta.x+style.y*delta.y,-style.y*delta.x+style.x*delta.y)*rect.zw+vec2(.5);
+ float facing=smoothstep(.65,.95,dot(normalize(vPaintNormal),paintNormalA)*style.w);
+ float alpha=corporateMask(local,style.z)*ink.a*facing*paintInside(clip,along);
+ diffuseColor.rgb=mix(diffuseColor.rgb,ink.rgb,alpha);
 }`);
   };
-  material.customProgramCacheKey=()=>oldKey+'|corporate-wall-paint-murals-v4';material.needsUpdate=true;
-  const binding={material,uniforms};this.bindings.set(material,binding);return binding;
+  material.customProgramCacheKey=()=>oldKey+'|corporate-wall-paint-murals-v5-graphic-layers';material.needsUpdate=true;
+  const binding={material,uniforms,graphics};this.bindings.set(material,binding);return binding;
  }
- private update(binding:FinishBinding,finish:WallFinish|undefined,wall:WallSurface,other:WallFinish|undefined,otherWall:WallSurface,strips:SceneObject[]){
+ private update(binding:FinishBinding,finish:WallFinish|undefined,wall:WallSurface,other:WallFinish|undefined,otherWall:WallSurface,strips:SceneObject[],graphics:SceneObject[]){
   const u=binding.uniforms,color=new THREE.Color();
   for(const [suffix,value,surface]of [['A',finish,wall],['B',other,otherWall]] as const){
    const bounds=getPaintableBounds(surface.id)??{minY:.07,maxY:surface.height??3.6};
@@ -142,6 +180,19 @@ for(int i=0;i<${stripCapacity};i++){
    u.paintStripStyle.value[count].set(color.r,color.g,color.b,sign*object.variant);count++;
   }
   u.paintStripCount.value=count;u.paintMaskAtlas.value=this.texture??null;
+  const signature=JSON.stringify(graphics);
+  if(binding.graphicSignature!==signature){
+   binding.graphicSignature=signature;const data=binding.graphics.image.data as Float32Array;data.fill(0);let index=0;
+   for(const object of graphics){
+    if(index>=graphicCapacity)break;
+    const surface=getPlacementSurfaces().find(w=>w.id===object.wallId);if(!surface)continue;
+    const g=wallGraphicFor(object),bounds=getPaintableBounds(surface.id)??{minY:.07,maxY:surface.height??3.6};
+    const sign=surface.normal[0]*wall.normal[0]+surface.normal[2]*wall.normal[2]>0?1:-1;
+    color.set(g.color);const at=index*16;
+    data.set([object.position[surface.axis==='x'?2:0],object.position[1],1/g.width,1/g.height,Math.cos(g.angle),Math.sin(g.angle),object.variant,sign,color.r,color.g,color.b,g.opacity,surface.min,surface.max,bounds.minY,bounds.maxY],at);index++;
+   }
+   u.paintGraphicCount.value=this.texture?index:0;binding.graphics.needsUpdate=true;
+  }
  }
- dispose(){this.texture?.dispose();this.bindings.clear();}
+ dispose(){this.texture?.dispose();for(const binding of this.bindings.values())binding.graphics.dispose();this.bindings.clear();this.masks.clear();}
 }

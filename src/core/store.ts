@@ -8,6 +8,7 @@ import { hasPreviousRearPartitionLayout } from './rear-partition-revision';
 import { isWallId, objectRegion, regionWallFinishes, wallRegion } from './regions';
 import { parsePreset, parseWallFinish } from './schema';
 import { DEFAULT_WALL_FINISH, type DesignRegionId, type LayerVisibility, type SceneConfig, type SceneObject, type SceneStoreSnapshot, type WallFinish } from './types';
+import { MAX_GRAPHICS_PER_WALL, sortedWallGraphics, upgradeWallGraphics, wallGraphicFor } from './wall-graphics';
 
 type Listener = (snapshot: SceneStoreSnapshot) => void;
 const copy = <T>(value: T): T => JSON.parse(JSON.stringify(value));
@@ -41,6 +42,15 @@ export class SceneStore {
   get canUndo(): boolean { return this.undoStack.length > 0; }
   get canRedo(): boolean { return this.redoStack.length > 0; }
   get snapshot(): SceneStoreSnapshot { return { config: this.current, canUndo: this.canUndo, canRedo: this.canRedo }; }
+  /** Architecture-ready completion of additive legacy paint migration. */
+  upgradeWallGraphics(): boolean {
+    const next = upgradeWallGraphics(this.current);
+    for (const [id,baseline] of this.baselines) this.baselines.set(id,upgradeWallGraphics(baseline));
+    if (next === this.current) return false;
+    this.current = next;
+    this.notify();
+    return true;
+  }
   subscribe(listener: Listener): () => void { this.listeners.add(listener); listener(this.snapshot); return () => this.listeners.delete(listener); }
   private notify(): void { for (const listener of this.listeners) listener(this.snapshot); }
   private history(): void {
@@ -176,15 +186,37 @@ export class SceneStore {
     const source = this.current.objects.find(o => o.id === id);
     if (!source) return;
     const object = { ...copy(source), id: `${source.assetId}-${crypto.randomUUID()}`, position: [source.position[0] + .25, source.position[1], source.position[2] + .25] as SceneObject['position'] };
+    if (source.assetId === 'corporateMotif' && source.wallId) {
+      const room=getPlacementRoom(source),wall=room.walls.find(w=>w.id===source.wallId),graphics=sortedWallGraphics(this.current.objects,source.wallId);
+      if (!wall || graphics.length>=MAX_GRAPHICS_PER_WALL) return;
+      object.position=[...source.position];object.position[wall.axis==='x'?2:0]+=.25;
+      object.graphic={...wallGraphicFor(source),layer:Math.min(63,Math.max(...graphics.map(o=>wallGraphicFor(o).layer))+1)};
+      if (!validatePlacement(object,this.current.objects,room).valid) return;
+    }
     this.upsert(object);
     return object;
+  }
+  reorderWallGraphic(id: string, direction: 'front' | 'back'): boolean {
+    const object = this.current.objects.find(o=>o.id===id&&o.assetId==='corporateMotif'&&o.variant>0);
+    if (!object?.wallId) return false;
+    const ordered = sortedWallGraphics(this.current.objects,object.wallId);
+    const index = ordered.findIndex(o=>o.id===id);
+    if (index<0 || direction==='front'&&index===ordered.length-1 || direction==='back'&&index===0) return false;
+    ordered.splice(index,1); if (direction==='front') ordered.push(object); else ordered.unshift(object);
+    const layers = new Map(ordered.map((o,i)=>[o.id,i]));
+    this.change(s=>{ s.objects=s.objects.map(o=>layers.has(o.id)?{...o,graphic:{...wallGraphicFor(o),layer:layers.get(o.id)!}}:o); },true,[objectRegion(object)]);
+    return true;
   }
   setDoor(open: boolean): void { this.change(s => { s.doorOpen = open; }, true, ['meeting']); }
   setLayers(patch: Partial<LayerVisibility>): void { this.change(s => { s.layers = { ...s.layers, ...patch }; }, false); }
   setWallFinish(wallId: string, patch: Partial<WallFinish>): void {
     if (!isWallId(wallId)) throw new Error('Невідома поверхня для оздоблення стіни');
     const finish = parseWallFinish({ ...DEFAULT_WALL_FINISH, ...this.current.wallFinishes[wallId], ...patch });
-    this.change(s => { s.wallFinishes[wallId] = finish; }, true, [wallRegion(wallId)]);
+    this.change(s => {
+      s.wallFinishes[wallId] = finish;
+      const upgraded = upgradeWallGraphics(s);
+      s.objects = upgraded.objects; s.wallFinishes = upgraded.wallFinishes;
+    }, true, [wallRegion(wallId)]);
   }
   clearWallFinish(wallId: string): void {
     if (!isWallId(wallId)) throw new Error('Невідома поверхня для оздоблення стіни');

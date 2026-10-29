@@ -146,3 +146,41 @@ body.library-placing,body.library-placing *{cursor:grabbing!important;user-selec
 .loading-panel #loading-text{max-width:min(420px,calc(100% - 40px));text-align:center;line-height:1.6;min-height:1.6em}
 @media(pointer:coarse){.loading-progress{width:min(310px,calc(100% - 42px))}.loading-progress-caption{font-size:10px}.loading-progress-caption output{font-size:15px}}
 @media(prefers-reduced-motion:reduce){.loading-progress-fill{transition:none}.loading-orbit{animation:none}}
+
+
+/* Independent EDS wall graphics share a wall and keep their own selection. */
+.wall-motif-section{margin:20px 0 22px;padding:15px 0 18px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.wall-motif-section>.section-label{margin-top:0}.wall-motif-section>.section-label>span{font-variant-numeric:tabular-nums}
+.wall-motif-layers{display:grid;gap:7px;margin:11px 0 18px}
+.wall-motif-layer{min-width:0;display:grid;gap:3px;border:1px solid #d8e1d1;border-radius:8px;padding:4px;background:#fff}
+.wall-motif-layer.selected{border-color:#315b4d;background:#eff5e9;box-shadow:inset 0 0 0 1px #315b4d}
+.motif-layer-select{width:100%;min-width:0;justify-content:flex-start;padding:7px 6px;gap:9px;text-align:left}
+.motif-layer-select>span:last-child{display:grid;min-width:0;gap:4px}.motif-layer-select b{font-size:10px;line-height:1.4;font-weight:650;white-space:normal;overflow-wrap:anywhere}
+.motif-layer-select small{font-size:9px;line-height:1.45;color:#6c7e69;font-variant-numeric:tabular-nums}
+.motif-layer-dot{width:18px;height:18px;min-width:18px;display:block;border:1px solid #bbc9b7;border-radius:4px;background:var(--swatch)}
+.motif-layer-actions{display:flex;justify-content:flex-end;gap:3px;padding:0 2px 2px}
+.motif-layer-actions button{width:34px;min-width:34px;min-height:30px;padding:4px;border:1px solid #dbe4d5;background:#f6f8f1;border-radius:6px}
+.motif-layer-actions button span{display:none}.motif-layer-actions button svg{width:15px;height:15px}.motif-layer-actions .motif-layer-back svg{transform:rotate(180deg)}
+.motif-layer-actions button.danger{color:#9b4a42}.motif-empty{margin:0;background:#eef2e7;border:1px dashed #cdd9c3;border-radius:7px;padding:13px;font-size:10px;line-height:1.65;color:#63775b}
+.motif-add-cards button{position:relative;min-height:105px;padding:10px 7px 8px;align-items:center;justify-content:flex-start;border-radius:7px}
+.motif-add-cards img{width:100%;height:55px;object-fit:contain;opacity:1}.motif-add-cards small{font-size:10px;line-height:1.4;white-space:normal;text-align:center;overflow-wrap:anywhere}
+.motif-add-cards .motif-add-mark{position:absolute;right:4px;top:3px;display:grid;place-items:center;width:21px;height:21px;border:1px solid #d4dfcc;border-radius:5px;background:#f0f5e8;color:#315b4d;font-size:16px}
+.graphic-controls{margin:8px 0 15px;padding:0 0 15px;border-bottom:1px solid #dce4d5}
+.graphic-size-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.graphic-size-fields input,.graphic-angle input{display:block;width:100%;min-width:0;min-height:36px;padding:7px 8px;margin-top:7px;background:#fff;border:1px solid #d5dfce;border-radius:6px;font-size:12px;font-variant-numeric:tabular-nums}
+.graphic-opacity{display:block}.graphic-opacity>span{float:right;font-variant-numeric:tabular-nums}.graphic-opacity input{display:block;width:100%;min-height:30px;margin:7px 0 0;accent-color:#315b4d}
+.graphic-custom-color{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:8px 0 14px;font-size:10px}.graphic-custom-color input{width:42px;min-height:32px;padding:2px;border:1px solid #d5dfce;border-radius:6px;background:#fff;cursor:pointer}
+.graphic-order-controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.graphic-order-controls button{min-width:0;min-height:48px;flex-direction:column;gap:3px;padding:5px;background:#edf3e5;border:1px solid #d4dfcc;border-radius:6px;font-size:9px;line-height:1.4;text-align:center}
+.graphic-order-controls button svg{width:18px;height:18px}.graphic-order-controls [data-action=motif-back] svg{transform:rotate(180deg)}
+.graphic-note{margin:12px 0;font-size:10px;line-height:1.65;color:#63775b}.graphic-variants{margin:10px 0 15px}.graphic-variants summary{cursor:pointer;font-size:10px;font-weight:650;padding:8px 0;color:#315b4d}
+.graphic-variants .variant-cards{margin-top:8px}.graphic-variants .variant-cards .asset-thumb{object-fit:contain;background:#f4f6ee}
+@media(pointer:coarse){
+ .motif-layer-select{min-height:48px}.motif-layer-select b{font-size:11px}.motif-layer-select small{font-size:10px}
+ .motif-layer-actions{justify-content:space-between;gap:6px}.motif-layer-actions button{width:44px;min-width:44px;min-height:44px}.motif-layer-actions button svg{width:18px;height:18px}
+ .motif-add-cards button{min-height:116px}.motif-add-cards small,.motif-empty{font-size:11px}.motif-add-cards .motif-add-mark{width:24px;height:24px}
+ .graphic-size-fields input,.graphic-angle input{min-height:44px}.graphic-opacity input{min-height:44px}.graphic-custom-color{font-size:11px}.graphic-custom-color input{min-height:44px;width:48px}
+ .graphic-order-controls button{min-height:54px;font-size:10px}.graphic-note,.graphic-variants summary{font-size:11px}.graphic-variants summary{min-height:44px;display:flex;align-items:center}
+}
+
+/* Wall graphics use two-dimensional controls rather than the floor gizmo. */
+#inspector .graphic-controls ~ .nudge-controls{display:flex}

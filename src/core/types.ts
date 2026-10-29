@@ -11,13 +11,15 @@ export interface AssetDefinition {
   mountHeight?: number; description: string;
   wallClearance?: number;
   wallTopClearance?: number;
-  wallLayer?: 'background';
+  wallLayer?: 'background' | 'graphic';
   productionRef: string; proxyRef: string;
 }
 export type DesignRegionId = 'hall' | 'meeting';
 export interface RegionPresetSelection { presetId: string; basePresetId: string; modified: boolean; }
-export interface WallFinish { color: string | null; motif: 0 | 1 | 2 | 3; accent: string; mural?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8; }
-export interface SceneObject { id: string; assetId: string; variant: number; material: string; position: Vec3; rotation: number; wallId?: string; regionId?: DesignRegionId; label?: string; }
+export interface WallFinish { color: string | null; motif: 0 | 1 | 2 | 3; accent: string; mural?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16; }
+/** Independent wall paint graphic. Angle rotates within the wall plane in radians. */
+export interface WallGraphic { width: number; height: number; angle: number; opacity: number; layer: number; color: string; }
+export interface SceneObject { id: string; assetId: string; variant: number; material: string; position: Vec3; rotation: number; wallId?: string; regionId?: DesignRegionId; label?: string; graphic?: WallGraphic; }
 export interface LayerVisibility { ceiling: boolean; walls: boolean; doors: boolean; windows: boolean; structure: boolean; furniture: boolean; decor: boolean; plants: boolean; wallDecor: boolean; grid: boolean; autoWalls: boolean; }
 export interface SceneConfig {
   schemaVersion: 2; projectId: 'polycam-lounge-room'; roomId: string; presetId: string; name: string;
@@ -42,4 +44,5 @@ export interface SceneStoreSnapshot { config: SceneConfig; canUndo: boolean; can
 export const DEFAULT_LAYERS: LayerVisibility = { ceiling: false, walls: true, doors: true, windows: true, structure: true, furniture: true, decor: true, plants: true, wallDecor: true, grid: true, autoWalls: true };
 export const PROJECT_ID = 'polycam-lounge-room' as const;
 export const SCHEMA_VERSION = 2 as const;
+export const MAX_SCENE_OBJECTS = 1000;
 export const DEFAULT_WALL_FINISH: WallFinish = { color: null, motif: 0, accent: '#a0ff3d' };

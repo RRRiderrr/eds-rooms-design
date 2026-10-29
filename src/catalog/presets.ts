@@ -135,10 +135,17 @@ const hallPlants=(style:number)=>[
  hallItem('plant-west','plant',style%2+1,-12.2,1.8,0,style%2?'white':'black'),
  hallItem('plant-east','plant',style%2+1,21.8,1.95,0,style%2?'clay':'white'),
 ];
+/** A few hall designs use the existing sculptural logo as an additional accent.
+ * Positions are clear measured wall38 spans; they never replace either sign. */
+function hallVolumeLogo(style:number):SceneObject[] {
+ const placements:Record<number,[number,number]>={1:[15.3,2.15],4:[-15.4,2.25],6:[-9.25,2.35],7:[21.7,2.2]};
+ const placement=placements[style];if(!placement)return[];
+ return [{id:'HallVolumeLogo',assetId:'edsSignage',variant:6,material:'original',regionId:'hall',...wallAnchor('wall-38',placement[0],placement[1],getVariant('edsSignage',6).dimensions[2],hallWallRoom)}];
+}
 function hallPreset(index:number,name:string,decor:SceneObject[],finishes:Record<string,WallFinish>={}):SceneConfig{
  const id=`hall-preset-${index}`,config=preset(0,name,[]);
  config.presetId=config.basePresetId=id;config.name=`${index}: ${name}`;
- config.objects=[...originalHallTables(),...hallDoorObjects(index),...hallSigns(index),...hallClocks(index),...decor,...rearPartitions(index)];
+ config.objects=[...originalHallTables(),...hallDoorObjects(index),...hallSigns(index),...hallClocks(index),...hallVolumeLogo(index),...decor,...rearPartitions(index)];
  config.regionPresets.hall={presetId:id,basePresetId:id,modified:false};config.wallFinishes=finishes;
  return config;
 }
@@ -190,11 +197,11 @@ const meetingFinishes:Record<number,Record<string,WallFinish>>={
  1:{west:mural(7)},2:{west:mural(5)},
  3:{west:mural(8)},4:{east:mural(3)},
  5:{west:mural(2)},6:{east:mural(7)},
- 7:{west:mural(4)},8:{east:mural(5)},
- 9:{west:mural(6)},10:{west:mural(4)},
- 11:{east:mural(6)},12:{east:mural(7)},
- 13:{east:mural(8)},14:{east:mural(2)},
- 15:{west:mural(1)},
+ 7:{west:mural(4)},8:{east:mural(11)},
+ 9:{west:mural(16)},10:{west:mural(13)},
+ 11:{east:mural(9)},12:{east:mural(12)},
+ 13:{east:mural(14)},14:{east:mural(15)},
+ 15:{west:mural(10)},
 };
 /** Built-ins reserve a whole painted feature wall instead of placing a board
  * through the corporate logotype. This only reanchors mounted items; saved

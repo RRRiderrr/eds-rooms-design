@@ -1,0 +1,404 @@
+{
+  "schemaVersion": 1,
+  "texture": "assets/brand/murals/wall-print-atlas.webp",
+  "atlas": "assets/brand/murals/atlas.json",
+  "sourceBrandSHA256": "8da4364bd6b4050558dfda5a8944fdd16aaf00c7ed6da1991e83befce380d3d9",
+  "colorSpace": "srgb",
+  "alpha": "black RGB with alpha mask; runtime supplies chosen paint color",
+  "motifs": [
+    {
+      "index": 1,
+      "id": "motif-1",
+      "label": "Діагональна штриховка",
+      "defaultSize": [
+        3.24,
+        0.491
+      ],
+      "sourceAspect": 6.600048265439038,
+      "svg": "assets/brand/motif-library/motif-1.svg",
+      "png": "assets/brand/motif-library/motif-1.png",
+      "preview": "assets/brand/motif-library/motif-1-preview.png",
+      "thumbnail": "assets/thumbnails/corporateMotif-1.webp",
+      "sourceElements": [
+        "g[3]"
+      ],
+      "derived": false,
+      "geometrySHA256": "b810b3da7e1bd49c2cdce717692beaa58b58262ffe33964d0b0b25c70c55ea40",
+      "alphaMask": true,
+      "pixelRectTopLeft": [
+        16,
+        2496,
+        992,
+        480
+      ],
+      "uvRectBottomLeft": [
+        0.00390625,
+        0.2734375,
+        0.2421875,
+        0.1171875
+      ]
+    },
+    {
+      "index": 2,
+      "id": "motif-2",
+      "label": "Сітка хрестів",
+      "defaultSize": [
+        2.4,
+        2.4
+      ],
+      "sourceAspect": 1.0000288344123078,
+      "svg": "assets/brand/motif-library/motif-2.svg",
+      "png": "assets/brand/motif-library/motif-2.png",
+      "preview": "assets/brand/motif-library/motif-2-preview.png",
+      "thumbnail": "assets/thumbnails/corporateMotif-2.webp",
+      "sourceElements": [
+        "g[7]"
+      ],
+      "derived": false,
+      "geometrySHA256": "f81d191a5795d21f4289d587f4d7c49d4dceac7d5567fd9b7bd256cb1a726ba1",
+      "alphaMask": true,
+      "pixelRectTopLeft": [
+        1040,
+        2496,
+        992,
+        480
+      ],
+      "uvRectBottomLeft": [
+        0.25390625,
+        0.2734375,
+        0.2421875,
+        0.1171875
+      ]
+    },
+    {
+      "index": 3,
+      "id": "motif-3",
+      "label": "Парні чверті диска",
+      "defaultSize": [
+        1,
+        1
+      ],
+      "sourceAspect": 0.9999996153569507,
+      "svg": "assets/brand/motif-library/motif-3.svg",
+      "png": "assets/brand/motif-library/motif-3.png",
+      "preview": "assets/brand/motif-library/motif-3-preview.png",
+      "thumbnail": "assets/thumbnails/corporateMotif-3.webp",
+      "sourceElements": [
+        "g[4]"
+      ],
+      "derived": false,
+      "geometrySHA256": "d99308c8906cdc787998383c8f3ca5047f475a95e86266e49257348eddf9e3d8",
+      "alphaMask": true,
+      "pixelRectTopLeft": [
+        2064,
+        2496,
+        992,
+        480
+      ],
+      "uvRectBottomLeft": [
+        0.50390625,
+        0.2734375,
+        0.2421875,
+        0.1171875
+      ]
+    },
+    {
+      "index": 4,
+      "id": "motif-4",
+      "label": "Шаховий модуль",
+      "defaultSize": [
+        0.8,
+        0.8
+      ],
+      "sourceAspect": 1.0001259705986545,
+      "svg": "assets/brand/motif-library/motif-4.svg",
+      "png": "assets/brand/motif-library/motif-4.png",
+      "preview": "assets/brand/motif-library/motif-4-preview.png",
+      "thumbnail": "assets/thumbnails/corporateMotif-4.webp",
+      "sourceElements": [
+        "g[1]"
+      ],
+      "derived": false,
+      "geometrySHA256": "cd03c612cc07ff165a9688b78b1c618fa5daf4ca2e588f43ecd253c118184f36",
+      "alphaMask": true,
+      "pixelRectTopLeft": [
+        3088,
+        2496,
+        992,
+        480
+      ],
+      "uvRectBottomLeft": [
+        0.75390625,
+        0.2734375,
+        0.2421875,
+        0.1171875
+      ]
+    },
+    {
+      "index": 5,
+      "id": "motif-5",
+      "label": "Стріла руху",
+      "defaultSize": [
+        0.9,
+        0.9
+      ],
+      "sourceAspect": 1.0001261629201792,
+      "svg": "assets/brand/motif-library/motif-5.svg",
+      "png": "assets/brand/motif-library/motif-5.png",
+      "preview": "assets/brand/motif-library/motif-5-preview.png",
+      "thumbnail": "assets/thumbnails/corporateMotif-5.webp",
+      "sourceElements": [
+        "polygon[13]"
+      ],
+      "derived": false,
+      "geometrySHA256": "e15c93b9d67a57b0043fb3be8435b4115eb1413917101bb4cf80038aebb0476e",
+      "alphaMask": true,
+      "pixelRectTopLeft": [
+        16,
+        3008,
+        992,
+        480
+      ],
+      "uvRectBottomLeft": [
+        0.00390625,
+        0.1484375,
+        0.2421875,
+        0.1171875
+      ]
+    },
+    {
+      "index": 6,
+      "id": "motif-6",
+      "label": "Квадрат у квадраті",
+      "defaultSize": [
+        0.8,
+        0.8
+      ],
+      "sourceAspect": 1,
+      "svg": "assets/brand/motif-library/motif-6.svg",
+      "png": "assets/brand/motif-library/motif-6.png",
+      "preview": "assets/brand/motif-library/motif-6-preview.png",
+      "thumbnail": "assets/thumbnails/corporateMotif-6.webp",
+      "sourceElements": [
+        "g[0]"
+      ],
+      "derived": false,
+      "geometrySHA256": "5d643e854efbd6fe438ed7853bc59ae10777f5a335dd8d0c9503602e6e0f3178",
+      "alphaMask": true,
+      "pixelRectTopLeft": [
+        1040,
+        3008,
+        992,
+        480
+      ],
+      "uvRectBottomLeft": [
+        0.25390625,
+        0.1484375,
+        0.2421875,
+        0.1171875
+      ]
+    },
+    {
+      "index": 7,
+      "id": "motif-7",
+      "label": "Точка перетину",
+      "defaultSize": [
+        0.8,
+        0.8
+      ],
+      "sourceAspect": 0.9999996153569507,
+      "svg": "assets/brand/motif-library/motif-7.svg",
+      "png": "assets/brand/motif-library/motif-7.png",
+      "preview": "assets/brand/motif-library/motif-7-preview.png",
+      "thumbnail": "assets/thumbnails/corporateMotif-7.webp",
+      "sourceElements": [
+        "g[2]"
+      ],
+      "derived": false,
+      "geometrySHA256": "2c33ae896ca76c70147b6ba8a798857acec876976948c658b0dd103799e736e6",
+      "alphaMask": true,
+      "pixelRectTopLeft": [
+        2064,
+        3008,
+        992,
+        480
+      ],
+      "uvRectBottomLeft": [
+        0.50390625,
+        0.1484375,
+        0.2421875,
+        0.1171875
+      ]
+    },
+    {
+      "index": 8,
+      "id": "motif-8",
+      "label": "Оптичний центр",
+      "defaultSize": [
+        0.9,
+        0.9
+      ],
+      "sourceAspect": 0.999873083854651,
+      "svg": "assets/brand/motif-library/motif-8.svg",
+      "png": "assets/brand/motif-library/motif-8.png",
+      "preview": "assets/brand/motif-library/motif-8-preview.png",
+      "thumbnail": "assets/thumbnails/corporateMotif-8.webp",
+      "sourceElements": [
+        "path[17]"
+      ],
+      "derived": false,
+      "geometrySHA256": "03be5b2e3ca15575362061974caf8b97ca13b2beeab8fcd4578fa4e0f605820c",
+      "alphaMask": true,
+      "pixelRectTopLeft": [
+        3088,
+        3008,
+        992,
+        480
+      ],
+      "uvRectBottomLeft": [
+        0.75390625,
+        0.1484375,
+        0.2421875,
+        0.1171875
+      ]
+    },
+    {
+      "index": 9,
+      "id": "motif-9",
+      "label": "Модульна сходинка",
+      "defaultSize": [
+        1.8,
+        1.2
+      ],
+      "sourceAspect": 1.5,
+      "svg": "assets/brand/motif-library/motif-9.svg",
+      "png": "assets/brand/motif-library/motif-9.png",
+      "preview": "assets/brand/motif-library/motif-9-preview.png",
+      "thumbnail": "assets/thumbnails/corporateMotif-9.webp",
+      "sourceElements": [
+        "g[1]"
+      ],
+      "derived": true,
+      "geometrySHA256": "aa1584f72303b3322a539971746ca4d1e9949a0a05ff5c6edfd90e46a1cd12c8",
+      "alphaMask": true,
+      "pixelRectTopLeft": [
+        16,
+        3520,
+        992,
+        480
+      ],
+      "uvRectBottomLeft": [
+        0.00390625,
+        0.0234375,
+        0.2421875,
+        0.1171875
+      ]
+    },
+    {
+      "index": 10,
+      "id": "motif-10",
+      "label": "Хвиля співдії",
+      "defaultSize": [
+        2.1,
+        0.9
+      ],
+      "sourceAspect": 2.3330078125,
+      "svg": "assets/brand/motif-library/motif-10.svg",
+      "png": "assets/brand/motif-library/motif-10.png",
+      "preview": "assets/brand/motif-library/motif-10-preview.png",
+      "thumbnail": "assets/thumbnails/corporateMotif-10.webp",
+      "sourceElements": [
+        "g[4]"
+      ],
+      "derived": true,
+      "geometrySHA256": "1391907fcf18d52fcb029a67b16692d228bcb3f92b26c2605adb99d2bd7d7425",
+      "alphaMask": true,
+      "pixelRectTopLeft": [
+        1040,
+        3520,
+        992,
+        480
+      ],
+      "uvRectBottomLeft": [
+        0.25390625,
+        0.0234375,
+        0.2421875,
+        0.1171875
+      ]
+    },
+    {
+      "index": 11,
+      "id": "motif-11",
+      "label": "Векторний ритм",
+      "defaultSize": [
+        2.4,
+        0.8
+      ],
+      "sourceAspect": 3,
+      "svg": "assets/brand/motif-library/motif-11.svg",
+      "png": "assets/brand/motif-library/motif-11.png",
+      "preview": "assets/brand/motif-library/motif-11-preview.png",
+      "thumbnail": "assets/thumbnails/corporateMotif-11.webp",
+      "sourceElements": [
+        "polygon[13]"
+      ],
+      "derived": true,
+      "geometrySHA256": "8d4f94d7d0ccabada449268490fd3c7abff6640565a323c2c5c4e6dfaeca212a",
+      "alphaMask": true,
+      "pixelRectTopLeft": [
+        2064,
+        3520,
+        992,
+        480
+      ],
+      "uvRectBottomLeft": [
+        0.50390625,
+        0.0234375,
+        0.2421875,
+        0.1171875
+      ]
+    },
+    {
+      "index": 12,
+      "id": "motif-12",
+      "label": "Координатна рамка",
+      "defaultSize": [
+        1.8,
+        1.2
+      ],
+      "sourceAspect": 1.5,
+      "svg": "assets/brand/motif-library/motif-12.svg",
+      "png": "assets/brand/motif-library/motif-12.png",
+      "preview": "assets/brand/motif-library/motif-12-preview.png",
+      "thumbnail": "assets/thumbnails/corporateMotif-12.webp",
+      "sourceElements": [
+        "g[2]",
+        "path[17]"
+      ],
+      "derived": true,
+      "geometrySHA256": "3ad7e67893237d8bbbd53d865a61491695cfe6ed970eb5d1d6c5ad00fae0a71c",
+      "alphaMask": true,
+      "pixelRectTopLeft": [
+        3088,
+        3520,
+        992,
+        480
+      ],
+      "uvRectBottomLeft": [
+        0.75390625,
+        0.0234375,
+        0.2421875,
+        0.1171875
+      ]
+    }
+  ],
+  "width": 4096,
+  "height": 4096,
+  "png": "assets/brand/murals/wall-print-atlas.png",
+  "orientation": {
+    "source": "top-left image pixels",
+    "textureFlipY": true,
+    "uv": "bottom-left WebGL UV; sample uvRect.xy + localUV * uvRect.zw, localUV.y points up"
+  },
+  "gutterPixels": 16
+}

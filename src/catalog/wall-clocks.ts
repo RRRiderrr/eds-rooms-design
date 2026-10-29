@@ -4,7 +4,7 @@ import tracedData from '../../assets-src/signage/signage-data.json';
 
 export const WALL_CLOCK_DIMENSIONS = [1.25,1.25,.035] as const;
 export const WALL_CLOCK_VARIANTS = [
- {index:1,label:'1 / Цифри та слова · як на фото',model:'clock-floating-words'},
+ {index:1,label:'1 / Цифри та слова',model:'clock-floating-words'},
  {index:2,label:'2 / Тонкі хвилинні риски',model:'clock-floating-ticks'},
  {index:3,label:'3 / EDS · енергія кольору',model:'clock-floating-energy'},
  {index:4,label:'4 / Римські цифри · сатин',model:'clock-floating-roman'},

@@ -12,6 +12,9 @@ import { listPresets,savePreset } from './core/storage';
 import { parsePreset,serializePreset,MAX_PRESET_BYTES } from './core/schema';
 import { readDraft,writeDraft } from './draft';
 import type { SceneObject,SceneConfig,AppMode,Vec3,LayerVisibility,WallFinish } from './core/types';
+import {wallGraphicFor,parseWallGraphic,sortedWallGraphics,MAX_GRAPHICS_PER_WALL} from './core/wall-graphics';
+import {getPaintableBounds} from './core/wall-paint';
+import {wallRegion} from './core/regions';
 
 interface AppHook {store:SceneStore;view:SceneView;getMode:()=>AppMode;setMode:(mode:AppMode)=>void;select:(id:string|null)=>void;addAsset:(id:string)=>void;readonly ready:boolean;}
 declare global {interface Window {__ROOM_ATELIER__?:AppHook;}}
@@ -27,7 +30,7 @@ const persistPrefs=()=>localStorage.setItem('room-atelier-preferences',JSON.stri
 const notify=(message:string)=>ui.toast(message);
 const discreteEdit=(edit:()=>void)=>{store.beginTransaction();try{edit();}finally{store.endTransaction();}};
 const selectedObject=()=>store.state.objects.find(o=>o.id===selected);
-function select(id:string|null){selected=id;if(id===null)view?.setSelectedWall(null);const obj=store.state.objects.find(o=>o.id===id);if(obj?.regionId&&obj.regionId!==activeRegion)setRegion(obj.regionId,false);view?.setSelected(id);ui.render(store.state,selected,store.canUndo,store.canRedo);syncControls();}
+function select(id:string|null){selected=id;if(id===null)view?.setSelectedWall(null);const obj=store.state.objects.find(o=>o.id===id);if(obj?.regionId&&obj.regionId!==activeRegion)setRegion(obj.regionId,false);if(obj?.assetId==='corporateMotif')view?.setPaintSelection(false);view?.setSelected(id);ui.render(store.state,selected,store.canUndo,store.canRedo);if(obj?.assetId==='corporateMotif')ui.selectMotif(obj.id);syncControls();}
 function setRegion(region:'hall'|'meeting',focus=true){activeRegion=region;ui.setRegion(region);if(view){view.activeRegion=region;if(focus)view.focusRegion(region);}persistPrefs();}
 function syncControls(){if(!view)return;ui.setControl('snap',view.snap);ui.setTool(view.tool);const f=app.querySelector<HTMLInputElement>('[data-testid=free-placement]');if(f)f.checked=view.freePlacement;const a=app.querySelector<HTMLInputElement>('[data-property=angleSnap]');if(a)a.checked=view.angleSnap;}
 function setMode(next:AppMode){if(!view)return;mode=next;view.setMode(mode);ui.setMode(mode);ui.render(store.state,selected,store.canUndo,store.canRedo);syncControls();persistPrefs();}
@@ -43,6 +46,7 @@ function findPlace(object:SceneObject,keep=false):SceneObject|undefined{
  return;
 }
 function addAsset(id:string){
+ if(id==='corporateMotif'){addCorporateMotif(1);return;}
  if(mode!=='editor')setMode('editor');const asset=getAsset(id),variant=asset.variants[1];let object:SceneObject={id:`${id}-${crypto.randomUUID()}`,assetId:id,variant:variant.index,material:asset.materials[0].id,position:activeRegion==='hall'?[-14,0,0]:[0,0,0],rotation:0,regionId:activeRegion,...(id==='doorPlaque'?{label:'01'}:{})};
  if(asset.placement==='wall'){const wall=getPlacementSurfaces().find(w=>activeRegion==='meeting'?w.id==='east':w.id.startsWith('wall-')&&w.max-w.min>variant.dimensions[0]+.2);if(!wall)return;const along=(wall.min+wall.max)/2;object={...object,...wallAnchor(wall.id,along,asset.mountHeight??1.6,variant.dimensions[2],getPlacementRoom({...object,wallId:wall.id}))};}
  else if(asset.collision==='accessory'){
@@ -50,6 +54,20 @@ function addAsset(id:string){
  }else if(id==='windowBar'&&activeRegion==='meeting')object.position=[0,0,ROOM.bounds.maxZ-variant.dimensions[2]/2-.035];
  const placed=findPlace(object);if(!placed){notify('Не вдалося знайти вільне місце. Звільніть ділянку або ввімкніть вільне розміщення.');return;}
  store.upsert(placed);select(placed.id);notify(`${asset.label} додано. Потягніть вибраний предмет для переміщення.`);
+}
+function addCorporateMotif(variant:number,source?:SceneObject){
+ if(mode!=='editor')setMode('editor');
+ const wallId=source?.wallId??ui.getSelectedWall(),wall=getPlacementSurfaces().find(w=>w.id===wallId);if(!wall)return;
+ const existing=sortedWallGraphics(store.state.objects,wallId);if(existing.length>=MAX_GRAPHICS_PER_WALL){notify(`На одній стіні може бути до ${MAX_GRAPHICS_PER_WALL} мотивів.`);return;}
+ const asset=getAsset('corporateMotif'),design=getVariant(asset.id,variant),bounds=getPaintableBounds(wall.id)??{minY:.07,maxY:wall.height??3.6};
+ const room=getPlacementRoom({position:[0,0,0],wallId:wall.id}),step=existing.length?((existing.length-1)%5+1)*.18:0;
+ let object:SceneObject={...(source?structuredClone(source):{}),id:`corporateMotif-${crypto.randomUUID()}`,assetId:asset.id,variant,material:source?.material??asset.materials[0].id,position:[0,0,0],rotation:0,wallId:wall.id,regionId:wallRegion(wall.id)};
+ object.graphic={...wallGraphicFor(object),...(source?wallGraphicFor(source):{}),layer:Math.min(63,Math.max(-1,...existing.map(o=>wallGraphicFor(o).layer))+1)};
+ const along=(source?source.position[wall.axis==='x'?2:0]:(wall.min+wall.max)/2)+step;
+ const height=source?source.position[1]+.12:Math.max(bounds.minY+.2,Math.min(bounds.maxY-.2,1.8));
+ const candidates=[[along,height],[along-step,height],...Array.from({length:Math.ceil((wall.max-wall.min)/.3)},(_,i)=>[wall.min+.15+i*.3,Math.min(bounds.maxY-.15,1.45)])];
+ for(const [at,y]of candidates){const candidate={...object,...wallAnchor(wall.id,at,y,design.dimensions[2],room)};if(!validatePlacement(candidate,store.state.objects,room).valid)continue;if(commit(candidate)){setRegion(wallRegion(wall.id),false);select(candidate.id);notify(source?'Копію мотиву додано окремим шаром.':'Мотив додано. Потягніть його на стіні або змініть властивості.');}return;}
+ notify('Оберіть ділянку стіни з видимою поверхнею для мотиву.');
 }
 function libraryDrag(phase:LibraryDragPhase,assetId:string,pointer:LibraryPointer){
  if(!ready||!view)return false;
@@ -77,6 +95,11 @@ async function action(action:string,value?:string){
  if(action==='region-focus'){view.focusRegion(activeRegion);return;}
  if(action==='rear-partitions'){const result=store.addRearPartitions();if(result.reason)notify(`Звільніть місце біля задніх дверей: ${result.reason}`);else if(result.rearranged){select(null);notify('Залишено дві перегородки в один ряд. Проходи до входу, кімнати команди та сходів відкриті.');}else if(result.added){select(null);notify(`Додано ${result.added} зелені перегородки. Ваші меблі та оздоблення збережено.`);}return;}
  if(action==='paint-mode'){if(value==='true'){setMode('editor');select(null);}view.setPaintSelection(value==='true');if(value==='true')view.setSelectedWall(ui.getSelectedWall());return;}
+ if(action==='motif-add'){addCorporateMotif(Number(value));return;}
+ if(action==='motif-select'){select(value!);return;}
+ if(action==='motif-front'||action==='motif-back'){const id=value??selected;if(id){store.reorderWallGraphic(id,action==='motif-front'?'front':'back');select(id);}return;}
+ if(action==='motif-duplicate'){const source=store.state.objects.find(o=>o.id===(value??selected));if(source?.assetId==='corporateMotif')addCorporateMotif(source.variant,source);return;}
+ if(action==='motif-delete'){const id=value??selected;if(id){store.remove(id);if(selected===id)select(null);else ui.render(store.state,selected,store.canUndo,store.canRedo);}return;}
  if(action==='wall-color'||action==='wall-motif'||action==='wall-mural'){property(action,value!);return;}
  if(action==='wall-focus'){view.focusWall(ui.getSelectedWall());return;}
  if(action==='wall-clear'){store.clearWallFinish(ui.getSelectedWall());return;}
@@ -86,7 +109,7 @@ async function action(action:string,value?:string){
  if(action==='export'){await downloadPreset();return;}if(action==='import'){ui.requestImport();return;}
  if(action==='undo'){store.undo();return;}if(action==='redo'){store.redo();return;}if(action==='reset'){store.resetRegionToPreset(activeRegion);select(null);return;}
  if(action==='delete'){if(selected){store.remove(selected);select(null);}return;}
- if(action==='duplicate'){const source=selectedObject();if(!source)return;const candidate={...structuredClone(source),id:`${source.assetId}-${crypto.randomUUID()}`,position:[source.position[0]+.25,source.position[1],source.position[2]+.25] as Vec3};const placed=findPlace(candidate);if(!placed){notify('Немає вільного місця для копії.');return;}store.upsert(placed);select(placed.id);return;}
+ if(action==='duplicate'){const source=selectedObject();if(!source)return;if(source.assetId==='corporateMotif'){addCorporateMotif(source.variant,source);return;}const candidate={...structuredClone(source),id:`${source.assetId}-${crypto.randomUUID()}`,position:[source.position[0]+.25,source.position[1],source.position[2]+.25] as Vec3};const placed=findPlace(candidate);if(!placed){notify('Немає вільного місця для копії.');return;}store.upsert(placed);select(placed.id);return;}
  if(action==='grid'){store.setLayers({grid:!store.state.layers.grid});return;}if(action==='snap'){view.snap=!view.snap;syncControls();persistPrefs();return;}
  if(action==='door'){store.setDoor(!store.state.doorOpen);notify(store.state.doorOpen?'Двері відчиняються':'Двері зачиняються');return;}
  if(action==='focus'){view.focus();return;}if(action==='camera-reset'){view.resetCamera();return;}
@@ -99,14 +122,19 @@ async function action(action:string,value?:string){
 }
 function property(key:string,value:string){
  if(!ready)return;
- if(key==='finish-wall'){ui.setWall(value);view.setSelectedWall(value);return;}
- if(key==='wall-color'||key==='wall-accent'||key==='wall-motif'||key==='wall-mural'){const patch=key==='wall-color'?{color:value}:key==='wall-accent'?{accent:value}:key==='wall-mural'?{mural:Number(value) as NonNullable<WallFinish['mural']>,motif:0 as const}:{motif:Number(value) as 0|1|2|3,mural:0 as const};store.setWallFinish(ui.getSelectedWall(),patch);return;}
+ if(key==='finish-wall'){select(null);ui.setWall(value);view.setPaintSelection(true);view.setSelectedWall(value);return;}
+ if(key==='wall-motif'){if(Number(value)>0)addCorporateMotif(Number(value));return;}
+ if(key==='wall-color'||key==='wall-accent'||key==='wall-mural'){const patch=key==='wall-color'?{color:value}:key==='wall-accent'?{accent:value}:{mural:Number(value) as NonNullable<WallFinish['mural']>};const wallId=ui.getSelectedWall();select(null);view.setPaintSelection(true);view.setSelectedWall(wallId);store.setWallFinish(wallId,patch);return;}
  if(key==='quality'){view.quality.setManual(value as 'auto'|'low'|'medium'|'high');persistPrefs();return;}
  if(key==='gridStep'){view.gridStep=Number(value);view.setTool(view.tool);persistPrefs();return;}
  if(key==='angleSnap'){view.angleSnap=value==='true';view.setTool(view.tool);persistPrefs();return;}
  if(key==='freePlacement'){view.freePlacement=value==='true';notify(view.freePlacement?'Вільне розміщення: перевірку перетинів вимкнено.':'Звичайний режим: захист від перетинів увімкнено.');return;}
  if(key.startsWith('layer:')){store.setLayers({[key.slice(6)]:value==='true'} as Partial<LayerVisibility>);return;}
  const obj=selectedObject();if(!obj)return;
+ if(key.startsWith('graphic-')&&obj.assetId==='corporateMotif'){
+  const field=key.slice(8),raw=field==='color'?value:Number(value),converted=field==='angle'?Number(raw)*Math.PI/180:field==='opacity'?Number(raw)/100:raw;
+  try{const graphic=parseWallGraphic({...wallGraphicFor(obj),[field]:converted});if(!commit({...obj,graphic}))ui.render(store.state,selected,store.canUndo,store.canRedo);}catch(e){notify((e as Error).message);ui.render(store.state,selected,store.canUndo,store.canRedo);}return;
+ }
  if(key==='variant'){
   const candidate={...obj,variant:Number(value)};const placed=findPlace(candidate,true);if(placed)commit(placed);else{notify('Цей варіант тут не вміщується. Звільніть трохи простору.');ui.render(store.state,selected,store.canUndo,store.canRedo);}return;
  }
@@ -123,7 +151,7 @@ function property(key:string,value:string){
 }
 ui=new AppUI(app,{action:(a,v)=>void action(a,v),property,importFile:f=>void importFile(f),libraryDrag});ui.showLoading();
 try{
- view=new SceneView(ui.canvasHost,{select,selectWall:id=>{selected=null;view.setSelected(null);const region=/^(west|east|near|far)$/.test(id)?'meeting':'hall';if(region!==activeRegion)setRegion(region,false);ui.setWall(id);view.setSelectedWall(id);ui.render(store.state,null,store.canUndo,store.canRedo);},door:()=>void action('door'),change:o=>commit(o,false),begin:()=>store.beginTransaction(),end:()=>store.endTransaction(),status:notify,quality:(s,fps)=>ui.quality(s.level,fps,s.scale),progress:(text,percent)=>ui.progress(text,percent),preparing:busy=>{ready=!busy;if(busy)ui.showLoading();else{ui.loaded();syncControls();persistPrefs();}},launch:point=>{setMode('archviz');void view.enterAt(point).catch(e=>notify(e.message));}});
+ view=new SceneView(ui.canvasHost,{select,selectWall:id=>{selected=null;view.setSelected(null);const region=/^(west|east|near|far)$/.test(id)?'meeting':'hall';if(region!==activeRegion)setRegion(region,false);ui.setWall(id);view.setSelectedWall(id);ui.render(store.state,null,store.canUndo,store.canRedo);},door:()=>void action('door'),change:o=>commit(o,false),begin:()=>store.beginTransaction(),end:()=>store.endTransaction(),status:notify,quality:(s,fps)=>ui.quality(s.level,fps,s.scale),spaceReady:()=>{store.upgradeWallGraphics();},progress:(text,percent)=>ui.progress(text,percent),preparing:busy=>{ready=!busy;if(busy)ui.showLoading();else{ui.loaded();syncControls();persistPrefs();}},launch:point=>{setMode('archviz');void view.enterAt(point).catch(e=>notify(e.message));}});
  view.snap=prefs.snap??true;view.gridStep=prefs.gridStep??.25;view.angleSnap=prefs.angleSnap??true;
  if(prefs.quality&&prefs.quality!=='auto')view.quality.setManual(prefs.quality);
  const qualityControl=app.querySelector<HTMLSelectElement>('[data-property=quality]');if(qualityControl)qualityControl.value=prefs.quality??'auto';

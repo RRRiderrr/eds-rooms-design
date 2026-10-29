@@ -1565,5 +1565,88 @@
     "vertexAttributesAndLightmapUvsUnchanged": true,
     "browserReport": "test-results/desk-surfaces/report.json",
     "proof": "test-results/desk-surfaces/archviz-variant-3.png"
+  },
+  "latestIndependentCorporateMotifs": {
+    "checkedAt": "2026-10-29T21:41:00.118469+00:00",
+    "status": "passed",
+    "scope": "local only",
+    "build": "index-CtyiBQF_.js",
+    "motifDesigns": 12,
+    "fullWallCompositions": 16,
+    "independentInstances": true,
+    "maxPerWall": 64,
+    "layerOrderAndOpacity": true,
+    "actualPlasterAlbedo": true,
+    "floatingPaintGeometry": false,
+    "legacyAppearancePreserved": true,
+    "maximumHighSamplers": 15,
+    "shadowLights": 6,
+    "atlasSize": [
+      4096,
+      4096
+    ],
+    "unitTestsPassed": 193,
+    "unitTestFiles": 33,
+    "browserProfiles": [
+      {
+        "name": "chromium-desktop",
+        "status": "passed",
+        "checks": 7
+      },
+      {
+        "name": "webkit-desktop",
+        "status": "passed",
+        "checks": 7
+      },
+      {
+        "name": "chromium-phone",
+        "status": "passed",
+        "checks": 4
+      },
+      {
+        "name": "chromium-basic",
+        "status": "passed",
+        "checks": 4
+      }
+    ],
+    "browserErrors": [],
+    "pointerChecksPassed": 5,
+    "staticLinkedFiles": 551,
+    "staticProfiles": [
+      "desktop",
+      "desktop-basic",
+      "phone"
+    ],
+    "staticErrors": 0,
+    "coldHigh": {
+      "readyMs": 11930,
+      "programGrowth": 0,
+      "textureGrowth": 0,
+      "lateRequests": 0,
+      "maxFrameMs": 16.80000000000291
+    },
+    "volumeLogoHallPresets": [
+      1,
+      4,
+      6,
+      7
+    ],
+    "volumeLogoDepthM": 0.07499445693648,
+    "photoOriginCaptionsRemoved": true,
+    "regionThumbnailsUpdated": 24,
+    "githubChanged": false,
+    "sourceBlenderChanged": false,
+    "fullHistoricalE2eRerun": false,
+    "browserReport": "test-results/corporate-motifs/report.json",
+    "pointerReport": "test-results/motif-pointer/report.json",
+    "logoReport": "test-results/hall-volume-logos/report.json",
+    "proof": "test-results/motif-pointer/separate-layer-selection.png",
+    "userTabUpdated": true,
+    "userMeetingPreset": "builtin-5",
+    "userManualQuality": "high",
+    "userDraftReset": false,
+    "userProof": "test-results/corporate-motifs/user-local-updated.png",
+    "browserProfileBuild": "index-Ez44r88E.js",
+    "finalBuildDelta": "Only desktop motif nudge-controls CSS visibility; final pointer, cold-start and static tests use CtyiBQF_."
   }
 }

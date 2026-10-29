@@ -15,6 +15,7 @@ try{
  await page.goto('http://127.0.0.1:4174/?mode=editor');await page.waitForFunction(()=>window.__ROOM_ATELIER__?.ready,null,{timeout:120000});
  await page.addStyleTag({content:'.topbar,.library-panel,.footer,.mobile-dock,.viewport-area>:not(.viewport){display:none!important}.atelier,.workspace,.viewport-area{height:100vh!important;width:100vw!important;max-width:none!important;margin:0!important;padding:0!important}'});
  await page.evaluate(async()=>{const a=window.__ROOM_ATELIER__;a.view.quality.setManual('medium');a.setMode('archviz');await a.view.archvizPromise;a.view.navigation.setEnabled(false);a.view.keepCameraSafe=()=>{};a.view.scene.background=null;});
+ await page.waitForFunction(()=>window.__ROOM_ATELIER__?.ready&&!document.querySelector('#loading'),null,{timeout:120000});
  for(const entry of all){
   await page.evaluate(({region,config})=>{
    const {store,view:v}=window.__ROOM_ATELIER__;store.applyPreset(config);v.renderer.setPixelRatio(1);v.composer.setPixelRatio(1);v.resize();

@@ -16,8 +16,9 @@ describe('EDS hall identity revision',()=>{
  it('uses two distinct corporate sign families and an applied wall12 clock in every prepared hall',()=>{
   const variants={edsTimeline:new Set<number>(),edsUkraine:new Set<number>(),wallClock:new Set<number>()};
   for(const config of [...HALL_PRESETS,...BUILTIN_PRESETS]){
-   const hall=config.objects.filter(o=>objectRegion(o)==='hall'),signs=hall.filter(o=>['edsTimeline','edsUkraine','edsSignage','sign'].includes(o.assetId));
+   const hall=config.objects.filter(o=>objectRegion(o)==='hall'),signs=hall.filter(o=>['edsTimeline','edsUkraine'].includes(o.assetId));
    expect(signs.map(o=>o.assetId).sort()).toEqual(['edsTimeline','edsUkraine']);
+   expect(hall.filter(o=>o.assetId==='sign'||o.assetId==='edsSignage'&&o.variant!==6)).toEqual([]);
    const clocks=hall.filter(o=>o.assetId==='wallClock');expect(clocks).toHaveLength(1);expect(clocks[0].wallId).toBe('wall-12');
    for(const o of [...signs,...clocks])variants[o.assetId as keyof typeof variants].add(o.variant);
    expect(hall.filter(o=>o.assetId==='doorPlaque').every(o=>o.label===defaultDoorPlaqueLabel(o.id.match(/door-\d+/)![0]))).toBe(true);
@@ -37,7 +38,14 @@ describe('EDS hall identity revision',()=>{
   expect(next.objects.find(o=>o.id==='HallTimeline')!.position).toEqual(before.objects.find(o=>o.id==='HallTimeline')!.position);
   expect(next.wallFinishes).toEqual(before.wallFinishes);expect(next.regionPresets).toEqual(before.regionPresets);expect(next.hallDecorRevision).toBe(1);
   next.objects.find(o=>o.assetId==='doorPlaque')!.label='Довільний\n\nтекст';next.objects=next.objects.filter(o=>o.assetId!=='edsTimeline');
-  expect(upgradeHallDecor(next)).toBe(next);expect(parsePreset(serializePreset(next),{preserveIdentity:true}).config.objects).toEqual(next.objects);
+  expect(upgradeHallDecor(next)).toBe(next);const restored=parsePreset(serializePreset(next),{preserveIdentity:true}).config;
+  expect(restored.objects.filter(o=>o.assetId!=='corporateMotif')).toEqual(next.objects.filter(o=>o.assetId!=='corporateMotif'));
+  const former=Object.entries(next.wallFinishes).filter(([,finish])=>finish.motif>0);
+  expect(restored.objects).toHaveLength(next.objects.length+former.length);
+  for(const [wallId,finish] of former){
+   expect(restored.objects.find(o=>o.id===`legacy-corporate-motif-${wallId}`)).toMatchObject({assetId:'corporateMotif',wallId,variant:finish.motif,graphic:{color:finish.accent,opacity:.88}});
+   expect(restored.wallFinishes[wallId]).toEqual({...finish,motif:0});
+  }
  });
  it('rotates independent hands to actual local time without moving the wall-mounted object',()=>{
   const date=new Date(2026,9,28,3,30,30),angles=wallClockAngles(date),root=new Object3D();root.position.set(2,3,4);

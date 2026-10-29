@@ -21,7 +21,14 @@ describe('Customer wayfinding and editor wall selection',()=>{
   expect(config).toEqual(before);expect(next.objects.find(o=>o.id===exit.id)!.label).toBe('Вихід');expect(next.objects.find(o=>o.id===wc.id)!.label).toBe(wc.label);
   expect(next.objects.filter(o=>o.id!==exit.id)).toEqual(before.objects.filter(o=>o.id!==exit.id));
   next.objects.find(o=>o.id===exit.id)!.label='Свій\n\nВихід';expect(upgradeDoorLabels(next)).toBe(next);
-  expect(parsePreset(serializePreset(next),{preserveIdentity:true}).config.objects).toEqual(next.objects);
+  const restored=parsePreset(serializePreset(next),{preserveIdentity:true}).config;
+  expect(restored.objects.filter(o=>o.assetId!=='corporateMotif')).toEqual(next.objects.filter(o=>o.assetId!=='corporateMotif'));
+  const former=Object.entries(next.wallFinishes).filter(([,finish])=>finish.motif>0);
+  expect(restored.objects).toHaveLength(next.objects.length+former.length);
+  for(const [wallId,finish] of former){
+   expect(restored.objects.find(o=>o.id===`legacy-corporate-motif-${wallId}`)).toMatchObject({assetId:'corporateMotif',wallId,variant:finish.motif,graphic:{color:finish.accent,opacity:.88}});
+   expect(restored.wallFinishes[wallId]).toEqual({...finish,motif:0});
+  }
  });
  it('gives door paint a separate pale pigment palette while preserving exact corporate print colors',()=>{
   expect(CORPORATE_COLORS.map(c=>c.color)).toContain('#0B30C1');

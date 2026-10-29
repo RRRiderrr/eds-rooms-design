@@ -1,0 +1,143 @@
+{
+  "status": "passed",
+  "atlas": [
+    4096,
+    4096
+  ],
+  "murals": 16,
+  "motifs": 12,
+  "tiles": 28,
+  "legacySvgSourcesByteIdentical": [
+    "motif-1.svg",
+    "motif-2.svg",
+    "motif-3.svg",
+    "murals/mural-1.svg",
+    "murals/mural-2.svg",
+    "murals/mural-3.svg",
+    "murals/mural-4.svg",
+    "murals/mural-5.svg",
+    "murals/mural-6.svg",
+    "murals/mural-7.svg",
+    "murals/mural-8.svg"
+  ],
+  "allTilesNonOverlapping": true,
+  "oneArtSampler": true,
+  "standaloneThumbnails": [
+    400,
+    300
+  ],
+  "occupancy": [
+    {
+      "id": "mural-1",
+      "fraction": 1
+    },
+    {
+      "id": "mural-2",
+      "fraction": 1
+    },
+    {
+      "id": "mural-3",
+      "fraction": 1
+    },
+    {
+      "id": "mural-4",
+      "fraction": 1
+    },
+    {
+      "id": "mural-5",
+      "fraction": 1
+    },
+    {
+      "id": "mural-6",
+      "fraction": 1
+    },
+    {
+      "id": "mural-7",
+      "fraction": 1
+    },
+    {
+      "id": "mural-8",
+      "fraction": 1
+    },
+    {
+      "id": "mural-9",
+      "fraction": 1
+    },
+    {
+      "id": "mural-10",
+      "fraction": 1
+    },
+    {
+      "id": "mural-11",
+      "fraction": 1
+    },
+    {
+      "id": "mural-12",
+      "fraction": 1
+    },
+    {
+      "id": "mural-13",
+      "fraction": 1
+    },
+    {
+      "id": "mural-14",
+      "fraction": 1
+    },
+    {
+      "id": "mural-15",
+      "fraction": 1
+    },
+    {
+      "id": "mural-16",
+      "fraction": 1
+    },
+    {
+      "id": "motif-1",
+      "fraction": 0.4848727318548387
+    },
+    {
+      "id": "motif-2",
+      "fraction": 0.01917842741935484
+    },
+    {
+      "id": "motif-3",
+      "fraction": 0.39280283938172045
+    },
+    {
+      "id": "motif-4",
+      "fraction": 0.5557795698924731
+    },
+    {
+      "id": "motif-5",
+      "fraction": 0.6492376512096775
+    },
+    {
+      "id": "motif-6",
+      "fraction": 0.679439684139785
+    },
+    {
+      "id": "motif-7",
+      "fraction": 0.13639952956989249
+    },
+    {
+      "id": "motif-8",
+      "fraction": 0.2782909106182796
+    },
+    {
+      "id": "motif-9",
+      "fraction": 0.27788978494623656
+    },
+    {
+      "id": "motif-10",
+      "fraction": 0.23580939180107527
+    },
+    {
+      "id": "motif-11",
+      "fraction": 0.5021127352150537
+    },
+    {
+      "id": "motif-12",
+      "fraction": 0.04331107190860215
+    }
+  ]
+}

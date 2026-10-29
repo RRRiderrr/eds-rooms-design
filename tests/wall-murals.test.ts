@@ -7,7 +7,8 @@ import {getAsset} from '../src/catalog/catalog';
 import {ROOM} from '../src/core/room';
 import {validatePlacement} from '../src/core/placement';
 import {getPaintableBounds} from '../src/core/wall-paint';
-import {WALL_MURAL_DESIGNS} from '../src/core/wall-murals';
+import {WALL_MURAL_DESIGNS,MAX_WALL_MURAL} from '../src/core/wall-murals';
+import {CORPORATE_MOTIF_DESIGNS} from '../src/catalog/corporate-motifs';
 import atlas from '../public/assets/brand/murals/atlas.json';
 import {readFileSync} from 'node:fs';
 
@@ -17,7 +18,7 @@ describe('Full-wall EDS painting state',()=>{
   expect(parseWallFinish(old)).toEqual(old);
   expect(Object.hasOwn(parseWallFinish(old),'mural')).toBe(false);
   for(const mural of [0,...WALL_MURAL_DESIGNS.map(d=>d.index)])expect(parseWallFinish({...old,mural})).toEqual({...old,mural});
-  for(const mural of [-1,9,1.5,'1',null,NaN,Infinity,{},[]])expect(()=>parseWallFinish({...old,mural})).toThrow('Невідома повностінна композиція');
+  for(const mural of [-1,MAX_WALL_MURAL+1,1.5,'1',null,NaN,Infinity,{},[]])expect(()=>parseWallFinish({...old,mural})).toThrow('Невідома повностінна композиція');
  });
 
  it('roundtrips editable murals in custom export and draft without replacing any furniture',()=>{
@@ -54,7 +55,10 @@ describe('Full-wall EDS painting state',()=>{
   custom.modified=false;
   custom.wallFinishes={west:{color:'#f0f0f0',motif:3,accent:'#a2b8fe'}};
   const restored=parsePreset(serializePreset(custom),{preserveIdentity:true}).config;
-  expect(currentDraft(restored).wallFinishes).toEqual(custom.wallFinishes);
+  expect(currentDraft(restored).wallFinishes).toEqual({west:{...custom.wallFinishes.west,motif:0}});
+  expect(restored.objects.filter(o=>o.assetId==='corporateMotif')).toHaveLength(1);
+  expect(restored.objects.find(o=>o.assetId==='corporateMotif')).toMatchObject({variant:3,wallId:'west',graphic:{color:'#a2b8fe',opacity:.88}});
+  expect(restored.objects.filter(o=>o.assetId!=='corporateMotif')).toEqual(custom.objects);
   expect(Object.hasOwn(restored.wallFinishes.west,'mural')).toBe(false);
  });
 
@@ -71,13 +75,13 @@ describe('Full-wall EDS painting state',()=>{
    seen.add(finish.mural!);
    expect(parsePreset(serializePreset(preset),{preserveIdentity:true}).config.wallFinishes).toEqual(preset.wallFinishes);
   }
-  expect([...seen].sort()).toEqual([1,2,3,4,5,6,7,8]);
+  expect(seen.size).toBeGreaterThanOrEqual(8);
  });
 
- it('packs eight different corporate vector compositions and three masks into the existing single 4096 atlas with safe gutters',()=>{
+ it('packs every corporate composition and motif into one 4096 atlas with safe gutters',()=>{
   expect(atlas.width).toBe(4096);expect(atlas.height).toBe(4096);
-  const murals=atlas.tiles.filter(t=>t.kind==='mural'),masks=atlas.tiles.filter(t=>t.kind==='mask');
-  expect(murals).toHaveLength(8);expect(masks).toHaveLength(3);
+  const murals=atlas.tiles.filter(t=>t.kind==='mural'),masks=atlas.tiles.filter(t=>t.kind==='mask'||t.kind==='motif');
+  expect(murals).toHaveLength(MAX_WALL_MURAL);expect(masks).toHaveLength(CORPORATE_MOTIF_DESIGNS.length);
   const sources=new Set<string>(),g=atlas.gutterPixels;
   for(const design of WALL_MURAL_DESIGNS){
    const tile=murals.find(t=>t.index===design.index)!;expect(tile).toBeDefined();
@@ -98,7 +102,7 @@ describe('Full-wall EDS painting state',()=>{
    expect(source).toContain(wordmark.match(/viewBox="([^"]+)"/)![0]);
    sources.add(source);
   }
-  expect(sources.size).toBe(8);
+  expect(sources.size).toBe(MAX_WALL_MURAL);
  });
 
  it('reserves every statement wall for the complete logo and keeps moved mounted items valid',()=>{

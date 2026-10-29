@@ -14,6 +14,12 @@ export type MaterialPalette=Partial<Record<MaterialVariant['surface']|'black'|'g
 export function createAssetObject(assetId:string,variantIndex:number,materialId:string,mode:AppMode='archviz',palette:MaterialPalette={}):THREE.Group {
  const group=new THREE.Group();group.name=`${assetId}:${variantIndex}:${mode}`;group.userData={assetId,variant:variantIndex,mode};if(!variantIndex)return group;
  const asset=getAsset(assetId),variant=getVariant(assetId,variantIndex),selected=getMaterial(assetId,materialId),[w,h,d]=variant.dimensions;
+ if(assetId==='corporateMotif'){
+  const material=new THREE.MeshStandardMaterial({color:selected.color,roughness:1,metalness:0});
+  material.userData={owned:true,surface:selected.surface,colorVariant:selected.id,wallGraphic:true};
+  const mesh=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),material);mesh.name='CorporateMotif_CatalogSurface';group.add(mesh);
+  group.userData={...group.userData,dimensions:[w,h,d],placement:'wall'};return group;
+ }
  if(assetId==='hallDesk')return createSourceDesk(variantIndex,mode==='editor');
  if(assetId==='separator'&&variantIndex===3)return createPlanter([w,h,d],selected,mode==='editor');
  if(assetId==='edsTimeline'||assetId==='edsUkraine')return createCorporateSignage(assetId==='edsTimeline'?'timeline':'ukraine',variantIndex,mode==='editor');

@@ -1,6 +1,7 @@
 import { getAsset, getVariant } from '../catalog/catalog';
 import { ROOM } from './room';
 import type { PlacementResult, RoomDefinition, SceneObject, Vec3 } from './types';
+import { MAX_GRAPHICS_PER_WALL, wallGraphicVisibleArea } from './wall-graphics';
 type Rect = {x:number;z:number;hx:number;hz:number;angle:number};
 export function footprint(object:SceneObject):Rect { const [w,,d]=getVariant(object.assetId,object.variant).dimensions; return {x:object.position[0],z:object.position[2],hx:w/2,hz:d/2,angle:object.rotation}; }
 function corners(r:Rect):[number,number][] { const c=Math.cos(r.angle),s=Math.sin(r.angle); return [[-r.hx,-r.hz],[r.hx,-r.hz],[r.hx,r.hz],[-r.hx,r.hz]].map(([x,z])=>[r.x+x*c+z*s,r.z-x*s+z*c]); }
@@ -62,11 +63,19 @@ export function validatePlacement(object:SceneObject,objects:SceneObject[],room:
   const expected=wallAnchor(wall.id,wall.axis==='x'?object.position[2]:object.position[0],object.position[1],d,room);
   if(Math.abs(object.position[wall.axis==='x'?0:2]-expected.position[wall.axis==='x'?0:2])>.07) return {valid:false,reason:'Предмет має бути закріплений у площині стіни'};
   const along=wall.axis==='x'?object.position[2]:object.position[0];
+  if (asset.wallLayer === 'graphic') {
+   const angle = Math.atan2(Math.sin(object.rotation-expected.rotation),Math.cos(object.rotation-expected.rotation));
+   if (Math.abs(angle)>.01) return {valid:false,reason:'Мотив має бути у площині вибраної стіни'};
+   if (objects.filter(o=>o.id!==object.id&&o.assetId==='corporateMotif'&&o.variant>0&&o.wallId===object.wallId).length>=MAX_GRAPHICS_PER_WALL) return {valid:false,reason:`На одній стіні може бути до ${MAX_GRAPHICS_PER_WALL} мотивів`};
+   try { if (wallGraphicVisibleArea(object,wall,room)<.00001) return {valid:false,reason:'Розташуйте частину мотиву на пофарбованій ділянці стіни'}; }
+   catch (error) { return {valid:false,reason:(error as Error).message}; }
+   return {valid:true};
+  }
   if(along-w/2<wall.min+.03||along+w/2>wall.max-.03||object.position[1]-h/2<(asset.wallClearance??.18)-.00001||object.position[1]+h/2>Math.min(room.height-.3,(wall.height??room.height)-(asset.wallTopClearance??.03))+.00001) return {valid:false,reason:'Предмет виходить за межі стіни'};
   for(const opening of wall.openings??[])if(along+w/2>opening.min&&along-w/2<opening.max&&object.position[1]+h/2>opening.minY&&object.position[1]-h/2<opening.maxY)return {valid:false,reason:opening.kind==='window'?'Тут розташований віконний отвір':'Тут розташований дверний отвір'};
   if(wall.id===room.window.wallId&&along+w/2>room.window.min&&along-w/2<room.window.max&&object.position[1]+h/2>room.window.sill&&object.position[1]-h/2<room.window.sill+room.window.height) return {valid:false,reason:'Тут розташований віконний отвір'};
   if(wall.id===room.door.wallId&&along+w/2>room.door.center-room.door.width/2&&along-w/2<room.door.center+room.door.width/2&&object.position[1]-h/2<room.door.height) return {valid:false,reason:'Тут розташований дверний отвір'};
-  for(const other of objects) {if(other.id===object.id||other.variant===0||other.wallId!==object.wallId)continue; const a=getAsset(other.assetId);if(a.placement!=='wall'||a.wallLayer==='background'||asset.wallLayer==='background')continue; const [ow,oh]=getVariant(other.assetId,other.variant).dimensions;const oa=wall.axis==='x'?other.position[2]:other.position[0];if(Math.abs(along-oa)<(w+ow)/2-.01&&Math.abs(object.position[1]-other.position[1])<(h+oh)/2-.01)return {valid:false,reason:'Настінні предмети перетинаються',collidingId:other.id};}
+  for(const other of objects) {if(other.id===object.id||other.variant===0||other.wallId!==object.wallId)continue; const a=getAsset(other.assetId);if(a.placement!=='wall'||a.wallLayer==='background'||a.wallLayer==='graphic'||asset.wallLayer==='background')continue; const [ow,oh]=getVariant(other.assetId,other.variant).dimensions;const oa=wall.axis==='x'?other.position[2]:other.position[0];if(Math.abs(along-oa)<(w+ow)/2-.01&&Math.abs(object.position[1]-other.position[1])<(h+oh)/2-.01)return {valid:false,reason:'Настінні предмети перетинаються',collidingId:other.id};}
   return {valid:true};
  }
  if(asset.collision==='accessory') {

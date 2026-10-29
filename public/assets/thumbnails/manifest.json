@@ -1267,6 +1267,150 @@
         0.800000011920929
       ],
       "triangles": 4898
+    },
+    {
+      "assetId": "corporateMotif",
+      "variant": 1,
+      "file": "assets/thumbnails/corporateMotif-1.webp",
+      "size": [
+        3.24,
+        0.491,
+        0.0001
+      ],
+      "triangles": 0,
+      "source": "Exact EDS vector alpha-mask preview; runtime wall albedo paint"
+    },
+    {
+      "assetId": "corporateMotif",
+      "variant": 2,
+      "file": "assets/thumbnails/corporateMotif-2.webp",
+      "size": [
+        2.4,
+        2.4,
+        0.0001
+      ],
+      "triangles": 0,
+      "source": "Exact EDS vector alpha-mask preview; runtime wall albedo paint"
+    },
+    {
+      "assetId": "corporateMotif",
+      "variant": 3,
+      "file": "assets/thumbnails/corporateMotif-3.webp",
+      "size": [
+        1,
+        1,
+        0.0001
+      ],
+      "triangles": 0,
+      "source": "Exact EDS vector alpha-mask preview; runtime wall albedo paint"
+    },
+    {
+      "assetId": "corporateMotif",
+      "variant": 4,
+      "file": "assets/thumbnails/corporateMotif-4.webp",
+      "size": [
+        0.8,
+        0.8,
+        0.0001
+      ],
+      "triangles": 0,
+      "source": "Exact EDS vector alpha-mask preview; runtime wall albedo paint"
+    },
+    {
+      "assetId": "corporateMotif",
+      "variant": 5,
+      "file": "assets/thumbnails/corporateMotif-5.webp",
+      "size": [
+        0.9,
+        0.9,
+        0.0001
+      ],
+      "triangles": 0,
+      "source": "Exact EDS vector alpha-mask preview; runtime wall albedo paint"
+    },
+    {
+      "assetId": "corporateMotif",
+      "variant": 6,
+      "file": "assets/thumbnails/corporateMotif-6.webp",
+      "size": [
+        0.8,
+        0.8,
+        0.0001
+      ],
+      "triangles": 0,
+      "source": "Exact EDS vector alpha-mask preview; runtime wall albedo paint"
+    },
+    {
+      "assetId": "corporateMotif",
+      "variant": 7,
+      "file": "assets/thumbnails/corporateMotif-7.webp",
+      "size": [
+        0.8,
+        0.8,
+        0.0001
+      ],
+      "triangles": 0,
+      "source": "Exact EDS vector alpha-mask preview; runtime wall albedo paint"
+    },
+    {
+      "assetId": "corporateMotif",
+      "variant": 8,
+      "file": "assets/thumbnails/corporateMotif-8.webp",
+      "size": [
+        0.9,
+        0.9,
+        0.0001
+      ],
+      "triangles": 0,
+      "source": "Exact EDS vector alpha-mask preview; runtime wall albedo paint"
+    },
+    {
+      "assetId": "corporateMotif",
+      "variant": 9,
+      "file": "assets/thumbnails/corporateMotif-9.webp",
+      "size": [
+        1.8,
+        1.2,
+        0.0001
+      ],
+      "triangles": 0,
+      "source": "Exact EDS vector alpha-mask preview; runtime wall albedo paint"
+    },
+    {
+      "assetId": "corporateMotif",
+      "variant": 10,
+      "file": "assets/thumbnails/corporateMotif-10.webp",
+      "size": [
+        2.1,
+        0.9,
+        0.0001
+      ],
+      "triangles": 0,
+      "source": "Exact EDS vector alpha-mask preview; runtime wall albedo paint"
+    },
+    {
+      "assetId": "corporateMotif",
+      "variant": 11,
+      "file": "assets/thumbnails/corporateMotif-11.webp",
+      "size": [
+        2.4,
+        0.8,
+        0.0001
+      ],
+      "triangles": 0,
+      "source": "Exact EDS vector alpha-mask preview; runtime wall albedo paint"
+    },
+    {
+      "assetId": "corporateMotif",
+      "variant": 12,
+      "file": "assets/thumbnails/corporateMotif-12.webp",
+      "size": [
+        1.8,
+        1.2,
+        0.0001
+      ],
+      "triangles": 0,
+      "source": "Exact EDS vector alpha-mask preview; runtime wall albedo paint"
     }
   ]
 }

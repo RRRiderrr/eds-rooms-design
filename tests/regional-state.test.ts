@@ -70,7 +70,8 @@ describe('Independent hall and meeting designs / schema v2',()=>{
   store.applyRegionPreset('hall',4);
   expect(regional(store.state,'meeting')).toEqual(meeting);
   expect(store.state.regionPresets.meeting).toEqual(selection);
-  expect(store.state.wallFinishes.near).toEqual({color:'#a2b8fe',motif:2,accent:'#0b30c1'});
+  expect(store.state.wallFinishes.near).toEqual({color:'#a2b8fe',motif:0,accent:'#0b30c1'});
+  expect(store.state.objects.find(o=>o.id==='legacy-corporate-motif-near')).toMatchObject({assetId:'corporateMotif',variant:2,wallId:'near'});
   expect(store.state.doorOpen).toBe(true);expect(store.state.layers.ceiling).toBe(true);
   const hall=structuredClone(regional(store.state,'hall'));
   store.applyRegionPreset('meeting',6);
@@ -135,11 +136,11 @@ describe('Independent hall and meeting designs / schema v2',()=>{
   const store=new SceneStore(clonePreset(1));
   expect(Object.keys(store.state.wallFinishes).length).toBeGreaterThan(0);
   store.setWallFinish('near',{color:'#f0f0f0',motif:1});store.setWallFinish('wall-21',{color:'#0b30c1',motif:2});
-  store.clearWallFinish('near');expect(store.state.wallFinishes.near).toBeUndefined();expect(store.state.wallFinishes['wall-21'].motif).toBe(2);
-  store.undo();expect(store.state.wallFinishes.near.motif).toBe(1);store.redo();expect(store.state.wallFinishes.near).toBeUndefined();
-  store.resetWallFinishes('hall');expect(store.state.wallFinishes).toEqual(clonePreset(1).wallFinishes);store.undo();expect(store.state.wallFinishes['wall-21'].motif).toBe(2);
+  store.clearWallFinish('near');expect(store.state.wallFinishes.near).toBeUndefined();expect(store.state.wallFinishes['wall-21'].motif).toBe(0);expect(store.state.objects.find(o=>o.id==='legacy-corporate-motif-wall-21')).toMatchObject({assetId:'corporateMotif',variant:2});
+  store.undo();expect(store.state.wallFinishes.near.motif).toBe(0);expect(store.state.objects.find(o=>o.id==='legacy-corporate-motif-near')).toMatchObject({assetId:'corporateMotif',variant:1});store.redo();expect(store.state.wallFinishes.near).toBeUndefined();
+  store.resetWallFinishes('hall');expect(store.state.wallFinishes).toEqual(clonePreset(1).wallFinishes);store.undo();expect(store.state.wallFinishes['wall-21'].motif).toBe(0);expect(store.state.objects.find(o=>o.id==='legacy-corporate-motif-wall-21')).toMatchObject({assetId:'corporateMotif',variant:2});
   store.beginTransaction();store.setWallFinish('near',{motif:3});store.setWallFinish('wall-21',{motif:0});store.endTransaction();
-  store.undo();expect(store.state.wallFinishes.near).toBeUndefined();expect(store.state.wallFinishes['wall-21'].motif).toBe(2);
+  store.undo();expect(store.state.wallFinishes.near).toBeUndefined();expect(store.state.wallFinishes['wall-21'].motif).toBe(0);expect(store.state.objects.find(o=>o.id==='legacy-corporate-motif-wall-21')).toMatchObject({assetId:'corporateMotif',variant:2});
  });
  it('keeps a saved whole-scene custom preset available as independent regional reset baselines',()=>{
   const store=new SceneStore(clonePreset(6));store.applyRegionPreset('hall',3);

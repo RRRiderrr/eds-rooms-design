@@ -7,7 +7,7 @@ import path from 'node:path';
 const baseline=process.argv.includes('--baseline');
 const requested=process.argv.find(a=>a.startsWith('--profiles='))?.slice(11).split(',');
 const url=process.argv.find(a=>a.startsWith('--url='))?.slice(6)??'http://127.0.0.1:4174/';
-const output=path.resolve('test-results/startup-readiness',baseline?'baseline':'final');await mkdir(output,{recursive:true});
+const output=path.resolve(process.argv.find(a=>a.startsWith('--output='))?.slice(9)??path.join('test-results/startup-readiness',baseline?'baseline':'final'));await mkdir(output,{recursive:true});
 const report={url,baseline,startedAt:new Date().toISOString(),profiles:[],errors:[]};
 const definitions=[{name:'desktop-high',quality:'high',viewport:{width:1440,height:1000}},{name:'desktop-auto',quality:'auto',viewport:{width:1440,height:1000}},{name:'phone-basic',quality:'high',basic:true,viewport:{width:390,height:844},isMobile:true,hasTouch:true},{name:'editor',quality:'high',mode:'editor',viewport:{width:1280,height:850}}].filter(p=>!requested||requested.includes(p.name));
 const resources3d=url=>/\/(models|proxies|architecture|materials|environment|decoders)\//.test(url)&&!url.endsWith('/manifest.json');

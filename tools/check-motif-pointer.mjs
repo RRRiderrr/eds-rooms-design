@@ -1,0 +1,35 @@
+import './browser-path.mjs';
+import {chromium} from '@playwright/test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+const output='test-results/motif-pointer';await fs.mkdir(output,{recursive:true});
+const browser=await chromium.launch({headless:true,args:['--use-angle=d3d11']});
+const page=await browser.newPage({viewport:{width:1440,height:1000}}),report={checks:[],errors:[]};
+page.on('pageerror',error=>report.errors.push(error.message));page.on('console',message=>{if(message.type()==='error')report.errors.push(message.text());});page.on('response',response=>{if(response.status()>=400)report.errors.push(`${response.status()} ${response.url()}`);});
+const settle=()=>page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+const state=()=>page.evaluate(()=>window.__ROOM_ATELIER__.store.state);
+const items=async()=>(await state()).objects.filter(o=>o.assetId==='corporateMotif'&&o.variant>0);
+const selected=()=>page.evaluate(()=>window.__ROOM_ATELIER__.view.selected);
+const project=point=>page.evaluate(point=>{const view=window.__ROOM_ATELIER__.view,p=view.camera.position.clone().set(...point).project(view.camera),r=view.renderer.domElement.getBoundingClientRect();return{x:r.left+(p.x+1)*r.width/2,y:r.top+(1-p.y)*r.height/2};},point);
+const number=async(key,value)=>{const field=key.startsWith('position-')?page.locator(`[data-axis="${key.slice(-1)}"]`):page.locator(`[data-property="${key}"]`);await field.fill(String(value));await field.press('Tab');await settle();};
+async function setupCamera(){await page.evaluate(()=>{const view=window.__ROOM_ATELIER__.view;view.navigation.setEnabled(false);view.controls.enabled=false;view.camera.position.set(1.7,2.5,0);view.controls.target.set(-2.6018175,1.5,0);view.camera.lookAt(view.controls.target);view.cameraSafe.copy(view.camera.position);view.navigation.syncFromCamera();});await settle();}
+async function finishes(){await page.getByTestId('finishes-tab').click();await page.getByTestId('finish-wall').selectOption('west');}
+async function libraryDrag(target){await page.getByTestId('library-tab').click();await page.getByRole('button',{name:'Настінний декор',exact:true}).click();const card=page.getByTestId('add-corporateMotif');await card.scrollIntoViewIfNeeded();const b=await card.boundingBox();await page.mouse.move(b.x+b.width/2,b.y+b.height/2);await page.mouse.down();await page.mouse.move(b.x+b.width/2+12,b.y+b.height/2,{steps:3});await page.mouse.move(target.x,target.y,{steps:15});await settle();}
+try{
+ await page.addInitScript(()=>localStorage.setItem('room-atelier-preferences',JSON.stringify({mode:'editor',quality:'high',region:'meeting',snap:false})));
+ await page.goto('http://127.0.0.1:4174/?mode=editor');await page.waitForFunction(()=>window.__ROOM_ATELIER__?.ready&&!document.querySelector('#loading'),null,{timeout:120000});
+ await page.getByTestId('preset-select').selectOption('builtin-0');await finishes();await page.getByTestId('motif-add-4').click();const first=(await items())[0];
+ await number('graphic-width',1.2);await number('graphic-height',1.2);await number('position-z',0);await number('position-y',1.6);await setupCamera();
+ const start=await project([-2.601,1.85,.35]),end=await project([-2.601,2.07,.75]);
+ await page.mouse.move(start.x,start.y);await page.mouse.down();await page.mouse.move(end.x,end.y,{steps:12});await page.mouse.up();await settle();
+ let moved=(await items()).find(o=>o.id===first.id);assert(Math.abs(moved.position[2]-.4)<.025&&Math.abs(moved.position[1]-1.82)<.025,'Wall drag must preserve the grabbed point rather than jump its centre to the cursor');
+ await page.getByTestId('undo').click();assert(Math.abs((await items())[0].position[2])<1e-7);await page.getByTestId('redo').click();assert(Math.abs((await items())[0].position[2]-.4)<.025);report.checks.push('Actual pointer drag retains wall plane/grab offset; one Undo/Redo restores it');
+ await page.locator('[data-action="nudge-up"]').click();const raised=(await items())[0];assert(raised.position[1]>moved.position[1]);await page.locator('[data-action="nudge-right"]').click();const right=(await items())[0];assert(right.position[2]<raised.position[2]);await page.locator('[data-action="rotate-right"]').click();assert(Math.abs((await items())[0].graphic.angle-Math.PI/12)<1e-8);report.checks.push('Up/right controls use the viewer wall axes; rotation changes in-plane angle');
+ await number('graphic-angle',0);await number('position-z',0);await number('position-y',1.6);await finishes();await page.getByTestId('motif-add-7').click();const plus=(await items()).find(o=>o.id!==first.id);await number('graphic-width',1.2);await number('graphic-height',1.2);await number('position-z',0);await number('position-y',1.6);
+ await page.locator(`[data-action=motif-select][data-value="${first.id}"]`).click();await page.getByTestId('motif-front').click();await setupCamera();const hole=await project([-2.601,2.08,0]);await page.mouse.click(hole.x,hole.y);await settle();assert.equal(await selected(),plus.id,'A transparent hole in the top motif must select visible ink beneath it');report.checks.push('Alpha-aware picking selects the underlying motif through negative space');
+ const before=(await items()).length,target=await project([-2.601,2.7,-1.35]);await libraryDrag(target);
+ const preview=await page.evaluate(()=>({placement:window.__ROOM_ATELIER__.view.getLibraryPlacement(),count:Math.max(...[...window.__ROOM_ATELIER__.view.wallFinishes.bindings.values()].map(b=>b.uniforms.paintGraphicCount.value))}));assert(preview.placement.valid,preview.placement.reason);assert.equal(preview.count,before+1);assert.equal((await items()).length,before);await page.screenshot({path:output+'/live-drag-preview.png'});
+ await page.keyboard.press('Escape');await page.mouse.up();await settle();assert.equal(await page.evaluate(()=>window.__ROOM_ATELIER__.view.getLibraryPlacement()),null);assert.equal((await items()).length,before);assert.equal(await page.evaluate(()=>Math.max(...[...window.__ROOM_ATELIER__.view.wallFinishes.bindings.values()].map(b=>b.uniforms.paintGraphicCount.value))),before);report.checks.push('Library drag previews actual wall-paint GPU data; Escape removes the preview without adding an object');
+ await libraryDrag(target);await page.mouse.up();await settle();assert.equal((await items()).length,before+1);await page.getByTestId('undo').click();assert.equal((await items()).length,before);await page.getByTestId('redo').click();assert.equal((await items()).length,before+1);report.checks.push('Library drop commits one independent motif as a single undoable operation');
+ await page.screenshot({path:output+'/separate-layer-selection.png'});assert.deepEqual(report.errors,[]);report.status='passed';console.log(JSON.stringify(report));
+}catch(error){report.status='failed';report.failure=error.stack??String(error);console.error(report.failure);process.exitCode=1;}finally{await fs.writeFile(output+'/report.json',JSON.stringify(report,null,2));await browser.close();}

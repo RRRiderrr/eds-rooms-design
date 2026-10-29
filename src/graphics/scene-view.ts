@@ -23,6 +23,8 @@ import { DirectLighting } from './direct-lighting';
 import { FirstPersonNavigation } from './first-person';
 import { architectureCollisionMeshes,architectureMoveAllowed } from './navigation';
 import { WallFinishes } from './wall-finishes';
+import {wallGraphicFor,wallGraphicDirection,sortedWallGraphics} from '../core/wall-graphics';
+import {createWallGraphicProxy,updateWallGraphicProxy,createWallGraphicSelection,disposeWallGraphicSelection} from './wall-graphic-selection';
 import {yieldStartupFrame,uploadSceneTextures,waitForGpu} from './startup-gpu';
 import {createWallSelection,disposeWallSelection} from './wall-selection';
 import { applyPlaqueLabel } from './plaque-labels';
@@ -32,7 +34,7 @@ import { partitionMoveAllowed,partitionPointAllowed } from '../core/partition-na
 
 export interface ViewCallbacks {
  select(id:string|null):void;door():void;change(object:SceneObject):void;begin():void;end():void;
- status(message:string):void;quality(settings:QualitySettings,fps:number):void;preparing?(busy:boolean):void;progress?(text:string,percent?:number):void;launch?(point:Vec3):void;selectWall?(id:string):void;
+ status(message:string):void;quality(settings:QualitySettings,fps:number):void;preparing?(busy:boolean):void;progress?(text:string,percent?:number):void;launch?(point:Vec3):void;selectWall?(id:string):void;spaceReady?():void;
 }
 interface Visual {root:THREE.Group;signature:string;leases:MaterialLease[];mode:AppMode;disposed:boolean;templateKey?:string;loadRevision?:number;}
 export interface LibraryPlacementFeedback {valid:boolean;reason?:string;surface?:'floor'|'wall'|'support';}
@@ -59,6 +61,7 @@ export class SceneView {
  private contextMenu?:HTMLDivElement;private contextStart?:{x:number;y:number};private shadowDirty=true;
  private libraryPreview?:LibraryPreview;
  private wallFinishes=new WallFinishes();private paintSelection=false;activeRegion:'hall'|'meeting'='meeting';
+ private graphicSelection?:THREE.Group;private graphicSelectionSignature='';
  private selectedWallId:string|null=null;private wallSelection?:THREE.Group;
  constructor(readonly host:HTMLElement,private callbacks:ViewCallbacks){
   const canvas=document.createElement('canvas');const gl=canvas.getContext('webgl2',{antialias:true,alpha:false,powerPreference:'high-performance'});
@@ -113,6 +116,7 @@ export class SceneView {
   this.navigation.setEnabled(false);this.controls.enabled=false;progress('Завантаження архітектури',2);await yieldStartupFrame();
   await Promise.all([this.architecture.load(this.renderer,text=>progress(text,3)),this.wallFinishes.load()]);this.ready=true;progress('Архітектуру підготовлено',14);
   if(this.architecture.space){configureSpace(this.architecture.space);this.configureFloorGrid(this.architecture.space.bounds);this.spaceBounds={min:new THREE.Vector3(...this.architecture.space.bounds.min),max:new THREE.Vector3(...this.architecture.space.bounds.max)};if(this.mode==='editor')this.resetCamera();}
+  this.callbacks.spaceReady?.();
   if(this.activeRegion==='hall')this.focusRegion('hall');
   if(this.mode==='archviz')await this.ensureArchViz(progress);
   this.architecture.setMode(this.mode);this.sync(this.config);this.applyQuality(this.quality.settings);this.resize();
@@ -247,16 +251,17 @@ export class SceneView {
    if(visual?.signature!==signature){if(visual)this.removeVisual(visual);visual=this.createVisual(obj,signature);this.visuals.set(obj.id,visual);}
    visual.root.position.set(...obj.position);visual.root.rotation.y=obj.rotation;
    if(obj.assetId==='brandDoorPanel')this.updateWallPaintProxy(visual.root,obj);
+   if(obj.assetId==='corporateMotif')updateWallGraphicProxy(visual.root,obj);
    const category=getAsset(obj.assetId).category;visual.root.visible=(category==='plants'?config.layers.plants:['wallDecor','signage','clocks','boards','acoustic'].includes(category)?config.layers.wallDecor:['accessories','rugs','lighting'].includes(category)?config.layers.decor:config.layers.furniture)||this.mode==='archviz';
    visual.root.traverse(o=>{if(o instanceof THREE.Mesh){const mats=Array.isArray(o.material)?o.material:[o.material];for(const m of mats)this.probes.update(m,new THREE.Vector3(...obj.position).add(new THREE.Vector3(0,.65,0)));}});
   }
   this.architecture.setDoor(config.doorOpen);this.grid.visible=this.mode==='editor'&&config.layers.grid;this.architecture.setLayers(config.layers,this.camera);if(this.ready)this.wallFinishes.apply(this.architecture,config);this.updateSelection();
  }
  private createVisual(object:SceneObject,signature:string):Visual{
-  const root=object.assetId==='brandDoorPanel'?this.createWallPaintProxy(object):createAssetObject(object.assetId,object.variant,object.material,this.mode);root.name=object.id;root.userData.instanceId=object.id;
+  const root=object.assetId==='corporateMotif'?createWallGraphicProxy((variant,u,v)=>this.wallFinishes.graphicHit(variant,u,v)):object.assetId==='brandDoorPanel'?this.createWallPaintProxy(object):createAssetObject(object.assetId,object.variant,object.material,this.mode);root.name=object.id;root.userData.instanceId=object.id;
   root.traverse(child=>child.userData.instanceId=object.id);applyPlaqueLabel(root,object,this.plaqueUnderlay(object));this.objects.add(root);
   const visual:Visual={root,signature,leases:[],mode:this.mode,disposed:false};
-  if(object.assetId==='brandDoorPanel')visual.templateKey='wall-paint';
+  if(object.assetId==='brandDoorPanel'||object.assetId==='corporateMotif')visual.templateKey='wall-paint';
   else if(this.mode==='archviz'){
 
    if(this.environmentReady)void this.loadProduction(visual,object);
@@ -296,7 +301,7 @@ export class SceneView {
   hit.position.copy(localPoint((rect.minAlong+rect.maxAlong)/2,(rect.minY+rect.maxY)/2,.00025));
  }
  private async loadProduction(visual:Visual,object:SceneObject){
-  if(object.assetId==='brandDoorPanel'){visual.templateKey='wall-paint';return;}
+  if(object.assetId==='brandDoorPanel'||object.assetId==='corporateMotif'){visual.templateKey='wall-paint';return;}
   const revision=(visual.loadRevision??0)+1;visual.loadRevision=revision;const pendingLeases:MaterialLease[]=[];
   const id=`${object.assetId}-${object.variant}`,level=this.quality.settings.level,key=`${id}:${level}`;let promise=this.templates.get(key);this.library??=new MaterialLibrary(this.renderer);this.library.configureModelLoader(this.loader);
   if(!promise){promise=(async()=>{const manifest=await(this.modelManifest??=fetch(assetUrl('assets/models/manifest.json')).then(r=>r.json()));const entry=manifest.assets.find((a:{assetId:string;variant:number})=>a.assetId===object.assetId&&a.variant===object.variant);const path=entry?.quality?.[level]??entry?.production??`assets/models/${id}.glb`;try{return(await this.loader.loadAsync(assetUrl(path))).scene;}catch(e){if(entry?.fallback)return(await this.loader.loadAsync(assetUrl(entry.fallback))).scene;throw e;}})();this.templates.set(key,promise);}
@@ -339,7 +344,7 @@ export class SceneView {
   const wall=id?getPlacementSurfaces().find(w=>w.id===id):undefined;
   if(wall){this.wallSelection=createWallSelection(wall);this.scene.add(this.wallSelection);this.updateWallSelection();}
  }
- private updateWallSelection(){if(this.wallSelection)this.wallSelection.visible=this.mode==='editor'&&this.paintSelection&&!this.libraryPreview&&!!this.config?.layers.walls;}
+ private updateWallSelection(){if(this.wallSelection)this.wallSelection.visible=this.mode==='editor'&&this.paintSelection&&!this.selected&&!this.libraryPreview&&!!this.config?.layers.walls;}
  selectedObject(){return this.config?.objects.find(o=>o.id===this.selected);}
  setTool(tool:'select'|'move'|'rotate'){this.tool=tool;this.updateSelection();}
  setPaintSelection(enabled:boolean){this.paintSelection=enabled;if(enabled){this.setSelected(null);this.gizmo.detach();}else this.setSelectedWall(null);this.updateWallSelection();this.renderer.domElement.style.cursor=enabled?'crosshair':'';}
@@ -379,8 +384,13 @@ export class SceneView {
  private updateSelection(){
   this.updateWallSelection();
   const visual=this.selected?this.visuals.get(this.selected):undefined;const object=this.selectedObject();
+  const graphicSignature=object?.assetId==='corporateMotif'&&visual?JSON.stringify([object,this.mode,this.config.layers.wallDecor]):'';
+  if(this.graphicSelectionSignature!==graphicSignature){
+   if(this.graphicSelection)disposeWallGraphicSelection(this.graphicSelection);this.graphicSelection=undefined;this.graphicSelectionSignature=graphicSignature;
+   if(graphicSignature&&visual&&this.mode==='editor'&&this.config.layers.wallDecor){this.graphicSelection=createWallGraphicSelection(visual.root);this.scene.add(this.graphicSelection);}
+  }
   if(!visual||!object){this.highlight.visible=false;this.gizmo.detach();return;}
-  this.highlight.box.setFromObject(visual.root);this.highlight.visible=this.mode==='editor';
+  this.highlight.box.setFromObject(visual.root);this.highlight.visible=this.mode==='editor'&&object.assetId!=='corporateMotif';
   if(this.mode==='editor'&&this.tool!=='select'&&getAsset(object.assetId).placement==='floor'&&matchMedia('(pointer:fine)').matches){this.gizmo.attach(visual.root);this.gizmo.setMode(this.tool==='rotate'?'rotate':'translate');this.gizmo.showX=this.tool==='move';this.gizmo.showZ=this.tool==='move';this.gizmo.showY=this.tool==='rotate';this.gizmo.setTranslationSnap(this.snap?this.gridStep:null);this.gizmo.setRotationSnap(this.angleSnap?Math.PI/12:null);}
   else this.gizmo.detach();
  }
@@ -393,7 +403,7 @@ export class SceneView {
   this.cancelLibraryPlacement();this.closeContextMenu();this.setSelectedWall(null);
   const asset=getAsset(assetId),variant=asset.variants.find(v=>v.index>0)!;
   const original:SceneObject={id:`${assetId}-${crypto.randomUUID()}`,assetId,variant:variant.index,material:asset.materials[0].id,position:[0,0,0],rotation:0};
-  const root=createAssetObject(assetId,variant.index,original.material,'editor');root.name='Library_Placement_Preview';root.visible=false;root.userData.libraryPreview=true;
+  const root=assetId==='corporateMotif'?createWallGraphicProxy((variant,u,v)=>this.wallFinishes.graphicHit(variant,u,v)):createAssetObject(assetId,variant.index,original.material,'editor');root.name='Library_Placement_Preview';root.visible=false;root.userData.libraryPreview=true;
   const colors=new Map<THREE.MeshStandardMaterial,THREE.Color>();root.traverse(node=>{if(!(node instanceof THREE.Mesh))return;node.castShadow=false;node.receiveShadow=false;for(const raw of Array.isArray(node.material)?node.material:[node.material]){const material=raw as THREE.MeshStandardMaterial;if(material.color)colors.set(material,material.color.clone());material.transparent=true;material.opacity=.64;material.depthWrite=false;}});
   const outline=new THREE.Box3Helper(new THREE.Box3(),0x2b8064);outline.name='Library_Placement_Outline';outline.visible=false;outline.renderOrder=30;(outline.material as THREE.LineBasicMaterial).depthTest=false;
   this.scene.add(root,outline);this.libraryPreview={original,root,outline,colors,feedback:{valid:false,reason:'Перетягніть предмет у 3D-простір'}};
@@ -433,8 +443,8 @@ export class SceneView {
    const along=wall.axis==='x'?hit.point.z:hit.point.x,height=hit.point.y,room=getPlacementRoom({position:hit.point.toArray() as Vec3,wallId:wall.id});
    const minY=(asset.wallClearance??.18)+variant.dimensions[1]/2,maxY=Math.min(room.height-.3,(wall.height??room.height)-(asset.wallTopClearance??.03))-variant.dimensions[1]/2;
    const requested=snapping?Math.round(height/step)*step:height;
-   const mountedHeight=asset.wallLayer==='background'&&variant.dimensions[1]>(wall.height??room.height)*.75?maxY:Math.max(minY,Math.min(maxY,requested));
-   candidate={...preview.original,...wallAnchor(wall.id,snapping?Math.round(along/step)*step:along,mountedHeight,variant.dimensions[2],room)};surface='wall';
+   const mountedHeight=asset.wallLayer==='graphic'?requested:asset.wallLayer==='background'&&variant.dimensions[1]>(wall.height??room.height)*.75?maxY:Math.max(minY,Math.min(maxY,requested));
+   candidate={...preview.original,...wallAnchor(wall.id,snapping?Math.round(along/step)*step:along,mountedHeight,variant.dimensions[2],room)};if(asset.id==='corporateMotif'){const layers=sortedWallGraphics(this.config.objects,wall.id);candidate.graphic={...wallGraphicFor(candidate),layer:Math.min(63,Math.max(-1,...layers.map(o=>wallGraphicFor(o).layer))+1)};}surface='wall';
   }else if(asset.collision==='accessory'){
    const supportMeshes:THREE.Mesh[]=[];this.objects.traverse(node=>{if(node instanceof THREE.Mesh&&!node.userData.contactShadow&&visible(node)){const object=this.config.objects.find(o=>o.id===node.userData.instanceId);if(object&&['tables','work','storage'].includes(getAsset(object.assetId).category))supportMeshes.push(node);}});
    const hit=this.ray.intersectObjects(supportMeshes,false).find(hit=>{
@@ -452,12 +462,13 @@ export class SceneView {
  private showLibraryPreview(preview:LibraryPreview){
   const valid=preview.feedback.valid;this.renderer.domElement.dataset.libraryPlacement=valid?'valid':'invalid';
   preview.root.visible=!!preview.candidate;preview.outline.visible=!!preview.candidate;
-  if(preview.candidate){preview.root.position.set(...preview.candidate.position);preview.root.rotation.y=preview.candidate.rotation;if(preview.candidate.assetId==='brandDoorPanel')this.updateWallPaintProxy(preview.root,preview.candidate);preview.root.updateMatrixWorld(true);preview.outline.box.setFromObject(preview.root);}
+  if(preview.candidate){preview.root.position.set(...preview.candidate.position);preview.root.rotation.y=preview.candidate.rotation;if(preview.candidate.assetId==='brandDoorPanel')this.updateWallPaintProxy(preview.root,preview.candidate);if(preview.candidate.assetId==='corporateMotif')updateWallGraphicProxy(preview.root,preview.candidate);preview.root.updateMatrixWorld(true);preview.outline.box.setFromObject(preview.root);}
+  if(preview.original.assetId==='corporateMotif')this.wallFinishes.apply(this.architecture,{...this.config,objects:preview.candidate?[...this.config.objects,preview.candidate]:this.config.objects});
   (preview.outline.material as THREE.LineBasicMaterial).color.set(valid?0x2b8064:0xc24e3d);for(const[material,color]of preview.colors)material.color.copy(color).lerp(new THREE.Color(valid?0x518b68:0xc95c4b),valid?.12:.48);
  }
  getLibraryPlacement(){const preview=this.libraryPreview;return preview?{object:preview.candidate?structuredClone(preview.candidate):undefined,...preview.feedback}:null;}
  finishLibraryPlacement():SceneObject|undefined {const preview=this.libraryPreview,candidate=preview?.feedback.valid&&preview.candidate?structuredClone(preview.candidate):undefined;this.cancelLibraryPlacement();return candidate;}
- cancelLibraryPlacement(){const preview=this.libraryPreview;this.libraryPreview=undefined;if(!preview)return;preview.root.removeFromParent();disposeAssetObject(preview.root);preview.outline.removeFromParent();preview.outline.geometry.dispose();(preview.outline.material as THREE.Material).dispose();delete this.renderer.domElement.dataset.libraryPlacement;this.controls.enabled=this.mode==='editor';this.updateSelection();}
+ cancelLibraryPlacement(){const preview=this.libraryPreview;this.libraryPreview=undefined;if(!preview)return;preview.root.removeFromParent();disposeAssetObject(preview.root);preview.outline.removeFromParent();preview.outline.geometry.dispose();(preview.outline.material as THREE.Material).dispose();delete this.renderer.domElement.dataset.libraryPlacement;if(preview.original.assetId==='corporateMotif')this.wallFinishes.apply(this.architecture,this.config);this.controls.enabled=this.mode==='editor';this.updateSelection();}
  private pointerRay(e:PointerEvent){const rect=this.renderer.domElement.getBoundingClientRect();if(document.pointerLockElement===this.renderer.domElement)this.ndc.set(0,0);else this.ndc.set((e.clientX-rect.left)/rect.width*2-1,-(e.clientY-rect.top)/rect.height*2+1);this.ray.setFromCamera(this.ndc,this.camera);}
  private closeContextMenu(){this.contextMenu?.remove();this.contextMenu=undefined;}
  private showContextMenu(e:MouseEvent){
@@ -482,11 +493,19 @@ export class SceneView {
   this.camera.position.copy(destination);this.camera.lookAt(destination.clone().add(direction));this.controls.target.copy(destination).add(direction);this.cameraSafe.copy(destination);this.navigation.syncFromCamera();this.ray.far=Infinity;
   this.callbacks.status('ArchViz запущено з вибраної точки');return true;
  }
- private pick(e:PointerEvent){this.pointerRay(e);const hits=this.ray.intersectObjects([this.objects,this.architecture.root],true);for(const h of hits){if(!h.object.visible||h.object.userData.contactShadow)continue;let p:THREE.Object3D|null=h.object,visible=true;while(p){if(!p.visible)visible=false;p=p.parent;}if(!visible)continue;const id=h.object.userData.instanceId as string|undefined;if(id)return{id,door:false};if(h.object.userData.interactiveDoor)return{id:null,door:true};return{id:null,door:false};}return{id:null,door:false};}
+ private pick(e:PointerEvent){
+  this.pointerRay(e);const hits=this.ray.intersectObjects([this.objects,this.architecture.root],true).filter(hit=>{if(hit.object.userData.contactShadow)return false;for(let node:THREE.Object3D|null=hit.object;node;node=node.parent)if(!node.visible)return false;return true;});
+  const first=hits[0];if(!first)return{id:null,door:false};
+  const objectFor=(hit:THREE.Intersection)=>this.config.objects.find(o=>o.id===hit.object.userData.instanceId),firstObject=objectFor(first);
+  if(firstObject&&firstObject.assetId!=='corporateMotif')return{id:firstObject.id,door:false};
+  const graphics=hits.filter(hit=>hit.distance<=first.distance+.03&&objectFor(hit)?.assetId==='corporateMotif').sort((a,b)=>{const x=objectFor(a)!,y=objectFor(b)!;return wallGraphicFor(y).layer-wallGraphicFor(x).layer||this.config.objects.indexOf(y)-this.config.objects.indexOf(x);});
+  if(graphics.length)return{id:objectFor(graphics[0])!.id,door:false};
+  return{id:firstObject?.id??null,door:!!first.object.userData.interactiveDoor};
+ }
  private pointerDown(e:PointerEvent){if(e.button!==0)return;this.pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});if(this.pointers.size>1){if(this.dragging?.active)this.callbacks.end();this.dragging=undefined;this.controls.enabled=true;this.press=undefined;return;}if(this.gizmo.dragging||this.gizmo.axis)return;
-  if(this.mode==='editor'&&this.paintSelection){this.press={id:e.pointerId,x:e.clientX,y:e.clientY,time:performance.now(),hit:null,door:false};return;}
-  const hit=this.pick(e);this.press={id:e.pointerId,x:e.clientX,y:e.clientY,time:performance.now(),hit:hit.id,door:hit.door};
-  if(this.mode==='editor'&&hit.id&&hit.id===this.selected){const original=this.selectedObject();if(original){this.pointerRay(e);const plane=new THREE.Plane(new THREE.Vector3(0,1,0),-original.position[1]);const p=this.ray.ray.intersectPlane(plane,new THREE.Vector3());this.dragging={id:hit.id,startX:e.clientX,startY:e.clientY,original:structuredClone(original),offset:p?p.sub(new THREE.Vector3(...original.position)):new THREE.Vector3(),active:false,wall:original.wallId};this.controls.enabled=false;}}
+  const hit=this.pick(e);if(this.mode==='editor'&&this.paintSelection&&this.config.objects.find(o=>o.id===hit.id)?.assetId!=='corporateMotif'){this.press={id:e.pointerId,x:e.clientX,y:e.clientY,time:performance.now(),hit:null,door:false};return;}
+  this.press={id:e.pointerId,x:e.clientX,y:e.clientY,time:performance.now(),hit:hit.id,door:hit.door};
+  if(this.mode==='editor'&&hit.id&&hit.id===this.selected){const original=this.selectedObject();if(original){this.pointerRay(e);const wall=original.wallId?getPlacementSurfaces().find(w=>w.id===original.wallId):undefined;const normal=wall?new THREE.Vector3(...wall.normal):new THREE.Vector3(0,1,0);const plane=new THREE.Plane(normal,wall?-wall.coordinate*(wall.axis==='x'?normal.x:normal.z):-original.position[1]);const p=this.ray.ray.intersectPlane(plane,new THREE.Vector3());this.dragging={id:hit.id,startX:e.clientX,startY:e.clientY,original:structuredClone(original),offset:p?p.sub(new THREE.Vector3(...original.position)):new THREE.Vector3(),active:false,wall:original.wallId};this.controls.enabled=false;}}
  }
  private pointerMove(e:PointerEvent){if(this.pointers.has(e.pointerId))this.pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});const drag=this.dragging;if(!drag||this.pointers.size!==1||this.mode!=='editor')return;
   const distance=Math.hypot(e.clientX-drag.startX,e.clientY-drag.startY);if(distance<5&&!drag.active)return;
@@ -494,10 +513,10 @@ export class SceneView {
   this.pointerRay(e);const asset=getAsset(drag.original.assetId);let candidate:SceneObject;
   if(asset.placement==='wall'){
    const room=getPlacementRoom(drag.original),wall=room.walls.find(w=>w.id===drag.wall)!;const n=new THREE.Vector3(...wall.normal);const plane=new THREE.Plane(n,-wall.coordinate*(wall.axis==='x'?n.x:n.z));const p=this.ray.ray.intersectPlane(plane,new THREE.Vector3());if(!p)return;
-   const along=wall.axis==='x'?p.z:p.x;const dimensions=getVariant(asset.id,drag.original.variant).dimensions;
+   const along=wall.axis==='x'?p.z-drag.offset.z:p.x-drag.offset.x;const dimensions=getVariant(asset.id,drag.original.variant).dimensions;
    const minY=(asset.wallClearance??.18)+dimensions[1]/2,maxY=Math.min(room.height-.3,(wall.height??room.height)-(asset.wallTopClearance??.03))-dimensions[1]/2;
-   const requested=this.snap?Math.round(p.y/this.gridStep)*this.gridStep:p.y,height=asset.wallLayer==='background'&&dimensions[1]>(wall.height??room.height)*.75?maxY:Math.max(minY,Math.min(maxY,requested));
-   const anchored=wallAnchor(wall.id,this.snap?Math.round(along/this.gridStep)*this.gridStep:along,height,dimensions[2],room);candidate={...drag.original,...anchored};
+   const requested=this.snap&&!e.altKey?Math.round((p.y-drag.offset.y)/this.gridStep)*this.gridStep:p.y-drag.offset.y,height=asset.id==='corporateMotif'?requested:asset.wallLayer==='background'&&dimensions[1]>(wall.height??room.height)*.75?maxY:Math.max(minY,Math.min(maxY,requested));
+   const anchored=wallAnchor(wall.id,this.snap&&!e.altKey?Math.round(along/this.gridStep)*this.gridStep:along,height,dimensions[2],room);candidate={...drag.original,...anchored};
   }else if(asset.collision==='accessory'){
    const supports=this.ray.intersectObject(this.objects,true).filter(hit=>{const id=hit.object.userData.instanceId;if(!id||id===drag.id||hit.object.userData.contactShadow)return false;const support=this.config.objects.find(o=>o.id===id);return support&&['tables','work','storage'].includes(getAsset(support.assetId).category);});
    const hit=supports[0];if(!hit){this.callbacks.status('Для аксесуара потрібна поверхня столу або тумби');return;}
@@ -511,11 +530,11 @@ export class SceneView {
  private pointerUp(e:PointerEvent){this.pointers.delete(e.pointerId);if(this.dragging?.active){this.callbacks.end();this.dragging=undefined;this.controls.enabled=this.mode==='editor';this.press=undefined;this.suppressClick=false;return;}this.dragging=undefined;this.controls.enabled=this.mode==='editor';
   const p=this.press;this.press=undefined;if(!p||this.suppressClick){this.suppressClick=false;return;}
   if(Math.hypot(e.clientX-p.x,e.clientY-p.y)>7||performance.now()-p.time>650)return;
-  if(this.mode==='editor'&&this.paintSelection){this.paintWallAt(e);return;}
+  if(this.mode==='editor'&&this.paintSelection&&!p.hit){this.paintWallAt(e);return;}
   if(p.door){this.callbacks.door();return;}this.callbacks.select(p.hit);
  }
- rotateSelected(delta:number){const obj=this.selectedObject();if(!obj||getAsset(obj.assetId).placement==='wall')return;const candidate={...obj,rotation:snapAngle(obj.rotation+delta,15,this.angleSnap)};const v=validatePlacement(candidate,this.config.objects,getPlacementRoom(candidate),{freePlacement:this.freePlacement});if(v.valid)this.callbacks.change(candidate);else this.callbacks.status(v.reason??'Поворот неможливий');}
- moveSelected(dx:number,dz:number){const obj=this.selectedObject();if(!obj)return;let candidate:SceneObject;if(getAsset(obj.assetId).placement==='wall'){const room=getPlacementRoom(obj),wall=room.walls.find(w=>w.id===obj.wallId)!;const along=(wall.axis==='x'?obj.position[2]:obj.position[0])+dx;candidate={...obj,...wallAnchor(wall.id,along,obj.position[1]+dz,getVariant(obj.assetId,obj.variant).dimensions[2],room)};}else candidate={...obj,position:[obj.position[0]+dx,obj.position[1],obj.position[2]+dz]};const v=validatePlacement(candidate,this.config.objects,getPlacementRoom(candidate),{freePlacement:this.freePlacement});if(v.valid)this.callbacks.change(candidate);else this.callbacks.status(v.reason??'Переміщення неможливе');}
+ rotateSelected(delta:number){const obj=this.selectedObject();if(obj?.assetId==='corporateMotif'){const g=wallGraphicFor(obj);const candidate={...obj,graphic:{...g,angle:snapAngle(g.angle+delta,15,this.angleSnap)}};const result=validatePlacement(candidate,this.config.objects,getPlacementRoom(candidate));if(result.valid)this.callbacks.change(candidate);else this.callbacks.status(result.reason??'Поворот неможливий');return;}if(!obj||getAsset(obj.assetId).placement==='wall')return;const candidate={...obj,rotation:snapAngle(obj.rotation+delta,15,this.angleSnap)};const v=validatePlacement(candidate,this.config.objects,getPlacementRoom(candidate),{freePlacement:this.freePlacement});if(v.valid)this.callbacks.change(candidate);else this.callbacks.status(v.reason??'Поворот неможливий');}
+ moveSelected(dx:number,dz:number){const obj=this.selectedObject();if(!obj)return;let candidate:SceneObject;if(getAsset(obj.assetId).placement==='wall'){const room=getPlacementRoom(obj),wall=room.walls.find(w=>w.id===obj.wallId)!;const graphic=obj.assetId==='corporateMotif',along=(wall.axis==='x'?obj.position[2]:obj.position[0])+dx*(graphic?wallGraphicDirection(wall):1);candidate={...obj,...wallAnchor(wall.id,along,obj.position[1]+(graphic?-dz:dz),getVariant(obj.assetId,obj.variant).dimensions[2],room)};}else candidate={...obj,position:[obj.position[0]+dx,obj.position[1],obj.position[2]+dz]};const v=validatePlacement(candidate,this.config.objects,getPlacementRoom(candidate),{freePlacement:this.freePlacement});if(v.valid)this.callbacks.change(candidate);else this.callbacks.status(v.reason??'Переміщення неможливе');}
  walk(direction:'forward'|'back'|'left'|'right'){
   const look=this.controls.target.clone().sub(this.camera.position);look.y=0;look.normalize();const right=new THREE.Vector3().crossVectors(look,new THREE.Vector3(0,1,0));const step=direction==='forward'?look:direction==='back'?look.negate():direction==='right'?right:right.negate();step.multiplyScalar(.35);const p=this.camera.position.clone().add(step);if(this.cameraMoveAllowed(this.camera.position,p)){this.camera.position.copy(p);this.controls.target.add(step);this.cameraSafe.copy(p);}else this.callbacks.status('Тут стіна, вікно, двері або перегородка');
  }
@@ -530,5 +549,5 @@ export class SceneView {
   if(++this.renderCount%60===0)this.callbacks.quality(this.quality.settings,this.quality.fps);
  }
  getStats(){return{fps:this.quality.fps,quality:this.quality.settings,drawCalls:this.renderer.info.render.calls,triangles:this.renderer.info.render.triangles,geometries:this.renderer.info.memory.geometries,textures:this.renderer.info.memory.textures};}
- dispose(){this.setSelectedWall(null);this.cancelLibraryPlacement();cancelAnimationFrame(this.raf);this.resizeObserver.disconnect();this.controls.dispose();this.gizmo.dispose();this.visuals.forEach(v=>this.removeVisual(v));this.library?.dispose();this.architectureLeases.forEach(l=>l.release());this.shadowTexture.dispose();this.wallFinishes.dispose();this.directLighting.dispose();this.renderer.dispose();this.composer.dispose();}
+ dispose(){if(this.graphicSelection)disposeWallGraphicSelection(this.graphicSelection);this.setSelectedWall(null);this.cancelLibraryPlacement();cancelAnimationFrame(this.raf);this.resizeObserver.disconnect();this.controls.dispose();this.gizmo.dispose();this.visuals.forEach(v=>this.removeVisual(v));this.library?.dispose();this.architectureLeases.forEach(l=>l.release());this.shadowTexture.dispose();this.wallFinishes.dispose();this.directLighting.dispose();this.renderer.dispose();this.composer.dispose();}
 }

@@ -25,14 +25,14 @@
       "pixelRectTopLeft": [
         16,
         16,
-        1328,
-        747
+        992,
+        558
       ],
       "uvRectBottomLeft": [
         0.00390625,
-        0.813720703125,
-        0.32421875,
-        0.182373046875
+        0.85986328125,
+        0.2421875,
+        0.13623046875
       ],
       "index": 1,
       "label": "EDS · енергія та цінності",
@@ -45,16 +45,16 @@
       "id": "mural-2",
       "kind": "mural",
       "pixelRectTopLeft": [
-        1376,
+        1040,
         16,
-        1328,
-        747
+        992,
+        558
       ],
       "uvRectBottomLeft": [
-        0.3359375,
-        0.813720703125,
-        0.32421875,
-        0.182373046875
+        0.25390625,
+        0.85986328125,
+        0.2421875,
+        0.13623046875
       ],
       "index": 2,
       "label": "EDS · спільні ідеї",
@@ -67,16 +67,16 @@
       "id": "mural-3",
       "kind": "mural",
       "pixelRectTopLeft": [
-        2736,
+        2064,
         16,
-        1328,
-        747
+        992,
+        558
       ],
       "uvRectBottomLeft": [
-        0.66796875,
-        0.813720703125,
-        0.32421875,
-        0.182373046875
+        0.50390625,
+        0.85986328125,
+        0.2421875,
+        0.13623046875
       ],
       "index": 3,
       "label": "EDS · культура співдії",
@@ -89,16 +89,16 @@
       "id": "mural-4",
       "kind": "mural",
       "pixelRectTopLeft": [
+        3088,
         16,
-        795,
-        1328,
-        747
+        992,
+        558
       ],
       "uvRectBottomLeft": [
-        0.00390625,
-        0.62353515625,
-        0.32421875,
-        0.182373046875
+        0.75390625,
+        0.85986328125,
+        0.2421875,
+        0.13623046875
       ],
       "index": 4,
       "label": "EDS · простір для діалогу",
@@ -111,16 +111,16 @@
       "id": "mural-5",
       "kind": "mural",
       "pixelRectTopLeft": [
-        1376,
-        795,
-        1328,
-        747
+        16,
+        606,
+        992,
+        558
       ],
       "uvRectBottomLeft": [
-        0.3359375,
-        0.62353515625,
-        0.32421875,
-        0.182373046875
+        0.00390625,
+        0.7158203125,
+        0.2421875,
+        0.13623046875
       ],
       "index": 5,
       "label": "EDS · інженерія рішень",
@@ -133,16 +133,16 @@
       "id": "mural-6",
       "kind": "mural",
       "pixelRectTopLeft": [
-        2736,
-        795,
-        1328,
-        747
+        1040,
+        606,
+        992,
+        558
       ],
       "uvRectBottomLeft": [
-        0.66796875,
-        0.62353515625,
-        0.32421875,
-        0.182373046875
+        0.25390625,
+        0.7158203125,
+        0.2421875,
+        0.13623046875
       ],
       "index": 6,
       "label": "EDS · сила партнерства",
@@ -155,16 +155,16 @@
       "id": "mural-7",
       "kind": "mural",
       "pixelRectTopLeft": [
-        16,
-        1574,
-        1328,
-        747
+        2064,
+        606,
+        992,
+        558
       ],
       "uvRectBottomLeft": [
-        0.00390625,
-        0.433349609375,
-        0.32421875,
-        0.182373046875
+        0.50390625,
+        0.7158203125,
+        0.2421875,
+        0.13623046875
       ],
       "index": 7,
       "label": "EDS · спокійна енергія",
@@ -177,16 +177,16 @@
       "id": "mural-8",
       "kind": "mural",
       "pixelRectTopLeft": [
-        1376,
-        1574,
-        1328,
-        747
+        3088,
+        606,
+        992,
+        558
       ],
       "uvRectBottomLeft": [
-        0.3359375,
-        0.433349609375,
-        0.32421875,
-        0.182373046875
+        0.75390625,
+        0.7158203125,
+        0.2421875,
+        0.13623046875
       ],
       "index": 8,
       "label": "EDS · енергія майбутнього",
@@ -196,70 +196,516 @@
       "opaque": true
     },
     {
-      "id": "motif-1",
-      "kind": "mask",
+      "id": "mural-9",
+      "kind": "mural",
       "pixelRectTopLeft": [
         16,
-        2700,
-        1024,
-        1024
+        1196,
+        992,
+        558
       ],
       "uvRectBottomLeft": [
         0.00390625,
-        0.0908203125,
-        0.25,
-        0.25
+        0.57177734375,
+        0.2421875,
+        0.13623046875
+      ],
+      "index": 9,
+      "label": "EDS · точка зростання",
+      "description": "Лавандове архітектурне поле, сходинки шахового модуля та простора типографіка.",
+      "sourceSvg": "assets/brand/murals/mural-9.svg",
+      "sourceAspect": 1.7777777777777777,
+      "opaque": true
+    },
+    {
+      "id": "mural-10",
+      "kind": "mural",
+      "pixelRectTopLeft": [
+        1040,
+        1196,
+        992,
+        558
+      ],
+      "uvRectBottomLeft": [
+        0.25390625,
+        0.57177734375,
+        0.2421875,
+        0.13623046875
+      ],
+      "index": 10,
+      "label": "EDS · напрям руху",
+      "description": "Світле поле, дві монументальні стріли на синій колоні та стриманий лаймовий акцент.",
+      "sourceSvg": "assets/brand/murals/mural-10.svg",
+      "sourceAspect": 1.7777777777777777,
+      "opaque": true
+    },
+    {
+      "id": "mural-11",
+      "kind": "mural",
+      "pixelRectTopLeft": [
+        2064,
+        1196,
+        992,
+        558
+      ],
+      "uvRectBottomLeft": [
+        0.50390625,
+        0.57177734375,
+        0.2421875,
+        0.13623046875
+      ],
+      "index": 11,
+      "label": "EDS · відкриті координати",
+      "description": "Сітка координат, вкладений квадрат і чітка редакційна типографіка на світлій стіні.",
+      "sourceSvg": "assets/brand/murals/mural-11.svg",
+      "sourceAspect": 1.7777777777777777,
+      "opaque": true
+    },
+    {
+      "id": "mural-12",
+      "kind": "mural",
+      "pixelRectTopLeft": [
+        3088,
+        1196,
+        992,
+        558
+      ],
+      "uvRectBottomLeft": [
+        0.75390625,
+        0.57177734375,
+        0.2421875,
+        0.13623046875
+      ],
+      "index": 12,
+      "label": "EDS · баланс енергії",
+      "description": "Горизонтальний лавандовий пояс, великі парні чверті та спокійний ритм написів.",
+      "sourceSvg": "assets/brand/murals/mural-12.svg",
+      "sourceAspect": 1.7777777777777777,
+      "opaque": true
+    },
+    {
+      "id": "mural-13",
+      "kind": "mural",
+      "pixelRectTopLeft": [
+        16,
+        1786,
+        992,
+        558
+      ],
+      "uvRectBottomLeft": [
+        0.00390625,
+        0.427734375,
+        0.2421875,
+        0.13623046875
+      ],
+      "index": 13,
+      "label": "EDS · командний ритм",
+      "description": "Чорне поле, великі шахові модулі, виразний білий логотип і короткі командні цінності.",
+      "sourceSvg": "assets/brand/murals/mural-13.svg",
+      "sourceAspect": 1.7777777777777777,
+      "opaque": true
+    },
+    {
+      "id": "mural-14",
+      "kind": "mural",
+      "pixelRectTopLeft": [
+        1040,
+        1786,
+        992,
+        558
+      ],
+      "uvRectBottomLeft": [
+        0.25390625,
+        0.427734375,
+        0.2421875,
+        0.13623046875
+      ],
+      "index": 14,
+      "label": "EDS · чіткий курс",
+      "description": "Велика світла зона, синій нижній пояс, оптичний центр і точний корпоративний знак.",
+      "sourceSvg": "assets/brand/murals/mural-14.svg",
+      "sourceAspect": 1.7777777777777777,
+      "opaque": true
+    },
+    {
+      "id": "mural-15",
+      "kind": "mural",
+      "pixelRectTopLeft": [
+        2064,
+        1786,
+        992,
+        558
+      ],
+      "uvRectBottomLeft": [
+        0.50390625,
+        0.427734375,
+        0.2421875,
+        0.13623046875
+      ],
+      "index": 15,
+      "label": "EDS · майстерня ідей",
+      "description": "Світла студійна стіна з лавандовою колоною, шаховим модулем і простим ритмом форм.",
+      "sourceSvg": "assets/brand/murals/mural-15.svg",
+      "sourceAspect": 1.7777777777777777,
+      "opaque": true
+    },
+    {
+      "id": "mural-16",
+      "kind": "mural",
+      "pixelRectTopLeft": [
+        3088,
+        1786,
+        992,
+        558
+      ],
+      "uvRectBottomLeft": [
+        0.75390625,
+        0.427734375,
+        0.2421875,
+        0.13623046875
+      ],
+      "index": 16,
+      "label": "EDS · простір можливостей",
+      "description": "Геометричний горизонт із синіх і лавандових полів, білим простором і великим точним логотипом.",
+      "sourceSvg": "assets/brand/murals/mural-16.svg",
+      "sourceAspect": 1.7777777777777777,
+      "opaque": true
+    },
+    {
+      "id": "motif-1",
+      "kind": "motif",
+      "pixelRectTopLeft": [
+        16,
+        2496,
+        992,
+        480
+      ],
+      "uvRectBottomLeft": [
+        0.00390625,
+        0.2734375,
+        0.2421875,
+        0.1171875
       ],
       "index": 1,
+      "label": "Діагональна штриховка",
       "alphaMask": true,
       "physicalTileMeters": [
         3.24,
         0.491
-      ]
+      ],
+      "defaultSize": [
+        3.24,
+        0.491
+      ],
+      "sourceSvg": "assets/brand/motif-library/motif-1.svg"
     },
     {
       "id": "motif-2",
-      "kind": "mask",
+      "kind": "motif",
       "pixelRectTopLeft": [
-        1056,
-        2700,
-        1024,
-        1024
+        1040,
+        2496,
+        992,
+        480
       ],
       "uvRectBottomLeft": [
-        0.2578125,
-        0.0908203125,
-        0.25,
-        0.25
+        0.25390625,
+        0.2734375,
+        0.2421875,
+        0.1171875
       ],
       "index": 2,
+      "label": "Сітка хрестів",
       "alphaMask": true,
       "physicalTileMeters": [
         2.4,
         2.4
-      ]
+      ],
+      "defaultSize": [
+        2.4,
+        2.4
+      ],
+      "sourceSvg": "assets/brand/motif-library/motif-2.svg"
     },
     {
       "id": "motif-3",
-      "kind": "mask",
+      "kind": "motif",
       "pixelRectTopLeft": [
-        2096,
-        2700,
-        1024,
-        1024
+        2064,
+        2496,
+        992,
+        480
       ],
       "uvRectBottomLeft": [
-        0.51171875,
-        0.0908203125,
-        0.25,
-        0.25
+        0.50390625,
+        0.2734375,
+        0.2421875,
+        0.1171875
       ],
       "index": 3,
+      "label": "Парні чверті диска",
       "alphaMask": true,
       "physicalTileMeters": [
         0.6,
         0.6
-      ]
+      ],
+      "defaultSize": [
+        1,
+        1
+      ],
+      "sourceSvg": "assets/brand/motif-library/motif-3.svg"
+    },
+    {
+      "id": "motif-4",
+      "kind": "motif",
+      "pixelRectTopLeft": [
+        3088,
+        2496,
+        992,
+        480
+      ],
+      "uvRectBottomLeft": [
+        0.75390625,
+        0.2734375,
+        0.2421875,
+        0.1171875
+      ],
+      "index": 4,
+      "label": "Шаховий модуль",
+      "alphaMask": true,
+      "physicalTileMeters": [
+        0.8,
+        0.8
+      ],
+      "defaultSize": [
+        0.8,
+        0.8
+      ],
+      "sourceSvg": "assets/brand/motif-library/motif-4.svg"
+    },
+    {
+      "id": "motif-5",
+      "kind": "motif",
+      "pixelRectTopLeft": [
+        16,
+        3008,
+        992,
+        480
+      ],
+      "uvRectBottomLeft": [
+        0.00390625,
+        0.1484375,
+        0.2421875,
+        0.1171875
+      ],
+      "index": 5,
+      "label": "Стріла руху",
+      "alphaMask": true,
+      "physicalTileMeters": [
+        0.9,
+        0.9
+      ],
+      "defaultSize": [
+        0.9,
+        0.9
+      ],
+      "sourceSvg": "assets/brand/motif-library/motif-5.svg"
+    },
+    {
+      "id": "motif-6",
+      "kind": "motif",
+      "pixelRectTopLeft": [
+        1040,
+        3008,
+        992,
+        480
+      ],
+      "uvRectBottomLeft": [
+        0.25390625,
+        0.1484375,
+        0.2421875,
+        0.1171875
+      ],
+      "index": 6,
+      "label": "Квадрат у квадраті",
+      "alphaMask": true,
+      "physicalTileMeters": [
+        0.8,
+        0.8
+      ],
+      "defaultSize": [
+        0.8,
+        0.8
+      ],
+      "sourceSvg": "assets/brand/motif-library/motif-6.svg"
+    },
+    {
+      "id": "motif-7",
+      "kind": "motif",
+      "pixelRectTopLeft": [
+        2064,
+        3008,
+        992,
+        480
+      ],
+      "uvRectBottomLeft": [
+        0.50390625,
+        0.1484375,
+        0.2421875,
+        0.1171875
+      ],
+      "index": 7,
+      "label": "Точка перетину",
+      "alphaMask": true,
+      "physicalTileMeters": [
+        0.8,
+        0.8
+      ],
+      "defaultSize": [
+        0.8,
+        0.8
+      ],
+      "sourceSvg": "assets/brand/motif-library/motif-7.svg"
+    },
+    {
+      "id": "motif-8",
+      "kind": "motif",
+      "pixelRectTopLeft": [
+        3088,
+        3008,
+        992,
+        480
+      ],
+      "uvRectBottomLeft": [
+        0.75390625,
+        0.1484375,
+        0.2421875,
+        0.1171875
+      ],
+      "index": 8,
+      "label": "Оптичний центр",
+      "alphaMask": true,
+      "physicalTileMeters": [
+        0.9,
+        0.9
+      ],
+      "defaultSize": [
+        0.9,
+        0.9
+      ],
+      "sourceSvg": "assets/brand/motif-library/motif-8.svg"
+    },
+    {
+      "id": "motif-9",
+      "kind": "motif",
+      "pixelRectTopLeft": [
+        16,
+        3520,
+        992,
+        480
+      ],
+      "uvRectBottomLeft": [
+        0.00390625,
+        0.0234375,
+        0.2421875,
+        0.1171875
+      ],
+      "index": 9,
+      "label": "Модульна сходинка",
+      "alphaMask": true,
+      "physicalTileMeters": [
+        1.8,
+        1.2
+      ],
+      "defaultSize": [
+        1.8,
+        1.2
+      ],
+      "sourceSvg": "assets/brand/motif-library/motif-9.svg"
+    },
+    {
+      "id": "motif-10",
+      "kind": "motif",
+      "pixelRectTopLeft": [
+        1040,
+        3520,
+        992,
+        480
+      ],
+      "uvRectBottomLeft": [
+        0.25390625,
+        0.0234375,
+        0.2421875,
+        0.1171875
+      ],
+      "index": 10,
+      "label": "Хвиля співдії",
+      "alphaMask": true,
+      "physicalTileMeters": [
+        2.1,
+        0.9
+      ],
+      "defaultSize": [
+        2.1,
+        0.9
+      ],
+      "sourceSvg": "assets/brand/motif-library/motif-10.svg"
+    },
+    {
+      "id": "motif-11",
+      "kind": "motif",
+      "pixelRectTopLeft": [
+        2064,
+        3520,
+        992,
+        480
+      ],
+      "uvRectBottomLeft": [
+        0.50390625,
+        0.0234375,
+        0.2421875,
+        0.1171875
+      ],
+      "index": 11,
+      "label": "Векторний ритм",
+      "alphaMask": true,
+      "physicalTileMeters": [
+        2.4,
+        0.8
+      ],
+      "defaultSize": [
+        2.4,
+        0.8
+      ],
+      "sourceSvg": "assets/brand/motif-library/motif-11.svg"
+    },
+    {
+      "id": "motif-12",
+      "kind": "motif",
+      "pixelRectTopLeft": [
+        3088,
+        3520,
+        992,
+        480
+      ],
+      "uvRectBottomLeft": [
+        0.75390625,
+        0.0234375,
+        0.2421875,
+        0.1171875
+      ],
+      "index": 12,
+      "label": "Координатна рамка",
+      "alphaMask": true,
+      "physicalTileMeters": [
+        1.8,
+        1.2
+      ],
+      "defaultSize": [
+        1.8,
+        1.2
+      ],
+      "sourceSvg": "assets/brand/motif-library/motif-12.svg"
     }
   ]
 }

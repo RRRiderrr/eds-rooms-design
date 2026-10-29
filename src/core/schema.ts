@@ -1,12 +1,13 @@
 import {upgradeDoorLabels} from './door-labels';
 import {upgradeHallDecor} from './hall-decor';
 import { ASSETS, getAsset } from '../catalog/catalog';
-import { DEFAULT_LAYERS, DEFAULT_WALL_FINISH, PROJECT_ID, SCHEMA_VERSION, type DesignRegionId, type RegionPresetSelection, type SceneConfig, type SceneObject, type WallFinish } from './types';
+import { DEFAULT_LAYERS, DEFAULT_WALL_FINISH, PROJECT_ID, SCHEMA_VERSION, MAX_SCENE_OBJECTS, type DesignRegionId, type RegionPresetSelection, type SceneConfig, type SceneObject, type WallFinish } from './types';
 import { defaultRegionPresets, isDesignRegion, isWallId, objectRegion } from './regions';
 import { originalHallTables } from './hall';
 import { upgradeDoorSignage } from './door-signage';
 import { normalizePlaqueLabel } from './plaque-text';
 import { MAX_WALL_MURAL } from './wall-murals';
+import { MAX_GRAPHICS_PER_WALL, parseWallGraphic, upgradeWallGraphics, wallGraphicFor } from './wall-graphics';
 
 export const MAX_PRESET_BYTES = 512_000;
 function record(value: unknown): value is Record<string, unknown> { return !!value && typeof value === 'object' && !Array.isArray(value); }
@@ -69,7 +70,7 @@ export function parsePreset(input: string | unknown, options: { preserveIdentity
   if (!record(data) || data.schemaVersion !== SCHEMA_VERSION) throw new Error('Ця версія схеми пресета поки не підтримується');
   if (data.projectId !== PROJECT_ID) throw new Error('Цей пресет належить іншому проєкту');
   if (data.roomId !== 'lounge-room-01') throw new Error('Цей пресет призначений для іншого простору');
-  if (!Array.isArray(data.objects) || data.objects.length > 250) throw new Error('Некоректний список предметів');
+  if (!Array.isArray(data.objects) || data.objects.length > MAX_SCENE_OBJECTS) throw new Error('Некоректний список предметів');
   const ids = new Set<string>(), warnings: string[] = [], objects: SceneObject[] = [];
   for (const entry of data.objects) {
     if (!record(entry)) throw new Error('Некоректний предмет');
@@ -87,7 +88,14 @@ export function parsePreset(input: string | unknown, options: { preserveIdentity
     const object: SceneObject = { id, assetId: asset.id, variant, material, position: [...entry.position] as SceneObject['position'], rotation: entry.rotation,
       ...(wallId ? { wallId } : {}), ...(typeof entry.label === 'string' ? { label: asset.id==='doorPlaque'?normalizePlaqueLabel(entry.label):entry.label.slice(0,120) } : {}) };
     object.regionId = isDesignRegion(entry.regionId) ? entry.regionId : objectRegion(object);
+    if (asset.id === 'corporateMotif' && entry.graphic !== undefined) object.graphic = parseWallGraphic(entry.graphic, wallGraphicFor(object));
     objects.push(object);
+  }
+  const graphicCounts = new Map<string,number>();
+  for (const object of objects) if (object.assetId === 'corporateMotif' && object.variant > 0 && object.wallId) {
+    const count = (graphicCounts.get(object.wallId) ?? 0) + 1;
+    if (count > MAX_GRAPHICS_PER_WALL) throw new Error(`На одній стіні може бути до ${MAX_GRAPHICS_PER_WALL} мотивів`);
+    graphicCounts.set(object.wallId,count);
   }
   const now = new Date().toISOString(), layers = { ...DEFAULT_LAYERS };
   if (record(data.layers)) for (const key of Object.keys(layers) as (keyof typeof layers)[]) if (typeof data.layers[key] === 'boolean') layers[key] = data.layers[key] as boolean;
@@ -117,7 +125,7 @@ export function parsePreset(input: string | unknown, options: { preserveIdentity
     ...(data.doorLabelRevision===1?{doorLabelRevision:1 as const}:{}),
     objects:upgradeDoorSignage(objects), doorOpen: data.doorOpen === true, layers, regionPresets: selections, wallFinishes,
   };
-  return { config:upgradeDoorLabels(upgradeHallDecor(config)), warnings };
+  return { config:upgradeWallGraphics(upgradeDoorLabels(upgradeHallDecor(config))), warnings };
 }
 export function serializePreset(config: SceneConfig): string { return JSON.stringify(parsePreset(config, { preserveIdentity: true }).config, null, 2); }
 export const exportPreset = serializePreset;
