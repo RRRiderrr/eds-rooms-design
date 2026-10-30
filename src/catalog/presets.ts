@@ -146,15 +146,26 @@ function hallVolumeLogo(style:number):SceneObject[] {
  * Leave the door and its painted wayfinding strip clear. Each piece remains an
  * independent editable wall graphic, so its placement and layers can be changed. */
 function hallEntranceGraphics(style:number):SceneObject[]{
- const designs=[[11,9,6],[10,8,5],[1,12,7],[11,2,3],[10,9,6],[1,8,7],[11,12,5],[10,2,6]];
- const colors=[['#0b30c1','#a2b8fe','#1e2420'],['#1e2420','#a2b8fe','#0b30c1'],['#0b30c1','#a0ff3d','#1e2420'],['#1e2420','#a2b8fe','#0b30c1']];
- const slots=[{along:-1.68,y:2.52,width:1.25,height:.38,opacity:.85},{along:-.83,y:1.68,width:.88,height:.76,opacity:.75},{along:.21,y:2.39,width:.58,height:.58,opacity:.9}];
- return slots.map((slot,i)=>{
-  const variant=designs[style%designs.length][i],color=colors[style%colors.length][i];
-  return {id:`hall-entrance-graphic-${i+1}`,assetId:'corporateMotif',variant,material:'eds-blue',regionId:'hall',
-   ...wallAnchor('wall-21',slot.along,slot.y,getVariant('corporateMotif',variant).dimensions[2],hallWallRoom),
-   graphic:{width:slot.width,height:slot.height,angle:0,opacity:slot.opacity,layer:i,color}};
- });
+ // The wall is shared with door 03. Keep every painted shape to the left of
+ // its plaque, while changing both the visual rhythm and hierarchy per preset.
+ // Tuples: artwork, wall X, height, width, height, angle in degrees, colour, opacity.
+ type Accent=[number,number,number,number,number,number,string,number];
+ const blue='#0b30c1',lavender='#a2b8fe',black='#1e2420',lime='#a0ff3d';
+ const compositions:Accent[][]=[
+  [[11,-1.58,2.53,1.60,.37,-8,blue,.88],[6,-2.10,1.72,.64,.64,15,black,.9],[9,-.76,1.76,1.00,.65,12,lavender,.8],[5,-1.63,.88,.49,.49,-32,blue,.88],[4,-.56,.78,.58,.58,45,lime,.68],[7,-1.14,1.27,.32,.32,-15,black,.72]],
+  [[10,-1.55,2.52,1.76,.52,9,black,.88],[2,-1.98,1.65,.90,.90,-12,lavender,.75],[5,-.72,1.75,.62,.62,36,blue,.92],[6,-1.60,.78,.48,.48,0,black,.84],[3,-.60,.76,.43,.43,-35,lime,.74],[7,-1.12,1.18,.28,.28,20,blue,.82],[4,-2.29,.77,.32,.32,45,lavender,.75]],
+  [[1,-1.62,2.50,1.75,.31,-13,blue,.85],[12,-1.91,1.62,.96,.65,8,lime,.68],[7,-.66,1.76,.57,.57,-30,black,.9],[4,-1.46,.82,.60,.60,45,lavender,.8],[3,-.45,.82,.48,.48,18,blue,.88],[5,-1.05,1.23,.30,.30,-20,black,.76]],
+  [[11,-1.66,2.54,1.68,.39,12,black,.85],[2,-2.08,1.67,.75,.75,16,lavender,.78],[3,-.77,1.78,.72,.72,-22,blue,.92],[9,-1.56,.84,.88,.50,-8,lime,.7],[6,-.48,.76,.42,.42,45,black,.84],[7,-1.13,1.27,.28,.28,30,blue,.8],[5,-2.22,.74,.34,.34,-25,lavender,.85]],
+  [[10,-1.56,2.53,1.71,.49,-8,blue,.85],[9,-1.90,1.70,.92,.61,-18,lavender,.8],[6,-.70,1.78,.70,.70,22,black,.9],[4,-1.58,.82,.52,.52,45,lime,.7],[5,-.52,.78,.46,.46,-25,blue,.85],[3,-1.07,1.20,.31,.31,20,black,.8]],
+  [[1,-1.57,2.52,1.69,.34,10,black,.85],[8,-2.03,1.70,.79,.79,-15,lavender,.78],[7,-.73,1.77,.69,.69,30,blue,.9],[12,-1.55,.82,.95,.48,7,lime,.65],[5,-.49,.75,.42,.42,-35,black,.85],[6,-1.05,1.22,.29,.29,45,blue,.8],[3,-2.26,.81,.30,.30,20,lavender,.8]],
+  [[11,-1.60,2.53,1.74,.39,-10,blue,.9],[12,-1.96,1.67,.91,.67,14,lime,.66],[5,-.71,1.77,.65,.65,-28,black,.88],[9,-1.58,.82,.84,.48,12,lavender,.8],[4,-.50,.78,.46,.46,45,blue,.85],[7,-1.08,1.22,.31,.31,-20,black,.8]],
+  [[10,-1.58,2.52,1.72,.50,11,black,.85],[2,-2.04,1.68,.81,.81,-15,lavender,.78],[6,-.73,1.78,.67,.67,30,blue,.9],[3,-1.58,.83,.53,.53,-25,lime,.7],[5,-.51,.76,.45,.45,25,black,.85],[9,-1.09,1.23,.39,.27,-12,blue,.8],[4,-2.25,.78,.30,.30,45,lavender,.78]],
+ ];
+ return compositions[style%compositions.length].map(([variant,along,y,width,height,degrees,color,opacity],i)=>({
+  id:`hall-entrance-graphic-${i+1}`,assetId:'corporateMotif',variant,material:'eds-blue',regionId:'hall',
+  ...wallAnchor('wall-21',along,y,getVariant('corporateMotif',variant).dimensions[2],hallWallRoom),
+  graphic:{width,height,angle:degrees*pi/180,opacity,layer:i,color},
+ }));
 }
 function hallPreset(index:number,name:string,decor:SceneObject[],finishes:Record<string,WallFinish>={}):SceneConfig{
  const id=`hall-preset-${index}`,config=preset(0,name,[]);

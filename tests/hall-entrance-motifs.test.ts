@@ -6,13 +6,15 @@ import {validatePlacement} from '../src/core/placement';
 import {wallGraphicBounds,wallGraphicFor,wallGraphicVisibleArea} from '../src/core/wall-graphics';
 
 describe('Hall entrance artwork',()=>{
- it('keeps three editable motifs on the hall face, clear of the entrance and plaque, in every hall preset',()=>{
+ it('keeps varied editable motifs on the hall face, clear of the entrance and plaque, in every hall preset',()=>{
   configureSpace(manifest);const wall=getPlacementSurfaces().find(w=>w.id==='wall-21')!;
   expect(wall.normal).toEqual([0,0,-1]);expect(wall.openings?.some(o=>o.kind==='door')).toBe(true);
   const designs=new Set<string>();
   for(const preset of HALL_PRESETS){
    const objects=preset.objects.filter(o=>o.id.startsWith('hall-entrance-graphic-'));
-   expect(objects).toHaveLength(3);designs.add(objects.map(o=>o.variant).join(','));
+   expect(objects.length).toBeGreaterThanOrEqual(6);designs.add(JSON.stringify(objects.map(o=>[o.variant,o.position,o.graphic])));
+   expect(new Set(objects.map(o=>wallGraphicFor(o).width)).size).toBeGreaterThanOrEqual(4);
+   expect(objects.filter(o=>Math.abs(wallGraphicFor(o).angle)>.01).length).toBeGreaterThanOrEqual(4);
    const plaque=preset.objects.find(o=>o.id==='hall-door-03-plaque')!;
    for(const object of objects){
     expect(object).toMatchObject({assetId:'corporateMotif',wallId:'wall-21',regionId:'hall'});
