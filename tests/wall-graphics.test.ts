@@ -29,7 +29,7 @@ describe('Independent EDS wall graphics',()=>{
   base.objects.push(graphic('a','west',0,1.6,{angle:.3,opacity:.42,layer:5,color:'#A2B8FE'}),graphic('b','west',.2,1.5,{width:1.4,height:.7,layer:6}));
   const safe=parsePreset(serializePreset(base),{preserveIdentity:true}).config;
   expect(safe.objects.slice(0,retained.length)).toEqual(retained);
-  expect(safe.objects.filter(o=>o.assetId==='corporateMotif')).toHaveLength(2);
+  expect(safe.objects.filter(o=>o.assetId==='corporateMotif'&&o.wallId==='west')).toHaveLength(2);
   expect(safe.objects.find(o=>o.id==='a')!.graphic).toMatchObject({opacity:.42,layer:5,color:'#a2b8fe'});
   expect(safe.objects.find(o=>o.id==='a')!.graphic!.angle).toBeCloseTo(.3,12);
   expect(currentDraft(safe)).toBe(safe);
@@ -83,7 +83,7 @@ describe('Independent EDS wall graphics',()=>{
   expect(validatePlacement(west[0],west)).toEqual({valid:true});
   expect(validatePlacement(graphic('extra'),west)).toMatchObject({valid:false,reason:'На одній стіні може бути до 64 мотивів'});
   const base=clonePreset(0);base.objects.push(...west,...west.map((o,i)=>({...o,id:`east-${i}`,...wallAnchor('east',0,1.6,.0004)})));
-  expect(parsePreset(base).config.objects.filter(o=>o.assetId==='corporateMotif')).toHaveLength(128);
+  expect(parsePreset(base).config.objects.filter(o=>o.assetId==='corporateMotif'&&(o.wallId==='west'||o.wallId==='east'))).toHaveLength(128);
   base.objects.push(graphic('extra'));expect(()=>parsePreset(base)).toThrow('до 64 мотивів');
  });
 
@@ -134,7 +134,7 @@ describe('Independent EDS wall graphics',()=>{
    configureSpace({...manifest,walls:[...manifest.walls,{id:'wall-999',axis:'x',coordinate:5,min:-2,max:2,height:3.6,normal:[1,0,0],thickness:.12}]});
    expect(store.upgradeWallGraphics()).toBe(true);
    expect(store.state.modified).toBe(false);expect(store.state.regionPresets).toEqual(before.regionPresets);expect(store.state.updatedAt).toBe(before.updatedAt);
-   expect(store.state.objects.filter(o=>o.assetId!=='corporateMotif')).toEqual(before.objects);
+   expect(store.state.objects.filter(o=>o.id!=='legacy-corporate-motif-wall-999')).toEqual(before.objects);
    expect(store.state.objects.find(o=>o.id==='legacy-corporate-motif-wall-999')).toMatchObject({variant:2,wallId:'wall-999',graphic:{opacity:.88,color:'#a0ff3d'}});
    expect(store.canUndo).toBe(false);expect(store.upgradeWallGraphics()).toBe(false);
   } finally { configureSpace(manifest); }

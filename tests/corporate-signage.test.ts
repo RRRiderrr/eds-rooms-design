@@ -1,6 +1,6 @@
 import {describe,it,expect} from 'vitest';
 import {Box3,Mesh,MeshStandardMaterial,Vector3} from 'three';
-import {createCorporateSignage,TIMELINE_DESIGNS,UKRAINE_DESIGNS,TIMELINE_YEARS,TIMELINE_HISTORY,SHIPMENT_VALUES,SHIPMENT_DISPLAY_SYSTEMS,SIGNAGE_PALETTE} from '../src/catalog/corporate-signage';
+import {createCorporateSignage,TIMELINE_DESIGNS,UKRAINE_DESIGNS,TIMELINE_YEARS,TIMELINE_HISTORY,SHIPMENT_VALUES,SHIPMENT_LABELS,SHIPMENT_DISPLAY_SYSTEMS,SIGNAGE_PALETTE} from '../src/catalog/corporate-signage';
 
 describe('Corporate editions of the two retained EDS signs',()=>{
  it('provides eight physically distinct layouts of each sign, with exact metre-scale bounds in production and proxies',()=>{
@@ -23,16 +23,16 @@ describe('Corporate editions of the two retained EDS signs',()=>{
   }
  });
  it('retains the real Ukraine contour including Crimea, regional relief and every supplied shipment figure',()=>{
-  for(let variant=1;variant<=8;variant++){const group=createCorporateSignage('ukraine',variant);expect(group.userData.mapIncludesCrimea).toBe(true);expect(group.userData.mapRegions).toBe(23);expect(group.userData.shipmentValues).toEqual(SHIPMENT_VALUES);
+  for(let variant=1;variant<=8;variant++){const group=createCorporateSignage('ukraine',variant);expect(group.userData.mapIncludesCrimea).toBe(true);expect(group.userData.mapRegions).toBe(23);expect(group.userData.shipmentValues).toEqual(SHIPMENT_VALUES);expect(group.userData.shipmentLabels).toEqual(SHIPMENT_LABELS);expect(group.userData.textBlocks.filter((b:{role:string})=>b.role==='shipment-label').map((b:{text:string})=>b.text)).toEqual(SHIPMENT_LABELS);
    expect(group.userData.textBlocks.filter((b:{role:string})=>b.role==='shipment-value').map((b:{text:string})=>b.text)).toEqual(SHIPMENT_VALUES);
    expect(group.children.some(node=>node.name.includes('3d-map'))).toBe(true);
   }
  });
- it('provides seven physically serviceable KPI modules in every design, including independent cards, magnetic digits and e-ink screens',()=>{
+ it('provides five physically serviceable KPI modules in every design, including independent cards, magnetic digits and e-ink screens',()=>{
   expect(new Set(SHIPMENT_DISPLAY_SYSTEMS)).toEqual(new Set(['insert-cards','magnetic-digits','e-ink']));
   for(let variant=1;variant<=8;variant++)for(const proxy of [false,true]){
    const group=createCorporateSignage('ukraine',variant,proxy),system=SHIPMENT_DISPLAY_SYSTEMS[variant-1],modules=group.userData.replaceableMetrics;
-   expect(group.userData.shipmentDisplaySystem).toBe(system);expect(modules).toHaveLength(7);expect(modules.map((m:{value:string})=>m.value)).toEqual(SHIPMENT_VALUES);
+   expect(group.userData.shipmentDisplaySystem).toBe(system);expect(modules).toHaveLength(5);expect(modules.map((m:{value:string})=>m.value)).toEqual(SHIPMENT_VALUES);
    const hardware=group.children.filter(node=>{const mesh=node as Mesh;return !Array.isArray(mesh.material)&&String(mesh.material.userData.artworkRole).startsWith('replaceable-');}) as Mesh[];
    const role=(value:string)=>hardware.filter(mesh=>!Array.isArray(mesh.material)&&mesh.material.userData.artworkRole===value);
    expect(hardware.length).toBeGreaterThan(1);
@@ -42,12 +42,12 @@ describe('Corporate editions of the two retained EDS signs',()=>{
    }
    if(system==='insert-cards'){
     expect(role('replaceable-card')).toHaveLength(1);expect(role('replaceable-rail')).toHaveLength(1);
-    // A disconnected closed box for every PVC digit card: 23 pieces, 12 triangles each.
+    // A disconnected closed box for every PVC digit card: 12 pieces, 12 triangles each.
     const geometry=role('replaceable-card')[0].geometry;expect(geometry.getAttribute('position').count/36).toBe(SHIPMENT_VALUES.join('').length);
    }else if(system==='magnetic-digits'){
     expect(role('replaceable-magnetic-digit')).toHaveLength(1);const box=new Box3().setFromObject(role('replaceable-magnetic-digit')[0]);expect(box.max.z-box.min.z).toBeCloseTo(.0017,5);expect(role('replaceable-card')).toHaveLength(0);
    }else{
-    expect(role('replaceable-screen')).toHaveLength(1);const mesh=role('replaceable-screen')[0],mat=Array.isArray(mesh.material)?mesh.material[0]:mesh.material;expect((mat as MeshStandardMaterial).emissive.getHex()).toBe(0);expect(mesh.geometry.getAttribute('position').count/36).toBe(7);expect(role('replaceable-card')).toHaveLength(0);
+    expect(role('replaceable-screen')).toHaveLength(1);const mesh=role('replaceable-screen')[0],mat=Array.isArray(mesh.material)?mesh.material[0]:mesh.material;expect((mat as MeshStandardMaterial).emissive.getHex()).toBe(0);expect(mesh.geometry.getAttribute('position').count/36).toBe(5);expect(role('replaceable-card')).toHaveLength(0);
    }
   }
  });

@@ -1,3 +1,4 @@
+import {SHIPMENT_LABELS,SHIPMENT_VALUES} from './corporate-signage';
 import * as THREE from 'three';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 import tracedData from '../../assets-src/signage/signage-data.json';
@@ -175,8 +176,8 @@ export function createSignageObject(model: SignageModel | string, proxy = false,
     map('ukraine', -.79, -.02, 1.59, 1.17);
     const labelX = .20;
     text('ВІДВАНТАЖЕНО, од.', labelX, .53, .056, letters, { maxWidth: 1.38, depth: .0035 });
-    const labels = ['КТП', 'БЛОК ВРП', 'РЗіА', 'MVC (КСО)', 'ВРП X-LINE', 'ВРШ POWERLINE', 'ГРЩ STREEMLINE'];
-    const values = ['563', '380', '1420', '3211', '652', '473', '145'];
+    const labels = SHIPMENT_LABELS;
+    const values = SHIPMENT_VALUES;
     const top = .37, step = .143, right = 1.58, railWidth = .55;
     for (let i = 0; i <= labels.length; i++) rail(right - railWidth / 2, top + .071 - i * step, railWidth);
     for (let i = 0; i < labels.length; i++) {

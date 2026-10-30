@@ -1,5 +1,183 @@
 [
   {
+    "id": "corporateMotif",
+    "label": "Корпоративний мотив EDS",
+    "category": "wallDecor",
+    "placement": "wall",
+    "variants": [
+      {
+        "index": 0,
+        "label": "0 / Немає",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "model": "none"
+      },
+      {
+        "index": 1,
+        "label": "1 / Діагональна штриховка",
+        "dimensions": [
+          3.24,
+          0.491,
+          0.0004
+        ],
+        "model": "corporate-motif-1"
+      },
+      {
+        "index": 2,
+        "label": "2 / Сітка хрестів",
+        "dimensions": [
+          2.4,
+          2.4,
+          0.0004
+        ],
+        "model": "corporate-motif-2"
+      },
+      {
+        "index": 3,
+        "label": "3 / Парні чверті диска",
+        "dimensions": [
+          1,
+          1,
+          0.0004
+        ],
+        "model": "corporate-motif-3"
+      },
+      {
+        "index": 4,
+        "label": "4 / Шаховий модуль",
+        "dimensions": [
+          0.8,
+          0.8,
+          0.0004
+        ],
+        "model": "corporate-motif-4"
+      },
+      {
+        "index": 5,
+        "label": "5 / Стріла руху",
+        "dimensions": [
+          0.9,
+          0.9,
+          0.0004
+        ],
+        "model": "corporate-motif-5"
+      },
+      {
+        "index": 6,
+        "label": "6 / Квадрат у квадраті",
+        "dimensions": [
+          0.8,
+          0.8,
+          0.0004
+        ],
+        "model": "corporate-motif-6"
+      },
+      {
+        "index": 7,
+        "label": "7 / Точка перетину",
+        "dimensions": [
+          0.8,
+          0.8,
+          0.0004
+        ],
+        "model": "corporate-motif-7"
+      },
+      {
+        "index": 8,
+        "label": "8 / Оптичний центр",
+        "dimensions": [
+          0.9,
+          0.9,
+          0.0004
+        ],
+        "model": "corporate-motif-8"
+      },
+      {
+        "index": 9,
+        "label": "9 / Модульна сходинка",
+        "dimensions": [
+          1.8,
+          1.2,
+          0.0004
+        ],
+        "model": "corporate-motif-9"
+      },
+      {
+        "index": 10,
+        "label": "10 / Хвиля співдії",
+        "dimensions": [
+          2.1,
+          0.9,
+          0.0004
+        ],
+        "model": "corporate-motif-10"
+      },
+      {
+        "index": 11,
+        "label": "11 / Векторний ритм",
+        "dimensions": [
+          2.4,
+          0.8,
+          0.0004
+        ],
+        "model": "corporate-motif-11"
+      },
+      {
+        "index": 12,
+        "label": "12 / Координатна рамка",
+        "dimensions": [
+          1.8,
+          1.2,
+          0.0004
+        ],
+        "model": "corporate-motif-12"
+      }
+    ],
+    "materials": [
+      {
+        "id": "eds-blue",
+        "label": "EDS · синій",
+        "color": "#0B30C1",
+        "surface": "plastic"
+      },
+      {
+        "id": "eds-lavender",
+        "label": "EDS · лавандовий",
+        "color": "#A2B8FE",
+        "surface": "plastic"
+      },
+      {
+        "id": "eds-lime",
+        "label": "EDS · лаймовий",
+        "color": "#A0FF3D",
+        "surface": "plastic"
+      },
+      {
+        "id": "eds-white",
+        "label": "EDS · білий",
+        "color": "#F0F0F0",
+        "surface": "plastic"
+      },
+      {
+        "id": "eds-black",
+        "label": "EDS · чорний",
+        "color": "#000000",
+        "surface": "plastic"
+      }
+    ],
+    "description": "Окремий мотив як матова фарба на стіні. Додавайте кілька, змінюйте розмір, повертайте у площині стіни, керуйте прозорістю й порядком накладання.",
+    "collision": "wall",
+    "mountHeight": 1.8,
+    "productionRef": "catalog:corporateMotif:production",
+    "proxyRef": "catalog:corporateMotif:proxy",
+    "wallClearance": 0.07,
+    "wallTopClearance": 0,
+    "wallLayer": "graphic"
+  },
+  {
     "id": "beanBag",
     "label": "Крісло-мішок",
     "category": "seating",
@@ -258,7 +436,7 @@
   },
   {
     "id": "edsSignage",
-    "label": "Вивіски EDS · з фотографій",
+    "label": "Вивіски EDS",
     "category": "signage",
     "placement": "wall",
     "variants": [
@@ -341,7 +519,7 @@
         "surface": "metal"
       }
     ],
-    "description": "Складені настінні композиції за наданими фотографіями: окремі літери, дерев’яні контури, прозорі панелі й друк утворюють один предмет редактора.",
+    "description": "Настінні композиції EDS: окремі літери, дерев’яні контури, прозорі панелі й друк утворюють один предмет редактора.",
     "collision": "wall",
     "mountHeight": 1.7,
     "productionRef": "catalog:edsSignage:production",
@@ -1287,23 +1465,23 @@
       },
       {
         "index": 2,
-        "label": "2 / Прямий · люк праворуч",
+        "label": "2 / Прямий · правий ряд",
         "dimensions": [
           1.4000001,
-          0.753,
+          0.75,
           0.8000002
         ],
-        "model": "rect-grommet-right"
+        "model": "rect-right"
       },
       {
         "index": 3,
-        "label": "3 / Прямий · люк ліворуч",
+        "label": "3 / Прямий · лівий ряд",
         "dimensions": [
           1.4000001,
-          0.753,
+          0.75,
           0.8000002
         ],
-        "model": "rect-grommet-left"
+        "model": "rect-left"
       }
     ],
     "materials": [
@@ -1314,7 +1492,7 @@
         "surface": "plastic"
       }
     ],
-    "description": "Точні моделі робочих столів з поточного Blender-проєкту. Збережено форму, люки, ніжки й шухляди, без довільної зміни габаритів.",
+    "description": "Точні моделі робочих столів з поточного Blender-проєкту. Суцільна біла стільниця, сталевий каркас під нею та оригінальні шухляди.",
     "collision": "solid",
     "productionRef": "catalog:hallDesk:production",
     "proxyRef": "catalog:hallDesk:proxy"
@@ -1908,7 +2086,7 @@
         "surface": "plastic"
       }
     ],
-    "description": "Вісім композицій історії EDS: хронологія та український текст у корпоративних кольорах, із точним фірмовим логотипом. Оригінальне фото виконання залишається у вивісках з фотографій.",
+    "description": "Вісім композицій історії EDS: хронологія та український текст у корпоративних кольорах, із точним фірмовим логотипом. Оригінальне виконання також доступне в бібліотеці вивісок EDS.",
     "collision": "wall",
     "mountHeight": 1.65,
     "productionRef": "catalog:edsTimeline:production",
@@ -2019,7 +2197,7 @@
         "surface": "plastic"
       }
     ],
-    "description": "Вісім корпоративних композицій з точними контурами України, рельєфними областями та сімома змінними показниками: пластикові картки у напрямних, магнітні цифри або e-ink модулі. Кожна композиція — один редагований предмет.",
+    "description": "Вісім корпоративних композицій з точними контурами України, рельєфними областями та п’ятьма змінними показниками: пластикові картки у напрямних, магнітні цифри або e-ink модулі. Кожна композиція — один редагований предмет.",
     "collision": "wall",
     "mountHeight": 1.68,
     "productionRef": "catalog:edsUkraine:production",
@@ -2043,7 +2221,7 @@
       },
       {
         "index": 1,
-        "label": "1 / Цифри та слова · як на фото",
+        "label": "1 / Цифри та слова",
         "dimensions": [
           1.25,
           1.25,

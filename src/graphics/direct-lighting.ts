@@ -28,6 +28,10 @@ export class DirectLighting {
   const medium=new Set(['Room_Lamp_Inner_East_North_Area','Hall_Lamp_Central_03_Area']);
   for(const lamp of this.lamps){
    lamp.castShadow=quality.shadows&&(quality.level==='high'?high:medium).has(lamp.name);
+   // A previous High tier may have allocated six large shadow maps. Release
+   // maps for lights that no longer cast shadows, especially after mobile
+   // quality adaptation. A later promotion recreates them on the next render.
+   if(!lamp.castShadow&&lamp.shadow.map){lamp.shadow.map.dispose();lamp.shadow.map=null;}
    // Keep metre-scale receiver accuracy in both shadowed tiers. Medium has
    // only two shadow casters; High has six. Low does not render shadow maps.
    const size=2048;

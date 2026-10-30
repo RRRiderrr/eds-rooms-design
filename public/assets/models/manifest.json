@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "projectId": "polycam-lounge-room",
   "generator": "EDS rooms design — original modular furniture",
-  "generatedAt": "2026-10-29T01:42:01.446Z",
+  "generatedAt": "2026-10-30T16:34:10.936Z",
   "units": "metres",
   "upAxis": "Y",
   "assets": [
@@ -5233,7 +5233,7 @@
       "bounds": {
         "min": [
           -1.5850000381469727,
-          -0.5690000057220459,
+          -0.5540151596069336,
           -0.019999999552965164
         ],
         "max": [
@@ -5243,13 +5243,13 @@
         ],
         "size": [
           3.165000081062317,
-          1.1559406518936157,
+          1.1409558057785034,
           0.03150000050663948
         ]
       },
       "bytes": {
-        "production": 1228752,
-        "proxy": 20988
+        "production": 2747852,
+        "proxy": 475940
       }
     },
     {
@@ -6898,8 +6898,8 @@
         ]
       },
       "bytes": {
-        "production": 397524,
-        "proxy": 395380
+        "production": 1610072,
+        "proxy": 1598548
       }
     },
     {
@@ -6946,8 +6946,8 @@
         ]
       },
       "bytes": {
-        "production": 504988,
-        "proxy": 502720
+        "production": 1852868,
+        "proxy": 1841340
       }
     },
     {
@@ -6994,8 +6994,8 @@
         ]
       },
       "bytes": {
-        "production": 383972,
-        "proxy": 381804
+        "production": 1573332,
+        "proxy": 1561812
       }
     },
     {
@@ -7042,8 +7042,8 @@
         ]
       },
       "bytes": {
-        "production": 402128,
-        "proxy": 399856
+        "production": 1627012,
+        "proxy": 1615484
       }
     },
     {
@@ -7090,8 +7090,8 @@
         ]
       },
       "bytes": {
-        "production": 372428,
-        "proxy": 370176
+        "production": 1559600,
+        "proxy": 1548072
       }
     },
     {
@@ -7138,8 +7138,8 @@
         ]
       },
       "bytes": {
-        "production": 397064,
-        "proxy": 394800
+        "production": 1612316,
+        "proxy": 1600788
       }
     },
     {
@@ -7186,8 +7186,8 @@
         ]
       },
       "bytes": {
-        "production": 504508,
-        "proxy": 502256
+        "production": 1840344,
+        "proxy": 1828820
       }
     },
     {
@@ -7234,8 +7234,8 @@
         ]
       },
       "bytes": {
-        "production": 387536,
-        "proxy": 385280
+        "production": 1650724,
+        "proxy": 1639196
       }
     },
     {

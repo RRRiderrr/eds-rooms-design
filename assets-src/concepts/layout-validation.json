@@ -1,149 +1,149 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-29T01:42:02.543Z",
+  "checkedAt": "2026-10-30T16:34:11.071Z",
   "presets": [
     {
       "id": "builtin-0",
       "name": "0: Порожній простір",
-      "objects": 69,
+      "objects": 72,
       "valid": true
     },
     {
       "id": "builtin-1",
       "name": "1: Тепла Скандинавія",
-      "objects": 88,
+      "objects": 91,
       "valid": true
     },
     {
       "id": "builtin-2",
       "name": "2: М’який індустріальний",
-      "objects": 86,
+      "objects": 89,
       "valid": true
     },
     {
       "id": "builtin-3",
       "name": "3: Мінімалістичні технології",
-      "objects": 87,
+      "objects": 90,
       "valid": true
     },
     {
       "id": "builtin-4",
       "name": "4: Темний преміум · розмова",
-      "objects": 87,
+      "objects": 90,
       "valid": true
     },
     {
       "id": "builtin-5",
       "name": "5: Світлий преміум · робота біля вікна",
-      "objects": 87,
+      "objects": 90,
       "valid": true
     },
     {
       "id": "builtin-6",
       "name": "6: Біофільний відпочинок",
-      "objects": 88,
+      "objects": 91,
       "valid": true
     },
     {
       "id": "builtin-7",
       "name": "7: Творча студія",
-      "objects": 89,
+      "objects": 92,
       "valid": true
     },
     {
       "id": "builtin-8",
       "name": "8: Сучасний коворкінг",
-      "objects": 87,
+      "objects": 90,
       "valid": true
     },
     {
       "id": "builtin-9",
       "name": "9: Неформальні ділові зустрічі",
-      "objects": 87,
+      "objects": 90,
       "valid": true
     },
     {
       "id": "builtin-10",
       "name": "10: Гнучка співпраця",
-      "objects": 88,
+      "objects": 91,
       "valid": true
     },
     {
       "id": "builtin-11",
       "name": "11: Кав’ярня для роботи",
-      "objects": 87,
+      "objects": 90,
       "valid": true
     },
     {
       "id": "builtin-12",
       "name": "12: Акустична зосередженість",
-      "objects": 87,
+      "objects": 90,
       "valid": true
     },
     {
       "id": "builtin-13",
       "name": "13: Медіазона та презентації",
-      "objects": 88,
+      "objects": 91,
       "valid": true
     },
     {
       "id": "builtin-14",
       "name": "14: Тепла бібліотека",
-      "objects": 87,
+      "objects": 90,
       "valid": true
     },
     {
       "id": "builtin-15",
       "name": "15: Відкритий форум",
-      "objects": 87,
+      "objects": 90,
       "valid": true
     },
     {
       "id": "hall-preset-0",
       "name": "0: EDS · робота та відпочинок",
-      "objects": 69,
+      "objects": 72,
       "valid": true
     },
     {
       "id": "hall-preset-1",
       "name": "1: Корпоративний діалог",
-      "objects": 73,
+      "objects": 77,
       "valid": true
     },
     {
       "id": "hall-preset-2",
       "name": "2: М’який індастріал",
-      "objects": 73,
+      "objects": 76,
       "valid": true
     },
     {
       "id": "hall-preset-3",
       "name": "3: Біофільний простір",
-      "objects": 74,
+      "objects": 77,
       "valid": true
     },
     {
       "id": "hall-preset-4",
       "name": "4: Кавова пауза",
-      "objects": 73,
+      "objects": 77,
       "valid": true
     },
     {
       "id": "hall-preset-5",
       "name": "5: Тиха робота",
-      "objects": 72,
+      "objects": 75,
       "valid": true
     },
     {
       "id": "hall-preset-6",
       "name": "6: Командна співпраця",
-      "objects": 74,
+      "objects": 78,
       "valid": true
     },
     {
       "id": "hall-preset-7",
       "name": "7: Відкриті зустрічі",
-      "objects": 73,
+      "objects": 77,
       "valid": true
     }
   ],

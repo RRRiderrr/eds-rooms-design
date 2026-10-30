@@ -51,6 +51,8 @@ describe('Full-wall EDS painting state',()=>{
 
  it('does not add new artwork to an older saved custom wall finish',()=>{
   const custom=clonePreset(2);
+  // An older user preset predates the new hall entrance graphics.
+  custom.objects=custom.objects.filter(o=>!o.id.startsWith('hall-entrance-graphic-'));
   custom.presetId='user-before-murals';custom.basePresetId=custom.presetId;
   custom.modified=false;
   custom.wallFinishes={west:{color:'#f0f0f0',motif:3,accent:'#a2b8fe'}};

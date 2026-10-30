@@ -133,11 +133,16 @@ test.describe('Measured lounge / production editor',()=>{
  test('desktop FPS supports pointer look, WASD, height changes and ignores furniture',async({page},info)=>{
   test.skip(!!info.project.use.hasTouch,'Desktop keyboard navigation is tested on mouse projects');
   await mode(page,'Editor');await preset(page,1);await mode(page,'ArchViz');await expect(page.getByTestId('fps-joystick')).toBeHidden();await expect(page.locator('.mobile-dock')).toBeHidden();
+  await page.waitForFunction(()=>window.__ROOM_ATELIER__?.ready&&!document.querySelector('#loading'),null,{timeout:120_000});
   await page.evaluate(()=>{const view=window.__ROOM_ATELIER__!.view;view.camera.position.set(-.95,1.65,-2.5);view.camera.lookAt(-.95,1.65,2);Reflect.get(view,'navigation').syncFromCamera();});await page.locator('canvas').focus();
   const before=await page.evaluate(()=>window.__ROOM_ATELIER__!.view.camera.position.toArray());
   await page.keyboard.down('w');try{await expect.poll(()=>page.evaluate(()=>window.__ROOM_ATELIER__!.view.camera.position.z)).toBeGreaterThan(before[2]+.3);}finally{await page.keyboard.up('w');}
+  // The walk can end against the window frame on a slow renderer; use a clear
+  // interior point for the independent vertical-navigation assertions.
+  await page.evaluate(()=>{const view=window.__ROOM_ATELIER__!.view;view.camera.position.set(-.95,1.65,-2.1);view.camera.lookAt(-.95,1.65,2);Reflect.get(view,'navigation').syncFromCamera();});
   const y=await page.evaluate(()=>window.__ROOM_ATELIER__!.view.camera.position.y);await page.keyboard.down('Space');try{await expect.poll(()=>page.evaluate(()=>window.__ROOM_ATELIER__!.view.camera.position.y)).toBeGreaterThan(y+.12);}finally{await page.keyboard.up('Space');}
-  const high=await page.evaluate(()=>window.__ROOM_ATELIER__!.view.camera.position.y);await page.keyboard.down('Control');try{await expect.poll(()=>page.evaluate(()=>window.__ROOM_ATELIER__!.view.camera.position.y)).toBeLessThan(high-.12);}finally{await page.keyboard.up('Control');}
+  const high=await page.evaluate(()=>window.__ROOM_ATELIER__!.view.camera.position.y);await page.keyboard.down('Control');await page.waitForTimeout(180);await page.keyboard.up('Control');expect(Math.abs(await page.evaluate(()=>window.__ROOM_ATELIER__!.view.camera.position.y)-high)).toBeLessThan(.01);
+  const start=await page.evaluate(()=>window.__ROOM_ATELIER__!.view.camera.position.toArray());await page.keyboard.down('c');await page.keyboard.down('w');try{await expect.poll(()=>page.evaluate(()=>window.__ROOM_ATELIER__!.view.camera.position.y)).toBeLessThan(start[1]-.12);await expect.poll(()=>page.evaluate(()=>window.__ROOM_ATELIER__!.view.camera.position.z)).toBeGreaterThan(start[2]+.12);}finally{await page.keyboard.up('w');await page.keyboard.up('c');}
   await page.getByTestId('fps-look').click();await expect.poll(()=>page.evaluate(()=>document.pointerLockElement?.tagName)).toBe('CANVAS');const quaternion=await page.evaluate(()=>window.__ROOM_ATELIER__!.view.camera.quaternion.toArray());await page.mouse.move(80,50);await expect.poll(()=>page.evaluate(()=>window.__ROOM_ATELIER__!.view.camera.quaternion.toArray())).not.toEqual(quaternion);await page.keyboard.press('Escape');
  });
 

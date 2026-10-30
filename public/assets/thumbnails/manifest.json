@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-29T16:05:39.957Z",
+  "generatedAt": "2026-10-30T16:32:05.727Z",
   "source": "Actual optimized production GLBs, Three.js WebGL2 + shared PBR material pipeline",
   "images": [
     {
@@ -101,17 +101,6 @@
         0.037468916867713364
       ],
       "triangles": 66454
-    },
-    {
-      "assetId": "edsSignage",
-      "variant": 5,
-      "file": "assets/thumbnails/edsSignage-5.webp",
-      "size": [
-        3.165021779765164,
-        1.1559406518936157,
-        0.03153392192947565
-      ],
-      "triangles": 92950
     },
     {
       "assetId": "edsSignage",
@@ -1148,94 +1137,6 @@
       "triangles": 6
     },
     {
-      "assetId": "edsUkraine",
-      "variant": 1,
-      "file": "assets/thumbnails/edsUkraine-1.webp",
-      "size": [
-        3.200000047683716,
-        1.320059835948997,
-        0.04000817980887811
-      ],
-      "triangles": 39390
-    },
-    {
-      "assetId": "edsUkraine",
-      "variant": 2,
-      "file": "assets/thumbnails/edsUkraine-2.webp",
-      "size": [
-        3.200000047683716,
-        1.320059835948997,
-        0.04000817980887811
-      ],
-      "triangles": 48982
-    },
-    {
-      "assetId": "edsUkraine",
-      "variant": 3,
-      "file": "assets/thumbnails/edsUkraine-3.webp",
-      "size": [
-        3.200000047683716,
-        1.320059835948997,
-        0.04000817980887811
-      ],
-      "triangles": 38222
-    },
-    {
-      "assetId": "edsUkraine",
-      "variant": 4,
-      "file": "assets/thumbnails/edsUkraine-4.webp",
-      "size": [
-        3.200000047683716,
-        1.320059835948997,
-        0.04000817980887811
-      ],
-      "triangles": 39698
-    },
-    {
-      "assetId": "edsUkraine",
-      "variant": 5,
-      "file": "assets/thumbnails/edsUkraine-5.webp",
-      "size": [
-        3.200000047683716,
-        1.320059835948997,
-        0.04000817980887811
-      ],
-      "triangles": 35806
-    },
-    {
-      "assetId": "edsUkraine",
-      "variant": 6,
-      "file": "assets/thumbnails/edsUkraine-6.webp",
-      "size": [
-        3.200000047683716,
-        1.320059835948997,
-        0.039844966565598196
-      ],
-      "triangles": 39446
-    },
-    {
-      "assetId": "edsUkraine",
-      "variant": 7,
-      "file": "assets/thumbnails/edsUkraine-7.webp",
-      "size": [
-        3.2000000523403287,
-        1.320059835948997,
-        0.04000817980887811
-      ],
-      "triangles": 48694
-    },
-    {
-      "assetId": "edsUkraine",
-      "variant": 8,
-      "file": "assets/thumbnails/edsUkraine-8.webp",
-      "size": [
-        3.200000047683716,
-        1.320059835948997,
-        0.04000817980887811
-      ],
-      "triangles": 37698
-    },
-    {
       "assetId": "hallDesk",
       "variant": 1,
       "file": "assets/thumbnails/hallDesk-1.webp",
@@ -1411,6 +1312,105 @@
       ],
       "triangles": 0,
       "source": "Exact EDS vector alpha-mask preview; runtime wall albedo paint"
+    },
+    {
+      "assetId": "edsSignage",
+      "variant": 5,
+      "file": "assets/thumbnails/edsSignage-5.webp",
+      "size": [
+        3.165000081062317,
+        1.1409558057785034,
+        0.03150000050663948
+      ],
+      "triangles": 66577
+    },
+    {
+      "assetId": "edsUkraine",
+      "variant": 1,
+      "file": "assets/thumbnails/edsUkraine-1.webp",
+      "size": [
+        3.200000047683716,
+        1.3200000524520874,
+        0.04000000096857548
+      ],
+      "triangles": 33150
+    },
+    {
+      "assetId": "edsUkraine",
+      "variant": 2,
+      "file": "assets/thumbnails/edsUkraine-2.webp",
+      "size": [
+        3.200000047683716,
+        1.3200000524520874,
+        0.04000000096857548
+      ],
+      "triangles": 38236
+    },
+    {
+      "assetId": "edsUkraine",
+      "variant": 3,
+      "file": "assets/thumbnails/edsUkraine-3.webp",
+      "size": [
+        3.200000047683716,
+        1.3200000524520874,
+        0.04000000096857548
+      ],
+      "triangles": 32462
+    },
+    {
+      "assetId": "edsUkraine",
+      "variant": 4,
+      "file": "assets/thumbnails/edsUkraine-4.webp",
+      "size": [
+        3.200000047683716,
+        1.3200000524520874,
+        0.04000000096857548
+      ],
+      "triangles": 33458
+    },
+    {
+      "assetId": "edsUkraine",
+      "variant": 5,
+      "file": "assets/thumbnails/edsUkraine-5.webp",
+      "size": [
+        3.200000047683716,
+        1.3200000524520874,
+        0.04000000096857548
+      ],
+      "triangles": 32110
+    },
+    {
+      "assetId": "edsUkraine",
+      "variant": 6,
+      "file": "assets/thumbnails/edsUkraine-6.webp",
+      "size": [
+        3.200000047683716,
+        1.3200000524520874,
+        0.03999999910593033
+      ],
+      "triangles": 33206
+    },
+    {
+      "assetId": "edsUkraine",
+      "variant": 7,
+      "file": "assets/thumbnails/edsUkraine-7.webp",
+      "size": [
+        3.200000047683716,
+        1.3200000524520874,
+        0.04000000096857548
+      ],
+      "triangles": 37948
+    },
+    {
+      "assetId": "edsUkraine",
+      "variant": 8,
+      "file": "assets/thumbnails/edsUkraine-8.webp",
+      "size": [
+        3.200000047683716,
+        1.3200000524520874,
+        0.04000000096857548
+      ],
+      "triangles": 34002
     }
   ]
 }

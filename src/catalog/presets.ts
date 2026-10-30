@@ -142,10 +142,24 @@ function hallVolumeLogo(style:number):SceneObject[] {
  const placement=placements[style];if(!placement)return[];
  return [{id:'HallVolumeLogo',assetId:'edsSignage',variant:6,material:'original',regionId:'hall',...wallAnchor('wall-38',placement[0],placement[1],getVariant('edsSignage',6).dimensions[2],hallWallRoom)}];
 }
+/** Artwork on the hall-facing entrance wall seen in the Blender viewport.
+ * Leave the door and its painted wayfinding strip clear. Each piece remains an
+ * independent editable wall graphic, so its placement and layers can be changed. */
+function hallEntranceGraphics(style:number):SceneObject[]{
+ const designs=[[11,9,6],[10,8,5],[1,12,7],[11,2,3],[10,9,6],[1,8,7],[11,12,5],[10,2,6]];
+ const colors=[['#0b30c1','#a2b8fe','#1e2420'],['#1e2420','#a2b8fe','#0b30c1'],['#0b30c1','#a0ff3d','#1e2420'],['#1e2420','#a2b8fe','#0b30c1']];
+ const slots=[{along:-1.68,y:2.52,width:1.25,height:.38,opacity:.85},{along:-.83,y:1.68,width:.88,height:.76,opacity:.75},{along:.21,y:2.39,width:.58,height:.58,opacity:.9}];
+ return slots.map((slot,i)=>{
+  const variant=designs[style%designs.length][i],color=colors[style%colors.length][i];
+  return {id:`hall-entrance-graphic-${i+1}`,assetId:'corporateMotif',variant,material:'eds-blue',regionId:'hall',
+   ...wallAnchor('wall-21',slot.along,slot.y,getVariant('corporateMotif',variant).dimensions[2],hallWallRoom),
+   graphic:{width:slot.width,height:slot.height,angle:0,opacity:slot.opacity,layer:i,color}};
+ });
+}
 function hallPreset(index:number,name:string,decor:SceneObject[],finishes:Record<string,WallFinish>={}):SceneConfig{
  const id=`hall-preset-${index}`,config=preset(0,name,[]);
  config.presetId=config.basePresetId=id;config.name=`${index}: ${name}`;
- config.objects=[...originalHallTables(),...hallDoorObjects(index),...hallSigns(index),...hallClocks(index),...hallVolumeLogo(index),...decor,...rearPartitions(index)];
+ config.objects=[...originalHallTables(),...hallDoorObjects(index),...hallSigns(index),...hallClocks(index),...hallVolumeLogo(index),...hallEntranceGraphics(index),...decor,...rearPartitions(index)];
  config.regionPresets.hall={presetId:id,basePresetId:id,modified:false};config.wallFinishes=finishes;
  return config;
 }
