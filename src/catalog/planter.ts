@@ -4,7 +4,7 @@ import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
 import type {MaterialVariant,Vec3} from '../core/types';
 
 /** An original, botanically modelled trough. All dimensions are in metres. */
-export function createPlanter(dimensions:Vec3,selected:MaterialVariant,proxy=false):THREE.Group {
+export function createPlanter(dimensions:Vec3,selected:MaterialVariant,proxy=false,options:{lush?:boolean;foliage?:boolean}={}):THREE.Group {
  const [w,h,d]=dimensions,group=new THREE.Group(),foliage=new THREE.Group();
  group.name=`separator:3:${proxy?'editor':'archviz'}`;
  group.userData={assetId:'separator',variant:3,mode:proxy?'editor':'archviz',dimensions,placement:'floor',originalAuthoring:true};
@@ -55,16 +55,17 @@ export function createPlanter(dimensions:Vec3,selected:MaterialVariant,proxy=fal
  for(let i=0;i<gp.count;i++){const grain=(Math.sin(i*91.713+gp.getX(i)*174.13+gp.getZ(i)*237.17)*43758.5453)%1;const variation=Math.abs(grain);gp.setY(i,soilY+.00045*(variation-.5));const c=new THREE.Color().setRGB(.025+.021*variation,.017+.013*variation,.009+.008*variation);gc.push(c.r,c.g,c.b);}
  ground.setAttribute('color',new THREE.Float32BufferAttribute(gc,3));ground.computeVertexNormals();add(ground,soil);
  let seed=73421;const rand=()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296;};
- const clumps=7,leafCount=proxy?4:8,along=proxy?14:22,across=proxy?6:10;
+ const clumps=options.lush?10:7,leafCount=proxy?(options.lush?6:4):(options.lush?10:8),along=proxy?14:22,across=proxy?6:10;
  const dark=new THREE.Color('#214b2b'),light=new THREE.Color('#527745');
  function tube(curve:THREE.Curve<THREE.Vector3>,radius:number,segments:number,mat:THREE.Material){add(new THREE.TubeGeometry(curve,segments,radius,proxy?4:5,false),mat,foliage);}
+ if(options.foliage!==false){
  for(let clump=0;clump<clumps;clump++){
   const offsets=[-.41,-.335,-.14,-.035,.15,.28,.405];
-  const root=new THREE.Vector3(w*offsets[clump]+(rand()-.5)*.036,soilY-.009,Math.sin(clump*2.7)*d*.16);
+  const root=new THREE.Vector3(w*(options.lush?-.415+clump*.83/(clumps-1):offsets[clump])+(rand()-.5)*.036,soilY-.009,Math.sin(clump*2.7)*d*.16);
   for(let leaf=0;leaf<leafCount;leaf++){
-   const azimuth=leaf*Math.PI*2/leafCount+clump*1.93+(rand()-.5)*.8,reach=.09+rand()*.13;
+   const azimuth=leaf*Math.PI*2/leafCount+clump*1.93+(rand()-.5)*.8,reach=options.lush?.14+rand()*.20:.09+rand()*.13;
    const out=new THREE.Vector3(Math.sin(azimuth),0,Math.cos(azimuth)),side=new THREE.Vector3(Math.cos(azimuth),0,-Math.sin(azimuth));
-   const petioleHeight=.035+rand()*.07,tipHeight=leaf===0?h*(.88+rand()*.11):soilY+.16+rand()*(h-soilY-.16),length=tipHeight-soilY-petioleHeight,width=.10+rand()*.064;
+   const petioleHeight=.035+rand()*.07,tipHeight=leaf===0?h*(.88+rand()*.11):soilY+.16+rand()*(h-soilY-.16),length=tipHeight-soilY-petioleHeight,width=options.lush?.13+rand()*.075:.10+rand()*.064;
    const bladeStart=root.clone().addScaledVector(out,.016).add(new THREE.Vector3(0,petioleHeight,0));
    const bladeEnd=root.clone().addScaledVector(out,reach).add(new THREE.Vector3(0,tipHeight-soilY,0));
    const blade=new THREE.CubicBezierCurve3(bladeStart,bladeStart.clone().add(new THREE.Vector3(0,length*.55,0)),bladeEnd.clone().addScaledVector(out,-reach*.18).add(new THREE.Vector3(0,length*.17,0)),bladeEnd);
@@ -92,6 +93,7 @@ export function createPlanter(dimensions:Vec3,selected:MaterialVariant,proxy=fal
  foliage.updateMatrixWorld(true);const fb=new THREE.Box3().setFromObject(foliage),fs=fb.getSize(new THREE.Vector3()),fc=fb.getCenter(new THREE.Vector3());
  const fitX=Math.min(1,(w-.016)/fs.x),fitZ=Math.min(1,(d-.016)/fs.z),fitY=(h-soilY)/(fb.max.y-soilY);
  for(const mesh of foliage.children as THREE.Mesh[]){mesh.geometry.translate(-fc.x,0,-fc.z);mesh.geometry.scale(fitX,fitY,fitZ);mesh.geometry.translate(0,soilY*(1-fitY),0);mesh.geometry.computeVertexNormals();add(mesh.geometry,mesh.material as THREE.Material);}
+ }
  for(const [mat,list]of batches){const merged=mergeGeometries(list,false);for(const g of list)g.dispose();if(!merged)throw new Error('Planter geometry merge failed');merged.computeBoundingBox();merged.computeBoundingSphere();const mesh=new THREE.Mesh(merged,mat);mesh.name=mat.name;mesh.userData={assetId:'separator',surface:mat.userData.surface};mesh.castShadow=!proxy;mesh.receiveShadow=!proxy;group.add(mesh);}
  return group;
 }

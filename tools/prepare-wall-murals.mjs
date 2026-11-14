@@ -54,13 +54,11 @@ const mural1=svg(
  line(1885,210,3930,210,C.lavender,4)+
  text('Партнерство',1885,425,166,C.white,{mono:true,width:1860})+
  text('Надійність',2100,615,157,C.white,{mono:true,width:1640})+
- rect(1870,700,1010,150,C.white)+
  text('Чесність',1905,815,130,C.black,{mono:true,width:935})+
  text('ІННОВАЦІЇ',1900,1050,178,C.white,{weight:700,width:2030})+
  art(diagonal,3250,1135,680,104,C.lime)+
  text('Технології',1885,1270,145,C.white,{mono:true,width:1635})+
  art(wordmark,1895,1400,2040,635,C.white)+
- rect(2540,2090,1395,130,C.lime)+
  text('Сталість',2590,2190,110,C.black,{mono:true,width:1290})+
  text('ПОСЛІДОВНІСТЬ  /  ДОВІРА',1885,2280,57,C.white,{width:2040})
 );
@@ -75,7 +73,6 @@ const mural2=svg(
  text('СПІЛЬНІ ІДЕЇ.',275,290,158,C.black,{weight:700,width:2060})+
  text('СИЛЬНІ РІШЕННЯ.',275,500,158,C.black,{weight:700,width:2470})+
  art(wordmark,270,840,3540,1100,C.blue)+
- rect(275,2040,1540,165,C.lime)+
  text('Технології,',315,2168,130,C.black,{weight:700,width:1455})+
  text('що об’єднують.',1980,2168,130,C.black,{weight:600,width:1840})+
  text('НАДІЙНІСТЬ',285,2280,47,C.blue,{space:6})+
@@ -96,7 +93,6 @@ const mural3=svg(
  text('Надійність',295,1850,150,C.white,{mono:true,width:1620})+
  text('Інновації',2110,1850,150,C.lime,{mono:true,width:1685})+
  text('Партнерство',295,2075,150,C.lavender,{mono:true,width:1880})+
- rect(2310,1940,1500,190,C.blue)+
  text('Довіра',2380,2085,150,C.white,{mono:true,width:1360})+
  text('ПОСЛІДОВНІСТЬ',295,2280,80,C.white,{space:8,width:1760})+
  art(quarters,2235,2160,130,130,C.lime)+
@@ -310,7 +306,9 @@ const definitions=[
  {id:'mural-14',index:14,label:'EDS · чіткий курс',description:'Велика світла зона, синій нижній пояс, оптичний центр і точний корпоративний знак.',body:mural14},
  {id:'mural-15',index:15,label:'EDS · майстерня ідей',description:'Світла студійна стіна з лавандовою колоною, шаховим модулем і простим ритмом форм.',body:mural15},
  {id:'mural-16',index:16,label:'EDS · простір можливостей',description:'Геометричний горизонт із синіх і лавандових полів, білим простором і великим точним логотипом.',body:mural16}
-];
+].map(d=>d.index===7
+ ? {...d,label:'EDS · логотип',description:'Лише оригінальний логотип EDS на світлій стіні.',body:svg(rect(0,0,W,H,C.white)+art(wordmark,700,810,2696,840,C.black))}
+ : {...d,body:d.body.replace(/<text\b[^>]*>[\s\S]*?<\/text>/g,'')});
 // Sixteen compositions and twelve independently positioned motifs share one
 // 4096² sampler; the six-shadow High pipeline needs no extra texture unit.
 const atlasSize=4096,tileW=992,tileH=558;

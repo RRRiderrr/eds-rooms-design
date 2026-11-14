@@ -61,6 +61,17 @@ try {
         const io=new NodeIO().registerExtensions(ALL_EXTENSIONS);const document=await io.readBinary(bytes);
         await attachSignagePrints(document,path.join(root,'public'));bytes=await io.writeBinary(document);
       }
+      if(asset.id==='botanicalDivider'&&variant.index===7){
+        const io=new NodeIO().registerExtensions(ALL_EXTENSIONS);const document=await io.readBinary(bytes);
+        for(const [materialName,file] of [['Planter_pothos_leaf_material','pothos-leaf.png'],['Planter_loose_soil','soil.png']]){
+          const material=document.getRoot().listMaterials().find(m=>m.getName()===materialName);
+          if(!material)throw new Error(`Missing planter material ${materialName}`);
+          const image=await readFile(path.join(destination,'materials','planter',file));
+          const texture=document.createTexture(materialName+' detail').setImage(image).setMimeType('image/png');
+          material.setBaseColorTexture(texture);
+        }
+        bytes=await io.writeBinary(document);
+      }
       await writeFile(path.join(root,'public',relative),bytes);
       entry.bytes[mode==='archviz'?'production':'proxy']=bytes.byteLength;
       totalBytes+=bytes.byteLength;

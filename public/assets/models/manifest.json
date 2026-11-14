@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "projectId": "polycam-lounge-room",
   "generator": "EDS rooms design — original modular furniture",
-  "generatedAt": "2026-10-30T16:59:59.075Z",
+  "generatedAt": "2026-11-13T23:27:55.065Z",
   "units": "metres",
   "upAxis": "Y",
   "assets": [
@@ -7688,6 +7688,84 @@
       "bytes": {
         "production": 174320,
         "proxy": 33176
+      }
+    },
+    {
+      "assetId": "botanicalDivider",
+      "variant": 7,
+      "label": "7 / Тумба з кашпо · 102 см",
+      "category": "separators",
+      "placement": "floor",
+      "dimensions": [
+        2,
+        1.59,
+        0.48
+      ],
+      "materials": [
+        {
+          "id": "oak",
+          "label": "Натуральний дуб",
+          "color": "#b88e60",
+          "surface": "wood"
+        },
+        {
+          "id": "walnut",
+          "label": "Темний горіх",
+          "color": "#604533",
+          "surface": "wood"
+        },
+        {
+          "id": "graphite",
+          "label": "Матовий графіт",
+          "color": "#30383d",
+          "surface": "metal"
+        },
+        {
+          "id": "terracotta",
+          "label": "Теракотовий метал",
+          "color": "#a7674b",
+          "surface": "metal"
+        },
+        {
+          "id": "white",
+          "label": "Теплий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієвий",
+          "color": "#819183",
+          "surface": "plastic"
+        }
+      ],
+      "production": "assets/models/botanicalDivider-7.glb",
+      "proxy": "assets/proxies/botanicalDivider-7.glb",
+      "quality": {
+        "high": "assets/models/botanicalDivider-7.glb",
+        "medium": "assets/models/botanicalDivider-7.glb",
+        "low": "assets/models/botanicalDivider-7.glb"
+      },
+      "bounds": {
+        "min": [
+          -1.191715121269226,
+          5.960464413701239e-11,
+          -0.38492462038993835
+        ],
+        "max": [
+          1.0689111948013306,
+          1.5844365358352661,
+          0.4075040817260742
+        ],
+        "size": [
+          2.2606263160705566,
+          1.5844365357756616,
+          0.7924287021160126
+        ]
+      },
+      "bytes": {
+        "production": 8329364,
+        "proxy": 5512852
       }
     }
   ]

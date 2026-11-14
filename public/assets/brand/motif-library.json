@@ -151,7 +151,7 @@
         "polygon[13]"
       ],
       "derived": false,
-      "geometrySHA256": "e15c93b9d67a57b0043fb3be8435b4115eb1413917101bb4cf80038aebb0476e",
+      "geometrySHA256": "26c4fd4f772c65e8f083eb029278b90bdd9907cfdc4523497e910a248f47321c",
       "alphaMask": true,
       "pixelRectTopLeft": [
         16,
@@ -343,7 +343,7 @@
         "polygon[13]"
       ],
       "derived": true,
-      "geometrySHA256": "8d4f94d7d0ccabada449268490fd3c7abff6640565a323c2c5c4e6dfaeca212a",
+      "geometrySHA256": "4083ba8413b56ea60fb0fa7cfc623c29590586477bb08b4dd652cad4fe70e3cf",
       "alphaMask": true,
       "pixelRectTopLeft": [
         2064,

@@ -1,149 +1,221 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-30T16:59:59.225Z",
+  "checkedAt": "2026-11-13T23:27:55.745Z",
   "presets": [
     {
       "id": "builtin-0",
       "name": "0: Порожній простір",
-      "objects": 75,
+      "objects": 74,
       "valid": true
     },
     {
       "id": "builtin-1",
       "name": "1: Тепла Скандинавія",
-      "objects": 94,
+      "objects": 93,
       "valid": true
     },
     {
       "id": "builtin-2",
       "name": "2: М’який індустріальний",
-      "objects": 92,
+      "objects": 91,
       "valid": true
     },
     {
       "id": "builtin-3",
       "name": "3: Мінімалістичні технології",
-      "objects": 93,
+      "objects": 92,
       "valid": true
     },
     {
       "id": "builtin-4",
       "name": "4: Темний преміум · розмова",
-      "objects": 93,
+      "objects": 92,
       "valid": true
     },
     {
       "id": "builtin-5",
       "name": "5: Світлий преміум · робота біля вікна",
-      "objects": 93,
+      "objects": 92,
       "valid": true
     },
     {
       "id": "builtin-6",
       "name": "6: Біофільний відпочинок",
-      "objects": 94,
+      "objects": 93,
       "valid": true
     },
     {
       "id": "builtin-7",
       "name": "7: Творча студія",
-      "objects": 95,
+      "objects": 94,
       "valid": true
     },
     {
       "id": "builtin-8",
       "name": "8: Сучасний коворкінг",
-      "objects": 93,
+      "objects": 92,
       "valid": true
     },
     {
       "id": "builtin-9",
       "name": "9: Неформальні ділові зустрічі",
-      "objects": 93,
+      "objects": 92,
       "valid": true
     },
     {
       "id": "builtin-10",
       "name": "10: Гнучка співпраця",
-      "objects": 94,
+      "objects": 93,
       "valid": true
     },
     {
       "id": "builtin-11",
       "name": "11: Кав’ярня для роботи",
-      "objects": 93,
+      "objects": 92,
       "valid": true
     },
     {
       "id": "builtin-12",
       "name": "12: Акустична зосередженість",
-      "objects": 93,
+      "objects": 92,
       "valid": true
     },
     {
       "id": "builtin-13",
       "name": "13: Медіазона та презентації",
-      "objects": 94,
+      "objects": 93,
       "valid": true
     },
     {
       "id": "builtin-14",
       "name": "14: Тепла бібліотека",
-      "objects": 93,
+      "objects": 92,
       "valid": true
     },
     {
       "id": "builtin-15",
       "name": "15: Відкритий форум",
-      "objects": 93,
+      "objects": 92,
+      "valid": true
+    },
+    {
+      "id": "builtin-16",
+      "name": "16: Нова · Тепла співпраця",
+      "objects": 89,
+      "valid": true
+    },
+    {
+      "id": "builtin-17",
+      "name": "17: Нова · Синій акцент",
+      "objects": 89,
+      "valid": true
+    },
+    {
+      "id": "builtin-18",
+      "name": "18: Нова · Зелена зустріч",
+      "objects": 89,
+      "valid": true
+    },
+    {
+      "id": "builtin-19",
+      "name": "19: Нова · Точність",
+      "objects": 89,
+      "valid": true
+    },
+    {
+      "id": "builtin-20",
+      "name": "20: Нова · Неформальний діалог",
+      "objects": 89,
+      "valid": true
+    },
+    {
+      "id": "builtin-21",
+      "name": "21: Нова · Світла майстерня",
+      "objects": 89,
       "valid": true
     },
     {
       "id": "hall-preset-0",
       "name": "0: EDS · робота та відпочинок",
-      "objects": 75,
+      "objects": 74,
       "valid": true
     },
     {
       "id": "hall-preset-1",
       "name": "1: Корпоративний діалог",
-      "objects": 81,
+      "objects": 80,
       "valid": true
     },
     {
       "id": "hall-preset-2",
       "name": "2: М’який індастріал",
-      "objects": 79,
+      "objects": 78,
       "valid": true
     },
     {
       "id": "hall-preset-3",
       "name": "3: Біофільний простір",
-      "objects": 81,
+      "objects": 80,
       "valid": true
     },
     {
       "id": "hall-preset-4",
       "name": "4: Кавова пауза",
-      "objects": 80,
+      "objects": 79,
       "valid": true
     },
     {
       "id": "hall-preset-5",
       "name": "5: Тиха робота",
-      "objects": 79,
+      "objects": 78,
       "valid": true
     },
     {
       "id": "hall-preset-6",
       "name": "6: Командна співпраця",
-      "objects": 81,
+      "objects": 80,
       "valid": true
     },
     {
       "id": "hall-preset-7",
       "name": "7: Відкриті зустрічі",
-      "objects": 81,
+      "objects": 80,
+      "valid": true
+    },
+    {
+      "id": "hall-preset-8",
+      "name": "8: Нова · зелена зона 1",
+      "objects": 74,
+      "valid": true
+    },
+    {
+      "id": "hall-preset-9",
+      "name": "9: Нова · зелена зона 2",
+      "objects": 80,
+      "valid": true
+    },
+    {
+      "id": "hall-preset-10",
+      "name": "10: Нова · зелена зона 3",
+      "objects": 78,
+      "valid": true
+    },
+    {
+      "id": "hall-preset-11",
+      "name": "11: Нова · зелена зона 4",
+      "objects": 80,
+      "valid": true
+    },
+    {
+      "id": "hall-preset-12",
+      "name": "12: Нова · зелена зона 5",
+      "objects": 79,
+      "valid": true
+    },
+    {
+      "id": "hall-preset-13",
+      "name": "13: Нова · зелена зона 6",
+      "objects": 78,
       "valid": true
     }
   ],

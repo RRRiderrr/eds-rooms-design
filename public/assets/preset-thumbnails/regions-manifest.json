@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "Actual current WebGL production assets, PBR, architecture and SceneState",
-  "renderedAt": "2026-10-29T21:31:40.158Z",
+  "renderedAt": "2026-11-13T23:32:21.059Z",
   "images": [
     {
       "region": "meeting",
@@ -84,6 +84,36 @@
       "file": "preset-15.jpg"
     },
     {
+      "region": "meeting",
+      "presetId": "builtin-16",
+      "file": "preset-16.jpg"
+    },
+    {
+      "region": "meeting",
+      "presetId": "builtin-17",
+      "file": "preset-17.jpg"
+    },
+    {
+      "region": "meeting",
+      "presetId": "builtin-18",
+      "file": "preset-18.jpg"
+    },
+    {
+      "region": "meeting",
+      "presetId": "builtin-19",
+      "file": "preset-19.jpg"
+    },
+    {
+      "region": "meeting",
+      "presetId": "builtin-20",
+      "file": "preset-20.jpg"
+    },
+    {
+      "region": "meeting",
+      "presetId": "builtin-21",
+      "file": "preset-21.jpg"
+    },
+    {
       "region": "hall",
       "presetId": "hall-preset-0",
       "file": "hall-0.jpg"
@@ -122,6 +152,36 @@
       "region": "hall",
       "presetId": "hall-preset-7",
       "file": "hall-7.jpg"
+    },
+    {
+      "region": "hall",
+      "presetId": "hall-preset-8",
+      "file": "hall-8.jpg"
+    },
+    {
+      "region": "hall",
+      "presetId": "hall-preset-9",
+      "file": "hall-9.jpg"
+    },
+    {
+      "region": "hall",
+      "presetId": "hall-preset-10",
+      "file": "hall-10.jpg"
+    },
+    {
+      "region": "hall",
+      "presetId": "hall-preset-11",
+      "file": "hall-11.jpg"
+    },
+    {
+      "region": "hall",
+      "presetId": "hall-preset-12",
+      "file": "hall-12.jpg"
+    },
+    {
+      "region": "hall",
+      "presetId": "hall-preset-13",
+      "file": "hall-13.jpg"
     }
   ]
 }

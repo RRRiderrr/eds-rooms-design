@@ -62,6 +62,25 @@ export const BUILTIN_PRESETS:SceneConfig[] = [
   item('MainSofa','sofa',4,-1.98,-1.55,pi/2,'sage'),item('CoffeeTable','coffeeTable',1,-.85,-1.55,0,'ash'),item('Pouf','pouf',1,.25,-1.55,0,'ochre'),item('LoungeRug','rug',1,-.9,-1.55,pi/2,'oat'),
   item('MeetingTable','meetingTable',1,.05,1.15,0,'ash'),item('MeetingSeatA','chair',1,-1,1.15,pi/2,'sage'),item('MeetingSeatB','chair',1,1.1,1.15,-pi/2,'blue'),item('Bench','bench',2,.05,2.45,pi,'sage'),item('Storage','storage',3,2.18,-.3,-pi/2,'ash'),item('PlantA','plant',2,2.23,2.32,0,'white'),item('PlantB','plant',3,-2.23,2.45,0,'white'),item('ReadingLight','floorLamp',2,-.8,-2.65,0,'white'),accessory('ForumBooks',.05,1.15,.74),...common(15)]),
 ];
+// Furnished meeting layouts retain a full work surface, window bar and door-wall board.
+for(let i=0;i<6;i++){
+ const n=16+i,x=[-.45,0,.4,-.25,.3,-.4][i],wood=['oak','ash','walnut','white','oak','ash'][i];
+ const sofas=['oat','blue','sage','graphite','clay','ochre'],names=['Тепла співпраця','Синій акцент','Зелена зустріч','Точність','Неформальний діалог','Світла майстерня'];
+ BUILTIN_PRESETS.push(preset(n,`Нова · ${names[i]}`,[
+  ...bar(i%3+1,wood),
+  item('WorkDesk','workDesk',i%3+1,x,-.2,0,wood),item('WorkChair','chair',i%3+1,x,-1.1,0,i%2?'blue':'graphite'),
+  item('MainSofa','sofa',[4,1,3,4,1,2][i],-1.98,[-1.52,-1.4,-1.45,-1.52,-1.4,-1.45][i],pi/2,sofas[i]),
+  item('LoungeChair','armchair',i%3+1,[1.45,1.35,1.5,1.4,1.4,1.5][i],[-1.1,-1.12,-1.1,-1.15,-1,-1.1][i],-pi/3,i%2?'oat':'sage'),
+  item('Storage','storage',i%3+1,2.2,[.65,.45,.8,.5,.85,.6][i],-pi/2,wood),
+  item('PlantA','plant',i%3+1,2.23,2.32,0,i%2?'clay':'white'),
+  item('PlantB','plant',3,-2.23,2.45,0,'white'),
+  item('ReadingLight','floorLamp',i%2+1,-2.23,.6,0,i%2?'white':'black'),
+  accessory('DeskLaptop',x,-.2,.74,2),
+  wall('MarkerBoard','board',1,'near',-1.2,1.7,'white'),
+  wall('Artwork','art',i%3+1,'east',-1.1,1.45),
+  ...(i%2===0?[wall('MeetingLogo','edsSignage',6,'east',.7,2.45,'original')]:[wall('AcousticEast','acousticPanel',i%3+1,'east',.75,1.8,i%3===0?'blue':'oat')]),
+ ]));
+}
 function deepFreeze<T>(value:T):T { if(value&&typeof value==='object') {Object.freeze(value); Object.values(value).forEach(v=>{if(v&&typeof v==='object'&&!Object.isFrozen(v))deepFreeze(v);});}return value; }
 for(const p of BUILTIN_PRESETS){
  const index=Number(p.presetId.slice(8));
@@ -161,11 +180,14 @@ function hallEntranceGraphics(style:number):SceneObject[]{
   [[11,-1.60,2.53,1.74,.39,-10,blue,.9],[12,-1.96,1.67,.91,.67,14,lime,.66],[5,-.71,1.77,.65,.65,-28,black,.88],[9,-1.58,.82,.84,.48,12,lavender,.8],[4,-.50,.78,.46,.46,45,blue,.85],[7,-1.08,1.22,.31,.31,-20,black,.8]],
   [[10,-1.58,2.52,1.72,.50,11,black,.85],[2,-2.04,1.68,.81,.81,-15,lavender,.78],[6,-.73,1.78,.67,.67,30,blue,.9],[3,-1.58,.83,.53,.53,-25,lime,.7],[5,-.51,.76,.45,.45,25,black,.85],[9,-1.09,1.23,.39,.27,-12,blue,.8],[4,-2.25,.78,.30,.30,45,lavender,.78]],
  ];
- return compositions[style%compositions.length].map(([variant,along,y,width,height,degrees,color,opacity],i)=>({
+ // Establish a calm grid: a headline, two medium marks and a baseline of
+ // smaller accents. Artworks stay independent and the EDS arrow stays upright.
+ const slots=[[-1.56,2.5,1.6,.34],[-1.95,1.58,.65,.65],[-.90,1.58,.65,.65],[-2.08,.70,.34,.34],[-1.50,.70,.38,.38],[-.92,.70,.34,.34],[-.43,.70,.26,.26]];
+ return compositions[style%compositions.length].map(([variant,_along,_y,_width,_height,degrees,color,opacity],i)=>{const [along,y,width,height]=slots[i];return ({
   id:`hall-entrance-graphic-${i+1}`,assetId:'corporateMotif',variant,material:'eds-blue',regionId:'hall',
   ...wallAnchor('wall-21',along,y,getVariant('corporateMotif',variant).dimensions[2],hallWallRoom),
-  graphic:{width,height,angle:degrees*pi/180,opacity,layer:i,color},
- }));
+  graphic:{width,height,angle:variant===5||variant===11?0:Math.max(-8,Math.min(8,degrees))*pi/180,opacity,layer:i,color},
+ });});
 }
 function hallPreset(index:number,name:string,decor:SceneObject[],finishes:Record<string,WallFinish>={}):SceneConfig{
  const id=`hall-preset-${index}`,config=preset(0,name,[]);
@@ -215,6 +237,22 @@ export const HALL_PRESETS:SceneConfig[]=[
   hallItem('east-bench','bench',2,18.5,2.05,pi,'blue'),hallItem('east-side','sideTable',1,21.1,1.75,0,'oak'),...hallPlants(1),
  ],{'wall-38':finish(2,'#a2b8fe'),'wall-23':finish(3,'#0b30c1')}),
 ];
+for(let i=0;i<6;i++){
+ const n=8+i,config=JSON.parse(JSON.stringify(HALL_PRESETS[i])) as SceneConfig;
+ config.presetId=config.basePresetId=`hall-preset-${n}`;config.name=`${n}: Нова · зелена зона ${i+1}`;
+ config.regionPresets.hall={presetId:config.presetId,basePresetId:config.presetId,modified:false};
+ for(const object of config.objects){
+  if(object.assetId==='doorPlaque'){
+   object.variant=1;object.material='eds-white';
+   const surface=hallWallRoom.walls.find(w=>w.id===object.wallId)!;
+   const along=object.position[surface.axis==='x'?2:0];
+   Object.assign(object,wallAnchor(surface.id,along,object.position[1],getVariant('doorPlaque',1).dimensions[2],hallWallRoom));
+  }
+  if(object.assetId==='brandDoorPanel')object.variant=3;
+  if(object.id.startsWith('hall-rear-screen-')){object.variant=7;object.material='white';}
+ }
+ HALL_PRESETS.push(config);
+}
 // One full-wall statement composition per furnished design. The opposite
 // surfaces remain quiet; no furniture or television placement is changed.
 const mural=(index:NonNullable<WallFinish['mural']>,color='#f0f0f0'):WallFinish=>({...finish(0,'#0b30c1',color),mural:index});
@@ -260,7 +298,11 @@ function clearStatementWall(config:SceneConfig):void {
  }
 }
 for(const config of BUILTIN_PRESETS){
- config.wallFinishes=meetingFinishes[Number(config.presetId.slice(8))]??{};
+ const originalFinishes=meetingFinishes[Number(config.presetId.slice(8))]??{};
+ // Customer revisions keep only the EDS mark on each furnished meeting wall;
+ // the other editable compositions remain available in the library.
+ const index=Number(config.presetId.slice(8));
+ config.wallFinishes=index>=16?{west:mural(([2,3,4,6,8,9] as const)[index-16])}:Object.fromEntries(Object.keys(originalFinishes).map(id=>[id,mural(7)]));
  clearStatementWall(config);
  const meeting=config.objects.filter(o=>objectRegion(o)==='meeting').map(o=>({...o,regionId:'meeting' as const}));
  config.objects=[...meeting,...JSON.parse(JSON.stringify(HALL_PRESETS[0].objects))];

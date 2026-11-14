@@ -23,7 +23,7 @@ function legacy(version:0|1=1){
 describe('Independent hall and meeting designs / schema v2',()=>{
  beforeAll(()=>configureSpace(JSON.parse(readFileSync(new URL('../public/assets/architecture/scene-space.json',import.meta.url),'utf8'))));
  it('preserves the measured source desks, all14 door labels, two approved corporate signs and bean bags in every hall preset',()=>{
-  expect(HALL_PRESETS).toHaveLength(8);
+  expect(HALL_PRESETS).toHaveLength(14);
   for(const preset of HALL_PRESETS){
    expect(new Set(preset.objects.map(o=>o.id)).size,preset.presetId).toBe(preset.objects.length);
    expect(preset.objects.filter(o=>o.assetId==='hallDesk'),preset.presetId).toEqual(originalHallTables());

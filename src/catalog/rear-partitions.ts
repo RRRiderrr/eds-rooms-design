@@ -1,16 +1,11 @@
 import type { SceneObject } from '../core/types';
 
-/** Two collinear planted modules screen the entry/team-room alcove, leaving
- * stairs 14 entirely on the open hall side. The diagonal has a generous
- * bypass at either end; it is not a corridor or an enclosure. Source desks
+/** One perpendicular planted module screens the entry/team-room alcove, leaving
+ * stairs 14 entirely on the open hall side, with a bypass for access. Source desks
  * and lounge furniture retain their measured positions. */
-const halfStep = Math.SQRT1_2;
-export const REAR_PARTITION_PLACEMENTS = [
-  [-20.6 - halfStep, -.25 - halfStep],
-  [-20.6 + halfStep, -.25 + halfStep],
-] as const;
+export const REAR_PARTITION_PLACEMENTS = [[-20.6, 0.4]] as const;
 
-export const REAR_PARTITION_ROTATION = -Math.PI / 4;
+export const REAR_PARTITION_ROTATION = Math.PI / 2;
 
 /** Centre paths with 1.1 m measured free width, used by navigation QA.
  * The stairs route is direct; entry/team-room routes go round the free end. */

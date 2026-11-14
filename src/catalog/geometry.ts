@@ -8,6 +8,8 @@ import { createSignageObject } from './signage';
 import { createCorporateObject } from './corporate';
 import { createSourceDesk } from './source-desks';
 import { createPlanter } from './planter';
+import { createPothosFoliage } from './pothos';
+import { editorPlanterTexture } from './planter-textures';
 import { createBotanicalDivider } from './botanical-dividers';
 import type { AppMode, MaterialVariant } from '../core/types';
 export type MaterialPalette=Partial<Record<MaterialVariant['surface']|'black'|'glass'|'paper'|'soil',THREE.Material>>;
@@ -24,6 +26,23 @@ export function createAssetObject(assetId:string,variantIndex:number,materialId:
  if(assetId==='separator'&&variantIndex===3)return createPlanter([w,h,d],selected,mode==='editor');
  if(assetId==='edsTimeline'||assetId==='edsUkraine')return createCorporateSignage(assetId==='edsTimeline'?'timeline':'ukraine',variantIndex,mode==='editor');
  if(assetId==='wallClock'){const clock=createWallClock(variantIndex,mode==='editor');clock.position.z=-.0255;return clock;}
+ if(assetId==='botanicalDivider'&&variantIndex===7){
+  const shell=new THREE.MeshStandardMaterial({color:selected.color,roughness:.82});shell.userData={owned:true,sourcePbr:true,preserveOriginal:true,surface:selected.surface,colorVariant:selected.id,tintable:true};
+  const seam=new THREE.MeshStandardMaterial({color:'#756f67',roughness:1});seam.userData={owned:true,sourcePbr:true,preserveOriginal:true,surface:'plastic'};
+  const panel=(name:string,width:number,height:number,depth:number,x:number,y:number,z:number)=>{const mesh=new THREE.Mesh(new THREE.BoxGeometry(width,height,depth),shell);mesh.position.set(x,y,z);mesh.castShadow=mode!=='editor';mesh.receiveShadow=true;mesh.name=name;group.add(mesh);};
+  panel('StoragePlanter_Bottom',w,.022,d,0,.011,0);panel('StoragePlanter_Top',w,.022,d,0,.659,0);
+  for(const side of [-1,1])panel('StoragePlanter_Side',.022,.626,d,side*(w/2-.011),.335,0);
+  panel('StoragePlanter_Back',w-.044,.626,.016,0,.335,-d/2+.008);panel('StoragePlanter_Shelf',w-.044,.018,d-.04,0,.33,0);
+  for(let i=0;i<4;i++)panel('StoragePlanter_Door',w/4-.004,.626,.018,-w/2+(i+.5)*w/4,.335,d/2-.009);
+  for(const face of [-1,1])for(let i=1;i<4;i++){const line=new THREE.Mesh(new THREE.BoxGeometry(.002,.64,.001),seam);line.position.set(-w/2+w*i/4,.33,face*(d/2+.0006));line.name='StoragePlanter_DoorSeam';group.add(line);}
+  const planter=createPlanter([w,.9,d],selected,mode==='editor',{foliage:false});planter.position.y=.67;planter.traverse(o=>{if(!(o instanceof THREE.Mesh))return;
+   if(o.name==='Planter_loose_soil'){o.geometry.deleteAttribute('color');const uv=o.geometry.getAttribute('uv');for(let i=0;i<uv.count;i++)uv.setX(i,uv.getX(i)*w/d);const m=o.material as THREE.MeshStandardMaterial;m.vertexColors=false;m.color.set('#ffffff');if(mode==='editor')m.map=editorPlanterTexture('soil')??null;}
+   for(const m of Array.isArray(o.material)?o.material:[o.material])if(m.name==='Planter_oiled_oak'||m.name==='Planter_matte_accent'){(m as THREE.MeshStandardMaterial).color.set('#db5722');m.userData={...m.userData,sourcePbr:true,preserveOriginal:true,surface:'plastic'};}});group.add(planter);
+  const foliage=createPothosFoliage(w,d,.67+.029+.9*.395-.028,mode==='editor');
+  if(mode==='editor'){const leaf=foliage.getObjectByName('Planter_pothos_leaves') as THREE.Mesh;const m=leaf.material as THREE.MeshStandardMaterial;m.map=editorPlanterTexture('pothos-leaf')??null;}
+  group.add(foliage);
+  group.userData={...group.userData,dimensions:variant.dimensions,storageCabinet:true,planterRimHeight:1.025};return group;
+ }
  if(assetId==='botanicalDivider')return createBotanicalDivider([w,h,d],variantIndex,selected,mode==='editor');
  if(['beanBag','doorPlaque','brandDoorPanel'].includes(assetId)){
   const object=createCorporateObject(assetId,variantIndex,[w,h,d],selected,mode==='editor');object.name=group.name;return object;

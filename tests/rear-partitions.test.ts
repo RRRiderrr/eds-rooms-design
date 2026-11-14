@@ -32,21 +32,15 @@ describe('One planted row for entry15 and team-room02',()=>{
     const allVariants=new Set<number>();
     for(const config of [...HALL_PRESETS,...BUILTIN_PRESETS]){
       const screens=config.objects.filter(o=>o.assetId==='botanicalDivider');
-      expect(screens,config.presetId).toHaveLength(2);
-      expect(screens.map(o=>o.id)).toEqual(['hall-rear-screen-1','hall-rear-screen-2']);
-      expect(new Set(screens.map(o=>o.variant)).size).toBe(2);
-      const [first,second]=screens,dx=second.position[0]-first.position[0],dz=second.position[2]-first.position[2];
-      expect(second.rotation).toBe(first.rotation);
-      expect(Math.hypot(dx,dz)).toBeCloseTo(2,9);
-      expect(dx*Math.sin(first.rotation)+dz*Math.cos(first.rotation)).toBeCloseTo(0,9);
-      for(const screen of screens){
-        allVariants.add(screen.variant);expect(screen.regionId).toBe('hall');
-        expect(getVariant(screen.assetId,screen.variant).dimensions).toEqual([2,2.3,.48]);
-        expect(getAsset(screen.assetId).materials.some(m=>m.id===screen.material)).toBe(true);
-      }
+      expect(screens,config.presetId).toHaveLength(1);
+      expect(screens[0].id).toBe('hall-rear-screen-1');
+      const screen=screens[0];expect(screen.rotation).toBeCloseTo(Math.PI/2,9);
+      allVariants.add(screen.variant);expect(screen.regionId).toBe('hall');
+      expect(getVariant(screen.assetId,screen.variant).dimensions).toEqual(screen.variant===7?[2,1.59,.48]:[2,2.3,.48]);
+      expect(getAsset(screen.assetId).materials.some(m=>m.id===screen.material)).toBe(true);
       expect(config.objects.filter(o=>o.assetId==='hallDesk')).toEqual(originalHallTables());
     }
-    expect([...allVariants].sort()).toEqual([1,2,3,4,5,6]);
+    expect([...allVariants].sort()).toEqual([1,2,3,4,5,6,7]);
   });
 
   it('uses only the actual measured floor and never intersects existing furniture or source architecture',()=>{

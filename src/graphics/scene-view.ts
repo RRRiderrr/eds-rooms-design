@@ -12,6 +12,7 @@ import { SSAOPass } from 'three/addons/postprocessing/SSAOPass.js';
 import { StableSSRPass as SSRPass } from './stable-ssr';
 import { Architecture, assetUrl } from './architecture';
 import { BakedProbes } from './probes';
+import { applyStableDoorIrradiance } from './door-lighting';
 import { AdaptiveQuality, type QualitySettings } from '../quality';
 import { configureSpace,getPlacementRoom,getPlacementSurfaces } from '../core/space';
 import type { SceneConfig, SceneObject, AppMode, Vec3 } from '../core/types';
@@ -229,7 +230,11 @@ export class SceneView {
       const lease=await this.library!.acquire('metal-painted',this.quality.settings.level,{metersPerUv:1,normalStrength:.045,anisotropy:this.quality.settings.anisotropy});const mat=lease.material;
       mat.color.copy(original.color);if(/07_CEILING|08_CEILING/.test(name))mat.color.set('#22272a');if(/03_DOOR_LEAVES/.test(name))mat.color.set('#555b60');if(/13_SKIRTING/.test(name))mat.color.set('#777e80');
       if(/14_HANDLES|DOOR_LOCK/.test(name))mat.metalnessMap=null;mat.roughness=/14_HANDLES|DOOR_LOCK/.test(name)?.3:/16_DESK/.test(name)?.58:.76;mat.metalness=/14_HANDLES|DOOR_LOCK/.test(name)?.7:.07;mat.envMapIntensity=/07_CEILING|08_CEILING/.test(name)?.09:.45;
-      mat.lightMap=original.lightMap;mat.lightMapIntensity=original.lightMapIntensity;if(o.userData.interactiveDoor||!mat.lightMap)this.probes.apply(mat,o.userData.interactiveDoor?new THREE.Vector3(1.9,1,-2.9):new THREE.Vector3(0,1,0));leases.push(lease);updated.push(mat);continue;
+      mat.lightMap=original.lightMap;mat.lightMapIntensity=original.lightMapIntensity;
+      // Space doors share a combined mesh. Average the source indirect bake
+      // on each individual flat face; dynamic lights and shadows stay active.
+      const smoothed=/^03_DOOR_LEAVES/.test(name)&&o.userData.bakedAtlasScope==='space'&&!!original.lightMap&&applyStableDoorIrradiance(mat,o,original.lightMap);
+      if(!smoothed&&(o.userData.interactiveDoor||!mat.lightMap))this.probes.apply(mat,o.userData.interactiveDoor?new THREE.Vector3(1.9,1,-2.9):new THREE.Vector3(0,1,0));leases.push(lease);updated.push(mat);continue;
      }
      const role=await this.library!.materialIdForName(name);
      if(!role){const copy=original.clone();if(o.userData.interactiveDoor||!original.lightMap)this.probes.apply(copy,o.userData.interactiveDoor?new THREE.Vector3(1.9,1,-2.9):new THREE.Vector3(0,1,0));updated.push(copy);continue;}
@@ -538,7 +543,7 @@ export class SceneView {
   if(this.mode==='editor'&&this.paintSelection&&!p.hit){this.paintWallAt(e);return;}
   if(p.door){this.callbacks.door();return;}this.callbacks.select(p.hit);
  }
- rotateSelected(delta:number){const obj=this.selectedObject();if(obj?.assetId==='corporateMotif'){const g=wallGraphicFor(obj);const candidate={...obj,graphic:{...g,angle:snapAngle(g.angle+delta,15,this.angleSnap)}};const result=validatePlacement(candidate,this.config.objects,getPlacementRoom(candidate));if(result.valid)this.callbacks.change(candidate);else this.callbacks.status(result.reason??'Поворот неможливий');return;}if(!obj||getAsset(obj.assetId).placement==='wall')return;const candidate={...obj,rotation:snapAngle(obj.rotation+delta,15,this.angleSnap)};const v=validatePlacement(candidate,this.config.objects,getPlacementRoom(candidate),{freePlacement:this.freePlacement});if(v.valid)this.callbacks.change(candidate);else this.callbacks.status(v.reason??'Поворот неможливий');}
+ rotateSelected(delta:number){const obj=this.selectedObject();if(obj?.assetId==='corporateMotif'){if(obj.variant===5||obj.variant===11)return;const g=wallGraphicFor(obj);const candidate={...obj,graphic:{...g,angle:snapAngle(g.angle+delta,15,this.angleSnap)}};const result=validatePlacement(candidate,this.config.objects,getPlacementRoom(candidate));if(result.valid)this.callbacks.change(candidate);else this.callbacks.status(result.reason??'Поворот неможливий');return;}if(!obj||getAsset(obj.assetId).placement==='wall')return;const candidate={...obj,rotation:snapAngle(obj.rotation+delta,15,this.angleSnap)};const v=validatePlacement(candidate,this.config.objects,getPlacementRoom(candidate),{freePlacement:this.freePlacement});if(v.valid)this.callbacks.change(candidate);else this.callbacks.status(v.reason??'Поворот неможливий');}
  moveSelected(dx:number,dz:number){const obj=this.selectedObject();if(!obj)return;let candidate:SceneObject;if(getAsset(obj.assetId).placement==='wall'){const room=getPlacementRoom(obj),wall=room.walls.find(w=>w.id===obj.wallId)!;const graphic=obj.assetId==='corporateMotif',along=(wall.axis==='x'?obj.position[2]:obj.position[0])+dx*(graphic?wallGraphicDirection(wall):1);candidate={...obj,...wallAnchor(wall.id,along,obj.position[1]+(graphic?-dz:dz),getVariant(obj.assetId,obj.variant).dimensions[2],room)};}else candidate={...obj,position:[obj.position[0]+dx,obj.position[1],obj.position[2]+dz]};const v=validatePlacement(candidate,this.config.objects,getPlacementRoom(candidate),{freePlacement:this.freePlacement});if(v.valid)this.callbacks.change(candidate);else this.callbacks.status(v.reason??'Переміщення неможливе');}
  walk(direction:'forward'|'back'|'left'|'right'){
   const look=this.controls.target.clone().sub(this.camera.position);look.y=0;look.normalize();const right=new THREE.Vector3().crossVectors(look,new THREE.Vector3(0,1,0));const step=direction==='forward'?look:direction==='back'?look.negate():direction==='right'?right:right.negate();step.multiplyScalar(.35);const p=this.camera.position.clone().add(step);if(this.cameraMoveAllowed(this.camera.position,p)){this.camera.position.copy(p);this.controls.target.add(step);this.cameraSafe.copy(p);}else this.callbacks.status('Тут стіна, вікно, двері або перегородка');

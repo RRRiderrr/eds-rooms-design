@@ -29,7 +29,7 @@ describe('Optional sculptural EDS accents in hall designs',()=>{
    expect(preset.objects.filter(o=>o.assetId==='hallDesk')).toEqual(originalHallTables());
    expect(preset.objects.filter(o=>o.assetId==='doorPlaque')).toHaveLength(HALL_LAYOUT.doors.length);
   }
-  expect(included).toEqual(['hall-preset-1','hall-preset-4','hall-preset-6','hall-preset-7']);
+  expect(included).toEqual(['hall-preset-1','hall-preset-4','hall-preset-6','hall-preset-7','hall-preset-9','hall-preset-12']);
   expect(positions.size).toBe(4);
   expect(BUILTIN_PRESETS.every(p=>p.objects.every(o=>o.id!=='HallVolumeLogo'))).toBe(true);
  });

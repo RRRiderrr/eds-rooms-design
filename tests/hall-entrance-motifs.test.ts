@@ -14,7 +14,8 @@ describe('Hall entrance artwork',()=>{
    const objects=preset.objects.filter(o=>o.id.startsWith('hall-entrance-graphic-'));
    expect(objects.length).toBeGreaterThanOrEqual(6);designs.add(JSON.stringify(objects.map(o=>[o.variant,o.position,o.graphic])));
    expect(new Set(objects.map(o=>wallGraphicFor(o).width)).size).toBeGreaterThanOrEqual(4);
-   expect(objects.filter(o=>Math.abs(wallGraphicFor(o).angle)>.01).length).toBeGreaterThanOrEqual(4);
+   expect(objects.filter(o=>Math.abs(wallGraphicFor(o).angle)>.01).length).toBeGreaterThanOrEqual(2);
+   expect(objects.filter(o=>o.variant===5||o.variant===11).every(o=>wallGraphicFor(o).angle===0)).toBe(true);
    const plaque=preset.objects.find(o=>o.id==='hall-door-03-plaque')!;
    for(const object of objects){
     expect(object).toMatchObject({assetId:'corporateMotif',wallId:'wall-21',regionId:'hall'});

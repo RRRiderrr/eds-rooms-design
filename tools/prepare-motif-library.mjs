@@ -34,19 +34,22 @@ const B='#000000',P='#0B30C1',BG='#f0f0eb';
 const svg=(width,height,body)=>`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}">${body}</svg>`;
 const actual=art=>`<svg xmlns="http://www.w3.org/2000/svg" viewBox="${art.bbox.join(' ')}">${art.body}</svg>`;
 const place=(art,x,y,size,rotation=0)=>`<g transform="rotate(${rotation} ${x+size/2} ${y+size/2})"><svg x="${x}" y="${y}" width="${size}" height="${size}" viewBox="${art.bbox.join(' ')}">${art.body}</svg></g>`;
+// The catalog's arrow points up and right. Reflect the supplied original
+// vertically within its own bounds before using it as a standalone motif.
+const upwardArrow={...extracted.arrow,body:`<g transform="translate(0 ${2*extracted.arrow.bbox[1]+extracted.arrow.bbox[3]}) scale(1 -1)">${extracted.arrow.body}</g>`};
 const old=await Promise.all([1,2,3].map(index=>fs.readFile(path.join(brand,`motif-${index}.svg`),'utf8')));
 const definitions=[
  {index:1,label:'Діагональна штриховка',size:[3.24,.491],body:old[0],sourceElements:['g[3]']},
  {index:2,label:'Сітка хрестів',size:[2.4,2.4],body:old[1],sourceElements:['g[7]']},
  {index:3,label:'Парні чверті диска',size:[1,1],body:old[2],sourceElements:['g[4]']},
  {index:4,label:'Шаховий модуль',size:[.8,.8],body:actual(extracted.checker),sourceElements:['g[1]']},
- {index:5,label:'Стріла руху',size:[.9,.9],body:actual(extracted.arrow),sourceElements:['polygon[13]']},
+ {index:5,label:'Стріла руху',size:[.9,.9],body:actual(upwardArrow),sourceElements:['polygon[13]']},
  {index:6,label:'Квадрат у квадраті',size:[.8,.8],body:actual(extracted.square),sourceElements:['g[0]']},
  {index:7,label:'Точка перетину',size:[.8,.8],body:actual(extracted.cross),sourceElements:['g[2]']},
  {index:8,label:'Оптичний центр',size:[.9,.9],body:actual(extracted.target),sourceElements:['path[17]']},
  {index:9,label:'Модульна сходинка',size:[1.8,1.2],body:svg(1536,1024,[0,1,2].map(i=>place(extracted.checker,i*512,512-i*256,512)).join('')),sourceElements:['g[1]'],derived:true},
  {index:10,label:'Хвиля співдії',size:[2.1,.9],body:svg(2389,1024,[0,1,2].map(i=>`<g transform="translate(${i*790} 0)"><svg x="0" y="162" width="800" height="700" viewBox="${old[2].match(/viewBox="([^"]+)"/)[1]}" preserveAspectRatio="xMidYMid meet"><g transform="${i%2?'rotate(90 342.37 338.68)':''}">${old[2].replace(/^<svg[^>]*>/,'').replace(/<\/svg>\s*$/,'')}</g></svg></g>`).join('')),sourceElements:['g[4]'],derived:true},
- {index:11,label:'Векторний ритм',size:[2.4,.8],body:svg(3072,1024,[0,1,2].map(i=>place(extracted.arrow,i*1086,62,900)).join('')),sourceElements:['polygon[13]'],derived:true},
+ {index:11,label:'Векторний ритм',size:[2.4,.8],body:svg(3072,1024,[0,1,2].map(i=>place(upwardArrow,i*1086,62,900)).join('')),sourceElements:['polygon[13]'],derived:true},
  {index:12,label:'Координатна рамка',size:[1.8,1.2],body:svg(1536,1024,`<path d="M96 240V96H360M1176 96H1440V240M1440 784V928H1176M360 928H96V784" fill="none" stroke="${B}" stroke-width="22"/>`+[[0,0],[1344,0],[0,832],[1344,832]].map(([x,y])=>place(extracted.cross,x,y,192)).join('')+place(extracted.target,620,364,296)),sourceElements:['g[2]','path[17]'],derived:true}
 ];
 const items=[],previews=[];

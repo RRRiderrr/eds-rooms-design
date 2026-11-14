@@ -93,7 +93,7 @@ async function action(action:string,value?:string){
  if(action==='preset'||action==='gallery-preset'){const preset=[...BUILTIN_PRESETS,...HALL_PRESETS,...customs].find(p=>p.presetId===value);if(preset){store.applyRegionPreset(activeRegion,preset);select(null);view.focusRegion(activeRegion);}if(action==='gallery-preset')ui.closeDialog();return;}
  if(action==='region'){setRegion(value as 'hall'|'meeting');select(null);return;}
  if(action==='region-focus'){view.focusRegion(activeRegion);return;}
- if(action==='rear-partitions'){const result=store.addRearPartitions();if(result.reason)notify(`Звільніть місце біля задніх дверей: ${result.reason}`);else if(result.rearranged){select(null);notify('Залишено дві перегородки в один ряд. Проходи до входу, кімнати команди та сходів відкриті.');}else if(result.added){select(null);notify(`Додано ${result.added} зелені перегородки. Ваші меблі та оздоблення збережено.`);}return;}
+ if(action==='rear-partitions'){const result=store.addRearPartitions();if(result.reason)notify(`Звільніть місце біля задніх дверей: ${result.reason}`);else if(result.rearranged){select(null);notify('Залишено одну зелену перегородку. Проходи до входу, кімнати команди та сходів відкриті.');}else if(result.added){select(null);notify('Додано зелену перегородку. Ваші меблі та оздоблення збережено.');}return;}
  if(action==='paint-mode'){if(value==='true'){setMode('editor');select(null);}view.setPaintSelection(value==='true');if(value==='true')view.setSelectedWall(ui.getSelectedWall());return;}
  if(action==='motif-add'){addCorporateMotif(Number(value));return;}
  if(action==='motif-select'){select(value!);return;}
@@ -133,6 +133,7 @@ function property(key:string,value:string){
  const obj=selectedObject();if(!obj)return;
  if(key.startsWith('graphic-')&&obj.assetId==='corporateMotif'){
   const field=key.slice(8),raw=field==='color'?value:Number(value),converted=field==='angle'?Number(raw)*Math.PI/180:field==='opacity'?Number(raw)/100:raw;
+  if(field==='angle'&&(obj.variant===5||obj.variant===11))return;
   try{const graphic=parseWallGraphic({...wallGraphicFor(obj),[field]:converted});if(!commit({...obj,graphic}))ui.render(store.state,selected,store.canUndo,store.canRedo);}catch(e){notify((e as Error).message);ui.render(store.state,selected,store.canUndo,store.canRedo);}return;
  }
  if(key==='variant'){

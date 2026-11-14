@@ -50,7 +50,7 @@ describe('Wall paint strips use measured plaster, without freestanding fittings'
     region==='hall'?hallPairs++:meetingPairs++;
    }
   }
-  expect(hallPairs).toBe(112);expect(meetingPairs).toBe(224);
+  expect(hallPairs).toBe(HALL_PRESETS.length*14);expect(meetingPairs).toBe(BUILTIN_PRESETS.length*14);
  });
  it('supports measured meeting aliases, their source IDs and the lower hall steel band',()=>{
   expect(getPaintableBounds('west')!.maxY).toBeCloseTo(3.6,5);

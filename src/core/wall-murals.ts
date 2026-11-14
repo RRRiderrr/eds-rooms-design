@@ -6,7 +6,7 @@ export const WALL_MURAL_DESIGNS = [
  {index:4,label:'Простір для діалогу'},
  {index:5,label:'Інженерія рішень'},
  {index:6,label:'Сила партнерства'},
- {index:7,label:'Спокійна енергія'},
+ {index:7,label:'EDS · логотип'},
  {index:8,label:'Енергія майбутнього'},
  {index:9,label:'EDS · точка зростання'},
  {index:10,label:'EDS · напрям руху'},

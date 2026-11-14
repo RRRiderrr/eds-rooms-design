@@ -2900,7 +2900,7 @@
   },
   {
     "id": "botanicalDivider",
-    "label": "Висока перегородка з рослинами",
+    "label": "Перегородка з рослинами",
     "category": "separators",
     "placement": "floor",
     "variants": [
@@ -2973,6 +2973,16 @@
           0.48
         ],
         "model": "botanical-acoustic-garden"
+      },
+      {
+        "index": 7,
+        "label": "7 / Тумба з кашпо · 102 см",
+        "dimensions": [
+          2,
+          1.59,
+          0.48
+        ],
+        "model": "botanical-storage-planter"
       }
     ],
     "materials": [
@@ -3013,7 +3023,7 @@
         "surface": "plastic"
       }
     ],
-    "description": "Мобільна перегородка з кашпо та об’ємною зеленню. Відкриті стелажі, решітки й рейки мають справжні просвіти; м’який екран і акустичні вставки — окремі конструктивні варіанти. Колір каркаса змінюється. Габарит 2 × 2,3 м, стійка основа 48 см.",
+    "description": "Мобільні перегородки з кашпо та об’ємною зеленню. Варіант 7 має тумбу для зберігання і кашпо заввишки приблизно 102 см.",
     "collision": "solid",
     "productionRef": "catalog:botanicalDivider:production",
     "proxyRef": "catalog:botanicalDivider:proxy"

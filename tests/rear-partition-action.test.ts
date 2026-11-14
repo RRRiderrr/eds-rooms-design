@@ -12,13 +12,13 @@ describe('Adding the rear planting to an existing design',()=>{
  const oldDraft=()=>{const config=clonePreset(3);config.objects=config.objects.filter(o=>o.assetId!=='botanicalDivider');config.modified=true;config.regionPresets.hall.modified=true;config.wallFinishes['wall-23']={color:'#a2b8fe',accent:'#0b30c1',motif:2};return config;};
  it('adds a complete screen group with one Undo, retaining all furniture and finishes',()=>{
   const config=oldDraft(),store=new SceneStore(config),objects=structuredClone(store.state.objects),finishes=structuredClone(store.state.wallFinishes);
-  expect(store.addRearPartitions()).toEqual({added:2});
+  expect(store.addRearPartitions()).toEqual({added:1});
   expect(store.state.objects.filter(o=>o.assetId!=='botanicalDivider')).toEqual(objects);
   expect(store.state.wallFinishes).toEqual(finishes);
   expect(store.state.regionPresets.meeting).toEqual(config.regionPresets.meeting);
   expect(store.addRearPartitions()).toEqual({added:0});
   store.undo();expect(store.state.objects).toEqual(objects);expect(store.state.wallFinishes).toEqual(finishes);
-  store.redo();expect(store.state.objects.filter(o=>o.assetId==='botanicalDivider')).toHaveLength(2);
+  store.redo();expect(store.state.objects.filter(o=>o.assetId==='botanicalDivider')).toHaveLength(1);
  });
  it('does not partially insert a group into occupied space',()=>{
   const config=oldDraft(),position=rearPartitions(0)[0].position;
@@ -28,7 +28,7 @@ describe('Adding the rear planting to an existing design',()=>{
  });
  it('restores only a missing module and preserves the other moved modules',()=>{
   const config=oldDraft();config.objects.push(...rearPartitions(0));
-  config.objects.find(o=>o.id==='hall-rear-screen-2')!.position[0]+=.1;
+  config.objects.push({...structuredClone(rearPartitions(0)[0]),id:'custom-moved-divider',position:[-16,0,1.5]});
   config.objects.find(o=>o.id==='hall-rear-screen-1')!.variant=0;
   const store=new SceneStore(config),kept=structuredClone(store.state.objects.filter(o=>o.id!=='hall-rear-screen-1'));
   expect(store.addRearPartitions()).toEqual({added:1});expect(store.state.objects.filter(o=>o.id!=='hall-rear-screen-1')).toEqual(kept);
@@ -39,12 +39,12 @@ describe('Adding the rear planting to an existing design',()=>{
   const store=new SceneStore(config),before=structuredClone(store.state);
   expect(hasPreviousRearPartitionLayout(store.state.objects)).toBe(true);
   expect(store.addRearPartitions()).toEqual({added:0,rearranged:true});
-  const screens=store.state.objects.filter(o=>o.assetId==='botanicalDivider');expect(screens).toHaveLength(2);
+  const screens=store.state.objects.filter(o=>o.assetId==='botanicalDivider');expect(screens).toHaveLength(1);
   expect(screens.map(o=>o.position)).toEqual(rearPartitions(0).map(o=>o.position));
-  expect(screens.map(o=>[o.variant,o.material])).toEqual([[1,'sage'],[2,'sage']]);
+  expect(screens.map(o=>[o.variant,o.material])).toEqual([[1,'sage']]);
   expect(store.state.objects.filter(o=>o.assetId!=='botanicalDivider')).toEqual(before.objects.filter(o=>o.assetId!=='botanicalDivider'));
   expect(store.state.wallFinishes).toEqual(before.wallFinishes);expect(store.state.regionPresets.meeting).toEqual(before.regionPresets.meeting);
-  store.undo();expect(store.state.objects).toEqual(before.objects);store.redo();expect(store.state.objects.filter(o=>o.assetId==='botanicalDivider')).toHaveLength(2);
+  store.undo();expect(store.state.objects).toEqual(before.objects);store.redo();expect(store.state.objects.filter(o=>o.assetId==='botanicalDivider')).toHaveLength(1);
  });
  it('never treats a custom moved group or a deliberate deletion as the old prepared arrangement',()=>{
   const config=oldDraft(),positions=[[-21.35,-3.9],[-21.85,-2.25],[-21.35,-.6],[-19.95,1.1]];

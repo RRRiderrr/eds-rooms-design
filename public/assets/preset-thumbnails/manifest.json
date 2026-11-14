@@ -1,6 +1,6 @@
 {
   "source": "Actual current WebGL production assets, PBR, measured architecture and SceneState",
-  "renderedAt": "2026-10-29T21:31:40.166Z",
+  "renderedAt": "2026-11-13T23:32:21.064Z",
   "items": [
     {
       "presetId": "builtin-0",
@@ -67,6 +67,30 @@
       "image": "assets/preset-thumbnails/preset-15.jpg"
     },
     {
+      "presetId": "builtin-16",
+      "image": "assets/preset-thumbnails/preset-16.jpg"
+    },
+    {
+      "presetId": "builtin-17",
+      "image": "assets/preset-thumbnails/preset-17.jpg"
+    },
+    {
+      "presetId": "builtin-18",
+      "image": "assets/preset-thumbnails/preset-18.jpg"
+    },
+    {
+      "presetId": "builtin-19",
+      "image": "assets/preset-thumbnails/preset-19.jpg"
+    },
+    {
+      "presetId": "builtin-20",
+      "image": "assets/preset-thumbnails/preset-20.jpg"
+    },
+    {
+      "presetId": "builtin-21",
+      "image": "assets/preset-thumbnails/preset-21.jpg"
+    },
+    {
       "presetId": "hall-preset-0",
       "image": "assets/preset-thumbnails/hall-0.jpg"
     },
@@ -97,6 +121,30 @@
     {
       "presetId": "hall-preset-7",
       "image": "assets/preset-thumbnails/hall-7.jpg"
+    },
+    {
+      "presetId": "hall-preset-8",
+      "image": "assets/preset-thumbnails/hall-8.jpg"
+    },
+    {
+      "presetId": "hall-preset-9",
+      "image": "assets/preset-thumbnails/hall-9.jpg"
+    },
+    {
+      "presetId": "hall-preset-10",
+      "image": "assets/preset-thumbnails/hall-10.jpg"
+    },
+    {
+      "presetId": "hall-preset-11",
+      "image": "assets/preset-thumbnails/hall-11.jpg"
+    },
+    {
+      "presetId": "hall-preset-12",
+      "image": "assets/preset-thumbnails/hall-12.jpg"
+    },
+    {
+      "presetId": "hall-preset-13",
+      "image": "assets/preset-thumbnails/hall-13.jpg"
     }
   ]
 }

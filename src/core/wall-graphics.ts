@@ -30,7 +30,9 @@ export function parseWallGraphic(input: unknown, defaults: WallGraphic = default
 export function wallGraphicFor(object: SceneObject): WallGraphic {
  const design = CORPORATE_MOTIF_DESIGNS.find(d => d.index === object.variant) ?? CORPORATE_MOTIF_DESIGNS[0];
  const defaults = { ...defaultGraphic, width: design.width, height: design.height, color: getMaterial('corporateMotif', object.material).color.toLowerCase() };
- return parseWallGraphic(object.graphic ?? {}, defaults);
+ const graphic=parseWallGraphic(object.graphic ?? {}, defaults);
+ // EDS direction marks must always point to the upper right.
+ return object.assetId==='corporateMotif'&&(object.variant===5||object.variant===11)?{...graphic,angle:0}:graphic;
 }
 
 /** Viewer-space positive U maps to these wall coordinates on each normal. */

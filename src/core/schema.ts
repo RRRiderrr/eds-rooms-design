@@ -88,7 +88,7 @@ export function parsePreset(input: string | unknown, options: { preserveIdentity
     const object: SceneObject = { id, assetId: asset.id, variant, material, position: [...entry.position] as SceneObject['position'], rotation: entry.rotation,
       ...(wallId ? { wallId } : {}), ...(typeof entry.label === 'string' ? { label: asset.id==='doorPlaque'?normalizePlaqueLabel(entry.label):entry.label.slice(0,120) } : {}) };
     object.regionId = isDesignRegion(entry.regionId) ? entry.regionId : objectRegion(object);
-    if (asset.id === 'corporateMotif' && entry.graphic !== undefined) object.graphic = parseWallGraphic(entry.graphic, wallGraphicFor(object));
+    if (asset.id === 'corporateMotif' && entry.graphic !== undefined) { object.graphic = parseWallGraphic(entry.graphic, wallGraphicFor(object)); object.graphic = wallGraphicFor(object); }
     objects.push(object);
   }
   const graphicCounts = new Map<string,number>();
