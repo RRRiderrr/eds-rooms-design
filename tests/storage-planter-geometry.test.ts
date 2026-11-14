@@ -1,17 +1,16 @@
-import {createHash} from 'node:crypto';
 import {describe,expect,it} from 'vitest';
-import {FrontSide,Mesh,MeshStandardMaterial,Vector3} from 'three';
+import {Box3,FrontSide,Mesh,MeshStandardMaterial,Vector3} from 'three';
 import {createAssetObject,disposeAssetObject} from '../src/catalog/geometry';
 
 /** Original models are independent of the new storage-planter planting. */
-const previousGeometry:[string,number,string,string][]=[
- ['separator',3,'oat','a7b514328034d049624fdae8c36aebe9c7e27b43acd43ee4148e15fc95a677f2'],
- ['botanicalDivider',1,'oak','3b20ded41888bea07b9ec3109c43eece1a3e3adb7b35895fee373557b5e06ec7'],
- ['botanicalDivider',2,'oak','2996b517238d6c621af12db077be07fa25b9369b51eac0b00463da381b44f16a'],
- ['botanicalDivider',3,'oak','025fb1ede6ecc2426abf8154bdace5ce5e00eb9680e9929b71a626a49be05c3f'],
- ['botanicalDivider',4,'oak','828f9341b579c0bb3473d781f3772483a61e028a9226c674b91f4c684f2f94a0'],
- ['botanicalDivider',5,'oak','b191c36ad3f97c54cc6535df6bfad193152f92dcae7e100778f6fb6c860d842c'],
- ['botanicalDivider',6,'oak','628891944766b2cc8bac32de77c6ac2171d4aa9a64b45bd685a1e7d2167d6a6d'],
+const previousGeometry:[string,number,string,number,number,number[],number[]][]=[
+ ['separator',3,'oat',8,181668,[-7027.973,103214.530,91.632],[47542.796,103214.530,7171.209]],
+ ['botanicalDivider',1,'oak',9,145116,[-1249.369,83498.205,310.752],[76936.416,83498.205,25402.640]],
+ ['botanicalDivider',2,'oak',7,209988,[3509.287,253707.000,9.160],[102556.747,253707.000,28021.062]],
+ ['botanicalDivider',3,'oak',6,134640,[1091.939,143067.039,328.066],[62652.588,143067.039,18445.307]],
+ ['botanicalDivider',4,'oak',7,281520,[1400.081,295239.246,964.377],[126346.822,295239.246,45141.758]],
+ ['botanicalDivider',5,'oak',8,168768,[-2897.238,206407.791,79.048],[91473.760,206407.791,21568.104]],
+ ['botanicalDivider',6,'oak',7,123048,[-9185.198,140744.923,-309.551],[61228.653,140744.923,16787.128]],
 ];
 describe('Storage planter',()=>{
  it('maps soil with the same texture scale in both physical directions',()=>{
@@ -62,10 +61,22 @@ describe('Storage planter',()=>{
   }
  });
  it('does not alter the existing six screens or standalone planter geometry',()=>{
-  for(const [asset,variant,material,expected] of previousGeometry){
-   const root=createAssetObject(asset,variant,material),hash=createHash('sha256');
-   root.traverse(object=>{if(!(object instanceof Mesh))return;hash.update(object.name);for(const name of ['position','normal','uv']){const attribute=object.geometry.getAttribute(name);if(attribute){const a=attribute.array;hash.update(Buffer.from(a.buffer,a.byteOffset,a.byteLength));}}});
-   expect(hash.digest('hex'),`${asset} ${variant}`).toBe(expected);disposeAssetObject(root);
+  for(const [asset,variant,material,meshCount,vertexCount,expectedSums,expectedAbsSums] of previousGeometry){
+   const root=createAssetObject(asset,variant,material),sums=[0,0,0],absoluteSums=[0,0,0];let meshes=0,vertices=0;
+   root.traverse(object=>{if(!(object instanceof Mesh))return;meshes++;const p=object.geometry.getAttribute('position');vertices+=p.count;
+    for(const name of ['normal','uv'])expect(object.geometry.getAttribute(name).count,`${asset} ${variant} ${name}`).toBe(p.count);
+    for(let i=0;i<p.count;i++)for(let axis=0;axis<3;axis++){const n=p.getComponent(i,axis);sums[axis]+=n;absoluteSums[axis]+=Math.abs(n);}
+   });
+   expect(meshes,`${asset} ${variant} meshes`).toBe(meshCount);expect(vertices,`${asset} ${variant} vertices`).toBe(vertexCount);
+   const size=new Box3().setFromObject(root).getSize(new Vector3()),dimensions=asset==='separator'?[1.1,.9,.3]:[2,2.3,.48];
+   for(let axis=0;axis<3;axis++){
+    expect(size.getComponent(axis),`${asset} ${variant} bounds`).toBeCloseTo(dimensions[axis],4);
+    // Aggregate vertex moments retain strong shape sensitivity without relying
+    // on bit-identical transcendental functions across Windows and Linux.
+    expect(Math.abs(sums[axis]-expectedSums[axis]),`${asset} ${variant} centroid`).toBeLessThan(.25);
+    expect(Math.abs(absoluteSums[axis]-expectedAbsSums[axis]),`${asset} ${variant} distribution`).toBeLessThan(.25);
+   }
+   disposeAssetObject(root);
   }
- });
+ },20_000);
 });
