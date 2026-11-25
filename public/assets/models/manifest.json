@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "projectId": "polycam-lounge-room",
   "generator": "EDS rooms design — original modular furniture",
-  "generatedAt": "2026-11-13T23:27:55.065Z",
+  "generatedAt": "2026-11-25T14:58:51.914Z",
   "units": "metres",
   "upAxis": "Y",
   "assets": [
@@ -7766,6 +7766,768 @@
       "bytes": {
         "production": 8329364,
         "proxy": 5512852
+      }
+    },
+    {
+      "assetId": "meetingTable",
+      "variant": 4,
+      "label": "4 / Прямокутний 220",
+      "category": "tables",
+      "placement": "floor",
+      "dimensions": [
+        2.2,
+        0.74,
+        1
+      ],
+      "materials": [
+        {
+          "id": "oak",
+          "label": "Натуральний дуб",
+          "color": "#b88e60",
+          "surface": "wood"
+        },
+        {
+          "id": "walnut",
+          "label": "Темний горіх",
+          "color": "#604533",
+          "surface": "wood"
+        },
+        {
+          "id": "ash",
+          "label": "Світлий ясен",
+          "color": "#ddd0b3",
+          "surface": "wood"
+        },
+        {
+          "id": "white",
+          "label": "Матовий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        },
+        {
+          "id": "black",
+          "label": "Графітовий",
+          "color": "#30383d",
+          "surface": "metal"
+        }
+      ],
+      "production": "assets/models/meetingTable-4.glb",
+      "proxy": "assets/proxies/meetingTable-4.glb",
+      "quality": {
+        "high": "assets/models/meetingTable-4.glb",
+        "medium": "assets/models/meetingTable-4.glb",
+        "low": "assets/models/meetingTable-4.glb"
+      },
+      "bounds": {
+        "min": [
+          -1.100000023841858,
+          -1.0967254659988157e-8,
+          -0.5
+        ],
+        "max": [
+          1.100000023841858,
+          0.7400000095367432,
+          0.5
+        ],
+        "size": [
+          2.200000047683716,
+          0.7400000205039978,
+          1
+        ]
+      },
+      "bytes": {
+        "production": 842448,
+        "proxy": 12924
+      }
+    },
+    {
+      "assetId": "meetingTable",
+      "variant": 5,
+      "label": "5 / Овальний 230",
+      "category": "tables",
+      "placement": "floor",
+      "dimensions": [
+        2.3,
+        0.74,
+        0.96
+      ],
+      "materials": [
+        {
+          "id": "oak",
+          "label": "Натуральний дуб",
+          "color": "#b88e60",
+          "surface": "wood"
+        },
+        {
+          "id": "walnut",
+          "label": "Темний горіх",
+          "color": "#604533",
+          "surface": "wood"
+        },
+        {
+          "id": "ash",
+          "label": "Світлий ясен",
+          "color": "#ddd0b3",
+          "surface": "wood"
+        },
+        {
+          "id": "white",
+          "label": "Матовий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        },
+        {
+          "id": "black",
+          "label": "Графітовий",
+          "color": "#30383d",
+          "surface": "metal"
+        }
+      ],
+      "production": "assets/models/meetingTable-5.glb",
+      "proxy": "assets/proxies/meetingTable-5.glb",
+      "quality": {
+        "high": "assets/models/meetingTable-5.glb",
+        "medium": "assets/models/meetingTable-5.glb",
+        "low": "assets/models/meetingTable-5.glb"
+      },
+      "bounds": {
+        "min": [
+          -1.149999976158142,
+          -1.0967254659988157e-8,
+          -0.47999998927116394
+        ],
+        "max": [
+          1.149999976158142,
+          0.7400000095367432,
+          0.47999998927116394
+        ],
+        "size": [
+          2.299999952316284,
+          0.7400000205039978,
+          0.9599999785423279
+        ]
+      },
+      "bytes": {
+        "production": 1082204,
+        "proxy": 17656
+      }
+    },
+    {
+      "assetId": "meetingTable",
+      "variant": 6,
+      "label": "6 / На панельних опорах 240",
+      "category": "tables",
+      "placement": "floor",
+      "dimensions": [
+        2.4,
+        0.74,
+        1
+      ],
+      "materials": [
+        {
+          "id": "oak",
+          "label": "Натуральний дуб",
+          "color": "#b88e60",
+          "surface": "wood"
+        },
+        {
+          "id": "walnut",
+          "label": "Темний горіх",
+          "color": "#604533",
+          "surface": "wood"
+        },
+        {
+          "id": "ash",
+          "label": "Світлий ясен",
+          "color": "#ddd0b3",
+          "surface": "wood"
+        },
+        {
+          "id": "white",
+          "label": "Матовий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        },
+        {
+          "id": "black",
+          "label": "Графітовий",
+          "color": "#30383d",
+          "surface": "metal"
+        }
+      ],
+      "production": "assets/models/meetingTable-6.glb",
+      "proxy": "assets/proxies/meetingTable-6.glb",
+      "quality": {
+        "high": "assets/models/meetingTable-6.glb",
+        "medium": "assets/models/meetingTable-6.glb",
+        "low": "assets/models/meetingTable-6.glb"
+      },
+      "bounds": {
+        "min": [
+          -1.2000000476837158,
+          -1.8626451769865326e-10,
+          -0.5
+        ],
+        "max": [
+          1.2000000476837158,
+          0.7400000095367432,
+          0.5
+        ],
+        "size": [
+          2.4000000953674316,
+          0.7400000097230077,
+          1
+        ]
+      },
+      "bytes": {
+        "production": 562552,
+        "proxy": 9548
+      }
+    },
+    {
+      "assetId": "botanicalDivider",
+      "variant": 8,
+      "label": "8 / Шавлія · гладкі фасади",
+      "category": "separators",
+      "placement": "floor",
+      "dimensions": [
+        2,
+        1.59,
+        0.48
+      ],
+      "materials": [
+        {
+          "id": "oak",
+          "label": "Натуральний дуб",
+          "color": "#b88e60",
+          "surface": "wood"
+        },
+        {
+          "id": "walnut",
+          "label": "Темний горіх",
+          "color": "#604533",
+          "surface": "wood"
+        },
+        {
+          "id": "graphite",
+          "label": "Матовий графіт",
+          "color": "#30383d",
+          "surface": "metal"
+        },
+        {
+          "id": "terracotta",
+          "label": "Теракотовий метал",
+          "color": "#a7674b",
+          "surface": "metal"
+        },
+        {
+          "id": "white",
+          "label": "Теплий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієвий",
+          "color": "#819183",
+          "surface": "plastic"
+        }
+      ],
+      "production": "assets/models/botanicalDivider-8.glb",
+      "proxy": "assets/proxies/botanicalDivider-8.glb",
+      "quality": {
+        "high": "assets/models/botanicalDivider-8.glb",
+        "medium": "assets/models/botanicalDivider-8.glb",
+        "low": "assets/models/botanicalDivider-8.glb"
+      },
+      "bounds": {
+        "min": [
+          -1.191715121269226,
+          1.4901161207725444e-10,
+          -0.38492462038993835
+        ],
+        "max": [
+          1.0689111948013306,
+          1.5844365358352661,
+          0.4075040817260742
+        ],
+        "size": [
+          2.2606263160705566,
+          1.5844365356862544,
+          0.7924287021160126
+        ]
+      },
+      "bytes": {
+        "production": 3007504,
+        "proxy": 2750512
+      }
+    },
+    {
+      "assetId": "botanicalDivider",
+      "variant": 9,
+      "label": "9 / Рейковий дуб",
+      "category": "separators",
+      "placement": "floor",
+      "dimensions": [
+        2,
+        1.59,
+        0.48
+      ],
+      "materials": [
+        {
+          "id": "oak",
+          "label": "Натуральний дуб",
+          "color": "#b88e60",
+          "surface": "wood"
+        },
+        {
+          "id": "walnut",
+          "label": "Темний горіх",
+          "color": "#604533",
+          "surface": "wood"
+        },
+        {
+          "id": "graphite",
+          "label": "Матовий графіт",
+          "color": "#30383d",
+          "surface": "metal"
+        },
+        {
+          "id": "terracotta",
+          "label": "Теракотовий метал",
+          "color": "#a7674b",
+          "surface": "metal"
+        },
+        {
+          "id": "white",
+          "label": "Теплий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієвий",
+          "color": "#819183",
+          "surface": "plastic"
+        }
+      ],
+      "production": "assets/models/botanicalDivider-9.glb",
+      "proxy": "assets/proxies/botanicalDivider-9.glb",
+      "quality": {
+        "high": "assets/models/botanicalDivider-9.glb",
+        "medium": "assets/models/botanicalDivider-9.glb",
+        "low": "assets/models/botanicalDivider-9.glb"
+      },
+      "bounds": {
+        "min": [
+          -1.191715121269226,
+          1.4901161207725444e-10,
+          -0.38492462038993835
+        ],
+        "max": [
+          1.0689111948013306,
+          1.5844365358352661,
+          0.4075040817260742
+        ],
+        "size": [
+          2.2606263160705566,
+          1.5844365356862544,
+          0.7924287021160126
+        ]
+      },
+      "bytes": {
+        "production": 3018760,
+        "proxy": 2757504
+      }
+    },
+    {
+      "assetId": "botanicalDivider",
+      "variant": 10,
+      "label": "10 / Графіт · відкрита полиця",
+      "category": "separators",
+      "placement": "floor",
+      "dimensions": [
+        2,
+        1.59,
+        0.48
+      ],
+      "materials": [
+        {
+          "id": "oak",
+          "label": "Натуральний дуб",
+          "color": "#b88e60",
+          "surface": "wood"
+        },
+        {
+          "id": "walnut",
+          "label": "Темний горіх",
+          "color": "#604533",
+          "surface": "wood"
+        },
+        {
+          "id": "graphite",
+          "label": "Матовий графіт",
+          "color": "#30383d",
+          "surface": "metal"
+        },
+        {
+          "id": "terracotta",
+          "label": "Теракотовий метал",
+          "color": "#a7674b",
+          "surface": "metal"
+        },
+        {
+          "id": "white",
+          "label": "Теплий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієвий",
+          "color": "#819183",
+          "surface": "plastic"
+        }
+      ],
+      "production": "assets/models/botanicalDivider-10.glb",
+      "proxy": "assets/proxies/botanicalDivider-10.glb",
+      "quality": {
+        "high": "assets/models/botanicalDivider-10.glb",
+        "medium": "assets/models/botanicalDivider-10.glb",
+        "low": "assets/models/botanicalDivider-10.glb"
+      },
+      "bounds": {
+        "min": [
+          -1.191715121269226,
+          1.4901161207725444e-10,
+          -0.38492462038993835
+        ],
+        "max": [
+          1.0689111948013306,
+          1.5844365358352661,
+          0.4075040817260742
+        ],
+        "size": [
+          2.2606263160705566,
+          1.5844365356862544,
+          0.7924287021160126
+        ]
+      },
+      "bytes": {
+        "production": 3017324,
+        "proxy": 2754520
+      }
+    },
+    {
+      "assetId": "botanicalDivider",
+      "variant": 11,
+      "label": "11 / Світлий мінімалізм",
+      "category": "separators",
+      "placement": "floor",
+      "dimensions": [
+        2,
+        1.59,
+        0.48
+      ],
+      "materials": [
+        {
+          "id": "oak",
+          "label": "Натуральний дуб",
+          "color": "#b88e60",
+          "surface": "wood"
+        },
+        {
+          "id": "walnut",
+          "label": "Темний горіх",
+          "color": "#604533",
+          "surface": "wood"
+        },
+        {
+          "id": "graphite",
+          "label": "Матовий графіт",
+          "color": "#30383d",
+          "surface": "metal"
+        },
+        {
+          "id": "terracotta",
+          "label": "Теракотовий метал",
+          "color": "#a7674b",
+          "surface": "metal"
+        },
+        {
+          "id": "white",
+          "label": "Теплий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієвий",
+          "color": "#819183",
+          "surface": "plastic"
+        }
+      ],
+      "production": "assets/models/botanicalDivider-11.glb",
+      "proxy": "assets/proxies/botanicalDivider-11.glb",
+      "quality": {
+        "high": "assets/models/botanicalDivider-11.glb",
+        "medium": "assets/models/botanicalDivider-11.glb",
+        "low": "assets/models/botanicalDivider-11.glb"
+      },
+      "bounds": {
+        "min": [
+          -1.191715121269226,
+          1.4901161207725444e-10,
+          -0.38492462038993835
+        ],
+        "max": [
+          1.0689111948013306,
+          1.5844365358352661,
+          0.4075040817260742
+        ],
+        "size": [
+          2.2606263160705566,
+          1.5844365356862544,
+          0.7924287021160126
+        ]
+      },
+      "bytes": {
+        "production": 3010780,
+        "proxy": 2751620
+      }
+    },
+    {
+      "assetId": "botanicalDivider",
+      "variant": 12,
+      "label": "12 / Рейки та зелень",
+      "category": "separators",
+      "placement": "floor",
+      "dimensions": [
+        2,
+        1.59,
+        0.48
+      ],
+      "materials": [
+        {
+          "id": "oak",
+          "label": "Натуральний дуб",
+          "color": "#b88e60",
+          "surface": "wood"
+        },
+        {
+          "id": "walnut",
+          "label": "Темний горіх",
+          "color": "#604533",
+          "surface": "wood"
+        },
+        {
+          "id": "graphite",
+          "label": "Матовий графіт",
+          "color": "#30383d",
+          "surface": "metal"
+        },
+        {
+          "id": "terracotta",
+          "label": "Теракотовий метал",
+          "color": "#a7674b",
+          "surface": "metal"
+        },
+        {
+          "id": "white",
+          "label": "Теплий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієвий",
+          "color": "#819183",
+          "surface": "plastic"
+        }
+      ],
+      "production": "assets/models/botanicalDivider-12.glb",
+      "proxy": "assets/proxies/botanicalDivider-12.glb",
+      "quality": {
+        "high": "assets/models/botanicalDivider-12.glb",
+        "medium": "assets/models/botanicalDivider-12.glb",
+        "low": "assets/models/botanicalDivider-12.glb"
+      },
+      "bounds": {
+        "min": [
+          -1.191715121269226,
+          1.4901161207725444e-10,
+          -0.38492462038993835
+        ],
+        "max": [
+          1.0689111948013306,
+          1.5844365358352661,
+          0.4075040817260742
+        ],
+        "size": [
+          2.2606263160705566,
+          1.5844365356862544,
+          0.7924287021160126
+        ]
+      },
+      "bytes": {
+        "production": 3016520,
+        "proxy": 2755268
+      }
+    },
+    {
+      "assetId": "botanicalDivider",
+      "variant": 13,
+      "label": "13 / Теплий камінь · ніша",
+      "category": "separators",
+      "placement": "floor",
+      "dimensions": [
+        2,
+        1.59,
+        0.48
+      ],
+      "materials": [
+        {
+          "id": "oak",
+          "label": "Натуральний дуб",
+          "color": "#b88e60",
+          "surface": "wood"
+        },
+        {
+          "id": "walnut",
+          "label": "Темний горіх",
+          "color": "#604533",
+          "surface": "wood"
+        },
+        {
+          "id": "graphite",
+          "label": "Матовий графіт",
+          "color": "#30383d",
+          "surface": "metal"
+        },
+        {
+          "id": "terracotta",
+          "label": "Теракотовий метал",
+          "color": "#a7674b",
+          "surface": "metal"
+        },
+        {
+          "id": "white",
+          "label": "Теплий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієвий",
+          "color": "#819183",
+          "surface": "plastic"
+        }
+      ],
+      "production": "assets/models/botanicalDivider-13.glb",
+      "proxy": "assets/proxies/botanicalDivider-13.glb",
+      "quality": {
+        "high": "assets/models/botanicalDivider-13.glb",
+        "medium": "assets/models/botanicalDivider-13.glb",
+        "low": "assets/models/botanicalDivider-13.glb"
+      },
+      "bounds": {
+        "min": [
+          -1.191715121269226,
+          1.4901161207725444e-10,
+          -0.38492462038993835
+        ],
+        "max": [
+          1.0689111948013306,
+          1.5844365358352661,
+          0.4075040817260742
+        ],
+        "size": [
+          2.2606263160705566,
+          1.5844365356862544,
+          0.7924287021160126
+        ]
+      },
+      "bytes": {
+        "production": 3017432,
+        "proxy": 2754628
+      }
+    },
+    {
+      "assetId": "botanicalDivider",
+      "variant": 14,
+      "label": "14 / Компактна тумба з кашпо · 120 см",
+      "category": "separators",
+      "placement": "floor",
+      "dimensions": [
+        1.2,
+        1.59,
+        0.48
+      ],
+      "materials": [
+        {
+          "id": "oak",
+          "label": "Натуральний дуб",
+          "color": "#b88e60",
+          "surface": "wood"
+        },
+        {
+          "id": "walnut",
+          "label": "Темний горіх",
+          "color": "#604533",
+          "surface": "wood"
+        },
+        {
+          "id": "graphite",
+          "label": "Матовий графіт",
+          "color": "#30383d",
+          "surface": "metal"
+        },
+        {
+          "id": "terracotta",
+          "label": "Теракотовий метал",
+          "color": "#a7674b",
+          "surface": "metal"
+        },
+        {
+          "id": "white",
+          "label": "Теплий білий",
+          "color": "#e3e2dc",
+          "surface": "plastic"
+        },
+        {
+          "id": "sage",
+          "label": "Шавлієвий",
+          "color": "#819183",
+          "surface": "plastic"
+        }
+      ],
+      "production": "assets/models/botanicalDivider-14.glb",
+      "proxy": "assets/proxies/botanicalDivider-14.glb",
+      "quality": {
+        "high": "assets/models/botanicalDivider-14.glb",
+        "medium": "assets/models/botanicalDivider-14.glb",
+        "low": "assets/models/botanicalDivider-14.glb"
+      },
+      "bounds": {
+        "min": [
+          -0.7845436155796052,
+          1.4901161207725444e-10,
+          -0.38492462038993835
+        ],
+        "max": [
+          0.6740200817584991,
+          1.5844365358352661,
+          0.4075040817260742
+        ],
+        "size": [
+          1.4585636973381044,
+          1.5844365356862544,
+          0.7924287021160126
+        ]
+      },
+      "bytes": {
+        "production": 3013016,
+        "proxy": 2754004
       }
     }
   ]

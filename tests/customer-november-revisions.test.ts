@@ -1,6 +1,8 @@
 import {beforeAll,describe,it,expect} from 'vitest';
 import {readFileSync} from 'node:fs';
 import {BUILTIN_PRESETS,HALL_PRESETS} from '../src/catalog/presets';
+import {getVariant} from '../src/catalog/catalog';
+import {Box3,Mesh} from 'three';
 import {createAssetObject,disposeAssetObject} from '../src/catalog/geometry';
 import {wallGraphicFor} from '../src/core/wall-graphics';
 import {configureSpace} from '../src/core/space';
@@ -26,7 +28,9 @@ describe('Customer brand and room revisions',()=>{
   for(const p of meeting){
    const m=p.objects.filter(o=>o.regionId==='meeting');m.forEach(o=>types.add(o.assetId));
    expect(m.some(o=>o.assetId==='windowBar'),p.name).toBe(true);
-   expect(m.some(o=>o.assetId==='workDesk'),p.name).toBe(true);
+   const table=m.find(o=>o.assetId==='meetingTable');expect(table,p.name).toBeDefined();expect(table!.variant,p.name).toBeGreaterThanOrEqual(4);expect(getVariant('meetingTable',table!.variant).dimensions[0],p.name).toBeGreaterThanOrEqual(2.2);
+   const chairs=m.filter(o=>o.assetId==='chair');expect(chairs.length,p.name).toBeGreaterThanOrEqual(4);
+   for(const chair of chairs){const dx=table!.position[0]-chair.position[0],dz=table!.position[2]-chair.position[2];expect((Math.sin(chair.rotation)*dx+Math.cos(chair.rotation)*dz)/Math.hypot(dx,dz),p.name).toBeGreaterThan(.75);}
    expect(m.some(o=>o.assetId==='board'&&o.variant===1&&o.wallId==='near'),p.name).toBe(true);
    expect(m.some(o=>o.assetId==='rug'),p.name).toBe(false);
    expect(m.length,p.name).toBeGreaterThanOrEqual(8);
@@ -39,8 +43,15 @@ describe('Customer brand and room revisions',()=>{
   expect(murals.size).toBe(6);expect(types.size).toBeGreaterThanOrEqual(7);
   expect(sofaCount).toBeGreaterThan(0);expect(sofaModels.size).toBeGreaterThanOrEqual(2);expect(sofaLayouts.size).toBeGreaterThanOrEqual(3);
   expect(logoCount).toBeGreaterThan(0);expect(logoCount).toBeLessThan(meeting.length);
-  for(const p of HALL_PRESETS.slice(8)){expect(p.objects.filter(o=>o.assetId==='doorPlaque')).toHaveLength(14);expect(p.objects.filter(o=>o.assetId==='doorPlaque').every(o=>o.variant===1)).toBe(true);expect(p.objects.filter(o=>o.assetId==='brandDoorPanel').every(o=>o.variant===3)).toBe(true);expect(p.objects.filter(o=>o.assetId==='botanicalDivider').every(o=>o.variant===7)).toBe(true);}
+  for(const p of HALL_PRESETS.slice(8)){expect(p.objects.filter(o=>o.assetId==='doorPlaque')).toHaveLength(14);expect(p.objects.filter(o=>o.assetId==='doorPlaque').every(o=>o.variant===1)).toBe(true);expect(p.objects.filter(o=>o.assetId==='brandDoorPanel').every(o=>o.variant===3)).toBe(true);const dividers=p.objects.filter(o=>o.assetId==='botanicalDivider');expect(dividers).toHaveLength(5);expect(dividers.every(o=>o.variant>=8&&o.variant<=14)).toBe(true);expect(new Set(dividers.map(o=>o.variant)).size).toBeGreaterThanOrEqual(4);expect(p.objects.some(o=>o.id==='hall-plant-east')).toBe(false);}
   for(const p of [...BUILTIN_PRESETS,...HALL_PRESETS])expect(validateScene(p.objects,getPlacementRoom),p.presetId).toEqual([]);
+ });
+ it('keeps long conference tabletops clear of supports in production and editor geometry',()=>{
+  for(const variant of [4,5,6])for(const mode of ['archviz','editor'] as const){
+   const group=createAssetObject('meetingTable',variant,'white',mode);group.updateMatrixWorld(true);const bounds=new Box3().setFromObject(group),dimensions=getVariant('meetingTable',variant).dimensions;
+   expect(bounds.max.y).toBeCloseTo(dimensions[1],3);expect(bounds.min.y).toBeCloseTo(0,3);expect(bounds.max.x-bounds.min.x).toBeCloseTo(dimensions[0],2);
+   let support=false;group.traverse(node=>{if(node instanceof Mesh&&(Array.isArray(node.material)?node.material:[node.material]).some(m=>m.userData.surface==='metal')){support=true;expect(new Box3().setFromObject(node).max.y).toBeLessThanOrEqual(dimensions[1]-.035);}});expect(support).toBe(true);disposeAssetObject(group);
+  }
  });
  it('models a 102 cm planter with cabinet, shelves, doors and real foliage',()=>{
   const group=createAssetObject('botanicalDivider',7,'white');const names:string[]=[];group.traverse(o=>names.push(o.name));expect(names).toContain('StoragePlanter_Shelf');expect(names.filter(n=>n==='StoragePlanter_Door')).toHaveLength(4);expect(names).toContain('Planter_pothos_leaves');expect(group.userData.planterRimHeight).toBeCloseTo(1.025);disposeAssetObject(group);

@@ -801,21 +801,21 @@
       {
         "id": "hall-entrance-graphic-1",
         "assetId": "corporateMotif",
-        "variant": 11,
+        "variant": 1,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -1.56,
-          2.5,
+          -1.54,
+          2.32,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 1.6,
-          "height": 0.34,
+          "width": 1.48,
+          "height": 0.225,
           "angle": 0,
-          "opacity": 0.88,
+          "opacity": 0.85,
           "layer": 0,
           "color": "#0b30c1"
         }
@@ -823,110 +823,88 @@
       {
         "id": "hall-entrance-graphic-2",
         "assetId": "corporateMotif",
-        "variant": 6,
+        "variant": 2,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
           -1.95,
-          1.58,
+          1.53,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.9,
+          "width": 0.9,
+          "height": 0.9,
+          "angle": 0,
+          "opacity": 0.65,
           "layer": 1,
-          "color": "#1e2420"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-3",
-        "assetId": "corporateMotif",
-        "variant": 9,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -0.9,
-          1.58,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.8,
-          "layer": 2,
           "color": "#a2b8fe"
         }
       },
       {
-        "id": "hall-entrance-graphic-4",
+        "id": "hall-entrance-graphic-3",
         "assetId": "corporateMotif",
         "variant": 5,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -2.08,
-          0.7,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": 0,
-          "opacity": 0.88,
-          "layer": 3,
-          "color": "#0b30c1"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-5",
-        "assetId": "corporateMotif",
-        "variant": 4,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -1.5,
-          0.7,
+          -0.91,
+          1.69,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
           "width": 0.38,
           "height": 0.38,
-          "angle": 0.13962634015954636,
-          "opacity": 0.68,
-          "layer": 4,
-          "color": "#a0ff3d"
+          "angle": 0,
+          "opacity": 0.93,
+          "layer": 2,
+          "color": "#0b30c1"
         }
       },
       {
-        "id": "hall-entrance-graphic-6",
+        "id": "hall-entrance-graphic-4",
         "assetId": "corporateMotif",
-        "variant": 7,
+        "variant": 6,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -0.92,
-          0.7,
+          -0.91,
+          1.16,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": -0.13962634015954636,
-          "opacity": 0.72,
-          "layer": 5,
+          "width": 0.3,
+          "height": 0.3,
+          "angle": 0,
+          "opacity": 0.9,
+          "layer": 3,
+          "color": "#1e2420"
+        }
+      },
+      {
+        "id": "hall-entrance-graphic-5",
+        "assetId": "corporateMotif",
+        "variant": 1,
+        "material": "eds-blue",
+        "regionId": "hall",
+        "wallId": "wall-21",
+        "position": [
+          -1.55,
+          0.77,
+          -3.15709045
+        ],
+        "rotation": 3.141592653589793,
+        "graphic": {
+          "width": 0.85,
+          "height": 0.129,
+          "angle": 0,
+          "opacity": 0.65,
+          "layer": 4,
           "color": "#1e2420"
         }
       },
@@ -2157,21 +2135,21 @@
       {
         "id": "hall-entrance-graphic-1",
         "assetId": "corporateMotif",
-        "variant": 11,
+        "variant": 1,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -1.56,
-          2.5,
+          -1.54,
+          2.32,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 1.6,
-          "height": 0.34,
+          "width": 1.48,
+          "height": 0.225,
           "angle": 0,
-          "opacity": 0.88,
+          "opacity": 0.85,
           "layer": 0,
           "color": "#0b30c1"
         }
@@ -2179,110 +2157,88 @@
       {
         "id": "hall-entrance-graphic-2",
         "assetId": "corporateMotif",
-        "variant": 6,
+        "variant": 2,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
           -1.95,
-          1.58,
+          1.53,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.9,
+          "width": 0.9,
+          "height": 0.9,
+          "angle": 0,
+          "opacity": 0.65,
           "layer": 1,
-          "color": "#1e2420"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-3",
-        "assetId": "corporateMotif",
-        "variant": 9,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -0.9,
-          1.58,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.8,
-          "layer": 2,
           "color": "#a2b8fe"
         }
       },
       {
-        "id": "hall-entrance-graphic-4",
+        "id": "hall-entrance-graphic-3",
         "assetId": "corporateMotif",
         "variant": 5,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -2.08,
-          0.7,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": 0,
-          "opacity": 0.88,
-          "layer": 3,
-          "color": "#0b30c1"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-5",
-        "assetId": "corporateMotif",
-        "variant": 4,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -1.5,
-          0.7,
+          -0.91,
+          1.69,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
           "width": 0.38,
           "height": 0.38,
-          "angle": 0.13962634015954636,
-          "opacity": 0.68,
-          "layer": 4,
-          "color": "#a0ff3d"
+          "angle": 0,
+          "opacity": 0.93,
+          "layer": 2,
+          "color": "#0b30c1"
         }
       },
       {
-        "id": "hall-entrance-graphic-6",
+        "id": "hall-entrance-graphic-4",
         "assetId": "corporateMotif",
-        "variant": 7,
+        "variant": 6,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -0.92,
-          0.7,
+          -0.91,
+          1.16,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": -0.13962634015954636,
-          "opacity": 0.72,
-          "layer": 5,
+          "width": 0.3,
+          "height": 0.3,
+          "angle": 0,
+          "opacity": 0.9,
+          "layer": 3,
+          "color": "#1e2420"
+        }
+      },
+      {
+        "id": "hall-entrance-graphic-5",
+        "assetId": "corporateMotif",
+        "variant": 1,
+        "material": "eds-blue",
+        "regionId": "hall",
+        "wallId": "wall-21",
+        "position": [
+          -1.55,
+          0.77,
+          -3.15709045
+        ],
+        "rotation": 3.141592653589793,
+        "graphic": {
+          "width": 0.85,
+          "height": 0.129,
+          "angle": 0,
+          "opacity": 0.65,
+          "layer": 4,
           "color": "#1e2420"
         }
       },
@@ -3493,21 +3449,21 @@
       {
         "id": "hall-entrance-graphic-1",
         "assetId": "corporateMotif",
-        "variant": 11,
+        "variant": 1,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -1.56,
-          2.5,
+          -1.54,
+          2.32,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 1.6,
-          "height": 0.34,
+          "width": 1.48,
+          "height": 0.225,
           "angle": 0,
-          "opacity": 0.88,
+          "opacity": 0.85,
           "layer": 0,
           "color": "#0b30c1"
         }
@@ -3515,110 +3471,88 @@
       {
         "id": "hall-entrance-graphic-2",
         "assetId": "corporateMotif",
-        "variant": 6,
+        "variant": 2,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
           -1.95,
-          1.58,
+          1.53,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.9,
+          "width": 0.9,
+          "height": 0.9,
+          "angle": 0,
+          "opacity": 0.65,
           "layer": 1,
-          "color": "#1e2420"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-3",
-        "assetId": "corporateMotif",
-        "variant": 9,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -0.9,
-          1.58,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.8,
-          "layer": 2,
           "color": "#a2b8fe"
         }
       },
       {
-        "id": "hall-entrance-graphic-4",
+        "id": "hall-entrance-graphic-3",
         "assetId": "corporateMotif",
         "variant": 5,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -2.08,
-          0.7,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": 0,
-          "opacity": 0.88,
-          "layer": 3,
-          "color": "#0b30c1"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-5",
-        "assetId": "corporateMotif",
-        "variant": 4,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -1.5,
-          0.7,
+          -0.91,
+          1.69,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
           "width": 0.38,
           "height": 0.38,
-          "angle": 0.13962634015954636,
-          "opacity": 0.68,
-          "layer": 4,
-          "color": "#a0ff3d"
+          "angle": 0,
+          "opacity": 0.93,
+          "layer": 2,
+          "color": "#0b30c1"
         }
       },
       {
-        "id": "hall-entrance-graphic-6",
+        "id": "hall-entrance-graphic-4",
         "assetId": "corporateMotif",
-        "variant": 7,
+        "variant": 6,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -0.92,
-          0.7,
+          -0.91,
+          1.16,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": -0.13962634015954636,
-          "opacity": 0.72,
-          "layer": 5,
+          "width": 0.3,
+          "height": 0.3,
+          "angle": 0,
+          "opacity": 0.9,
+          "layer": 3,
+          "color": "#1e2420"
+        }
+      },
+      {
+        "id": "hall-entrance-graphic-5",
+        "assetId": "corporateMotif",
+        "variant": 1,
+        "material": "eds-blue",
+        "regionId": "hall",
+        "wallId": "wall-21",
+        "position": [
+          -1.55,
+          0.77,
+          -3.15709045
+        ],
+        "rotation": 3.141592653589793,
+        "graphic": {
+          "width": 0.85,
+          "height": 0.129,
+          "angle": 0,
+          "opacity": 0.65,
+          "layer": 4,
           "color": "#1e2420"
         }
       },
@@ -4843,21 +4777,21 @@
       {
         "id": "hall-entrance-graphic-1",
         "assetId": "corporateMotif",
-        "variant": 11,
+        "variant": 1,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -1.56,
-          2.5,
+          -1.54,
+          2.32,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 1.6,
-          "height": 0.34,
+          "width": 1.48,
+          "height": 0.225,
           "angle": 0,
-          "opacity": 0.88,
+          "opacity": 0.85,
           "layer": 0,
           "color": "#0b30c1"
         }
@@ -4865,110 +4799,88 @@
       {
         "id": "hall-entrance-graphic-2",
         "assetId": "corporateMotif",
-        "variant": 6,
+        "variant": 2,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
           -1.95,
-          1.58,
+          1.53,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.9,
+          "width": 0.9,
+          "height": 0.9,
+          "angle": 0,
+          "opacity": 0.65,
           "layer": 1,
-          "color": "#1e2420"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-3",
-        "assetId": "corporateMotif",
-        "variant": 9,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -0.9,
-          1.58,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.8,
-          "layer": 2,
           "color": "#a2b8fe"
         }
       },
       {
-        "id": "hall-entrance-graphic-4",
+        "id": "hall-entrance-graphic-3",
         "assetId": "corporateMotif",
         "variant": 5,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -2.08,
-          0.7,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": 0,
-          "opacity": 0.88,
-          "layer": 3,
-          "color": "#0b30c1"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-5",
-        "assetId": "corporateMotif",
-        "variant": 4,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -1.5,
-          0.7,
+          -0.91,
+          1.69,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
           "width": 0.38,
           "height": 0.38,
-          "angle": 0.13962634015954636,
-          "opacity": 0.68,
-          "layer": 4,
-          "color": "#a0ff3d"
+          "angle": 0,
+          "opacity": 0.93,
+          "layer": 2,
+          "color": "#0b30c1"
         }
       },
       {
-        "id": "hall-entrance-graphic-6",
+        "id": "hall-entrance-graphic-4",
         "assetId": "corporateMotif",
-        "variant": 7,
+        "variant": 6,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -0.92,
-          0.7,
+          -0.91,
+          1.16,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": -0.13962634015954636,
-          "opacity": 0.72,
-          "layer": 5,
+          "width": 0.3,
+          "height": 0.3,
+          "angle": 0,
+          "opacity": 0.9,
+          "layer": 3,
+          "color": "#1e2420"
+        }
+      },
+      {
+        "id": "hall-entrance-graphic-5",
+        "assetId": "corporateMotif",
+        "variant": 1,
+        "material": "eds-blue",
+        "regionId": "hall",
+        "wallId": "wall-21",
+        "position": [
+          -1.55,
+          0.77,
+          -3.15709045
+        ],
+        "rotation": 3.141592653589793,
+        "graphic": {
+          "width": 0.85,
+          "height": 0.129,
+          "angle": 0,
+          "opacity": 0.65,
+          "layer": 4,
           "color": "#1e2420"
         }
       },
@@ -6193,21 +6105,21 @@
       {
         "id": "hall-entrance-graphic-1",
         "assetId": "corporateMotif",
-        "variant": 11,
+        "variant": 1,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -1.56,
-          2.5,
+          -1.54,
+          2.32,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 1.6,
-          "height": 0.34,
+          "width": 1.48,
+          "height": 0.225,
           "angle": 0,
-          "opacity": 0.88,
+          "opacity": 0.85,
           "layer": 0,
           "color": "#0b30c1"
         }
@@ -6215,110 +6127,88 @@
       {
         "id": "hall-entrance-graphic-2",
         "assetId": "corporateMotif",
-        "variant": 6,
+        "variant": 2,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
           -1.95,
-          1.58,
+          1.53,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.9,
+          "width": 0.9,
+          "height": 0.9,
+          "angle": 0,
+          "opacity": 0.65,
           "layer": 1,
-          "color": "#1e2420"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-3",
-        "assetId": "corporateMotif",
-        "variant": 9,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -0.9,
-          1.58,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.8,
-          "layer": 2,
           "color": "#a2b8fe"
         }
       },
       {
-        "id": "hall-entrance-graphic-4",
+        "id": "hall-entrance-graphic-3",
         "assetId": "corporateMotif",
         "variant": 5,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -2.08,
-          0.7,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": 0,
-          "opacity": 0.88,
-          "layer": 3,
-          "color": "#0b30c1"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-5",
-        "assetId": "corporateMotif",
-        "variant": 4,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -1.5,
-          0.7,
+          -0.91,
+          1.69,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
           "width": 0.38,
           "height": 0.38,
-          "angle": 0.13962634015954636,
-          "opacity": 0.68,
-          "layer": 4,
-          "color": "#a0ff3d"
+          "angle": 0,
+          "opacity": 0.93,
+          "layer": 2,
+          "color": "#0b30c1"
         }
       },
       {
-        "id": "hall-entrance-graphic-6",
+        "id": "hall-entrance-graphic-4",
         "assetId": "corporateMotif",
-        "variant": 7,
+        "variant": 6,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -0.92,
-          0.7,
+          -0.91,
+          1.16,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": -0.13962634015954636,
-          "opacity": 0.72,
-          "layer": 5,
+          "width": 0.3,
+          "height": 0.3,
+          "angle": 0,
+          "opacity": 0.9,
+          "layer": 3,
+          "color": "#1e2420"
+        }
+      },
+      {
+        "id": "hall-entrance-graphic-5",
+        "assetId": "corporateMotif",
+        "variant": 1,
+        "material": "eds-blue",
+        "regionId": "hall",
+        "wallId": "wall-21",
+        "position": [
+          -1.55,
+          0.77,
+          -3.15709045
+        ],
+        "rotation": 3.141592653589793,
+        "graphic": {
+          "width": 0.85,
+          "height": 0.129,
+          "angle": 0,
+          "opacity": 0.65,
+          "layer": 4,
           "color": "#1e2420"
         }
       },
@@ -7542,21 +7432,21 @@
       {
         "id": "hall-entrance-graphic-1",
         "assetId": "corporateMotif",
-        "variant": 11,
+        "variant": 1,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -1.56,
-          2.5,
+          -1.54,
+          2.32,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 1.6,
-          "height": 0.34,
+          "width": 1.48,
+          "height": 0.225,
           "angle": 0,
-          "opacity": 0.88,
+          "opacity": 0.85,
           "layer": 0,
           "color": "#0b30c1"
         }
@@ -7564,110 +7454,88 @@
       {
         "id": "hall-entrance-graphic-2",
         "assetId": "corporateMotif",
-        "variant": 6,
+        "variant": 2,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
           -1.95,
-          1.58,
+          1.53,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.9,
+          "width": 0.9,
+          "height": 0.9,
+          "angle": 0,
+          "opacity": 0.65,
           "layer": 1,
-          "color": "#1e2420"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-3",
-        "assetId": "corporateMotif",
-        "variant": 9,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -0.9,
-          1.58,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.8,
-          "layer": 2,
           "color": "#a2b8fe"
         }
       },
       {
-        "id": "hall-entrance-graphic-4",
+        "id": "hall-entrance-graphic-3",
         "assetId": "corporateMotif",
         "variant": 5,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -2.08,
-          0.7,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": 0,
-          "opacity": 0.88,
-          "layer": 3,
-          "color": "#0b30c1"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-5",
-        "assetId": "corporateMotif",
-        "variant": 4,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -1.5,
-          0.7,
+          -0.91,
+          1.69,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
           "width": 0.38,
           "height": 0.38,
-          "angle": 0.13962634015954636,
-          "opacity": 0.68,
-          "layer": 4,
-          "color": "#a0ff3d"
+          "angle": 0,
+          "opacity": 0.93,
+          "layer": 2,
+          "color": "#0b30c1"
         }
       },
       {
-        "id": "hall-entrance-graphic-6",
+        "id": "hall-entrance-graphic-4",
         "assetId": "corporateMotif",
-        "variant": 7,
+        "variant": 6,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -0.92,
-          0.7,
+          -0.91,
+          1.16,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": -0.13962634015954636,
-          "opacity": 0.72,
-          "layer": 5,
+          "width": 0.3,
+          "height": 0.3,
+          "angle": 0,
+          "opacity": 0.9,
+          "layer": 3,
+          "color": "#1e2420"
+        }
+      },
+      {
+        "id": "hall-entrance-graphic-5",
+        "assetId": "corporateMotif",
+        "variant": 1,
+        "material": "eds-blue",
+        "regionId": "hall",
+        "wallId": "wall-21",
+        "position": [
+          -1.55,
+          0.77,
+          -3.15709045
+        ],
+        "rotation": 3.141592653589793,
+        "graphic": {
+          "width": 0.85,
+          "height": 0.129,
+          "angle": 0,
+          "opacity": 0.65,
+          "layer": 4,
           "color": "#1e2420"
         }
       },
@@ -8905,21 +8773,21 @@
       {
         "id": "hall-entrance-graphic-1",
         "assetId": "corporateMotif",
-        "variant": 11,
+        "variant": 1,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -1.56,
-          2.5,
+          -1.54,
+          2.32,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 1.6,
-          "height": 0.34,
+          "width": 1.48,
+          "height": 0.225,
           "angle": 0,
-          "opacity": 0.88,
+          "opacity": 0.85,
           "layer": 0,
           "color": "#0b30c1"
         }
@@ -8927,110 +8795,88 @@
       {
         "id": "hall-entrance-graphic-2",
         "assetId": "corporateMotif",
-        "variant": 6,
+        "variant": 2,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
           -1.95,
-          1.58,
+          1.53,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.9,
+          "width": 0.9,
+          "height": 0.9,
+          "angle": 0,
+          "opacity": 0.65,
           "layer": 1,
-          "color": "#1e2420"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-3",
-        "assetId": "corporateMotif",
-        "variant": 9,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -0.9,
-          1.58,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.8,
-          "layer": 2,
           "color": "#a2b8fe"
         }
       },
       {
-        "id": "hall-entrance-graphic-4",
+        "id": "hall-entrance-graphic-3",
         "assetId": "corporateMotif",
         "variant": 5,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -2.08,
-          0.7,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": 0,
-          "opacity": 0.88,
-          "layer": 3,
-          "color": "#0b30c1"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-5",
-        "assetId": "corporateMotif",
-        "variant": 4,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -1.5,
-          0.7,
+          -0.91,
+          1.69,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
           "width": 0.38,
           "height": 0.38,
-          "angle": 0.13962634015954636,
-          "opacity": 0.68,
-          "layer": 4,
-          "color": "#a0ff3d"
+          "angle": 0,
+          "opacity": 0.93,
+          "layer": 2,
+          "color": "#0b30c1"
         }
       },
       {
-        "id": "hall-entrance-graphic-6",
+        "id": "hall-entrance-graphic-4",
         "assetId": "corporateMotif",
-        "variant": 7,
+        "variant": 6,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -0.92,
-          0.7,
+          -0.91,
+          1.16,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": -0.13962634015954636,
-          "opacity": 0.72,
-          "layer": 5,
+          "width": 0.3,
+          "height": 0.3,
+          "angle": 0,
+          "opacity": 0.9,
+          "layer": 3,
+          "color": "#1e2420"
+        }
+      },
+      {
+        "id": "hall-entrance-graphic-5",
+        "assetId": "corporateMotif",
+        "variant": 1,
+        "material": "eds-blue",
+        "regionId": "hall",
+        "wallId": "wall-21",
+        "position": [
+          -1.55,
+          0.77,
+          -3.15709045
+        ],
+        "rotation": 3.141592653589793,
+        "graphic": {
+          "width": 0.85,
+          "height": 0.129,
+          "angle": 0,
+          "opacity": 0.65,
+          "layer": 4,
           "color": "#1e2420"
         }
       },
@@ -10281,21 +10127,21 @@
       {
         "id": "hall-entrance-graphic-1",
         "assetId": "corporateMotif",
-        "variant": 11,
+        "variant": 1,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -1.56,
-          2.5,
+          -1.54,
+          2.32,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 1.6,
-          "height": 0.34,
+          "width": 1.48,
+          "height": 0.225,
           "angle": 0,
-          "opacity": 0.88,
+          "opacity": 0.85,
           "layer": 0,
           "color": "#0b30c1"
         }
@@ -10303,110 +10149,88 @@
       {
         "id": "hall-entrance-graphic-2",
         "assetId": "corporateMotif",
-        "variant": 6,
+        "variant": 2,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
           -1.95,
-          1.58,
+          1.53,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.9,
+          "width": 0.9,
+          "height": 0.9,
+          "angle": 0,
+          "opacity": 0.65,
           "layer": 1,
-          "color": "#1e2420"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-3",
-        "assetId": "corporateMotif",
-        "variant": 9,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -0.9,
-          1.58,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.8,
-          "layer": 2,
           "color": "#a2b8fe"
         }
       },
       {
-        "id": "hall-entrance-graphic-4",
+        "id": "hall-entrance-graphic-3",
         "assetId": "corporateMotif",
         "variant": 5,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -2.08,
-          0.7,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": 0,
-          "opacity": 0.88,
-          "layer": 3,
-          "color": "#0b30c1"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-5",
-        "assetId": "corporateMotif",
-        "variant": 4,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -1.5,
-          0.7,
+          -0.91,
+          1.69,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
           "width": 0.38,
           "height": 0.38,
-          "angle": 0.13962634015954636,
-          "opacity": 0.68,
-          "layer": 4,
-          "color": "#a0ff3d"
+          "angle": 0,
+          "opacity": 0.93,
+          "layer": 2,
+          "color": "#0b30c1"
         }
       },
       {
-        "id": "hall-entrance-graphic-6",
+        "id": "hall-entrance-graphic-4",
         "assetId": "corporateMotif",
-        "variant": 7,
+        "variant": 6,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -0.92,
-          0.7,
+          -0.91,
+          1.16,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": -0.13962634015954636,
-          "opacity": 0.72,
-          "layer": 5,
+          "width": 0.3,
+          "height": 0.3,
+          "angle": 0,
+          "opacity": 0.9,
+          "layer": 3,
+          "color": "#1e2420"
+        }
+      },
+      {
+        "id": "hall-entrance-graphic-5",
+        "assetId": "corporateMotif",
+        "variant": 1,
+        "material": "eds-blue",
+        "regionId": "hall",
+        "wallId": "wall-21",
+        "position": [
+          -1.55,
+          0.77,
+          -3.15709045
+        ],
+        "rotation": 3.141592653589793,
+        "graphic": {
+          "width": 0.85,
+          "height": 0.129,
+          "angle": 0,
+          "opacity": 0.65,
+          "layer": 4,
           "color": "#1e2420"
         }
       },
@@ -11630,21 +11454,21 @@
       {
         "id": "hall-entrance-graphic-1",
         "assetId": "corporateMotif",
-        "variant": 11,
+        "variant": 1,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -1.56,
-          2.5,
+          -1.54,
+          2.32,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 1.6,
-          "height": 0.34,
+          "width": 1.48,
+          "height": 0.225,
           "angle": 0,
-          "opacity": 0.88,
+          "opacity": 0.85,
           "layer": 0,
           "color": "#0b30c1"
         }
@@ -11652,110 +11476,88 @@
       {
         "id": "hall-entrance-graphic-2",
         "assetId": "corporateMotif",
-        "variant": 6,
+        "variant": 2,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
           -1.95,
-          1.58,
+          1.53,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.9,
+          "width": 0.9,
+          "height": 0.9,
+          "angle": 0,
+          "opacity": 0.65,
           "layer": 1,
-          "color": "#1e2420"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-3",
-        "assetId": "corporateMotif",
-        "variant": 9,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -0.9,
-          1.58,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.8,
-          "layer": 2,
           "color": "#a2b8fe"
         }
       },
       {
-        "id": "hall-entrance-graphic-4",
+        "id": "hall-entrance-graphic-3",
         "assetId": "corporateMotif",
         "variant": 5,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -2.08,
-          0.7,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": 0,
-          "opacity": 0.88,
-          "layer": 3,
-          "color": "#0b30c1"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-5",
-        "assetId": "corporateMotif",
-        "variant": 4,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -1.5,
-          0.7,
+          -0.91,
+          1.69,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
           "width": 0.38,
           "height": 0.38,
-          "angle": 0.13962634015954636,
-          "opacity": 0.68,
-          "layer": 4,
-          "color": "#a0ff3d"
+          "angle": 0,
+          "opacity": 0.93,
+          "layer": 2,
+          "color": "#0b30c1"
         }
       },
       {
-        "id": "hall-entrance-graphic-6",
+        "id": "hall-entrance-graphic-4",
         "assetId": "corporateMotif",
-        "variant": 7,
+        "variant": 6,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -0.92,
-          0.7,
+          -0.91,
+          1.16,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": -0.13962634015954636,
-          "opacity": 0.72,
-          "layer": 5,
+          "width": 0.3,
+          "height": 0.3,
+          "angle": 0,
+          "opacity": 0.9,
+          "layer": 3,
+          "color": "#1e2420"
+        }
+      },
+      {
+        "id": "hall-entrance-graphic-5",
+        "assetId": "corporateMotif",
+        "variant": 1,
+        "material": "eds-blue",
+        "regionId": "hall",
+        "wallId": "wall-21",
+        "position": [
+          -1.55,
+          0.77,
+          -3.15709045
+        ],
+        "rotation": 3.141592653589793,
+        "graphic": {
+          "width": 0.85,
+          "height": 0.129,
+          "angle": 0,
+          "opacity": 0.65,
+          "layer": 4,
           "color": "#1e2420"
         }
       },
@@ -12980,21 +12782,21 @@
       {
         "id": "hall-entrance-graphic-1",
         "assetId": "corporateMotif",
-        "variant": 11,
+        "variant": 1,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -1.56,
-          2.5,
+          -1.54,
+          2.32,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 1.6,
-          "height": 0.34,
+          "width": 1.48,
+          "height": 0.225,
           "angle": 0,
-          "opacity": 0.88,
+          "opacity": 0.85,
           "layer": 0,
           "color": "#0b30c1"
         }
@@ -13002,110 +12804,88 @@
       {
         "id": "hall-entrance-graphic-2",
         "assetId": "corporateMotif",
-        "variant": 6,
+        "variant": 2,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
           -1.95,
-          1.58,
+          1.53,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.9,
+          "width": 0.9,
+          "height": 0.9,
+          "angle": 0,
+          "opacity": 0.65,
           "layer": 1,
-          "color": "#1e2420"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-3",
-        "assetId": "corporateMotif",
-        "variant": 9,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -0.9,
-          1.58,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.8,
-          "layer": 2,
           "color": "#a2b8fe"
         }
       },
       {
-        "id": "hall-entrance-graphic-4",
+        "id": "hall-entrance-graphic-3",
         "assetId": "corporateMotif",
         "variant": 5,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -2.08,
-          0.7,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": 0,
-          "opacity": 0.88,
-          "layer": 3,
-          "color": "#0b30c1"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-5",
-        "assetId": "corporateMotif",
-        "variant": 4,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -1.5,
-          0.7,
+          -0.91,
+          1.69,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
           "width": 0.38,
           "height": 0.38,
-          "angle": 0.13962634015954636,
-          "opacity": 0.68,
-          "layer": 4,
-          "color": "#a0ff3d"
+          "angle": 0,
+          "opacity": 0.93,
+          "layer": 2,
+          "color": "#0b30c1"
         }
       },
       {
-        "id": "hall-entrance-graphic-6",
+        "id": "hall-entrance-graphic-4",
         "assetId": "corporateMotif",
-        "variant": 7,
+        "variant": 6,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -0.92,
-          0.7,
+          -0.91,
+          1.16,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": -0.13962634015954636,
-          "opacity": 0.72,
-          "layer": 5,
+          "width": 0.3,
+          "height": 0.3,
+          "angle": 0,
+          "opacity": 0.9,
+          "layer": 3,
+          "color": "#1e2420"
+        }
+      },
+      {
+        "id": "hall-entrance-graphic-5",
+        "assetId": "corporateMotif",
+        "variant": 1,
+        "material": "eds-blue",
+        "regionId": "hall",
+        "wallId": "wall-21",
+        "position": [
+          -1.55,
+          0.77,
+          -3.15709045
+        ],
+        "rotation": 3.141592653589793,
+        "graphic": {
+          "width": 0.85,
+          "height": 0.129,
+          "angle": 0,
+          "opacity": 0.65,
+          "layer": 4,
           "color": "#1e2420"
         }
       },
@@ -14343,21 +14123,21 @@
       {
         "id": "hall-entrance-graphic-1",
         "assetId": "corporateMotif",
-        "variant": 11,
+        "variant": 1,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -1.56,
-          2.5,
+          -1.54,
+          2.32,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 1.6,
-          "height": 0.34,
+          "width": 1.48,
+          "height": 0.225,
           "angle": 0,
-          "opacity": 0.88,
+          "opacity": 0.85,
           "layer": 0,
           "color": "#0b30c1"
         }
@@ -14365,110 +14145,88 @@
       {
         "id": "hall-entrance-graphic-2",
         "assetId": "corporateMotif",
-        "variant": 6,
+        "variant": 2,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
           -1.95,
-          1.58,
+          1.53,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.9,
+          "width": 0.9,
+          "height": 0.9,
+          "angle": 0,
+          "opacity": 0.65,
           "layer": 1,
-          "color": "#1e2420"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-3",
-        "assetId": "corporateMotif",
-        "variant": 9,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -0.9,
-          1.58,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.8,
-          "layer": 2,
           "color": "#a2b8fe"
         }
       },
       {
-        "id": "hall-entrance-graphic-4",
+        "id": "hall-entrance-graphic-3",
         "assetId": "corporateMotif",
         "variant": 5,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -2.08,
-          0.7,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": 0,
-          "opacity": 0.88,
-          "layer": 3,
-          "color": "#0b30c1"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-5",
-        "assetId": "corporateMotif",
-        "variant": 4,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -1.5,
-          0.7,
+          -0.91,
+          1.69,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
           "width": 0.38,
           "height": 0.38,
-          "angle": 0.13962634015954636,
-          "opacity": 0.68,
-          "layer": 4,
-          "color": "#a0ff3d"
+          "angle": 0,
+          "opacity": 0.93,
+          "layer": 2,
+          "color": "#0b30c1"
         }
       },
       {
-        "id": "hall-entrance-graphic-6",
+        "id": "hall-entrance-graphic-4",
         "assetId": "corporateMotif",
-        "variant": 7,
+        "variant": 6,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -0.92,
-          0.7,
+          -0.91,
+          1.16,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": -0.13962634015954636,
-          "opacity": 0.72,
-          "layer": 5,
+          "width": 0.3,
+          "height": 0.3,
+          "angle": 0,
+          "opacity": 0.9,
+          "layer": 3,
+          "color": "#1e2420"
+        }
+      },
+      {
+        "id": "hall-entrance-graphic-5",
+        "assetId": "corporateMotif",
+        "variant": 1,
+        "material": "eds-blue",
+        "regionId": "hall",
+        "wallId": "wall-21",
+        "position": [
+          -1.55,
+          0.77,
+          -3.15709045
+        ],
+        "rotation": 3.141592653589793,
+        "graphic": {
+          "width": 0.85,
+          "height": 0.129,
+          "angle": 0,
+          "opacity": 0.65,
+          "layer": 4,
           "color": "#1e2420"
         }
       },
@@ -15692,21 +15450,21 @@
       {
         "id": "hall-entrance-graphic-1",
         "assetId": "corporateMotif",
-        "variant": 11,
+        "variant": 1,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -1.56,
-          2.5,
+          -1.54,
+          2.32,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 1.6,
-          "height": 0.34,
+          "width": 1.48,
+          "height": 0.225,
           "angle": 0,
-          "opacity": 0.88,
+          "opacity": 0.85,
           "layer": 0,
           "color": "#0b30c1"
         }
@@ -15714,110 +15472,88 @@
       {
         "id": "hall-entrance-graphic-2",
         "assetId": "corporateMotif",
-        "variant": 6,
+        "variant": 2,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
           -1.95,
-          1.58,
+          1.53,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.9,
+          "width": 0.9,
+          "height": 0.9,
+          "angle": 0,
+          "opacity": 0.65,
           "layer": 1,
-          "color": "#1e2420"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-3",
-        "assetId": "corporateMotif",
-        "variant": 9,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -0.9,
-          1.58,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.8,
-          "layer": 2,
           "color": "#a2b8fe"
         }
       },
       {
-        "id": "hall-entrance-graphic-4",
+        "id": "hall-entrance-graphic-3",
         "assetId": "corporateMotif",
         "variant": 5,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -2.08,
-          0.7,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": 0,
-          "opacity": 0.88,
-          "layer": 3,
-          "color": "#0b30c1"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-5",
-        "assetId": "corporateMotif",
-        "variant": 4,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -1.5,
-          0.7,
+          -0.91,
+          1.69,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
           "width": 0.38,
           "height": 0.38,
-          "angle": 0.13962634015954636,
-          "opacity": 0.68,
-          "layer": 4,
-          "color": "#a0ff3d"
+          "angle": 0,
+          "opacity": 0.93,
+          "layer": 2,
+          "color": "#0b30c1"
         }
       },
       {
-        "id": "hall-entrance-graphic-6",
+        "id": "hall-entrance-graphic-4",
         "assetId": "corporateMotif",
-        "variant": 7,
+        "variant": 6,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -0.92,
-          0.7,
+          -0.91,
+          1.16,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": -0.13962634015954636,
-          "opacity": 0.72,
-          "layer": 5,
+          "width": 0.3,
+          "height": 0.3,
+          "angle": 0,
+          "opacity": 0.9,
+          "layer": 3,
+          "color": "#1e2420"
+        }
+      },
+      {
+        "id": "hall-entrance-graphic-5",
+        "assetId": "corporateMotif",
+        "variant": 1,
+        "material": "eds-blue",
+        "regionId": "hall",
+        "wallId": "wall-21",
+        "position": [
+          -1.55,
+          0.77,
+          -3.15709045
+        ],
+        "rotation": 3.141592653589793,
+        "graphic": {
+          "width": 0.85,
+          "height": 0.129,
+          "angle": 0,
+          "opacity": 0.65,
+          "layer": 4,
           "color": "#1e2420"
         }
       },
@@ -17042,21 +16778,21 @@
       {
         "id": "hall-entrance-graphic-1",
         "assetId": "corporateMotif",
-        "variant": 11,
+        "variant": 1,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -1.56,
-          2.5,
+          -1.54,
+          2.32,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 1.6,
-          "height": 0.34,
+          "width": 1.48,
+          "height": 0.225,
           "angle": 0,
-          "opacity": 0.88,
+          "opacity": 0.85,
           "layer": 0,
           "color": "#0b30c1"
         }
@@ -17064,110 +16800,88 @@
       {
         "id": "hall-entrance-graphic-2",
         "assetId": "corporateMotif",
-        "variant": 6,
+        "variant": 2,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
           -1.95,
-          1.58,
+          1.53,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.9,
+          "width": 0.9,
+          "height": 0.9,
+          "angle": 0,
+          "opacity": 0.65,
           "layer": 1,
-          "color": "#1e2420"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-3",
-        "assetId": "corporateMotif",
-        "variant": 9,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -0.9,
-          1.58,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.8,
-          "layer": 2,
           "color": "#a2b8fe"
         }
       },
       {
-        "id": "hall-entrance-graphic-4",
+        "id": "hall-entrance-graphic-3",
         "assetId": "corporateMotif",
         "variant": 5,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -2.08,
-          0.7,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": 0,
-          "opacity": 0.88,
-          "layer": 3,
-          "color": "#0b30c1"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-5",
-        "assetId": "corporateMotif",
-        "variant": 4,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -1.5,
-          0.7,
+          -0.91,
+          1.69,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
           "width": 0.38,
           "height": 0.38,
-          "angle": 0.13962634015954636,
-          "opacity": 0.68,
-          "layer": 4,
-          "color": "#a0ff3d"
+          "angle": 0,
+          "opacity": 0.93,
+          "layer": 2,
+          "color": "#0b30c1"
         }
       },
       {
-        "id": "hall-entrance-graphic-6",
+        "id": "hall-entrance-graphic-4",
         "assetId": "corporateMotif",
-        "variant": 7,
+        "variant": 6,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -0.92,
-          0.7,
+          -0.91,
+          1.16,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": -0.13962634015954636,
-          "opacity": 0.72,
-          "layer": 5,
+          "width": 0.3,
+          "height": 0.3,
+          "angle": 0,
+          "opacity": 0.9,
+          "layer": 3,
+          "color": "#1e2420"
+        }
+      },
+      {
+        "id": "hall-entrance-graphic-5",
+        "assetId": "corporateMotif",
+        "variant": 1,
+        "material": "eds-blue",
+        "regionId": "hall",
+        "wallId": "wall-21",
+        "position": [
+          -1.55,
+          0.77,
+          -3.15709045
+        ],
+        "rotation": 3.141592653589793,
+        "graphic": {
+          "width": 0.85,
+          "height": 0.129,
+          "angle": 0,
+          "opacity": 0.65,
+          "layer": 4,
           "color": "#1e2420"
         }
       },
@@ -18405,21 +18119,21 @@
       {
         "id": "hall-entrance-graphic-1",
         "assetId": "corporateMotif",
-        "variant": 11,
+        "variant": 1,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -1.56,
-          2.5,
+          -1.54,
+          2.32,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 1.6,
-          "height": 0.34,
+          "width": 1.48,
+          "height": 0.225,
           "angle": 0,
-          "opacity": 0.88,
+          "opacity": 0.85,
           "layer": 0,
           "color": "#0b30c1"
         }
@@ -18427,110 +18141,88 @@
       {
         "id": "hall-entrance-graphic-2",
         "assetId": "corporateMotif",
-        "variant": 6,
+        "variant": 2,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
           -1.95,
-          1.58,
+          1.53,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.9,
+          "width": 0.9,
+          "height": 0.9,
+          "angle": 0,
+          "opacity": 0.65,
           "layer": 1,
-          "color": "#1e2420"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-3",
-        "assetId": "corporateMotif",
-        "variant": 9,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -0.9,
-          1.58,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.8,
-          "layer": 2,
           "color": "#a2b8fe"
         }
       },
       {
-        "id": "hall-entrance-graphic-4",
+        "id": "hall-entrance-graphic-3",
         "assetId": "corporateMotif",
         "variant": 5,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -2.08,
-          0.7,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": 0,
-          "opacity": 0.88,
-          "layer": 3,
-          "color": "#0b30c1"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-5",
-        "assetId": "corporateMotif",
-        "variant": 4,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -1.5,
-          0.7,
+          -0.91,
+          1.69,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
           "width": 0.38,
           "height": 0.38,
-          "angle": 0.13962634015954636,
-          "opacity": 0.68,
-          "layer": 4,
-          "color": "#a0ff3d"
+          "angle": 0,
+          "opacity": 0.93,
+          "layer": 2,
+          "color": "#0b30c1"
         }
       },
       {
-        "id": "hall-entrance-graphic-6",
+        "id": "hall-entrance-graphic-4",
         "assetId": "corporateMotif",
-        "variant": 7,
+        "variant": 6,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -0.92,
-          0.7,
+          -0.91,
+          1.16,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": -0.13962634015954636,
-          "opacity": 0.72,
-          "layer": 5,
+          "width": 0.3,
+          "height": 0.3,
+          "angle": 0,
+          "opacity": 0.9,
+          "layer": 3,
+          "color": "#1e2420"
+        }
+      },
+      {
+        "id": "hall-entrance-graphic-5",
+        "assetId": "corporateMotif",
+        "variant": 1,
+        "material": "eds-blue",
+        "regionId": "hall",
+        "wallId": "wall-21",
+        "position": [
+          -1.55,
+          0.77,
+          -3.15709045
+        ],
+        "rotation": 3.141592653589793,
+        "graphic": {
+          "width": 0.85,
+          "height": 0.129,
+          "angle": 0,
+          "opacity": 0.65,
+          "layer": 4,
           "color": "#1e2420"
         }
       },
@@ -19754,21 +19446,21 @@
       {
         "id": "hall-entrance-graphic-1",
         "assetId": "corporateMotif",
-        "variant": 11,
+        "variant": 1,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -1.56,
-          2.5,
+          -1.54,
+          2.32,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 1.6,
-          "height": 0.34,
+          "width": 1.48,
+          "height": 0.225,
           "angle": 0,
-          "opacity": 0.88,
+          "opacity": 0.85,
           "layer": 0,
           "color": "#0b30c1"
         }
@@ -19776,110 +19468,88 @@
       {
         "id": "hall-entrance-graphic-2",
         "assetId": "corporateMotif",
-        "variant": 6,
+        "variant": 2,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
           -1.95,
-          1.58,
+          1.53,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.9,
+          "width": 0.9,
+          "height": 0.9,
+          "angle": 0,
+          "opacity": 0.65,
           "layer": 1,
-          "color": "#1e2420"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-3",
-        "assetId": "corporateMotif",
-        "variant": 9,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -0.9,
-          1.58,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.8,
-          "layer": 2,
           "color": "#a2b8fe"
         }
       },
       {
-        "id": "hall-entrance-graphic-4",
+        "id": "hall-entrance-graphic-3",
         "assetId": "corporateMotif",
         "variant": 5,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -2.08,
-          0.7,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": 0,
-          "opacity": 0.88,
-          "layer": 3,
-          "color": "#0b30c1"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-5",
-        "assetId": "corporateMotif",
-        "variant": 4,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -1.5,
-          0.7,
+          -0.91,
+          1.69,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
           "width": 0.38,
           "height": 0.38,
-          "angle": 0.13962634015954636,
-          "opacity": 0.68,
-          "layer": 4,
-          "color": "#a0ff3d"
+          "angle": 0,
+          "opacity": 0.93,
+          "layer": 2,
+          "color": "#0b30c1"
         }
       },
       {
-        "id": "hall-entrance-graphic-6",
+        "id": "hall-entrance-graphic-4",
         "assetId": "corporateMotif",
-        "variant": 7,
+        "variant": 6,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -0.92,
-          0.7,
+          -0.91,
+          1.16,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": -0.13962634015954636,
-          "opacity": 0.72,
-          "layer": 5,
+          "width": 0.3,
+          "height": 0.3,
+          "angle": 0,
+          "opacity": 0.9,
+          "layer": 3,
+          "color": "#1e2420"
+        }
+      },
+      {
+        "id": "hall-entrance-graphic-5",
+        "assetId": "corporateMotif",
+        "variant": 1,
+        "material": "eds-blue",
+        "regionId": "hall",
+        "wallId": "wall-21",
+        "position": [
+          -1.55,
+          0.77,
+          -3.15709045
+        ],
+        "rotation": 3.141592653589793,
+        "graphic": {
+          "width": 0.85,
+          "height": 0.129,
+          "angle": 0,
+          "opacity": 0.65,
+          "layer": 4,
           "color": "#1e2420"
         }
       },
@@ -21103,21 +20773,21 @@
       {
         "id": "hall-entrance-graphic-1",
         "assetId": "corporateMotif",
-        "variant": 11,
+        "variant": 1,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -1.56,
-          2.5,
+          -1.54,
+          2.32,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 1.6,
-          "height": 0.34,
+          "width": 1.48,
+          "height": 0.225,
           "angle": 0,
-          "opacity": 0.88,
+          "opacity": 0.85,
           "layer": 0,
           "color": "#0b30c1"
         }
@@ -21125,110 +20795,88 @@
       {
         "id": "hall-entrance-graphic-2",
         "assetId": "corporateMotif",
-        "variant": 6,
+        "variant": 2,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
           -1.95,
-          1.58,
+          1.53,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.9,
+          "width": 0.9,
+          "height": 0.9,
+          "angle": 0,
+          "opacity": 0.65,
           "layer": 1,
-          "color": "#1e2420"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-3",
-        "assetId": "corporateMotif",
-        "variant": 9,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -0.9,
-          1.58,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.8,
-          "layer": 2,
           "color": "#a2b8fe"
         }
       },
       {
-        "id": "hall-entrance-graphic-4",
+        "id": "hall-entrance-graphic-3",
         "assetId": "corporateMotif",
         "variant": 5,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -2.08,
-          0.7,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": 0,
-          "opacity": 0.88,
-          "layer": 3,
-          "color": "#0b30c1"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-5",
-        "assetId": "corporateMotif",
-        "variant": 4,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -1.5,
-          0.7,
+          -0.91,
+          1.69,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
           "width": 0.38,
           "height": 0.38,
-          "angle": 0.13962634015954636,
-          "opacity": 0.68,
-          "layer": 4,
-          "color": "#a0ff3d"
+          "angle": 0,
+          "opacity": 0.93,
+          "layer": 2,
+          "color": "#0b30c1"
         }
       },
       {
-        "id": "hall-entrance-graphic-6",
+        "id": "hall-entrance-graphic-4",
         "assetId": "corporateMotif",
-        "variant": 7,
+        "variant": 6,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -0.92,
-          0.7,
+          -0.91,
+          1.16,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": -0.13962634015954636,
-          "opacity": 0.72,
-          "layer": 5,
+          "width": 0.3,
+          "height": 0.3,
+          "angle": 0,
+          "opacity": 0.9,
+          "layer": 3,
+          "color": "#1e2420"
+        }
+      },
+      {
+        "id": "hall-entrance-graphic-5",
+        "assetId": "corporateMotif",
+        "variant": 1,
+        "material": "eds-blue",
+        "regionId": "hall",
+        "wallId": "wall-21",
+        "position": [
+          -1.55,
+          0.77,
+          -3.15709045
+        ],
+        "rotation": 3.141592653589793,
+        "graphic": {
+          "width": 0.85,
+          "height": 0.129,
+          "angle": 0,
+          "opacity": 0.65,
+          "layer": 4,
           "color": "#1e2420"
         }
       },
@@ -21464,29 +21112,68 @@
         "regionId": "meeting"
       },
       {
-        "id": "WorkDesk",
-        "assetId": "workDesk",
-        "variant": 1,
-        "material": "oak",
+        "id": "MeetingTable",
+        "assetId": "meetingTable",
+        "variant": 4,
+        "material": "white",
         "position": [
-          -0.45,
           0,
-          -0.2
+          0,
+          -0.15
         ],
-        "rotation": 0,
+        "rotation": 1.5707963267948966,
         "regionId": "meeting"
       },
       {
-        "id": "WorkChair",
+        "id": "MeetingSeatA",
         "assetId": "chair",
         "variant": 1,
         "material": "graphite",
         "position": [
-          -0.45,
+          -0.86,
           0,
-          -1.1
+          -0.76
         ],
-        "rotation": 0,
+        "rotation": 1.5707963267948966,
+        "regionId": "meeting"
+      },
+      {
+        "id": "MeetingSeatB",
+        "assetId": "chair",
+        "variant": 1,
+        "material": "graphite",
+        "position": [
+          -0.86,
+          0,
+          0.46
+        ],
+        "rotation": 1.5707963267948966,
+        "regionId": "meeting"
+      },
+      {
+        "id": "MeetingSeatC",
+        "assetId": "chair",
+        "variant": 1,
+        "material": "graphite",
+        "position": [
+          0.86,
+          0,
+          -0.76
+        ],
+        "rotation": -1.5707963267948966,
+        "regionId": "meeting"
+      },
+      {
+        "id": "MeetingSeatD",
+        "assetId": "chair",
+        "variant": 1,
+        "material": "graphite",
+        "position": [
+          0.86,
+          0,
+          0.46
+        ],
+        "rotation": -1.5707963267948966,
         "regionId": "meeting"
       },
       {
@@ -21508,9 +21195,9 @@
         "variant": 1,
         "material": "sage",
         "position": [
-          1.45,
+          1.95,
           0,
-          -1.1
+          -1.18
         ],
         "rotation": -1.0471975511965976,
         "regionId": "meeting"
@@ -21573,11 +21260,11 @@
         "variant": 2,
         "material": "white",
         "position": [
-          -0.45,
+          0,
           0.74,
-          -0.2
+          -0.15
         ],
-        "rotation": 3.141592653589793,
+        "rotation": -2.187738217342432,
         "regionId": "meeting"
       },
       {
@@ -22411,21 +22098,21 @@
       {
         "id": "hall-entrance-graphic-1",
         "assetId": "corporateMotif",
-        "variant": 11,
+        "variant": 1,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -1.56,
-          2.5,
+          -1.54,
+          2.32,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 1.6,
-          "height": 0.34,
+          "width": 1.48,
+          "height": 0.225,
           "angle": 0,
-          "opacity": 0.88,
+          "opacity": 0.85,
           "layer": 0,
           "color": "#0b30c1"
         }
@@ -22433,110 +22120,88 @@
       {
         "id": "hall-entrance-graphic-2",
         "assetId": "corporateMotif",
-        "variant": 6,
+        "variant": 2,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
           -1.95,
-          1.58,
+          1.53,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.9,
+          "width": 0.9,
+          "height": 0.9,
+          "angle": 0,
+          "opacity": 0.65,
           "layer": 1,
-          "color": "#1e2420"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-3",
-        "assetId": "corporateMotif",
-        "variant": 9,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -0.9,
-          1.58,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.8,
-          "layer": 2,
           "color": "#a2b8fe"
         }
       },
       {
-        "id": "hall-entrance-graphic-4",
+        "id": "hall-entrance-graphic-3",
         "assetId": "corporateMotif",
         "variant": 5,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -2.08,
-          0.7,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": 0,
-          "opacity": 0.88,
-          "layer": 3,
-          "color": "#0b30c1"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-5",
-        "assetId": "corporateMotif",
-        "variant": 4,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -1.5,
-          0.7,
+          -0.91,
+          1.69,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
           "width": 0.38,
           "height": 0.38,
-          "angle": 0.13962634015954636,
-          "opacity": 0.68,
-          "layer": 4,
-          "color": "#a0ff3d"
+          "angle": 0,
+          "opacity": 0.93,
+          "layer": 2,
+          "color": "#0b30c1"
         }
       },
       {
-        "id": "hall-entrance-graphic-6",
+        "id": "hall-entrance-graphic-4",
         "assetId": "corporateMotif",
-        "variant": 7,
+        "variant": 6,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -0.92,
-          0.7,
+          -0.91,
+          1.16,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": -0.13962634015954636,
-          "opacity": 0.72,
-          "layer": 5,
+          "width": 0.3,
+          "height": 0.3,
+          "angle": 0,
+          "opacity": 0.9,
+          "layer": 3,
+          "color": "#1e2420"
+        }
+      },
+      {
+        "id": "hall-entrance-graphic-5",
+        "assetId": "corporateMotif",
+        "variant": 1,
+        "material": "eds-blue",
+        "regionId": "hall",
+        "wallId": "wall-21",
+        "position": [
+          -1.55,
+          0.77,
+          -3.15709045
+        ],
+        "rotation": 3.141592653589793,
+        "graphic": {
+          "width": 0.85,
+          "height": 0.129,
+          "angle": 0,
+          "opacity": 0.65,
+          "layer": 4,
           "color": "#1e2420"
         }
       },
@@ -22772,29 +22437,68 @@
         "regionId": "meeting"
       },
       {
-        "id": "WorkDesk",
-        "assetId": "workDesk",
-        "variant": 2,
+        "id": "MeetingTable",
+        "assetId": "meetingTable",
+        "variant": 5,
         "material": "ash",
         "position": [
           0,
           0,
-          -0.2
+          -0.15
         ],
-        "rotation": 0,
+        "rotation": 1.5707963267948966,
         "regionId": "meeting"
       },
       {
-        "id": "WorkChair",
+        "id": "MeetingSeatA",
         "assetId": "chair",
         "variant": 2,
         "material": "blue",
         "position": [
+          -0.86,
           0,
-          0,
-          -1.1
+          -0.76
         ],
-        "rotation": 0,
+        "rotation": 1.5707963267948966,
+        "regionId": "meeting"
+      },
+      {
+        "id": "MeetingSeatB",
+        "assetId": "chair",
+        "variant": 2,
+        "material": "blue",
+        "position": [
+          -0.86,
+          0,
+          0.46
+        ],
+        "rotation": 1.5707963267948966,
+        "regionId": "meeting"
+      },
+      {
+        "id": "MeetingSeatC",
+        "assetId": "chair",
+        "variant": 2,
+        "material": "blue",
+        "position": [
+          0.86,
+          0,
+          -0.76
+        ],
+        "rotation": -1.5707963267948966,
+        "regionId": "meeting"
+      },
+      {
+        "id": "MeetingSeatD",
+        "assetId": "chair",
+        "variant": 2,
+        "material": "blue",
+        "position": [
+          0.86,
+          0,
+          0.46
+        ],
+        "rotation": -1.5707963267948966,
         "regionId": "meeting"
       },
       {
@@ -22816,9 +22520,9 @@
         "variant": 2,
         "material": "oat",
         "position": [
-          1.35,
+          1.95,
           0,
-          -1.12
+          -1.18
         ],
         "rotation": -1.0471975511965976,
         "regionId": "meeting"
@@ -22883,9 +22587,9 @@
         "position": [
           0,
           0.74,
-          -0.2
+          -0.15
         ],
-        "rotation": 3.141592653589793,
+        "rotation": -2.187738217342432,
         "regionId": "meeting"
       },
       {
@@ -23719,21 +23423,21 @@
       {
         "id": "hall-entrance-graphic-1",
         "assetId": "corporateMotif",
-        "variant": 11,
+        "variant": 1,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -1.56,
-          2.5,
+          -1.54,
+          2.32,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 1.6,
-          "height": 0.34,
+          "width": 1.48,
+          "height": 0.225,
           "angle": 0,
-          "opacity": 0.88,
+          "opacity": 0.85,
           "layer": 0,
           "color": "#0b30c1"
         }
@@ -23741,110 +23445,88 @@
       {
         "id": "hall-entrance-graphic-2",
         "assetId": "corporateMotif",
-        "variant": 6,
+        "variant": 2,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
           -1.95,
-          1.58,
+          1.53,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.9,
+          "width": 0.9,
+          "height": 0.9,
+          "angle": 0,
+          "opacity": 0.65,
           "layer": 1,
-          "color": "#1e2420"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-3",
-        "assetId": "corporateMotif",
-        "variant": 9,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -0.9,
-          1.58,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.8,
-          "layer": 2,
           "color": "#a2b8fe"
         }
       },
       {
-        "id": "hall-entrance-graphic-4",
+        "id": "hall-entrance-graphic-3",
         "assetId": "corporateMotif",
         "variant": 5,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -2.08,
-          0.7,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": 0,
-          "opacity": 0.88,
-          "layer": 3,
-          "color": "#0b30c1"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-5",
-        "assetId": "corporateMotif",
-        "variant": 4,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -1.5,
-          0.7,
+          -0.91,
+          1.69,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
           "width": 0.38,
           "height": 0.38,
-          "angle": 0.13962634015954636,
-          "opacity": 0.68,
-          "layer": 4,
-          "color": "#a0ff3d"
+          "angle": 0,
+          "opacity": 0.93,
+          "layer": 2,
+          "color": "#0b30c1"
         }
       },
       {
-        "id": "hall-entrance-graphic-6",
+        "id": "hall-entrance-graphic-4",
         "assetId": "corporateMotif",
-        "variant": 7,
+        "variant": 6,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -0.92,
-          0.7,
+          -0.91,
+          1.16,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": -0.13962634015954636,
-          "opacity": 0.72,
-          "layer": 5,
+          "width": 0.3,
+          "height": 0.3,
+          "angle": 0,
+          "opacity": 0.9,
+          "layer": 3,
+          "color": "#1e2420"
+        }
+      },
+      {
+        "id": "hall-entrance-graphic-5",
+        "assetId": "corporateMotif",
+        "variant": 1,
+        "material": "eds-blue",
+        "regionId": "hall",
+        "wallId": "wall-21",
+        "position": [
+          -1.55,
+          0.77,
+          -3.15709045
+        ],
+        "rotation": 3.141592653589793,
+        "graphic": {
+          "width": 0.85,
+          "height": 0.129,
+          "angle": 0,
+          "opacity": 0.65,
+          "layer": 4,
           "color": "#1e2420"
         }
       },
@@ -24080,29 +23762,68 @@
         "regionId": "meeting"
       },
       {
-        "id": "WorkDesk",
-        "assetId": "workDesk",
-        "variant": 3,
+        "id": "MeetingTable",
+        "assetId": "meetingTable",
+        "variant": 6,
         "material": "walnut",
         "position": [
-          0.4,
           0,
-          -0.2
+          0,
+          -0.15
         ],
-        "rotation": 0,
+        "rotation": 1.5707963267948966,
         "regionId": "meeting"
       },
       {
-        "id": "WorkChair",
+        "id": "MeetingSeatA",
         "assetId": "chair",
         "variant": 3,
         "material": "graphite",
         "position": [
-          0.4,
+          -0.86,
           0,
-          -1.1
+          -0.76
         ],
-        "rotation": 0,
+        "rotation": 1.5707963267948966,
+        "regionId": "meeting"
+      },
+      {
+        "id": "MeetingSeatB",
+        "assetId": "chair",
+        "variant": 3,
+        "material": "graphite",
+        "position": [
+          -0.86,
+          0,
+          0.46
+        ],
+        "rotation": 1.5707963267948966,
+        "regionId": "meeting"
+      },
+      {
+        "id": "MeetingSeatC",
+        "assetId": "chair",
+        "variant": 3,
+        "material": "graphite",
+        "position": [
+          0.86,
+          0,
+          -0.76
+        ],
+        "rotation": -1.5707963267948966,
+        "regionId": "meeting"
+      },
+      {
+        "id": "MeetingSeatD",
+        "assetId": "chair",
+        "variant": 3,
+        "material": "graphite",
+        "position": [
+          0.86,
+          0,
+          0.46
+        ],
+        "rotation": -1.5707963267948966,
         "regionId": "meeting"
       },
       {
@@ -24124,9 +23845,9 @@
         "variant": 3,
         "material": "sage",
         "position": [
-          1.5,
+          1.95,
           0,
-          -1.1
+          -1.18
         ],
         "rotation": -1.0471975511965976,
         "regionId": "meeting"
@@ -24189,11 +23910,11 @@
         "variant": 2,
         "material": "white",
         "position": [
-          0.4,
+          0,
           0.74,
-          -0.2
+          -0.15
         ],
-        "rotation": 3.141592653589793,
+        "rotation": -2.187738217342432,
         "regionId": "meeting"
       },
       {
@@ -25027,21 +24748,21 @@
       {
         "id": "hall-entrance-graphic-1",
         "assetId": "corporateMotif",
-        "variant": 11,
+        "variant": 1,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -1.56,
-          2.5,
+          -1.54,
+          2.32,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 1.6,
-          "height": 0.34,
+          "width": 1.48,
+          "height": 0.225,
           "angle": 0,
-          "opacity": 0.88,
+          "opacity": 0.85,
           "layer": 0,
           "color": "#0b30c1"
         }
@@ -25049,110 +24770,88 @@
       {
         "id": "hall-entrance-graphic-2",
         "assetId": "corporateMotif",
-        "variant": 6,
+        "variant": 2,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
           -1.95,
-          1.58,
+          1.53,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.9,
+          "width": 0.9,
+          "height": 0.9,
+          "angle": 0,
+          "opacity": 0.65,
           "layer": 1,
-          "color": "#1e2420"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-3",
-        "assetId": "corporateMotif",
-        "variant": 9,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -0.9,
-          1.58,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.8,
-          "layer": 2,
           "color": "#a2b8fe"
         }
       },
       {
-        "id": "hall-entrance-graphic-4",
+        "id": "hall-entrance-graphic-3",
         "assetId": "corporateMotif",
         "variant": 5,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -2.08,
-          0.7,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": 0,
-          "opacity": 0.88,
-          "layer": 3,
-          "color": "#0b30c1"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-5",
-        "assetId": "corporateMotif",
-        "variant": 4,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -1.5,
-          0.7,
+          -0.91,
+          1.69,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
           "width": 0.38,
           "height": 0.38,
-          "angle": 0.13962634015954636,
-          "opacity": 0.68,
-          "layer": 4,
-          "color": "#a0ff3d"
+          "angle": 0,
+          "opacity": 0.93,
+          "layer": 2,
+          "color": "#0b30c1"
         }
       },
       {
-        "id": "hall-entrance-graphic-6",
+        "id": "hall-entrance-graphic-4",
         "assetId": "corporateMotif",
-        "variant": 7,
+        "variant": 6,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -0.92,
-          0.7,
+          -0.91,
+          1.16,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": -0.13962634015954636,
-          "opacity": 0.72,
-          "layer": 5,
+          "width": 0.3,
+          "height": 0.3,
+          "angle": 0,
+          "opacity": 0.9,
+          "layer": 3,
+          "color": "#1e2420"
+        }
+      },
+      {
+        "id": "hall-entrance-graphic-5",
+        "assetId": "corporateMotif",
+        "variant": 1,
+        "material": "eds-blue",
+        "regionId": "hall",
+        "wallId": "wall-21",
+        "position": [
+          -1.55,
+          0.77,
+          -3.15709045
+        ],
+        "rotation": 3.141592653589793,
+        "graphic": {
+          "width": 0.85,
+          "height": 0.129,
+          "angle": 0,
+          "opacity": 0.65,
+          "layer": 4,
           "color": "#1e2420"
         }
       },
@@ -25388,29 +25087,68 @@
         "regionId": "meeting"
       },
       {
-        "id": "WorkDesk",
-        "assetId": "workDesk",
-        "variant": 1,
+        "id": "MeetingTable",
+        "assetId": "meetingTable",
+        "variant": 4,
         "material": "white",
         "position": [
-          -0.25,
           0,
-          -0.2
+          0,
+          -0.15
         ],
-        "rotation": 0,
+        "rotation": 1.5707963267948966,
         "regionId": "meeting"
       },
       {
-        "id": "WorkChair",
+        "id": "MeetingSeatA",
         "assetId": "chair",
         "variant": 1,
         "material": "blue",
         "position": [
-          -0.25,
+          -0.86,
           0,
-          -1.1
+          -0.76
         ],
-        "rotation": 0,
+        "rotation": 1.5707963267948966,
+        "regionId": "meeting"
+      },
+      {
+        "id": "MeetingSeatB",
+        "assetId": "chair",
+        "variant": 1,
+        "material": "blue",
+        "position": [
+          -0.86,
+          0,
+          0.46
+        ],
+        "rotation": 1.5707963267948966,
+        "regionId": "meeting"
+      },
+      {
+        "id": "MeetingSeatC",
+        "assetId": "chair",
+        "variant": 1,
+        "material": "blue",
+        "position": [
+          0.86,
+          0,
+          -0.76
+        ],
+        "rotation": -1.5707963267948966,
+        "regionId": "meeting"
+      },
+      {
+        "id": "MeetingSeatD",
+        "assetId": "chair",
+        "variant": 1,
+        "material": "blue",
+        "position": [
+          0.86,
+          0,
+          0.46
+        ],
+        "rotation": -1.5707963267948966,
         "regionId": "meeting"
       },
       {
@@ -25432,9 +25170,9 @@
         "variant": 1,
         "material": "oat",
         "position": [
-          1.4,
+          1.95,
           0,
-          -1.15
+          -1.18
         ],
         "rotation": -1.0471975511965976,
         "regionId": "meeting"
@@ -25497,11 +25235,11 @@
         "variant": 2,
         "material": "white",
         "position": [
-          -0.25,
+          0,
           0.74,
-          -0.2
+          -0.15
         ],
-        "rotation": 3.141592653589793,
+        "rotation": -2.187738217342432,
         "regionId": "meeting"
       },
       {
@@ -26335,21 +26073,21 @@
       {
         "id": "hall-entrance-graphic-1",
         "assetId": "corporateMotif",
-        "variant": 11,
+        "variant": 1,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -1.56,
-          2.5,
+          -1.54,
+          2.32,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 1.6,
-          "height": 0.34,
+          "width": 1.48,
+          "height": 0.225,
           "angle": 0,
-          "opacity": 0.88,
+          "opacity": 0.85,
           "layer": 0,
           "color": "#0b30c1"
         }
@@ -26357,110 +26095,88 @@
       {
         "id": "hall-entrance-graphic-2",
         "assetId": "corporateMotif",
-        "variant": 6,
+        "variant": 2,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
           -1.95,
-          1.58,
+          1.53,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.9,
+          "width": 0.9,
+          "height": 0.9,
+          "angle": 0,
+          "opacity": 0.65,
           "layer": 1,
-          "color": "#1e2420"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-3",
-        "assetId": "corporateMotif",
-        "variant": 9,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -0.9,
-          1.58,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.8,
-          "layer": 2,
           "color": "#a2b8fe"
         }
       },
       {
-        "id": "hall-entrance-graphic-4",
+        "id": "hall-entrance-graphic-3",
         "assetId": "corporateMotif",
         "variant": 5,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -2.08,
-          0.7,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": 0,
-          "opacity": 0.88,
-          "layer": 3,
-          "color": "#0b30c1"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-5",
-        "assetId": "corporateMotif",
-        "variant": 4,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -1.5,
-          0.7,
+          -0.91,
+          1.69,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
           "width": 0.38,
           "height": 0.38,
-          "angle": 0.13962634015954636,
-          "opacity": 0.68,
-          "layer": 4,
-          "color": "#a0ff3d"
+          "angle": 0,
+          "opacity": 0.93,
+          "layer": 2,
+          "color": "#0b30c1"
         }
       },
       {
-        "id": "hall-entrance-graphic-6",
+        "id": "hall-entrance-graphic-4",
         "assetId": "corporateMotif",
-        "variant": 7,
+        "variant": 6,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -0.92,
-          0.7,
+          -0.91,
+          1.16,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": -0.13962634015954636,
-          "opacity": 0.72,
-          "layer": 5,
+          "width": 0.3,
+          "height": 0.3,
+          "angle": 0,
+          "opacity": 0.9,
+          "layer": 3,
+          "color": "#1e2420"
+        }
+      },
+      {
+        "id": "hall-entrance-graphic-5",
+        "assetId": "corporateMotif",
+        "variant": 1,
+        "material": "eds-blue",
+        "regionId": "hall",
+        "wallId": "wall-21",
+        "position": [
+          -1.55,
+          0.77,
+          -3.15709045
+        ],
+        "rotation": 3.141592653589793,
+        "graphic": {
+          "width": 0.85,
+          "height": 0.129,
+          "angle": 0,
+          "opacity": 0.65,
+          "layer": 4,
           "color": "#1e2420"
         }
       },
@@ -26696,29 +26412,68 @@
         "regionId": "meeting"
       },
       {
-        "id": "WorkDesk",
-        "assetId": "workDesk",
-        "variant": 2,
+        "id": "MeetingTable",
+        "assetId": "meetingTable",
+        "variant": 5,
         "material": "oak",
         "position": [
-          0.3,
           0,
-          -0.2
+          0,
+          -0.15
         ],
-        "rotation": 0,
+        "rotation": 1.5707963267948966,
         "regionId": "meeting"
       },
       {
-        "id": "WorkChair",
+        "id": "MeetingSeatA",
         "assetId": "chair",
         "variant": 2,
         "material": "graphite",
         "position": [
-          0.3,
+          -0.86,
           0,
-          -1.1
+          -0.76
         ],
-        "rotation": 0,
+        "rotation": 1.5707963267948966,
+        "regionId": "meeting"
+      },
+      {
+        "id": "MeetingSeatB",
+        "assetId": "chair",
+        "variant": 2,
+        "material": "graphite",
+        "position": [
+          -0.86,
+          0,
+          0.46
+        ],
+        "rotation": 1.5707963267948966,
+        "regionId": "meeting"
+      },
+      {
+        "id": "MeetingSeatC",
+        "assetId": "chair",
+        "variant": 2,
+        "material": "graphite",
+        "position": [
+          0.86,
+          0,
+          -0.76
+        ],
+        "rotation": -1.5707963267948966,
+        "regionId": "meeting"
+      },
+      {
+        "id": "MeetingSeatD",
+        "assetId": "chair",
+        "variant": 2,
+        "material": "graphite",
+        "position": [
+          0.86,
+          0,
+          0.46
+        ],
+        "rotation": -1.5707963267948966,
         "regionId": "meeting"
       },
       {
@@ -26740,9 +26495,9 @@
         "variant": 2,
         "material": "sage",
         "position": [
-          1.4,
+          1.95,
           0,
-          -1
+          -1.18
         ],
         "rotation": -1.0471975511965976,
         "regionId": "meeting"
@@ -26805,11 +26560,11 @@
         "variant": 2,
         "material": "white",
         "position": [
-          0.3,
+          0,
           0.74,
-          -0.2
+          -0.15
         ],
-        "rotation": 3.141592653589793,
+        "rotation": -2.187738217342432,
         "regionId": "meeting"
       },
       {
@@ -27643,21 +27398,21 @@
       {
         "id": "hall-entrance-graphic-1",
         "assetId": "corporateMotif",
-        "variant": 11,
+        "variant": 1,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -1.56,
-          2.5,
+          -1.54,
+          2.32,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 1.6,
-          "height": 0.34,
+          "width": 1.48,
+          "height": 0.225,
           "angle": 0,
-          "opacity": 0.88,
+          "opacity": 0.85,
           "layer": 0,
           "color": "#0b30c1"
         }
@@ -27665,110 +27420,88 @@
       {
         "id": "hall-entrance-graphic-2",
         "assetId": "corporateMotif",
-        "variant": 6,
+        "variant": 2,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
           -1.95,
-          1.58,
+          1.53,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.9,
+          "width": 0.9,
+          "height": 0.9,
+          "angle": 0,
+          "opacity": 0.65,
           "layer": 1,
-          "color": "#1e2420"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-3",
-        "assetId": "corporateMotif",
-        "variant": 9,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -0.9,
-          1.58,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.8,
-          "layer": 2,
           "color": "#a2b8fe"
         }
       },
       {
-        "id": "hall-entrance-graphic-4",
+        "id": "hall-entrance-graphic-3",
         "assetId": "corporateMotif",
         "variant": 5,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -2.08,
-          0.7,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": 0,
-          "opacity": 0.88,
-          "layer": 3,
-          "color": "#0b30c1"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-5",
-        "assetId": "corporateMotif",
-        "variant": 4,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -1.5,
-          0.7,
+          -0.91,
+          1.69,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
           "width": 0.38,
           "height": 0.38,
-          "angle": 0.13962634015954636,
-          "opacity": 0.68,
-          "layer": 4,
-          "color": "#a0ff3d"
+          "angle": 0,
+          "opacity": 0.93,
+          "layer": 2,
+          "color": "#0b30c1"
         }
       },
       {
-        "id": "hall-entrance-graphic-6",
+        "id": "hall-entrance-graphic-4",
         "assetId": "corporateMotif",
-        "variant": 7,
+        "variant": 6,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -0.92,
-          0.7,
+          -0.91,
+          1.16,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": -0.13962634015954636,
-          "opacity": 0.72,
-          "layer": 5,
+          "width": 0.3,
+          "height": 0.3,
+          "angle": 0,
+          "opacity": 0.9,
+          "layer": 3,
+          "color": "#1e2420"
+        }
+      },
+      {
+        "id": "hall-entrance-graphic-5",
+        "assetId": "corporateMotif",
+        "variant": 1,
+        "material": "eds-blue",
+        "regionId": "hall",
+        "wallId": "wall-21",
+        "position": [
+          -1.55,
+          0.77,
+          -3.15709045
+        ],
+        "rotation": 3.141592653589793,
+        "graphic": {
+          "width": 0.85,
+          "height": 0.129,
+          "angle": 0,
+          "opacity": 0.65,
+          "layer": 4,
           "color": "#1e2420"
         }
       },
@@ -28004,29 +27737,68 @@
         "regionId": "meeting"
       },
       {
-        "id": "WorkDesk",
-        "assetId": "workDesk",
-        "variant": 3,
+        "id": "MeetingTable",
+        "assetId": "meetingTable",
+        "variant": 6,
         "material": "ash",
         "position": [
-          -0.4,
           0,
-          -0.2
+          0,
+          -0.15
         ],
-        "rotation": 0,
+        "rotation": 1.5707963267948966,
         "regionId": "meeting"
       },
       {
-        "id": "WorkChair",
+        "id": "MeetingSeatA",
         "assetId": "chair",
         "variant": 3,
         "material": "blue",
         "position": [
-          -0.4,
+          -0.86,
           0,
-          -1.1
+          -0.76
         ],
-        "rotation": 0,
+        "rotation": 1.5707963267948966,
+        "regionId": "meeting"
+      },
+      {
+        "id": "MeetingSeatB",
+        "assetId": "chair",
+        "variant": 3,
+        "material": "blue",
+        "position": [
+          -0.86,
+          0,
+          0.46
+        ],
+        "rotation": 1.5707963267948966,
+        "regionId": "meeting"
+      },
+      {
+        "id": "MeetingSeatC",
+        "assetId": "chair",
+        "variant": 3,
+        "material": "blue",
+        "position": [
+          0.86,
+          0,
+          -0.76
+        ],
+        "rotation": -1.5707963267948966,
+        "regionId": "meeting"
+      },
+      {
+        "id": "MeetingSeatD",
+        "assetId": "chair",
+        "variant": 3,
+        "material": "blue",
+        "position": [
+          0.86,
+          0,
+          0.46
+        ],
+        "rotation": -1.5707963267948966,
         "regionId": "meeting"
       },
       {
@@ -28048,9 +27820,9 @@
         "variant": 3,
         "material": "oat",
         "position": [
-          1.5,
+          1.95,
           0,
-          -1.1
+          -1.18
         ],
         "rotation": -1.0471975511965976,
         "regionId": "meeting"
@@ -28113,11 +27885,11 @@
         "variant": 2,
         "material": "white",
         "position": [
-          -0.4,
+          0,
           0.74,
-          -0.2
+          -0.15
         ],
-        "rotation": 3.141592653589793,
+        "rotation": -2.187738217342432,
         "regionId": "meeting"
       },
       {
@@ -28951,21 +28723,21 @@
       {
         "id": "hall-entrance-graphic-1",
         "assetId": "corporateMotif",
-        "variant": 11,
+        "variant": 1,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -1.56,
-          2.5,
+          -1.54,
+          2.32,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 1.6,
-          "height": 0.34,
+          "width": 1.48,
+          "height": 0.225,
           "angle": 0,
-          "opacity": 0.88,
+          "opacity": 0.85,
           "layer": 0,
           "color": "#0b30c1"
         }
@@ -28973,110 +28745,88 @@
       {
         "id": "hall-entrance-graphic-2",
         "assetId": "corporateMotif",
-        "variant": 6,
+        "variant": 2,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
           -1.95,
-          1.58,
+          1.53,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.9,
+          "width": 0.9,
+          "height": 0.9,
+          "angle": 0,
+          "opacity": 0.65,
           "layer": 1,
-          "color": "#1e2420"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-3",
-        "assetId": "corporateMotif",
-        "variant": 9,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -0.9,
-          1.58,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.65,
-          "height": 0.65,
-          "angle": 0.13962634015954636,
-          "opacity": 0.8,
-          "layer": 2,
           "color": "#a2b8fe"
         }
       },
       {
-        "id": "hall-entrance-graphic-4",
+        "id": "hall-entrance-graphic-3",
         "assetId": "corporateMotif",
         "variant": 5,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -2.08,
-          0.7,
-          -3.15709045
-        ],
-        "rotation": 3.141592653589793,
-        "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": 0,
-          "opacity": 0.88,
-          "layer": 3,
-          "color": "#0b30c1"
-        }
-      },
-      {
-        "id": "hall-entrance-graphic-5",
-        "assetId": "corporateMotif",
-        "variant": 4,
-        "material": "eds-blue",
-        "regionId": "hall",
-        "wallId": "wall-21",
-        "position": [
-          -1.5,
-          0.7,
+          -0.91,
+          1.69,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
           "width": 0.38,
           "height": 0.38,
-          "angle": 0.13962634015954636,
-          "opacity": 0.68,
-          "layer": 4,
-          "color": "#a0ff3d"
+          "angle": 0,
+          "opacity": 0.93,
+          "layer": 2,
+          "color": "#0b30c1"
         }
       },
       {
-        "id": "hall-entrance-graphic-6",
+        "id": "hall-entrance-graphic-4",
         "assetId": "corporateMotif",
-        "variant": 7,
+        "variant": 6,
         "material": "eds-blue",
         "regionId": "hall",
         "wallId": "wall-21",
         "position": [
-          -0.92,
-          0.7,
+          -0.91,
+          1.16,
           -3.15709045
         ],
         "rotation": 3.141592653589793,
         "graphic": {
-          "width": 0.34,
-          "height": 0.34,
-          "angle": -0.13962634015954636,
-          "opacity": 0.72,
-          "layer": 5,
+          "width": 0.3,
+          "height": 0.3,
+          "angle": 0,
+          "opacity": 0.9,
+          "layer": 3,
+          "color": "#1e2420"
+        }
+      },
+      {
+        "id": "hall-entrance-graphic-5",
+        "assetId": "corporateMotif",
+        "variant": 1,
+        "material": "eds-blue",
+        "regionId": "hall",
+        "wallId": "wall-21",
+        "position": [
+          -1.55,
+          0.77,
+          -3.15709045
+        ],
+        "rotation": 3.141592653589793,
+        "graphic": {
+          "width": 0.85,
+          "height": 0.129,
+          "angle": 0,
+          "opacity": 0.65,
+          "layer": 4,
           "color": "#1e2420"
         }
       },

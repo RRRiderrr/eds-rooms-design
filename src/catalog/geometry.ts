@@ -11,6 +11,7 @@ import { createPlanter } from './planter';
 import { createPothosFoliage } from './pothos';
 import { editorPlanterTexture } from './planter-textures';
 import { createBotanicalDivider } from './botanical-dividers';
+import { createStorageBotanical } from './storage-botanical';
 import type { AppMode, MaterialVariant } from '../core/types';
 export type MaterialPalette=Partial<Record<MaterialVariant['surface']|'black'|'glass'|'paper'|'soil',THREE.Material>>;
 export function createAssetObject(assetId:string,variantIndex:number,materialId:string,mode:AppMode='archviz',palette:MaterialPalette={}):THREE.Group {
@@ -43,6 +44,7 @@ export function createAssetObject(assetId:string,variantIndex:number,materialId:
   group.add(foliage);
   group.userData={...group.userData,dimensions:variant.dimensions,storageCabinet:true,planterRimHeight:1.025};return group;
  }
+ if(assetId==='botanicalDivider'&&variantIndex>=8)return createStorageBotanical(variantIndex,[w,h,d],selected,mode==='editor');
  if(assetId==='botanicalDivider')return createBotanicalDivider([w,h,d],variantIndex,selected,mode==='editor');
  if(['beanBag','doorPlaque','brandDoorPanel'].includes(assetId)){
   const object=createCorporateObject(assetId,variantIndex,[w,h,d],selected,mode==='editor');object.name=group.name;return object;
@@ -129,7 +131,33 @@ export function createAssetObject(assetId:string,variantIndex:number,materialId:
   for(const [x,z]of [[-w*.29,-d*.12],[w*.24,-d*.18],[w*.02,d*.26]]){const legHeight=h-.024;cyl(.055,legHeight,x,legHeight/2,z,finish,.045);cyl(.075,.012,x,h-.035,z,black);}
   break;
  }
- case 'meetingTable':table(h,variantIndex===1?'round':variantIndex===2?'oval':'rect');break;
+ case 'meetingTable': {
+  if(variantIndex<=3){table(h,variantIndex===1?'round':variantIndex===2?'oval':'rect');break;}
+  const thick=.038, underside=h-thick;
+  if(variantIndex===5)roundedTop(w,d,thick,h,finish,.006);else box(w,thick,d,0,h-thick/2,0,finish,.007);
+  if(variantIndex===4){
+   // Four inset steel legs and a shallow apron leave knees clear and stop below the tabletop.
+   for(const x of [-w/2+.12,w/2-.12])for(const z of [-d/2+.1,d/2-.1])box(.04,underside,.04,x,underside/2,z,black,.004);
+   for(const z of [-d/2+.1,d/2-.1])box(w-.2,.055,.025,0,underside-.032,z,black,.003);
+   for(const x of [-w/2+.12,w/2-.12])box(.025,.055,d-.2,x,underside-.032,0,black,.003);
+  }else if(variantIndex===5){
+   // Two open rectangular trestles make the oval top visibly different from the four-leg design.
+   for(const x of [-w*.27,w*.27]){
+    for(const z of [-d*.24,d*.24])box(.045,underside,.045,x,underside/2,z,black,.004);
+    box(.045,.035,d*.48+.045,x,.018,0,black,.004);
+    box(.045,.035,d*.48+.045,x,underside-.018,0,black,.004);
+   }
+   box(w*.54,.035,.035,0,underside-.025,0,black,.004);
+  }else{
+   // Inset panel pedestals and recessed plinths create a substantial executive table.
+   for(const x of [-w*.31,w*.31]){
+    box(.075,underside-.025,d*.7,x,(underside+.025)/2,0,finish,.006);
+    box(.09,.025,d*.72,x,.0125,0,black,.003);
+   }
+   box(w*.62,.05,.045,0,underside-.025,0,black,.004);
+  }
+  break;
+ }
  case 'sideTable': {if(variantIndex===1)table(h,'round');else if(variantIndex===2){box(w,.025,d,0,h-.0125,0);box(w,.02,d,0,.01,0,black);box(.025,h-.02,.025,-w/2+.015,h/2,-d/2+.015,black);box(.025,h-.02,.025,-w/2+.015,h/2,d/2-.015,black);}else box(w,h,d,0,h/2,0,finish,.025);break;}
  case 'barStool': {
   const seat=.75;

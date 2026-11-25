@@ -2,7 +2,7 @@ import {Color,SRGBColorSpace} from 'three';
 import {getMaterial} from '../catalog/catalog';
 import {getPlacementSurfaces} from '../core/space';
 import {getPaintableBounds,getWallPaintRect} from '../core/wall-paint';
-import {sortedWallGraphics,wallGraphicFor} from '../core/wall-graphics';
+import {sortedWallGraphics,wallGraphicFor,wallGraphicPaintSize} from '../core/wall-graphics';
 import type {SceneObject,WallFinish,WallSurface} from '../core/types';
 import atlas from '../../public/assets/brand/murals/atlas.json';
 
@@ -136,9 +136,9 @@ export function renderPortableWallPaint(
    context.restore();
   }
   for(const object of face.graphics){
-   const source=sourceWall(object)!,g=wallGraphicFor(object),along=object.position[source.axis==='x'?2:0];
+   const source=sourceWall(object)!,g=wallGraphicFor(object),size=wallGraphicPaintSize(object),along=object.position[source.axis==='x'?2:0];
    context.save();clip(portableWallPaintBounds(source));
-   draw(face,object.variant,'motif',along,object.position[1],g.width,g.height,g.color,g.angle,g.opacity);
+   draw(face,object.variant,'motif',along,object.position[1],size.width,size.height,g.color,g.angle,g.opacity);
    context.restore();
   }
   context.restore();

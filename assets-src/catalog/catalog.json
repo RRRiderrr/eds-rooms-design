@@ -1108,6 +1108,36 @@
           0.7
         ],
         "model": "meeting-rect"
+      },
+      {
+        "index": 4,
+        "label": "4 / Прямокутний 220",
+        "dimensions": [
+          2.2,
+          0.74,
+          1
+        ],
+        "model": "meeting-long-frame"
+      },
+      {
+        "index": 5,
+        "label": "5 / Овальний 230",
+        "dimensions": [
+          2.3,
+          0.74,
+          0.96
+        ],
+        "model": "meeting-long-oval"
+      },
+      {
+        "index": 6,
+        "label": "6 / На панельних опорах 240",
+        "dimensions": [
+          2.4,
+          0.74,
+          1
+        ],
+        "model": "meeting-long-panel"
       }
     ],
     "materials": [
@@ -1142,7 +1172,7 @@
         "surface": "metal"
       }
     ],
-    "description": "Компактна поверхня для невеликих зустрічей.",
+    "description": "Столи для зустрічей: компактні та довгі, з різними стільницями й опорами.",
     "collision": "solid",
     "productionRef": "catalog:meetingTable:production",
     "proxyRef": "catalog:meetingTable:proxy"
@@ -2983,6 +3013,76 @@
           0.48
         ],
         "model": "botanical-storage-planter"
+      },
+      {
+        "index": 8,
+        "label": "8 / Шавлія · гладкі фасади",
+        "dimensions": [
+          2,
+          1.59,
+          0.48
+        ],
+        "model": "botanical-storage-sage"
+      },
+      {
+        "index": 9,
+        "label": "9 / Рейковий дуб",
+        "dimensions": [
+          2,
+          1.59,
+          0.48
+        ],
+        "model": "botanical-storage-slatted"
+      },
+      {
+        "index": 10,
+        "label": "10 / Графіт · відкрита полиця",
+        "dimensions": [
+          2,
+          1.59,
+          0.48
+        ],
+        "model": "botanical-storage-open"
+      },
+      {
+        "index": 11,
+        "label": "11 / Світлий мінімалізм",
+        "dimensions": [
+          2,
+          1.59,
+          0.48
+        ],
+        "model": "botanical-storage-light"
+      },
+      {
+        "index": 12,
+        "label": "12 / Рейки та зелень",
+        "dimensions": [
+          2,
+          1.59,
+          0.48
+        ],
+        "model": "botanical-storage-green-slats"
+      },
+      {
+        "index": 13,
+        "label": "13 / Теплий камінь · ніша",
+        "dimensions": [
+          2,
+          1.59,
+          0.48
+        ],
+        "model": "botanical-storage-niche"
+      },
+      {
+        "index": 14,
+        "label": "14 / Компактна тумба з кашпо · 120 см",
+        "dimensions": [
+          1.2,
+          1.59,
+          0.48
+        ],
+        "model": "botanical-storage-compact"
       }
     ],
     "materials": [
@@ -3023,7 +3123,7 @@
         "surface": "plastic"
       }
     ],
-    "description": "Мобільні перегородки з кашпо та об’ємною зеленню. Варіант 7 має тумбу для зберігання і кашпо заввишки приблизно 102 см.",
+    "description": "Перегородки з об’ємною зеленню: відкриті екрани та різні низькі тумби з місцем для зберігання і кашпо заввишки приблизно 102 см.",
     "collision": "solid",
     "productionRef": "catalog:botanicalDivider:production",
     "proxyRef": "catalog:botanicalDivider:proxy"

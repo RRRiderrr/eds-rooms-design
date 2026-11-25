@@ -12,9 +12,10 @@ describe('Hall entrance artwork',()=>{
   const designs=new Set<string>();
   for(const preset of HALL_PRESETS){
    const objects=preset.objects.filter(o=>o.id.startsWith('hall-entrance-graphic-'));
-   expect(objects.length).toBeGreaterThanOrEqual(6);designs.add(JSON.stringify(objects.map(o=>[o.variant,o.position,o.graphic])));
+   expect(objects.length).toBeGreaterThanOrEqual(5);designs.add(JSON.stringify(objects.map(o=>[o.variant,o.position,o.graphic])));
    expect(new Set(objects.map(o=>wallGraphicFor(o).width)).size).toBeGreaterThanOrEqual(4);
-   expect(objects.filter(o=>Math.abs(wallGraphicFor(o).angle)>.01).length).toBeGreaterThanOrEqual(2);
+   expect(objects.every(o=>[1,2,5,6].includes(o.variant)&&wallGraphicFor(o).angle===0)).toBe(true);
+   expect(new Set(objects.map(o=>o.variant))).toEqual(new Set([1,2,5,6]));
    expect(objects.filter(o=>o.variant===5||o.variant===11).every(o=>wallGraphicFor(o).angle===0)).toBe(true);
    const plaque=preset.objects.find(o=>o.id==='hall-door-03-plaque')!;
    for(const object of objects){

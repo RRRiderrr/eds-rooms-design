@@ -9,7 +9,7 @@ import {ROOM} from '../src/core/room';
 import {configureSpace} from '../src/core/space';
 import {SceneStore} from '../src/core/store';
 import {currentDraft} from '../src/draft';
-import {MAX_GRAPHICS_PER_WALL,isWallGraphicPointVisible,parseWallGraphic,sortedWallGraphics,upgradeWallGraphics,wallGraphicFor,wallGraphicVisibleArea} from '../src/core/wall-graphics';
+import {MAX_GRAPHICS_PER_WALL,isWallGraphicPointVisible,parseWallGraphic,sortedWallGraphics,upgradeWallGraphics,wallGraphicFor,wallGraphicPaintSize,wallGraphicVisibleArea} from '../src/core/wall-graphics';
 import type {SceneObject,WallGraphic} from '../src/core/types';
 
 const graphic=(id='motif',wallId='west',along=0,y=1.6,patch:Partial<WallGraphic>={}):SceneObject=>({id,assetId:'corporateMotif',variant:3,material:'eds-blue',...wallAnchor(wallId,along,y,.0004),graphic:{width:1,height:1,angle:0,opacity:1,layer:0,color:'#0b30c1',...patch}});
@@ -21,6 +21,17 @@ describe('Independent EDS wall graphics',()=>{
   expect(CORPORATE_MOTIF_DESIGNS.map(d=>d.index)).toEqual(Array.from({length:12},(_,i)=>i+1));
   expect(getAsset('corporateMotif').wallLayer).toBe('graphic');
   expect(wallGraphicFor({...graphic(),graphic:undefined,variant:1,material:'eds-lime'})).toEqual({width:3.24,height:.491,angle:0,opacity:1,layer:0,color:'#a0ff3d'});
+ });
+
+ it('keeps supplied brand paths proportional inside resized or older saved rectangles',()=>{
+  const stripe={...graphic('stripe','west',0,1.6,{width:1.6,height:.34,layer:3}),variant:1};
+  const saved=structuredClone(stripe);const size=wallGraphicPaintSize(stripe);
+  expect(size.width).toBeCloseTo(1.6);expect(size.width/size.height).toBeCloseTo(6.600048265439038,8);
+  expect(stripe).toEqual(saved);
+  const arrow={...graphic('arrow','west',0,1.6,{width:2,height:.5,angle:1,layer:4}),variant:5};
+  const arrowSize=wallGraphicPaintSize(arrow);
+  expect(arrowSize.width/arrowSize.height).toBeCloseTo(1.0001261629201792,8);
+  expect(arrowSize.height).toBeCloseTo(.5);expect(wallGraphicFor(arrow).angle).toBe(0);
  });
 
  it('roundtrips multiple rotated, translucent layers on one wall, preserving other scene content',()=>{

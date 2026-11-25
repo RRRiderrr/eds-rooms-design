@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-13T23:29:25.625Z",
+  "generatedAt": "2026-11-25T14:59:10.666Z",
   "source": "Actual optimized production GLBs, Three.js WebGL2 + shared PBR material pipeline",
   "images": [
     {
@@ -1422,6 +1422,116 @@
         0.7924287021160126
       ],
       "triangles": 100218
+    },
+    {
+      "assetId": "meetingTable",
+      "variant": 4,
+      "file": "assets/thumbnails/meetingTable-4.webp",
+      "size": [
+        2.200000047683716,
+        0.7400000205039978,
+        1
+      ],
+      "triangles": 17498
+    },
+    {
+      "assetId": "meetingTable",
+      "variant": 5,
+      "file": "assets/thumbnails/meetingTable-5.webp",
+      "size": [
+        2.299999952316284,
+        0.7400000205039978,
+        0.9599999785423279
+      ],
+      "triangles": 22490
+    },
+    {
+      "assetId": "meetingTable",
+      "variant": 6,
+      "file": "assets/thumbnails/meetingTable-6.webp",
+      "size": [
+        2.4000000953674316,
+        0.7400000097230077,
+        1
+      ],
+      "triangles": 11666
+    },
+    {
+      "assetId": "botanicalDivider",
+      "variant": 8,
+      "file": "assets/thumbnails/botanicalDivider-8.webp",
+      "size": [
+        2.2606263160705566,
+        1.5843898365738578,
+        0.7923610107751805
+      ],
+      "triangles": 117474
+    },
+    {
+      "assetId": "botanicalDivider",
+      "variant": 9,
+      "file": "assets/thumbnails/botanicalDivider-9.webp",
+      "size": [
+        2.2606263160705566,
+        1.5843898365738578,
+        0.7923610107751805
+      ],
+      "triangles": 150402
+    },
+    {
+      "assetId": "botanicalDivider",
+      "variant": 10,
+      "file": "assets/thumbnails/botanicalDivider-10.webp",
+      "size": [
+        2.2606263160705566,
+        1.5843898365738578,
+        0.7923610107751805
+      ],
+      "triangles": 115122
+    },
+    {
+      "assetId": "botanicalDivider",
+      "variant": 11,
+      "file": "assets/thumbnails/botanicalDivider-11.webp",
+      "size": [
+        2.2606263160705566,
+        1.5843898365738578,
+        0.7923610107751805
+      ],
+      "triangles": 117474
+    },
+    {
+      "assetId": "botanicalDivider",
+      "variant": 12,
+      "file": "assets/thumbnails/botanicalDivider-12.webp",
+      "size": [
+        2.2606263160705566,
+        1.5843898365738578,
+        0.7923610107751805
+      ],
+      "triangles": 133938
+    },
+    {
+      "assetId": "botanicalDivider",
+      "variant": 13,
+      "file": "assets/thumbnails/botanicalDivider-13.webp",
+      "size": [
+        2.2606263160705566,
+        1.5843898365738578,
+        0.7923610107751805
+      ],
+      "triangles": 115122
+    },
+    {
+      "assetId": "botanicalDivider",
+      "variant": 14,
+      "file": "assets/thumbnails/botanicalDivider-14.webp",
+      "size": [
+        1.4585636973381042,
+        1.5844407219015022,
+        0.7923842414303608
+      ],
+      "triangles": 117474
     }
   ]
 }

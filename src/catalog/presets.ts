@@ -64,18 +64,20 @@ export const BUILTIN_PRESETS:SceneConfig[] = [
 ];
 // Furnished meeting layouts retain a full work surface, window bar and door-wall board.
 for(let i=0;i<6;i++){
- const n=16+i,x=[-.45,0,.4,-.25,.3,-.4][i],wood=['oak','ash','walnut','white','oak','ash'][i];
+ const n=16+i,wood=['oak','ash','walnut','white','oak','ash'][i];
  const sofas=['oat','blue','sage','graphite','clay','ochre'],names=['Тепла співпраця','Синій акцент','Зелена зустріч','Точність','Неформальний діалог','Світла майстерня'];
  BUILTIN_PRESETS.push(preset(n,`Нова · ${names[i]}`,[
   ...bar(i%3+1,wood),
-  item('WorkDesk','workDesk',i%3+1,x,-.2,0,wood),item('WorkChair','chair',i%3+1,x,-1.1,0,i%2?'blue':'graphite'),
+  item('MeetingTable','meetingTable',4+i%3,0,-.15,pi/2,['white','ash','walnut','white','oak','ash'][i]),
+  item('MeetingSeatA','chair',i%3+1,-.86,-.76,pi/2,i%2?'blue':'graphite'),item('MeetingSeatB','chair',i%3+1,-.86,.46,pi/2,i%2?'blue':'graphite'),
+  item('MeetingSeatC','chair',i%3+1,.86,-.76,-pi/2,i%2?'blue':'graphite'),item('MeetingSeatD','chair',i%3+1,.86,.46,-pi/2,i%2?'blue':'graphite'),
   item('MainSofa','sofa',[4,1,3,4,1,2][i],-1.98,[-1.52,-1.4,-1.45,-1.52,-1.4,-1.45][i],pi/2,sofas[i]),
-  item('LoungeChair','armchair',i%3+1,[1.45,1.35,1.5,1.4,1.4,1.5][i],[-1.1,-1.12,-1.1,-1.15,-1,-1.1][i],-pi/3,i%2?'oat':'sage'),
+  item('LoungeChair','armchair',i%3+1,1.95,-1.18,-pi/3,i%2?'oat':'sage'),
   item('Storage','storage',i%3+1,2.2,[.65,.45,.8,.5,.85,.6][i],-pi/2,wood),
   item('PlantA','plant',i%3+1,2.23,2.32,0,i%2?'clay':'white'),
   item('PlantB','plant',3,-2.23,2.45,0,'white'),
   item('ReadingLight','floorLamp',i%2+1,-2.23,.6,0,i%2?'white':'black'),
-  accessory('DeskLaptop',x,-.2,.74,2),
+  accessory('DeskLaptop',0,-.15,.74,2),
   wall('MarkerBoard','board',1,'near',-1.2,1.7,'white'),
   wall('Artwork','art',i%3+1,'east',-1.1,1.45),
   ...(i%2===0?[wall('MeetingLogo','edsSignage',6,'east',.7,2.45,'original')]:[wall('AcousticEast','acousticPanel',i%3+1,'east',.75,1.8,i%3===0?'blue':'oat')]),
@@ -165,29 +167,28 @@ function hallVolumeLogo(style:number):SceneObject[] {
  * Leave the door and its painted wayfinding strip clear. Each piece remains an
  * independent editable wall graphic, so its placement and layers can be changed. */
 function hallEntranceGraphics(style:number):SceneObject[]{
- // The wall is shared with door 03. Keep every painted shape to the left of
- // its plaque, while changing both the visual rhythm and hierarchy per preset.
- // Tuples: artwork, wall X, height, width, height, angle in degrees, colour, opacity.
- type Accent=[number,number,number,number,number,number,string,number];
+ // PDF catalogue: use the original EDS up-right arrow, nested square,
+ // precise cross grid and hatch as a coordinated group, never a random sampler.
+ // The striped mark retains its source 6.6:1 aspect; each mark is editable.
+ type Accent=[number,number,number,number,number,string,number];
  const blue='#0b30c1',lavender='#a2b8fe',black='#1e2420',lime='#a0ff3d';
- const compositions:Accent[][]=[
-  [[11,-1.58,2.53,1.60,.37,-8,blue,.88],[6,-2.10,1.72,.64,.64,15,black,.9],[9,-.76,1.76,1.00,.65,12,lavender,.8],[5,-1.63,.88,.49,.49,-32,blue,.88],[4,-.56,.78,.58,.58,45,lime,.68],[7,-1.14,1.27,.32,.32,-15,black,.72]],
-  [[10,-1.55,2.52,1.76,.52,9,black,.88],[2,-1.98,1.65,.90,.90,-12,lavender,.75],[5,-.72,1.75,.62,.62,36,blue,.92],[6,-1.60,.78,.48,.48,0,black,.84],[3,-.60,.76,.43,.43,-35,lime,.74],[7,-1.12,1.18,.28,.28,20,blue,.82],[4,-2.29,.77,.32,.32,45,lavender,.75]],
-  [[1,-1.62,2.50,1.75,.31,-13,blue,.85],[12,-1.91,1.62,.96,.65,8,lime,.68],[7,-.66,1.76,.57,.57,-30,black,.9],[4,-1.46,.82,.60,.60,45,lavender,.8],[3,-.45,.82,.48,.48,18,blue,.88],[5,-1.05,1.23,.30,.30,-20,black,.76]],
-  [[11,-1.66,2.54,1.68,.39,12,black,.85],[2,-2.08,1.67,.75,.75,16,lavender,.78],[3,-.77,1.78,.72,.72,-22,blue,.92],[9,-1.56,.84,.88,.50,-8,lime,.7],[6,-.48,.76,.42,.42,45,black,.84],[7,-1.13,1.27,.28,.28,30,blue,.8],[5,-2.22,.74,.34,.34,-25,lavender,.85]],
-  [[10,-1.56,2.53,1.71,.49,-8,blue,.85],[9,-1.90,1.70,.92,.61,-18,lavender,.8],[6,-.70,1.78,.70,.70,22,black,.9],[4,-1.58,.82,.52,.52,45,lime,.7],[5,-.52,.78,.46,.46,-25,blue,.85],[3,-1.07,1.20,.31,.31,20,black,.8]],
-  [[1,-1.57,2.52,1.69,.34,10,black,.85],[8,-2.03,1.70,.79,.79,-15,lavender,.78],[7,-.73,1.77,.69,.69,30,blue,.9],[12,-1.55,.82,.95,.48,7,lime,.65],[5,-.49,.75,.42,.42,-35,black,.85],[6,-1.05,1.22,.29,.29,45,blue,.8],[3,-2.26,.81,.30,.30,20,lavender,.8]],
-  [[11,-1.60,2.53,1.74,.39,-10,blue,.9],[12,-1.96,1.67,.91,.67,14,lime,.66],[5,-.71,1.77,.65,.65,-28,black,.88],[9,-1.58,.82,.84,.48,12,lavender,.8],[4,-.50,.78,.46,.46,45,blue,.85],[7,-1.08,1.22,.31,.31,-20,black,.8]],
-  [[10,-1.58,2.52,1.72,.50,11,black,.85],[2,-2.04,1.68,.81,.81,-15,lavender,.78],[6,-.73,1.78,.67,.67,30,blue,.9],[3,-1.58,.83,.53,.53,-25,lime,.7],[5,-.51,.76,.45,.45,25,black,.85],[9,-1.09,1.23,.39,.27,-12,blue,.8],[4,-2.25,.78,.30,.30,45,lavender,.78]],
+ const themes=[
+  [blue,lavender,black], [black,lavender,blue], [blue,lime,black],
+  [black,lavender,blue], [blue,lime,lavender], [black,lime,blue],
+  [blue,lavender,blue], [black,lavender,black],
  ];
- // Establish a calm grid: a headline, two medium marks and a baseline of
- // smaller accents. Artworks stay independent and the EDS arrow stays upright.
- const slots=[[-1.56,2.5,1.6,.34],[-1.95,1.58,.65,.65],[-.90,1.58,.65,.65],[-2.08,.70,.34,.34],[-1.50,.70,.38,.38],[-.92,.70,.34,.34],[-.43,.70,.26,.26]];
- return compositions[style%compositions.length].map(([variant,_along,_y,_width,_height,degrees,color,opacity],i)=>{const [along,y,width,height]=slots[i];return ({
+ const [primary,grid,accent]=themes[style%themes.length];
+ const layouts:Accent[][]=[
+  [[1,-1.54,2.32,1.48,.225,primary,.85],[2,-1.95,1.53,.90,.90,grid,.65],[5,-.91,1.69,.38,.38,primary,.93],[6,-.91,1.16,.30,.30,accent,.9],[1,-1.55,.77,.85,.129,accent,.65]],
+  [[1,-1.54,2.34,1.46,.222,primary,.85],[2,-1.10,1.54,.86,.86,grid,.63],[5,-1.98,1.72,.36,.36,primary,.93],[6,-1.98,1.20,.29,.29,accent,.9],[1,-1.55,.76,.82,.124,accent,.65]],
+  [[1,-1.54,2.30,1.50,.228,primary,.85],[2,-1.90,1.47,1.00,1.00,grid,.60],[5,-.92,1.72,.34,.34,primary,.93],[6,-.92,1.25,.27,.27,accent,.9],[1,-1.46,.75,.92,.14,accent,.65]],
+  [[1,-1.54,2.33,1.44,.219,primary,.85],[2,-1.10,1.50,.92,.92,grid,.60],[5,-2.01,1.68,.37,.37,primary,.93],[6,-2.01,1.16,.29,.29,accent,.9],[1,-1.52,.75,.87,.132,accent,.65]],
+ ];
+ return layouts[style%layouts.length].map(([variant,along,y,width,height,color,opacity],i)=>({
   id:`hall-entrance-graphic-${i+1}`,assetId:'corporateMotif',variant,material:'eds-blue',regionId:'hall',
   ...wallAnchor('wall-21',along,y,getVariant('corporateMotif',variant).dimensions[2],hallWallRoom),
-  graphic:{width,height,angle:variant===5||variant===11?0:Math.max(-8,Math.min(8,degrees))*pi/180,opacity,layer:i,color},
- });});
+  graphic:{width,height,angle:0,opacity,layer:i,color},
+ }));
 }
 function hallPreset(index:number,name:string,decor:SceneObject[],finishes:Record<string,WallFinish>={}):SceneConfig{
  const id=`hall-preset-${index}`,config=preset(0,name,[]);
@@ -241,6 +242,8 @@ for(let i=0;i<6;i++){
  const n=8+i,config=JSON.parse(JSON.stringify(HALL_PRESETS[i])) as SceneConfig;
  config.presetId=config.basePresetId=`hall-preset-${n}`;config.name=`${n}: Нова · зелена зона ${i+1}`;
  config.regionPresets.hall={presetId:config.presetId,basePresetId:config.presetId,modified:false};
+ // The freestanding plant in the east lounge is replaced by storage planters.
+ config.objects=config.objects.filter(object=>object.id!=='hall-plant-east');
  for(const object of config.objects){
   if(object.assetId==='doorPlaque'){
    object.variant=1;object.material='eds-white';
@@ -249,8 +252,19 @@ for(let i=0;i<6;i++){
    Object.assign(object,wallAnchor(surface.id,along,object.position[1],getVariant('doorPlaque',1).dimensions[2],hallWallRoom));
   }
   if(object.assetId==='brandDoorPanel')object.variant=3;
-  if(object.id.startsWith('hall-rear-screen-')){object.variant=7;object.material='white';}
+  if(object.id.startsWith('hall-rear-screen-')){object.variant=8+i;object.material=['sage','oak','graphite','white','sage','white'][i];}
  }
+ // A separate low planted storage unit divides the west lounge from the
+ // source desk banks. Its end gaps preserve circulation on both sides.
+ config.objects.push(hallItem('zoning-cabinet','botanicalDivider',8+(i+2)%6,-12,-.5,pi/2,['white','oak','sage','white','graphite','oak'][i]));
+ // Two low planted dividers frame the east lounge perpendicular to the window
+ // wall. A clear passage remains at each end and beside the WC door.
+ config.objects.push(
+  hallItem('east-zone-work-divider','botanicalDivider',8+(i+4)%6,15.7,-.25,pi/2,['sage','white','oak','graphite','white','oak'][i]),
+  hallItem('east-zone-door-divider','botanicalDivider',8+(i+1)%6,21.8,1.3,pi/2,['oak','sage','white','oak','graphite','sage'][i]),
+  // Continue the same cabinet end to end, forming a single straight planted row.
+  hallItem('east-zone-compact-divider','botanicalDivider',8+(i+4)%6,15.7,1.75,pi/2,['sage','white','oak','graphite','white','oak'][i]),
+ );
  HALL_PRESETS.push(config);
 }
 // One full-wall statement composition per furnished design. The opposite

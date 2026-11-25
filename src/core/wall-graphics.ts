@@ -1,5 +1,6 @@
 import { getMaterial } from '../catalog/catalog';
 import { CORPORATE_MOTIF_DESIGNS } from '../catalog/corporate-motifs';
+import motifLibrary from '../../public/assets/brand/motif-library.json';
 import { hallWallSurfaces } from './hall';
 import { ROOM } from './room';
 import { wallRegion } from './regions';
@@ -33,6 +34,16 @@ export function wallGraphicFor(object: SceneObject): WallGraphic {
  const graphic=parseWallGraphic(object.graphic ?? {}, defaults);
  // EDS direction marks must always point to the upper right.
  return object.assetId==='corporateMotif'&&(object.variant===5||object.variant===11)?{...graphic,angle:0}:graphic;
+}
+
+/** Fit the original artwork into the editable rectangle without deforming its paths.
+ * The requested rectangle remains unchanged in saved scenes, so existing placement,
+ * layer order and per-axis size controls stay compatible with older projects. */
+export function wallGraphicPaintSize(object: SceneObject): {width:number;height:number} {
+ const graphic=wallGraphicFor(object);
+ const aspect=motifLibrary.motifs.find(m=>m.index===object.variant)?.sourceAspect ?? 1;
+ const width=Math.min(graphic.width,graphic.height*aspect);
+ return {width,height:width/aspect};
 }
 
 /** Viewer-space positive U maps to these wall coordinates on each normal. */

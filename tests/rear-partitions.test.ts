@@ -28,23 +28,25 @@ const doorIds = ['door-02','door-14','door-15'];
 describe('One planted row for entry15 and team-room02',()=>{
   beforeAll(()=>configureSpace(JSON.parse(readFileSync(new URL('../public/assets/architecture/scene-space.json',import.meta.url),'utf8'))));
 
-  it('contains only two editable collinear modules in all 8 hall and 16 combined default presets',()=>{
+  it('keeps the rear screen and adds storage dividers only in the new hall presets',()=>{
     const allVariants=new Set<number>();
     for(const config of [...HALL_PRESETS,...BUILTIN_PRESETS]){
       const screens=config.objects.filter(o=>o.assetId==='botanicalDivider');
-      expect(screens,config.presetId).toHaveLength(1);
-      expect(screens[0].id).toBe('hall-rear-screen-1');
-      const screen=screens[0];expect(screen.rotation).toBeCloseTo(Math.PI/2,9);
+      const newHall=HALL_PRESETS.slice(8).includes(config);
+      expect(screens,config.presetId).toHaveLength(newHall?5:1);
+      const screen=screens.find(o=>o.id==='hall-rear-screen-1')!;expect(screen).toBeDefined();expect(screen.rotation).toBeCloseTo(Math.PI/2,9);
+      if(newHall){const zone=screens.find(o=>o.id==='hall-zoning-cabinet')!;expect(zone).toBeDefined();expect(zone.rotation).toBeCloseTo(Math.PI/2,9);expect(zone.variant).toBeGreaterThanOrEqual(8);}
+      if(newHall)for(const id of ['hall-east-zone-work-divider','hall-east-zone-door-divider','hall-east-zone-compact-divider']){const zone=screens.find(o=>o.id===id)!;expect(zone,id).toBeDefined();expect(zone.rotation).toBeCloseTo(Math.PI/2,9);expect(zone.variant).toBeGreaterThanOrEqual(8);}
       allVariants.add(screen.variant);expect(screen.regionId).toBe('hall');
-      expect(getVariant(screen.assetId,screen.variant).dimensions).toEqual(screen.variant===7?[2,1.59,.48]:[2,2.3,.48]);
+      expect(getVariant(screen.assetId,screen.variant).dimensions).toEqual(screen.variant>=7?[2,1.59,.48]:[2,2.3,.48]);
       expect(getAsset(screen.assetId).materials.some(m=>m.id===screen.material)).toBe(true);
       expect(config.objects.filter(o=>o.assetId==='hallDesk')).toEqual(originalHallTables());
     }
-    expect([...allVariants].sort()).toEqual([1,2,3,4,5,6,7]);
+    expect([...allVariants].sort((a,b)=>a-b)).toEqual([1,2,3,4,5,6,8,9,10,11,12,13]);
   });
 
   it('uses only the actual measured floor and never intersects existing furniture or source architecture',()=>{
-    for(const [index,config]of HALL_PRESETS.entries())for(const screen of rearPartitions(index)){
+    for(const config of HALL_PRESETS)for(const screen of config.objects.filter(o=>o.assetId==='botanicalDivider')){
       expect(corners(footprint(screen)).every(p=>isInHallFloor(p)),`${config.presetId}:${screen.id}`).toBe(true);
       expect(validatePlacement(screen,config.objects,getPlacementRoom(screen)),`${config.presetId}:${screen.id}`).toEqual({valid:true});
     }

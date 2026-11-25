@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import {getPlacementRoom,getPlacementSurfaces} from '../core/space';
-import {wallGraphicFor,isWallGraphicPointVisible} from '../core/wall-graphics';
+import {wallGraphicFor,wallGraphicPaintSize,isWallGraphicPointVisible} from '../core/wall-graphics';
 import type {SceneObject} from '../core/types';
 
 /** Invisible pick surface; the actual ink is rendered inside the plaster albedo. */
@@ -19,7 +19,7 @@ export function createWallGraphicProxy(alphaHit:(variant:number,u:number,v:numbe
 
 export function updateWallGraphicProxy(root:THREE.Group,object:SceneObject):void{
  root.userData.graphicObject=object;const wall=getPlacementSurfaces().find(w=>w.id===object.wallId),mesh=root.getObjectByName('CorporateMotif_PaintHit') as THREE.Mesh|undefined;if(!mesh||!wall)return;
- const graphic=wallGraphicFor(object);mesh.scale.set(graphic.width,graphic.height,1);mesh.rotation.z=graphic.angle;
+ const graphic=wallGraphicFor(object),size=wallGraphicPaintSize(object);mesh.scale.set(size.width,size.height,1);mesh.rotation.z=graphic.angle;
  const world=new THREE.Vector3(wall.axis==='x'?wall.coordinate+wall.normal[0]*.0008:object.position[0],object.position[1],wall.axis==='z'?wall.coordinate+wall.normal[2]*.0008:object.position[2]);
  mesh.position.copy(world.sub(new THREE.Vector3(...object.position)).applyAxisAngle(new THREE.Vector3(0,1,0),-object.rotation));
 }

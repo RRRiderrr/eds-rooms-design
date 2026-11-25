@@ -11,7 +11,7 @@ const browser=await chromium.launch({headless:true,args:process.platform==='win3
 const context=await browser.newContext({viewport:{width:1440,height:950}});
 await context.addInitScript(()=>localStorage.setItem('room-atelier-preferences',JSON.stringify({mode:'archviz',quality:'medium',region:'hall'})));
 const page=await context.newPage(), errors=[], report={hall:[],meeting:[],errors};
-page.on('pageerror',e=>errors.push(e.message));
+page.on('pageerror',e=>errors.push(e.stack??e.message));
 page.on('response',r=>{if(r.status()>=400)errors.push(`HTTP ${r.status()} ${r.url()}`);});
 try {
  await page.goto('http://127.0.0.1:4174/',{timeout:120000});
@@ -20,10 +20,17 @@ try {
  for(let i=8;i<14;i++){
   await page.getByTestId('preset-select').selectOption(`hall-preset-${i}`);
   await page.waitForFunction(i=>window.__ROOM_ATELIER__.store.state.regionPresets.hall.presetId===`hall-preset-${i}`,i);
-  await page.waitForFunction(()=>{const a=window.__ROOM_ATELIER__,o=a.store.state.objects.find(x=>x.id==='hall-rear-screen-1');return o&&!!a.view.visuals.get(o.id)?.templateKey;},null,{timeout:90000});
-  const info=await page.evaluate(()=>{const a=window.__ROOM_ATELIER__,objects=a.store.state.objects.filter(x=>x.regionId==='hall'),partition=objects.find(x=>x.id==='hall-rear-screen-1');return {partition,plaques:objects.filter(x=>x.assetId==='doorPlaque').map(x=>x.variant),bands:objects.filter(x=>x.assetId==='brandDoorPanel').map(x=>x.variant),template:a.view.visuals.get(partition.id).templateKey,gl:a.view.renderer.getContext().getError()};});
-  assert.equal(info.partition.variant,7);assert.equal(info.plaques.length,14);assert(info.plaques.every(v=>v===1));assert.equal(info.bands.length,14);assert(info.bands.every(v=>v===3));assert.equal(info.gl,0);
-  report.hall.push({preset:i,position:info.partition.position,rotation:info.partition.rotation,template:info.template});
+  await page.waitForFunction(()=>{const a=window.__ROOM_ATELIER__;return ['hall-rear-screen-1','hall-zoning-cabinet','hall-east-zone-work-divider','hall-east-zone-door-divider','hall-east-zone-compact-divider'].every(id=>!!a.view.visuals.get(id)?.templateKey);},null,{timeout:90000});
+  const info=await page.evaluate(()=>{const a=window.__ROOM_ATELIER__,objects=a.store.state.objects.filter(x=>x.regionId==='hall'),partition=objects.find(x=>x.id==='hall-rear-screen-1'),zone=objects.find(x=>x.id==='hall-zoning-cabinet'),east=objects.filter(x=>x.id.startsWith('hall-east-zone-'));return {partition,zone,east,oldPlant:objects.find(x=>x.id==='hall-plant-east'),plaques:objects.filter(x=>x.assetId==='doorPlaque').map(x=>x.variant),bands:objects.filter(x=>x.assetId==='brandDoorPanel').map(x=>x.variant),templates:[partition,zone,...east].map(o=>a.view.visuals.get(o.id).templateKey),gl:a.view.renderer.getContext().getError()};});
+  const first=info.east.find(o=>o.id==='hall-east-zone-work-divider'),second=info.east.find(o=>o.id==='hall-east-zone-compact-divider');
+  assert.equal(info.partition.variant,i);assert.equal(info.zone.variant,8+(i-8+2)%6);assert.equal(info.east.length,3);assert(first&&second);assert.equal(second.variant,first.variant);assert.equal(second.material,first.material);assert.equal(second.position[0],first.position[0]);assert(Math.abs(second.position[2]-first.position[2]-2)<1e-6);assert.equal(info.oldPlant,undefined);assert(info.templates.every(Boolean));assert.equal(info.plaques.length,14);assert(info.plaques.every(v=>v===1));assert.equal(info.bands.length,14);assert(info.bands.every(v=>v===3));assert.equal(info.gl,0);
+  report.hall.push({preset:i,partition:info.partition,zone:info.zone,east:info.east,templates:info.templates});
+  await page.evaluate(()=>{const v=window.__ROOM_ATELIER__.view;v.navigation.setEnabled(false);v.keepCameraSafe=()=>{};v.camera.fov=65;v.camera.updateProjectionMatrix();v.camera.position.set(18.5,1.7,-4.6);v.camera.lookAt(18.5,1.3,1.3);v.camera.updateMatrixWorld(true);v.shadowDirty=true;});
+  await page.waitForTimeout(600);await page.locator('#viewport canvas').screenshot({path:path.join(out,`hall-${i}-east-zone.png`)});
+  await page.evaluate(()=>{const v=window.__ROOM_ATELIER__.view;v.camera.position.set(15,1.65,1.3);v.camera.lookAt(18.5,1.2,2);v.camera.updateMatrixWorld(true);v.shadowDirty=true;});
+  await page.waitForTimeout(500);await page.locator('#viewport canvas').screenshot({path:path.join(out,`hall-${i}-compact.png`)});
+  await page.evaluate(()=>{const v=window.__ROOM_ATELIER__.view;v.navigation.setEnabled(false);v.keepCameraSafe=()=>{};v.camera.fov=65;v.camera.updateProjectionMatrix();v.camera.position.set(-9.5,1.7,-3.3);v.camera.lookAt(-12,1,-.5);v.camera.updateMatrixWorld(true);v.shadowDirty=true;});
+  await page.waitForTimeout(500);await page.locator('#viewport canvas').screenshot({path:path.join(out,`hall-${i}-zone.png`)});
   if(i===8){
    for(const [name,position] of [['front',[-16.6,1.75,.25]],['angle',[-18.2,1.65,2.2]]]){
     await page.evaluate(position=>{const v=window.__ROOM_ATELIER__.view;v.navigation.setEnabled(false);v.keepCameraSafe=()=>{};v.camera.fov=62;v.camera.updateProjectionMatrix();v.camera.position.set(...position);v.camera.lookAt(-20.6,1.12,.4);v.camera.updateMatrixWorld(true);v.shadowDirty=true;},position);
@@ -37,14 +44,14 @@ try {
  const arrowId=await page.evaluate(()=>{const a=window.__ROOM_ATELIER__,arrow=a.store.state.objects.find(o=>o.assetId==='corporateMotif'&&(o.variant===5||o.variant===11));if(!arrow)return null;a.setMode('editor');a.select(arrow.id);return arrow.id;});
  assert(arrowId,'A preset arrow should be present');assert(await page.getByTestId('graphic-angle').isDisabled(),'Arrow rotation must be disabled in the editor');
  await page.evaluate(()=>window.__ROOM_ATELIER__.setMode('archviz'));
- await page.getByTestId('region-meeting').click();const muralVariants=new Set(),sofaModels=new Set(),sofaLayouts=new Set();let logoPresets=0;
+ await page.getByTestId('region-meeting').click();const muralVariants=new Set(),sofaModels=new Set(),sofaLayouts=new Set(),tableModels=new Set();let logoPresets=0;
  for(let i=16;i<22;i++){
   await page.getByTestId('preset-select').selectOption(`builtin-${i}`);
   await page.waitForFunction(i=>window.__ROOM_ATELIER__.store.state.regionPresets.meeting.presetId===`builtin-${i}`,i);
   await page.waitForFunction(()=>[...window.__ROOM_ATELIER__.view.visuals.values()].every(v=>v.mode!=='archviz'||!!v.templateKey),null,{timeout:90000});
-  const info=await page.evaluate(()=>{const a=window.__ROOM_ATELIER__,o=a.store.state.objects.filter(x=>x.regionId==='meeting');return {assets:o.map(x=>x.assetId),board:o.find(x=>x.assetId==='board'&&x.variant===1),sofa:o.find(x=>x.assetId==='sofa'),logo:o.filter(x=>x.assetId==='edsSignage'&&x.variant===6),finishes:Object.entries(a.store.state.wallFinishes).filter(([,f])=>f.mural).map(([wall,f])=>({wall,mural:f.mural})),gl:a.view.renderer.getContext().getError()};});
-  assert(info.assets.includes('windowBar'));assert(info.assets.includes('workDesk'));assert(!info.assets.includes('rug'));assert.equal(info.board?.wallId,'near');assert(info.assets.length>=8);assert(info.logo.every(o=>o.wallId==='east'));if(info.logo.length)logoPresets++;
-  const mural=info.finishes.filter(f=>['east','west'].includes(f.wall));assert.equal(mural.length,1);assert.notEqual(mural[0].mural,7);muralVariants.add(mural[0].mural);assert.equal(info.gl,0);
+  const info=await page.evaluate(()=>{const a=window.__ROOM_ATELIER__,o=a.store.state.objects.filter(x=>x.regionId==='meeting'),table=o.find(x=>x.assetId==='meetingTable');return {assets:o.map(x=>x.assetId),table,tableTemplate:a.view.visuals.get(table?.id)?.templateKey,board:o.find(x=>x.assetId==='board'&&x.variant===1),sofa:o.find(x=>x.assetId==='sofa'),logo:o.filter(x=>x.assetId==='edsSignage'&&x.variant===6),finishes:Object.entries(a.store.state.wallFinishes).filter(([,f])=>f.mural).map(([wall,f])=>({wall,mural:f.mural})),gl:a.view.renderer.getContext().getError()};});
+  assert(info.assets.includes('windowBar'));assert(info.assets.includes('meetingTable'));assert(info.assets.filter(x=>x==='chair').length>=4);assert(!info.assets.includes('rug'));assert.equal(info.board?.wallId,'near');assert(info.assets.length>=8);assert(info.logo.every(o=>o.wallId==='east'));if(info.logo.length)logoPresets++;
+  assert([4,5,6].includes(info.table?.variant));assert(info.tableTemplate);tableModels.add(info.table.variant);const mural=info.finishes.filter(f=>['east','west'].includes(f.wall));assert.equal(mural.length,1);assert.notEqual(mural[0].mural,7);muralVariants.add(mural[0].mural);assert.equal(info.gl,0);
   if(info.sofa){sofaModels.add(info.sofa.variant);sofaLayouts.add(JSON.stringify([info.sofa.variant,info.sofa.position,info.sofa.rotation]));}
   report.meeting.push({preset:i,assets:info.assets,sofa:info.sofa,logo:info.logo,composition:mural[0]});
   // The private browser profile deliberately looks toward the painted wall;
@@ -59,6 +66,6 @@ try {
   }
   console.log('PASS builtin-'+i);
  }
- assert.equal(muralVariants.size,6);assert(sofaModels.size>=2&&sofaLayouts.size>=3,'Expected several different sofas or positions');assert(logoPresets>0&&logoPresets<6);assert.deepEqual(errors,[]);report.status='passed';
+ assert.equal(muralVariants.size,6);assert.equal(tableModels.size,3);assert(sofaModels.size>=2&&sofaLayouts.size>=3,'Expected several different sofas or positions');assert(logoPresets>0&&logoPresets<6);assert.deepEqual(errors,[]);report.status='passed';
 } catch(e){report.status='failed';report.failure=e.stack??String(e);console.error(report.failure);process.exitCode=1;}
 finally{await writeFile(path.join(out,'report.json'),JSON.stringify(report,null,2));await browser.close();}

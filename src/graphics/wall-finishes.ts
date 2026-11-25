@@ -5,7 +5,7 @@ import { getPaintableBounds, getWallPaintRect } from '../core/wall-paint';
 import { getMaterial } from '../catalog/catalog';
 import type { SceneConfig, SceneObject, WallFinish, WallSurface } from '../core/types';
 import type { Architecture } from './architecture';
-import {wallGraphicFor,sortedWallGraphics,MAX_GRAPHICS_PER_WALL} from '../core/wall-graphics';
+import {wallGraphicFor,wallGraphicPaintSize,sortedWallGraphics,MAX_GRAPHICS_PER_WALL} from '../core/wall-graphics';
 import atlas from '../../public/assets/brand/murals/atlas.json';
 import {renderPortableWallPaint,type PortableWallPaintFace} from './portable-wall-paint';
 
@@ -210,10 +210,10 @@ for(int i=0;i<${graphicCapacity};i++){
    for(const object of graphics){
     if(index>=graphicCapacity)break;
     const surface=getPlacementSurfaces().find(w=>w.id===object.wallId);if(!surface)continue;
-    const g=wallGraphicFor(object),bounds=getPaintableBounds(surface.id)??{minY:.07,maxY:surface.height??3.6};
+    const g=wallGraphicFor(object),size=wallGraphicPaintSize(object),bounds=getPaintableBounds(surface.id)??{minY:.07,maxY:surface.height??3.6};
     const sign=surface.normal[0]*wall.normal[0]+surface.normal[2]*wall.normal[2]>0?1:-1;
     color.set(g.color);const at=index*16;
-    data.set([object.position[surface.axis==='x'?2:0],object.position[1],1/g.width,1/g.height,Math.cos(g.angle),Math.sin(g.angle),object.variant,sign,color.r,color.g,color.b,g.opacity,surface.min,surface.max,bounds.minY,bounds.maxY],at);index++;
+    data.set([object.position[surface.axis==='x'?2:0],object.position[1],1/size.width,1/size.height,Math.cos(g.angle),Math.sin(g.angle),object.variant,sign,color.r,color.g,color.b,g.opacity,surface.min,surface.max,bounds.minY,bounds.maxY],at);index++;
    }
    u.paintGraphicCount.value=this.texture?index:0;binding.graphics.needsUpdate=true;
   }

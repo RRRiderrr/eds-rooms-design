@@ -24,13 +24,14 @@ const pixelDifference=async(a,b)=>{const [aRaw,bRaw]=await Promise.all([sharp(a)
 try{
  await page.goto(url,{timeout:120000});await page.waitForFunction(()=>window.__ROOM_ATELIER__?.ready&&!document.querySelector('#loading'),null,{timeout:240000});
  await page.getByTestId('region-hall').click();
- for(let index=0;index<8;index++){
+ const start=Number(process.argv.find(arg=>arg.startsWith('--start='))?.slice(8)??0);
+ for(let index=start;index<14;index++){
   await page.getByTestId('preset-select').selectOption('hall-preset-'+index);
   await page.waitForFunction(index=>window.__ROOM_ATELIER__.store.state.regionPresets.hall.presetId==='hall-preset-'+index,index,{timeout:30000});
   const state=await page.evaluate(()=>{const a=window.__ROOM_ATELIER__,v=a.view,gl=v.renderer.getContext();return {motifs:a.store.state.objects.filter(o=>o.assetId==='corporateMotif'&&o.wallId==='wall-21'&&o.regionId==='hall').map(o=>({id:o.id,variant:o.variant,position:o.position,graphic:o.graphic})),mode:a.getMode(),glError:gl.getError(),build:[...document.scripts].map(s=>s.src)};});
   assert.equal(state.mode,'archviz');assert.equal(state.glError,0);assert(state.motifs.length>=4,`hall preset ${index}: expected four or more independently editable motifs`);
   assert(new Set(state.motifs.map(o=>`${o.graphic.width}:${o.graphic.height}`)).size>=2,`hall preset ${index}: motifs have same dimensions`);
-  assert(state.motifs.some(o=>Math.abs(o.graphic.angle)>.01),`hall preset ${index}: no rotated motifs`);
+  assert(state.motifs.every(o=>[1,2,5,6].includes(o.variant)&&o.graphic.angle===0),`hall preset ${index}: unaligned or unsupported brand marks`);
   const before=[];for(const [n,x]of [['left',-1.25],['right',1.25]]){await pose(x);const bytes=await page.locator('#viewport canvas').screenshot();before.push(bytes);await fs.writeFile(path.join(output,`hall-${index}-${n}.png`),bytes);}
   await pose(0,95);await page.locator('#viewport canvas').screenshot({path:path.join(output,`hall-${index}-overview.png`)});
   await page.evaluate(ids=>ids.forEach(id=>window.__ROOM_ATELIER__.store.remove(id)),state.motifs.map(o=>o.id));await settle();
